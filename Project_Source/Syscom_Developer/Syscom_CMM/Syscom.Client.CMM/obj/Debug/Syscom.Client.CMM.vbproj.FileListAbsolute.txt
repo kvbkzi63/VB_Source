@@ -1,0 +1,32 @@
+C:\Kmuh_Source\Mcku_His\SyscomCompile\Syscom\Client\Syscom.Client.CMM.dll
+C:\Kmuh_Source\Mcku_His\SyscomCompile\Syscom\Client\Syscom.Client.CMM.pdb
+C:\Kmuh_Source\Mcku_His\SyscomCompile\Syscom\Client\Syscom.Client.CMM.xml
+C:\Kmuh_Source\Mcku_His\Syscom_Developer\Syscom_CMM\Syscom.Client.CMM\obj\Debug\Syscom.Client.CMM.vbprojResolveAssemblyReference.cache
+C:\Kmuh_Source\Mcku_His\Syscom_Developer\Syscom_CMM\Syscom.Client.CMM\obj\Debug\Syscom.Client.CMM.Resources.resources
+C:\Kmuh_Source\Mcku_His\Syscom_Developer\Syscom_CMM\Syscom.Client.CMM\obj\Debug\Syscom.Client.CMM.MessageHandlingUI.resources
+C:\Kmuh_Source\Mcku_His\Syscom_Developer\Syscom_CMM\Syscom.Client.CMM\obj\Debug\Syscom.Client.CMM.vbproj.GenerateResource.Cache
+C:\Kmuh_Source\Mcku_His\Syscom_Developer\Syscom_CMM\Syscom.Client.CMM\obj\Debug\Syscom.Client.CMM.dll
+C:\Kmuh_Source\Mcku_His\Syscom_Developer\Syscom_CMM\Syscom.Client.CMM\obj\Debug\Syscom.Client.CMM.xml
+C:\Kmuh_Source\Mcku_His\Syscom_Developer\Syscom_CMM\Syscom.Client.CMM\obj\Debug\Syscom.Client.CMM.pdb
+C:\Users\Will\Documents\Visual Studio 2017\Projects\SyscomCompile\Syscom\Client\Syscom.Client.CMM.dll
+C:\Users\Will\Documents\Visual Studio 2017\Projects\SyscomCompile\Syscom\Client\Syscom.Client.CMM.pdb
+C:\Users\Will\Documents\Visual Studio 2017\Projects\SyscomCompile\Syscom\Client\Syscom.Client.CMM.xml
+C:\Users\Will\Documents\Visual Studio 2017\Projects\Syscom_Developer\Syscom_CMM\Syscom.Client.CMM\obj\Debug\Syscom.Client.CMM.vbprojResolveAssemblyReference.cache
+C:\Users\Will\Documents\Visual Studio 2017\Projects\Syscom_Developer\Syscom_CMM\Syscom.Client.CMM\obj\Debug\Syscom.Client.CMM.Resources.resources
+C:\Users\Will\Documents\Visual Studio 2017\Projects\Syscom_Developer\Syscom_CMM\Syscom.Client.CMM\obj\Debug\Syscom.Client.CMM.MessageHandlingUI.resources
+C:\Users\Will\Documents\Visual Studio 2017\Projects\Syscom_Developer\Syscom_CMM\Syscom.Client.CMM\obj\Debug\Syscom.Client.CMM.vbproj.GenerateResource.Cache
+C:\Users\Will\Documents\Visual Studio 2017\Projects\Syscom_Developer\Syscom_CMM\Syscom.Client.CMM\obj\Debug\Syscom.Client.CMM.dll
+C:\Users\Will\Documents\Visual Studio 2017\Projects\Syscom_Developer\Syscom_CMM\Syscom.Client.CMM\obj\Debug\Syscom.Client.CMM.xml
+C:\Users\Will\Documents\Visual Studio 2017\Projects\Syscom_Developer\Syscom_CMM\Syscom.Client.CMM\obj\Debug\Syscom.Client.CMM.pdb
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Client\Syscom.Client.CMM.dll
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Client\Syscom.Client.CMM.pdb
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Client\Syscom.Client.CMM.xml
+C:\TPE_Source\HIS_Source\Project_Source\Syscom_Developer\Syscom_CMM\Syscom.Client.CMM\obj\Debug\Syscom.Client.CMM.Resources.resources
+C:\TPE_Source\HIS_Source\Project_Source\Syscom_Developer\Syscom_CMM\Syscom.Client.CMM\obj\Debug\Syscom.Client.CMM.MessageHandlingUI.resources
+C:\TPE_Source\HIS_Source\Project_Source\Syscom_Developer\Syscom_CMM\Syscom.Client.CMM\obj\Debug\Syscom.Client.CMM.vbproj.GenerateResource.Cache
+C:\TPE_Source\HIS_Source\Project_Source\Syscom_Developer\Syscom_CMM\Syscom.Client.CMM\obj\Debug\Syscom.Client.CMM.dll
+C:\TPE_Source\HIS_Source\Project_Source\Syscom_Developer\Syscom_CMM\Syscom.Client.CMM\obj\Debug\Syscom.Client.CMM.xml
+C:\TPE_Source\HIS_Source\Project_Source\Syscom_Developer\Syscom_CMM\Syscom.Client.CMM\obj\Debug\Syscom.Client.CMM.pdb
+C:\TPE_Source\HIS_Source\Project_Source\Syscom_Developer\Syscom_CMM\Syscom.Client.CMM\obj\Debug\Syscom.Client.CMM.vbprojResolveAssemblyReference.cache
+C:\TPE_Source\HIS_Source\Project_Source\Syscom_Developer\Syscom_CMM\Syscom.Client.CMM\obj\Debug\Syscom.Client.CMM.vbproj.CoreCompileInputs.cache
+C:\TPE_Source\HIS_Source\Project_Source\Syscom_Developer\Syscom_CMM\Syscom.Client.CMM\obj\Debug\Syscom.Client.CMM.vbproj.CopyComplete

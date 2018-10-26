@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="91742804-d230-488c-a2b4-7b405c577bd2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:40611/FtmService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="FtmService4.xsd" MetadataType="Schema" ID="76c181fc-2a94-4396-bb25-8750e36763e1" SourceId="1" SourceUrl="http://localhost:40611/FtmService.svc?xsd=xsd1" />
+    <MetadataFile FileName="FtmService41.xsd" MetadataType="Schema" ID="3adba290-fa9c-4e40-b792-a1c851677ff8" SourceId="1" SourceUrl="http://localhost:40611/FtmService.svc?xsd=xsd0" />
+    <MetadataFile FileName="FtmService1.wsdl" MetadataType="Wsdl" ID="e4ee5e52-56fc-4a38-b141-344297cf1242" SourceId="1" SourceUrl="http://localhost:40611/FtmService.svc?wsdl" />
+    <MetadataFile FileName="FtmService1.disco" MetadataType="Disco" ID="f70ae689-a105-474a-a396-a49a5963b883" SourceId="1" SourceUrl="http://localhost:40611/FtmService.svc?disco" />
+    <MetadataFile FileName="FtmService42.xsd" MetadataType="Schema" ID="ca3854ac-c3fc-4ebb-a80d-284c8096c806" SourceId="1" SourceUrl="http://localhost:40611/FtmService.svc?xsd=xsd3" />
+    <MetadataFile FileName="FtmService43.xsd" MetadataType="Schema" ID="ae540036-0cd7-45d3-8e1e-df38ff3c8e23" SourceId="1" SourceUrl="http://localhost:40611/FtmService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

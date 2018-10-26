@@ -1,0 +1,9 @@
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Server\obj\Syscom.Server.NFC\Debug\Syscom.Server.NFC.vbprojResolveAssemblyReference.cache
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Server\obj\Syscom.Server.NFC\Debug\Syscom.Server.NFC.Resources.resources
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Server\obj\Syscom.Server.NFC\Debug\Syscom.Server.NFC.vbproj.GenerateResource.Cache
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Server\obj\Syscom.Server.NFC\Debug\Syscom.Server.NFC.dll
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Server\obj\Syscom.Server.NFC\Debug\Syscom.Server.NFC.xml
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Server\obj\Syscom.Server.NFC\Debug\Syscom.Server.NFC.pdb
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Server\Syscom.Server.NFC.dll
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Server\Syscom.Server.NFC.pdb
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Server\Syscom.Server.NFC.xml

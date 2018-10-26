@@ -1,0 +1,134 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Syscom.Comm.EXP
+</name>
+</assembly>
+<members>
+<member name="T:Syscom.Comm.EXP.My.Resources.Resources">
+<summary>
+  用於查詢當地語系化字串等的強類型資源類別。
+</summary>
+</member>
+<member name="P:Syscom.Comm.EXP.My.Resources.Resources.ResourceManager">
+<summary>
+  傳回這個類別使用的快取的 ResourceManager 執行個體。
+</summary>
+</member>
+<member name="P:Syscom.Comm.EXP.My.Resources.Resources.Culture">
+<summary>
+  覆寫目前執行緒的 CurrentUICulture 屬性，對象是所有
+  使用這個強類型資源類別的資源查閱。
+</summary>
+</member>
+<member name="T:Syscom.Comm.EXP.CommonException">
+ <summary>
+ 一般例外狀況
+ </summary>
+ <seealso cref="T:System.Exception" />
+</member>
+<member name="F:Syscom.Comm.EXP.CommonException.CallerInfo">
+ <summary>
+ The caller information
+ </summary>
+</member>
+<member name="F:Syscom.Comm.EXP.CommonException.ErrorCode">
+ <summary>
+ The error code
+ </summary>
+</member>
+<member name="F:Syscom.Comm.EXP.CommonException.ErrorCodeArg">
+ <summary>
+ The error code argument
+ </summary>
+</member>
+<member name="F:Syscom.Comm.EXP.CommonException.ErrorMessageEx">
+ <summary>
+ The error message ex
+ </summary>
+</member>
+<member name="F:Syscom.Comm.EXP.CommonException.OriginalEx">
+ <summary>
+ The original ex
+ </summary>
+</member>
+<member name="P:Syscom.Comm.EXP.CommonException.Message">
+ <summary>
+ 覆寫底層訊息
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:Syscom.Comm.EXP.CommonException.#ctor(System.String@,System.String[]@,System.Reflection.MethodBase)">
+ <summary>
+ 此建構式為標準用法，ErrorMessage　會自動取得系統定義檔裡的資訊，亦可直接拿來顯示給使用者看
+ </summary>
+ <param name="code">The code.</param>
+ <param name="formatArg">The format argument.</param>
+ <param name="caller">The caller.</param>
+</member>
+<member name="M:Syscom.Comm.EXP.CommonException.#ctor(System.String@,System.Exception@,System.String[]@,System.Reflection.MethodBase)">
+ <summary>
+ 此建構式為標準用法，ErrorMessage　會自動取得系統定義檔裡的資訊，ex為原始例外
+ </summary>
+ <param name="code">The code.</param>
+ <param name="ex">The ex.</param>
+ <param name="formatArg">The format argument.</param>
+ <param name="caller">The caller.</param>
+</member>
+<member name="M:Syscom.Comm.EXP.CommonException.getCallerInfo">
+ <summary>
+ 取得 CallerInfo
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:Syscom.Comm.EXP.CommonException.getErrorCode">
+ <summary>
+ 取得 ErrorCode
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:Syscom.Comm.EXP.CommonException.getErrorCodeArg">
+ <summary>
+ 取得 ErrorCodeArg
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:Syscom.Comm.EXP.CommonException.getOriginalException">
+ <summary>
+ 取得原始例外 OriginalEx
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:Syscom.Comm.EXP.CommonException.getErrorMessage">
+ <summary>
+ 取得由ErrorCode mapping 系統定義檔裡的資訊
+ </summary>
+ <exception cref="T:System.Exception">拋出</exception>
+ <returns></returns>
+</member>
+<member name="M:Syscom.Comm.EXP.CommonException.#ctor(System.String@,System.String@,System.String[]@)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Syscom.Comm.EXP.CommonException"/> class.
+ </summary>
+ <param name="code">The code.</param>
+ <param name="msg">The MSG.</param>
+ <param name="formatArg">The format argument.</param>
+</member>
+<member name="M:Syscom.Comm.EXP.CommonException.#ctor(System.String@,System.String@,System.Exception@,System.String[]@)">
+ <summary>
+ Initializes a new instance of the <see cref="T:Syscom.Comm.EXP.CommonException"/> class.
+ </summary>
+ <param name="code">The code.</param>
+ <param name="msg">The MSG.</param>
+ <param name="ex">The ex.</param>
+ <param name="formatArg">The format argument.</param>
+</member>
+<member name="M:Syscom.Comm.EXP.CommonException.getErrorMessageEX">
+ <summary>
+ Gets the error message ex.
+ </summary>
+ <returns></returns>
+</member>
+</members>
+</doc>

@@ -1,0 +1,844 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7644D0BE-2809-441B-A4D5-C8FD80DB0EBC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <StartupObject>
+    </StartupObject>
+    <RootNamespace>Syscom.Client.UCL</RootNamespace>
+    <AssemblyName>Syscom.Client.UCL</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>發行\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\..\SyscomCompile\Syscom\Client\</OutputPath>
+    <DocumentationFile>Syscom.Client.UCL.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <BaseIntermediateOutputPath>..\..\..\SyscomCompile\Syscom\Client\obj</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>..\..\..\SyscomCompile\Syscom\Client\obj\$(MSBuildProjectName)\Debug</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\SyscomCompile\Syscom\Client\</OutputPath>
+    <DocumentationFile>Syscom.Client.UCL.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <BaseIntermediateOutputPath>..\..\..\SyscomCompile\Syscom\Client\obj</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>..\..\..\SyscomCompile\Syscom\Client\obj\$(MSBuildProjectName)\Debug</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Com.Syscom.WinFormsUI.Docking">
+      <HintPath>..\..\..\ExtLIBs\Com.Syscom.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\ExtLIBs\Pdf\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\ExtLIBs\Word\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\ExtLIBs\Word\Microsoft.Office.Interop.Word.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>..\..\..\ExtLIBs\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Client.RPT, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SyscomCompile\Syscom\Client\Syscom.Client.RPT.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Client.ServiceFactory, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SyscomCompile\Syscom\Client\Syscom.Client.ServiceFactory.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Comm.BASE, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SyscomCompile\Syscom\Common\Syscom.Comm.BASE.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Comm.EXP, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SyscomCompile\Syscom\Common\Syscom.Comm.EXP.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Comm.LOG, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SyscomCompile\Syscom\Common\Syscom.Comm.LOG.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Comm.RPT, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SyscomCompile\Syscom\Common\Syscom.Comm.RPT.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Comm.TableFactory, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SyscomCompile\Syscom\Common\Syscom.Comm.TableFactory.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Comm.Utility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SyscomCompile\Syscom\Common\Syscom.Comm.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Method\UCLFormUtil.vb" />
+    <Compile Include="Method\UCLScreenUtil.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Sample\PDFSampleCode\SamplePDF.vb" />
+    <Compile Include="Sample\PDFSampleCode\SamplePDFClient.vb" />
+    <Compile Include="Sample\PDFSampleCode\SamplePDFUI.Designer.vb">
+      <DependentUpon>SamplePDFUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sample\PDFSampleCode\SamplePDFUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sample\UCLComboBoxGridUISample.designer.vb">
+      <DependentUpon>UCLComboBoxGridUISample.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sample\UCLComboBoxGridUISample.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sample\UCLComboBoxUISample.designer.vb">
+      <DependentUpon>UCLComboBoxUISample.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sample\UCLComboBoxUISample.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sample\UCLDateTimePickerUISample.designer.vb">
+      <DependentUpon>UCLDateTimePickerUISample.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sample\UCLDateTimePickerUISample.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sample\UCLGridViewPartnerUISample.designer.vb">
+      <DependentUpon>UCLGridViewPartnerUISample.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sample\UCLGridViewPartnerUISample.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sample\UCLGridViewUISample.designer.vb">
+      <DependentUpon>UCLGridViewUISample.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sample\UCLGridViewUISample.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sample\UCLGridViewUISample2.designer.vb">
+      <DependentUpon>UCLGridViewUISample2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sample\UCLGridViewUISample2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sample\UCLPhraseQueryUISample.designer.vb">
+      <DependentUpon>UCLPhraseQueryUISample.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sample\UCLPhraseQueryUISample.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sample\UCLTextBoxUISample.designer.vb">
+      <DependentUpon>UCLTextBoxUISample.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sample\UCLTextBoxUISample.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UCR\BaseUserControlUC.Designer.vb">
+      <DependentUpon>BaseUserControlUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCR\BaseUserControlUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCR\FixedHeightControlDesigner.vb" />
+    <Compile Include="UCR\IUCLMaintainFunction.vb" />
+    <Compile Include="UCR\LockHeightControlDesigner.vb" />
+    <Compile Include="UCR\UCLChartUC.Designer.vb">
+      <DependentUpon>UCLChartUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCR\UCLChartUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCR\UCLExcelImportUC.Designer.vb">
+      <DependentUpon>UCLExcelImportUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCR\UCLExcelImportUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCR\UCLFilePathUC.Designer.vb">
+      <DependentUpon>UCLFilePathUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCR\UCLFilePathUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCR\UclPrintConditionUC.Designer.vb">
+      <DependentUpon>UclPrintConditionUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCR\UclPrintConditionUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCR\UclNumericKeypadUC.Designer.vb">
+      <DependentUpon>UclNumericKeypadUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCR\UclNumericKeypadUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCR\UCLTextBoxWithCue.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UCR\UCLAddressUC.Designer.vb">
+      <DependentUpon>UCLAddressUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCR\UCLAddressUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCR\UCLAreaOpenWindowUC.designer.vb">
+      <DependentUpon>UCLAreaOpenWindowUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCR\UCLAreaOpenWindowUC.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UCR\UCLBtnCodeQueryUC.designer.vb">
+      <DependentUpon>UCLBtnCodeQueryUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCR\UCLBtnCodeQueryUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCR\UCLCCBoxItem.vb" />
+    <Compile Include="UCR\UCLCensusAddrUC.designer.vb">
+      <DependentUpon>UCLCensusAddrUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCR\UCLCensusAddrUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCR\UCLCensusUC.designer.vb">
+      <DependentUpon>UCLCensusUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCR\UCLCensusUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCR\UCLChartNoOpenWindowUC.designer.vb">
+      <DependentUpon>UCLChartNoOpenWindowUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCR\UCLChartNoOpenWindowUC.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UCR\UCLChartNoUC.designer.vb">
+      <DependentUpon>UCLChartNoUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCR\UCLChartNoUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCR\UCLCheckedComboBoxUC.Designer.vb">
+      <DependentUpon>UCLCheckedComboBoxUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCR\UCLCheckedComboBoxUC.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UCR\UCLCheckListBoxUC.designer.vb">
+      <DependentUpon>UCLCheckListBoxUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCR\UCLCheckListBoxUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCR\UCLComboBoxGridOpenWindowUC.designer.vb">
+      <DependentUpon>UCLComboBoxGridOpenWindowUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCR\UCLComboBoxGridOpenWindowUC.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UCR\UCLComboBoxGridUC.designer.vb">
+      <DependentUpon>UCLComboBoxGridUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCR\UCLComboBoxGridUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCR\UCLComboBoxUC.designer.vb">
+      <DependentUpon>UCLComboBoxUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCR\UCLComboBoxUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCR\UCLDataGridViewUC.designer.vb">
+      <DependentUpon>UCLDataGridViewUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCR\UCLDataGridViewUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCR\UCLDataLink.vb" />
+    <Compile Include="UCR\UCLDateTimePickerCellUC.designer.vb">
+      <DependentUpon>UCLDateTimePickerCellUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCR\UCLDateTimePickerCellUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCR\UCLDateTimePickerUC.designer.vb">
+      <DependentUpon>UCLDateTimePickerUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCR\UCLDateTimePickerUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCR\UCLDatrTimePickerWithTimeUC.Designer.vb">
+      <DependentUpon>UCLDatrTimePickerWithTimeUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCR\UCLDatrTimePickerWithTimeUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCR\UCLDiagFavorDialogUI.Designer.vb">
+      <DependentUpon>UCLDiagFavorDialogUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCR\UCLDiagFavorDialogUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UCR\UCLDistOpenWindowUC.Designer.vb">
+      <DependentUpon>UCLDistOpenWindowUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCR\UCLDistOpenWindowUC.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UCR\UCLDrugPackageDtlUI.Designer.vb">
+      <DependentUpon>UCLDrugPackageDtlUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCR\UCLDrugPackageDtlUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UCR\UCLExportListUC.Designer.vb">
+      <DependentUpon>UCLExportListUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCR\UCLExportListUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCR\UCLExtension.vb" />
+    <Compile Include="UCR\UCLGridRowUpDownUC.designer.vb">
+      <DependentUpon>UCLGridRowUpDownUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCR\UCLGridRowUpDownUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCR\UCLGridUpComboBoxUC.designer.vb">
+      <DependentUpon>UCLGridUpComboBoxUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCR\UCLGridUpComboBoxUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCR\UCLHintUC.designer.vb">
+      <DependentUpon>UCLHintUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCR\UCLHintUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCR\UCLHorizontalDataGridViewUC.Designer.vb">
+      <DependentUpon>UCLHorizontalDataGridViewUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCR\UCLHorizontalDataGridViewUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCR\UCLIdentityUC.designer.vb">
+      <DependentUpon>UCLIdentityUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCR\UCLIdentityUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCR\UCLListBoxUC.designer.vb">
+      <DependentUpon>UCLListBoxUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCR\UCLListBoxUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCR\UCLOpenWindowMultiSelectUI.designer.vb">
+      <DependentUpon>UCLOpenWindowMultiSelectUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCR\UCLOpenWindowMultiSelectUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UCR\UCLOpenWindowUI.designer.vb">
+      <DependentUpon>UCLOpenWindowUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCR\UCLOpenWindowUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UCR\UCLOptionOrderUI.Designer.vb">
+      <DependentUpon>UCLOptionOrderUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCR\UCLOptionOrderUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UCR\UCLOrderFavorDialogUI.Designer.vb">
+      <DependentUpon>UCLOrderFavorDialogUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCR\UCLOrderFavorDialogUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UCR\UCLPatientData.vb" />
+    <Compile Include="UCR\UCLPhraseQueryUI.Designer.vb">
+      <DependentUpon>UCLPhraseQueryUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCR\UCLPhraseQueryUI.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCR\UCLPopMemoUC.designer.vb">
+      <DependentUpon>UCLPopMemoUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCR\UCLPopMemoUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCR\UCLRangeInputUI.designer.vb">
+      <DependentUpon>UCLRangeInputUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCR\UCLRangeInputUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UCR\UCLRichTextBoxUC.designer.vb">
+      <DependentUpon>UCLRichTextBoxUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCR\UCLRichTextBoxUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCR\UCLTextBoxUC.designer.vb">
+      <DependentUpon>UCLTextBoxUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCR\UCLTextBoxUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCR\UCLTextCodeQueryUI.designer.vb">
+      <DependentUpon>UCLTextCodeQueryUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCR\UCLTextCodeQueryUI.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCR\UclTimeIntervalUC.Designer.vb">
+      <DependentUpon>UclTimeIntervalUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCR\UclTimeIntervalUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCR\UclTimeUC.Designer.vb">
+      <DependentUpon>UclTimeUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCR\UclTimeUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCR\UCLTreeViewAdvUC.designer.vb">
+      <DependentUpon>UCLTreeViewAdvUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCR\UCLTreeViewAdvUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCR\UCLYmPickerUC.Designer.vb">
+      <DependentUpon>UCLYmPickerUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCR\UCLYmPickerUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\BaseFormUI.Designer.vb">
+      <DependentUpon>BaseFormUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BaseFormUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\IMaintainFormUI.designer.vb">
+      <DependentUpon>IMaintainFormUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\IMaintainFormUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\IMaintainFunction.vb" />
+    <Compile Include="UI\IMaintainMultichoiceFormUI.Designer.vb">
+      <DependentUpon>IMaintainMultichoiceFormUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\IMaintainMultichoiceFormUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\IMaintainMultichoiceFunction.vb" />
+    <Compile Include="UI\IUCLMaintainFormUI.designer.vb">
+      <DependentUpon>IUCLMaintainFormUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\IUCLMaintainFormUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UclExportUI.Designer.vb">
+      <DependentUpon>UclExportUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UclExportUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UclMutiGridUI.Designer.vb">
+      <DependentUpon>UclMutiGridUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UclMutiGridUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UclNumericKeypadUI.Designer.vb">
+      <DependentUpon>UclNumericKeypadUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UclNumericKeypadUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UCLQuestionDialogUI.Designer.vb">
+      <DependentUpon>UCLQuestionDialogUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UCLQuestionDialogUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UCLMessageHandlingUI.designer.vb">
+      <DependentUpon>UCLMessageHandlingUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UCLMessageHandlingUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UclTimeKeypadUI.Designer.vb">
+      <DependentUpon>UclTimeKeypadUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UclTimeKeypadUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UCLWaitingFormUI.designer.vb">
+      <DependentUpon>UCLWaitingFormUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UCLWaitingFormUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PUBSystemVersionUI.designer.vb">
+      <DependentUpon>PUBSystemVersionUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PUBSystemVersionUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sample\PDFSampleCode\SamplePDFUI.resx">
+      <DependentUpon>SamplePDFUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sample\UCLComboBoxGridUISample.resx">
+      <DependentUpon>UCLComboBoxGridUISample.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sample\UCLComboBoxUISample.resx">
+      <DependentUpon>UCLComboBoxUISample.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sample\UCLDateTimePickerUISample.resx">
+      <DependentUpon>UCLDateTimePickerUISample.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sample\UCLGridViewPartnerUISample.resx">
+      <DependentUpon>UCLGridViewPartnerUISample.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sample\UCLGridViewUISample.resx">
+      <DependentUpon>UCLGridViewUISample.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sample\UCLGridViewUISample2.resx">
+      <DependentUpon>UCLGridViewUISample2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sample\UCLPhraseQueryUISample.resx">
+      <DependentUpon>UCLPhraseQueryUISample.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sample\UCLTextBoxUISample.resx">
+      <DependentUpon>UCLTextBoxUISample.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCR\UCLChartUC.resx">
+      <DependentUpon>UCLChartUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCR\UCLExcelImportUC.resx">
+      <DependentUpon>UCLExcelImportUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCR\UCLFilePathUC.resx">
+      <DependentUpon>UCLFilePathUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCR\UclPrintConditionUC.resx">
+      <DependentUpon>UclPrintConditionUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCR\UCLAddressUC.resx">
+      <DependentUpon>UCLAddressUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCR\UCLAreaOpenWindowUC.resx">
+      <DependentUpon>UCLAreaOpenWindowUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCR\UCLBtnCodeQueryUC.resx">
+      <DependentUpon>UCLBtnCodeQueryUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCR\UCLCensusAddrUC.resx">
+      <DependentUpon>UCLCensusAddrUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCR\UCLCensusUC.resx">
+      <DependentUpon>UCLCensusUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCR\UCLChartNoOpenWindowUC.resx">
+      <DependentUpon>UCLChartNoOpenWindowUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCR\UCLChartNoUC.resx">
+      <DependentUpon>UCLChartNoUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCR\UCLCheckListBoxUC.resx">
+      <DependentUpon>UCLCheckListBoxUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCR\UCLComboBoxGridOpenWindowUC.resx">
+      <DependentUpon>UCLComboBoxGridOpenWindowUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCR\UCLComboBoxGridUC.resx">
+      <DependentUpon>UCLComboBoxGridUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCR\UCLComboBoxUC.resx">
+      <DependentUpon>UCLComboBoxUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCR\UCLDataGridViewUC.resx">
+      <DependentUpon>UCLDataGridViewUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCR\UCLDateTimePickerCellUC.resx">
+      <DependentUpon>UCLDateTimePickerCellUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCR\UCLDateTimePickerUC.resx">
+      <DependentUpon>UCLDateTimePickerUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCR\UCLDatrTimePickerWithTimeUC.resx">
+      <DependentUpon>UCLDatrTimePickerWithTimeUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCR\UCLDiagFavorDialogUI.resx">
+      <DependentUpon>UCLDiagFavorDialogUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCR\UCLDrugPackageDtlUI.resx">
+      <DependentUpon>UCLDrugPackageDtlUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCR\UCLExportListUC.resx">
+      <DependentUpon>UCLExportListUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCR\UCLGridRowUpDownUC.resx">
+      <DependentUpon>UCLGridRowUpDownUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCR\UCLGridUpComboBoxUC.resx">
+      <DependentUpon>UCLGridUpComboBoxUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCR\UCLHintUC.resx">
+      <DependentUpon>UCLHintUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCR\UCLHorizontalDataGridViewUC.resx">
+      <DependentUpon>UCLHorizontalDataGridViewUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCR\UCLIdentityUC.resx">
+      <DependentUpon>UCLIdentityUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCR\UCLListBoxUC.resx">
+      <DependentUpon>UCLListBoxUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCR\UclNumericKeypadUC.resx">
+      <DependentUpon>UclNumericKeypadUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCR\UCLOpenWindowMultiSelectUI.resx">
+      <DependentUpon>UCLOpenWindowMultiSelectUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCR\UCLOpenWindowUI.resx">
+      <DependentUpon>UCLOpenWindowUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCR\UCLOptionOrderUI.resx">
+      <DependentUpon>UCLOptionOrderUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCR\UCLOrderFavorDialogUI.resx">
+      <DependentUpon>UCLOrderFavorDialogUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCR\UCLPhraseQueryUI.resx">
+      <DependentUpon>UCLPhraseQueryUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCR\UCLPopMemoUC.resx">
+      <DependentUpon>UCLPopMemoUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCR\UCLRangeInputUI.resx">
+      <DependentUpon>UCLRangeInputUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCR\UCLRichTextBoxUC.resx">
+      <DependentUpon>UCLRichTextBoxUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCR\UCLTextBoxUC.resx">
+      <DependentUpon>UCLTextBoxUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCR\UCLTextCodeQueryUI.resx">
+      <DependentUpon>UCLTextCodeQueryUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCR\UclTimeIntervalUC.resx">
+      <DependentUpon>UclTimeIntervalUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCR\UclTimeUC.resx">
+      <DependentUpon>UclTimeUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCR\UCLTreeViewAdvUC.resx">
+      <DependentUpon>UCLTreeViewAdvUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCR\UCLYmPickerUC.resx">
+      <DependentUpon>UCLYmPickerUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\BaseFormUI.resx">
+      <DependentUpon>BaseFormUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\IMaintainFormUI.resx">
+      <DependentUpon>IMaintainFormUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\IMaintainMultichoiceFormUI.resx">
+      <DependentUpon>IMaintainMultichoiceFormUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\IUCLMaintainFormUI.resx">
+      <DependentUpon>IUCLMaintainFormUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UclExportUI.resx">
+      <DependentUpon>UclExportUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UclMutiGridUI.resx">
+      <DependentUpon>UclMutiGridUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UclNumericKeypadUI.resx">
+      <DependentUpon>UclNumericKeypadUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UCLQuestionDialogUI.resx">
+      <DependentUpon>UCLQuestionDialogUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UCLMessageHandlingUI.resx">
+      <DependentUpon>UCLMessageHandlingUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UclTimeKeypadUI.resx">
+      <DependentUpon>UclTimeKeypadUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UCLWaitingFormUI.resx">
+      <DependentUpon>UCLWaitingFormUI.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close_Window.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Expand_Window.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressError.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressInfo.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressQuestion.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ProgressWarn.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Syscom_CMM\Syscom.Client.CMM\Syscom.Client.CMM.vbproj">
+      <Project>{dfb9840a-3cd2-4546-a01a-8d01522fdc76}</Project>
+      <Name>Syscom.Client.CMM</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{94E38DFF-614B-4CBD-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,122 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+SyscomAPP
+</name>
+</assembly>
+<members>
+<member name="T:SyscomAPP.My.Resources.Resources">
+<summary>
+  用於查詢當地語系化字串等的強類型資源類別。
+</summary>
+</member>
+<member name="P:SyscomAPP.My.Resources.Resources.ResourceManager">
+<summary>
+  傳回這個類別使用的快取的 ResourceManager 執行個體。
+</summary>
+</member>
+<member name="P:SyscomAPP.My.Resources.Resources.Culture">
+<summary>
+  覆寫目前執行緒的 CurrentUICulture 屬性，對象是所有
+  使用這個強類型資源類別的資源查閱。
+</summary>
+</member>
+<member name="M:SyscomAPP.Customization.InertButton.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+ <exclude/>
+</member>
+<member name="M:SyscomAPP.Customization.InertButton.OnClick(System.EventArgs)">
+ <exclude/>
+</member>
+<member name="M:SyscomAPP.Customization.InertButton.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+ <exclude/>
+</member>
+<member name="M:SyscomAPP.Customization.InertButton.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+ <exclude/>
+</member>
+<member name="M:SyscomAPP.Customization.InertButton.OnMouseEnter(System.EventArgs)">
+ <exclude/>
+</member>
+<member name="M:SyscomAPP.Customization.InertButton.OnMouseLeave(System.EventArgs)">
+ <exclude/>
+</member>
+<member name="M:SyscomAPP.Customization.InertButton.OnPaint(System.Windows.Forms.PaintEventArgs)">
+ <exclude/>
+</member>
+<member name="M:SyscomAPP.Customization.InertButton.OnEnabledChanged(System.EventArgs)">
+ <exclude/>
+</member>
+<member name="F:SyscomAPP.AboutDialog.components">
+ <summary>
+ Required designer variable.
+ </summary>
+</member>
+<member name="M:SyscomAPP.AboutDialog.Dispose(System.Boolean)">
+ <summary>
+ Clean up any resources being used.
+ </summary>
+ <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+</member>
+<member name="M:SyscomAPP.AboutDialog.InitializeComponent">
+ <summary>
+ Required method for Designer support - do not modify
+ the contents of this method with the code editor.
+ </summary>
+</member>
+<member name="P:SyscomAPP.MainForm.IdleTime">
+ <summary>
+ Get idle time in second.
+ </summary>
+ <value>idle time.</value>
+ <returns></returns>
+ <author>Ken</author>
+ <date>2011-11-17</date>
+ <remarks></remarks>
+</member>
+<member name="M:SyscomAPP.MainForm.OpenAgentInstance(System.String,System.String,System.String,System.String,System.String[])">
+ <summary>
+ 授權代理
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:SyscomAPP.MainForm.GetAppProcessID(System.String)">
+ <summary>
+ 取得Precess UserName
+ </summary>
+ <param name="AppProcessName"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:SyscomAPP.MainForm.AppWriteProcessID(System.Int32)">
+ <summary>
+ 寫入ProcessID
+ </summary>
+ <param name="AppProcessID"></param>
+ <remarks></remarks>
+</member>
+<member name="M:SyscomAPP.MainForm.AppReadProcessID">
+ <summary>
+ 讀取ProcessID
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="F:SyscomAPP.ToolWindow.components">
+ <summary>
+ Required designer variable.
+ </summary>
+</member>
+<member name="M:SyscomAPP.ToolWindow.Dispose(System.Boolean)">
+ <summary>
+ Clean up any resources being used.
+ </summary>
+ <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+</member>
+<member name="M:SyscomAPP.ToolWindow.InitializeComponent">
+ <summary>
+ Required method for Designer support - do not modify
+ the contents of this method with the code editor.
+ </summary>
+</member>
+</members>
+</doc>

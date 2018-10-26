@@ -1,0 +1,1193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="IccServiceL" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_IIccServiceL_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:40611/IccServiceL.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:40611/IccServiceL.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:40611/IccServiceL.svc?xsd=xsd2" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IIccServiceL_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_queryICCHealthUploadandICCInoculationUploadByCond_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryICCHealthUploadandICCInoculationUploadByCond" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_queryICCHealthUploadandICCInoculationUploadByCond_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryICCHealthUploadandICCInoculationUploadByCondResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_queryICCHealthUploadandICCInoculationUploadByPage1Cond_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryICCHealthUploadandICCInoculationUploadByPage1Cond" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_queryICCHealthUploadandICCInoculationUploadByPage1Cond_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryICCHealthUploadandICCInoculationUploadByPage1CondResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_queryICCHealthUploadandICCInoculationUploadByCond2_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryICCHealthUploadandICCInoculationUploadByCond2" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_queryICCHealthUploadandICCInoculationUploadByCond2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryICCHealthUploadandICCInoculationUploadByCond2Response" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_updateICCHealthUpload_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateICCHealthUpload" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_updateICCHealthUpload_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateICCHealthUploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_updateICCInoculationUpload_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateICCInoculationUpload" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_updateICCInoculationUpload_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateICCInoculationUploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_deleteICCInoculationUploadBS_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteICCInoculationUploadBS" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_deleteICCInoculationUploadBS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteICCInoculationUploadBSResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_queryDeletekeystateByInoculationSn_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryDeletekeystateByInoculationSn" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_queryDeletekeystateByInoculationSn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryDeletekeystateByInoculationSnResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_insertICCInoculationUpload_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertICCInoculationUpload" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_insertICCInoculationUpload_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertICCInoculationUploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_insertICCHealthOrderUpload_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertICCHealthOrderUpload" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_insertICCHealthOrderUpload_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertICCHealthOrderUploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_queryICCMustFieldVerify_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryICCMustFieldVerify" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_queryICCMustFieldVerify_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryICCMustFieldVerifyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_insertICCMustFieldVerify_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertICCMustFieldVerify" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_insertICCMustFieldVerify_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertICCMustFieldVerifyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_updateICCMustFieldVerify_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateICCMustFieldVerify" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_updateICCMustFieldVerify_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateICCMustFieldVerifyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_deleteCCMustFieldVerify_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteCCMustFieldVerify" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_deleteCCMustFieldVerify_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteCCMustFieldVerifyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_queryIccFieldLengthVerify_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryIccFieldLengthVerify" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_queryIccFieldLengthVerify_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryIccFieldLengthVerifyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_insertIccFieldLengthVerify_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertIccFieldLengthVerify" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_insertIccFieldLengthVerify_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertIccFieldLengthVerifyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_updateIccFieldLengthVerify_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateIccFieldLengthVerify" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_updateIccFieldLengthVerify_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateIccFieldLengthVerifyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_deleteIccFieldLengthVerify_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteIccFieldLengthVerify" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_deleteIccFieldLengthVerify_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteIccFieldLengthVerifyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_queryIccSelfVerify_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryIccSelfVerify" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_queryIccSelfVerify_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryIccSelfVerifyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_insertIccSelfVerify_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertIccSelfVerify" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_insertIccSelfVerify_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertIccSelfVerifyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_updateIccSelfVerify_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateIccSelfVerify" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_updateIccSelfVerify_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateIccSelfVerifyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_deleteIccSelfVerify_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteIccSelfVerify" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_deleteIccSelfVerify_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteIccSelfVerifyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_queryIccInteractVerify1ById_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryIccInteractVerify1ById" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_queryIccInteractVerify1ById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryIccInteractVerify1ByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_insertIccInteractVerify1_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertIccInteractVerify1" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_insertIccInteractVerify1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertIccInteractVerify1Response" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_updateIccInteractVerify1_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateIccInteractVerify1" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_updateIccInteractVerify1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateIccInteractVerify1Response" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_deleteIccInteractVerify1_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteIccInteractVerify1" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_deleteIccInteractVerify1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteIccInteractVerify1Response" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_queryIccInteractVerify2ById_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryIccInteractVerify2ById" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_queryIccInteractVerify2ById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryIccInteractVerify2ByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_insertIccInteractVerify2_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertIccInteractVerify2" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_insertIccInteractVerify2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertIccInteractVerify2Response" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_updateIccInteractVerify2_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateIccInteractVerify2" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_updateIccInteractVerify2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateIccInteractVerify2Response" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_deleteIccInteractVerify2_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteIccInteractVerify2" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_deleteIccInteractVerify2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteIccInteractVerify2Response" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_queryIccInteractVerify3ById_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryIccInteractVerify3ById" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_queryIccInteractVerify3ById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryIccInteractVerify3ByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_insertIccInteractVerify3_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertIccInteractVerify3" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_insertIccInteractVerify3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertIccInteractVerify3Response" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_updateIccInteractVerify3_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateIccInteractVerify3" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_updateIccInteractVerify3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateIccInteractVerify3Response" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_deleteIccInteractVerify3_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteIccInteractVerify3" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_deleteIccInteractVerify3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteIccInteractVerify3Response" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_queryIccInteractVerify4ById_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryIccInteractVerify4ById" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_queryIccInteractVerify4ById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryIccInteractVerify4ByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_insertIccInteractVerify4_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertIccInteractVerify4" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_insertIccInteractVerify4_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertIccInteractVerify4Response" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_updateIccInteractVerify4_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateIccInteractVerify4" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_updateIccInteractVerify4_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateIccInteractVerify4Response" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_deleteIccInteractVerify4_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteIccInteractVerify4" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_deleteIccInteractVerify4_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteIccInteractVerify4Response" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_queryICCOnlineCheckById_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryICCOnlineCheckById" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_queryICCOnlineCheckById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryICCOnlineCheckByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_insertICCOnlineCheckById_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertICCOnlineCheckById" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_insertICCOnlineCheckById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertICCOnlineCheckByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_updateICCOnlineCheckById_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateICCOnlineCheckById" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_updateICCOnlineCheckById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateICCOnlineCheckByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_deleteICCOnlineCheckById_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteICCOnlineCheckById" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_deleteICCOnlineCheckById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteICCOnlineCheckByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_insertICCBacterinUpload_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertICCBacterinUpload" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_insertICCBacterinUpload_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertICCBacterinUploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_updateICCInoculationUploadBS_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateICCInoculationUploadBS" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_updateICCInoculationUploadBS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateICCInoculationUploadBSResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_queryICCInoculationUploadByPK_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryICCInoculationUploadByPK" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_queryICCInoculationUploadByPK_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryICCInoculationUploadByPKResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_confirmICCInoculationUploadBS_InputMessage">
+    <wsdl:part name="parameters" element="tns:confirmICCInoculationUploadBS" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_confirmICCInoculationUploadBS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:confirmICCInoculationUploadBSResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_insertICCOrderUpload_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertICCOrderUpload" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_insertICCOrderUpload_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertICCOrderUploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_updateICCHealthOrderUpload_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateICCHealthOrderUpload" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_updateICCHealthOrderUpload_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateICCHealthOrderUploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_queryICCHealthOrderUpload_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryICCHealthOrderUpload" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_queryICCHealthOrderUpload_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryICCHealthOrderUploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_confirmICCHealthOrderUpload_InputMessage">
+    <wsdl:part name="parameters" element="tns:confirmICCHealthOrderUpload" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_confirmICCHealthOrderUpload_OutputMessage">
+    <wsdl:part name="parameters" element="tns:confirmICCHealthOrderUploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_queryICCInoculationUpload_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryICCInoculationUpload" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_queryICCInoculationUpload_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryICCInoculationUploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_deleteICCInoculationUploadByPk_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteICCInoculationUploadByPk" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_deleteICCInoculationUploadByPk_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteICCInoculationUploadByPkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_queryA24ByOutpatient_Sn_L_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryA24ByOutpatient_Sn_L" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_queryA24ByOutpatient_Sn_L_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryA24ByOutpatient_Sn_LResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_updateICCInoculationUploadByPk_L_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateICCInoculationUploadByPk_L" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_updateICCInoculationUploadByPk_L_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateICCInoculationUploadByPk_LResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_queryICCInoculationSn_L_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryICCInoculationSn_L" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_queryICCInoculationSn_L_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryICCInoculationSn_LResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_QueryIccCloudDrugPatientByCond_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryIccCloudDrugPatientByCond" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_QueryIccCloudDrugPatientByCond_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryIccCloudDrugPatientByCondResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_InsertIccCloudDrugPatient_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertIccCloudDrugPatient" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_InsertIccCloudDrugPatient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertIccCloudDrugPatientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_DeleteIccCloudDrugPatientByPK_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteIccCloudDrugPatientByPK" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_DeleteIccCloudDrugPatientByPK_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteIccCloudDrugPatientByPKResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_UpdateIccCloudDrugPatient_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateIccCloudDrugPatient" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_UpdateIccCloudDrugPatient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateIccCloudDrugPatientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_QueryIccAlertRecByCond_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryIccAlertRecByCond" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_QueryIccAlertRecByCond_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryIccAlertRecByCondResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_QueryIccCloudPatientQryByCond_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryIccCloudPatientQryByCond" />
+  </wsdl:message>
+  <wsdl:message name="IIccServiceL_QueryIccCloudPatientQryByCond_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryIccCloudPatientQryByCondResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IIccServiceL">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/DoWork" message="tns:IIccServiceL_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/DoWorkResponse" message="tns:IIccServiceL_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryICCHealthUploadandICCInoculationUploadByCond">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/queryICCHealthUploadandICCInoculationUploadByCond" message="tns:IIccServiceL_queryICCHealthUploadandICCInoculationUploadByCond_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/queryICCHealthUploadandICCInoculationUploadByCondResponse" message="tns:IIccServiceL_queryICCHealthUploadandICCInoculationUploadByCond_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryICCHealthUploadandICCInoculationUploadByPage1Cond">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/queryICCHealthUploadandICCInoculationUploadByPage1Cond" message="tns:IIccServiceL_queryICCHealthUploadandICCInoculationUploadByPage1Cond_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/queryICCHealthUploadandICCInoculationUploadByPage1CondResponse" message="tns:IIccServiceL_queryICCHealthUploadandICCInoculationUploadByPage1Cond_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryICCHealthUploadandICCInoculationUploadByCond2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/queryICCHealthUploadandICCInoculationUploadByCond2" message="tns:IIccServiceL_queryICCHealthUploadandICCInoculationUploadByCond2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/queryICCHealthUploadandICCInoculationUploadByCond2Response" message="tns:IIccServiceL_queryICCHealthUploadandICCInoculationUploadByCond2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateICCHealthUpload">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/updateICCHealthUpload" message="tns:IIccServiceL_updateICCHealthUpload_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/updateICCHealthUploadResponse" message="tns:IIccServiceL_updateICCHealthUpload_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateICCInoculationUpload">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/updateICCInoculationUpload" message="tns:IIccServiceL_updateICCInoculationUpload_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/updateICCInoculationUploadResponse" message="tns:IIccServiceL_updateICCInoculationUpload_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteICCInoculationUploadBS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/deleteICCInoculationUploadBS" message="tns:IIccServiceL_deleteICCInoculationUploadBS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/deleteICCInoculationUploadBSResponse" message="tns:IIccServiceL_deleteICCInoculationUploadBS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryDeletekeystateByInoculationSn">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/queryDeletekeystateByInoculationSn" message="tns:IIccServiceL_queryDeletekeystateByInoculationSn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/queryDeletekeystateByInoculationSnResponse" message="tns:IIccServiceL_queryDeletekeystateByInoculationSn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertICCInoculationUpload">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/insertICCInoculationUpload" message="tns:IIccServiceL_insertICCInoculationUpload_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/insertICCInoculationUploadResponse" message="tns:IIccServiceL_insertICCInoculationUpload_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertICCHealthOrderUpload">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/insertICCHealthOrderUpload" message="tns:IIccServiceL_insertICCHealthOrderUpload_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/insertICCHealthOrderUploadResponse" message="tns:IIccServiceL_insertICCHealthOrderUpload_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryICCMustFieldVerify">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/queryICCMustFieldVerify" message="tns:IIccServiceL_queryICCMustFieldVerify_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/queryICCMustFieldVerifyResponse" message="tns:IIccServiceL_queryICCMustFieldVerify_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertICCMustFieldVerify">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/insertICCMustFieldVerify" message="tns:IIccServiceL_insertICCMustFieldVerify_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/insertICCMustFieldVerifyResponse" message="tns:IIccServiceL_insertICCMustFieldVerify_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateICCMustFieldVerify">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/updateICCMustFieldVerify" message="tns:IIccServiceL_updateICCMustFieldVerify_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/updateICCMustFieldVerifyResponse" message="tns:IIccServiceL_updateICCMustFieldVerify_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteCCMustFieldVerify">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/deleteCCMustFieldVerify" message="tns:IIccServiceL_deleteCCMustFieldVerify_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/deleteCCMustFieldVerifyResponse" message="tns:IIccServiceL_deleteCCMustFieldVerify_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryIccFieldLengthVerify">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/queryIccFieldLengthVerify" message="tns:IIccServiceL_queryIccFieldLengthVerify_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/queryIccFieldLengthVerifyResponse" message="tns:IIccServiceL_queryIccFieldLengthVerify_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertIccFieldLengthVerify">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/insertIccFieldLengthVerify" message="tns:IIccServiceL_insertIccFieldLengthVerify_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/insertIccFieldLengthVerifyResponse" message="tns:IIccServiceL_insertIccFieldLengthVerify_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateIccFieldLengthVerify">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/updateIccFieldLengthVerify" message="tns:IIccServiceL_updateIccFieldLengthVerify_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/updateIccFieldLengthVerifyResponse" message="tns:IIccServiceL_updateIccFieldLengthVerify_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteIccFieldLengthVerify">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/deleteIccFieldLengthVerify" message="tns:IIccServiceL_deleteIccFieldLengthVerify_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/deleteIccFieldLengthVerifyResponse" message="tns:IIccServiceL_deleteIccFieldLengthVerify_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryIccSelfVerify">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/queryIccSelfVerify" message="tns:IIccServiceL_queryIccSelfVerify_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/queryIccSelfVerifyResponse" message="tns:IIccServiceL_queryIccSelfVerify_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertIccSelfVerify">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/insertIccSelfVerify" message="tns:IIccServiceL_insertIccSelfVerify_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/insertIccSelfVerifyResponse" message="tns:IIccServiceL_insertIccSelfVerify_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateIccSelfVerify">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/updateIccSelfVerify" message="tns:IIccServiceL_updateIccSelfVerify_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/updateIccSelfVerifyResponse" message="tns:IIccServiceL_updateIccSelfVerify_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteIccSelfVerify">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/deleteIccSelfVerify" message="tns:IIccServiceL_deleteIccSelfVerify_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/deleteIccSelfVerifyResponse" message="tns:IIccServiceL_deleteIccSelfVerify_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryIccInteractVerify1ById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/queryIccInteractVerify1ById" message="tns:IIccServiceL_queryIccInteractVerify1ById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/queryIccInteractVerify1ByIdResponse" message="tns:IIccServiceL_queryIccInteractVerify1ById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertIccInteractVerify1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/insertIccInteractVerify1" message="tns:IIccServiceL_insertIccInteractVerify1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/insertIccInteractVerify1Response" message="tns:IIccServiceL_insertIccInteractVerify1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateIccInteractVerify1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/updateIccInteractVerify1" message="tns:IIccServiceL_updateIccInteractVerify1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/updateIccInteractVerify1Response" message="tns:IIccServiceL_updateIccInteractVerify1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteIccInteractVerify1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/deleteIccInteractVerify1" message="tns:IIccServiceL_deleteIccInteractVerify1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/deleteIccInteractVerify1Response" message="tns:IIccServiceL_deleteIccInteractVerify1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryIccInteractVerify2ById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/queryIccInteractVerify2ById" message="tns:IIccServiceL_queryIccInteractVerify2ById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/queryIccInteractVerify2ByIdResponse" message="tns:IIccServiceL_queryIccInteractVerify2ById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertIccInteractVerify2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/insertIccInteractVerify2" message="tns:IIccServiceL_insertIccInteractVerify2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/insertIccInteractVerify2Response" message="tns:IIccServiceL_insertIccInteractVerify2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateIccInteractVerify2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/updateIccInteractVerify2" message="tns:IIccServiceL_updateIccInteractVerify2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/updateIccInteractVerify2Response" message="tns:IIccServiceL_updateIccInteractVerify2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteIccInteractVerify2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/deleteIccInteractVerify2" message="tns:IIccServiceL_deleteIccInteractVerify2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/deleteIccInteractVerify2Response" message="tns:IIccServiceL_deleteIccInteractVerify2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryIccInteractVerify3ById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/queryIccInteractVerify3ById" message="tns:IIccServiceL_queryIccInteractVerify3ById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/queryIccInteractVerify3ByIdResponse" message="tns:IIccServiceL_queryIccInteractVerify3ById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertIccInteractVerify3">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/insertIccInteractVerify3" message="tns:IIccServiceL_insertIccInteractVerify3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/insertIccInteractVerify3Response" message="tns:IIccServiceL_insertIccInteractVerify3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateIccInteractVerify3">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/updateIccInteractVerify3" message="tns:IIccServiceL_updateIccInteractVerify3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/updateIccInteractVerify3Response" message="tns:IIccServiceL_updateIccInteractVerify3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteIccInteractVerify3">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/deleteIccInteractVerify3" message="tns:IIccServiceL_deleteIccInteractVerify3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/deleteIccInteractVerify3Response" message="tns:IIccServiceL_deleteIccInteractVerify3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryIccInteractVerify4ById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/queryIccInteractVerify4ById" message="tns:IIccServiceL_queryIccInteractVerify4ById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/queryIccInteractVerify4ByIdResponse" message="tns:IIccServiceL_queryIccInteractVerify4ById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertIccInteractVerify4">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/insertIccInteractVerify4" message="tns:IIccServiceL_insertIccInteractVerify4_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/insertIccInteractVerify4Response" message="tns:IIccServiceL_insertIccInteractVerify4_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateIccInteractVerify4">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/updateIccInteractVerify4" message="tns:IIccServiceL_updateIccInteractVerify4_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/updateIccInteractVerify4Response" message="tns:IIccServiceL_updateIccInteractVerify4_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteIccInteractVerify4">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/deleteIccInteractVerify4" message="tns:IIccServiceL_deleteIccInteractVerify4_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/deleteIccInteractVerify4Response" message="tns:IIccServiceL_deleteIccInteractVerify4_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryICCOnlineCheckById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/queryICCOnlineCheckById" message="tns:IIccServiceL_queryICCOnlineCheckById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/queryICCOnlineCheckByIdResponse" message="tns:IIccServiceL_queryICCOnlineCheckById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertICCOnlineCheckById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/insertICCOnlineCheckById" message="tns:IIccServiceL_insertICCOnlineCheckById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/insertICCOnlineCheckByIdResponse" message="tns:IIccServiceL_insertICCOnlineCheckById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateICCOnlineCheckById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/updateICCOnlineCheckById" message="tns:IIccServiceL_updateICCOnlineCheckById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/updateICCOnlineCheckByIdResponse" message="tns:IIccServiceL_updateICCOnlineCheckById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteICCOnlineCheckById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/deleteICCOnlineCheckById" message="tns:IIccServiceL_deleteICCOnlineCheckById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/deleteICCOnlineCheckByIdResponse" message="tns:IIccServiceL_deleteICCOnlineCheckById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertICCBacterinUpload">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/insertICCBacterinUpload" message="tns:IIccServiceL_insertICCBacterinUpload_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/insertICCBacterinUploadResponse" message="tns:IIccServiceL_insertICCBacterinUpload_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateICCInoculationUploadBS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/updateICCInoculationUploadBS" message="tns:IIccServiceL_updateICCInoculationUploadBS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/updateICCInoculationUploadBSResponse" message="tns:IIccServiceL_updateICCInoculationUploadBS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryICCInoculationUploadByPK">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/queryICCInoculationUploadByPK" message="tns:IIccServiceL_queryICCInoculationUploadByPK_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/queryICCInoculationUploadByPKResponse" message="tns:IIccServiceL_queryICCInoculationUploadByPK_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="confirmICCInoculationUploadBS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/confirmICCInoculationUploadBS" message="tns:IIccServiceL_confirmICCInoculationUploadBS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/confirmICCInoculationUploadBSResponse" message="tns:IIccServiceL_confirmICCInoculationUploadBS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertICCOrderUpload">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/insertICCOrderUpload" message="tns:IIccServiceL_insertICCOrderUpload_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/insertICCOrderUploadResponse" message="tns:IIccServiceL_insertICCOrderUpload_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateICCHealthOrderUpload">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/updateICCHealthOrderUpload" message="tns:IIccServiceL_updateICCHealthOrderUpload_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/updateICCHealthOrderUploadResponse" message="tns:IIccServiceL_updateICCHealthOrderUpload_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryICCHealthOrderUpload">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/queryICCHealthOrderUpload" message="tns:IIccServiceL_queryICCHealthOrderUpload_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/queryICCHealthOrderUploadResponse" message="tns:IIccServiceL_queryICCHealthOrderUpload_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="confirmICCHealthOrderUpload">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/confirmICCHealthOrderUpload" message="tns:IIccServiceL_confirmICCHealthOrderUpload_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/confirmICCHealthOrderUploadResponse" message="tns:IIccServiceL_confirmICCHealthOrderUpload_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryICCInoculationUpload">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/queryICCInoculationUpload" message="tns:IIccServiceL_queryICCInoculationUpload_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/queryICCInoculationUploadResponse" message="tns:IIccServiceL_queryICCInoculationUpload_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteICCInoculationUploadByPk">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/deleteICCInoculationUploadByPk" message="tns:IIccServiceL_deleteICCInoculationUploadByPk_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/deleteICCInoculationUploadByPkResponse" message="tns:IIccServiceL_deleteICCInoculationUploadByPk_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryA24ByOutpatient_Sn_L">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/queryA24ByOutpatient_Sn_L" message="tns:IIccServiceL_queryA24ByOutpatient_Sn_L_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/queryA24ByOutpatient_Sn_LResponse" message="tns:IIccServiceL_queryA24ByOutpatient_Sn_L_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateICCInoculationUploadByPk_L">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/updateICCInoculationUploadByPk_L" message="tns:IIccServiceL_updateICCInoculationUploadByPk_L_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/updateICCInoculationUploadByPk_LResponse" message="tns:IIccServiceL_updateICCInoculationUploadByPk_L_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryICCInoculationSn_L">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/queryICCInoculationSn_L" message="tns:IIccServiceL_queryICCInoculationSn_L_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/queryICCInoculationSn_LResponse" message="tns:IIccServiceL_queryICCInoculationSn_L_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryIccCloudDrugPatientByCond">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/QueryIccCloudDrugPatientByCond" message="tns:IIccServiceL_QueryIccCloudDrugPatientByCond_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/QueryIccCloudDrugPatientByCondResponse" message="tns:IIccServiceL_QueryIccCloudDrugPatientByCond_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertIccCloudDrugPatient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/InsertIccCloudDrugPatient" message="tns:IIccServiceL_InsertIccCloudDrugPatient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/InsertIccCloudDrugPatientResponse" message="tns:IIccServiceL_InsertIccCloudDrugPatient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteIccCloudDrugPatientByPK">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/DeleteIccCloudDrugPatientByPK" message="tns:IIccServiceL_DeleteIccCloudDrugPatientByPK_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/DeleteIccCloudDrugPatientByPKResponse" message="tns:IIccServiceL_DeleteIccCloudDrugPatientByPK_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateIccCloudDrugPatient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/UpdateIccCloudDrugPatient" message="tns:IIccServiceL_UpdateIccCloudDrugPatient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/UpdateIccCloudDrugPatientResponse" message="tns:IIccServiceL_UpdateIccCloudDrugPatient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryIccAlertRecByCond">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/QueryIccAlertRecByCond" message="tns:IIccServiceL_QueryIccAlertRecByCond_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/QueryIccAlertRecByCondResponse" message="tns:IIccServiceL_QueryIccAlertRecByCond_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryIccCloudPatientQryByCond">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccServiceL/QueryIccCloudPatientQryByCond" message="tns:IIccServiceL_QueryIccCloudPatientQryByCond_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccServiceL/QueryIccCloudPatientQryByCondResponse" message="tns:IIccServiceL_QueryIccCloudPatientQryByCond_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSHttpBinding_IIccServiceL" type="tns:IIccServiceL">
+    <wsp:PolicyReference URI="#WSHttpBinding_IIccServiceL_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/DoWork" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryICCHealthUploadandICCInoculationUploadByCond">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/queryICCHealthUploadandICCInoculationUploadByCond" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryICCHealthUploadandICCInoculationUploadByPage1Cond">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/queryICCHealthUploadandICCInoculationUploadByPage1Cond" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryICCHealthUploadandICCInoculationUploadByCond2">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/queryICCHealthUploadandICCInoculationUploadByCond2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateICCHealthUpload">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/updateICCHealthUpload" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateICCInoculationUpload">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/updateICCInoculationUpload" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteICCInoculationUploadBS">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/deleteICCInoculationUploadBS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryDeletekeystateByInoculationSn">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/queryDeletekeystateByInoculationSn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertICCInoculationUpload">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/insertICCInoculationUpload" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertICCHealthOrderUpload">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/insertICCHealthOrderUpload" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryICCMustFieldVerify">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/queryICCMustFieldVerify" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertICCMustFieldVerify">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/insertICCMustFieldVerify" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateICCMustFieldVerify">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/updateICCMustFieldVerify" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteCCMustFieldVerify">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/deleteCCMustFieldVerify" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryIccFieldLengthVerify">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/queryIccFieldLengthVerify" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertIccFieldLengthVerify">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/insertIccFieldLengthVerify" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateIccFieldLengthVerify">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/updateIccFieldLengthVerify" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteIccFieldLengthVerify">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/deleteIccFieldLengthVerify" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryIccSelfVerify">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/queryIccSelfVerify" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertIccSelfVerify">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/insertIccSelfVerify" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateIccSelfVerify">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/updateIccSelfVerify" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteIccSelfVerify">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/deleteIccSelfVerify" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryIccInteractVerify1ById">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/queryIccInteractVerify1ById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertIccInteractVerify1">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/insertIccInteractVerify1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateIccInteractVerify1">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/updateIccInteractVerify1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteIccInteractVerify1">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/deleteIccInteractVerify1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryIccInteractVerify2ById">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/queryIccInteractVerify2ById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertIccInteractVerify2">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/insertIccInteractVerify2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateIccInteractVerify2">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/updateIccInteractVerify2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteIccInteractVerify2">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/deleteIccInteractVerify2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryIccInteractVerify3ById">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/queryIccInteractVerify3ById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertIccInteractVerify3">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/insertIccInteractVerify3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateIccInteractVerify3">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/updateIccInteractVerify3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteIccInteractVerify3">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/deleteIccInteractVerify3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryIccInteractVerify4ById">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/queryIccInteractVerify4ById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertIccInteractVerify4">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/insertIccInteractVerify4" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateIccInteractVerify4">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/updateIccInteractVerify4" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteIccInteractVerify4">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/deleteIccInteractVerify4" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryICCOnlineCheckById">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/queryICCOnlineCheckById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertICCOnlineCheckById">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/insertICCOnlineCheckById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateICCOnlineCheckById">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/updateICCOnlineCheckById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteICCOnlineCheckById">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/deleteICCOnlineCheckById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertICCBacterinUpload">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/insertICCBacterinUpload" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateICCInoculationUploadBS">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/updateICCInoculationUploadBS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryICCInoculationUploadByPK">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/queryICCInoculationUploadByPK" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="confirmICCInoculationUploadBS">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/confirmICCInoculationUploadBS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertICCOrderUpload">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/insertICCOrderUpload" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateICCHealthOrderUpload">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/updateICCHealthOrderUpload" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryICCHealthOrderUpload">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/queryICCHealthOrderUpload" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="confirmICCHealthOrderUpload">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/confirmICCHealthOrderUpload" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryICCInoculationUpload">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/queryICCInoculationUpload" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteICCInoculationUploadByPk">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/deleteICCInoculationUploadByPk" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryA24ByOutpatient_Sn_L">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/queryA24ByOutpatient_Sn_L" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateICCInoculationUploadByPk_L">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/updateICCInoculationUploadByPk_L" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryICCInoculationSn_L">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/queryICCInoculationSn_L" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryIccCloudDrugPatientByCond">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/QueryIccCloudDrugPatientByCond" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertIccCloudDrugPatient">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/InsertIccCloudDrugPatient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteIccCloudDrugPatientByPK">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/DeleteIccCloudDrugPatientByPK" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateIccCloudDrugPatient">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/UpdateIccCloudDrugPatient" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryIccAlertRecByCond">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/QueryIccAlertRecByCond" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryIccCloudPatientQryByCond">
+      <soap12:operation soapAction="http://tempuri.org/IIccServiceL/QueryIccCloudPatientQryByCond" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IccServiceL">
+    <wsdl:port name="WSHttpBinding_IIccServiceL" binding="tns:WSHttpBinding_IIccServiceL">
+      <soap12:address location="http://localhost:40611/IccServiceL.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://localhost:40611/IccServiceL.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Dns>localhost</Dns>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

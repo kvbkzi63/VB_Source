@@ -1,0 +1,6 @@
+*D*ftp://Win-2017.syscom.com.tw/JOBCompare/Client/JOBAPP.application
+*D*ftp://Win-2017.syscom.com.tw/JOBCompare/Client/JOBAPP.exe
+*D*ftp://Win-2017.syscom.com.tw/JOBCompare/Client/JOBAPP.exe.config
+*D*ftp://Win-2017.syscom.com.tw/JOBCompare/Client/JOBAPP.exe.manifest
+*D*ftp://Win-2017.syscom.com.tw/JOBCompare/Client/JOBAPP.pdb
+*D*ftp://Win-2017.syscom.com.tw/JOBCompare/Client/JOBAPP.xml

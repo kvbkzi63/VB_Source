@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CmmService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_ICmmService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:40611/CmmService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:40611/CmmService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:40611/CmmService.svc?xsd=xsd2" />
+      <xsd:import schemaLocation="http://localhost:40611/CmmService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICmmService_getPrinterName_InputMessage">
+    <wsdl:part name="parameters" element="tns:getPrinterName" />
+  </wsdl:message>
+  <wsdl:message name="ICmmService_getPrinterName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getPrinterNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICmmService_getReportID_InputMessage">
+    <wsdl:part name="parameters" element="tns:getReportID" />
+  </wsdl:message>
+  <wsdl:message name="ICmmService_getReportID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getReportIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICmmService_CMMSysCodeBSSysCodeQuery_InputMessage">
+    <wsdl:part name="parameters" element="tns:CMMSysCodeBSSysCodeQuery" />
+  </wsdl:message>
+  <wsdl:message name="ICmmService_CMMSysCodeBSSysCodeQuery_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CMMSysCodeBSSysCodeQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICmmService_CMMSysCodeBSSysCodeQueryMuti_InputMessage">
+    <wsdl:part name="parameters" element="tns:CMMSysCodeBSSysCodeQueryMuti" />
+  </wsdl:message>
+  <wsdl:message name="ICmmService_CMMSysCodeBSSysCodeQueryMuti_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CMMSysCodeBSSysCodeQueryMutiResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICmmService_CMMSysCodeTypeBSSysCodeTypeQuery_InputMessage">
+    <wsdl:part name="parameters" element="tns:CMMSysCodeTypeBSSysCodeTypeQuery" />
+  </wsdl:message>
+  <wsdl:message name="ICmmService_CMMSysCodeTypeBSSysCodeTypeQuery_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CMMSysCodeTypeBSSysCodeTypeQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICmmService_CMMSysCodequerySectionCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:CMMSysCodequerySectionCode" />
+  </wsdl:message>
+  <wsdl:message name="ICmmService_CMMSysCodequerySectionCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CMMSysCodequerySectionCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICmmService_CMMSysCodequeryDeptTCodeBySectionCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:CMMSysCodequeryDeptTCodeBySectionCode" />
+  </wsdl:message>
+  <wsdl:message name="ICmmService_CMMSysCodequeryDeptTCodeBySectionCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CMMSysCodequeryDeptTCodeBySectionCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICmmService_CMMSysCodeQueryPubConfigMuti_InputMessage">
+    <wsdl:part name="parameters" element="tns:CMMSysCodeQueryPubConfigMuti" />
+  </wsdl:message>
+  <wsdl:message name="ICmmService_CMMSysCodeQueryPubConfigMuti_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CMMSysCodeQueryPubConfigMutiResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICmmService">
+    <wsdl:operation name="getPrinterName">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICmmService/getPrinterName" message="tns:ICmmService_getPrinterName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICmmService/getPrinterNameResponse" message="tns:ICmmService_getPrinterName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getReportID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICmmService/getReportID" message="tns:ICmmService_getReportID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICmmService/getReportIDResponse" message="tns:ICmmService_getReportID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CMMSysCodeBSSysCodeQuery">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICmmService/CMMSysCodeBSSysCodeQuery" message="tns:ICmmService_CMMSysCodeBSSysCodeQuery_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICmmService/CMMSysCodeBSSysCodeQueryResponse" message="tns:ICmmService_CMMSysCodeBSSysCodeQuery_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CMMSysCodeBSSysCodeQueryMuti">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICmmService/CMMSysCodeBSSysCodeQueryMuti" message="tns:ICmmService_CMMSysCodeBSSysCodeQueryMuti_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICmmService/CMMSysCodeBSSysCodeQueryMutiResponse" message="tns:ICmmService_CMMSysCodeBSSysCodeQueryMuti_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CMMSysCodeTypeBSSysCodeTypeQuery">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICmmService/CMMSysCodeTypeBSSysCodeTypeQuery" message="tns:ICmmService_CMMSysCodeTypeBSSysCodeTypeQuery_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICmmService/CMMSysCodeTypeBSSysCodeTypeQueryResponse" message="tns:ICmmService_CMMSysCodeTypeBSSysCodeTypeQuery_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CMMSysCodequerySectionCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICmmService/CMMSysCodequerySectionCode" message="tns:ICmmService_CMMSysCodequerySectionCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICmmService/CMMSysCodequerySectionCodeResponse" message="tns:ICmmService_CMMSysCodequerySectionCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CMMSysCodequeryDeptTCodeBySectionCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICmmService/CMMSysCodequeryDeptTCodeBySectionCode" message="tns:ICmmService_CMMSysCodequeryDeptTCodeBySectionCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICmmService/CMMSysCodequeryDeptTCodeBySectionCodeResponse" message="tns:ICmmService_CMMSysCodequeryDeptTCodeBySectionCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CMMSysCodeQueryPubConfigMuti">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICmmService/CMMSysCodeQueryPubConfigMuti" message="tns:ICmmService_CMMSysCodeQueryPubConfigMuti_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICmmService/CMMSysCodeQueryPubConfigMutiResponse" message="tns:ICmmService_CMMSysCodeQueryPubConfigMuti_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSHttpBinding_ICmmService" type="tns:ICmmService">
+    <wsp:PolicyReference URI="#WSHttpBinding_ICmmService_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getPrinterName">
+      <soap12:operation soapAction="http://tempuri.org/ICmmService/getPrinterName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getReportID">
+      <soap12:operation soapAction="http://tempuri.org/ICmmService/getReportID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CMMSysCodeBSSysCodeQuery">
+      <soap12:operation soapAction="http://tempuri.org/ICmmService/CMMSysCodeBSSysCodeQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CMMSysCodeBSSysCodeQueryMuti">
+      <soap12:operation soapAction="http://tempuri.org/ICmmService/CMMSysCodeBSSysCodeQueryMuti" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CMMSysCodeTypeBSSysCodeTypeQuery">
+      <soap12:operation soapAction="http://tempuri.org/ICmmService/CMMSysCodeTypeBSSysCodeTypeQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CMMSysCodequerySectionCode">
+      <soap12:operation soapAction="http://tempuri.org/ICmmService/CMMSysCodequerySectionCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CMMSysCodequeryDeptTCodeBySectionCode">
+      <soap12:operation soapAction="http://tempuri.org/ICmmService/CMMSysCodequeryDeptTCodeBySectionCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CMMSysCodeQueryPubConfigMuti">
+      <soap12:operation soapAction="http://tempuri.org/ICmmService/CMMSysCodeQueryPubConfigMuti" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CmmService">
+    <wsdl:port name="WSHttpBinding_ICmmService" binding="tns:WSHttpBinding_ICmmService">
+      <soap12:address location="http://localhost:40611/CmmService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://localhost:40611/CmmService.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Dns>localhost</Dns>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,3976 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>Leadtools.ImageOptimization</name>
+  </assembly>
+  <members>
+    <member name="T:Leadtools.ImageOptimization.ImageOptimizerProgress">
+      <summary>
+            Called during the buffer optimization operation to notify the user of the percent completion of the optimization operation.
+            </summary>
+      <remarks>
+        <para>The callback method will be called for every 1<![CDATA[&#37;]]> of the optimization that has been completed.</para>
+      </remarks>
+      <param name="percent">A value from 0 to 100 that indicates the percent completion of the optimization operation.</param>
+      <returns>A <see cref="T:System.Boolean" /> value that indicates whether to cancel the optimization operation. Possible values are:
+            <list type="table"><listheader><term>
+                    Value
+                 </term><description>
+                    Description
+                 </description></listheader><item><term>false</term><description>Cancel the buffer optimization operation.</description></item><item><term>true</term><description>Continue normally.</description></item></list></returns>
+      <example>
+        <para />
+        <code lang="VB">   Public Sub TestJpegImageOptimizer()
+      ' Initialize the RasterCodecs class
+      RasterCodecs.Startup()
+      Dim codecs As RasterCodecs = New RasterCodecs()
+
+      ' The input and output location
+      Dim inputFileName As String = LeadtoolsExamples.Common.ImagesPath.Path + "Slave.jpg"
+      Dim outputFolder As String = LeadtoolsExamples.Common.ImagesPath.Path + "OptimizedImages"
+
+      ' Initialize a new Optimizer object
+      Dim optimizer As ImageOptimizer = New ImageOptimizer()
+
+      ' Optimization Options
+      Dim options As ImageOptimizerOptions = ImageOptimizerOptions.Default
+
+      ' Set custom optimization options
+      options.JpegQualityFactor = 255
+      options.JpegColorSpace = ImageOptimizerJpegColorSpace.JpegColorSpace422
+
+      ' Load the input file into a memory byte array
+      Dim orgBuffer() As Byte = File.ReadAllBytes(inputFileName)
+
+      ' Optimize this buffer
+      Dim optBuffer() As Byte = optimizer.OptimizeBuffer(codecs, orgBuffer, 0, 0, options, AddressOf OptimizeBufferProgress)
+
+      ' Save this image into the output folder
+      ' Make sure the output folder exists
+      If (Not Directory.Exists(outputFolder)) Then
+         Directory.CreateDirectory(outputFolder)
+      End If
+
+      ' Get the name of the output file from the input file
+      Dim outputFileName As String = Path.Combine(outputFolder, Path.GetFileName(inputFileName))
+
+      ' Save the optimized buffer to the output file
+      Using fs As FileStream = File.Create(outputFileName)
+         fs.Write(optBuffer, 0, optBuffer.Length)
+      End Using
+
+      ' Compare the original image size with the optimized size
+      Dim orgSize As Long = New FileInfo(inputFileName).Length
+      Dim optSize As Long = New FileInfo(outputFileName).Length
+      Dim percentage As Integer = CType(CType(optSize * 100.0 / orgSize, Double), Integer)
+
+      Dim message As String = String.Format( _
+         "Original image size: {0} KB{1}Optimized image size: {2} KB{1}Percentage: {3}%", _
+         orgSize / 1024, Environment.NewLine, optSize / 1024, _
+         100 - percentage)
+      MessageBox.Show(message)
+
+      'shutdown the RasterCodecs class.
+      RasterCodecs.Shutdown()
+   End Sub
+
+   Public Shared Function OptimizeBufferProgress(ByVal percent As Integer) As Boolean
+      Console.WriteLine(String.Format("{0}%", percent))
+      Return True
+   End Function</code>
+        <code lang="CS">      public void TestJpegImageOptimizer( )
+      {
+         // Initialize the RasterCodecs class
+         RasterCodecs.Startup();
+         RasterCodecs codecs = new RasterCodecs();
+
+         // The input and output location
+         string inputFileName = LeadtoolsExamples.Common.ImagesPath.Path + "Slave.jpg";
+         string outputFolder = LeadtoolsExamples.Common.ImagesPath.Path + "OptimizedImages";
+
+         // Initialize a new Optimizer object
+         ImageOptimizer optimizer = new ImageOptimizer();
+
+         // Optimization Options
+         ImageOptimizerOptions options = ImageOptimizerOptions.Default;
+
+         // Set custom optimization options
+         options.JpegQualityFactor = 255;
+         options.JpegColorSpace = ImageOptimizerJpegColorSpace.JpegColorSpace422;
+
+         // Load the input file into a memory byte array
+         byte[] orgBuffer = File.ReadAllBytes(inputFileName);
+
+         // Optimize this buffer
+         byte[] optBuffer = optimizer.OptimizeBuffer(codecs, orgBuffer, 0, orgBuffer.Length, options, OptimizeBufferProgress);
+
+         // Save this image into the output folder
+         // Make sure the output folder exists
+         if(!Directory.Exists(outputFolder))
+            Directory.CreateDirectory(outputFolder);
+
+         // Get the name of the output file from the input file
+         string outputFileName = Path.Combine(outputFolder, Path.GetFileName(inputFileName));
+
+         // Save the optimized buffer to the output file
+         using(FileStream fs = File.Create(outputFileName))
+            fs.Write(optBuffer, 0, optBuffer.Length);
+
+         // Compare the original image size with the optimized size
+         long orgSize = new FileInfo(inputFileName).Length;
+         long optSize = new FileInfo(outputFileName).Length;
+         int percentage = (int)((double)optSize * 100.0 / orgSize);
+
+         string message = string.Format(
+            "Original image size: {0} KB{1}Optimized image size: {2} KB{1}Percentage: {3}%",
+            orgSize / 1024, Environment.NewLine, optSize / 1024,
+            100 - percentage);
+         MessageBox.Show(message);
+
+         //shutdown the RasterCodecs class.
+         RasterCodecs.Shutdown();
+      }
+
+      static bool OptimizeBufferProgress(int percent)
+      {
+         Console.WriteLine(string.Format("{0}%", percent));
+         return true;
+      }</code>
+        <!--ImageOptimizer.OptimizeJpegBuffer-->
+      </example>
+    </member>
+    <member name="T:Leadtools.ImageOptimization.ImageOptimizerDirectory">
+      <summary>
+            Called during the directory optimization operation to give the user information about
+            the image(s) being optimized.
+            </summary>
+      <remarks>
+            This method will be called to provide the user information about the image(s) being optimized, such as the percent completion for the current image 
+            being optimized, and the percent completion for all files being optimized.
+            </remarks>
+      <param name="data">A <see cref="T:Leadtools.ImageOptimization.ImageOptimizerDirectoryData" /> object containing information about the image(s) being optimized.</param>
+      <returns>A <see cref="T:System.Boolean" /> value that indicates whether to cancel the optimization operation for the current image. Possible values are:
+            <list type="table"><listheader><term>
+                    Value
+                 </term><description>
+                    Description
+                 </description></listheader><item><term>false</term><description>Cancel the optimization operation for the current image.</description></item><item><term>true</term><description>Continue normally.</description></item></list></returns>
+      <example>
+        <para />
+        <code lang="VB">   Private _imageNo As Integer
+
+   Public Sub TestDirImageOptimizer()
+      _imageNo = 0
+
+      ' Initialize the RasterCodecs class
+      RasterCodecs.Startup()
+      Dim codecs As RasterCodecs = New RasterCodecs()
+
+      ' The input and output directories
+      Dim inputDirectory As String = LeadtoolsExamples.Common.ImagesPath.Path
+      Dim outputDirectory As String = LeadtoolsExamples.Common.ImagesPath.Path + "OptimizedImages"
+
+      ' Initialize a new Optimizer object
+      Dim optimizer As ImageOptimizer = New ImageOptimizer()
+
+      ' Optimization Options
+      Dim options As ImageOptimizerOptions = ImageOptimizerOptions.Default
+
+      optimizer.OptimizeDirectory(codecs, _
+         inputDirectory, _
+         outputDirectory, _
+         options, _
+         "*.jpg", _
+         False, _
+         AddressOf ImageOptimizerDirectory)
+
+      'shutdown the RasterCodecs class.
+      RasterCodecs.Shutdown()
+   End Sub
+
+   Public Function ImageOptimizerDirectory(ByVal data As ImageOptimizerDirectoryData) As Boolean
+      Console.WriteLine(String.Format("File Percent = {0}%,    Total Percent = {1}%", data.FilePercent, data.TotalPercent))
+
+      If (_imageNo = data.TotalFolderFilesCount) Then
+
+         ' Operation Done.
+         Console.WriteLine("Optimization Operation Completed Successfully")
+         Return True
+
+      ElseIf (data.Status = ImageOptimizerDirectoryStatus.PreOptimizingImage) Then
+         Dim text As String = String.Format("Optimizing Image {0} ?\n", data.InputFileName)
+         Dim result As DialogResult = MessageBox.Show(text, "", MessageBoxButtons.YesNoCancel)
+
+         If (result = DialogResult.Yes) Then
+            ' Optimize the image using the default options.
+            data.Options = ImageOptimizerOptions.Default
+            Return True
+         ElseIf (result = DialogResult.No) Then
+            ' Skip this image.
+            _imageNo += 1
+            data.SkipImage = True
+         Else
+            ' Stop the whole operation.
+            Return False
+         End If
+      ElseIf (data.FilePercent = 100) Then
+         _imageNo += 1
+
+         ' Displaying information about the optimized image.
+         Dim msg As String = String.Format("Optimizing File ( {0} of {1} ) \n" + _
+            "--------------------------------\n" + _
+            "Source File Name = {2}\n" + _
+            "Detination File Name = {3}\n" + _
+            "No of Pages = {4}\n", _
+            _imageNo, data.TotalFolderFilesCount, data.InputFileName, data.OutputFileName, data.ImageInfo.TotalPages)
+
+         Console.WriteLine(msg)
+      End If
+      Return True
+   End Function</code>
+        <code lang="CS">      int _imageNo;
+
+      public void TestDirImageOptimizer( )
+      {
+         _imageNo = 0;
+
+         // Initialize the RasterCodecs class
+         RasterCodecs.Startup();
+         RasterCodecs codecs = new RasterCodecs();
+
+         // The input and output directories
+         string inputDirectory = LeadtoolsExamples.Common.ImagesPath.Path;
+         string outputDirectory = LeadtoolsExamples.Common.ImagesPath.Path + "OptimizedImages";
+
+         // Initialize a new Optimizer object
+         ImageOptimizer optimizer = new ImageOptimizer();
+
+         // Optimization Options
+         ImageOptimizerOptions options = ImageOptimizerOptions.Default;
+
+         optimizer.OptimizeDirectory(codecs,
+            inputDirectory,
+            outputDirectory,
+            options,
+            "*.jpg",
+            false,
+            ImageOptimizerDirectory);
+
+         //shutdown the RasterCodecs class.
+         RasterCodecs.Shutdown();
+      }
+
+      bool ImageOptimizerDirectory(ImageOptimizerDirectoryData data)
+      {
+         Console.WriteLine(string.Format("File Percent = {0}%,    Total Percent = {1}%", data.FilePercent, data.TotalPercent));
+
+         if(_imageNo == data.TotalFolderFilesCount)
+         {
+            // Operation Done.
+            Console.WriteLine("Optimization Operation Completed Successfully");
+            return true;
+         }
+         else if(data.Status == ImageOptimizerDirectoryStatus.PreOptimizingImage)
+         {
+            string text = string.Format("Optimizing Image {0} ?\n", data.InputFileName);
+            DialogResult result = MessageBox.Show(text, "", MessageBoxButtons.YesNoCancel);
+
+            if(result == DialogResult.Yes)
+            {
+               // Optimize the image using the default options.
+               data.Options = ImageOptimizerOptions.Default;
+               return true;
+            }
+            else if(result == DialogResult.No)
+            {
+               // Skip this image.
+               _imageNo++;
+               data.SkipImage = true;
+            }
+            else
+               // Stop the whole operation.
+               return false;
+         }
+         else if(data.FilePercent == 100)
+         {
+            _imageNo++;
+
+            // Displaying information about the optimized image.
+            string msg = string.Format("Optimizing File ( {0} of {1} ) \n" +
+               "--------------------------------\n" +
+               "Source File Name = {2}\n" +
+               "Detination File Name = {3}\n" +
+               "No of Pages = {4}\n",
+               _imageNo, data.TotalFolderFilesCount, data.InputFileName, data.OutputFileName, data.ImageInfo.TotalPages);
+
+            Console.WriteLine(msg);
+         }
+         return true;
+      }</code>
+        <!--ImageOptimizer.OptimizeDirectory-->
+      </example>
+    </member>
+    <member name="T:Leadtools.ImageOptimization.ImageOptimizerOptions">
+      <summary>
+            Provides options to be used by the <see cref="M:Leadtools.ImageOptimization.ImageOptimizer.OptimizeBuffer(Leadtools.Codecs.RasterCodecs,System.IntPtr,System.Int64,Leadtools.ImageOptimization.ImageOptimizerOptions,Leadtools.ImageOptimization.ImageOptimizerProgress)" /> and the <see cref="M:Leadtools.ImageOptimization.ImageOptimizer.OptimizeDirectory(Leadtools.Codecs.RasterCodecs,System.String,System.String,Leadtools.ImageOptimization.ImageOptimizerOptions,System.String,System.Boolean,Leadtools.ImageOptimization.ImageOptimizerDirectory)" /> methods, 
+            to optimize the image and save it using the optimal bits per pixel.
+            </summary>
+      <noremarks />
+      <example>
+        <para />
+        <code lang="VB">   Public Sub TestJpegImageOptimizer()
+      ' Initialize the RasterCodecs class
+      RasterCodecs.Startup()
+      Dim codecs As RasterCodecs = New RasterCodecs()
+
+      ' The input and output location
+      Dim inputFileName As String = LeadtoolsExamples.Common.ImagesPath.Path + "Slave.jpg"
+      Dim outputFolder As String = LeadtoolsExamples.Common.ImagesPath.Path + "OptimizedImages"
+
+      ' Initialize a new Optimizer object
+      Dim optimizer As ImageOptimizer = New ImageOptimizer()
+
+      ' Optimization Options
+      Dim options As ImageOptimizerOptions = ImageOptimizerOptions.Default
+
+      ' Set custom optimization options
+      options.JpegQualityFactor = 255
+      options.JpegColorSpace = ImageOptimizerJpegColorSpace.JpegColorSpace422
+
+      ' Load the input file into a memory byte array
+      Dim orgBuffer() As Byte = File.ReadAllBytes(inputFileName)
+
+      ' Optimize this buffer
+      Dim optBuffer() As Byte = optimizer.OptimizeBuffer(codecs, orgBuffer, 0, 0, options, AddressOf OptimizeBufferProgress)
+
+      ' Save this image into the output folder
+      ' Make sure the output folder exists
+      If (Not Directory.Exists(outputFolder)) Then
+         Directory.CreateDirectory(outputFolder)
+      End If
+
+      ' Get the name of the output file from the input file
+      Dim outputFileName As String = Path.Combine(outputFolder, Path.GetFileName(inputFileName))
+
+      ' Save the optimized buffer to the output file
+      Using fs As FileStream = File.Create(outputFileName)
+         fs.Write(optBuffer, 0, optBuffer.Length)
+      End Using
+
+      ' Compare the original image size with the optimized size
+      Dim orgSize As Long = New FileInfo(inputFileName).Length
+      Dim optSize As Long = New FileInfo(outputFileName).Length
+      Dim percentage As Integer = CType(CType(optSize * 100.0 / orgSize, Double), Integer)
+
+      Dim message As String = String.Format( _
+         "Original image size: {0} KB{1}Optimized image size: {2} KB{1}Percentage: {3}%", _
+         orgSize / 1024, Environment.NewLine, optSize / 1024, _
+         100 - percentage)
+      MessageBox.Show(message)
+
+      'shutdown the RasterCodecs class.
+      RasterCodecs.Shutdown()
+   End Sub
+
+   Public Shared Function OptimizeBufferProgress(ByVal percent As Integer) As Boolean
+      Console.WriteLine(String.Format("{0}%", percent))
+      Return True
+   End Function</code>
+        <code lang="CS">      public void TestJpegImageOptimizer( )
+      {
+         // Initialize the RasterCodecs class
+         RasterCodecs.Startup();
+         RasterCodecs codecs = new RasterCodecs();
+
+         // The input and output location
+         string inputFileName = LeadtoolsExamples.Common.ImagesPath.Path + "Slave.jpg";
+         string outputFolder = LeadtoolsExamples.Common.ImagesPath.Path + "OptimizedImages";
+
+         // Initialize a new Optimizer object
+         ImageOptimizer optimizer = new ImageOptimizer();
+
+         // Optimization Options
+         ImageOptimizerOptions options = ImageOptimizerOptions.Default;
+
+         // Set custom optimization options
+         options.JpegQualityFactor = 255;
+         options.JpegColorSpace = ImageOptimizerJpegColorSpace.JpegColorSpace422;
+
+         // Load the input file into a memory byte array
+         byte[] orgBuffer = File.ReadAllBytes(inputFileName);
+
+         // Optimize this buffer
+         byte[] optBuffer = optimizer.OptimizeBuffer(codecs, orgBuffer, 0, orgBuffer.Length, options, OptimizeBufferProgress);
+
+         // Save this image into the output folder
+         // Make sure the output folder exists
+         if(!Directory.Exists(outputFolder))
+            Directory.CreateDirectory(outputFolder);
+
+         // Get the name of the output file from the input file
+         string outputFileName = Path.Combine(outputFolder, Path.GetFileName(inputFileName));
+
+         // Save the optimized buffer to the output file
+         using(FileStream fs = File.Create(outputFileName))
+            fs.Write(optBuffer, 0, optBuffer.Length);
+
+         // Compare the original image size with the optimized size
+         long orgSize = new FileInfo(inputFileName).Length;
+         long optSize = new FileInfo(outputFileName).Length;
+         int percentage = (int)((double)optSize * 100.0 / orgSize);
+
+         string message = string.Format(
+            "Original image size: {0} KB{1}Optimized image size: {2} KB{1}Percentage: {3}%",
+            orgSize / 1024, Environment.NewLine, optSize / 1024,
+            100 - percentage);
+         MessageBox.Show(message);
+
+         //shutdown the RasterCodecs class.
+         RasterCodecs.Shutdown();
+      }
+
+      static bool OptimizeBufferProgress(int percent)
+      {
+         Console.WriteLine(string.Format("{0}%", percent));
+         return true;
+      }</code>
+        <!--ImageOptimizer.OptimizeJpegBuffer-->
+      </example>
+    </member>
+    <member name="P:Leadtools.ImageOptimization.ImageOptimizerOptions.Default">
+      <summary>
+            Gets the default optimization options used by LEADTOOLS for optimizing an image.
+            </summary>
+      <value>
+            The default optimization options used by LEADTOOLS for optimizing an image.
+            </value>
+      <remarks>
+        <para>This method returns an <see cref="T:Leadtools.ImageOptimization.ImageOptimizerOptions" /> structure containing the default optimization options 
+            to be used to optimize an image.</para>
+        <para>For more information, refer to the <see cref="T:Leadtools.ImageOptimization.ImageOptimizerOptions" /> structure members. </para>
+      </remarks>
+      <example>
+        <para />
+        <code lang="VB">   Public Sub TestJpegImageOptimizer()
+      ' Initialize the RasterCodecs class
+      RasterCodecs.Startup()
+      Dim codecs As RasterCodecs = New RasterCodecs()
+
+      ' The input and output location
+      Dim inputFileName As String = LeadtoolsExamples.Common.ImagesPath.Path + "Slave.jpg"
+      Dim outputFolder As String = LeadtoolsExamples.Common.ImagesPath.Path + "OptimizedImages"
+
+      ' Initialize a new Optimizer object
+      Dim optimizer As ImageOptimizer = New ImageOptimizer()
+
+      ' Optimization Options
+      Dim options As ImageOptimizerOptions = ImageOptimizerOptions.Default
+
+      ' Set custom optimization options
+      options.JpegQualityFactor = 255
+      options.JpegColorSpace = ImageOptimizerJpegColorSpace.JpegColorSpace422
+
+      ' Load the input file into a memory byte array
+      Dim orgBuffer() As Byte = File.ReadAllBytes(inputFileName)
+
+      ' Optimize this buffer
+      Dim optBuffer() As Byte = optimizer.OptimizeBuffer(codecs, orgBuffer, 0, 0, options, AddressOf OptimizeBufferProgress)
+
+      ' Save this image into the output folder
+      ' Make sure the output folder exists
+      If (Not Directory.Exists(outputFolder)) Then
+         Directory.CreateDirectory(outputFolder)
+      End If
+
+      ' Get the name of the output file from the input file
+      Dim outputFileName As String = Path.Combine(outputFolder, Path.GetFileName(inputFileName))
+
+      ' Save the optimized buffer to the output file
+      Using fs As FileStream = File.Create(outputFileName)
+         fs.Write(optBuffer, 0, optBuffer.Length)
+      End Using
+
+      ' Compare the original image size with the optimized size
+      Dim orgSize As Long = New FileInfo(inputFileName).Length
+      Dim optSize As Long = New FileInfo(outputFileName).Length
+      Dim percentage As Integer = CType(CType(optSize * 100.0 / orgSize, Double), Integer)
+
+      Dim message As String = String.Format( _
+         "Original image size: {0} KB{1}Optimized image size: {2} KB{1}Percentage: {3}%", _
+         orgSize / 1024, Environment.NewLine, optSize / 1024, _
+         100 - percentage)
+      MessageBox.Show(message)
+
+      'shutdown the RasterCodecs class.
+      RasterCodecs.Shutdown()
+   End Sub
+
+   Public Shared Function OptimizeBufferProgress(ByVal percent As Integer) As Boolean
+      Console.WriteLine(String.Format("{0}%", percent))
+      Return True
+   End Function</code>
+        <code lang="CS">      public void TestJpegImageOptimizer( )
+      {
+         // Initialize the RasterCodecs class
+         RasterCodecs.Startup();
+         RasterCodecs codecs = new RasterCodecs();
+
+         // The input and output location
+         string inputFileName = LeadtoolsExamples.Common.ImagesPath.Path + "Slave.jpg";
+         string outputFolder = LeadtoolsExamples.Common.ImagesPath.Path + "OptimizedImages";
+
+         // Initialize a new Optimizer object
+         ImageOptimizer optimizer = new ImageOptimizer();
+
+         // Optimization Options
+         ImageOptimizerOptions options = ImageOptimizerOptions.Default;
+
+         // Set custom optimization options
+         options.JpegQualityFactor = 255;
+         options.JpegColorSpace = ImageOptimizerJpegColorSpace.JpegColorSpace422;
+
+         // Load the input file into a memory byte array
+         byte[] orgBuffer = File.ReadAllBytes(inputFileName);
+
+         // Optimize this buffer
+         byte[] optBuffer = optimizer.OptimizeBuffer(codecs, orgBuffer, 0, orgBuffer.Length, options, OptimizeBufferProgress);
+
+         // Save this image into the output folder
+         // Make sure the output folder exists
+         if(!Directory.Exists(outputFolder))
+            Directory.CreateDirectory(outputFolder);
+
+         // Get the name of the output file from the input file
+         string outputFileName = Path.Combine(outputFolder, Path.GetFileName(inputFileName));
+
+         // Save the optimized buffer to the output file
+         using(FileStream fs = File.Create(outputFileName))
+            fs.Write(optBuffer, 0, optBuffer.Length);
+
+         // Compare the original image size with the optimized size
+         long orgSize = new FileInfo(inputFileName).Length;
+         long optSize = new FileInfo(outputFileName).Length;
+         int percentage = (int)((double)optSize * 100.0 / orgSize);
+
+         string message = string.Format(
+            "Original image size: {0} KB{1}Optimized image size: {2} KB{1}Percentage: {3}%",
+            orgSize / 1024, Environment.NewLine, optSize / 1024,
+            100 - percentage);
+         MessageBox.Show(message);
+
+         //shutdown the RasterCodecs class.
+         RasterCodecs.Shutdown();
+      }
+
+      static bool OptimizeBufferProgress(int percent)
+      {
+         Console.WriteLine(string.Format("{0}%", percent));
+         return true;
+      }</code>
+        <!--ImageOptimizer.OptimizeJpegBuffer-->
+      </example>
+    </member>
+    <member name="P:Leadtools.ImageOptimization.ImageOptimizerOptions.JpegQualityFactor">
+      <summary>
+            Gets or sets a value that represents the quality factor to be used when optimizing an image.
+            </summary>
+      <value>
+            The <paramref name="JpegQualityFactor" /> is a number used to balance between loss and quality during compression.
+            You can set a value from 2 to 255, where 2 represents the highest quality 
+            and 255 represents the most compression.
+            The default value is 35.
+            </value>
+      <remarks>
+            The <paramref name="JpegQualityFactor" /> is used only if the original image format is one of the following
+            Jpeg formats:
+            <list type="bullet"><item><see cref="T:Leadtools.RasterImageFormat">RasterImageFormat.Jpeg</see>, Bits per pixel: 8 for grayscale, 24 for color.</item><item><see cref="T:Leadtools.RasterImageFormat">RasterImageFormat.Jpeg411</see>, Bits per pixel: 8 for grayscale, 24 for color.</item><item><see cref="T:Leadtools.RasterImageFormat">RasterImageFormat.Jpeg422</see>, Bits per pixel: 8 for grayscale, 24 for color.</item><item><see cref="T:Leadtools.RasterImageFormat">RasterImageFormat.ExifJpeg411</see>, Bits per pixel: 24 (color only).</item><item><see cref="T:Leadtools.RasterImageFormat">RasterImageFormat.ExifJpeg422</see>, Bits per pixel: 24 (color only).</item></list></remarks>
+      <example>
+        <para />
+        <code lang="VB">   Public Sub TestJpegImageOptimizer()
+      ' Initialize the RasterCodecs class
+      RasterCodecs.Startup()
+      Dim codecs As RasterCodecs = New RasterCodecs()
+
+      ' The input and output location
+      Dim inputFileName As String = LeadtoolsExamples.Common.ImagesPath.Path + "Slave.jpg"
+      Dim outputFolder As String = LeadtoolsExamples.Common.ImagesPath.Path + "OptimizedImages"
+
+      ' Initialize a new Optimizer object
+      Dim optimizer As ImageOptimizer = New ImageOptimizer()
+
+      ' Optimization Options
+      Dim options As ImageOptimizerOptions = ImageOptimizerOptions.Default
+
+      ' Set custom optimization options
+      options.JpegQualityFactor = 255
+      options.JpegColorSpace = ImageOptimizerJpegColorSpace.JpegColorSpace422
+
+      ' Load the input file into a memory byte array
+      Dim orgBuffer() As Byte = File.ReadAllBytes(inputFileName)
+
+      ' Optimize this buffer
+      Dim optBuffer() As Byte = optimizer.OptimizeBuffer(codecs, orgBuffer, 0, 0, options, AddressOf OptimizeBufferProgress)
+
+      ' Save this image into the output folder
+      ' Make sure the output folder exists
+      If (Not Directory.Exists(outputFolder)) Then
+         Directory.CreateDirectory(outputFolder)
+      End If
+
+      ' Get the name of the output file from the input file
+      Dim outputFileName As String = Path.Combine(outputFolder, Path.GetFileName(inputFileName))
+
+      ' Save the optimized buffer to the output file
+      Using fs As FileStream = File.Create(outputFileName)
+         fs.Write(optBuffer, 0, optBuffer.Length)
+      End Using
+
+      ' Compare the original image size with the optimized size
+      Dim orgSize As Long = New FileInfo(inputFileName).Length
+      Dim optSize As Long = New FileInfo(outputFileName).Length
+      Dim percentage As Integer = CType(CType(optSize * 100.0 / orgSize, Double), Integer)
+
+      Dim message As String = String.Format( _
+         "Original image size: {0} KB{1}Optimized image size: {2} KB{1}Percentage: {3}%", _
+         orgSize / 1024, Environment.NewLine, optSize / 1024, _
+         100 - percentage)
+      MessageBox.Show(message)
+
+      'shutdown the RasterCodecs class.
+      RasterCodecs.Shutdown()
+   End Sub
+
+   Public Shared Function OptimizeBufferProgress(ByVal percent As Integer) As Boolean
+      Console.WriteLine(String.Format("{0}%", percent))
+      Return True
+   End Function</code>
+        <code lang="CS">      public void TestJpegImageOptimizer( )
+      {
+         // Initialize the RasterCodecs class
+         RasterCodecs.Startup();
+         RasterCodecs codecs = new RasterCodecs();
+
+         // The input and output location
+         string inputFileName = LeadtoolsExamples.Common.ImagesPath.Path + "Slave.jpg";
+         string outputFolder = LeadtoolsExamples.Common.ImagesPath.Path + "OptimizedImages";
+
+         // Initialize a new Optimizer object
+         ImageOptimizer optimizer = new ImageOptimizer();
+
+         // Optimization Options
+         ImageOptimizerOptions options = ImageOptimizerOptions.Default;
+
+         // Set custom optimization options
+         options.JpegQualityFactor = 255;
+         options.JpegColorSpace = ImageOptimizerJpegColorSpace.JpegColorSpace422;
+
+         // Load the input file into a memory byte array
+         byte[] orgBuffer = File.ReadAllBytes(inputFileName);
+
+         // Optimize this buffer
+         byte[] optBuffer = optimizer.OptimizeBuffer(codecs, orgBuffer, 0, orgBuffer.Length, options, OptimizeBufferProgress);
+
+         // Save this image into the output folder
+         // Make sure the output folder exists
+         if(!Directory.Exists(outputFolder))
+            Directory.CreateDirectory(outputFolder);
+
+         // Get the name of the output file from the input file
+         string outputFileName = Path.Combine(outputFolder, Path.GetFileName(inputFileName));
+
+         // Save the optimized buffer to the output file
+         using(FileStream fs = File.Create(outputFileName))
+            fs.Write(optBuffer, 0, optBuffer.Length);
+
+         // Compare the original image size with the optimized size
+         long orgSize = new FileInfo(inputFileName).Length;
+         long optSize = new FileInfo(outputFileName).Length;
+         int percentage = (int)((double)optSize * 100.0 / orgSize);
+
+         string message = string.Format(
+            "Original image size: {0} KB{1}Optimized image size: {2} KB{1}Percentage: {3}%",
+            orgSize / 1024, Environment.NewLine, optSize / 1024,
+            100 - percentage);
+         MessageBox.Show(message);
+
+         //shutdown the RasterCodecs class.
+         RasterCodecs.Shutdown();
+      }
+
+      static bool OptimizeBufferProgress(int percent)
+      {
+         Console.WriteLine(string.Format("{0}%", percent));
+         return true;
+      }</code>
+        <!--ImageOptimizer.OptimizeJpegBuffer-->
+      </example>
+    </member>
+    <member name="P:Leadtools.ImageOptimization.ImageOptimizerOptions.PngQualityFactor">
+      <summary>
+            Gets or sets the value that represents the quality factor to be used in the image optimization operation.
+            </summary>
+      <value>
+            The <paramref name="PngQualityFactor" /> can be a value between 0 and 9 where:
+            <list type="bullet"><item>0 = (default compression).</item><item>1 = (fastest compression).</item><item>.</item><item>.</item><item>.</item><item>9 (highest compression ratio).</item></list>
+            The Default value is 9.
+            </value>
+      <remarks>
+            The <paramref name="PngQualityFactor" /> is used only if the original image format is <see cref="T:Leadtools.RasterImageFormat">RasterImageFormat.Png</see>. Bits per pixel: 1, 4, 8, 24, and 32.
+            </remarks>
+      <example>
+        <para />
+        <code lang="VB">   Public Sub TestPngImageOptimizer()
+      ' Initialize the RasterCodecs class
+      RasterCodecs.Startup()
+      Dim Codecs As RasterCodecs = New RasterCodecs()
+
+      ' The input and output location
+      Dim inputFileName As String = LeadtoolsExamples.Common.ImagesPath.Path + "Image1.png"
+      Dim outputFolder As String = LeadtoolsExamples.Common.ImagesPath.Path + "OptimizedImages"
+
+      ' Initialize a new Optimizer object
+      Dim optimizer As ImageOptimizer = New ImageOptimizer()
+
+      ' Optimization Options
+      Dim options As ImageOptimizerOptions = ImageOptimizerOptions.Default
+
+      '' Set custom optimization options
+      options.Distance = 20
+      options.Percent = 15
+      options.PngQualityFactor = 4
+
+      Dim bufferPtr As IntPtr
+      Dim bufferSize As Integer = 0
+      LoadFileIntoPointer(inputFileName, bufferPtr, bufferSize)
+
+      If (IntPtr.Zero &lt;&gt; bufferPtr AndAlso bufferSize &gt; 0) Then
+         Dim optBuffer As RasterNativeBuffer = optimizer.OptimizeBuffer(Codecs, bufferPtr, bufferSize, options, Nothing)
+
+         ' Free orgBuffer.PointerBuffer, since it won't be needed anymore.
+         Marshal.FreeHGlobal(bufferPtr)
+
+         ' Save this image into the output folder
+         ' Make sure the output folder exists
+         If (Not Directory.Exists(outputFolder)) Then
+            Directory.CreateDirectory(outputFolder)
+         End If
+
+         ' Get the name of the output file from the input file
+         Dim outputFileName As String = Path.Combine(outputFolder, Path.GetFileName(inputFileName))
+
+         ' Save the optimized buffer to the output file
+         Using fs As FileStream = File.Create(outputFileName)
+
+            Dim optArray(CInt(optBuffer.Length)) As Byte
+
+            Marshal.Copy(optBuffer.Data, optArray, 0, optArray.Length)
+            fs.Write(optArray, 0, optArray.Length)
+         End Using
+
+         ' Free optBuffer.PointerBuffer, since it won't be needed anymore.
+         Marshal.FreeHGlobal(optBuffer.Data)
+
+         ' Compare the original image size with the optimized size.
+         Dim orgSize As Long = New FileInfo(inputFileName).Length
+         Dim optSize As Long = New FileInfo(outputFileName).Length
+         Dim percentage As Integer = CType(CType(optSize * 100.0 / orgSize, Double), Integer)
+
+         Dim message As String = String.Format( _
+            "Original image size: {0} KB{1}Optimized image size: {2} KB{1}Percentage: {3}%", _
+            orgSize / 1024, Environment.NewLine, optSize / 1024, _
+            100 - percentage)
+         Console.WriteLine(message)
+      End If
+
+      'shutdown the RasterCodecs class.
+      RasterCodecs.Shutdown()
+   End Sub
+
+   ' This method opens an image file and loads it into IntPtr.
+   Private Sub LoadFileIntoPointer(ByVal fileName As String, ByRef ptr As IntPtr, ByRef size As Integer)
+      Using fs As FileStream = File.OpenRead(fileName)
+         ' Allocate memory to load the file
+         size = CType(fs.Length, Integer)
+         ptr = Marshal.AllocHGlobal(size)
+
+         ' Load in 32K chunks
+         Const bufferSize As Integer = 32 * 1024
+         Dim buffer(bufferSize) As Byte
+
+         Dim bytesToRead As Integer
+
+         Dim bytesLeft As Integer = CType(fs.Length, Integer)
+         Dim tempPtr As IntPtr = ptr   ' where we are
+         Do
+            ' read a chunk
+            bytesToRead = Math.Min(bufferSize, bytesLeft)
+            If (bytesToRead &gt; 0) Then
+               fs.Read(buffer, 0, bytesToRead)
+
+               ' copy into our buffer
+               Marshal.Copy(buffer, 0, tempPtr, bytesToRead)
+
+               ' move the temp pointer
+               tempPtr = New IntPtr(tempPtr.ToInt64() + bytesToRead)
+
+               bytesLeft -= bytesToRead
+            End If
+         Loop While (bytesToRead &gt; 0)
+      End Using
+   End Sub</code>
+        <code lang="CS">      public void TestPngImageOptimizer( )
+      {
+         // Initialize the RasterCodecs class
+         RasterCodecs.Startup();
+         RasterCodecs codecs = new RasterCodecs();
+
+         // The input and output location
+         string inputFileName = LeadtoolsExamples.Common.ImagesPath.Path + "Image1.png";
+         string outputFolder = LeadtoolsExamples.Common.ImagesPath.Path + "OptimizedImages";
+
+         // Initialize a new Optimizer object
+         ImageOptimizer optimizer = new ImageOptimizer();
+
+         // Optimization Options
+         ImageOptimizerOptions options = ImageOptimizerOptions.Default;
+
+         // Set custom optimization options
+         options.Distance = 20;
+         options.Percent = 15;
+         options.PngQualityFactor = 4;
+
+         IntPtr bufferPtr;
+         int bufferSize = 0;
+         LoadFileIntoPointer(inputFileName, out bufferPtr, out bufferSize);
+
+         if(IntPtr.Zero != bufferPtr &amp;&amp; bufferSize &gt; 0)
+         {
+            RasterNativeBuffer optBuffer = optimizer.OptimizeBuffer(codecs, bufferPtr, bufferSize, options, null);
+
+            // Free orgBuffer.PointerBuffer, since it won't be needed anymore.
+            Marshal.FreeHGlobal(bufferPtr);
+
+            // Save this image into the output folder
+            // Make sure the output folder exists
+            if(!Directory.Exists(outputFolder))
+               Directory.CreateDirectory(outputFolder);
+
+            // Get the name of the output file from the input file
+            string outputFileName = Path.Combine(outputFolder, Path.GetFileName(inputFileName));
+
+            // Save the optimized buffer to the output file
+            using(FileStream fs = File.Create(outputFileName))
+            {
+               byte[] optArray = new byte[optBuffer.Length];
+
+               Marshal.Copy(optBuffer.Data, optArray, 0, optArray.Length);
+               fs.Write(optArray, 0, optArray.Length);
+            }
+
+            // Free optBuffer.PointerBuffer, since it won't be needed anymore.
+            Marshal.FreeHGlobal(optBuffer.Data);
+
+            // Compare the original image size with the optimized size.
+            long orgSize = new FileInfo(inputFileName).Length;
+            long optSize = new FileInfo(outputFileName).Length;
+            int percentage = (int)((double)optSize * 100.0 / orgSize);
+
+            string message = string.Format(
+               "Original image size: {0} KB{1}Optimized image size: {2} KB{1}Percentage: {3}%",
+               orgSize / 1024, Environment.NewLine, optSize / 1024,
+               100 - percentage);
+            MessageBox.Show(message);
+         }
+
+         //shutdown the RasterCodecs class.
+         RasterCodecs.Shutdown();
+      }
+
+      // This method opens an image file and loads it into IntPtr.
+      private void LoadFileIntoPointer(string fileName, out IntPtr ptr, out int size)
+      {
+         using(FileStream fs = File.OpenRead(fileName))
+         {
+            // Allocate memory to load the file
+            size = (int)fs.Length;
+            ptr = Marshal.AllocHGlobal(size);
+
+            // Load in 32K chunks
+            const int bufferSize = 32 * 1024;
+            byte[] buffer = new byte[bufferSize];
+
+            int bytesToRead;
+            int bytesLeft = (int)fs.Length;
+            IntPtr tempPtr = ptr;   // where we are
+            do
+            {
+               // read a chunk
+               bytesToRead = Math.Min(bufferSize, bytesLeft);
+               if(bytesToRead &gt; 0)
+               {
+                  fs.Read(buffer, 0, bytesToRead);
+
+                  // copy into our buffer
+                  Marshal.Copy(buffer, 0, tempPtr, bytesToRead);
+
+                  // move the temp pointer
+                  tempPtr = new IntPtr(tempPtr.ToInt64() + bytesToRead);
+
+                  bytesLeft -= bytesToRead;
+               }
+            }
+            while(bytesToRead &gt; 0);
+         }
+      }</code>
+        <!--ImageOptimizer.OptimizePngBuffer-->
+      </example>
+    </member>
+    <member name="P:Leadtools.ImageOptimization.ImageOptimizerOptions.JpegColorSpace">
+      <summary>
+            Gets or sets the value that represents the color space to be used in the image optimization operation.
+            </summary>
+      <value>
+            The default value is <see cref="T:Leadtools.ImageOptimization.ImageOptimizerJpegColorSpace">ImageOptimizerJpegColorSpace.JpegColorSpace411</see>.
+            </value>
+      <remarks>
+            The <paramref name="JpegColorSpace" /> is used if and only if the original image format was one of the following Jpeg formats:
+            <list type="bullet"><item><see cref="T:Leadtools.RasterImageFormat">RasterImageFormat.Jpeg</see>, Bits per pixel: 8 for grayscale, 24 for color.</item><item><see cref="T:Leadtools.RasterImageFormat">RasterImageFormat.Jpeg411</see>, Bits per pixel: 8 for grayscale, 24 for color.</item><item><see cref="T:Leadtools.RasterImageFormat">RasterImageFormat.Jpeg422</see>, Bits per pixel: 8 for grayscale, 24 for color.</item><item><see cref="T:Leadtools.RasterImageFormat">RasterImageFormat.ExifJpeg411</see>, Bits per pixel: 24 (color only).</item><item><see cref="T:Leadtools.RasterImageFormat">RasterImageFormat.ExifJpeg422</see>, Bits per pixel: 24 (color only).</item></list>
+            For more information refer to <see cref="T:Leadtools.ImageOptimization.ImageOptimizerJpegColorSpace" />.
+            </remarks>
+      <example>
+        <para />
+        <code lang="VB">   Public Sub TestJpegImageOptimizer()
+      ' Initialize the RasterCodecs class
+      RasterCodecs.Startup()
+      Dim codecs As RasterCodecs = New RasterCodecs()
+
+      ' The input and output location
+      Dim inputFileName As String = LeadtoolsExamples.Common.ImagesPath.Path + "Slave.jpg"
+      Dim outputFolder As String = LeadtoolsExamples.Common.ImagesPath.Path + "OptimizedImages"
+
+      ' Initialize a new Optimizer object
+      Dim optimizer As ImageOptimizer = New ImageOptimizer()
+
+      ' Optimization Options
+      Dim options As ImageOptimizerOptions = ImageOptimizerOptions.Default
+
+      ' Set custom optimization options
+      options.JpegQualityFactor = 255
+      options.JpegColorSpace = ImageOptimizerJpegColorSpace.JpegColorSpace422
+
+      ' Load the input file into a memory byte array
+      Dim orgBuffer() As Byte = File.ReadAllBytes(inputFileName)
+
+      ' Optimize this buffer
+      Dim optBuffer() As Byte = optimizer.OptimizeBuffer(codecs, orgBuffer, 0, 0, options, AddressOf OptimizeBufferProgress)
+
+      ' Save this image into the output folder
+      ' Make sure the output folder exists
+      If (Not Directory.Exists(outputFolder)) Then
+         Directory.CreateDirectory(outputFolder)
+      End If
+
+      ' Get the name of the output file from the input file
+      Dim outputFileName As String = Path.Combine(outputFolder, Path.GetFileName(inputFileName))
+
+      ' Save the optimized buffer to the output file
+      Using fs As FileStream = File.Create(outputFileName)
+         fs.Write(optBuffer, 0, optBuffer.Length)
+      End Using
+
+      ' Compare the original image size with the optimized size
+      Dim orgSize As Long = New FileInfo(inputFileName).Length
+      Dim optSize As Long = New FileInfo(outputFileName).Length
+      Dim percentage As Integer = CType(CType(optSize * 100.0 / orgSize, Double), Integer)
+
+      Dim message As String = String.Format( _
+         "Original image size: {0} KB{1}Optimized image size: {2} KB{1}Percentage: {3}%", _
+         orgSize / 1024, Environment.NewLine, optSize / 1024, _
+         100 - percentage)
+      MessageBox.Show(message)
+
+      'shutdown the RasterCodecs class.
+      RasterCodecs.Shutdown()
+   End Sub
+
+   Public Shared Function OptimizeBufferProgress(ByVal percent As Integer) As Boolean
+      Console.WriteLine(String.Format("{0}%", percent))
+      Return True
+   End Function</code>
+        <code lang="CS">      public void TestJpegImageOptimizer( )
+      {
+         // Initialize the RasterCodecs class
+         RasterCodecs.Startup();
+         RasterCodecs codecs = new RasterCodecs();
+
+         // The input and output location
+         string inputFileName = LeadtoolsExamples.Common.ImagesPath.Path + "Slave.jpg";
+         string outputFolder = LeadtoolsExamples.Common.ImagesPath.Path + "OptimizedImages";
+
+         // Initialize a new Optimizer object
+         ImageOptimizer optimizer = new ImageOptimizer();
+
+         // Optimization Options
+         ImageOptimizerOptions options = ImageOptimizerOptions.Default;
+
+         // Set custom optimization options
+         options.JpegQualityFactor = 255;
+         options.JpegColorSpace = ImageOptimizerJpegColorSpace.JpegColorSpace422;
+
+         // Load the input file into a memory byte array
+         byte[] orgBuffer = File.ReadAllBytes(inputFileName);
+
+         // Optimize this buffer
+         byte[] optBuffer = optimizer.OptimizeBuffer(codecs, orgBuffer, 0, orgBuffer.Length, options, OptimizeBufferProgress);
+
+         // Save this image into the output folder
+         // Make sure the output folder exists
+         if(!Directory.Exists(outputFolder))
+            Directory.CreateDirectory(outputFolder);
+
+         // Get the name of the output file from the input file
+         string outputFileName = Path.Combine(outputFolder, Path.GetFileName(inputFileName));
+
+         // Save the optimized buffer to the output file
+         using(FileStream fs = File.Create(outputFileName))
+            fs.Write(optBuffer, 0, optBuffer.Length);
+
+         // Compare the original image size with the optimized size
+         long orgSize = new FileInfo(inputFileName).Length;
+         long optSize = new FileInfo(outputFileName).Length;
+         int percentage = (int)((double)optSize * 100.0 / orgSize);
+
+         string message = string.Format(
+            "Original image size: {0} KB{1}Optimized image size: {2} KB{1}Percentage: {3}%",
+            orgSize / 1024, Environment.NewLine, optSize / 1024,
+            100 - percentage);
+         MessageBox.Show(message);
+
+         //shutdown the RasterCodecs class.
+         RasterCodecs.Shutdown();
+      }
+
+      static bool OptimizeBufferProgress(int percent)
+      {
+         Console.WriteLine(string.Format("{0}%", percent));
+         return true;
+      }</code>
+        <!--ImageOptimizer.OptimizeJpegBuffer-->
+      </example>
+    </member>
+    <member name="P:Leadtools.ImageOptimization.ImageOptimizerOptions.Percent">
+      <summary>
+            Gets or sets the value that represents the percent redundancy to be used in the image optimization operation. 
+            </summary>
+      <value>
+            The <paramref name="Percent" /> value can be a value between 0 and 100.
+            The default value is 10.
+            </value>
+      <remarks>
+            The <paramref name="Percent" /> value will be used if the original image format is one the following:
+            <list type="number"><item>Png File:
+              <list type="bullet"><item><see cref="T:Leadtools.RasterImageFormat">RasterImageFormat.Png</see>, Bits per pixel: 1, 4, 8, 24, and 32.</item></list></item><item>Gif File:
+              <list type="bullet"><item><see cref="T:Leadtools.RasterImageFormat">RasterImageFormat.Gif</see>, Bits per pixel: 1, 2, 3, 4, 5, 6, 7, and 8.</item></list></item><item>Bmp File
+              <list type="bullet"><item><see cref="T:Leadtools.RasterImageFormat">RasterImageFormat.Bmp</see>, Bits per pixel: 1, 4, and 8 bits per pixel only.</item><item><see cref="T:Leadtools.RasterImageFormat">RasterImageFormat.BmpRle</see>, Bits per pixel: 4, and 8.</item></list></item></list>
+            If the image is a 16-, 24-, or 32-bit BMP image, the real number of colors used in the image is calculated
+            and when possible the image is saved with lower bits per pixel. If the image is a 1-, 4-, or 8-bits per pixel BMP image, 
+            the <see cref="P:Leadtools.ImageOptimization.ImageOptimizerOptions.Percent" /> and <see cref="P:Leadtools.ImageOptimization.ImageOptimizerOptions.Distance" /> are used.
+            </remarks>
+      <example>
+        <para />
+        <code lang="VB">   Public Sub TestPngImageOptimizer()
+      ' Initialize the RasterCodecs class
+      RasterCodecs.Startup()
+      Dim Codecs As RasterCodecs = New RasterCodecs()
+
+      ' The input and output location
+      Dim inputFileName As String = LeadtoolsExamples.Common.ImagesPath.Path + "Image1.png"
+      Dim outputFolder As String = LeadtoolsExamples.Common.ImagesPath.Path + "OptimizedImages"
+
+      ' Initialize a new Optimizer object
+      Dim optimizer As ImageOptimizer = New ImageOptimizer()
+
+      ' Optimization Options
+      Dim options As ImageOptimizerOptions = ImageOptimizerOptions.Default
+
+      '' Set custom optimization options
+      options.Distance = 20
+      options.Percent = 15
+      options.PngQualityFactor = 4
+
+      Dim bufferPtr As IntPtr
+      Dim bufferSize As Integer = 0
+      LoadFileIntoPointer(inputFileName, bufferPtr, bufferSize)
+
+      If (IntPtr.Zero &lt;&gt; bufferPtr AndAlso bufferSize &gt; 0) Then
+         Dim optBuffer As RasterNativeBuffer = optimizer.OptimizeBuffer(Codecs, bufferPtr, bufferSize, options, Nothing)
+
+         ' Free orgBuffer.PointerBuffer, since it won't be needed anymore.
+         Marshal.FreeHGlobal(bufferPtr)
+
+         ' Save this image into the output folder
+         ' Make sure the output folder exists
+         If (Not Directory.Exists(outputFolder)) Then
+            Directory.CreateDirectory(outputFolder)
+         End If
+
+         ' Get the name of the output file from the input file
+         Dim outputFileName As String = Path.Combine(outputFolder, Path.GetFileName(inputFileName))
+
+         ' Save the optimized buffer to the output file
+         Using fs As FileStream = File.Create(outputFileName)
+
+            Dim optArray(CInt(optBuffer.Length)) As Byte
+
+            Marshal.Copy(optBuffer.Data, optArray, 0, optArray.Length)
+            fs.Write(optArray, 0, optArray.Length)
+         End Using
+
+         ' Free optBuffer.PointerBuffer, since it won't be needed anymore.
+         Marshal.FreeHGlobal(optBuffer.Data)
+
+         ' Compare the original image size with the optimized size.
+         Dim orgSize As Long = New FileInfo(inputFileName).Length
+         Dim optSize As Long = New FileInfo(outputFileName).Length
+         Dim percentage As Integer = CType(CType(optSize * 100.0 / orgSize, Double), Integer)
+
+         Dim message As String = String.Format( _
+            "Original image size: {0} KB{1}Optimized image size: {2} KB{1}Percentage: {3}%", _
+            orgSize / 1024, Environment.NewLine, optSize / 1024, _
+            100 - percentage)
+         Console.WriteLine(message)
+      End If
+
+      'shutdown the RasterCodecs class.
+      RasterCodecs.Shutdown()
+   End Sub
+
+   ' This method opens an image file and loads it into IntPtr.
+   Private Sub LoadFileIntoPointer(ByVal fileName As String, ByRef ptr As IntPtr, ByRef size As Integer)
+      Using fs As FileStream = File.OpenRead(fileName)
+         ' Allocate memory to load the file
+         size = CType(fs.Length, Integer)
+         ptr = Marshal.AllocHGlobal(size)
+
+         ' Load in 32K chunks
+         Const bufferSize As Integer = 32 * 1024
+         Dim buffer(bufferSize) As Byte
+
+         Dim bytesToRead As Integer
+
+         Dim bytesLeft As Integer = CType(fs.Length, Integer)
+         Dim tempPtr As IntPtr = ptr   ' where we are
+         Do
+            ' read a chunk
+            bytesToRead = Math.Min(bufferSize, bytesLeft)
+            If (bytesToRead &gt; 0) Then
+               fs.Read(buffer, 0, bytesToRead)
+
+               ' copy into our buffer
+               Marshal.Copy(buffer, 0, tempPtr, bytesToRead)
+
+               ' move the temp pointer
+               tempPtr = New IntPtr(tempPtr.ToInt64() + bytesToRead)
+
+               bytesLeft -= bytesToRead
+            End If
+         Loop While (bytesToRead &gt; 0)
+      End Using
+   End Sub</code>
+        <code lang="CS">      public void TestPngImageOptimizer( )
+      {
+         // Initialize the RasterCodecs class
+         RasterCodecs.Startup();
+         RasterCodecs codecs = new RasterCodecs();
+
+         // The input and output location
+         string inputFileName = LeadtoolsExamples.Common.ImagesPath.Path + "Image1.png";
+         string outputFolder = LeadtoolsExamples.Common.ImagesPath.Path + "OptimizedImages";
+
+         // Initialize a new Optimizer object
+         ImageOptimizer optimizer = new ImageOptimizer();
+
+         // Optimization Options
+         ImageOptimizerOptions options = ImageOptimizerOptions.Default;
+
+         // Set custom optimization options
+         options.Distance = 20;
+         options.Percent = 15;
+         options.PngQualityFactor = 4;
+
+         IntPtr bufferPtr;
+         int bufferSize = 0;
+         LoadFileIntoPointer(inputFileName, out bufferPtr, out bufferSize);
+
+         if(IntPtr.Zero != bufferPtr &amp;&amp; bufferSize &gt; 0)
+         {
+            RasterNativeBuffer optBuffer = optimizer.OptimizeBuffer(codecs, bufferPtr, bufferSize, options, null);
+
+            // Free orgBuffer.PointerBuffer, since it won't be needed anymore.
+            Marshal.FreeHGlobal(bufferPtr);
+
+            // Save this image into the output folder
+            // Make sure the output folder exists
+            if(!Directory.Exists(outputFolder))
+               Directory.CreateDirectory(outputFolder);
+
+            // Get the name of the output file from the input file
+            string outputFileName = Path.Combine(outputFolder, Path.GetFileName(inputFileName));
+
+            // Save the optimized buffer to the output file
+            using(FileStream fs = File.Create(outputFileName))
+            {
+               byte[] optArray = new byte[optBuffer.Length];
+
+               Marshal.Copy(optBuffer.Data, optArray, 0, optArray.Length);
+               fs.Write(optArray, 0, optArray.Length);
+            }
+
+            // Free optBuffer.PointerBuffer, since it won't be needed anymore.
+            Marshal.FreeHGlobal(optBuffer.Data);
+
+            // Compare the original image size with the optimized size.
+            long orgSize = new FileInfo(inputFileName).Length;
+            long optSize = new FileInfo(outputFileName).Length;
+            int percentage = (int)((double)optSize * 100.0 / orgSize);
+
+            string message = string.Format(
+               "Original image size: {0} KB{1}Optimized image size: {2} KB{1}Percentage: {3}%",
+               orgSize / 1024, Environment.NewLine, optSize / 1024,
+               100 - percentage);
+            MessageBox.Show(message);
+         }
+
+         //shutdown the RasterCodecs class.
+         RasterCodecs.Shutdown();
+      }
+
+      // This method opens an image file and loads it into IntPtr.
+      private void LoadFileIntoPointer(string fileName, out IntPtr ptr, out int size)
+      {
+         using(FileStream fs = File.OpenRead(fileName))
+         {
+            // Allocate memory to load the file
+            size = (int)fs.Length;
+            ptr = Marshal.AllocHGlobal(size);
+
+            // Load in 32K chunks
+            const int bufferSize = 32 * 1024;
+            byte[] buffer = new byte[bufferSize];
+
+            int bytesToRead;
+            int bytesLeft = (int)fs.Length;
+            IntPtr tempPtr = ptr;   // where we are
+            do
+            {
+               // read a chunk
+               bytesToRead = Math.Min(bufferSize, bytesLeft);
+               if(bytesToRead &gt; 0)
+               {
+                  fs.Read(buffer, 0, bytesToRead);
+
+                  // copy into our buffer
+                  Marshal.Copy(buffer, 0, tempPtr, bytesToRead);
+
+                  // move the temp pointer
+                  tempPtr = new IntPtr(tempPtr.ToInt64() + bytesToRead);
+
+                  bytesLeft -= bytesToRead;
+               }
+            }
+            while(bytesToRead &gt; 0);
+         }
+      }</code>
+        <!--ImageOptimizer.OptimizePngBuffer-->
+      </example>
+    </member>
+    <member name="P:Leadtools.ImageOptimization.ImageOptimizerOptions.Distance">
+      <summary>
+            Gets or sets a value that represents the distance between image colors to be reduced in the image optimization operation.
+            </summary>
+      <value> 
+            The <paramref name="Distance" /> value can be a value between 0 and 255, where:
+            <list type="bullet"><item> 0 means no additional reduction.</item><item> 1 to 255 further reduction based on the color distance.</item></list>
+            The default value is 8.
+            </value>
+      <remarks>
+            The <paramref name="Distance" /> value will be used if the original image format is one of the following:
+            <list type="number"><item>Png File:
+              <list type="bullet"><item><see cref="T:Leadtools.RasterImageFormat">RasterImageFormat.Png</see>, Bits per pixel: 1, 4, 8, 24, and 32.</item></list></item><item>Gif File:
+              <list type="bullet"><item><see cref="T:Leadtools.RasterImageFormat">RasterImageFormat.Gif</see>, Bits per pixel: 1, 2, 3, 4, 5, 6, 7, and 8.</item></list></item><item>Bmp File
+              <list type="bullet"><item><see cref="T:Leadtools.RasterImageFormat">RasterImageFormat.Bmp</see>, Bits per pixel: 1, 4, and 8 bits per pixel only.</item><item><see cref="T:Leadtools.RasterImageFormat">RasterImageFormat.BmpRle</see>, Bits per pixel: 4, and 8.</item></list></item></list>
+            If the image is a 16-, 24-, or 32-bit BMP image, the real number of colors used in the image is calculated
+            and when possible the image is saved with lower bits per pixel. If the image is a 1-, 4-, or 8-bits per pixel BMP image, 
+            the <see cref="P:Leadtools.ImageOptimization.ImageOptimizerOptions.Percent" /> and <see cref="P:Leadtools.ImageOptimization.ImageOptimizerOptions.Distance" /> are used.
+            </remarks>
+      <example>
+        <para>This example will optimize a Gif image file and then save it to a separate folder</para>
+        <code lang="VB">   Public Sub TestGifImageOptimizer()
+      ' Initialize the RasterCodecs class
+      RasterCodecs.Startup()
+      Dim codecs As RasterCodecs = New RasterCodecs()
+
+      ' The input and output location
+      Dim inputFileName As String = LeadtoolsExamples.Common.ImagesPath.Path + "eye.gif"
+      Dim outputFolder As String = LeadtoolsExamples.Common.ImagesPath.Path + "Optimized Images"
+
+      ' Initialize a new Optimizer object
+      Dim optimizer As ImageOptimizer = New ImageOptimizer()
+
+      ' Optimization Options
+      Dim options As ImageOptimizerOptions = ImageOptimizerOptions.Default
+
+      ' Set custom optimization options
+      options.Distance = 20
+      options.Percent = 15
+      options.PickSamePalette = True
+
+      ' Load the input file into a byte memory array
+      Dim orgBuffer() As Byte = File.ReadAllBytes(inputFileName)
+
+      ' Optimize this buffer
+      Dim optBuffer() As Byte = optimizer.OptimizeBuffer(codecs, orgBuffer, 0, orgBuffer.Length, options, Nothing)
+
+      ' Save this image into the output folder
+      ' Make sure the output folder exists
+      If (Not Directory.Exists(outputFolder)) Then
+         Directory.CreateDirectory(outputFolder)
+      End If
+
+      ' Get the name of the output file from the input file
+      Dim outputFileName As String = Path.Combine(outputFolder, Path.GetFileName(inputFileName))
+
+      ' Save the optimized buffer to the output file
+      Using fs As FileStream = File.Create(outputFileName)
+         fs.Write(optBuffer, 0, optBuffer.Length)
+      End Using
+
+      ' Compare the original image size with the optimized size
+      Dim orgSize As Long = New FileInfo(inputFileName).Length
+      Dim optSize As Long = New FileInfo(outputFileName).Length
+      Dim percentage As Integer = CType(CType(optSize * 100.0 / orgSize, Double), Integer)
+
+      Dim message As String = String.Format( _
+         "Original image size: {0} KB{1}Optimized image size: {2} KB{1}Percentage: {3}%", _
+         orgSize / 1024, Environment.NewLine, optSize / 1024, _
+         100 - percentage)
+      MessageBox.Show(message)
+
+      'shutdown the RasterCodecs class.
+      RasterCodecs.Shutdown()
+   End Sub</code>
+        <code lang="CS">      public void TestGifImageOptimizer( )
+      {
+         // Initialize the RasterCodecs class
+         RasterCodecs.Startup();
+         RasterCodecs codecs = new RasterCodecs();
+
+         // The input and output location
+         string inputFileName = LeadtoolsExamples.Common.ImagesPath.Path + "eye.gif";
+         string outputFolder = LeadtoolsExamples.Common.ImagesPath.Path + "OptimizedImages";
+
+         // Initialize a new Optimizer object
+         ImageOptimizer optimizer = new ImageOptimizer();
+
+         // Optimization Options
+         ImageOptimizerOptions options = ImageOptimizerOptions.Default;
+
+         // Set custom optimization options
+         options.Distance = 20;
+         options.Percent = 15;
+         options.PickSamePalette = true;
+
+         // Load the input file into a byte memory array
+         byte[] orgBuffer = File.ReadAllBytes(inputFileName);
+
+         // Optimize this buffer
+         byte[] optBuffer = optimizer.OptimizeBuffer(codecs, orgBuffer, 0, orgBuffer.Length, options, null);
+
+         // Save this image into the output folder
+         // Make sure the output folder exists
+         if(!Directory.Exists(outputFolder))
+            Directory.CreateDirectory(outputFolder);
+
+         // Get the name of the output file from the input file
+         string outputFileName = Path.Combine(outputFolder, Path.GetFileName(inputFileName));
+
+         // Save the optimized buffer to the output file
+         using(FileStream fs = File.Create(outputFileName))
+            fs.Write(optBuffer, 0, optBuffer.Length);
+
+         // Compare the original image size with the optimized size
+         long orgSize = new FileInfo(inputFileName).Length;
+         long optSize = new FileInfo(outputFileName).Length;
+         int percentage = (int)((double)optSize * 100.0 / orgSize);
+
+         string message = string.Format(
+            "Original image size: {0} KB{1}Optimized image size: {2} KB{1}Percentage: {3}%",
+            orgSize / 1024, Environment.NewLine, optSize / 1024,
+            100 - percentage);
+         MessageBox.Show(message);
+
+         //shutdown the RasterCodecs class.
+         RasterCodecs.Shutdown();
+      }</code>
+        <!--ImageOptimizer.OptimizeGifBuffer-->
+      </example>
+    </member>
+    <member name="P:Leadtools.ImageOptimization.ImageOptimizerOptions.PickSamePalette">
+      <summary>
+            Gets or sets a value that indicates whether to generate a unique global palette for all GIF frames or generate a separate palette for each frame.
+            </summary>
+      <value>
+            Value that indicates whether to generate a unique global palette for all GIF frames or generate a separate palette for each frame. Possible values are:
+            <list type="table"><listheader><term>
+                    Value
+                 </term><description>
+                    Description
+                 </description></listheader><item><term>true</term><description>Generate a unique global palette for all GIF Frames.</description></item><item><term>false</term><description>Generate an individual palette for each GIF Frame.</description></item></list></value>
+      <noremarks />
+      <example>
+        <para>This example will optimize a Gif image file and then save it to a separate folder</para>
+        <code lang="VB">   Public Sub TestGifImageOptimizer()
+      ' Initialize the RasterCodecs class
+      RasterCodecs.Startup()
+      Dim codecs As RasterCodecs = New RasterCodecs()
+
+      ' The input and output location
+      Dim inputFileName As String = LeadtoolsExamples.Common.ImagesPath.Path + "eye.gif"
+      Dim outputFolder As String = LeadtoolsExamples.Common.ImagesPath.Path + "Optimized Images"
+
+      ' Initialize a new Optimizer object
+      Dim optimizer As ImageOptimizer = New ImageOptimizer()
+
+      ' Optimization Options
+      Dim options As ImageOptimizerOptions = ImageOptimizerOptions.Default
+
+      ' Set custom optimization options
+      options.Distance = 20
+      options.Percent = 15
+      options.PickSamePalette = True
+
+      ' Load the input file into a byte memory array
+      Dim orgBuffer() As Byte = File.ReadAllBytes(inputFileName)
+
+      ' Optimize this buffer
+      Dim optBuffer() As Byte = optimizer.OptimizeBuffer(codecs, orgBuffer, 0, orgBuffer.Length, options, Nothing)
+
+      ' Save this image into the output folder
+      ' Make sure the output folder exists
+      If (Not Directory.Exists(outputFolder)) Then
+         Directory.CreateDirectory(outputFolder)
+      End If
+
+      ' Get the name of the output file from the input file
+      Dim outputFileName As String = Path.Combine(outputFolder, Path.GetFileName(inputFileName))
+
+      ' Save the optimized buffer to the output file
+      Using fs As FileStream = File.Create(outputFileName)
+         fs.Write(optBuffer, 0, optBuffer.Length)
+      End Using
+
+      ' Compare the original image size with the optimized size
+      Dim orgSize As Long = New FileInfo(inputFileName).Length
+      Dim optSize As Long = New FileInfo(outputFileName).Length
+      Dim percentage As Integer = CType(CType(optSize * 100.0 / orgSize, Double), Integer)
+
+      Dim message As String = String.Format( _
+         "Original image size: {0} KB{1}Optimized image size: {2} KB{1}Percentage: {3}%", _
+         orgSize / 1024, Environment.NewLine, optSize / 1024, _
+         100 - percentage)
+      MessageBox.Show(message)
+
+      'shutdown the RasterCodecs class.
+      RasterCodecs.Shutdown()
+   End Sub</code>
+        <code lang="CS">      public void TestGifImageOptimizer( )
+      {
+         // Initialize the RasterCodecs class
+         RasterCodecs.Startup();
+         RasterCodecs codecs = new RasterCodecs();
+
+         // The input and output location
+         string inputFileName = LeadtoolsExamples.Common.ImagesPath.Path + "eye.gif";
+         string outputFolder = LeadtoolsExamples.Common.ImagesPath.Path + "OptimizedImages";
+
+         // Initialize a new Optimizer object
+         ImageOptimizer optimizer = new ImageOptimizer();
+
+         // Optimization Options
+         ImageOptimizerOptions options = ImageOptimizerOptions.Default;
+
+         // Set custom optimization options
+         options.Distance = 20;
+         options.Percent = 15;
+         options.PickSamePalette = true;
+
+         // Load the input file into a byte memory array
+         byte[] orgBuffer = File.ReadAllBytes(inputFileName);
+
+         // Optimize this buffer
+         byte[] optBuffer = optimizer.OptimizeBuffer(codecs, orgBuffer, 0, orgBuffer.Length, options, null);
+
+         // Save this image into the output folder
+         // Make sure the output folder exists
+         if(!Directory.Exists(outputFolder))
+            Directory.CreateDirectory(outputFolder);
+
+         // Get the name of the output file from the input file
+         string outputFileName = Path.Combine(outputFolder, Path.GetFileName(inputFileName));
+
+         // Save the optimized buffer to the output file
+         using(FileStream fs = File.Create(outputFileName))
+            fs.Write(optBuffer, 0, optBuffer.Length);
+
+         // Compare the original image size with the optimized size
+         long orgSize = new FileInfo(inputFileName).Length;
+         long optSize = new FileInfo(outputFileName).Length;
+         int percentage = (int)((double)optSize * 100.0 / orgSize);
+
+         string message = string.Format(
+            "Original image size: {0} KB{1}Optimized image size: {2} KB{1}Percentage: {3}%",
+            orgSize / 1024, Environment.NewLine, optSize / 1024,
+            100 - percentage);
+         MessageBox.Show(message);
+
+         //shutdown the RasterCodecs class.
+         RasterCodecs.Shutdown();
+      }</code>
+        <!--ImageOptimizer.OptimizeGifBuffer-->
+      </example>
+    </member>
+    <member name="T:Leadtools.ImageOptimization.ImageOptimizer">
+      <summary>
+            Provides methods to optimize one image or a directory of images in one of the supported formats.
+            </summary>
+      <remarks>
+            If the image is a 16-, 24-, or 32-bit image, the real number of colors used in the image is calculated
+            and when possible the image is saved with lower bits per pixel. If the image is 1-, 4-, or 8-bits per pixel, 
+            the <see cref="P:Leadtools.ImageOptimization.ImageOptimizerOptions.Percent" /> and <see cref="P:Leadtools.ImageOptimization.ImageOptimizerOptions.Distance" /> are used. 
+            <para>For more information, refer to <a href="ms-help://Leadtools.Help/Leadtools.DotNet17/Leadtools.Topics/Leadtools.Topics.ImageOptimization~Topics.ImageOptimizationUsingTheImageOptimizerClass.html">Image Optimization Using The ImageOptimizer Class</a>.</para></remarks>
+      <example>
+        <para>This example will optimize a Png image file and then save it to a separate folder</para>
+        <code lang="VB">   Public Sub TestPngImageOptimizer()
+      ' Initialize the RasterCodecs class
+      RasterCodecs.Startup()
+      Dim Codecs As RasterCodecs = New RasterCodecs()
+
+      ' The input and output location
+      Dim inputFileName As String = LeadtoolsExamples.Common.ImagesPath.Path + "Image1.png"
+      Dim outputFolder As String = LeadtoolsExamples.Common.ImagesPath.Path + "OptimizedImages"
+
+      ' Initialize a new Optimizer object
+      Dim optimizer As ImageOptimizer = New ImageOptimizer()
+
+      ' Optimization Options
+      Dim options As ImageOptimizerOptions = ImageOptimizerOptions.Default
+
+      '' Set custom optimization options
+      options.Distance = 20
+      options.Percent = 15
+      options.PngQualityFactor = 4
+
+      Dim bufferPtr As IntPtr
+      Dim bufferSize As Integer = 0
+      LoadFileIntoPointer(inputFileName, bufferPtr, bufferSize)
+
+      If (IntPtr.Zero &lt;&gt; bufferPtr AndAlso bufferSize &gt; 0) Then
+         Dim optBuffer As RasterNativeBuffer = optimizer.OptimizeBuffer(Codecs, bufferPtr, bufferSize, options, Nothing)
+
+         ' Free orgBuffer.PointerBuffer, since it won't be needed anymore.
+         Marshal.FreeHGlobal(bufferPtr)
+
+         ' Save this image into the output folder
+         ' Make sure the output folder exists
+         If (Not Directory.Exists(outputFolder)) Then
+            Directory.CreateDirectory(outputFolder)
+         End If
+
+         ' Get the name of the output file from the input file
+         Dim outputFileName As String = Path.Combine(outputFolder, Path.GetFileName(inputFileName))
+
+         ' Save the optimized buffer to the output file
+         Using fs As FileStream = File.Create(outputFileName)
+
+            Dim optArray(CInt(optBuffer.Length)) As Byte
+
+            Marshal.Copy(optBuffer.Data, optArray, 0, optArray.Length)
+            fs.Write(optArray, 0, optArray.Length)
+         End Using
+
+         ' Free optBuffer.PointerBuffer, since it won't be needed anymore.
+         Marshal.FreeHGlobal(optBuffer.Data)
+
+         ' Compare the original image size with the optimized size.
+         Dim orgSize As Long = New FileInfo(inputFileName).Length
+         Dim optSize As Long = New FileInfo(outputFileName).Length
+         Dim percentage As Integer = CType(CType(optSize * 100.0 / orgSize, Double), Integer)
+
+         Dim message As String = String.Format( _
+            "Original image size: {0} KB{1}Optimized image size: {2} KB{1}Percentage: {3}%", _
+            orgSize / 1024, Environment.NewLine, optSize / 1024, _
+            100 - percentage)
+         Console.WriteLine(message)
+      End If
+
+      'shutdown the RasterCodecs class.
+      RasterCodecs.Shutdown()
+   End Sub
+
+   ' This method opens an image file and loads it into IntPtr.
+   Private Sub LoadFileIntoPointer(ByVal fileName As String, ByRef ptr As IntPtr, ByRef size As Integer)
+      Using fs As FileStream = File.OpenRead(fileName)
+         ' Allocate memory to load the file
+         size = CType(fs.Length, Integer)
+         ptr = Marshal.AllocHGlobal(size)
+
+         ' Load in 32K chunks
+         Const bufferSize As Integer = 32 * 1024
+         Dim buffer(bufferSize) As Byte
+
+         Dim bytesToRead As Integer
+
+         Dim bytesLeft As Integer = CType(fs.Length, Integer)
+         Dim tempPtr As IntPtr = ptr   ' where we are
+         Do
+            ' read a chunk
+            bytesToRead = Math.Min(bufferSize, bytesLeft)
+            If (bytesToRead &gt; 0) Then
+               fs.Read(buffer, 0, bytesToRead)
+
+               ' copy into our buffer
+               Marshal.Copy(buffer, 0, tempPtr, bytesToRead)
+
+               ' move the temp pointer
+               tempPtr = New IntPtr(tempPtr.ToInt64() + bytesToRead)
+
+               bytesLeft -= bytesToRead
+            End If
+         Loop While (bytesToRead &gt; 0)
+      End Using
+   End Sub</code>
+        <code lang="CS">      public void TestPngImageOptimizer( )
+      {
+         // Initialize the RasterCodecs class
+         RasterCodecs.Startup();
+         RasterCodecs codecs = new RasterCodecs();
+
+         // The input and output location
+         string inputFileName = LeadtoolsExamples.Common.ImagesPath.Path + "Image1.png";
+         string outputFolder = LeadtoolsExamples.Common.ImagesPath.Path + "OptimizedImages";
+
+         // Initialize a new Optimizer object
+         ImageOptimizer optimizer = new ImageOptimizer();
+
+         // Optimization Options
+         ImageOptimizerOptions options = ImageOptimizerOptions.Default;
+
+         // Set custom optimization options
+         options.Distance = 20;
+         options.Percent = 15;
+         options.PngQualityFactor = 4;
+
+         IntPtr bufferPtr;
+         int bufferSize = 0;
+         LoadFileIntoPointer(inputFileName, out bufferPtr, out bufferSize);
+
+         if(IntPtr.Zero != bufferPtr &amp;&amp; bufferSize &gt; 0)
+         {
+            RasterNativeBuffer optBuffer = optimizer.OptimizeBuffer(codecs, bufferPtr, bufferSize, options, null);
+
+            // Free orgBuffer.PointerBuffer, since it won't be needed anymore.
+            Marshal.FreeHGlobal(bufferPtr);
+
+            // Save this image into the output folder
+            // Make sure the output folder exists
+            if(!Directory.Exists(outputFolder))
+               Directory.CreateDirectory(outputFolder);
+
+            // Get the name of the output file from the input file
+            string outputFileName = Path.Combine(outputFolder, Path.GetFileName(inputFileName));
+
+            // Save the optimized buffer to the output file
+            using(FileStream fs = File.Create(outputFileName))
+            {
+               byte[] optArray = new byte[optBuffer.Length];
+
+               Marshal.Copy(optBuffer.Data, optArray, 0, optArray.Length);
+               fs.Write(optArray, 0, optArray.Length);
+            }
+
+            // Free optBuffer.PointerBuffer, since it won't be needed anymore.
+            Marshal.FreeHGlobal(optBuffer.Data);
+
+            // Compare the original image size with the optimized size.
+            long orgSize = new FileInfo(inputFileName).Length;
+            long optSize = new FileInfo(outputFileName).Length;
+            int percentage = (int)((double)optSize * 100.0 / orgSize);
+
+            string message = string.Format(
+               "Original image size: {0} KB{1}Optimized image size: {2} KB{1}Percentage: {3}%",
+               orgSize / 1024, Environment.NewLine, optSize / 1024,
+               100 - percentage);
+            MessageBox.Show(message);
+         }
+
+         //shutdown the RasterCodecs class.
+         RasterCodecs.Shutdown();
+      }
+
+      // This method opens an image file and loads it into IntPtr.
+      private void LoadFileIntoPointer(string fileName, out IntPtr ptr, out int size)
+      {
+         using(FileStream fs = File.OpenRead(fileName))
+         {
+            // Allocate memory to load the file
+            size = (int)fs.Length;
+            ptr = Marshal.AllocHGlobal(size);
+
+            // Load in 32K chunks
+            const int bufferSize = 32 * 1024;
+            byte[] buffer = new byte[bufferSize];
+
+            int bytesToRead;
+            int bytesLeft = (int)fs.Length;
+            IntPtr tempPtr = ptr;   // where we are
+            do
+            {
+               // read a chunk
+               bytesToRead = Math.Min(bufferSize, bytesLeft);
+               if(bytesToRead &gt; 0)
+               {
+                  fs.Read(buffer, 0, bytesToRead);
+
+                  // copy into our buffer
+                  Marshal.Copy(buffer, 0, tempPtr, bytesToRead);
+
+                  // move the temp pointer
+                  tempPtr = new IntPtr(tempPtr.ToInt64() + bytesToRead);
+
+                  bytesLeft -= bytesToRead;
+               }
+            }
+            while(bytesToRead &gt; 0);
+         }
+      }</code>
+        <!--ImageOptimizer.OptimizePngBuffer-->
+      </example>
+    </member>
+    <member name="M:Leadtools.ImageOptimization.ImageOptimizer.#ctor">
+      <summary>
+            Initializes a new ImageOptimizer class object.
+            </summary>
+      <noremarks />
+      <noexample />
+    </member>
+    <member name="M:Leadtools.ImageOptimization.ImageOptimizer.OptimizeBuffer(Leadtools.Codecs.RasterCodecs,System.IntPtr,System.Int64,Leadtools.ImageOptimization.ImageOptimizerOptions,Leadtools.ImageOptimization.ImageOptimizerProgress)">
+      <summary>
+            Optimizes a supported image format buffer using the passed optimization options.
+            </summary>
+      <param name="codecs">The <see cref="T:Leadtools.Codecs.RasterCodecs" /> object used internally in the optimization operation.</param>
+      <param name="buffer">The original image buffer in memory  as <see cref="T:System.IntPtr" /> array. The image format in memory should be one of the following supported formats:
+            <list type="bullet"><item><see cref="T:Leadtools.RasterImageFormat">RasterImageFormat.Jpeg</see>, Bits per pixel: 8 for grayscale, 24 for color.</item><item><see cref="T:Leadtools.RasterImageFormat">RasterImageFormat.Jpeg411</see>, Bits per pixel: 8 for grayscale, 24 for color.</item><item><see cref="T:Leadtools.RasterImageFormat">RasterImageFormat.Jpeg422</see>, Bits per pixel: 8 for grayscale, 24 for color.</item><item><see cref="T:Leadtools.RasterImageFormat">RasterImageFormat.ExifJpeg411</see>, Bits per pixel: 24 (color only).</item><item><see cref="T:Leadtools.RasterImageFormat">RasterImageFormat.ExifJpeg422</see>, Bits per pixel: 24 (color only).</item><item><see cref="T:Leadtools.RasterImageFormat">RasterImageFormat.Gif</see>, Bits per pixel: 1, 2, 3, 4, 5, 6, 7, and 8.</item><item><see cref="T:Leadtools.RasterImageFormat">RasterImageFormat.Png</see>, Bits per pixel: 1, 4, 8, 24, and 32.</item><item><see cref="T:Leadtools.RasterImageFormat">RasterImageFormat.Bmp</see>, Bits per pixel: 1, 4, 8, 16, 24, and 32.</item><item><see cref="T:Leadtools.RasterImageFormat">RasterImageFormat.BmpRle</see>, Bits per pixel: 4, and 8.</item></list></param>
+      <param name="length">The size, in bytes, of the <paramref name="buffer" /> parameter in memory.</param>
+      <param name="options">The options used in the optimization process.</param>
+      <param name="progressCallback">Optional callback function that provides information about the progress of the optimization process.</param>
+      <returns>
+            A <see cref="T:Leadtools.RasterNativeBuffer" /> structure that contains the image optimized buffer in memory.</returns>
+      <remarks>
+        <para>For more information, refer to <a href="ms-help://Leadtools.Help/Leadtools.DotNet17/Leadtools.Topics/Leadtools.Topics.ImageOptimization~Topics.ImageOptimizationUsingTheImageOptimizerClass.html">Image Optimization Using The ImageOptimizer Class</a>.</para>
+      </remarks>
+      <example>
+        <para>This example will optimize a Png image file and then save it to a separate folder</para>
+        <code lang="VB">   Public Sub TestPngImageOptimizer()
+      ' Initialize the RasterCodecs class
+      RasterCodecs.Startup()
+      Dim Codecs As RasterCodecs = New RasterCodecs()
+
+      ' The input and output location
+      Dim inputFileName As String = LeadtoolsExamples.Common.ImagesPath.Path + "Image1.png"
+      Dim outputFolder As String = LeadtoolsExamples.Common.ImagesPath.Path + "OptimizedImages"
+
+      ' Initialize a new Optimizer object
+      Dim optimizer As ImageOptimizer = New ImageOptimizer()
+
+      ' Optimization Options
+      Dim options As ImageOptimizerOptions = ImageOptimizerOptions.Default
+
+      '' Set custom optimization options
+      options.Distance = 20
+      options.Percent = 15
+      options.PngQualityFactor = 4
+
+      Dim bufferPtr As IntPtr
+      Dim bufferSize As Integer = 0
+      LoadFileIntoPointer(inputFileName, bufferPtr, bufferSize)
+
+      If (IntPtr.Zero &lt;&gt; bufferPtr AndAlso bufferSize &gt; 0) Then
+         Dim optBuffer As RasterNativeBuffer = optimizer.OptimizeBuffer(Codecs, bufferPtr, bufferSize, options, Nothing)
+
+         ' Free orgBuffer.PointerBuffer, since it won't be needed anymore.
+         Marshal.FreeHGlobal(bufferPtr)
+
+         ' Save this image into the output folder
+         ' Make sure the output folder exists
+         If (Not Directory.Exists(outputFolder)) Then
+            Directory.CreateDirectory(outputFolder)
+         End If
+
+         ' Get the name of the output file from the input file
+         Dim outputFileName As String = Path.Combine(outputFolder, Path.GetFileName(inputFileName))
+
+         ' Save the optimized buffer to the output file
+         Using fs As FileStream = File.Create(outputFileName)
+
+            Dim optArray(CInt(optBuffer.Length)) As Byte
+
+            Marshal.Copy(optBuffer.Data, optArray, 0, optArray.Length)
+            fs.Write(optArray, 0, optArray.Length)
+         End Using
+
+         ' Free optBuffer.PointerBuffer, since it won't be needed anymore.
+         Marshal.FreeHGlobal(optBuffer.Data)
+
+         ' Compare the original image size with the optimized size.
+         Dim orgSize As Long = New FileInfo(inputFileName).Length
+         Dim optSize As Long = New FileInfo(outputFileName).Length
+         Dim percentage As Integer = CType(CType(optSize * 100.0 / orgSize, Double), Integer)
+
+         Dim message As String = String.Format( _
+            "Original image size: {0} KB{1}Optimized image size: {2} KB{1}Percentage: {3}%", _
+            orgSize / 1024, Environment.NewLine, optSize / 1024, _
+            100 - percentage)
+         Console.WriteLine(message)
+      End If
+
+      'shutdown the RasterCodecs class.
+      RasterCodecs.Shutdown()
+   End Sub
+
+   ' This method opens an image file and loads it into IntPtr.
+   Private Sub LoadFileIntoPointer(ByVal fileName As String, ByRef ptr As IntPtr, ByRef size As Integer)
+      Using fs As FileStream = File.OpenRead(fileName)
+         ' Allocate memory to load the file
+         size = CType(fs.Length, Integer)
+         ptr = Marshal.AllocHGlobal(size)
+
+         ' Load in 32K chunks
+         Const bufferSize As Integer = 32 * 1024
+         Dim buffer(bufferSize) As Byte
+
+         Dim bytesToRead As Integer
+
+         Dim bytesLeft As Integer = CType(fs.Length, Integer)
+         Dim tempPtr As IntPtr = ptr   ' where we are
+         Do
+            ' read a chunk
+            bytesToRead = Math.Min(bufferSize, bytesLeft)
+            If (bytesToRead &gt; 0) Then
+               fs.Read(buffer, 0, bytesToRead)
+
+               ' copy into our buffer
+               Marshal.Copy(buffer, 0, tempPtr, bytesToRead)
+
+               ' move the temp pointer
+               tempPtr = New IntPtr(tempPtr.ToInt64() + bytesToRead)
+
+               bytesLeft -= bytesToRead
+            End If
+         Loop While (bytesToRead &gt; 0)
+      End Using
+   End Sub</code>
+        <code lang="CS">      public void TestPngImageOptimizer( )
+      {
+         // Initialize the RasterCodecs class
+         RasterCodecs.Startup();
+         RasterCodecs codecs = new RasterCodecs();
+
+         // The input and output location
+         string inputFileName = LeadtoolsExamples.Common.ImagesPath.Path + "Image1.png";
+         string outputFolder = LeadtoolsExamples.Common.ImagesPath.Path + "OptimizedImages";
+
+         // Initialize a new Optimizer object
+         ImageOptimizer optimizer = new ImageOptimizer();
+
+         // Optimization Options
+         ImageOptimizerOptions options = ImageOptimizerOptions.Default;
+
+         // Set custom optimization options
+         options.Distance = 20;
+         options.Percent = 15;
+         options.PngQualityFactor = 4;
+
+         IntPtr bufferPtr;
+         int bufferSize = 0;
+         LoadFileIntoPointer(inputFileName, out bufferPtr, out bufferSize);
+
+         if(IntPtr.Zero != bufferPtr &amp;&amp; bufferSize &gt; 0)
+         {
+            RasterNativeBuffer optBuffer = optimizer.OptimizeBuffer(codecs, bufferPtr, bufferSize, options, null);
+
+            // Free orgBuffer.PointerBuffer, since it won't be needed anymore.
+            Marshal.FreeHGlobal(bufferPtr);
+
+            // Save this image into the output folder
+            // Make sure the output folder exists
+            if(!Directory.Exists(outputFolder))
+               Directory.CreateDirectory(outputFolder);
+
+            // Get the name of the output file from the input file
+            string outputFileName = Path.Combine(outputFolder, Path.GetFileName(inputFileName));
+
+            // Save the optimized buffer to the output file
+            using(FileStream fs = File.Create(outputFileName))
+            {
+               byte[] optArray = new byte[optBuffer.Length];
+
+               Marshal.Copy(optBuffer.Data, optArray, 0, optArray.Length);
+               fs.Write(optArray, 0, optArray.Length);
+            }
+
+            // Free optBuffer.PointerBuffer, since it won't be needed anymore.
+            Marshal.FreeHGlobal(optBuffer.Data);
+
+            // Compare the original image size with the optimized size.
+            long orgSize = new FileInfo(inputFileName).Length;
+            long optSize = new FileInfo(outputFileName).Length;
+            int percentage = (int)((double)optSize * 100.0 / orgSize);
+
+            string message = string.Format(
+               "Original image size: {0} KB{1}Optimized image size: {2} KB{1}Percentage: {3}%",
+               orgSize / 1024, Environment.NewLine, optSize / 1024,
+               100 - percentage);
+            MessageBox.Show(message);
+         }
+
+         //shutdown the RasterCodecs class.
+         RasterCodecs.Shutdown();
+      }
+
+      // This method opens an image file and loads it into IntPtr.
+      private void LoadFileIntoPointer(string fileName, out IntPtr ptr, out int size)
+      {
+         using(FileStream fs = File.OpenRead(fileName))
+         {
+            // Allocate memory to load the file
+            size = (int)fs.Length;
+            ptr = Marshal.AllocHGlobal(size);
+
+            // Load in 32K chunks
+            const int bufferSize = 32 * 1024;
+            byte[] buffer = new byte[bufferSize];
+
+            int bytesToRead;
+            int bytesLeft = (int)fs.Length;
+            IntPtr tempPtr = ptr;   // where we are
+            do
+            {
+               // read a chunk
+               bytesToRead = Math.Min(bufferSize, bytesLeft);
+               if(bytesToRead &gt; 0)
+               {
+                  fs.Read(buffer, 0, bytesToRead);
+
+                  // copy into our buffer
+                  Marshal.Copy(buffer, 0, tempPtr, bytesToRead);
+
+                  // move the temp pointer
+                  tempPtr = new IntPtr(tempPtr.ToInt64() + bytesToRead);
+
+                  bytesLeft -= bytesToRead;
+               }
+            }
+            while(bytesToRead &gt; 0);
+         }
+      }</code>
+        <!--ImageOptimizer.OptimizePngBuffer-->
+      </example>
+    </member>
+    <member name="M:Leadtools.ImageOptimization.ImageOptimizer.OptimizeBuffer(Leadtools.Codecs.RasterCodecs,System.Byte[],System.Int32,System.Int32,Leadtools.ImageOptimization.ImageOptimizerOptions,Leadtools.ImageOptimization.ImageOptimizerProgress)">
+      <summary>
+            Optimizes a supported image format buffer using the passed optimization options.
+            </summary>
+      <param name="codecs">The <see cref="T:Leadtools.Codecs.RasterCodecs" /> object used internally in the optimization operation.</param>
+      <param name="buffer">The original image buffer in memory as a <see cref="T:System.Byte" /> array. The image format in memory should be one of the following supported formats:
+            <list type="bullet"><item><see cref="T:Leadtools.RasterImageFormat">RasterImageFormat.Jpeg</see>, Bits per pixel: 8 for grayscale, 24 for color.</item><item><see cref="T:Leadtools.RasterImageFormat">RasterImageFormat.Jpeg411</see>, Bits per pixel: 8 for grayscale, 24 for color.</item><item><see cref="T:Leadtools.RasterImageFormat">RasterImageFormat.Jpeg422</see>, Bits per pixel: 8 for grayscale, 24 for color.</item><item><see cref="T:Leadtools.RasterImageFormat">RasterImageFormat.ExifJpeg411</see>, Bits per pixel: 24 (color only).</item><item><see cref="T:Leadtools.RasterImageFormat">RasterImageFormat.ExifJpeg422</see>, Bits per pixel: 24 (color only).</item><item><see cref="T:Leadtools.RasterImageFormat">RasterImageFormat.Gif</see>, Bits per pixel: 1, 2, 3, 4, 5, 6, 7, and 8.</item><item><see cref="T:Leadtools.RasterImageFormat">RasterImageFormat.Png</see>, Bits per pixel: 1, 4, 8, 24, and 32.</item><item><see cref="T:Leadtools.RasterImageFormat">RasterImageFormat.Bmp</see>, Bits per pixel: 1, 4, 8, 16, 24, and 32.</item><item><see cref="T:Leadtools.RasterImageFormat">RasterImageFormat.BmpRle</see>, Bits per pixel: 4, and 8.</item></list></param>
+      <param name="offset">The number of bytes to offset the pointer that points to the <paramref name="buffer" /> parameter" so that the data will be read starting from the "Buffer + Offset" position.</param>
+      <param name="length">The length of the image buffer, in bytes, starting from the <paramref name="offset" /> byte.</param>
+      <param name="options">The <see cref="T:Leadtools.ImageOptimization.ImageOptimizerOptions">options</see> used in the optimization process.</param>
+      <param name="progressCallback">Optional callback function that provides information about the progress of the optimization process.</param>
+      <returns>A <see cref="T:System.Byte" /> array that contains the optimized image buffer in memory.</returns>
+      <remarks>
+        <para>For more information, refer to <a href="ms-help://Leadtools.Help/Leadtools.DotNet17/Leadtools.Topics/Leadtools.Topics.ImageOptimization~Topics.ImageOptimizationUsingTheImageOptimizerClass.html">Image Optimization Using The ImageOptimizer Class</a>.</para>
+      </remarks>
+      <example>
+        <para>This example will optimize a Jpg image file then save it into a separate folder</para>
+        <code lang="VB">   Public Sub TestJpegImageOptimizer()
+      ' Initialize the RasterCodecs class
+      RasterCodecs.Startup()
+      Dim codecs As RasterCodecs = New RasterCodecs()
+
+      ' The input and output location
+      Dim inputFileName As String = LeadtoolsExamples.Common.ImagesPath.Path + "Slave.jpg"
+      Dim outputFolder As String = LeadtoolsExamples.Common.ImagesPath.Path + "OptimizedImages"
+
+      ' Initialize a new Optimizer object
+      Dim optimizer As ImageOptimizer = New ImageOptimizer()
+
+      ' Optimization Options
+      Dim options As ImageOptimizerOptions = ImageOptimizerOptions.Default
+
+      ' Set custom optimization options
+      options.JpegQualityFactor = 255
+      options.JpegColorSpace = ImageOptimizerJpegColorSpace.JpegColorSpace422
+
+      ' Load the input file into a memory byte array
+      Dim orgBuffer() As Byte = File.ReadAllBytes(inputFileName)
+
+      ' Optimize this buffer
+      Dim optBuffer() As Byte = optimizer.OptimizeBuffer(codecs, orgBuffer, 0, 0, options, AddressOf OptimizeBufferProgress)
+
+      ' Save this image into the output folder
+      ' Make sure the output folder exists
+      If (Not Directory.Exists(outputFolder)) Then
+         Directory.CreateDirectory(outputFolder)
+      End If
+
+      ' Get the name of the output file from the input file
+      Dim outputFileName As String = Path.Combine(outputFolder, Path.GetFileName(inputFileName))
+
+      ' Save the optimized buffer to the output file
+      Using fs As FileStream = File.Create(outputFileName)
+         fs.Write(optBuffer, 0, optBuffer.Length)
+      End Using
+
+      ' Compare the original image size with the optimized size
+      Dim orgSize As Long = New FileInfo(inputFileName).Length
+      Dim optSize As Long = New FileInfo(outputFileName).Length
+      Dim percentage As Integer = CType(CType(optSize * 100.0 / orgSize, Double), Integer)
+
+      Dim message As String = String.Format( _
+         "Original image size: {0} KB{1}Optimized image size: {2} KB{1}Percentage: {3}%", _
+         orgSize / 1024, Environment.NewLine, optSize / 1024, _
+         100 - percentage)
+      MessageBox.Show(message)
+
+      'shutdown the RasterCodecs class.
+      RasterCodecs.Shutdown()
+   End Sub
+
+   Public Shared Function OptimizeBufferProgress(ByVal percent As Integer) As Boolean
+      Console.WriteLine(String.Format("{0}%", percent))
+      Return True
+   End Function</code>
+        <code lang="CS">      public void TestJpegImageOptimizer( )
+      {
+         // Initialize the RasterCodecs class
+         RasterCodecs.Startup();
+         RasterCodecs codecs = new RasterCodecs();
+
+         // The input and output location
+         string inputFileName = LeadtoolsExamples.Common.ImagesPath.Path + "Slave.jpg";
+         string outputFolder = LeadtoolsExamples.Common.ImagesPath.Path + "OptimizedImages";
+
+         // Initialize a new Optimizer object
+         ImageOptimizer optimizer = new ImageOptimizer();
+
+         // Optimization Options
+         ImageOptimizerOptions options = ImageOptimizerOptions.Default;
+
+         // Set custom optimization options
+         options.JpegQualityFactor = 255;
+         options.JpegColorSpace = ImageOptimizerJpegColorSpace.JpegColorSpace422;
+
+         // Load the input file into a memory byte array
+         byte[] orgBuffer = File.ReadAllBytes(inputFileName);
+
+         // Optimize this buffer
+         byte[] optBuffer = optimizer.OptimizeBuffer(codecs, orgBuffer, 0, orgBuffer.Length, options, OptimizeBufferProgress);
+
+         // Save this image into the output folder
+         // Make sure the output folder exists
+         if(!Directory.Exists(outputFolder))
+            Directory.CreateDirectory(outputFolder);
+
+         // Get the name of the output file from the input file
+         string outputFileName = Path.Combine(outputFolder, Path.GetFileName(inputFileName));
+
+         // Save the optimized buffer to the output file
+         using(FileStream fs = File.Create(outputFileName))
+            fs.Write(optBuffer, 0, optBuffer.Length);
+
+         // Compare the original image size with the optimized size
+         long orgSize = new FileInfo(inputFileName).Length;
+         long optSize = new FileInfo(outputFileName).Length;
+         int percentage = (int)((double)optSize * 100.0 / orgSize);
+
+         string message = string.Format(
+            "Original image size: {0} KB{1}Optimized image size: {2} KB{1}Percentage: {3}%",
+            orgSize / 1024, Environment.NewLine, optSize / 1024,
+            100 - percentage);
+         MessageBox.Show(message);
+
+         //shutdown the RasterCodecs class.
+         RasterCodecs.Shutdown();
+      }
+
+      static bool OptimizeBufferProgress(int percent)
+      {
+         Console.WriteLine(string.Format("{0}%", percent));
+         return true;
+      }</code>
+        <!--ImageOptimizer.OptimizeJpegBuffer-->
+      </example>
+    </member>
+    <member name="M:Leadtools.ImageOptimization.ImageOptimizer.OptimizeDirectory(Leadtools.Codecs.RasterCodecs,System.String,System.String,Leadtools.ImageOptimization.ImageOptimizerOptions,System.String,System.Boolean,Leadtools.ImageOptimization.ImageOptimizerDirectory)">
+      <summary>
+            Optimizes a directory of images using the specified optimization options,
+            and saves the optimized images to a new directory with the same original hierarchy.
+            </summary>
+      <param name="codecs">The <see cref="T:Leadtools.Codecs.RasterCodecs" /> object used internally in the optimization operation to load an image and optimize it.</param>
+      <param name="inputDirectory">A <see cref="T:System.String" /> that contains the full directory path to the images to be optimized.</param>
+      <param name="outputDirectory">A <see cref="T:System.String" /> that contains the full directory path to be used when saving the optimized image(s).</param>
+      <param name="options">The <see cref="T:Leadtools.ImageOptimization.ImageOptimizerOptions">options</see> used in the optimization process.</param>
+      <param name="fileExtensions">A <see cref="T:System.String" /> that contains the extensions of the files to be optimized.
+            For example:<list type="bullet"><item>To optimize all "gif" and "jpeg" files, <paramref name="fileExtensions" /> should be set to "*.gif;*.jpeg".</item><item>To optimize all the supported files found in the <paramref name="inputDirectory" /> directory, regardless of their extensions, <paramref name="fileExtensions" /> should be set to "*.*".</item></list></param>
+      <param name="includeSubDirectories">true to optimize sub-directories, false otherwise.</param>
+      <param name="directoryCallback">Optional callback function that provides user information about the image(s) being optimized,
+            such as the completion percentage for the current image being optimized, and the completion percentage for all files being optimized.</param>
+      <remarks>
+        <para>For more information, refer to <a href="ms-help://Leadtools.Help/Leadtools.DotNet17/Leadtools.Topics/Leadtools.Topics.ImageOptimization~Topics.ImageOptimizationUsingTheImageOptimizerClass.html">Image Optimization Using The ImageOptimizer Class</a>.</para>
+      </remarks>
+      <example>
+        <para>This example will optimize all Jpg files found in a specific directory, and save them into a separate folder</para>
+        <code lang="VB">   Private _imageNo As Integer
+
+   Public Sub TestDirImageOptimizer()
+      _imageNo = 0
+
+      ' Initialize the RasterCodecs class
+      RasterCodecs.Startup()
+      Dim codecs As RasterCodecs = New RasterCodecs()
+
+      ' The input and output directories
+      Dim inputDirectory As String = LeadtoolsExamples.Common.ImagesPath.Path
+      Dim outputDirectory As String = LeadtoolsExamples.Common.ImagesPath.Path + "OptimizedImages"
+
+      ' Initialize a new Optimizer object
+      Dim optimizer As ImageOptimizer = New ImageOptimizer()
+
+      ' Optimization Options
+      Dim options As ImageOptimizerOptions = ImageOptimizerOptions.Default
+
+      optimizer.OptimizeDirectory(codecs, _
+         inputDirectory, _
+         outputDirectory, _
+         options, _
+         "*.jpg", _
+         False, _
+         AddressOf ImageOptimizerDirectory)
+
+      'shutdown the RasterCodecs class.
+      RasterCodecs.Shutdown()
+   End Sub
+
+   Public Function ImageOptimizerDirectory(ByVal data As ImageOptimizerDirectoryData) As Boolean
+      Console.WriteLine(String.Format("File Percent = {0}%,    Total Percent = {1}%", data.FilePercent, data.TotalPercent))
+
+      If (_imageNo = data.TotalFolderFilesCount) Then
+
+         ' Operation Done.
+         Console.WriteLine("Optimization Operation Completed Successfully")
+         Return True
+
+      ElseIf (data.Status = ImageOptimizerDirectoryStatus.PreOptimizingImage) Then
+         Dim text As String = String.Format("Optimizing Image {0} ?\n", data.InputFileName)
+         Dim result As DialogResult = MessageBox.Show(text, "", MessageBoxButtons.YesNoCancel)
+
+         If (result = DialogResult.Yes) Then
+            ' Optimize the image using the default options.
+            data.Options = ImageOptimizerOptions.Default
+            Return True
+         ElseIf (result = DialogResult.No) Then
+            ' Skip this image.
+            _imageNo += 1
+            data.SkipImage = True
+         Else
+            ' Stop the whole operation.
+            Return False
+         End If
+      ElseIf (data.FilePercent = 100) Then
+         _imageNo += 1
+
+         ' Displaying information about the optimized image.
+         Dim msg As String = String.Format("Optimizing File ( {0} of {1} ) \n" + _
+            "--------------------------------\n" + _
+            "Source File Name = {2}\n" + _
+            "Detination File Name = {3}\n" + _
+            "No of Pages = {4}\n", _
+            _imageNo, data.TotalFolderFilesCount, data.InputFileName, data.OutputFileName, data.ImageInfo.TotalPages)
+
+         Console.WriteLine(msg)
+      End If
+      Return True
+   End Function</code>
+        <code lang="CS">      int _imageNo;
+
+      public void TestDirImageOptimizer( )
+      {
+         _imageNo = 0;
+
+         // Initialize the RasterCodecs class
+         RasterCodecs.Startup();
+         RasterCodecs codecs = new RasterCodecs();
+
+         // The input and output directories
+         string inputDirectory = LeadtoolsExamples.Common.ImagesPath.Path;
+         string outputDirectory = LeadtoolsExamples.Common.ImagesPath.Path + "OptimizedImages";
+
+         // Initialize a new Optimizer object
+         ImageOptimizer optimizer = new ImageOptimizer();
+
+         // Optimization Options
+         ImageOptimizerOptions options = ImageOptimizerOptions.Default;
+
+         optimizer.OptimizeDirectory(codecs,
+            inputDirectory,
+            outputDirectory,
+            options,
+            "*.jpg",
+            false,
+            ImageOptimizerDirectory);
+
+         //shutdown the RasterCodecs class.
+         RasterCodecs.Shutdown();
+      }
+
+      bool ImageOptimizerDirectory(ImageOptimizerDirectoryData data)
+      {
+         Console.WriteLine(string.Format("File Percent = {0}%,    Total Percent = {1}%", data.FilePercent, data.TotalPercent));
+
+         if(_imageNo == data.TotalFolderFilesCount)
+         {
+            // Operation Done.
+            Console.WriteLine("Optimization Operation Completed Successfully");
+            return true;
+         }
+         else if(data.Status == ImageOptimizerDirectoryStatus.PreOptimizingImage)
+         {
+            string text = string.Format("Optimizing Image {0} ?\n", data.InputFileName);
+            DialogResult result = MessageBox.Show(text, "", MessageBoxButtons.YesNoCancel);
+
+            if(result == DialogResult.Yes)
+            {
+               // Optimize the image using the default options.
+               data.Options = ImageOptimizerOptions.Default;
+               return true;
+            }
+            else if(result == DialogResult.No)
+            {
+               // Skip this image.
+               _imageNo++;
+               data.SkipImage = true;
+            }
+            else
+               // Stop the whole operation.
+               return false;
+         }
+         else if(data.FilePercent == 100)
+         {
+            _imageNo++;
+
+            // Displaying information about the optimized image.
+            string msg = string.Format("Optimizing File ( {0} of {1} ) \n" +
+               "--------------------------------\n" +
+               "Source File Name = {2}\n" +
+               "Detination File Name = {3}\n" +
+               "No of Pages = {4}\n",
+               _imageNo, data.TotalFolderFilesCount, data.InputFileName, data.OutputFileName, data.ImageInfo.TotalPages);
+
+            Console.WriteLine(msg);
+         }
+         return true;
+      }</code>
+        <!--ImageOptimizer.OptimizeDirectory-->
+      </example>
+    </member>
+    <member name="T:Leadtools.ImageOptimization.ImageOptimizerDirectoryStatus">
+      <summary>
+            Indicates the status of the current optimization directory.
+            </summary>
+      <noremarks />
+      <noexample />
+    </member>
+    <member name="F:Leadtools.ImageOptimization.ImageOptimizerDirectoryStatus.PreOptimizingImage">
+      <summary>
+        <para>Indicates that the image specified in <see cref="P:Leadtools.ImageOptimization.ImageOptimizerDirectoryData.InputFileName" /> is about to be optimized.</para>
+        <para>You can update the optimization options by updating the property <see cref="P:Leadtools.ImageOptimization.ImageOptimizerDirectoryData.Options" /> options.</para>
+      </summary>
+    </member>
+    <member name="F:Leadtools.ImageOptimization.ImageOptimizerDirectoryStatus.OptimizingImage">
+      <summary>
+        <para>Indicates that the image specified in <see cref="P:Leadtools.ImageOptimization.ImageOptimizerDirectoryData.InputFileName" /> is being optimized.</para>
+        <para>Information about the percent completion of the optimization process can be found in the <see cref="P:Leadtools.ImageOptimization.ImageOptimizerDirectoryData.FilePercent" /> and <see cref="P:Leadtools.ImageOptimization.ImageOptimizerDirectoryData.TotalPercent" /> properties.</para>
+      </summary>
+    </member>
+    <member name="T:Leadtools.ImageOptimization.ImageOptimizerJpegColorSpace">
+      <summary>
+            Indicates the color space to be used when optimizing a Jpeg Image.
+            </summary>
+      <noremarks />
+      <noexample />
+    </member>
+    <member name="F:Leadtools.ImageOptimization.ImageOptimizerJpegColorSpace.JpegColorSpace411">
+      <summary>
+        <para>Use the YUV 4:1:1 color space.</para>
+      </summary>
+    </member>
+    <member name="F:Leadtools.ImageOptimization.ImageOptimizerJpegColorSpace.JpegColorSpace422">
+      <summary>
+        <para>Use the YUV 4:2:2 color space.</para>
+      </summary>
+    </member>
+    <member name="T:Leadtools.ImageOptimization.ImageOptimizerDirectoryData">
+      <summary>
+            Provides data for the <see cref="T:Leadtools.ImageOptimization.ImageOptimizerDirectory" /> callback method.
+            </summary>
+      <noremarks />
+      <example>
+        <para />
+        <code lang="VB">   Private _imageNo As Integer
+
+   Public Sub TestDirImageOptimizer()
+      _imageNo = 0
+
+      ' Initialize the RasterCodecs class
+      RasterCodecs.Startup()
+      Dim codecs As RasterCodecs = New RasterCodecs()
+
+      ' The input and output directories
+      Dim inputDirectory As String = LeadtoolsExamples.Common.ImagesPath.Path
+      Dim outputDirectory As String = LeadtoolsExamples.Common.ImagesPath.Path + "OptimizedImages"
+
+      ' Initialize a new Optimizer object
+      Dim optimizer As ImageOptimizer = New ImageOptimizer()
+
+      ' Optimization Options
+      Dim options As ImageOptimizerOptions = ImageOptimizerOptions.Default
+
+      optimizer.OptimizeDirectory(codecs, _
+         inputDirectory, _
+         outputDirectory, _
+         options, _
+         "*.jpg", _
+         False, _
+         AddressOf ImageOptimizerDirectory)
+
+      'shutdown the RasterCodecs class.
+      RasterCodecs.Shutdown()
+   End Sub
+
+   Public Function ImageOptimizerDirectory(ByVal data As ImageOptimizerDirectoryData) As Boolean
+      Console.WriteLine(String.Format("File Percent = {0}%,    Total Percent = {1}%", data.FilePercent, data.TotalPercent))
+
+      If (_imageNo = data.TotalFolderFilesCount) Then
+
+         ' Operation Done.
+         Console.WriteLine("Optimization Operation Completed Successfully")
+         Return True
+
+      ElseIf (data.Status = ImageOptimizerDirectoryStatus.PreOptimizingImage) Then
+         Dim text As String = String.Format("Optimizing Image {0} ?\n", data.InputFileName)
+         Dim result As DialogResult = MessageBox.Show(text, "", MessageBoxButtons.YesNoCancel)
+
+         If (result = DialogResult.Yes) Then
+            ' Optimize the image using the default options.
+            data.Options = ImageOptimizerOptions.Default
+            Return True
+         ElseIf (result = DialogResult.No) Then
+            ' Skip this image.
+            _imageNo += 1
+            data.SkipImage = True
+         Else
+            ' Stop the whole operation.
+            Return False
+         End If
+      ElseIf (data.FilePercent = 100) Then
+         _imageNo += 1
+
+         ' Displaying information about the optimized image.
+         Dim msg As String = String.Format("Optimizing File ( {0} of {1} ) \n" + _
+            "--------------------------------\n" + _
+            "Source File Name = {2}\n" + _
+            "Detination File Name = {3}\n" + _
+            "No of Pages = {4}\n", _
+            _imageNo, data.TotalFolderFilesCount, data.InputFileName, data.OutputFileName, data.ImageInfo.TotalPages)
+
+         Console.WriteLine(msg)
+      End If
+      Return True
+   End Function</code>
+        <code lang="CS">      int _imageNo;
+
+      public void TestDirImageOptimizer( )
+      {
+         _imageNo = 0;
+
+         // Initialize the RasterCodecs class
+         RasterCodecs.Startup();
+         RasterCodecs codecs = new RasterCodecs();
+
+         // The input and output directories
+         string inputDirectory = LeadtoolsExamples.Common.ImagesPath.Path;
+         string outputDirectory = LeadtoolsExamples.Common.ImagesPath.Path + "OptimizedImages";
+
+         // Initialize a new Optimizer object
+         ImageOptimizer optimizer = new ImageOptimizer();
+
+         // Optimization Options
+         ImageOptimizerOptions options = ImageOptimizerOptions.Default;
+
+         optimizer.OptimizeDirectory(codecs,
+            inputDirectory,
+            outputDirectory,
+            options,
+            "*.jpg",
+            false,
+            ImageOptimizerDirectory);
+
+         //shutdown the RasterCodecs class.
+         RasterCodecs.Shutdown();
+      }
+
+      bool ImageOptimizerDirectory(ImageOptimizerDirectoryData data)
+      {
+         Console.WriteLine(string.Format("File Percent = {0}%,    Total Percent = {1}%", data.FilePercent, data.TotalPercent));
+
+         if(_imageNo == data.TotalFolderFilesCount)
+         {
+            // Operation Done.
+            Console.WriteLine("Optimization Operation Completed Successfully");
+            return true;
+         }
+         else if(data.Status == ImageOptimizerDirectoryStatus.PreOptimizingImage)
+         {
+            string text = string.Format("Optimizing Image {0} ?\n", data.InputFileName);
+            DialogResult result = MessageBox.Show(text, "", MessageBoxButtons.YesNoCancel);
+
+            if(result == DialogResult.Yes)
+            {
+               // Optimize the image using the default options.
+               data.Options = ImageOptimizerOptions.Default;
+               return true;
+            }
+            else if(result == DialogResult.No)
+            {
+               // Skip this image.
+               _imageNo++;
+               data.SkipImage = true;
+            }
+            else
+               // Stop the whole operation.
+               return false;
+         }
+         else if(data.FilePercent == 100)
+         {
+            _imageNo++;
+
+            // Displaying information about the optimized image.
+            string msg = string.Format("Optimizing File ( {0} of {1} ) \n" +
+               "--------------------------------\n" +
+               "Source File Name = {2}\n" +
+               "Detination File Name = {3}\n" +
+               "No of Pages = {4}\n",
+               _imageNo, data.TotalFolderFilesCount, data.InputFileName, data.OutputFileName, data.ImageInfo.TotalPages);
+
+            Console.WriteLine(msg);
+         }
+         return true;
+      }</code>
+        <!--ImageOptimizer.OptimizeDirectory-->
+      </example>
+    </member>
+    <member name="M:Leadtools.ImageOptimization.ImageOptimizerDirectoryData.#ctor">
+      <summary>
+            Initializes a new ImageOptimizerDirectoryData class object.
+            </summary>
+      <noremarks />
+      <noexample />
+    </member>
+    <member name="P:Leadtools.ImageOptimization.ImageOptimizerDirectoryData.InputFileName">
+      <summary>
+            Gets the original, complete file name.
+            </summary>
+      <value>
+            The original, complete file name.
+            </value>
+      <noremarks />
+      <example>
+        <para />
+        <code lang="VB">   Private _imageNo As Integer
+
+   Public Sub TestDirImageOptimizer()
+      _imageNo = 0
+
+      ' Initialize the RasterCodecs class
+      RasterCodecs.Startup()
+      Dim codecs As RasterCodecs = New RasterCodecs()
+
+      ' The input and output directories
+      Dim inputDirectory As String = LeadtoolsExamples.Common.ImagesPath.Path
+      Dim outputDirectory As String = LeadtoolsExamples.Common.ImagesPath.Path + "OptimizedImages"
+
+      ' Initialize a new Optimizer object
+      Dim optimizer As ImageOptimizer = New ImageOptimizer()
+
+      ' Optimization Options
+      Dim options As ImageOptimizerOptions = ImageOptimizerOptions.Default
+
+      optimizer.OptimizeDirectory(codecs, _
+         inputDirectory, _
+         outputDirectory, _
+         options, _
+         "*.jpg", _
+         False, _
+         AddressOf ImageOptimizerDirectory)
+
+      'shutdown the RasterCodecs class.
+      RasterCodecs.Shutdown()
+   End Sub
+
+   Public Function ImageOptimizerDirectory(ByVal data As ImageOptimizerDirectoryData) As Boolean
+      Console.WriteLine(String.Format("File Percent = {0}%,    Total Percent = {1}%", data.FilePercent, data.TotalPercent))
+
+      If (_imageNo = data.TotalFolderFilesCount) Then
+
+         ' Operation Done.
+         Console.WriteLine("Optimization Operation Completed Successfully")
+         Return True
+
+      ElseIf (data.Status = ImageOptimizerDirectoryStatus.PreOptimizingImage) Then
+         Dim text As String = String.Format("Optimizing Image {0} ?\n", data.InputFileName)
+         Dim result As DialogResult = MessageBox.Show(text, "", MessageBoxButtons.YesNoCancel)
+
+         If (result = DialogResult.Yes) Then
+            ' Optimize the image using the default options.
+            data.Options = ImageOptimizerOptions.Default
+            Return True
+         ElseIf (result = DialogResult.No) Then
+            ' Skip this image.
+            _imageNo += 1
+            data.SkipImage = True
+         Else
+            ' Stop the whole operation.
+            Return False
+         End If
+      ElseIf (data.FilePercent = 100) Then
+         _imageNo += 1
+
+         ' Displaying information about the optimized image.
+         Dim msg As String = String.Format("Optimizing File ( {0} of {1} ) \n" + _
+            "--------------------------------\n" + _
+            "Source File Name = {2}\n" + _
+            "Detination File Name = {3}\n" + _
+            "No of Pages = {4}\n", _
+            _imageNo, data.TotalFolderFilesCount, data.InputFileName, data.OutputFileName, data.ImageInfo.TotalPages)
+
+         Console.WriteLine(msg)
+      End If
+      Return True
+   End Function</code>
+        <code lang="CS">      int _imageNo;
+
+      public void TestDirImageOptimizer( )
+      {
+         _imageNo = 0;
+
+         // Initialize the RasterCodecs class
+         RasterCodecs.Startup();
+         RasterCodecs codecs = new RasterCodecs();
+
+         // The input and output directories
+         string inputDirectory = LeadtoolsExamples.Common.ImagesPath.Path;
+         string outputDirectory = LeadtoolsExamples.Common.ImagesPath.Path + "OptimizedImages";
+
+         // Initialize a new Optimizer object
+         ImageOptimizer optimizer = new ImageOptimizer();
+
+         // Optimization Options
+         ImageOptimizerOptions options = ImageOptimizerOptions.Default;
+
+         optimizer.OptimizeDirectory(codecs,
+            inputDirectory,
+            outputDirectory,
+            options,
+            "*.jpg",
+            false,
+            ImageOptimizerDirectory);
+
+         //shutdown the RasterCodecs class.
+         RasterCodecs.Shutdown();
+      }
+
+      bool ImageOptimizerDirectory(ImageOptimizerDirectoryData data)
+      {
+         Console.WriteLine(string.Format("File Percent = {0}%,    Total Percent = {1}%", data.FilePercent, data.TotalPercent));
+
+         if(_imageNo == data.TotalFolderFilesCount)
+         {
+            // Operation Done.
+            Console.WriteLine("Optimization Operation Completed Successfully");
+            return true;
+         }
+         else if(data.Status == ImageOptimizerDirectoryStatus.PreOptimizingImage)
+         {
+            string text = string.Format("Optimizing Image {0} ?\n", data.InputFileName);
+            DialogResult result = MessageBox.Show(text, "", MessageBoxButtons.YesNoCancel);
+
+            if(result == DialogResult.Yes)
+            {
+               // Optimize the image using the default options.
+               data.Options = ImageOptimizerOptions.Default;
+               return true;
+            }
+            else if(result == DialogResult.No)
+            {
+               // Skip this image.
+               _imageNo++;
+               data.SkipImage = true;
+            }
+            else
+               // Stop the whole operation.
+               return false;
+         }
+         else if(data.FilePercent == 100)
+         {
+            _imageNo++;
+
+            // Displaying information about the optimized image.
+            string msg = string.Format("Optimizing File ( {0} of {1} ) \n" +
+               "--------------------------------\n" +
+               "Source File Name = {2}\n" +
+               "Detination File Name = {3}\n" +
+               "No of Pages = {4}\n",
+               _imageNo, data.TotalFolderFilesCount, data.InputFileName, data.OutputFileName, data.ImageInfo.TotalPages);
+
+            Console.WriteLine(msg);
+         }
+         return true;
+      }</code>
+        <!--ImageOptimizer.OptimizeDirectory-->
+      </example>
+    </member>
+    <member name="P:Leadtools.ImageOptimization.ImageOptimizerDirectoryData.OutputFileName">
+      <summary>
+            Gets the optimized, complete file name.
+            </summary>
+      <value>
+            The optimized, complete file name.
+            </value>
+      <noremarks />
+      <example>
+        <para />
+        <code lang="VB">   Private _imageNo As Integer
+
+   Public Sub TestDirImageOptimizer()
+      _imageNo = 0
+
+      ' Initialize the RasterCodecs class
+      RasterCodecs.Startup()
+      Dim codecs As RasterCodecs = New RasterCodecs()
+
+      ' The input and output directories
+      Dim inputDirectory As String = LeadtoolsExamples.Common.ImagesPath.Path
+      Dim outputDirectory As String = LeadtoolsExamples.Common.ImagesPath.Path + "OptimizedImages"
+
+      ' Initialize a new Optimizer object
+      Dim optimizer As ImageOptimizer = New ImageOptimizer()
+
+      ' Optimization Options
+      Dim options As ImageOptimizerOptions = ImageOptimizerOptions.Default
+
+      optimizer.OptimizeDirectory(codecs, _
+         inputDirectory, _
+         outputDirectory, _
+         options, _
+         "*.jpg", _
+         False, _
+         AddressOf ImageOptimizerDirectory)
+
+      'shutdown the RasterCodecs class.
+      RasterCodecs.Shutdown()
+   End Sub
+
+   Public Function ImageOptimizerDirectory(ByVal data As ImageOptimizerDirectoryData) As Boolean
+      Console.WriteLine(String.Format("File Percent = {0}%,    Total Percent = {1}%", data.FilePercent, data.TotalPercent))
+
+      If (_imageNo = data.TotalFolderFilesCount) Then
+
+         ' Operation Done.
+         Console.WriteLine("Optimization Operation Completed Successfully")
+         Return True
+
+      ElseIf (data.Status = ImageOptimizerDirectoryStatus.PreOptimizingImage) Then
+         Dim text As String = String.Format("Optimizing Image {0} ?\n", data.InputFileName)
+         Dim result As DialogResult = MessageBox.Show(text, "", MessageBoxButtons.YesNoCancel)
+
+         If (result = DialogResult.Yes) Then
+            ' Optimize the image using the default options.
+            data.Options = ImageOptimizerOptions.Default
+            Return True
+         ElseIf (result = DialogResult.No) Then
+            ' Skip this image.
+            _imageNo += 1
+            data.SkipImage = True
+         Else
+            ' Stop the whole operation.
+            Return False
+         End If
+      ElseIf (data.FilePercent = 100) Then
+         _imageNo += 1
+
+         ' Displaying information about the optimized image.
+         Dim msg As String = String.Format("Optimizing File ( {0} of {1} ) \n" + _
+            "--------------------------------\n" + _
+            "Source File Name = {2}\n" + _
+            "Detination File Name = {3}\n" + _
+            "No of Pages = {4}\n", _
+            _imageNo, data.TotalFolderFilesCount, data.InputFileName, data.OutputFileName, data.ImageInfo.TotalPages)
+
+         Console.WriteLine(msg)
+      End If
+      Return True
+   End Function</code>
+        <code lang="CS">      int _imageNo;
+
+      public void TestDirImageOptimizer( )
+      {
+         _imageNo = 0;
+
+         // Initialize the RasterCodecs class
+         RasterCodecs.Startup();
+         RasterCodecs codecs = new RasterCodecs();
+
+         // The input and output directories
+         string inputDirectory = LeadtoolsExamples.Common.ImagesPath.Path;
+         string outputDirectory = LeadtoolsExamples.Common.ImagesPath.Path + "OptimizedImages";
+
+         // Initialize a new Optimizer object
+         ImageOptimizer optimizer = new ImageOptimizer();
+
+         // Optimization Options
+         ImageOptimizerOptions options = ImageOptimizerOptions.Default;
+
+         optimizer.OptimizeDirectory(codecs,
+            inputDirectory,
+            outputDirectory,
+            options,
+            "*.jpg",
+            false,
+            ImageOptimizerDirectory);
+
+         //shutdown the RasterCodecs class.
+         RasterCodecs.Shutdown();
+      }
+
+      bool ImageOptimizerDirectory(ImageOptimizerDirectoryData data)
+      {
+         Console.WriteLine(string.Format("File Percent = {0}%,    Total Percent = {1}%", data.FilePercent, data.TotalPercent));
+
+         if(_imageNo == data.TotalFolderFilesCount)
+         {
+            // Operation Done.
+            Console.WriteLine("Optimization Operation Completed Successfully");
+            return true;
+         }
+         else if(data.Status == ImageOptimizerDirectoryStatus.PreOptimizingImage)
+         {
+            string text = string.Format("Optimizing Image {0} ?\n", data.InputFileName);
+            DialogResult result = MessageBox.Show(text, "", MessageBoxButtons.YesNoCancel);
+
+            if(result == DialogResult.Yes)
+            {
+               // Optimize the image using the default options.
+               data.Options = ImageOptimizerOptions.Default;
+               return true;
+            }
+            else if(result == DialogResult.No)
+            {
+               // Skip this image.
+               _imageNo++;
+               data.SkipImage = true;
+            }
+            else
+               // Stop the whole operation.
+               return false;
+         }
+         else if(data.FilePercent == 100)
+         {
+            _imageNo++;
+
+            // Displaying information about the optimized image.
+            string msg = string.Format("Optimizing File ( {0} of {1} ) \n" +
+               "--------------------------------\n" +
+               "Source File Name = {2}\n" +
+               "Detination File Name = {3}\n" +
+               "No of Pages = {4}\n",
+               _imageNo, data.TotalFolderFilesCount, data.InputFileName, data.OutputFileName, data.ImageInfo.TotalPages);
+
+            Console.WriteLine(msg);
+         }
+         return true;
+      }</code>
+        <!--ImageOptimizer.OptimizeDirectory-->
+      </example>
+    </member>
+    <member name="P:Leadtools.ImageOptimization.ImageOptimizerDirectoryData.Status">
+      <summary>
+            Gets the current status of the directory optimization process.
+            </summary>
+      <value>
+            Status of the directory optimization process.
+            </value>
+      <noremarks />
+      <example>
+        <para />
+        <code lang="VB">   Private _imageNo As Integer
+
+   Public Sub TestDirImageOptimizer()
+      _imageNo = 0
+
+      ' Initialize the RasterCodecs class
+      RasterCodecs.Startup()
+      Dim codecs As RasterCodecs = New RasterCodecs()
+
+      ' The input and output directories
+      Dim inputDirectory As String = LeadtoolsExamples.Common.ImagesPath.Path
+      Dim outputDirectory As String = LeadtoolsExamples.Common.ImagesPath.Path + "OptimizedImages"
+
+      ' Initialize a new Optimizer object
+      Dim optimizer As ImageOptimizer = New ImageOptimizer()
+
+      ' Optimization Options
+      Dim options As ImageOptimizerOptions = ImageOptimizerOptions.Default
+
+      optimizer.OptimizeDirectory(codecs, _
+         inputDirectory, _
+         outputDirectory, _
+         options, _
+         "*.jpg", _
+         False, _
+         AddressOf ImageOptimizerDirectory)
+
+      'shutdown the RasterCodecs class.
+      RasterCodecs.Shutdown()
+   End Sub
+
+   Public Function ImageOptimizerDirectory(ByVal data As ImageOptimizerDirectoryData) As Boolean
+      Console.WriteLine(String.Format("File Percent = {0}%,    Total Percent = {1}%", data.FilePercent, data.TotalPercent))
+
+      If (_imageNo = data.TotalFolderFilesCount) Then
+
+         ' Operation Done.
+         Console.WriteLine("Optimization Operation Completed Successfully")
+         Return True
+
+      ElseIf (data.Status = ImageOptimizerDirectoryStatus.PreOptimizingImage) Then
+         Dim text As String = String.Format("Optimizing Image {0} ?\n", data.InputFileName)
+         Dim result As DialogResult = MessageBox.Show(text, "", MessageBoxButtons.YesNoCancel)
+
+         If (result = DialogResult.Yes) Then
+            ' Optimize the image using the default options.
+            data.Options = ImageOptimizerOptions.Default
+            Return True
+         ElseIf (result = DialogResult.No) Then
+            ' Skip this image.
+            _imageNo += 1
+            data.SkipImage = True
+         Else
+            ' Stop the whole operation.
+            Return False
+         End If
+      ElseIf (data.FilePercent = 100) Then
+         _imageNo += 1
+
+         ' Displaying information about the optimized image.
+         Dim msg As String = String.Format("Optimizing File ( {0} of {1} ) \n" + _
+            "--------------------------------\n" + _
+            "Source File Name = {2}\n" + _
+            "Detination File Name = {3}\n" + _
+            "No of Pages = {4}\n", _
+            _imageNo, data.TotalFolderFilesCount, data.InputFileName, data.OutputFileName, data.ImageInfo.TotalPages)
+
+         Console.WriteLine(msg)
+      End If
+      Return True
+   End Function</code>
+        <code lang="CS">      int _imageNo;
+
+      public void TestDirImageOptimizer( )
+      {
+         _imageNo = 0;
+
+         // Initialize the RasterCodecs class
+         RasterCodecs.Startup();
+         RasterCodecs codecs = new RasterCodecs();
+
+         // The input and output directories
+         string inputDirectory = LeadtoolsExamples.Common.ImagesPath.Path;
+         string outputDirectory = LeadtoolsExamples.Common.ImagesPath.Path + "OptimizedImages";
+
+         // Initialize a new Optimizer object
+         ImageOptimizer optimizer = new ImageOptimizer();
+
+         // Optimization Options
+         ImageOptimizerOptions options = ImageOptimizerOptions.Default;
+
+         optimizer.OptimizeDirectory(codecs,
+            inputDirectory,
+            outputDirectory,
+            options,
+            "*.jpg",
+            false,
+            ImageOptimizerDirectory);
+
+         //shutdown the RasterCodecs class.
+         RasterCodecs.Shutdown();
+      }
+
+      bool ImageOptimizerDirectory(ImageOptimizerDirectoryData data)
+      {
+         Console.WriteLine(string.Format("File Percent = {0}%,    Total Percent = {1}%", data.FilePercent, data.TotalPercent));
+
+         if(_imageNo == data.TotalFolderFilesCount)
+         {
+            // Operation Done.
+            Console.WriteLine("Optimization Operation Completed Successfully");
+            return true;
+         }
+         else if(data.Status == ImageOptimizerDirectoryStatus.PreOptimizingImage)
+         {
+            string text = string.Format("Optimizing Image {0} ?\n", data.InputFileName);
+            DialogResult result = MessageBox.Show(text, "", MessageBoxButtons.YesNoCancel);
+
+            if(result == DialogResult.Yes)
+            {
+               // Optimize the image using the default options.
+               data.Options = ImageOptimizerOptions.Default;
+               return true;
+            }
+            else if(result == DialogResult.No)
+            {
+               // Skip this image.
+               _imageNo++;
+               data.SkipImage = true;
+            }
+            else
+               // Stop the whole operation.
+               return false;
+         }
+         else if(data.FilePercent == 100)
+         {
+            _imageNo++;
+
+            // Displaying information about the optimized image.
+            string msg = string.Format("Optimizing File ( {0} of {1} ) \n" +
+               "--------------------------------\n" +
+               "Source File Name = {2}\n" +
+               "Detination File Name = {3}\n" +
+               "No of Pages = {4}\n",
+               _imageNo, data.TotalFolderFilesCount, data.InputFileName, data.OutputFileName, data.ImageInfo.TotalPages);
+
+            Console.WriteLine(msg);
+         }
+         return true;
+      }</code>
+        <!--ImageOptimizer.OptimizeDirectory-->
+      </example>
+    </member>
+    <member name="P:Leadtools.ImageOptimization.ImageOptimizerDirectoryData.FilePercent">
+      <summary>
+            Gets the percent completion for the image currently being optimized,
+            when the <see cref="P:Leadtools.ImageOptimization.ImageOptimizerDirectoryData.Status" /> property is <see cref="T:Leadtools.ImageOptimization.ImageOptimizerDirectoryStatus">ImageOptimizerDirectoryStatus.OptimizingImage</see>.
+            </summary>
+      <value>
+            The percent completion for the image currently being optimized.
+            </value>
+      <noremarks />
+      <example>
+        <para />
+        <code lang="VB">   Private _imageNo As Integer
+
+   Public Sub TestDirImageOptimizer()
+      _imageNo = 0
+
+      ' Initialize the RasterCodecs class
+      RasterCodecs.Startup()
+      Dim codecs As RasterCodecs = New RasterCodecs()
+
+      ' The input and output directories
+      Dim inputDirectory As String = LeadtoolsExamples.Common.ImagesPath.Path
+      Dim outputDirectory As String = LeadtoolsExamples.Common.ImagesPath.Path + "OptimizedImages"
+
+      ' Initialize a new Optimizer object
+      Dim optimizer As ImageOptimizer = New ImageOptimizer()
+
+      ' Optimization Options
+      Dim options As ImageOptimizerOptions = ImageOptimizerOptions.Default
+
+      optimizer.OptimizeDirectory(codecs, _
+         inputDirectory, _
+         outputDirectory, _
+         options, _
+         "*.jpg", _
+         False, _
+         AddressOf ImageOptimizerDirectory)
+
+      'shutdown the RasterCodecs class.
+      RasterCodecs.Shutdown()
+   End Sub
+
+   Public Function ImageOptimizerDirectory(ByVal data As ImageOptimizerDirectoryData) As Boolean
+      Console.WriteLine(String.Format("File Percent = {0}%,    Total Percent = {1}%", data.FilePercent, data.TotalPercent))
+
+      If (_imageNo = data.TotalFolderFilesCount) Then
+
+         ' Operation Done.
+         Console.WriteLine("Optimization Operation Completed Successfully")
+         Return True
+
+      ElseIf (data.Status = ImageOptimizerDirectoryStatus.PreOptimizingImage) Then
+         Dim text As String = String.Format("Optimizing Image {0} ?\n", data.InputFileName)
+         Dim result As DialogResult = MessageBox.Show(text, "", MessageBoxButtons.YesNoCancel)
+
+         If (result = DialogResult.Yes) Then
+            ' Optimize the image using the default options.
+            data.Options = ImageOptimizerOptions.Default
+            Return True
+         ElseIf (result = DialogResult.No) Then
+            ' Skip this image.
+            _imageNo += 1
+            data.SkipImage = True
+         Else
+            ' Stop the whole operation.
+            Return False
+         End If
+      ElseIf (data.FilePercent = 100) Then
+         _imageNo += 1
+
+         ' Displaying information about the optimized image.
+         Dim msg As String = String.Format("Optimizing File ( {0} of {1} ) \n" + _
+            "--------------------------------\n" + _
+            "Source File Name = {2}\n" + _
+            "Detination File Name = {3}\n" + _
+            "No of Pages = {4}\n", _
+            _imageNo, data.TotalFolderFilesCount, data.InputFileName, data.OutputFileName, data.ImageInfo.TotalPages)
+
+         Console.WriteLine(msg)
+      End If
+      Return True
+   End Function</code>
+        <code lang="CS">      int _imageNo;
+
+      public void TestDirImageOptimizer( )
+      {
+         _imageNo = 0;
+
+         // Initialize the RasterCodecs class
+         RasterCodecs.Startup();
+         RasterCodecs codecs = new RasterCodecs();
+
+         // The input and output directories
+         string inputDirectory = LeadtoolsExamples.Common.ImagesPath.Path;
+         string outputDirectory = LeadtoolsExamples.Common.ImagesPath.Path + "OptimizedImages";
+
+         // Initialize a new Optimizer object
+         ImageOptimizer optimizer = new ImageOptimizer();
+
+         // Optimization Options
+         ImageOptimizerOptions options = ImageOptimizerOptions.Default;
+
+         optimizer.OptimizeDirectory(codecs,
+            inputDirectory,
+            outputDirectory,
+            options,
+            "*.jpg",
+            false,
+            ImageOptimizerDirectory);
+
+         //shutdown the RasterCodecs class.
+         RasterCodecs.Shutdown();
+      }
+
+      bool ImageOptimizerDirectory(ImageOptimizerDirectoryData data)
+      {
+         Console.WriteLine(string.Format("File Percent = {0}%,    Total Percent = {1}%", data.FilePercent, data.TotalPercent));
+
+         if(_imageNo == data.TotalFolderFilesCount)
+         {
+            // Operation Done.
+            Console.WriteLine("Optimization Operation Completed Successfully");
+            return true;
+         }
+         else if(data.Status == ImageOptimizerDirectoryStatus.PreOptimizingImage)
+         {
+            string text = string.Format("Optimizing Image {0} ?\n", data.InputFileName);
+            DialogResult result = MessageBox.Show(text, "", MessageBoxButtons.YesNoCancel);
+
+            if(result == DialogResult.Yes)
+            {
+               // Optimize the image using the default options.
+               data.Options = ImageOptimizerOptions.Default;
+               return true;
+            }
+            else if(result == DialogResult.No)
+            {
+               // Skip this image.
+               _imageNo++;
+               data.SkipImage = true;
+            }
+            else
+               // Stop the whole operation.
+               return false;
+         }
+         else if(data.FilePercent == 100)
+         {
+            _imageNo++;
+
+            // Displaying information about the optimized image.
+            string msg = string.Format("Optimizing File ( {0} of {1} ) \n" +
+               "--------------------------------\n" +
+               "Source File Name = {2}\n" +
+               "Detination File Name = {3}\n" +
+               "No of Pages = {4}\n",
+               _imageNo, data.TotalFolderFilesCount, data.InputFileName, data.OutputFileName, data.ImageInfo.TotalPages);
+
+            Console.WriteLine(msg);
+         }
+         return true;
+      }</code>
+        <!--ImageOptimizer.OptimizeDirectory-->
+      </example>
+    </member>
+    <member name="P:Leadtools.ImageOptimization.ImageOptimizerDirectoryData.TotalPercent">
+      <summary>
+            Gets the percent completion for the entire optimization task, when the <see cref="P:Leadtools.ImageOptimization.ImageOptimizerDirectoryData.Status" /> property
+            is <see cref="T:Leadtools.ImageOptimization.ImageOptimizerDirectoryStatus">ImageOptimizerDirectoryStatus.OptimizingImage</see>.
+            </summary>
+      <value>
+            The percent completion for all of the files being optimized.
+            </value>
+      <noremarks />
+      <example>
+        <para />
+        <code lang="VB">   Private _imageNo As Integer
+
+   Public Sub TestDirImageOptimizer()
+      _imageNo = 0
+
+      ' Initialize the RasterCodecs class
+      RasterCodecs.Startup()
+      Dim codecs As RasterCodecs = New RasterCodecs()
+
+      ' The input and output directories
+      Dim inputDirectory As String = LeadtoolsExamples.Common.ImagesPath.Path
+      Dim outputDirectory As String = LeadtoolsExamples.Common.ImagesPath.Path + "OptimizedImages"
+
+      ' Initialize a new Optimizer object
+      Dim optimizer As ImageOptimizer = New ImageOptimizer()
+
+      ' Optimization Options
+      Dim options As ImageOptimizerOptions = ImageOptimizerOptions.Default
+
+      optimizer.OptimizeDirectory(codecs, _
+         inputDirectory, _
+         outputDirectory, _
+         options, _
+         "*.jpg", _
+         False, _
+         AddressOf ImageOptimizerDirectory)
+
+      'shutdown the RasterCodecs class.
+      RasterCodecs.Shutdown()
+   End Sub
+
+   Public Function ImageOptimizerDirectory(ByVal data As ImageOptimizerDirectoryData) As Boolean
+      Console.WriteLine(String.Format("File Percent = {0}%,    Total Percent = {1}%", data.FilePercent, data.TotalPercent))
+
+      If (_imageNo = data.TotalFolderFilesCount) Then
+
+         ' Operation Done.
+         Console.WriteLine("Optimization Operation Completed Successfully")
+         Return True
+
+      ElseIf (data.Status = ImageOptimizerDirectoryStatus.PreOptimizingImage) Then
+         Dim text As String = String.Format("Optimizing Image {0} ?\n", data.InputFileName)
+         Dim result As DialogResult = MessageBox.Show(text, "", MessageBoxButtons.YesNoCancel)
+
+         If (result = DialogResult.Yes) Then
+            ' Optimize the image using the default options.
+            data.Options = ImageOptimizerOptions.Default
+            Return True
+         ElseIf (result = DialogResult.No) Then
+            ' Skip this image.
+            _imageNo += 1
+            data.SkipImage = True
+         Else
+            ' Stop the whole operation.
+            Return False
+         End If
+      ElseIf (data.FilePercent = 100) Then
+         _imageNo += 1
+
+         ' Displaying information about the optimized image.
+         Dim msg As String = String.Format("Optimizing File ( {0} of {1} ) \n" + _
+            "--------------------------------\n" + _
+            "Source File Name = {2}\n" + _
+            "Detination File Name = {3}\n" + _
+            "No of Pages = {4}\n", _
+            _imageNo, data.TotalFolderFilesCount, data.InputFileName, data.OutputFileName, data.ImageInfo.TotalPages)
+
+         Console.WriteLine(msg)
+      End If
+      Return True
+   End Function</code>
+        <code lang="CS">      int _imageNo;
+
+      public void TestDirImageOptimizer( )
+      {
+         _imageNo = 0;
+
+         // Initialize the RasterCodecs class
+         RasterCodecs.Startup();
+         RasterCodecs codecs = new RasterCodecs();
+
+         // The input and output directories
+         string inputDirectory = LeadtoolsExamples.Common.ImagesPath.Path;
+         string outputDirectory = LeadtoolsExamples.Common.ImagesPath.Path + "OptimizedImages";
+
+         // Initialize a new Optimizer object
+         ImageOptimizer optimizer = new ImageOptimizer();
+
+         // Optimization Options
+         ImageOptimizerOptions options = ImageOptimizerOptions.Default;
+
+         optimizer.OptimizeDirectory(codecs,
+            inputDirectory,
+            outputDirectory,
+            options,
+            "*.jpg",
+            false,
+            ImageOptimizerDirectory);
+
+         //shutdown the RasterCodecs class.
+         RasterCodecs.Shutdown();
+      }
+
+      bool ImageOptimizerDirectory(ImageOptimizerDirectoryData data)
+      {
+         Console.WriteLine(string.Format("File Percent = {0}%,    Total Percent = {1}%", data.FilePercent, data.TotalPercent));
+
+         if(_imageNo == data.TotalFolderFilesCount)
+         {
+            // Operation Done.
+            Console.WriteLine("Optimization Operation Completed Successfully");
+            return true;
+         }
+         else if(data.Status == ImageOptimizerDirectoryStatus.PreOptimizingImage)
+         {
+            string text = string.Format("Optimizing Image {0} ?\n", data.InputFileName);
+            DialogResult result = MessageBox.Show(text, "", MessageBoxButtons.YesNoCancel);
+
+            if(result == DialogResult.Yes)
+            {
+               // Optimize the image using the default options.
+               data.Options = ImageOptimizerOptions.Default;
+               return true;
+            }
+            else if(result == DialogResult.No)
+            {
+               // Skip this image.
+               _imageNo++;
+               data.SkipImage = true;
+            }
+            else
+               // Stop the whole operation.
+               return false;
+         }
+         else if(data.FilePercent == 100)
+         {
+            _imageNo++;
+
+            // Displaying information about the optimized image.
+            string msg = string.Format("Optimizing File ( {0} of {1} ) \n" +
+               "--------------------------------\n" +
+               "Source File Name = {2}\n" +
+               "Detination File Name = {3}\n" +
+               "No of Pages = {4}\n",
+               _imageNo, data.TotalFolderFilesCount, data.InputFileName, data.OutputFileName, data.ImageInfo.TotalPages);
+
+            Console.WriteLine(msg);
+         }
+         return true;
+      }</code>
+        <!--ImageOptimizer.OptimizeDirectory-->
+      </example>
+    </member>
+    <member name="P:Leadtools.ImageOptimization.ImageOptimizerDirectoryData.TotalFolderFilesCount">
+      <summary>
+            Gets the total number of files in the directory to be optimized.
+            </summary>
+      <value>
+            The total number of files in the directory to be optimized.
+            </value>
+      <noremarks />
+      <example>
+        <para />
+        <code lang="VB">   Private _imageNo As Integer
+
+   Public Sub TestDirImageOptimizer()
+      _imageNo = 0
+
+      ' Initialize the RasterCodecs class
+      RasterCodecs.Startup()
+      Dim codecs As RasterCodecs = New RasterCodecs()
+
+      ' The input and output directories
+      Dim inputDirectory As String = LeadtoolsExamples.Common.ImagesPath.Path
+      Dim outputDirectory As String = LeadtoolsExamples.Common.ImagesPath.Path + "OptimizedImages"
+
+      ' Initialize a new Optimizer object
+      Dim optimizer As ImageOptimizer = New ImageOptimizer()
+
+      ' Optimization Options
+      Dim options As ImageOptimizerOptions = ImageOptimizerOptions.Default
+
+      optimizer.OptimizeDirectory(codecs, _
+         inputDirectory, _
+         outputDirectory, _
+         options, _
+         "*.jpg", _
+         False, _
+         AddressOf ImageOptimizerDirectory)
+
+      'shutdown the RasterCodecs class.
+      RasterCodecs.Shutdown()
+   End Sub
+
+   Public Function ImageOptimizerDirectory(ByVal data As ImageOptimizerDirectoryData) As Boolean
+      Console.WriteLine(String.Format("File Percent = {0}%,    Total Percent = {1}%", data.FilePercent, data.TotalPercent))
+
+      If (_imageNo = data.TotalFolderFilesCount) Then
+
+         ' Operation Done.
+         Console.WriteLine("Optimization Operation Completed Successfully")
+         Return True
+
+      ElseIf (data.Status = ImageOptimizerDirectoryStatus.PreOptimizingImage) Then
+         Dim text As String = String.Format("Optimizing Image {0} ?\n", data.InputFileName)
+         Dim result As DialogResult = MessageBox.Show(text, "", MessageBoxButtons.YesNoCancel)
+
+         If (result = DialogResult.Yes) Then
+            ' Optimize the image using the default options.
+            data.Options = ImageOptimizerOptions.Default
+            Return True
+         ElseIf (result = DialogResult.No) Then
+            ' Skip this image.
+            _imageNo += 1
+            data.SkipImage = True
+         Else
+            ' Stop the whole operation.
+            Return False
+         End If
+      ElseIf (data.FilePercent = 100) Then
+         _imageNo += 1
+
+         ' Displaying information about the optimized image.
+         Dim msg As String = String.Format("Optimizing File ( {0} of {1} ) \n" + _
+            "--------------------------------\n" + _
+            "Source File Name = {2}\n" + _
+            "Detination File Name = {3}\n" + _
+            "No of Pages = {4}\n", _
+            _imageNo, data.TotalFolderFilesCount, data.InputFileName, data.OutputFileName, data.ImageInfo.TotalPages)
+
+         Console.WriteLine(msg)
+      End If
+      Return True
+   End Function</code>
+        <code lang="CS">      int _imageNo;
+
+      public void TestDirImageOptimizer( )
+      {
+         _imageNo = 0;
+
+         // Initialize the RasterCodecs class
+         RasterCodecs.Startup();
+         RasterCodecs codecs = new RasterCodecs();
+
+         // The input and output directories
+         string inputDirectory = LeadtoolsExamples.Common.ImagesPath.Path;
+         string outputDirectory = LeadtoolsExamples.Common.ImagesPath.Path + "OptimizedImages";
+
+         // Initialize a new Optimizer object
+         ImageOptimizer optimizer = new ImageOptimizer();
+
+         // Optimization Options
+         ImageOptimizerOptions options = ImageOptimizerOptions.Default;
+
+         optimizer.OptimizeDirectory(codecs,
+            inputDirectory,
+            outputDirectory,
+            options,
+            "*.jpg",
+            false,
+            ImageOptimizerDirectory);
+
+         //shutdown the RasterCodecs class.
+         RasterCodecs.Shutdown();
+      }
+
+      bool ImageOptimizerDirectory(ImageOptimizerDirectoryData data)
+      {
+         Console.WriteLine(string.Format("File Percent = {0}%,    Total Percent = {1}%", data.FilePercent, data.TotalPercent));
+
+         if(_imageNo == data.TotalFolderFilesCount)
+         {
+            // Operation Done.
+            Console.WriteLine("Optimization Operation Completed Successfully");
+            return true;
+         }
+         else if(data.Status == ImageOptimizerDirectoryStatus.PreOptimizingImage)
+         {
+            string text = string.Format("Optimizing Image {0} ?\n", data.InputFileName);
+            DialogResult result = MessageBox.Show(text, "", MessageBoxButtons.YesNoCancel);
+
+            if(result == DialogResult.Yes)
+            {
+               // Optimize the image using the default options.
+               data.Options = ImageOptimizerOptions.Default;
+               return true;
+            }
+            else if(result == DialogResult.No)
+            {
+               // Skip this image.
+               _imageNo++;
+               data.SkipImage = true;
+            }
+            else
+               // Stop the whole operation.
+               return false;
+         }
+         else if(data.FilePercent == 100)
+         {
+            _imageNo++;
+
+            // Displaying information about the optimized image.
+            string msg = string.Format("Optimizing File ( {0} of {1} ) \n" +
+               "--------------------------------\n" +
+               "Source File Name = {2}\n" +
+               "Detination File Name = {3}\n" +
+               "No of Pages = {4}\n",
+               _imageNo, data.TotalFolderFilesCount, data.InputFileName, data.OutputFileName, data.ImageInfo.TotalPages);
+
+            Console.WriteLine(msg);
+         }
+         return true;
+      }</code>
+        <!--ImageOptimizer.OptimizeDirectory-->
+      </example>
+    </member>
+    <member name="P:Leadtools.ImageOptimization.ImageOptimizerDirectoryData.ImageInfo">
+      <summary>
+            Gets a <see cref="T:Leadtools.Codecs.CodecsImageInfo" /> class that contains information about the image file being optimized.
+            </summary>
+      <value>
+            A <see cref="T:Leadtools.Codecs.CodecsImageInfo" /> class that contains information about the image file being optimized.
+            </value>
+      <noremarks />
+      <example>
+        <para />
+        <code lang="VB">   Private _imageNo As Integer
+
+   Public Sub TestDirImageOptimizer()
+      _imageNo = 0
+
+      ' Initialize the RasterCodecs class
+      RasterCodecs.Startup()
+      Dim codecs As RasterCodecs = New RasterCodecs()
+
+      ' The input and output directories
+      Dim inputDirectory As String = LeadtoolsExamples.Common.ImagesPath.Path
+      Dim outputDirectory As String = LeadtoolsExamples.Common.ImagesPath.Path + "OptimizedImages"
+
+      ' Initialize a new Optimizer object
+      Dim optimizer As ImageOptimizer = New ImageOptimizer()
+
+      ' Optimization Options
+      Dim options As ImageOptimizerOptions = ImageOptimizerOptions.Default
+
+      optimizer.OptimizeDirectory(codecs, _
+         inputDirectory, _
+         outputDirectory, _
+         options, _
+         "*.jpg", _
+         False, _
+         AddressOf ImageOptimizerDirectory)
+
+      'shutdown the RasterCodecs class.
+      RasterCodecs.Shutdown()
+   End Sub
+
+   Public Function ImageOptimizerDirectory(ByVal data As ImageOptimizerDirectoryData) As Boolean
+      Console.WriteLine(String.Format("File Percent = {0}%,    Total Percent = {1}%", data.FilePercent, data.TotalPercent))
+
+      If (_imageNo = data.TotalFolderFilesCount) Then
+
+         ' Operation Done.
+         Console.WriteLine("Optimization Operation Completed Successfully")
+         Return True
+
+      ElseIf (data.Status = ImageOptimizerDirectoryStatus.PreOptimizingImage) Then
+         Dim text As String = String.Format("Optimizing Image {0} ?\n", data.InputFileName)
+         Dim result As DialogResult = MessageBox.Show(text, "", MessageBoxButtons.YesNoCancel)
+
+         If (result = DialogResult.Yes) Then
+            ' Optimize the image using the default options.
+            data.Options = ImageOptimizerOptions.Default
+            Return True
+         ElseIf (result = DialogResult.No) Then
+            ' Skip this image.
+            _imageNo += 1
+            data.SkipImage = True
+         Else
+            ' Stop the whole operation.
+            Return False
+         End If
+      ElseIf (data.FilePercent = 100) Then
+         _imageNo += 1
+
+         ' Displaying information about the optimized image.
+         Dim msg As String = String.Format("Optimizing File ( {0} of {1} ) \n" + _
+            "--------------------------------\n" + _
+            "Source File Name = {2}\n" + _
+            "Detination File Name = {3}\n" + _
+            "No of Pages = {4}\n", _
+            _imageNo, data.TotalFolderFilesCount, data.InputFileName, data.OutputFileName, data.ImageInfo.TotalPages)
+
+         Console.WriteLine(msg)
+      End If
+      Return True
+   End Function</code>
+        <code lang="CS">      int _imageNo;
+
+      public void TestDirImageOptimizer( )
+      {
+         _imageNo = 0;
+
+         // Initialize the RasterCodecs class
+         RasterCodecs.Startup();
+         RasterCodecs codecs = new RasterCodecs();
+
+         // The input and output directories
+         string inputDirectory = LeadtoolsExamples.Common.ImagesPath.Path;
+         string outputDirectory = LeadtoolsExamples.Common.ImagesPath.Path + "OptimizedImages";
+
+         // Initialize a new Optimizer object
+         ImageOptimizer optimizer = new ImageOptimizer();
+
+         // Optimization Options
+         ImageOptimizerOptions options = ImageOptimizerOptions.Default;
+
+         optimizer.OptimizeDirectory(codecs,
+            inputDirectory,
+            outputDirectory,
+            options,
+            "*.jpg",
+            false,
+            ImageOptimizerDirectory);
+
+         //shutdown the RasterCodecs class.
+         RasterCodecs.Shutdown();
+      }
+
+      bool ImageOptimizerDirectory(ImageOptimizerDirectoryData data)
+      {
+         Console.WriteLine(string.Format("File Percent = {0}%,    Total Percent = {1}%", data.FilePercent, data.TotalPercent));
+
+         if(_imageNo == data.TotalFolderFilesCount)
+         {
+            // Operation Done.
+            Console.WriteLine("Optimization Operation Completed Successfully");
+            return true;
+         }
+         else if(data.Status == ImageOptimizerDirectoryStatus.PreOptimizingImage)
+         {
+            string text = string.Format("Optimizing Image {0} ?\n", data.InputFileName);
+            DialogResult result = MessageBox.Show(text, "", MessageBoxButtons.YesNoCancel);
+
+            if(result == DialogResult.Yes)
+            {
+               // Optimize the image using the default options.
+               data.Options = ImageOptimizerOptions.Default;
+               return true;
+            }
+            else if(result == DialogResult.No)
+            {
+               // Skip this image.
+               _imageNo++;
+               data.SkipImage = true;
+            }
+            else
+               // Stop the whole operation.
+               return false;
+         }
+         else if(data.FilePercent == 100)
+         {
+            _imageNo++;
+
+            // Displaying information about the optimized image.
+            string msg = string.Format("Optimizing File ( {0} of {1} ) \n" +
+               "--------------------------------\n" +
+               "Source File Name = {2}\n" +
+               "Detination File Name = {3}\n" +
+               "No of Pages = {4}\n",
+               _imageNo, data.TotalFolderFilesCount, data.InputFileName, data.OutputFileName, data.ImageInfo.TotalPages);
+
+            Console.WriteLine(msg);
+         }
+         return true;
+      }</code>
+        <!--ImageOptimizer.OptimizeDirectory-->
+      </example>
+    </member>
+    <member name="P:Leadtools.ImageOptimization.ImageOptimizerDirectoryData.Options">
+      <summary>
+            Gets or sets the options used when optimizing the image specified in <paramref name="InputFileName" />.
+            </summary>
+      <value>
+            The options used when optimizing the image specified in <paramref name="InputFileName" />.
+            </value>
+      <remarks>
+            You can update the optimization options only if the <see cref="P:Leadtools.ImageOptimization.ImageOptimizerDirectoryData.Status" /> property is set to <see cref="T:Leadtools.ImageOptimization.ImageOptimizerDirectoryStatus">ImageOptimizerDirectoryStatus.PreOptimizingImage</see>.
+            </remarks>
+      <example>
+        <para />
+        <code lang="VB">   Private _imageNo As Integer
+
+   Public Sub TestDirImageOptimizer()
+      _imageNo = 0
+
+      ' Initialize the RasterCodecs class
+      RasterCodecs.Startup()
+      Dim codecs As RasterCodecs = New RasterCodecs()
+
+      ' The input and output directories
+      Dim inputDirectory As String = LeadtoolsExamples.Common.ImagesPath.Path
+      Dim outputDirectory As String = LeadtoolsExamples.Common.ImagesPath.Path + "OptimizedImages"
+
+      ' Initialize a new Optimizer object
+      Dim optimizer As ImageOptimizer = New ImageOptimizer()
+
+      ' Optimization Options
+      Dim options As ImageOptimizerOptions = ImageOptimizerOptions.Default
+
+      optimizer.OptimizeDirectory(codecs, _
+         inputDirectory, _
+         outputDirectory, _
+         options, _
+         "*.jpg", _
+         False, _
+         AddressOf ImageOptimizerDirectory)
+
+      'shutdown the RasterCodecs class.
+      RasterCodecs.Shutdown()
+   End Sub
+
+   Public Function ImageOptimizerDirectory(ByVal data As ImageOptimizerDirectoryData) As Boolean
+      Console.WriteLine(String.Format("File Percent = {0}%,    Total Percent = {1}%", data.FilePercent, data.TotalPercent))
+
+      If (_imageNo = data.TotalFolderFilesCount) Then
+
+         ' Operation Done.
+         Console.WriteLine("Optimization Operation Completed Successfully")
+         Return True
+
+      ElseIf (data.Status = ImageOptimizerDirectoryStatus.PreOptimizingImage) Then
+         Dim text As String = String.Format("Optimizing Image {0} ?\n", data.InputFileName)
+         Dim result As DialogResult = MessageBox.Show(text, "", MessageBoxButtons.YesNoCancel)
+
+         If (result = DialogResult.Yes) Then
+            ' Optimize the image using the default options.
+            data.Options = ImageOptimizerOptions.Default
+            Return True
+         ElseIf (result = DialogResult.No) Then
+            ' Skip this image.
+            _imageNo += 1
+            data.SkipImage = True
+         Else
+            ' Stop the whole operation.
+            Return False
+         End If
+      ElseIf (data.FilePercent = 100) Then
+         _imageNo += 1
+
+         ' Displaying information about the optimized image.
+         Dim msg As String = String.Format("Optimizing File ( {0} of {1} ) \n" + _
+            "--------------------------------\n" + _
+            "Source File Name = {2}\n" + _
+            "Detination File Name = {3}\n" + _
+            "No of Pages = {4}\n", _
+            _imageNo, data.TotalFolderFilesCount, data.InputFileName, data.OutputFileName, data.ImageInfo.TotalPages)
+
+         Console.WriteLine(msg)
+      End If
+      Return True
+   End Function</code>
+        <code lang="CS">      int _imageNo;
+
+      public void TestDirImageOptimizer( )
+      {
+         _imageNo = 0;
+
+         // Initialize the RasterCodecs class
+         RasterCodecs.Startup();
+         RasterCodecs codecs = new RasterCodecs();
+
+         // The input and output directories
+         string inputDirectory = LeadtoolsExamples.Common.ImagesPath.Path;
+         string outputDirectory = LeadtoolsExamples.Common.ImagesPath.Path + "OptimizedImages";
+
+         // Initialize a new Optimizer object
+         ImageOptimizer optimizer = new ImageOptimizer();
+
+         // Optimization Options
+         ImageOptimizerOptions options = ImageOptimizerOptions.Default;
+
+         optimizer.OptimizeDirectory(codecs,
+            inputDirectory,
+            outputDirectory,
+            options,
+            "*.jpg",
+            false,
+            ImageOptimizerDirectory);
+
+         //shutdown the RasterCodecs class.
+         RasterCodecs.Shutdown();
+      }
+
+      bool ImageOptimizerDirectory(ImageOptimizerDirectoryData data)
+      {
+         Console.WriteLine(string.Format("File Percent = {0}%,    Total Percent = {1}%", data.FilePercent, data.TotalPercent));
+
+         if(_imageNo == data.TotalFolderFilesCount)
+         {
+            // Operation Done.
+            Console.WriteLine("Optimization Operation Completed Successfully");
+            return true;
+         }
+         else if(data.Status == ImageOptimizerDirectoryStatus.PreOptimizingImage)
+         {
+            string text = string.Format("Optimizing Image {0} ?\n", data.InputFileName);
+            DialogResult result = MessageBox.Show(text, "", MessageBoxButtons.YesNoCancel);
+
+            if(result == DialogResult.Yes)
+            {
+               // Optimize the image using the default options.
+               data.Options = ImageOptimizerOptions.Default;
+               return true;
+            }
+            else if(result == DialogResult.No)
+            {
+               // Skip this image.
+               _imageNo++;
+               data.SkipImage = true;
+            }
+            else
+               // Stop the whole operation.
+               return false;
+         }
+         else if(data.FilePercent == 100)
+         {
+            _imageNo++;
+
+            // Displaying information about the optimized image.
+            string msg = string.Format("Optimizing File ( {0} of {1} ) \n" +
+               "--------------------------------\n" +
+               "Source File Name = {2}\n" +
+               "Detination File Name = {3}\n" +
+               "No of Pages = {4}\n",
+               _imageNo, data.TotalFolderFilesCount, data.InputFileName, data.OutputFileName, data.ImageInfo.TotalPages);
+
+            Console.WriteLine(msg);
+         }
+         return true;
+      }</code>
+        <!--ImageOptimizer.OptimizeDirectory-->
+      </example>
+    </member>
+    <member name="P:Leadtools.ImageOptimization.ImageOptimizerDirectoryData.SkipImage">
+      <summary>
+            Gets or sets a value that indicates whether to skip processing the current image being optimized.
+            </summary>
+      <value>
+            Value that indicates whether to skip processing the current image being optimized. Possible values are:
+            <list type="table"><listheader><term>
+                    Value
+                 </term><description>
+                    Description
+                 </description></listheader><item><term>true</term><description>Skip processing the current image.</description></item><item><term>false</term><description>Continue normally.</description></item></list></value>
+      <noremarks />
+      <example>
+        <para />
+        <code lang="VB">   Private _imageNo As Integer
+
+   Public Sub TestDirImageOptimizer()
+      _imageNo = 0
+
+      ' Initialize the RasterCodecs class
+      RasterCodecs.Startup()
+      Dim codecs As RasterCodecs = New RasterCodecs()
+
+      ' The input and output directories
+      Dim inputDirectory As String = LeadtoolsExamples.Common.ImagesPath.Path
+      Dim outputDirectory As String = LeadtoolsExamples.Common.ImagesPath.Path + "OptimizedImages"
+
+      ' Initialize a new Optimizer object
+      Dim optimizer As ImageOptimizer = New ImageOptimizer()
+
+      ' Optimization Options
+      Dim options As ImageOptimizerOptions = ImageOptimizerOptions.Default
+
+      optimizer.OptimizeDirectory(codecs, _
+         inputDirectory, _
+         outputDirectory, _
+         options, _
+         "*.jpg", _
+         False, _
+         AddressOf ImageOptimizerDirectory)
+
+      'shutdown the RasterCodecs class.
+      RasterCodecs.Shutdown()
+   End Sub
+
+   Public Function ImageOptimizerDirectory(ByVal data As ImageOptimizerDirectoryData) As Boolean
+      Console.WriteLine(String.Format("File Percent = {0}%,    Total Percent = {1}%", data.FilePercent, data.TotalPercent))
+
+      If (_imageNo = data.TotalFolderFilesCount) Then
+
+         ' Operation Done.
+         Console.WriteLine("Optimization Operation Completed Successfully")
+         Return True
+
+      ElseIf (data.Status = ImageOptimizerDirectoryStatus.PreOptimizingImage) Then
+         Dim text As String = String.Format("Optimizing Image {0} ?\n", data.InputFileName)
+         Dim result As DialogResult = MessageBox.Show(text, "", MessageBoxButtons.YesNoCancel)
+
+         If (result = DialogResult.Yes) Then
+            ' Optimize the image using the default options.
+            data.Options = ImageOptimizerOptions.Default
+            Return True
+         ElseIf (result = DialogResult.No) Then
+            ' Skip this image.
+            _imageNo += 1
+            data.SkipImage = True
+         Else
+            ' Stop the whole operation.
+            Return False
+         End If
+      ElseIf (data.FilePercent = 100) Then
+         _imageNo += 1
+
+         ' Displaying information about the optimized image.
+         Dim msg As String = String.Format("Optimizing File ( {0} of {1} ) \n" + _
+            "--------------------------------\n" + _
+            "Source File Name = {2}\n" + _
+            "Detination File Name = {3}\n" + _
+            "No of Pages = {4}\n", _
+            _imageNo, data.TotalFolderFilesCount, data.InputFileName, data.OutputFileName, data.ImageInfo.TotalPages)
+
+         Console.WriteLine(msg)
+      End If
+      Return True
+   End Function</code>
+        <code lang="CS">      int _imageNo;
+
+      public void TestDirImageOptimizer( )
+      {
+         _imageNo = 0;
+
+         // Initialize the RasterCodecs class
+         RasterCodecs.Startup();
+         RasterCodecs codecs = new RasterCodecs();
+
+         // The input and output directories
+         string inputDirectory = LeadtoolsExamples.Common.ImagesPath.Path;
+         string outputDirectory = LeadtoolsExamples.Common.ImagesPath.Path + "OptimizedImages";
+
+         // Initialize a new Optimizer object
+         ImageOptimizer optimizer = new ImageOptimizer();
+
+         // Optimization Options
+         ImageOptimizerOptions options = ImageOptimizerOptions.Default;
+
+         optimizer.OptimizeDirectory(codecs,
+            inputDirectory,
+            outputDirectory,
+            options,
+            "*.jpg",
+            false,
+            ImageOptimizerDirectory);
+
+         //shutdown the RasterCodecs class.
+         RasterCodecs.Shutdown();
+      }
+
+      bool ImageOptimizerDirectory(ImageOptimizerDirectoryData data)
+      {
+         Console.WriteLine(string.Format("File Percent = {0}%,    Total Percent = {1}%", data.FilePercent, data.TotalPercent));
+
+         if(_imageNo == data.TotalFolderFilesCount)
+         {
+            // Operation Done.
+            Console.WriteLine("Optimization Operation Completed Successfully");
+            return true;
+         }
+         else if(data.Status == ImageOptimizerDirectoryStatus.PreOptimizingImage)
+         {
+            string text = string.Format("Optimizing Image {0} ?\n", data.InputFileName);
+            DialogResult result = MessageBox.Show(text, "", MessageBoxButtons.YesNoCancel);
+
+            if(result == DialogResult.Yes)
+            {
+               // Optimize the image using the default options.
+               data.Options = ImageOptimizerOptions.Default;
+               return true;
+            }
+            else if(result == DialogResult.No)
+            {
+               // Skip this image.
+               _imageNo++;
+               data.SkipImage = true;
+            }
+            else
+               // Stop the whole operation.
+               return false;
+         }
+         else if(data.FilePercent == 100)
+         {
+            _imageNo++;
+
+            // Displaying information about the optimized image.
+            string msg = string.Format("Optimizing File ( {0} of {1} ) \n" +
+               "--------------------------------\n" +
+               "Source File Name = {2}\n" +
+               "Detination File Name = {3}\n" +
+               "No of Pages = {4}\n",
+               _imageNo, data.TotalFolderFilesCount, data.InputFileName, data.OutputFileName, data.ImageInfo.TotalPages);
+
+            Console.WriteLine(msg);
+         }
+         return true;
+      }</code>
+        <!--ImageOptimizer.OptimizeDirectory-->
+      </example>
+    </member>
+  </members>
+</doc>

@@ -1,0 +1,9 @@
+C:\Kmuh_Source\Mcku_His\SyscomCompile\Syscom\Server\Syscom.Server.SQL.dll
+C:\Kmuh_Source\Mcku_His\SyscomCompile\Syscom\Server\Syscom.Server.SQL.pdb
+C:\Kmuh_Source\Mcku_His\SyscomCompile\Syscom\Server\Syscom.Server.SQL.xml
+C:\Kmuh_Source\Mcku_His\Syscom_Developer\Syscom_SQL\Syscom.Server.SQL\obj\Release\Syscom.Server.SQL.vbprojResolveAssemblyReference.cache
+C:\Kmuh_Source\Mcku_His\Syscom_Developer\Syscom_SQL\Syscom.Server.SQL\obj\Release\Syscom.Server.SQL.Resources.resources
+C:\Kmuh_Source\Mcku_His\Syscom_Developer\Syscom_SQL\Syscom.Server.SQL\obj\Release\Syscom.Server.SQL.vbproj.GenerateResource.Cache
+C:\Kmuh_Source\Mcku_His\Syscom_Developer\Syscom_SQL\Syscom.Server.SQL\obj\Release\Syscom.Server.SQL.dll
+C:\Kmuh_Source\Mcku_His\Syscom_Developer\Syscom_SQL\Syscom.Server.SQL\obj\Release\Syscom.Server.SQL.xml
+C:\Kmuh_Source\Mcku_His\Syscom_Developer\Syscom_SQL\Syscom.Server.SQL\obj\Release\Syscom.Server.SQL.pdb

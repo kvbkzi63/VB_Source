@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<log4net>
+  <appender name="ConsoleAppender" type="log4net.Appender.ConsoleAppender">
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%date [%thread] %-5level %logger [%ndc] - %message%newline"/>
+    </layout>
+  </appender>
+
+  <appender name="SyscomClientLog" type="log4net.Appender.RollingFileAppender">
+    <file value="C:\\Log\\syscom-client.log" />
+    <appendToFile value="true" />
+    <rollingStyle value="Composite" />
+    <datePattern value="-yyyyMMdd'.txt'" />
+    <maxSizeRollBackups value="10" />
+    <maximumFileSize value="10MB" />
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%date [%thread] %-5level %logger [%property{NDC}] - %message%newline" />
+    </layout>
+  </appender>
+  <appender name="NisClientLog" type="log4net.Appender.RollingFileAppender">
+    <file value="C:\\Log\\nis-client.log" />
+    <appendToFile value="true" />
+    <rollingStyle value="Composite" />
+    <datePattern value="-yyyyMMdd'.txt'" />
+    <maxSizeRollBackups value="10" />
+    <maximumFileSize value="10MB" />
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%date [%thread] %-5level %logger [%property{NDC}] - %message%newline" />
+    </layout>
+  </appender>
+  <appender name="OpdClientLog" type="log4net.Appender.RollingFileAppender">
+    <file value="C:\\Log\\opd-client.log" />
+    <appendToFile value="true" />
+    <rollingStyle value="Composite" />
+    <datePattern value="-yyyyMMdd'.txt'" />
+    <maxSizeRollBackups value="10" />
+    <maximumFileSize value="10MB" />
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%date [%thread] %-5level %logger [%property{NDC}] - %message%newline" />
+    </layout>
+  </appender>
+  <appender name="EisClientLog" type="log4net.Appender.RollingFileAppender">
+    <file value="C:\\Log\\eis-client.log" />
+    <appendToFile value="true" />
+    <rollingStyle value="Composite" />
+    <datePattern value="-yyyyMMdd'.txt'" />
+    <maxSizeRollBackups value="10" />
+    <maximumFileSize value="10MB" />
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%date [%thread] %-5level %logger [%property{NDC}] - %message%newline" />
+    </layout>
+  </appender>
+  <appender name="PcsClientLog" type="log4net.Appender.RollingFileAppender">
+    <file value="C:\\Log\\pcs-client.log" />
+    <appendToFile value="true" />
+    <rollingStyle value="Composite" />
+    <datePattern value="-yyyyMMdd'.txt'" />
+    <maxSizeRollBackups value="10" />
+    <maximumFileSize value="10MB" />
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%date [%thread] %-5level %logger [%property{NDC}] - %message%newline" />
+    </layout>
+  </appender>
+  <root>
+    <level value="DEBUG" />
+    <!--<appender-ref ref="SyscomCommonLog" />-->
+    <!--<appender-ref ref="ConsoleAppender" />-->
+  </root>
+  <logger name="File.Syscom.Client">
+    <level value="DEBUG" />
+    <appender-ref ref="SyscomClientLog" />
+    <!--<appender-ref ref="ConsoleAppender" />-->
+  </logger>
+  <logger name="File.NIS.Client">
+    <level value="DEBUG" />
+    <appender-ref ref="NisClientLog" />
+    <!--<appender-ref ref="ConsoleAppender" />-->
+  </logger>
+  <logger name="File.OPD.Client">
+    <level value="DEBUG" />
+    <appender-ref ref="OpdClientLog" />
+    <!--<appender-ref ref="ConsoleAppender" />-->
+  </logger>
+  <logger name="File.EIS.Client">
+    <level value="DEBUG" />
+    <appender-ref ref="EisClientLog" />
+    <!--<appender-ref ref="ConsoleAppender" />-->
+  </logger>
+  <logger name="File.PCS.Client">
+    <level value="DEBUG" />
+    <appender-ref ref="PcsClientLog" />
+    <!--<appender-ref ref="ConsoleAppender" />-->
+  </logger>
+</log4net>

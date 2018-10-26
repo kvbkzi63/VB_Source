@@ -1,0 +1,1272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E13BD42E-C7FC-47C9-876A-597226FA5133}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <StartupObject>
+    </StartupObject>
+    <RootNamespace>Syscom.Client.PUB</RootNamespace>
+    <AssemblyName>Syscom.Client.PUB</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>發行\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\..\SyscomCompile\Syscom\Client\</OutputPath>
+    <DocumentationFile>Syscom.Client.PUB.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <BaseIntermediateOutputPath>..\..\..\SyscomCompile\Syscom\Client\obj</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>..\..\..\SyscomCompile\Syscom\Client\obj\$(MSBuildProjectName)\Debug</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\SyscomCompile\Syscom\Client\</OutputPath>
+    <DocumentationFile>Syscom.Client.PUB.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <BaseIntermediateOutputPath>..\..\..\SyscomCompile\Syscom\Client\obj</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>..\..\..\SyscomCompile\Syscom\Client\obj\$(MSBuildProjectName)\Debug</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Com.Syscom.WinFormsUI.Docking">
+      <HintPath>..\..\..\ExtLIBs\Com.Syscom.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SyscomCompile\Syscom\Common\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\ExtLIBs\Word\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Client.CMM, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SyscomCompile\Syscom\Client\Syscom.Client.CMM.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Client.ICC, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SyscomCompile\Syscom\Client\Syscom.Client.ICC.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Client.RPT, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SyscomCompile\Syscom\Client\Syscom.Client.RPT.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Client.ServiceFactory, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SyscomCompile\Syscom\Client\Syscom.Client.ServiceFactory.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Client.UCL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SyscomCompile\Syscom\Client\Syscom.Client.UCL.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Comm.BASE, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SyscomCompile\Syscom\Common\Syscom.Comm.BASE.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Comm.EXP, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SyscomCompile\Syscom\Common\Syscom.Comm.EXP.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Comm.LOG, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SyscomCompile\Syscom\Common\Syscom.Comm.LOG.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Comm.RPT, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SyscomCompile\Syscom\Common\Syscom.Comm.RPT.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Comm.TableFactory, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SyscomCompile\Syscom\Common\Syscom.Comm.TableFactory.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Comm.Utility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SyscomCompile\Syscom\Common\Syscom.Comm.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LA\UI\PUBAccountUI.Designer.vb">
+      <DependentUpon>PUBAccountUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LA\UI\PUBAccountUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LA\UI\PUBAddPartUI.Designer.vb">
+      <DependentUpon>PUBAddPartUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LA\UI\PUBAddPartUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LA\UI\PUBAreaCodeGovSetupUI.Designer.vb">
+      <DependentUpon>PUBAreaCodeGovSetupUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LA\UI\PUBAreaCodeGovSetupUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LA\UI\PUBAreaCodeNSetupUI.Designer.vb">
+      <DependentUpon>PUBAreaCodeNSetupUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LA\UI\PUBAreaCodeNSetupUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LA\UI\PUBBodySiteUI.Designer.vb">
+      <DependentUpon>PUBBodySiteUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LA\UI\PUBBodySiteUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LA\UI\PUBContractPartSetUI.Designer.vb">
+      <DependentUpon>PUBContractPartSetUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LA\UI\PUBContractPartSetUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LA\UI\PUBContractQuotaUI.Designer.vb">
+      <DependentUpon>PUBContractQuotaUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LA\UI\PUBContractQuotaUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LA\UI\PUBContractSetUI.Designer.vb">
+      <DependentUpon>PUBContractSetUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LA\UI\PUBContractSetUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LA\UI\PUBContractUI.designer.vb">
+      <DependentUpon>PUBContractUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LA\UI\PUBContractUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LA\UI\PUBDentalAddControlUI.Designer.vb">
+      <DependentUpon>PUBDentalAddControlUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LA\UI\PUBDentalAddControlUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LA\UI\PUBDepartmentUI.designer.vb">
+      <DependentUpon>PUBDepartmentUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LA\UI\PUBDepartmentUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LA\UI\PUBDeptSectUI.Designer.vb">
+      <DependentUpon>PUBDeptSectUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LA\UI\PUBDeptSectUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LA\UI\PUBDisIdentitySetUI.Designer.vb">
+      <DependentUpon>PUBDisIdentitySetUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LA\UI\PUBDisIdentitySetUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LA\UI\PUBDisIdentityUI.Designer.vb">
+      <DependentUpon>PUBDisIdentityUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LA\UI\PUBDisIdentityUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LA\UI\PUBExamineUI.Designer.vb">
+      <DependentUpon>PUBExamineUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LA\UI\PUBExamineUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LA\UI\PUBInsuCodeUI.Designer.vb">
+      <DependentUpon>PUBInsuCodeUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LA\UI\PUBInsuCodeUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LA\UI\PUBInsuDeptSetupUI.Designer.vb">
+      <DependentUpon>PUBInsuDeptSetupUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LA\UI\PUBInsuDeptSetupUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LA\UI\PUBMajorcareUI.Designer.vb">
+      <DependentUpon>PUBMajorcareUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LA\UI\PUBMajorcareUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LA\UI\PUBNhiCodeUI.Designer.vb">
+      <DependentUpon>PUBNhiCodeUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LA\UI\PUBNhiCodeUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LA\UI\PUBOrderAlternativeUI.Designer.vb">
+      <DependentUpon>PUBOrderAlternativeUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LA\UI\PUBOrderAlternativeUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LA\UI\PUBOrderStandingUI.Designer.vb">
+      <DependentUpon>PUBOrderStandingUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LA\UI\PUBOrderStandingUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LA\UI\PUBPartDiscountUI.Designer.vb">
+      <DependentUpon>PUBPartDiscountUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LA\UI\PUBPartDiscountUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LA\UI\PUBPartUI.Designer.vb">
+      <DependentUpon>PUBPartUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LA\UI\PUBPartUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LA\UI\PUBPatientDisabilityUI.Designer.vb">
+      <DependentUpon>PUBPatientDisabilityUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LA\UI\PUBPatientDisabilityUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LA\UI\PUBPatientHealthCardUI.Designer.vb">
+      <DependentUpon>PUBPatientHealthCardUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LA\UI\PUBPatientHealthCardUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LA\UI\PUBPatientQuotaUI.Designer.vb">
+      <DependentUpon>PUBPatientQuotaUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LA\UI\PUBPatientQuotaUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LA\UI\PUBPatientSevereDiseaseUI.Designer.vb">
+      <DependentUpon>PUBPatientSevereDiseaseUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LA\UI\PUBPatientSevereDiseaseUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LA\UI\PUBPhaServicesUI.Designer.vb">
+      <DependentUpon>PUBPhaServicesUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LA\UI\PUBPhaServicesUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LA\UI\PUBPostalAreaSetupUI.Designer.vb">
+      <DependentUpon>PUBPostalAreaSetupUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LA\UI\PUBPostalAreaSetupUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LA\UI\PUBPostalGovAreaSetupUI.Designer.vb">
+      <DependentUpon>PUBPostalGovAreaSetupUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LA\UI\PUBPostalGovAreaSetupUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LA\UI\PUBPreventiveCareSetupUI.Designer.vb">
+      <DependentUpon>PUBPreventiveCareSetupUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LA\UI\PUBPreventiveCareSetupUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LA\UI\PUBPtDisabilityUI.Designer.vb">
+      <DependentUpon>PUBPtDisabilityUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LA\UI\PUBPtDisabilityUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LA\UI\PUBRegisterFeeUI.Designer.vb">
+      <DependentUpon>PUBRegisterFeeUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LA\UI\PUBRegisterFeeUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LA\UI\PUBSheetLocationUI.Designer.vb">
+      <DependentUpon>PUBSheetLocationUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LA\UI\PUBSheetLocationUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LA\UI\PUBSubIdentitySetUI.Designer.vb">
+      <DependentUpon>PUBSubIdentitySetUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LA\UI\PUBSubIdentitySetUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LA\UI\PUBSubIdentityUI.designer.vb">
+      <DependentUpon>PUBSubIdentityUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LA\UI\PUBSubIdentityUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LA\UI\PUBZoneRoomUI.Designer.vb">
+      <DependentUpon>PUBZoneRoomUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LA\UI\PUBZoneRoomUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\Application1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="TN\BP\PUBChargeFlagBP.vb" />
+    <Compile Include="TN\BP\PUBCheckIdNoBP.vb" />
+    <Compile Include="TN\BP\PUBCheckRuleObj.vb" />
+    <Compile Include="TN\BP\PUBOpRuleBP.vb" />
+    <Compile Include="TN\BP\PUBRuleBP.vb" />
+    <Compile Include="TN\BP\PUBRuleDataClass.vb" />
+    <Compile Include="TN\BP\PUBRuleParserBP.vb" />
+    <Compile Include="TN\BP\RuleEngine\PUBRuleEngineAPI.vb" />
+    <Compile Include="TN\UI\Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PubAccDeptUI.Designer.vb">
+      <DependentUpon>PubAccDeptUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PubAccDeptUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBAddOptionOrderUI.designer.vb">
+      <DependentUpon>PUBAddOptionOrderUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBAddOptionOrderUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBAddOrderDetailUI.designer.vb">
+      <DependentUpon>PUBAddOrderDetailUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBAddOrderDetailUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBAddOrderListUI.designer.vb">
+      <DependentUpon>PUBAddOrderListUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBAddOrderListUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBAddQueryUI.designer.vb">
+      <DependentUpon>PUBAddQueryUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBAddQueryUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBBatchUI.Designer.vb">
+      <DependentUpon>PUBBatchUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBBatchUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PubConfigMaintainMultichoiceUI.Designer.vb">
+      <DependentUpon>PubConfigMaintainMultichoiceUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PubConfigMaintainMultichoiceUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PubConfigUI.Designer.vb">
+      <DependentUpon>PubConfigUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PubConfigUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBConsultDoctorUI.Designer.vb">
+      <DependentUpon>PUBConsultDoctorUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBConsultDoctorUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBContinueConditionUI.Designer.vb">
+      <DependentUpon>PUBContinueConditionUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBContinueConditionUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBCureControlUI.designer.vb">
+      <DependentUpon>PUBCureControlUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBCureControlUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PubDeptLeaderUI.Designer.vb">
+      <DependentUpon>PubDeptLeaderUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PubDeptLeaderUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PubDrAddControlUI.Designer.vb">
+      <DependentUpon>PubDrAddControlUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PubDrAddControlUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBEmgAddOptionUI.designer.vb">
+      <DependentUpon>PUBEmgAddOptionUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBEmgAddOptionUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBExaminationSheetDetailMaintainUI.Designer.vb">
+      <DependentUpon>PUBExaminationSheetDetailMaintainUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBExaminationSheetDetailMaintainUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBExcludeDrugSetUI.designer.vb">
+      <DependentUpon>PUBExcludeDrugSetUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBExcludeDrugSetUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PubExportList.Designer.vb">
+      <DependentUpon>PubExportList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PubExportList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBExportOrderDataUI.Designer.vb">
+      <DependentUpon>PUBExportOrderDataUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBExportOrderDataUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PubExportSetupUI.Designer.vb">
+      <DependentUpon>PubExportSetupUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PubExportSetupUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBHolidayUI.designer.vb">
+      <DependentUpon>PUBHolidayUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBHolidayUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PubHospitalUI.Designer.vb">
+      <DependentUpon>PubHospitalUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PubHospitalUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBIcdRuleCheckUI.Designer.vb">
+      <DependentUpon>PUBIcdRuleCheckUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBIcdRuleCheckUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBinput.Designer.vb">
+      <DependentUpon>PUBinput.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBinput.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBLabIndication.Designer.vb">
+      <DependentUpon>PUBLabIndication.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBLabIndication.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBLabIndication01.Designer.vb">
+      <DependentUpon>PUBLabIndication01.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBLabIndication01.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBLabIndication02.Designer.vb">
+      <DependentUpon>PUBLabIndication02.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBLabIndication02.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBLabIndication03.Designer.vb">
+      <DependentUpon>PUBLabIndication03.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBLabIndication03.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBLabIndication04.Designer.vb">
+      <DependentUpon>PUBLabIndication04.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBLabIndication04.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBLabIndication05.Designer.vb">
+      <DependentUpon>PUBLabIndication05.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBLabIndication05.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBLabIndication06.Designer.vb">
+      <DependentUpon>PUBLabIndication06.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBLabIndication06.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBLabIndication07.Designer.vb">
+      <DependentUpon>PUBLabIndication07.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBLabIndication07.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBLabIndication08.Designer.vb">
+      <DependentUpon>PUBLabIndication08.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBLabIndication08.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBLabIndication09.Designer.vb">
+      <DependentUpon>PUBLabIndication09.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBLabIndication09.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBLabIndication10.Designer.vb">
+      <DependentUpon>PUBLabIndication10.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBLabIndication10.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBLisSheetUI.Designer.vb">
+      <DependentUpon>PUBLisSheetUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBLisSheetUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBMaterialSelfpayApplyUI.designer.vb">
+      <DependentUpon>PUBMaterialSelfpayApplyUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBMaterialSelfpayApplyUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBMedicalTypeSortSetupUI.Designer.vb">
+      <DependentUpon>PUBMedicalTypeSortSetupUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBMedicalTypeSortSetupUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PubMedicalTypeUI.Designer.vb">
+      <DependentUpon>PubMedicalTypeUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PubMedicalTypeUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBMedicineUI.Designer.vb">
+      <DependentUpon>PUBMedicineUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBMedicineUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBNhiCodeImportMUI.designer.vb">
+      <DependentUpon>PUBNhiCodeImportMUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBNhiCodeImportMUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBNhiCodeImportUI.Designer.vb">
+      <DependentUpon>PUBNhiCodeImportUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBNhiCodeImportUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBNhiIndexSetUI.designer.vb">
+      <DependentUpon>PUBNhiIndexSetUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBNhiIndexSetUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBOperationAndAnesthesiaUI.Designer.vb">
+      <DependentUpon>PUBOperationAndAnesthesiaUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBOperationAndAnesthesiaUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBOrderExamineUI.Designer.vb">
+      <DependentUpon>PUBOrderExamineUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBOrderExamineUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PubOrderExamNocheckinDeptUI.Designer.vb">
+      <DependentUpon>PubOrderExamNocheckinDeptUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PubOrderExamNocheckinDeptUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PubOrderExamNoPrintDeptUI.Designer.vb">
+      <DependentUpon>PubOrderExamNoPrintDeptUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PubOrderExamNoPrintDeptUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBOrderMaterialUI.Designer.vb">
+      <DependentUpon>PUBOrderMaterialUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBOrderMaterialUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBOrderUI.Designer.vb">
+      <DependentUpon>PUBOrderUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBOrderUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PubPasswodEncryptUI.Designer.vb">
+      <DependentUpon>PubPasswodEncryptUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PubPasswodEncryptUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PubPatFlagSortUI.Designer.vb">
+      <DependentUpon>PubPatFlagSortUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PubPatFlagSortUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBPatientAllergyNewUI.Designer.vb">
+      <DependentUpon>PUBPatientAllergyNewUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBPatientAllergyNewUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PubPatientBodyRecordUI.Designer.vb">
+      <DependentUpon>PubPatientBodyRecordUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PubPatientBodyRecordUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PubPatientDNRUI.Designer.vb">
+      <DependentUpon>PubPatientDNRUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PubPatientDNRUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBPatientTransferRiskUI.Designer.vb">
+      <DependentUpon>PUBPatientTransferRiskUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBPatientTransferRiskUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBPostalCodeSetupUI.Designer.vb">
+      <DependentUpon>PUBPostalCodeSetupUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBPostalCodeSetupUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBPreventiveCareExeSetupUI.Designer.vb">
+      <DependentUpon>PUBPreventiveCareExeSetupUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBPreventiveCareExeSetupUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PubPrintConfigUI.Designer.vb">
+      <DependentUpon>PubPrintConfigUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PubPrintConfigUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBPrintJobQueryUI.Designer.vb">
+      <DependentUpon>PUBPrintJobQueryUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBPrintJobQueryUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PubPrintRecordUI.Designer.vb">
+      <DependentUpon>PubPrintRecordUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PubPrintRecordUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBReportAlarmUI.Designer.vb">
+      <DependentUpon>PUBReportAlarmUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBReportAlarmUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PubReportDescUI.Designer.vb">
+      <DependentUpon>PubReportDescUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PubReportDescUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBRichTextContentUI.designer.vb">
+      <DependentUpon>PUBRichTextContentUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBRichTextContentUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBRisDetailMaintainUI.designer.vb">
+      <DependentUpon>PUBRisDetailMaintainUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBRisDetailMaintainUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBRisFormMaintainSheetDetailUI.Designer.vb">
+      <DependentUpon>PUBRisFormMaintainSheetDetailUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBRisFormMaintainSheetDetailUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBRisFormMaintainUI.Designer.vb">
+      <DependentUpon>PUBRisFormMaintainUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBRisFormMaintainUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBRuleCheckTreeDetailUI.Designer.vb">
+      <DependentUpon>PUBRuleCheckTreeDetailUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBRuleCheckTreeDetailUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBRuleCheckTreeUI.Designer.vb">
+      <DependentUpon>PUBRuleCheckTreeUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBRuleCheckTreeUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBRuleCheckUI.Designer.vb">
+      <DependentUpon>PUBRuleCheckUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBRuleCheckUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBRuleCloneUI.Designer.vb">
+      <DependentUpon>PUBRuleCloneUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBRuleCloneUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBRuleConfirmQuestionUI.Designer.vb">
+      <DependentUpon>PUBRuleConfirmQuestionUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBRuleConfirmQuestionUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBRuleQueryUI.Designer.vb">
+      <DependentUpon>PUBRuleQueryUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBRuleQueryUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBRuleRangeInputUI.Designer.vb">
+      <DependentUpon>PUBRuleRangeInputUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBRuleRangeInputUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBStationUI.Designer.vb">
+      <DependentUpon>PUBStationUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBStationUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBSheetDisplayOrderUI.Designer.vb">
+      <DependentUpon>PUBSheetDisplayOrderUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBSheetDisplayOrderUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBSheetDisplayUI.Designer.vb">
+      <DependentUpon>PUBSheetDisplayUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBSheetDisplayUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBSyscodeTypeUI.Designer.vb">
+      <DependentUpon>PubSyscodeTypeUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PubSyscodeTypeUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PubSyscodeUI.Designer.vb">
+      <DependentUpon>PubSyscodeUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PubSyscodeUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBSystemVersionUI.designer.vb">
+      <DependentUpon>PUBSystemVersionUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBSystemVersionUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TN\UI\PUBTreeRuleQueryUI.Designer.vb">
+      <DependentUpon>PUBTreeRuleQueryUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TN\UI\PUBTreeRuleQueryUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="LA\UI\PUBAccountUI.resx">
+      <DependentUpon>PUBAccountUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LA\UI\PUBAddPartUI.resx">
+      <DependentUpon>PUBAddPartUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LA\UI\PUBAreaCodeGovSetupUI.resx">
+      <DependentUpon>PUBAreaCodeGovSetupUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LA\UI\PUBAreaCodeNSetupUI.resx">
+      <DependentUpon>PUBAreaCodeNSetupUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LA\UI\PUBBodySiteUI.resx">
+      <DependentUpon>PUBBodySiteUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LA\UI\PUBContractPartSetUI.resx">
+      <DependentUpon>PUBContractPartSetUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LA\UI\PUBContractQuotaUI.resx">
+      <DependentUpon>PUBContractQuotaUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LA\UI\PUBContractSetUI.resx">
+      <DependentUpon>PUBContractSetUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LA\UI\PUBContractUI.resx">
+      <DependentUpon>PUBContractUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LA\UI\PUBDentalAddControlUI.resx">
+      <DependentUpon>PUBDentalAddControlUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LA\UI\PUBDepartmentUI.resx">
+      <DependentUpon>PUBDepartmentUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LA\UI\PUBDeptSectUI.resx">
+      <DependentUpon>PUBDeptSectUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LA\UI\PUBDisIdentitySetUI.resx">
+      <DependentUpon>PUBDisIdentitySetUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LA\UI\PUBDisIdentityUI.resx">
+      <DependentUpon>PUBDisIdentityUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LA\UI\PUBExamineUI.resx">
+      <DependentUpon>PUBExamineUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LA\UI\PUBInsuCodeUI.resx">
+      <DependentUpon>PUBInsuCodeUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LA\UI\PUBInsuDeptSetupUI.resx">
+      <DependentUpon>PUBInsuDeptSetupUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LA\UI\PUBMajorcareUI.resx">
+      <DependentUpon>PUBMajorcareUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LA\UI\PUBNhiCodeUI.resx">
+      <DependentUpon>PUBNhiCodeUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LA\UI\PUBOrderAlternativeUI.resx">
+      <DependentUpon>PUBOrderAlternativeUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LA\UI\PUBOrderStandingUI.resx">
+      <DependentUpon>PUBOrderStandingUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LA\UI\PUBPartDiscountUI.resx">
+      <DependentUpon>PUBPartDiscountUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LA\UI\PUBPartUI.resx">
+      <DependentUpon>PUBPartUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LA\UI\PUBPatientDisabilityUI.resx">
+      <DependentUpon>PUBPatientDisabilityUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LA\UI\PUBPatientHealthCardUI.resx">
+      <DependentUpon>PUBPatientHealthCardUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LA\UI\PUBPatientQuotaUI.resx">
+      <DependentUpon>PUBPatientQuotaUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LA\UI\PUBPatientSevereDiseaseUI.resx">
+      <DependentUpon>PUBPatientSevereDiseaseUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LA\UI\PUBPhaServicesUI.resx">
+      <DependentUpon>PUBPhaServicesUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LA\UI\PUBPostalAreaSetupUI.resx">
+      <DependentUpon>PUBPostalAreaSetupUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LA\UI\PUBPostalGovAreaSetupUI.resx">
+      <DependentUpon>PUBPostalGovAreaSetupUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LA\UI\PUBPreventiveCareSetupUI.resx">
+      <DependentUpon>PUBPreventiveCareSetupUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LA\UI\PUBPtDisabilityUI.resx">
+      <DependentUpon>PUBPtDisabilityUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LA\UI\PUBRegisterFeeUI.resx">
+      <DependentUpon>PUBRegisterFeeUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LA\UI\PUBSheetLocationUI.resx">
+      <DependentUpon>PUBSheetLocationUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LA\UI\PUBSubIdentitySetUI.resx">
+      <DependentUpon>PUBSubIdentitySetUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LA\UI\PUBSubIdentityUI.resx">
+      <DependentUpon>PUBSubIdentityUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LA\UI\PUBZoneRoomUI.resx">
+      <DependentUpon>PUBZoneRoomUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PubAccDeptUI.resx">
+      <DependentUpon>PubAccDeptUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBAddOptionOrderUI.resx">
+      <DependentUpon>PUBAddOptionOrderUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBAddOrderDetailUI.resx">
+      <DependentUpon>PUBAddOrderDetailUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBAddOrderListUI.resx">
+      <DependentUpon>PUBAddOrderListUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBAddQueryUI.resx">
+      <DependentUpon>PUBAddQueryUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBBatchUI.resx">
+      <DependentUpon>PUBBatchUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PubConfigMaintainMultichoiceUI.resx">
+      <DependentUpon>PubConfigMaintainMultichoiceUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PubConfigUI.resx">
+      <DependentUpon>PubConfigUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBConsultDoctorUI.resx">
+      <DependentUpon>PUBConsultDoctorUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBContinueConditionUI.resx">
+      <DependentUpon>PUBContinueConditionUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBCureControlUI.resx">
+      <DependentUpon>PUBCureControlUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PubDeptLeaderUI.resx">
+      <DependentUpon>PubDeptLeaderUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PubDrAddControlUI.resx">
+      <DependentUpon>PubDrAddControlUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBEmgAddOptionUI.resx">
+      <DependentUpon>PUBEmgAddOptionUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBExaminationSheetDetailMaintainUI.resx">
+      <DependentUpon>PUBExaminationSheetDetailMaintainUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBExcludeDrugSetUI.resx">
+      <DependentUpon>PUBExcludeDrugSetUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PubExportList.resx">
+      <DependentUpon>PubExportList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBExportOrderDataUI.resx">
+      <DependentUpon>PUBExportOrderDataUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PubExportSetupUI.resx">
+      <DependentUpon>PubExportSetupUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBHolidayUI.resx">
+      <DependentUpon>PUBHolidayUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PubHospitalUI.resx">
+      <DependentUpon>PubHospitalUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBIcdRuleCheckUI.resx">
+      <DependentUpon>PUBIcdRuleCheckUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBinput.resx">
+      <DependentUpon>PUBinput.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBLabIndication01.resx">
+      <DependentUpon>PUBLabIndication01.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBLabIndication02.resx">
+      <DependentUpon>PUBLabIndication02.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBLabIndication03.resx">
+      <DependentUpon>PUBLabIndication03.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBLabIndication04.resx">
+      <DependentUpon>PUBLabIndication04.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBLabIndication05.resx">
+      <DependentUpon>PUBLabIndication05.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBLabIndication06.resx">
+      <DependentUpon>PUBLabIndication06.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBLabIndication07.resx">
+      <DependentUpon>PUBLabIndication07.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBLabIndication09.resx">
+      <DependentUpon>PUBLabIndication09.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBLabIndication10.resx">
+      <DependentUpon>PUBLabIndication10.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBLisSheetUI.resx">
+      <DependentUpon>PUBLisSheetUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBMaterialSelfpayApplyUI.resx">
+      <DependentUpon>PUBMaterialSelfpayApplyUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBMedicalTypeSortSetupUI.resx">
+      <DependentUpon>PUBMedicalTypeSortSetupUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PubMedicalTypeUI.resx">
+      <DependentUpon>PubMedicalTypeUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBMedicineUI.resx">
+      <DependentUpon>PUBMedicineUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBNhiCodeImportMUI.resx">
+      <DependentUpon>PUBNhiCodeImportMUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBNhiCodeImportUI.resx">
+      <DependentUpon>PUBNhiCodeImportUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBNhiIndexSetUI.resx">
+      <DependentUpon>PUBNhiIndexSetUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBOperationAndAnesthesiaUI.resx">
+      <DependentUpon>PUBOperationAndAnesthesiaUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBOrderExamineUI.resx">
+      <DependentUpon>PUBOrderExamineUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PubOrderExamNocheckinDeptUI.resx">
+      <DependentUpon>PubOrderExamNocheckinDeptUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PubOrderExamNoPrintDeptUI.resx">
+      <DependentUpon>PubOrderExamNoPrintDeptUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBOrderMaterialUI.resx">
+      <DependentUpon>PUBOrderMaterialUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBOrderUI.resx">
+      <DependentUpon>PUBOrderUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PubPasswodEncryptUI.resx">
+      <DependentUpon>PubPasswodEncryptUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PubPatFlagSortUI.resx">
+      <DependentUpon>PubPatFlagSortUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBPatientAllergyNewUI.resx">
+      <DependentUpon>PUBPatientAllergyNewUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PubPatientBodyRecordUI.resx">
+      <DependentUpon>PubPatientBodyRecordUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PubPatientDNRUI.resx">
+      <DependentUpon>PubPatientDNRUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBPatientTransferRiskUI.resx">
+      <DependentUpon>PUBPatientTransferRiskUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBPostalCodeSetupUI.resx">
+      <DependentUpon>PUBPostalCodeSetupUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBPreventiveCareExeSetupUI.resx">
+      <DependentUpon>PUBPreventiveCareExeSetupUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PubPrintConfigUI.resx">
+      <DependentUpon>PubPrintConfigUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBPrintJobQueryUI.resx">
+      <DependentUpon>PUBPrintJobQueryUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PubPrintRecordUI.resx">
+      <DependentUpon>PubPrintRecordUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBReportAlarmUI.resx">
+      <DependentUpon>PUBReportAlarmUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PubReportDescUI.resx">
+      <DependentUpon>PubReportDescUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBRichTextContentUI.resx">
+      <DependentUpon>PUBRichTextContentUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBRisDetailMaintainUI.resx">
+      <DependentUpon>PUBRisDetailMaintainUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBRisFormMaintainSheetDetailUI.resx">
+      <DependentUpon>PUBRisFormMaintainSheetDetailUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBRisFormMaintainUI.resx">
+      <DependentUpon>PUBRisFormMaintainUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBRuleCheckTreeDetailUI.resx">
+      <DependentUpon>PUBRuleCheckTreeDetailUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBRuleCheckTreeUI.resx">
+      <DependentUpon>PUBRuleCheckTreeUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBRuleCheckUI.resx">
+      <DependentUpon>PUBRuleCheckUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBRuleCloneUI.resx">
+      <DependentUpon>PUBRuleCloneUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBRuleConfirmQuestionUI.resx">
+      <DependentUpon>PUBRuleConfirmQuestionUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBRuleQueryUI.resx">
+      <DependentUpon>PUBRuleQueryUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBRuleRangeInputUI.resx">
+      <DependentUpon>PUBRuleRangeInputUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBStationUI.resx">
+      <DependentUpon>PUBStationUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBSheetDisplayOrderUI.resx">
+      <DependentUpon>PUBSheetDisplayOrderUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBSheetDisplayUI.resx">
+      <DependentUpon>PUBSheetDisplayUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBSyscodeTypeUI.resx">
+      <DependentUpon>PubSyscodeTypeUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PubSyscodeUI.resx">
+      <DependentUpon>PubSyscodeUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TN\UI\PUBTreeRuleQueryUI.resx">
+      <DependentUpon>PUBTreeRuleQueryUI.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application1.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

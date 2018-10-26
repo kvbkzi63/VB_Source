@@ -1,0 +1,1254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:40611/UclService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="queryOpenWindow">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="prmQueryTable" type="xs:int" />
+        <xs:element minOccurs="0" name="prmCondField" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="prmCondValue" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="prmCondType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OtherQueryConditionDS" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryOpenWindowResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="queryOpenWindowResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryUclPostalAreaAll">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryUclPostalAreaAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="queryUclPostalAreaAllResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryUclPostalAreaAllNew">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryUclPostalAreaAllNewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="queryUclPostalAreaAllNewResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryUclPUBAreaCodeGovVilCodeName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="code1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="code2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryUclPUBAreaCodeGovVilCodeNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="queryUclPUBAreaCodeGovVilCodeNameResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryUclIdentityInitial">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryUclIdentityInitialResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="queryUclIdentityInitialResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryUclIdentityInitial2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="inSourceType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryUclIdentityInitial2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="queryUclIdentityInitial2Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryUclChartNoByKey">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codeNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codeType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryUclChartNoByKeyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="queryUclChartNoByKeyResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryOMOOrderDiagnosis">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codeName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DiseaseTypeId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IsSevereDisease" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryOMOOrderDiagnosisResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="queryOMOOrderDiagnosisResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryOPHPharmacyBase">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codeName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DrugType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IsEqualMatch" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryOPHPharmacyBaseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="queryOPHPharmacyBaseResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoUclAction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ds" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoUclActionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DoUclActionResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryPUBOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="OrderCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OrderEnName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OrderTypeId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="BasicDateStr" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryPUBOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="queryPUBOrderResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="querySMTPData">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="querySMTPDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="querySMTPDataResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UclHintDataBOinsert">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ds" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UclHintDataBOinsertResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UclHintDataBOinsertResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UclHintDataBOqueryByPK">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pk_UI_Name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pk_Serial" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UclHintDataBOqueryByPKResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UclHintDataBOqueryByPKResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" name="pk_UI_Name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pk_Serial" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UclHintDataBOdelete">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pk_UI_Name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pk_Serial" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UclHintDataBOdeleteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UclHintDataBOdeleteResult" type="xs:int" />
+        <xs:element minOccurs="0" name="pk_UI_Name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pk_Serial" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UclHintDataBOupdate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ds" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UclHintDataBOupdateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UclHintDataBOupdateResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UclHintDataBOqueryData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UIName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UclHintDataBOqueryDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UclHintDataBOqueryDataResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UclHintDataBOqueryDataAll">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UclHintDataBOqueryDataAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UclHintDataBOqueryDataAllResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryOMOPhraseForUCL">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserTypeId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DoctorDeptCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PhraseTypeId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PhraseKeyStr" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryOMOPhraseForUCLResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="queryOMOPhraseForUCLResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryOMOOrderFavorInit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="queryData" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryOMOOrderFavorInitResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="queryOMOOrderFavorInitResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryOMOOrderFavorByCond3">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SourceType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FavorId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FavorTypeId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DoctorDeptCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FavorCategory" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OrderCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OrderName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DrugType" nillable="true" type="xs:string" />
+        <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="PharmacyQueryFlag" nillable="true" type="q1:ArrayOfstring" />
+        <xs:element minOccurs="0" name="ChartNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OutpatientSn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IsChoiceDcOrder" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryOMOOrderFavorByCond3Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="queryOMOOrderFavorByCond3Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="querySTAPackageDataByCategory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="inCategory" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="inStation" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="inCategoryStr" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="inQueryStr" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="querySTAPackageDataByCategoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="querySTAPackageDataByCategoryResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryOMOOrderFavorSheetDept2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SourceType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FavorTypeId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="inHospCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryOMOOrderFavorSheetDept2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="queryOMOOrderFavorSheetDept2Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryOMOOrderFavorSheetDetailByLabGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SourceType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SheetCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SheetGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ChartNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OutpatientSn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="inQueryStr" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IsChoiceDcOrder" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryOMOOrderFavorSheetDetailByLabGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="queryOMOOrderFavorSheetDetailByLabGroupResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryOMOOrderFavorSheetDetailByExamGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SourceType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SheetCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SheetGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ChartNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OutpatientSn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="inQueryStr" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IsChoiceDcOrder" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryOMOOrderFavorSheetDetailByExamGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="queryOMOOrderFavorSheetDetailByExamGroupResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryOMOOrderFavorSheetDetailByExamGroupForKMUH">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SourceType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SheetCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SheetGroup" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ChartNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OutpatientSn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="inQueryStr" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IsChoiceDcOrder" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryOMOOrderFavorSheetDetailByExamGroupForKMUHResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="queryOMOOrderFavorSheetDetailByExamGroupForKMUHResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryOMOFavorCategory2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SourceType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FavorId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FavorTypeId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DoctorDeptCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IsChoiceDcOrder" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryOMOFavorCategory2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="queryOMOFavorCategory2Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="querySTAPackageDataCategory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="inCategory" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="inStation" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="querySTAPackageDataCategoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="querySTAPackageDataCategoryResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryOMOOrderFavorSheetDetailByLab2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SourceType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SheetCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IsChoiceDcOrder" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryOMOOrderFavorSheetDetailByLab2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="queryOMOOrderFavorSheetDetailByLab2Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryOMOOrderFavorSheetDetailByExam2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SourceType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SheetCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IsChoiceDcOrder" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryOMOOrderFavorSheetDetailByExam2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="queryOMOOrderFavorSheetDetailByExam2Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryOMOOrderFavorDetailOrder3">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SourceType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OrderTypeId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DrugType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FavorId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DoctorDeptCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PackageCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ChartNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OutpatientSn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IsChoiceDcOrder" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryOMOOrderFavorDetailOrder3Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="queryOMOOrderFavorDetailOrder3Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryOPHPharmacyByCond3">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SourceType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OrderCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OrderName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DrugType" nillable="true" type="xs:string" />
+        <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="PharmacyQueryFlag" nillable="true" type="q2:ArrayOfstring" />
+        <xs:element minOccurs="0" name="IsChoiceDcOrder" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryOPHPharmacyByCond3Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="queryOPHPharmacyByCond3Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryPUBOrderByLanguage3">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SourceType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OrderCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OrderName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OrderTypeId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FavorCategory" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Specimen" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Body_Site" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Chinese_Flag" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ChartNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OutpatientSn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IsChoiceDcOrder" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryPUBOrderByLanguage3Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="queryPUBOrderByLanguage3Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryPUBDiseaseByFavor2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SourceType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codeEnName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codeName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DiseaseTypeId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IsSevereDisease" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryPUBDiseaseByFavor2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="queryPUBDiseaseByFavor2Result" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryPUBExamItemByOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="inOrderCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryPUBExamItemByOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="queryPUBExamItemByOrderResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryPUBOrderOwnAndNhiPrice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="OrderCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryPUBOrderOwnAndNhiPriceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="queryPUBOrderOwnAndNhiPriceResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryOMODiagFavorInit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SourceTypeId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DiagType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DoctorCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DeptCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DiagCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DiagDesc" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryOMODiagFavorInitResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="queryOMODiagFavorInitResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryPUBInsuSubDept">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SourceTypeId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DiagType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="InsuDeptCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryPUBInsuSubDeptResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="queryPUBInsuSubDeptResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryDiagCategory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DiagType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DiagCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DiagDesc" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryDiagCategoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="queryDiagCategoryResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryICD10Category">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SourceTypeId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DiagType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IsInsu" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryICD10CategoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="queryICD10CategoryResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryICDDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SelType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SourceTypeId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DiagType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FavorId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DoctorDeptCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FavorCategory" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ICDCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ICD10ChapterId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="InsuDeptCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="InsuSubDeptCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DiagCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DiagDesc" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="queryICDDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="queryICDDetailResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryPrintCondition">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Param" nillable="true" type="q3:ArrayOfKeyValueOfstringanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryPrintConditionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="QueryPrintConditionResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLoginUserPrintCond">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Param" nillable="true" type="q4:ArrayOfKeyValueOfstringanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLoginUserPrintCondResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetLoginUserPrintCondResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

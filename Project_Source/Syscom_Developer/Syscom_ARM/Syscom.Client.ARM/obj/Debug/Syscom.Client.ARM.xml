@@ -1,0 +1,1204 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Syscom.Client.ARM
+</name>
+</assembly>
+<members>
+<member name="T:Syscom.Client.ARM.My.Resources.Resources">
+<summary>
+  用於查詢當地語系化字串等的強類型資源類別。
+</summary>
+</member>
+<member name="P:Syscom.Client.ARM.My.Resources.Resources.ResourceManager">
+<summary>
+  傳回這個類別使用的快取的 ResourceManager 執行個體。
+</summary>
+</member>
+<member name="P:Syscom.Client.ARM.My.Resources.Resources.Culture">
+<summary>
+  覆寫目前執行緒的 CurrentUICulture 屬性，對象是所有
+  使用這個強類型資源類別的資源查閱。
+</summary>
+</member>
+<member name="M:Syscom.Client.ARM.ARMRPT000001Client.#ctor">
+ <summary>
+ 無取得印表機的附加條件，給"*"
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.ARMRPT000001Client.genReport(System.Data.DataSet@)">
+ <summary>
+ 建置報表
+ </summary>
+ <param name="data">資料</param>
+ <returns>報表物件</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.ARMRPT000001Client.printReport(System.Object@)">
+ <summary>
+ 列印報表
+ </summary>
+ <param name="rpt">報表物件</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.ARMRPT000001Client.queryRPTData(System.Object[]@)">
+ <summary>
+ 後端直接查詢資料
+ </summary>
+ <param name="queryCondition"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.ARMRPT000002Client.#ctor">
+ <summary>
+ 無取得印表機的附加條件，給"*"
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.ARMRPT000002Client.genReport(System.Data.DataSet@)">
+ <summary>
+ 建置報表
+ </summary>
+ <param name="data">資料</param>
+ <returns>報表物件</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.ARMRPT000002Client.printReport(System.Object@)">
+ <summary>
+ 列印報表
+ </summary>
+ <param name="rpt">報表物件</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.ARMRPT000002Client.queryRPTData(System.Object[]@)">
+ <summary>
+ 後端直接查詢資料
+ </summary>
+ <param name="queryCondition"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.AppSystemMtnUI.loadArmServiceManager">
+ <summary>
+ 載入ArmServiceManager的Instance
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.AppSystemMtnUI.showResult(System.Data.DataSet)">
+ <summary>
+ 顯示最新的資料在DataGridView
+ </summary>
+ <param name="dsTemp">要show在DataGridView中的資料</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.AppSystemMtnUI.updateDataGridView(System.Int32,System.Data.DataSet)">
+ <summary>
+ 同步更新DataGridView中的值
+ </summary>
+ <param name="mode"></param>
+ <param name="_ds"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.AppSystemMtnUI.fieldCheckResult(System.Int32)">
+ <summary>
+ 欄位檢查
+ </summary>
+ <param name="msgTitle"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.AppSystemMtnUI.cleanFieldsColor">
+ <summary>
+ 先將需要檢查欄位的back color設為default
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.AppSystemMtnUIMult.SaveData">
+ <summary>
+ 儲存
+ </summary>
+ <returns >Boolean</returns>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.AppSystemMtnUIMult.DeleteData">
+ <summary>
+ 刪除
+ </summary>
+ <returns >Boolean</returns>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.AppSystemMtnUIMult.QueryData">
+ <summary>
+ 查詢
+ </summary>
+ <returns >Boolean</returns>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.AppSystemMtnUIMult.ClearData">
+ <summary>
+ 清除
+ </summary>
+ <returns >Boolean</returns>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.AppSystemMtnUIMult.ShownMe">
+ <summary>
+ 初始化 - 顯示UI
+ </summary>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.AppSystemMtnUIMult.LoadServiceManager">
+ <summary>
+ 載入ServiceManager的Instance
+ </summary>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.AppSystemMtnUIMult.LoadEventManager">
+ <summary>
+ 載入EventManager的Instance
+ </summary>
+ <remarks>by Alan.Tsai on 2014-11-4</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.AppSystemMtnUIMult.UIDisposed(System.Object,System.EventArgs)">
+ <summary>
+ 關閉事件管理員(EventManager)
+ </summary>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.AppSystemMtnUIMult.ShowDgv(System.Data.DataSet)">
+ <summary>
+ 初始化 - DataGridView
+ </summary>
+ <remarks>by Sean.Lin on 2013-2-23</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.AppSystemMtnUIMult.genDS(System.Int32,System.String)">
+ <summary>
+ 產生一個DataSet並包含一個空的Table 給Grid用 或 DB用
+ </summary>
+ <param name="type">資料集類型</param>
+ <returns>DataSet</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.AppSystemMtnUIMult.checkFieldIsNull">
+ <summary>
+ 檢查欄位是否為空白
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.AppSystemMtnUIMult.dgv_Data_CellValueChanged(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
+ <summary>
+ CellValueChanged 事件
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.AppSystemMtnUIMult.setErrorData(System.Data.DataSet)">
+ <summary>
+ 存檔或刪除失敗有關Grid處理
+ </summary>    
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.AppSystemMtnUIMult.btn_Save_Click(System.Object,System.EventArgs)">
+ <summary>
+ 儲存
+ </summary>
+ <param name="Sender">按鈕物件</param>
+ <param name="e">事件</param>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.AppSystemMtnUIMult.btn_Delete_Click(System.Object,System.EventArgs)">
+ <summary>
+ 刪除
+ </summary>
+ <param name="Sender">按鈕物件</param>
+ <param name="e">事件</param>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.AppSystemMtnUIMult.btn_Query_Click(System.Object,System.EventArgs)">
+ <summary>
+ 查詢
+ </summary>
+ <param name="Sender">按鈕物件</param>
+ <param name="e">事件</param>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.AppSystemMtnUIMult.btn_Clear_Click(System.Object,System.EventArgs)">
+ <summary>
+ 清除
+ </summary>
+ <param name="Sender">按鈕物件</param>
+ <param name="e">事件</param>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.AppSystemMtnUIMult.KeyDownBottuns(System.Object,System.Windows.Forms.KeyEventArgs)">
+ <summary>
+ HotKey設定
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.ArmLogonFailureUI.QueryData">
+ <summary>
+ 查詢
+ </summary>
+ <returns >Boolean</returns>
+ <remarks>by Hsiao,Kaiwen on 2016-02-18</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.ArmLogonFailureUI.GenExcelData">
+ <summary>
+ 匯出Excel
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.ArmLogonFailureUI.ShownMe">
+ <summary>
+ 初始化 - 顯示UI
+ </summary>
+ <remarks>by Hsiao,Kaiwen on 2016-02-18</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.ArmLogonFailureUI.ShowDgv">
+ <summary>
+ 顯示空的Dataset 在　Grid 上
+ </summary>
+ <remarks>by Hsiao.Kaiwen on 2015-8-27</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.ArmLogonFailureUI.LoadServiceManager">
+ <summary>
+ 載入ServiceManager的Instance
+ </summary>
+ <remarks>by Hsiao,Kaiwen on 2016-02-18</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.ArmLogonFailureUI.btn_Query_Click(System.Object,System.EventArgs)">
+ <summary>
+ 查詢
+ </summary>
+ <param name="Sender">按鈕物件</param>
+ <param name="e">事件</param>
+ <remarks>by Hsiao,Kaiwen on 2016-02-18</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.ArmLogonFailureUI.btn_Excel_Click(System.Object,System.EventArgs)">
+ <summary>
+ 匯出Excel
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.ArmLogonFailureUI.KeyDownBottuns(System.Object,System.Windows.Forms.KeyEventArgs)">
+ <summary>
+ HotKey設定
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks>by Hsiao,Kaiwen on 2016-02-18</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.ArmQueryClickTimesUI.UI_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+ <summary>
+ HotKey設定
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.ArmQueryInformationUI.ArmQueryInformationUI_Load(System.Object,System.EventArgs)">
+ <summary>
+ 頁面載入
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.ArmQueryInformationUI.btn_Query_Click(System.Object,System.EventArgs)">
+ <summary>
+ 查詢
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.ArmQueryInformationUI.btn_Clear_Click(System.Object,System.EventArgs)">
+ <summary>
+ 清除
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.ArmQueryInformationUI.btn_Excel_Click(System.Object,System.EventArgs)">
+ <summary>
+ 匯出 Excel
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.ArmQueryInformationUI.UI_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+ <summary>
+ HotKey設定
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.AuthorizationAgentOnlyUI.AuthorizationAgentOnlyUI_Load(System.Object,System.EventArgs)">
+ <summary>
+ 載入畫面
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.AuthorizationAgentOnlyUI.btn_Query_Click(System.Object,System.EventArgs)">
+ <summary>
+ 查詢
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.AuthorizationAgentOnlyUI.btn_Exit_Click(System.Object,System.EventArgs)">
+ <summary>
+ 退出
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.AuthorizationAgentOnlyUI.dgv_ShowData_CellDoubleClick(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
+ <summary>
+ 進行開啟代理執行的畫面
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.AuthorizationAgentOnlyUI.dgv_ShowData_CellFormatting(System.Object,System.Windows.Forms.DataGridViewCellFormattingEventArgs)">
+ <summary>
+ 描繪灰底的失效授權
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.AuthorizationAgentOnlyUI.UI_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+ <summary>
+ HotKey設定
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.AuthorizationAgentUI.AuthorizationAgentUI_Load(System.Object,System.EventArgs)">
+ <summary>
+ 載入畫面
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.AuthorizationAgentUI.btn_Insert_Click(System.Object,System.EventArgs)">
+ <summary>
+ 新增
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.AuthorizationAgentUI.btn_Delete_Click(System.Object,System.EventArgs)">
+ <summary>
+ 刪除
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.AuthorizationAgentUI.btn_Query_Click(System.Object,System.EventArgs)">
+ <summary>
+ 查詢
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.AuthorizationAgentUI.btn_Clear_Click(System.Object,System.EventArgs)">
+ <summary>
+ 清除
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.AuthorizationAgentUI.btn_Exit_Click(System.Object,System.EventArgs)">
+ <summary>
+ 退出
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.AuthorizationAgentUI.UI_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+ <summary>
+ HotKey設定
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.ChangePwdMtnUI.cbConfirm_Click(System.Object,System.EventArgs)">
+ <summary>
+ 確認修改
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.ChangePwdMtnUI.showForm(System.String,System.Windows.Forms.Form)">
+ <summary>
+ 給外部呼叫來開啟視窗
+ </summary>
+ <param name="userid">使用者帳號</param>
+ <param name="owner">原呼叫表單</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.ChangePwdMtnUI.showForm(System.Windows.Forms.Form)">
+ <summary>
+ 給外部呼叫來開啟視窗
+ </summary>
+ <param name="owner">原呼叫表單</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.ChangePwdMtnUI.KeyDownBottuns(System.Object,System.Windows.Forms.KeyEventArgs)">
+ <summary>
+ HotKey 设定
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks>by Sean.Lin on 2013-5-21</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.ChangePwdMtnUI.CheckKeyInChar(System.String)">
+ <summary>
+ 檢核Key入的字元，True=符合規範 False=非數字與英文
+ </summary>
+ <param name="KeyInChar"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.ChangePwdMtnUI.ResetPWBtn_Click(System.Object,System.EventArgs)">
+ <summary>
+ 重設密碼
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.FunSystemMtnUI.loadArmServiceManager">
+ <summary>
+ 載入ArmServiceManager的Instance
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.FunSystemMtnUI.showResult(System.Data.DataSet)">
+ <summary>
+ 顯示最新的資料在DataGridView
+ </summary>
+ <param name="dsTemp">要show在DataGridView中的資料</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.FunSystemMtnUI.updateDataGridView(System.Int32,System.Data.DataSet)">
+ <summary>
+ 同步更新DataGridView中的值
+ </summary>
+ <param name="mode"></param>
+ <param name="_ds"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.FunSystemMtnUI.fieldCheckResult(System.Int32)">
+ <summary>
+ 欄位檢查
+ </summary>
+ <param name="msgTitle"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.FunSystemMtnUI.cleanFieldsColor">
+ <summary>
+ 先將需要檢查欄位的back color設為default
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.FunSystemMtnUIMult.SaveData">
+ <summary>
+ 儲存
+ </summary>
+ <returns >Boolean</returns>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.FunSystemMtnUIMult.DeleteData">
+ <summary>
+ 刪除
+ </summary>
+ <returns >Boolean</returns>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.FunSystemMtnUIMult.QueryData">
+ <summary>
+ 查詢
+ </summary>
+ <returns >Boolean</returns>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.FunSystemMtnUIMult.ClearData">
+ <summary>
+ 清除
+ </summary>
+ <returns >Boolean</returns>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.FunSystemMtnUIMult.ShownMe">
+ <summary>
+ 初始化 - 顯示UI
+ </summary>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.FunSystemMtnUIMult.LoadServiceManager">
+ <summary>
+ 載入ServiceManager的Instance
+ </summary>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.FunSystemMtnUIMult.LoadEventManager">
+ <summary>
+ 載入EventManager的Instance
+ </summary>
+ <remarks>by Alan.Tsai on 2014-11-4</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.FunSystemMtnUIMult.UIDisposed(System.Object,System.EventArgs)">
+ <summary>
+ 關閉事件管理員(EventManager)
+ </summary>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.FunSystemMtnUIMult.ShowDgv(System.Data.DataSet)">
+ <summary>
+ 初始化 - DataGridView
+ </summary>
+ <remarks>by Sean.Lin on 2013-2-23</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.FunSystemMtnUIMult.genDS(System.Int32,System.String)">
+ <summary>
+ 產生一個DataSet並包含一個空的Table 給Grid用 或 DB用
+ </summary>
+ <param name="type">資料集類型</param>
+ <returns>DataSet</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.FunSystemMtnUIMult.checkFieldIsNull">
+ <summary>
+ 檢查欄位是否為空白
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.FunSystemMtnUIMult.dgv_Data_CellEnter(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
+ <summary>
+ CellEnter 事件
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.FunSystemMtnUIMult.dgv_Data_CellValueChanged(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
+ <summary>
+ CellValueChanged 事件
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.FunSystemMtnUIMult.cbo_AppSystem_SelectedIndexChanged(System.Object,System.EventArgs)">
+ <summary>
+ 選擇系統代碼觸發事件
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.FunSystemMtnUIMult.cbo_SubSystem_SelectedIndexChanged(System.Object,System.EventArgs)">
+ <summary>
+ 選擇子系統代碼觸發事件
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.FunSystemMtnUIMult.btn_Save_Click(System.Object,System.EventArgs)">
+ <summary>
+ 儲存
+ </summary>
+ <param name="Sender">按鈕物件</param>
+ <param name="e">事件</param>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.FunSystemMtnUIMult.btn_Delete_Click(System.Object,System.EventArgs)">
+ <summary>
+ 刪除
+ </summary>
+ <param name="Sender">按鈕物件</param>
+ <param name="e">事件</param>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.FunSystemMtnUIMult.btn_Query_Click(System.Object,System.EventArgs)">
+ <summary>
+ 查詢
+ </summary>
+ <param name="Sender">按鈕物件</param>
+ <param name="e">事件</param>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.FunSystemMtnUIMult.btn_Clear_Click(System.Object,System.EventArgs)">
+ <summary>
+ 清除
+ </summary>
+ <param name="Sender">按鈕物件</param>
+ <param name="e">事件</param>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.FunSystemMtnUIMult.KeyDownBottuns(System.Object,System.Windows.Forms.KeyEventArgs)">
+ <summary>
+ HotKey設定
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.LoginModule.btn_Cancel_Click(System.Object,System.EventArgs)">
+ <summary>
+ 取消
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.LoginModule.dgv_ShowData_CellDoubleClick(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
+ <summary>
+ 進行開啟代理執行的畫面
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.RoleMtnUI.fieldCheckResult(System.Int32)">
+ <summary>
+ 欄位檢查
+ </summary>
+ <param name="msgTitle"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.RoleMtnUI.cleanFieldsColor">
+ <summary>
+ 先將需要檢查欄位的back color設為default
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.RoleMtnUI.loadArmServiceManager">
+ <summary>
+ 載入ArmServiceManager的Instance
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.RoleMtnUI.UI_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+ <summary>
+ HotKey設定
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.RoleMtnUI.controlButton(Syscom.Client.ARM.RoleMtnUI.buttonAction)">
+ <summary>
+ 根據按下的按鈕控制按鈕的狀態
+ </summary>
+ <param name="action"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.RoleMtnUI.initializeButton">
+ <summary>
+ 初始化按鈕的狀態
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.RoleMtnUI.changedButton">
+ <summary>
+ 改變按鈕的狀態
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.RoleMtnUI.showResult(System.Data.DataSet)">
+ <summary>
+ 顯示最新的資料在DataGridView
+ </summary>
+ <param name="ds">要show在DataGridView中的資料</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.RoleSetMtnUI.loadArmServiceManager">
+ <summary>
+ 載入ArmServiceManager的Instance
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.RoleSetMtnUI.#ctor(System.Data.DataSet)">
+ <summary>
+ 宣告
+ </summary>
+ <param name="ds"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.RoleSetMtnUI.RoleSetMtnUI_Load(System.Object,System.EventArgs)">
+ <summary>
+ 載入AnaServiceManager的Instance
+ 設定欄位初值
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.RoleSetMtnUI.setFieldInitialValue">
+ <summary>
+ 設定欄位初值
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.RoleSetMtnUI.bt_ok_Click(System.Object,System.EventArgs)">
+ <summary>
+ 確定修改資料
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.RoleSetMtnUI.bt_cancel_Click(System.Object,System.EventArgs)">
+ <summary>
+ 取消修改資料
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.SubSystemMtnUI.loadArmServiceManager">
+ <summary>
+ 載入ArmServiceManager的Instance
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.SubSystemMtnUI.showResult(System.Data.DataSet)">
+ <summary>
+ 顯示最新的資料在DataGridView，要show在DataGridView中的資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.SubSystemMtnUI.updateDataGridView(System.Int32,System.Data.DataSet)">
+ <summary>
+ 同步更新DataGridView中的值
+ </summary>
+ <param name="mode"></param>
+ <param name="_ds"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.SubSystemMtnUI.genDataSet">
+ <summary>
+ 產生一個DataSet並包含一個空的Table
+ </summary>
+ <returns>DataSet</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.SubSystemMtnUI.fieldCheckResult(System.Int32)">
+ <summary>
+ 欄位檢查
+ </summary>
+ <param name="msgTitle"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.SubSystemMtnUI.cleanFieldsColor">
+ <summary>
+ 先將需要檢查欄位的back color設為default
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.SubSystemMtnUIMult.SaveData">
+ <summary>
+ 儲存
+ </summary>
+ <returns >Boolean</returns>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.SubSystemMtnUIMult.DeleteData">
+ <summary>
+ 刪除
+ </summary>
+ <returns >Boolean</returns>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.SubSystemMtnUIMult.QueryData">
+ <summary>
+ 查詢
+ </summary>
+ <returns >Boolean</returns>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.SubSystemMtnUIMult.ClearData">
+ <summary>
+ 清除
+ </summary>
+ <returns >Boolean</returns>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.SubSystemMtnUIMult.ShownMe">
+ <summary>
+ 初始化 - 顯示UI
+ </summary>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.SubSystemMtnUIMult.LoadServiceManager">
+ <summary>
+ 載入ServiceManager的Instance
+ </summary>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.SubSystemMtnUIMult.LoadEventManager">
+ <summary>
+ 載入EventManager的Instance
+ </summary>
+ <remarks>by Alan.Tsai on 2014-11-4</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.SubSystemMtnUIMult.UIDisposed(System.Object,System.EventArgs)">
+ <summary>
+ 關閉事件管理員(EventManager)
+ </summary>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.SubSystemMtnUIMult.ShowDgv(System.Data.DataSet)">
+ <summary>
+ 初始化 - DataGridView
+ </summary>
+ <remarks>by Sean.Lin on 2013-2-23</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.SubSystemMtnUIMult.genDS(System.Int32,System.String)">
+ <summary>
+ 產生一個DataSet並包含一個空的Table 給Grid用 或 DB用
+ </summary>
+ <param name="type">資料集類型</param>
+ <returns>DataSet</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.SubSystemMtnUIMult.checkFieldIsNull">
+ <summary>
+ 檢查欄位是否為空白
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.SubSystemMtnUIMult.dgv_Data_CellValueChanged(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
+ <summary>
+ CellValueChanged 事件
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.SubSystemMtnUIMult.setErrorData(System.Data.DataSet)">
+ <summary>
+ 存檔或刪除失敗有關Grid處理
+ </summary>    
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.SubSystemMtnUIMult.btn_Save_Click(System.Object,System.EventArgs)">
+ <summary>
+ 儲存
+ </summary>
+ <param name="Sender">按鈕物件</param>
+ <param name="e">事件</param>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.SubSystemMtnUIMult.btn_Delete_Click(System.Object,System.EventArgs)">
+ <summary>
+ 刪除
+ </summary>
+ <param name="Sender">按鈕物件</param>
+ <param name="e">事件</param>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.SubSystemMtnUIMult.btn_Query_Click(System.Object,System.EventArgs)">
+ <summary>
+ 查詢
+ </summary>
+ <param name="Sender">按鈕物件</param>
+ <param name="e">事件</param>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.SubSystemMtnUIMult.btn_Clear_Click(System.Object,System.EventArgs)">
+ <summary>
+ 清除
+ </summary>
+ <param name="Sender">按鈕物件</param>
+ <param name="e">事件</param>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.SubSystemMtnUIMult.KeyDownBottuns(System.Object,System.Windows.Forms.KeyEventArgs)">
+ <summary>
+ HotKey設定
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.TskSystemMtnUI.loadArmServiceManager">
+ <summary>
+ 載入ArmServiceManager的Instance
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.TskSystemMtnUI.showResult(System.Data.DataSet)">
+ <summary>
+ 顯示最新的資料在DataGridView
+ </summary>
+ <param name="dsTemp">要show在DataGridView中的資料</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.TskSystemMtnUI.updateDataGridView(System.Int32,System.Data.DataSet)">
+ <summary>
+ 同步更新DataGridView中的值
+ </summary>
+ <param name="mode"></param>
+ <param name="_ds"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.TskSystemMtnUI.fieldCheckResult(System.Int32)">
+ <summary>
+ 欄位檢查
+ </summary>
+ <param name="msgTitle"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.TskSystemMtnUI.cleanFieldsColor">
+ <summary>
+ 先將需要檢查欄位的back color設為default
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.TskSystemMtnUIMult.SaveData">
+ <summary>
+ 儲存
+ </summary>
+ <returns >Boolean</returns>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.TskSystemMtnUIMult.DeleteData">
+ <summary>
+ 刪除
+ </summary>
+ <returns >Boolean</returns>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.TskSystemMtnUIMult.QueryData">
+ <summary>
+ 查詢
+ </summary>
+ <returns >Boolean</returns>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.TskSystemMtnUIMult.ClearData">
+ <summary>
+ 清除
+ </summary>
+ <returns >Boolean</returns>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.TskSystemMtnUIMult.ShownMe">
+ <summary>
+ 初始化 - 顯示UI
+ </summary>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.TskSystemMtnUIMult.LoadServiceManager">
+ <summary>
+ 載入ServiceManager的Instance
+ </summary>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.TskSystemMtnUIMult.LoadEventManager">
+ <summary>
+ 載入EventManager的Instance
+ </summary>
+ <remarks>by Alan.Tsai on 2014-11-4</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.TskSystemMtnUIMult.UIDisposed(System.Object,System.EventArgs)">
+ <summary>
+ 關閉事件管理員(EventManager)
+ </summary>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.TskSystemMtnUIMult.ShowDgv(System.Data.DataSet)">
+ <summary>
+ 初始化 - DataGridView
+ </summary>
+ <remarks>by Sean.Lin on 2013-2-23</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.TskSystemMtnUIMult.genDS(System.Int32,System.String)">
+ <summary>
+ 產生一個DataSet並包含一個空的Table 給Grid用 或 DB用
+ </summary>
+ <param name="type">資料集類型</param>
+ <returns>DataSet</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.TskSystemMtnUIMult.checkFieldIsNull">
+ <summary>
+ 檢查欄位是否為空白
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.TskSystemMtnUIMult.dgv_Data_CellEnter(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
+ <summary>
+ CellEnter 事件
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.TskSystemMtnUIMult.dgv_Data_CellValueChanged(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
+ <summary>
+ CellValueChanged 事件
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.TskSystemMtnUIMult.cbo_AppSystem_SelectedIndexChanged(System.Object,System.EventArgs)">
+ <summary>
+ 選擇系統代碼觸發事件
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.TskSystemMtnUIMult.btn_Save_Click(System.Object,System.EventArgs)">
+ <summary>
+ 儲存
+ </summary>
+ <param name="Sender">按鈕物件</param>
+ <param name="e">事件</param>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.TskSystemMtnUIMult.btn_Delete_Click(System.Object,System.EventArgs)">
+ <summary>
+ 刪除
+ </summary>
+ <param name="Sender">按鈕物件</param>
+ <param name="e">事件</param>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.TskSystemMtnUIMult.btn_Query_Click(System.Object,System.EventArgs)">
+ <summary>
+ 查詢
+ </summary>
+ <param name="Sender">按鈕物件</param>
+ <param name="e">事件</param>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.TskSystemMtnUIMult.btn_Clear_Click(System.Object,System.EventArgs)">
+ <summary>
+ 清除
+ </summary>
+ <param name="Sender">按鈕物件</param>
+ <param name="e">事件</param>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.TskSystemMtnUIMult.KeyDownBottuns(System.Object,System.Windows.Forms.KeyEventArgs)">
+ <summary>
+ HotKey設定
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.UserMtnUI.loadServiceManager">
+ <summary>
+ 載入ServiceManager的Instance
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.UserMtnUI.fieldCheckResult(System.Int32)">
+ <summary>
+ 欄位檢查
+ </summary>
+ <param name="msgTitle"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.UserMtnUI.cleanFieldsColor">
+ <summary>
+ 先將需要檢查欄位的back color設為default
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.UserMtnUI.btnResetPw_Click(System.Object,System.EventArgs)">
+ <summary>
+ 重設密碼
+ </summary>
+ <remarks>by Sean.Lin on 2013-8-30</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.UserMtnUI.btnRoleSet_Click(System.Object,System.EventArgs)">
+ <summary>
+ 角色權限設定
+ </summary>
+ <remarks>by Sean.Lin on 2013-8-30</remarks>
+</member>
+<member name="M:Syscom.Client.ARM.UserMtnUI.UI_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+ <summary>
+ HotKey設定
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.UserMtnUI.controlButton(Syscom.Client.ARM.UserMtnUI.buttonAction)">
+ <summary>
+ 根據按下的按鈕控制按鈕的狀態
+ </summary>
+ <param name="action"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.UserMtnUI.initializeButton">
+ <summary>
+ 初始化按鈕的狀態
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.UserMtnUI.changedButton">
+ <summary>
+ 改變按鈕的狀態
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.UserMtnUI.showResult(System.Data.DataSet)">
+ <summary>
+ 顯示最新的資料在DataGridView
+ </summary>
+ <param name="ds">要show在DataGridView中的資料</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.ARM.UserMtnUI.ConfigSystemHospital">
+ <summary>
+ 取得客戶端的醫院設定
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Stacey.Hsiao on 2016-04-19</remarks>
+</member>
+</members>
+</doc>

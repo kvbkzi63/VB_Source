@@ -1,0 +1,22 @@
+C:\Kmuh_Source\Mcku_His\SyscomCompile\Syscom\Client\Syscom.Client.HCA.dll.config
+C:\Kmuh_Source\Mcku_His\SyscomCompile\Syscom\Client\Syscom.Client.HCA.dll
+C:\Kmuh_Source\Mcku_His\SyscomCompile\Syscom\Client\Syscom.Client.HCA.pdb
+C:\Kmuh_Source\Mcku_His\SyscomCompile\Syscom\Client\Syscom.Client.HCA.xml
+C:\Kmuh_Source\Mcku_His\Syscom_Developer\Syscom_HCA\Syscom.Client.HCA\obj\Debug\Syscom.Client.HCA.vbprojResolveAssemblyReference.cache
+C:\Kmuh_Source\Mcku_His\Syscom_Developer\Syscom_HCA\Syscom.Client.HCA\obj\Debug\Syscom.Client.HCA.Resources.resources
+C:\Kmuh_Source\Mcku_His\Syscom_Developer\Syscom_HCA\Syscom.Client.HCA\obj\Debug\Syscom.Client.HCA.TestUI.resources
+C:\Kmuh_Source\Mcku_His\Syscom_Developer\Syscom_HCA\Syscom.Client.HCA\obj\Debug\Syscom.Client.HCA.vbproj.GenerateResource.Cache
+C:\Kmuh_Source\Mcku_His\Syscom_Developer\Syscom_HCA\Syscom.Client.HCA\obj\Debug\Syscom.Client.HCA.dll
+C:\Kmuh_Source\Mcku_His\Syscom_Developer\Syscom_HCA\Syscom.Client.HCA\obj\Debug\Syscom.Client.HCA.xml
+C:\Kmuh_Source\Mcku_His\Syscom_Developer\Syscom_HCA\Syscom.Client.HCA\obj\Debug\Syscom.Client.HCA.pdb
+C:\Users\Will\Documents\Visual Studio 2017\Projects\Syscom_Developer\Syscom_HCA\Syscom.Client.HCA\obj\Debug\Syscom.Client.HCA.vbprojResolveAssemblyReference.cache
+C:\Users\Will\Documents\Visual Studio 2017\Projects\Syscom_Developer\Syscom_HCA\Syscom.Client.HCA\obj\Debug\Syscom.Client.HCA.Resources.resources
+C:\Users\Will\Documents\Visual Studio 2017\Projects\Syscom_Developer\Syscom_HCA\Syscom.Client.HCA\obj\Debug\Syscom.Client.HCA.TestUI.resources
+C:\Users\Will\Documents\Visual Studio 2017\Projects\Syscom_Developer\Syscom_HCA\Syscom.Client.HCA\obj\Debug\Syscom.Client.HCA.vbproj.GenerateResource.Cache
+C:\Users\Will\Documents\Visual Studio 2017\Projects\Syscom_Developer\Syscom_HCA\Syscom.Client.HCA\obj\Debug\Syscom.Client.HCA.dll
+C:\Users\Will\Documents\Visual Studio 2017\Projects\Syscom_Developer\Syscom_HCA\Syscom.Client.HCA\obj\Debug\Syscom.Client.HCA.xml
+C:\Users\Will\Documents\Visual Studio 2017\Projects\Syscom_Developer\Syscom_HCA\Syscom.Client.HCA\obj\Debug\Syscom.Client.HCA.pdb
+C:\Users\Will\Documents\Visual Studio 2017\Projects\SyscomCompile\Syscom\Client\Syscom.Client.HCA.dll.config
+C:\Users\Will\Documents\Visual Studio 2017\Projects\SyscomCompile\Syscom\Client\Syscom.Client.HCA.dll
+C:\Users\Will\Documents\Visual Studio 2017\Projects\SyscomCompile\Syscom\Client\Syscom.Client.HCA.pdb
+C:\Users\Will\Documents\Visual Studio 2017\Projects\SyscomCompile\Syscom\Client\Syscom.Client.HCA.xml

@@ -1,0 +1,387 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Syscom.Comm.RPT
+</name>
+</assembly>
+<members>
+<member name="T:Syscom.Comm.RPT.My.Resources.Resources">
+<summary>
+  用於查詢當地語系化字串等的強類型資源類別。
+</summary>
+</member>
+<member name="P:Syscom.Comm.RPT.My.Resources.Resources.ResourceManager">
+<summary>
+  傳回這個類別使用的快取的 ResourceManager 執行個體。
+</summary>
+</member>
+<member name="P:Syscom.Comm.RPT.My.Resources.Resources.Culture">
+<summary>
+  覆寫目前執行緒的 CurrentUICulture 屬性，對象是所有
+  使用這個強類型資源類別的資源查閱。
+</summary>
+</member>
+<member name="T:Syscom.Comm.RPT.IReport">
+ <summary>
+ 報表抽象類別，為所有 Common 中報表類別提供基底內容
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.RPT.IReport.getReportFileTitle">
+ <summary>
+ 回傳報表檔案的第一行資料 (Txt, Rtf)
+ </summary>
+ <returns></returns>
+ <remarks>
+ 印表機名稱;紙張大小;預設字體大小;報表類型;報表旋轉方向;印表機紙夾
+ </remarks>
+</member>
+<member name="M:Syscom.Comm.RPT.IReport.genReport(System.Data.DataSet@)">
+ <summary>
+ 產出報表
+ </summary>
+ <param name="data">報表資料</param>
+ <returns>報表物件</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Comm.RPT.IReport.reportId">
+ <summary>
+ 報表代碼
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Comm.RPT.IReport.PrinterType">
+ <summary>
+ 印表機型態'1'=local列印  '2'=遠端列印
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Comm.RPT.IReport.PrinterCond">
+ <summary>
+ 印表條件 Defaule='*'
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Comm.RPT.IReport.reportTitle">
+ <summary>
+ 報表抬頭
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Comm.RPT.IReport.reportSize">
+ <summary>
+ 報表紙張大小
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Comm.RPT.IReport.defaultFontSize">
+ <summary>
+ 報表預設字體大小
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Comm.RPT.IReport.reportType">
+ <summary>
+ 報表類型(預設為11)
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Comm.RPT.IReport.reportTurning">
+ <summary>
+ 報表旋轉的方向(1:垂直; 2:水平)
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Comm.RPT.IReport.printerFolder">
+ <summary>
+ 印表機紙夾(A5-->固定為第二紙夾)
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Comm.RPT.IReport.printerName">
+ <summary>
+ 印表機名稱
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Comm.RPT.IReport.hospital_CH">
+ <summary>
+ 醫院中文名稱
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Comm.RPT.IReport.hospital_EN">
+ <summary>
+ 醫院英文名稱
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Comm.RPT.IReport.Language_Type_Id">
+ <summary>
+ 中英文類別
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Comm.RPT.IReport.Hospital_Code">
+ <summary>
+ 醫院代碼
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Comm.RPT.IReport.Effect_Date">
+ <summary>
+ 生效日期
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Comm.RPT.IReport.End_Date">
+ <summary>
+ 結束日期
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Comm.RPT.IReport.Hospital_Name">
+ <summary>
+ 醫院名稱
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Comm.RPT.IReport.Hospital_Short_Name">
+ <summary>
+ 醫院簡稱
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Comm.RPT.IReport.Telephone">
+ <summary>
+ 電話
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Comm.RPT.IReport.Fax">
+ <summary>
+ 傳真
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Comm.RPT.IReport.Voice_Tel">
+ <summary>
+ 電腦語音專線
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Comm.RPT.IReport.Postal_Code">
+ <summary>
+ 郵遞區號
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Comm.RPT.IReport.Address">
+ <summary>
+ 聯絡地址
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Comm.RPT.IReport.Principal_Name">
+ <summary>
+ 負責人姓名
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Comm.RPT.IReport.Principal_Email">
+ <summary>
+ 負責人Email
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Comm.RPT.IReport.Hospital_Level_Id">
+ <summary>
+ 醫療院所層級
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Comm.RPT.IReport.URL">
+ <summary>
+ 網址
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Comm.RPT.IReport.Unified_Business_No">
+ <summary>
+ 醫院統編
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Comm.RPT.IReport.Alarm_Count">
+ <summary>
+ 警示筆數
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Comm.RPT.IReport.System_Code">
+ <summary>
+ 系統別(Ex:CNC、OMO....)
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Comm.RPT.IReport.Report_Desc">
+ <summary>
+ 描述說明
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:Syscom.Comm.RPT.IRPTPrint">
+ <summary>
+ 報表列印抽象類別，為所有 Server/Client 中報表列印類別提供基底內容
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.RPT.IRPTPrint.setActivePrinterbyName(System.Object@,System.String@)">
+ <summary>
+ 設定 Office Word/Excel 物件的 ActivePrinter 
+ </summary>
+ <param name="rpt">Word/Excel 物件</param>
+ <param name="printerName">印表機名稱</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.RPT.IRPTPrint.setActivePrinter(System.Object@,System.String@)">
+ <summary>
+ 設定 Office Word/Excel 物件的 ActivePrinter 
+ </summary>
+ <param name="rpt">Word/Excel 物件</param>
+ <param name="printerName">印表機名稱</param>
+ <returns>設定成功 true，反之 False</returns>
+ <remarks>這個method 主要是提供給setActivePrinterbyName使用</remarks>
+</member>
+<member name="M:Syscom.Comm.RPT.IRPTPrint.FinishWork(System.Object@)">
+ <summary>
+ 關閉Word與App
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.RPT.IRPTPrint.WriteRtfFile(System.String@,System.String@)">
+ <summary>
+ 寫入 Rtf File
+ </summary>
+ <param name="reportData">寫入檔案的資料</param>
+ <returns>FileInfo</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.RPT.IRPTPrint.WriteRtfFile(System.String@,System.String@,System.Text.Encoding@)">
+ <summary>
+ 寫入 Rtf File
+ </summary>
+ <param name="reportData">寫入檔案的資料</param>
+ <returns>FileInfo</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.RPT.IRPTPrint.WriteTxtFile(System.String@,System.String@)">
+ <summary>
+ 寫入 Txt File
+ </summary>
+ <param name="reportData">寫入檔案的資料</param>
+ <returns>FileInfo</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.RPT.IRPTPrint.WriteTxtFile(System.String@,System.String@,System.Text.Encoding@)">
+ <summary>
+ 寫入 Txt File
+ </summary>
+ <param name="reportData">寫入檔案的資料</param>
+ <returns>FileInfo</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.RPT.IRPTPrint.WriteFile(System.String@,System.String@,System.Text.Encoding@,System.String@)">
+ <summary>
+ 寫入 File
+ </summary>
+ <param name="reportData">寫入檔案的資料</param>
+ <param name="reportId">報表代碼</param>
+ <param name="txtEncode">文字編碼</param>
+ <param name="fileExtension">附檔名</param>
+ <returns>FileInfo</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.RPT.IRPTPrint.SetPrinterNameToTxtFile(System.IO.FileInfo@,System.String@)">
+ <summary>
+ 將印表機名稱加入txt File中
+ </summary>
+ <param name="rpt">txt 檔</param>
+ <param name="printerName">印表機名稱</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.RPT.IRPTPrint.SetPrinterNameToTxtFile(System.IO.FileInfo@,System.String@,System.Text.Encoding@)">
+ <summary>
+ 將印表機名稱加入txt File中
+ </summary>
+ <param name="rpt">txt 檔</param>
+ <param name="printerName">印表機名稱</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+</members>
+</doc>

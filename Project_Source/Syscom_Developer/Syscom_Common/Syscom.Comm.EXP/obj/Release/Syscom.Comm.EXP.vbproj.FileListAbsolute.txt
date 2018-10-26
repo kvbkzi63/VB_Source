@@ -1,0 +1,11 @@
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Common\Syscom.Comm.EXP.dll
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Common\Syscom.Comm.EXP.pdb
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Common\Syscom.Comm.EXP.xml
+C:\TPE_Source\HIS_Source\Project_Source\Syscom_Developer\Syscom_Common\Syscom.Comm.EXP\obj\Release\Syscom.Comm.EXP.vbprojResolveAssemblyReference.cache
+C:\TPE_Source\HIS_Source\Project_Source\Syscom_Developer\Syscom_Common\Syscom.Comm.EXP\obj\Release\Syscom.Comm.EXP.Resources.resources
+C:\TPE_Source\HIS_Source\Project_Source\Syscom_Developer\Syscom_Common\Syscom.Comm.EXP\obj\Release\Syscom.Comm.EXP.vbproj.GenerateResource.Cache
+C:\TPE_Source\HIS_Source\Project_Source\Syscom_Developer\Syscom_Common\Syscom.Comm.EXP\obj\Release\Syscom.Comm.EXP.dll
+C:\TPE_Source\HIS_Source\Project_Source\Syscom_Developer\Syscom_Common\Syscom.Comm.EXP\obj\Release\Syscom.Comm.EXP.xml
+C:\TPE_Source\HIS_Source\Project_Source\Syscom_Developer\Syscom_Common\Syscom.Comm.EXP\obj\Release\Syscom.Comm.EXP.pdb
+C:\TPE_Source\HIS_Source\Project_Source\Syscom_Developer\Syscom_Common\Syscom.Comm.EXP\obj\Release\Syscom.Comm.EXP.vbproj.CoreCompileInputs.cache
+C:\TPE_Source\HIS_Source\Project_Source\Syscom_Developer\Syscom_Common\Syscom.Comm.EXP\obj\Release\Syscom.Comm.EXP.vbproj.CopyComplete

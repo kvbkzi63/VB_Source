@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6F422ABF-A0EB-4736-B9E1-C6BBB6549634}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>JOBAPP</RootNamespace>
+    <AssemblyName>JOBAPP</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>C:\Deploy\JOBClient\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://220.128.174.140/JOBClient/</InstallUrl>
+    <PublisherName>Syscom</PublisherName>
+    <SuiteName>%28測試%29專案管理系統</SuiteName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>74</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\SyscomCompile\Project\Client\</OutputPath>
+    <DocumentationFile>JOBAPP.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\SyscomCompile\Project\Client\</OutputPath>
+    <DocumentationFile>JOBAPP.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>JOBAPP.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>FD60797016A91BBFBA6873326AB839425850A375</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>JOBAPP_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Images\Games.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="Com.Syscom.WinFormsUI.Docking">
+      <HintPath>..\..\SyscomCompile\Project\Client\Com.Syscom.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\Compiler.Client\packages\DocumentFormat.OpenXml.2.5\lib\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="GetOSUserID">
+      <HintPath>..\..\SyscomCompile\Syscom\Client\GetOSUserID.dll</HintPath>
+    </Reference>
+    <Reference Include="JOBClientServiceFactory">
+      <HintPath>..\..\SyscomCompile\Project\Client\JOBClientServiceFactory.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Client, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExtLIBs\Microsoft.TeamFoundation.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.VersionControl.Client, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExtLIBs\Microsoft.TeamFoundation.VersionControl.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Client, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExtLIBs\Microsoft.VisualStudio.Services.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="NotifyWindow">
+      <HintPath>..\..\SyscomCompile\Project\Client\NotifyWindow.dll</HintPath>
+    </Reference>
+    <Reference Include="Project.Client.JOB">
+      <HintPath>..\..\SyscomCompile\Project\Client\Project.Client.JOB.dll</HintPath>
+    </Reference>
+    <Reference Include="Project.Comm.JOB">
+      <HintPath>..\..\SyscomCompile\Project\Client\Project.Comm.JOB.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Client.ARM">
+      <HintPath>..\..\SyscomCompile\Syscom\Client\Syscom.Client.ARM.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Client.CMM">
+      <HintPath>..\..\SyscomCompile\Syscom\Client\Syscom.Client.CMM.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Client.NFC">
+      <HintPath>..\..\SyscomCompile\Syscom\Client\Syscom.Client.NFC.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Client.PUB">
+      <HintPath>..\..\SyscomCompile\Syscom\Client\Syscom.Client.PUB.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Client.RPT">
+      <HintPath>..\..\SyscomCompile\Syscom\Client\Syscom.Client.RPT.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Client.ServiceFactory">
+      <HintPath>..\..\SyscomCompile\Syscom\Client\Syscom.Client.ServiceFactory.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Client.UCL">
+      <HintPath>..\..\SyscomCompile\Syscom\Client\Syscom.Client.UCL.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Comm.BASE">
+      <HintPath>..\..\SyscomCompile\Syscom\Common\Syscom.Comm.BASE.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Comm.EXP">
+      <HintPath>..\..\SyscomCompile\Syscom\Common\Syscom.Comm.EXP.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Comm.LOG">
+      <HintPath>..\..\SyscomCompile\Syscom\Common\Syscom.Comm.LOG.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Comm.RPT">
+      <HintPath>..\..\SyscomCompile\Syscom\Common\Syscom.Comm.RPT.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Comm.TableFactory">
+      <HintPath>..\..\SyscomCompile\Syscom\Common\Syscom.Comm.TableFactory.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Comm.Utility">
+      <HintPath>..\..\SyscomCompile\Syscom\Common\Syscom.Comm.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Customization\DockHelper.vb" />
+    <Compile Include="Customization\Extender.vb" />
+    <Compile Include="Customization\InertButton.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="StartUP\ControlUtil.vb" />
+    <Compile Include="StartUP\Program.vb" />
+    <Compile Include="UI\AboutDialog.Designer.vb">
+      <DependentUpon>AboutDialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AboutDialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\LoginForm.Designer.vb">
+      <DependentUpon>LoginForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\LoginForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MainForm.designer.vb">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MyFavoritesUI.Designer.vb">
+      <DependentUpon>MyFavoritesUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MyFavoritesUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SwitchUserUI.designer.vb">
+      <DependentUpon>SwitchUserUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SwitchUserUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ToolWindow.Designer.vb">
+      <DependentUpon>ToolWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ToolWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UpdateVersionUI.Designer.vb">
+      <DependentUpon>UpdateVersionUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UpdateVersionUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Util\ColorUtil.vb" />
+    <Compile Include="Util\DynamicClass.vb" />
+    <Compile Include="Util\ModForm.vb" />
+    <Compile Include="Util\Settings.vb" />
+    <Compile Include="Util\UserInfo.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AboutDialog.resx">
+      <DependentUpon>AboutDialog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\LoginForm.resx">
+      <DependentUpon>LoginForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MyFavoritesUI.resx">
+      <DependentUpon>MyFavoritesUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SwitchUserUI.resx">
+      <DependentUpon>SwitchUserUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ToolWindow.resx">
+      <DependentUpon>ToolWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UpdateVersionUI.resx">
+      <DependentUpon>UpdateVersionUI.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="bindings.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="client-Local.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="client.config">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="fonts\3of9.ttf" />
+    <None Include="JOBAPP_TemporaryKey.pfx" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TempDoc\TempDBModifiedDoc.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="TxtPrint\TxtPreview.ini" />
+    <None Include="UI\User_Profile\OMO_DR-Profile.config" />
+    <None Include="UI\User_Profile\OMO_Nurse-Profile.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Customization\Resources\DockIndicator_PaneDiamond.bmp" />
+    <Content Include="Customization\Resources\DockIndicator_PaneDiamond_Bottom.bmp" />
+    <Content Include="Customization\Resources\Dockindicator_PaneDiamond_Fill.bmp" />
+    <Content Include="Customization\Resources\DockIndicator_PaneDiamond_Hotspot.bmp" />
+    <Content Include="Customization\Resources\DockIndicator_PaneDiamond_HotspotIndex.bmp" />
+    <Content Include="Customization\Resources\DockIndicator_PaneDiamond_Left.bmp" />
+    <Content Include="Customization\Resources\DockIndicator_PaneDiamond_Right.bmp" />
+    <Content Include="Customization\Resources\DockIndicator_PaneDiamond_Top.bmp" />
+    <Content Include="Customization\Resources\DockIndicator_PanelBottom.bmp" />
+    <Content Include="Customization\Resources\DockIndicator_PanelBottom_Active.bmp" />
+    <Content Include="Customization\Resources\DockIndicator_PanelFill.bmp" />
+    <Content Include="Customization\Resources\DockIndicator_PanelFill_Active.bmp" />
+    <Content Include="Customization\Resources\DockIndicator_PanelLeft.bmp" />
+    <Content Include="Customization\Resources\DockIndicator_PanelLeft_Active.bmp" />
+    <Content Include="Customization\Resources\DockIndicator_PanelRight.bmp" />
+    <Content Include="Customization\Resources\DockIndicator_PanelRight_Active.bmp" />
+    <Content Include="Customization\Resources\DockIndicator_PanelTop.bmp" />
+    <Content Include="Customization\Resources\DockIndicator_PanelTop_Active.bmp" />
+    <Content Include="Customization\Resources\DockPaneCaption_AutoHideNo.bmp" />
+    <Content Include="Customization\Resources\DockPaneCaption_AutoHideYes.bmp" />
+    <Content Include="Customization\Resources\DockPaneCaption_CloseDisabled.bmp" />
+    <Content Include="Customization\Resources\DockPaneCaption_CloseEnabled.bmp" />
+    <Content Include="Customization\Resources\DockPaneStrip_CloseDisabled.bmp" />
+    <Content Include="Customization\Resources\DockPaneStrip_CloseEnabled.bmp" />
+    <Content Include="Customization\Resources\DockPaneStrip_ScrollLeftDisabled.bmp" />
+    <Content Include="Customization\Resources\DockPaneStrip_ScrollLeftEnabled.bmp" />
+    <Content Include="Customization\Resources\DockPaneStrip_ScrollRightDisabled.bmp" />
+    <Content Include="Customization\Resources\DockPaneStrip_ScrollRightEnabled.bmp" />
+    <Content Include="Images\ArrowDown.bmp" />
+    <Content Include="Images\ArrowUp.bmp" />
+    <Content Include="Images\Bitmap.ico" />
+    <Content Include="Images\BlankIcon.ico" />
+    <Content Include="Images\ClosedFolder.ICO" />
+    <Content Include="Images\CSFile.ico" />
+    <Content Include="Images\CSProject.ico" />
+    <Content Include="Images\File.ico" />
+    <Content Include="Images\Form.ico" />
+    <Content Include="Images\Games.ico" />
+    <Content Include="Images\Home.ico" />
+    <Content Include="Images\kmuh_his_logo.ico" />
+    <Content Include="Images\Mouse.bmp" />
+    <Content Include="Images\msenv22.ico" />
+    <Content Include="Images\New.ico" />
+    <Content Include="Images\NISTCH.ico" />
+    <Content Include="Images\NISTCHForm.ico" />
+    <Content Include="Images\Open.ico" />
+    <Content Include="Images\OpenFolder.ICO" />
+    <Content Include="Images\OutputWindow.ico" />
+    <Content Include="Images\PropertyWindow.ico" />
+    <Content Include="Images\Reference.ico" />
+    <Content Include="Images\References.ico" />
+    <Content Include="Images\SolutionExplorer.ico" />
+    <Content Include="Images\syscomLogo.ico" />
+    <Content Include="Images\System Folder.ico" />
+    <Content Include="Images\TaskListWindow.ico" />
+    <Content Include="Images\ToolboxWindow.ico" />
+    <Content Include="Images\XmlFile.ico" />
+    <Content Include="Images\專案管理系統.jpg" />
+    <Content Include="Images\署立台中醫院.jpg" />
+    <Content Include="Images\高雄市聯合醫院%28建檔機%29.jpg" />
+    <Content Include="Images\高雄市聯合醫院%28測試機%29.jpg" />
+    <Content Include="Images\高雄市聯合醫院%28開發機%29.jpg" />
+    <Content Include="Images\高雄市聯合醫院.jpg" />
+    <Content Include="syscomLogo.ico" />
+    <Content Include="TxtPrint\EFSPic.exe" />
+    <Content Include="TxtPrint\RichTextBoxPrintCtrl.dll" />
+    <Content Include="TxtPrint\RtfPreview.exe" />
+    <Content Include="TxtPrint\StartProcess.dll" />
+    <Content Include="TxtPrint\S_chinese.dll" />
+    <Content Include="TxtPrint\TxtPreview.exe" />
+    <Content Include="TxtPrint\T_chinese.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="User_Profile\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

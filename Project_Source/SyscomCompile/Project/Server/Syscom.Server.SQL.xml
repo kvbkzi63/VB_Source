@@ -1,0 +1,351 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Syscom.Server.SQL
+</name>
+</assembly>
+<members>
+<member name="T:Syscom.Server.SQL.My.Resources.Resources">
+<summary>
+  用於查詢當地語系化字串等的強類型資源類別。
+</summary>
+</member>
+<member name="P:Syscom.Server.SQL.My.Resources.Resources.ResourceManager">
+<summary>
+  傳回這個類別使用的快取的 ResourceManager 執行個體。
+</summary>
+</member>
+<member name="P:Syscom.Server.SQL.My.Resources.Resources.Culture">
+<summary>
+  覆寫目前執行緒的 CurrentUICulture 屬性，對象是所有
+  使用這個強類型資源類別的資源查閱。
+</summary>
+</member>
+<member name="M:Syscom.Server.SQL.SQLConnFactory.#ctor">
+ <summary>
+ 阻止外部直接進行新建立的宣告
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Server.SQL.SQLConnFactory.getInstance">
+ <summary>
+ 屬性取得類別實體
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:Syscom.Server.SQL.SQLConnFactory.Nested">
+ <summary>
+ 巢狀類別存放建立的類別實體
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Server.SQL.SQLConnFactory.defaultIsolationLevel">
+ <summary>
+ 預設指定交易的隔離層級 - 在交易期間無法讀取變動的資料，但可以修改資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.SQL.SQLConnFactory.getOracleDBSqlConn">
+ <summary>
+ Oracle連線設定 on 2014-01-10 By Lits
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.SQL.SQLConnFactory.getSyBaseDBSqlConn">
+ <summary>
+ SyBase連線設定 on 2014-01-10 By Lits
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.SQL.SQLConnFactory.getSyBaseDBSqlConn2">
+ <summary>
+ SyBase連線設定 on 2014-03-17 By Lewis
+ SybaseDB 主機2
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.SQL.SQLConnFactory.getNisDBSqlConn">
+ <summary>
+ NIS連線設定
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.SQL.SQLConnFactory.getArmDBSqlConn">
+ <summary>
+ 權限連線設定
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.SQL.SQLConnFactory.getOpdDBSqlConn">
+ <summary>
+ 門診連線設定
+ </summary>
+ <remarks>by Sean.Lin on 2014-10-14</remarks>
+</member>
+<member name="M:Syscom.Server.SQL.SQLConnFactory.getEisDBSqlConn">
+ <summary>
+ 急診連線設定
+ </summary>
+ <remarks>by Sean.Lin on 2014-10-14</remarks>
+</member>
+<member name="M:Syscom.Server.SQL.SQLConnFactory.getPcsDBSqlConn">
+ <summary>
+ 住院連線設定
+ </summary>
+ <remarks>by Sean.Lin on 2014-10-14</remarks>
+</member>
+<member name="M:Syscom.Server.SQL.SQLConnFactory.getKmuhOpdDBSqlConn">
+ <summary>
+ 住院連線設定
+ </summary>
+ <remarks>by Sean.Lin on 2014-10-14</remarks>
+</member>
+<member name="M:Syscom.Server.SQL.SQLConnFactory.getEmrDBSqlConn">
+ <summary>
+ 電子病歷連線設定
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.SQL.SQLConnFactory.getCmrDBSqlConn">
+ <summary>
+ CMR連線設定
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.SQL.SQLConnFactory.getTtasDBSqlConn">
+ <summary>
+ TTAS連線設定  
+ </summary>
+ <returns></returns>
+ <remarks>2015-08-28 Add By Sean</remarks>
+</member>
+<member name="M:Syscom.Server.SQL.SQLConnFactory.getPubDBSqlConn">
+ <summary>
+ 共用連線設定  2010-06-25 Add By Alan
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.SQL.SQLConnFactory.getBKDBSqlConn">
+ <summary>
+ 備份連線設定  2010-06-25 Add By Alan
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.SQL.SQLConnFactory.getSerialNoSqlConn">
+ <summary>
+ 序號機線設定
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.SQL.SQLConnFactory.getEfsDBSqlConn">
+ <summary>
+ 電子表單連線設定(EFS)
+ </summary>
+ <remarks>by Sean.Lin on 2014-10-14</remarks>
+</member>
+<member name="M:Syscom.Server.SQL.SQLConnFactory.getHistoryDBSqlConn">
+ <summary>
+ 歷史資料庫連線設定
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.SQL.SQLConnFactory.getLisDBSqlConn">
+ <summary>
+ LIS連線設定
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.SQL.SQLConnFactory.getDefaultIsolationLevel">
+ <summary>
+ 取得指定交易的隔離層級
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.SQL.SQLConnFactory.getRequiredTransactionScope(System.Transactions.IsolationLevel@)">
+ <summary>
+ 交易是範圍所需的，如果已經存在環境交易，則會使用環境交易，否則會在進入範圍前建立新的交易。這是預設值。
+ </summary>
+ <param name="iLevel">預設為 ReadCommitted ，當正在讀取資料來避免 Dirty 讀取時，會使用共用鎖定，但是在交易結束之前，資料可以變更，這將會產生非重複讀取或虛設資料。 </param>
+ <returns></returns>
+ <remarks>TransactionScope 中 TransactionOptions.IsolationLevel 的設定值為 Serializable，會大量提高鎖定的資料量與時間</remarks>
+</member>
+<member name="M:Syscom.Server.SQL.SQLConnFactory.getRequiresNewTransactionScope(System.Transactions.IsolationLevel@)">
+ <summary>
+ 新交易一定會針對範圍而建立。
+ </summary>
+ <param name="iLevel">預設為 ReadCommitted ，當正在讀取資料來避免 Dirty 讀取時，會使用共用鎖定，但是在交易結束之前，資料可以變更，這將會產生非重複讀取或虛設資料。 </param>
+ <returns></returns>
+ <remarks>TransactionScope 中 TransactionOptions.IsolationLevel 的設定值為 Serializable，會大量提高鎖定的資料量與時間</remarks>
+</member>
+<member name="M:Syscom.Server.SQL.SQLConnFactory.getSuppressTransactionScope(System.Transactions.IsolationLevel@)">
+ <summary>
+ 當建立範圍時會隱藏環境交易內容，範圍內的所有作業都是在不使用環境交易內容的情況下完成。 
+ </summary>
+ <param name="iLevel">預設為 ReadCommitted ，當正在讀取資料來避免 Dirty 讀取時，會使用共用鎖定，但是在交易結束之前，資料可以變更，這將會產生非重複讀取或虛設資料。 </param>
+ <returns></returns>
+ <remarks>TransactionScope 中 TransactionOptions.IsolationLevel 的設定值為 Serializable，會大量提高鎖定的資料量與時間</remarks>
+</member>
+<member name="M:Syscom.Server.SQL.SQLConnFactory.replaceApplicationName(System.String)">
+ <summary>
+ 置換應用程式名稱
+ </summary>
+ <param name="src"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.SQL.SQLConnFactory.getCallerName">
+ <summary>
+ 取得呼叫程式名稱
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Server.SQL.SQLDataUtil.EXECUTE_SUCCESS">
+ <summary>
+ Server端執行"確認"完畢後的結果(待補)
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Server.SQL.SQLDataUtil.ADD_TYPE">
+ <summary>
+ 取得資料後的編輯狀態
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.SQL.SQLDataUtil.getTableColumns(System.String)">
+ <summary>
+ 取得Table的欄位集合
+ </summary>
+ <param name="tbNames">Table名稱，可傳入多個，以","隔開</param>
+ <returns>DataSet:Table對映的欄位清單</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.SQL.SQLDataUtil.convertDatetime(System.String)">
+ <summary>
+ 取得ConvertDatetime
+ </summary>
+ <param name="d">datetime的欄位</param>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.SQL.SQLDataUtil.convertDateType(System.String,System.Int32)">
+ <summary>
+ 日期欄位輸出的轉換
+ </summary>
+ <param name="dateColumnName">datetime的欄位名稱</param>
+ <param name="type">轉換形式, 0: 西元->民國、只回傳曰期     2009/1/2 12:00:00 -> 98/1/2,
+                              1: 西元->民國、回傳曰期和時間 2009/1/2 12:00:00 -> 98/1/2 12:00:00,
+                              2: 西元      、只回傳曰期     2009/1/2 12:00:00 -> 2009/1/2
+</param>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.SQL.SQLDataUtil.PCSexecSQL(System.String@,System.Data.DataTable@,System.String@,System.String[],System.Data.IDbConnection@,System.Int32)">
+ <summary>
+ 程式說明：執行SQL，並取得資料(PCS)
+ 開發人員：Charles
+ 開發日期：2012.01.06
+ </summary>
+ <param name="cmdStr">SQL字串</param>
+ <param name="paramDT">SQL參數，參數名稱需和欄位名稱一樣</param>
+ <param name="queryType">
+ SQL的類型
+ 
+ update：更新
+ delete：修改
+ select1、select2：查詢
+ value：取得值
+ </param>
+ <param name="returnTableName">回傳的Table Name</param>
+ <param name="conn">DB Connection</param>
+ <returns>
+ 依SQL的類型回傳不同的資料
+ 
+ insert、update、delete：回傳成功的筆數Integer
+ select1：回傳DataTable
+ select2：回傳DataSet
+ value：回傳取得的值本身的Type
+ </returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.SQL.SQLDataUtil.execSQL(System.String@,System.Data.DataTable@,System.String@,System.String[],System.Data.IDbConnection@,System.Int32)">
+ <summary>
+ 程式說明：執行SQL，並取得資料
+ 開發人員：谷官
+ 開發日期：2009.11.17
+ </summary>
+ <param name="cmdStr">SQL字串</param>
+ <param name="paramDT">SQL參數，參數名稱需和欄位名稱一樣</param>
+ <param name="queryType">
+ SQL的類型
+ 
+ update：更新
+ delete：修改
+ select1、select2：查詢
+ value：取得值
+ </param>
+ <param name="returnTableName">回傳的Table Name</param>
+ <param name="conn">DB Connection</param>
+ <returns>
+ 依SQL的類型回傳不同的資料
+ 
+ insert、update、delete：回傳成功的筆數Integer
+ select1：回傳DataTable
+ select2：回傳DataSet
+ value：回傳取得的值本身的Type
+ </returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.SQL.SQLDataUtil.execSQLForBatch(System.String@,System.Data.DataTable@,System.String@,System.String[],System.Data.IDbConnection@,System.Int32)">
+ <summary>
+ 程式說明：執行SQL，並取得資料(for Batch呼叫用)
+ 開發人員：谷官
+ 開發日期：2011.03.31
+ </summary>
+ <param name="cmdStr">SQL字串</param>
+ <param name="paramDT">SQL參數，參數名稱需和欄位名稱一樣</param>
+ <param name="queryType">
+ SQL的類型
+ 
+ update：更新
+ delete：修改
+ select1、select2：查詢
+ value：取得值
+ </param>
+ <param name="returnTableName">回傳的Table Name</param>
+ <param name="conn">DB Connection</param>
+ <returns>
+ 依SQL的類型回傳不同的資料
+ 
+ insert、update、delete：回傳成功的筆數Integer
+ select1：回傳DataTable
+ select2：回傳DataSet
+ value：回傳取得的值本身的Type
+ </returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.SQL.SQLDataUtil.convert2Dictionary(System.Object[0:,0:])">
+ <summary>
+ Convert 2-way Object Array to a Dictionary
+ 開發人員：Fang-Chen Hwang
+ 開發日期：2012.11.06
+ </summary>
+</member>
+</members>
+</doc>

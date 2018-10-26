@@ -1,0 +1,11 @@
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Server\obj\Syscom.Server.PUB\Debug\Syscom.Server.PUB.vbprojResolveAssemblyReference.cache
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Server\obj\Syscom.Server.PUB\Debug\Syscom.Server.PUB.Resources.resources
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Server\obj\Syscom.Server.PUB\Debug\Syscom.Server.PUB.vbproj.GenerateResource.Cache
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Server\obj\Syscom.Server.PUB\Debug\Syscom.Server.PUB.dll
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Server\obj\Syscom.Server.PUB\Debug\Syscom.Server.PUB.xml
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Server\obj\Syscom.Server.PUB\Debug\Syscom.Server.PUB.pdb
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Server\Syscom.Server.PUB.dll
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Server\Syscom.Server.PUB.pdb
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Server\Syscom.Server.PUB.xml
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Server\obj\Syscom.Server.PUB\Debug\Syscom.Server.PUB.vbproj.CoreCompileInputs.cache
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Server\obj\Syscom.Server.PUB\Debug\Syscom.Server.PUB.vbproj.CopyComplete

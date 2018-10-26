@@ -1,0 +1,2230 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Syscom.Server.ICC
+</name>
+</assembly>
+<members>
+<member name="T:Syscom.Server.ICC.My.Resources.Resources">
+<summary>
+  用於查詢當地語系化字串等的強類型資源類別。
+</summary>
+</member>
+<member name="P:Syscom.Server.ICC.My.Resources.Resources.ResourceManager">
+<summary>
+  傳回這個類別使用的快取的 ResourceManager 執行個體。
+</summary>
+</member>
+<member name="P:Syscom.Server.ICC.My.Resources.Resources.Culture">
+<summary>
+  覆寫目前執行緒的 CurrentUICulture 屬性，對象是所有
+  使用這個強類型資源類別的資源查閱。
+</summary>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.#ctor">
+ <summary>
+ 阻止外部直接進行新建立的宣告
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Server.ICC.ICCDelegate.getInstance">
+ <summary>
+ 屬性取得類別實體
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:Syscom.Server.ICC.ICCDelegate.Nested">
+ <summary>
+ 巢狀類別存放建立的類別實體
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.deleteICCInoculationUploadBS(System.Data.DataSet)">
+ <summary>
+ 刪除多筆數據（更新操作）
+ </summary>
+ <param name="ds"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.queryIccFieldLengthVerify(System.String)">
+ <summary>
+ 欄位長度範圍
+ </summary>
+ <param name="strId"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.QueryIccCloudDrugPatientByCond(System.String,System.String)">
+ <summary>
+ 依條件查詢雲端藥歷轉檔同意書名單
+ </summary>
+ <param name="strIdno">身份證</param>
+ <param name="dMedicalDate">就醫日</param>
+ <returns>ds</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.InsertIccCloudDrugPatient(System.Data.DataSet)">
+ <summary>
+ 新增雲端藥歷轉檔同意書名單
+ </summary>
+ <param name="dsSaveData">ds新增資料</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.DeleteIccCloudDrugPatientByPK(System.String,System.DateTime)">
+ <summary>
+ 依據PK刪除雲端藥歷轉檔同意書名單
+ </summary>
+ <param name="strIdno">身份證</param>
+ <param name="dMedicalDate">就醫日</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.UpdateIccCloudDrugPatient(System.Data.DataSet)">
+ <summary>
+ 更新雲端藥歷轉檔同意書名單
+ </summary>
+ <param name="dsSaveData">更新資料</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.QueryIccAlertRecByCond(System.String@,System.String,System.String,System.String)">
+ <summary>
+ 雲端藥歷重複用藥查詢
+ </summary>
+ <param name="Query_Type">查詢類別</param>
+ <param name="ST_Visit_Date">就醫日期(起)</param>
+ <param name="ED_Visit_Date">就醫日期(迄)</param>
+ <param name="Chart_No">病歷號</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.QueryIccCloudPatientQryByCond(System.String,System.String,System.String,System.String)">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Brian Chen on 2016-01-06</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.QueryIccConnectionHistory(System.Collections.Generic.Dictionary{System.String,System.Object},System.Data.IDbConnection@)">
+ <summary>
+ 查詢 雲端藥歷/關懷用藥 連線記錄
+ </summary>
+ <param name="Param"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ImportFeedbackData(System.Collections.Generic.Dictionary{System.String,System.Object},System.Data.DataSet)">
+ <summary>
+ 將回饋檔存入資料庫
+ </summary>
+ <param name="Param"></param>
+ <param name="InputDs"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.QueryMaxCountOfDay(System.DateTime,System.Data.IDbConnection@)">
+ <summary>
+ 查詢當日已匯入次數
+ </summary>
+ <param name="Import_Date">匯入日期</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.QueryFeedBackData(System.Collections.Generic.Dictionary{System.String,System.Object},System.Data.IDbConnection@)">
+ <summary>
+ 查詢回饋檔資料
+ </summary>
+ <param name="Param"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ImportFeedbackDuporderData(System.Collections.Generic.Dictionary{System.String,System.Object},System.Data.DataSet)">
+ <summary>
+ 將回饋檔存入資料庫
+ </summary>
+ <param name="Param"></param>
+ <param name="InputDs"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.QueryFeedBackDuporderData(System.Collections.Generic.Dictionary{System.String,System.Object},System.Data.IDbConnection@)">
+ <summary>
+ 查詢回饋檔資料
+ </summary>
+ <param name="Param"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.Query24HourUploadedRate(System.Collections.Generic.Dictionary{System.String,System.Object},System.Data.IDbConnection@)">
+ <summary>
+ 查詢24小時上傳比率
+ </summary>
+ <param name="Param"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.Query24UnuploadData(System.Collections.Generic.Dictionary{System.String,System.Object},System.Data.IDbConnection@)">
+ <summary>
+ 取得24小時未上傳資料
+ </summary>
+ <param name="Param"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.InitialIccUploadDataQueryUI(System.Collections.Generic.Dictionary{System.String,System.Object})">
+ <summary>
+ 取得初始化 ICCUploadDataQueryUI 所需資料
+ </summary>
+ <param name="Param"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.QueryIccUploadData(System.Collections.Generic.Dictionary{System.String,System.Object})">
+ <summary>
+ 查詢上傳檔
+ </summary>
+ <param name="Param"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.QueryIccUploadDataDetail(System.Collections.Generic.Dictionary{System.String,System.Object})">
+ <summary>
+ 查詢上傳檔明細
+ </summary>
+ <param name="Param"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.SaveIccUploadData(System.Collections.Generic.Dictionary{System.String,System.Object},System.Data.DataSet)">
+ <summary>
+ 存檔
+ </summary>
+ <param name="Param"></param>
+ <param name="InputDs"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.getConfigDataForICCUpload">
+ <summary>
+ 取得醫療院所代碼Config
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCCloudDrugPatientQueryCountByChartNo(System.String)">
+ <summary>
+ 查詢病人雲端藥歷筆數
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by ChenYu.Guo on 2015-09-17</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCCloudDrugPatientQueryEffectivePatient">
+ <summary>
+ 查詢雲端藥歷有效病人
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by ChenYu.Guo on 2015-09-18</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCCloudDrugsQueryAssignColumnsByIdNo(System.String)">
+ <summary>
+ 指定顯示欄位查詢
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by ChenYu.Guo on 2015-09-17</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCMustFieldVerifydeleteByPk(System.String@)">
+ <summary>
+ 刪除
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-27</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCMustFieldVerifyinsert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-27</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCMustFieldVerifyupdate(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-27</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCMustFieldVerifyqueryAll">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-27</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCMustFieldVerifyqueryByPK(System.String@)">
+ <summary>
+ 序號查詢
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-27</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCMustFieldVerifyqueryByPKYNShow(System.String@)">
+ <summary>
+以ＰＫ查詢資料
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-27</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCMustFieldVerifyqueryAllYNShow">
+ <summary>
+查詢全部
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-27</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCFieldLengthVerifydelete(System.String)">
+ <summary>
+ 刪除
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-27</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCFieldLengthVerifyqueryByPK(System.String@)">
+ <summary>
+ ID查詢
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-27</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCFieldLengthVerifyinsert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-27</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCFieldLengthVerifyupdate(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-27</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCFieldLengthVerifyqueryAll">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-27</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCOnlineCheckdelete(System.String)">
+ <summary>
+ 刪除
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-28</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCOnlineCheckqueryByPK(System.String@)">
+ <summary>
+ ID查詢
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-28</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCOnlineCheckqueryAllYNShow">
+ <summary>
+ 查詢全部(顯示是,否)
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-28</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCOnlineCheckqueryByPKYNShow(System.String@)">
+ <summary>
+ ID查詢(顯示是,否)
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-28</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCOnlineCheckinsert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-28</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCOnlineCheckupdate(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-28</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCOnlineCheckqueryAll">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-28</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCSelfVerifydelete(System.String)">
+ <summary>
+ 刪除
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-28</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCSelfVerifyqueryByPK(System.String@)">
+ <summary>
+ ID查詢
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-28</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCSelfVerifyqueryAllYNShow">
+ <summary>
+ 查詢全部(顯示是,否)
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-28</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCSelfVerifyqueryByPKYNShow(System.String@)">
+ <summary>
+ ID查詢(顯示是,否)
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-28</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCSelfVerifyinsert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-28</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCSelfVerifyupdate(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-28</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCSelfVerifyqueryAll">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-28</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCInteractVerify1delete(System.String@)">
+ <summary>
+ 刪除
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCInteractVerify1queryByPK(System.String@)">
+ <summary>
+ 序號查詢
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCInteractVerify1queryAllYNShow">
+ <summary>
+ 查詢全部(顯示是否)
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCInteractVerify1queryByPKYNShow(System.String@)">
+ <summary>
+ 序號查詢(顯示是否)
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCInteractVerify1insert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCInteractVerify1update(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCInteractVerify1queryAll">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCInteractVerify2delete(System.String@)">
+ <summary>
+ 刪除
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCInteractVerify2queryByPK(System.String@)">
+ <summary>
+ 序號查詢
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCInteractVerify2queryAllYNShow">
+ <summary>
+ 查詢全部(顯示是否)
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCInteractVerify2queryByPKYNShow(System.String@)">
+ <summary>
+ 序號查詢(顯示是否)
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCInteractVerify2insert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCInteractVerify2update(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCInteractVerify2queryAll">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCInteractVerify3delete(System.String@)">
+ <summary>
+ 刪除
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCInteractVerify3queryByPK(System.String@)">
+ <summary>
+ 序號查詢
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCInteractVerify3insert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCInteractVerify3update(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCInteractVerify3queryAll">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCInteractVerify4delete(System.String@)">
+ <summary>
+ 刪除
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCInteractVerify4queryByPK(System.String@)">
+ <summary>
+ 序號查詢
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCInteractVerify4queryAllYNShow">
+ <summary>
+ 查詢全部(顯示是否)
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCInteractVerify4queryByPKYNShow(System.String@)">
+ <summary>
+ 序號查詢(顯示是否)
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCInteractVerify4insert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCInteractVerify4update(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCInteractVerify4queryAll">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ICCUploadDataMaintainBSCancelData(System.Data.DataSet)">
+ <summary>
+ 作廢上傳資料
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Sean.Lin on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.GetIcdName(System.String,System.Boolean,System.Data.IDbConnection@)">
+ <summary>
+ 取得診斷名稱
+ </summary>
+ <param name="IcdCode">診斷碼</param>
+ <param name="IsGetEngName">True:英文, False:中文</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.GetHospName(System.String,System.Data.IDbConnection@)">
+ <summary>
+ 取得醫院名稱
+ </summary>
+ <param name="HospCode">醫療院所代碼</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.GetTreatmentName(System.String,System.Data.IDbConnection@)">
+ <summary>
+ 取得治療項目名稱
+ </summary>
+ <param name="TreatmentCode">治療項代碼</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCDelegate.ProcessPatientOrganDonate(System.String,System.String,System.String,System.Data.IDbConnection@)">
+ <summary>
+ ProcessPatientOrganDonate
+ </summary>
+ <param name="ChartNo" ></param>
+ <param name="DNRKindId"></param>
+ <param name="LoginUser"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.IccAlertRecQueryBO_E2.QueryIccAlertRecByCond(System.String@,System.String,System.String,System.String,System.Data.IDbConnection@)">
+ <summary>
+ 雲端藥歷重複用藥查詢
+ </summary>
+ <param name="Query_Type">查詢類別</param>
+ <param name="ST_Visit_Date">就醫日期(起)</param>
+ <param name="ED_Visit_Date">就醫日期(迄)</param>
+ <param name="Chart_No">病歷號</param>
+ <param name="conn"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.IccCloudDrugPatientBO_E2.QueryIccCloudDrugPatientByCond(System.String,System.String,System.Data.IDbConnection@)">
+ <summary>
+ 根據傳入條件查詢資料
+ </summary>
+ <param name="strIdno">身份證</param>
+ <param name="dMedicalDate">就醫日</param>
+ <param name="conn"></param>
+ <returns>data</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.IccCloudDrugPatientBO_E2.insert2(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+ 新增---解決CodeGendBO都會將修改者、時間存入建立者、時間的問題，
+        新增時，修改者、時間應為NULL
+ </summary>
+ <param name="ds">新增資料</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.IccCloudDrugPatientBO_E2.update2(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容---解決取消時間更新的問題
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.IccCloudDrugPatientBO_E2.QueryOldAgreeEffectData(System.String,System.Data.IDbConnection@)">
+ <summary>
+ 查詢舊同意註記='Y'且生效中的紀錄
+ </summary>
+ <param name="strIdno">身份證</param>
+ <param name="conn"></param>
+ <returns>data</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.IccCloudDrugPatientBO_E2.updateOldAgreeData(System.String,System.String,System.String,System.String,System.Data.IDbConnection@)">
+ <summary>
+更新舊同意註記的迄日
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.IccFieldLengthVerifyBO_E2.queryByPK(System.String@)">
+ <summary>
+以ＰＫ查詢資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCHealthUploadBO_E2.updateICCHealthUpload(System.String,System.String,System.String)">
+ <summary>
+更新資料庫內容
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCInoculationUploadBO_E2.queryICCHealthUploadandICCInoculationUploadByCond(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+ <summary>
+ 查詢 已上傳歷史資料
+ </summary>
+ <param name="strUploadTypeId">上傳類別</param>
+ <param name="strChartNo">病歷號碼</param>
+ <param name="strSourceSn">來源序號</param>
+ <param name="strCreateSearchTime">產生日期時間</param>
+ <param name="strA00">上傳資料型態</param>
+ <param name="strA01">上傳資料格式</param>
+ <param name="strA17">就診日期時間</param>
+ <param name="strIsBabyStool">新生兒大便註記</param>
+ <param name="strA12">就診日期時間</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCInoculationUploadBO_E2.queryICCHealthUploadandICCInoculationUploadByPage1Cond(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+ <summary>
+ 查詢 未上傳資料
+ </summary>
+ <param name="strUploadTypeId">上傳類別</param>
+ <param name="strChartNo">病歷號碼</param>
+ <param name="strSourceSn">來源序號</param>
+ <param name="strCreateSearchTime">產生日期時間</param>
+ <param name="strA00">上傳資料型態</param>
+ <param name="strA01">上傳資料格式</param>
+ <param name="strA17">就診日期時間</param>
+ <param name="strIsBabyStool">新生兒大便註記</param>
+ <param name="strA12">就診日期時間</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCInoculationUploadBO_E2.queryICCHealthUploadandICCInoculationUploadByCond2(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+ <summary>
+ 查詢 自行檢核錯誤
+ </summary>
+ <param name="strUploadTypeId">上傳類別</param>
+ <param name="strChartNo">病歷號碼</param>
+ <param name="strSourceSn">來源序號</param>
+ <param name="strCreateSearchTime">產生日期時間</param>
+ <param name="strA00">上傳資料型態</param>
+ <param name="strA01">上傳資料格式</param>
+ <param name="strA17">就診日期時間</param>
+ <param name="strIsBabyStool">新生兒大便註記</param>
+ <param name="strA12">就診日期時間</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCInoculationUploadBO_E2.updateICCInoculationUpload(System.String,System.String,System.String)">
+ <summary>
+更新資料庫內容
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCInoculationUploadBO_E2.queryICCInoculationUpload(System.String)">
+ <summary>
+ 查詢 Upload_Time
+ </summary>
+ <param name="strInoculationSn"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCInoculationUploadBO_E2.update1(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCInoculationUploadBO_E2.queryICCInoculationSn(System.String)">
+ <summary>
+ 查詢 Inoculation_Sn
+ </summary>
+ <param name="strChartNo"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.IccInteractVerify1BO_E2.queryIccInteractVerify1ById(System.String@)">
+ <summary>
+以ＰＫ查詢資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.IccInteractVerify2BO_E2.queryIccInteractVerify2ById(System.String@)">
+ <summary>
+以ＰＫ查詢資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.IccInteractVerify3BO_E2.queryIccInteractVerify3ById(System.String@)">
+ <summary>
+以ＰＫ查詢資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.IccInteractVerify4BO_E2.queryIccInteractVerify4ById(System.String@)">
+ <summary>
+以ＰＫ查詢資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCMustFieldVerifyBO_E2.queryByTreatmentCategoryId(System.String@)">
+ <summary>
+以ＰＫ查詢資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCOnlineCheckBO_E2.queryICCOnlineCheckById(System.String@)">
+ <summary>
+以ＰＫ查詢資料
+ </summary> 
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCOnlineCheckBO_E2.insert(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+新增
+ </summary>
+ <param name="ds">新增資料</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCOnlineCheckBO_E2.delete(System.String@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ刪除資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCOnlineCheckBO_E2.update(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCOnlineCheckBO_E2.getConnection">
+ <summary>
+取得資料庫連線
+ </summary>
+ <returns>資料庫連線</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCOrderUploadBO_E2.queryICCOrderUploadByFK(System.String@,System.Data.IDbConnection@)">
+ <summary>
+以FＫ查詢資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.IccSelfVerifyBO_E2.queryByPK(System.String@)">
+ <summary>
+以ＰＫ查詢資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCreateHealthUploadBS_E2.queryICCHealthOrderUpload(System.String)">
+ <summary>
+ 查詢資料
+ </summary>
+ <param name="strHealthSn">健保就醫序號</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCreateHealthUploadBS_E2.insertICCHealthOrderUpload(System.Data.DataSet)">
+ <summary>
+ 新增資料
+ </summary>
+ <param name="dsSaveData">健保就醫資料</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCreateHealthUploadBS_E2.updateICCHealthOrderUpload(System.Data.DataSet)">
+ <summary>
+ 修改資料
+ </summary>
+ <param name="dsSaveData"></param>
+ <returns></returns>
+ <remarks>table0:ICC_Inoculation_Upload;table1:ICC_Bacterin_Upload</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCreateHealthUploadBS_E2.confirmICCHealthOrderUpload(System.Data.DataSet)">
+ <summary>
+ 儲存資料
+ </summary>
+ <param name="dsSaveData">健保就醫資料</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCInoculationUploadBS_E2.insertICCInoculationUpload(System.Data.DataSet)">
+ <summary>
+ 新增資料
+ </summary>
+ <param name="dsSaveData"></param>
+ <returns></returns>
+ <remarks>table0:ICC_Inoculation_Upload;table1:ICC_Bacterin_Upload</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCInoculationUploadBS_E2.updateICCInoculationUpload(System.Data.DataSet)">
+ <summary>
+ 修改資料
+ </summary>
+ <param name="dsSaveData"></param>
+ <returns></returns>
+ <remarks>table0:ICC_Inoculation_Upload;table1:ICC_Bacterin_Upload</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCInoculationUploadBS_E2.queryICCInoculationUploadByPK(System.String)">
+ <summary>
+ 查詢資料
+ </summary>
+ <param name="strInoculationSn"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCInoculationUploadBS_E2.confirmICCInoculationUploadBS(System.Data.DataSet)">
+ <summary>
+ 儲存資料
+ </summary>
+ <param name="dsSaveData"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCInoculationUploadBS_E2.deleteICCInoculationUploadBS(System.Data.DataSet)">
+ <summary>
+ 刪除資料(update 動作)
+ </summary>
+ <param name="dsSaveData"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.IccInteractVerify1BO_E1.queryByPKYNShow(System.String@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ查詢資料(顯示是否)
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.IccInteractVerify1BO_E1.queryAllYNShow(System.Data.IDbConnection@)">
+ <summary>
+查詢全部(顯示是否)
+ </summary>
+ <returns>查詢資料全部資料內容</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.IccInteractVerify2BO_E1.queryByPKYNShow(System.String@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ查詢資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.IccInteractVerify2BO_E1.queryAllYNShow(System.Data.IDbConnection@)">
+ <summary>
+查詢全部
+ </summary>
+ <returns>查詢資料全部資料內容</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.IccInteractVerify4BO_E1.queryByPKYNShow(System.String@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ查詢資料(顯示是否)
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.IccInteractVerify4BO_E1.queryAllYNShow(System.Data.IDbConnection@)">
+ <summary>
+查詢全部
+ </summary>
+ <returns>查詢資料全部資料內容</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.IccOnlineCheckBO_E1.queryByPKYNShow(System.String@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ查詢資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.IccOnlineCheckBO_E1.queryAllYNShow(System.Data.IDbConnection@)">
+ <summary>
+查詢全部
+ </summary>
+ <returns>查詢資料全部資料內容</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.IccMustFieldVerifyBO_E1.queryByPKYNShow(System.String@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ查詢資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.IccMustFieldVerifyBO_E1.queryAllYNShow(System.Data.IDbConnection@)">
+ <summary>
+查詢全部
+ </summary>
+ <returns>查詢資料全部資料內容</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCloudDrugPatientBO_E1.QueryCountByChartNo(System.String,System.Data.IDbConnection@)">
+ <summary>
+ 查詢病人雲端藥歷筆數
+ </summary>
+ <param name="chartNo" >病歷號</param>
+ <returns>Integer</returns>
+ <remarks>by ChenYu.Guo on 2015-09-17</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCloudDrugPatientBO_E1.QueryEffectivePatient(System.Data.IDbConnection@)">
+ <summary>
+ 查詢雲端藥歷有效病人
+ </summary>
+ <returns>Dataset</returns>
+ <remarks>by ChenYu.Guo on 2015-09-18</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCloudDrugsBO_E1.QueryAssignColumnsByIdNo(System.String,System.Data.IDbConnection@)">
+ <summary>
+ 指定顯示欄位查詢
+ </summary>
+ <param name="idNo" >身份證號</param>
+ <returns>Dataset</returns>
+ <remarks>by ChenYu.Guo on 2015-09-17</remarks>
+</member>
+<member name="T:Syscom.Server.ICC.ICCPredeliveryDataBO_E1">
+ <summary>
+ 程式說明：
+ 開發人員：
+ 開發日期：
+ </summary>
+ <修改註記>
+ </修改註記>
+ 
+</member>
+<member name="M:Syscom.Server.ICC.ICCPredeliveryDataBO_E1.getConnection">
+ <summary>
+ Get SQL connection.
+ </summary>
+ <returns>sql connection</returns>
+ <remarks></remarks>
+</member>
+<member name="T:Syscom.Server.ICC.ICCPreventDataBO_E1">
+ <summary>
+ 程式說明：
+ 開發人員：
+ 開發日期：
+ </summary>
+ <修改註記>
+ </修改註記>
+</member>
+<member name="M:Syscom.Server.ICC.ICCPreventDataBO_E1.getConnection">
+ <summary>
+ Get SQL connection.
+ </summary>
+ <returns>sql connection</returns>
+ <remarks></remarks>
+</member>
+<member name="T:Syscom.Server.ICC.ICCRegisterBasicBO_E1">
+ <summary>
+ 程式說明：
+ 開發人員：
+ 開發日期：
+ </summary>
+ <修改註記>
+ </修改註記>
+</member>
+<member name="M:Syscom.Server.ICC.IccSelfVerifyBO_E1.queryByPKYNShow(System.String@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ查詢資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.IccSelfVerifyBO_E1.queryAllYNShow(System.Data.IDbConnection@)">
+ <summary>
+查詢全部
+ </summary>
+ <returns>查詢資料全部資料內容</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.queryGetRegisterBasic(System.String)">
+ <summary>
+ GetRegisterBasic查詢DB
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.updateGetRegisterBasic(System.Data.DataSet)">
+ <summary>
+ GetRegisterBasic更新DB
+ </summary>
+ <param name="retValue">欲更新的值</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.insertGetRegisterBasic(System.Data.DataSet)">
+ <summary>
+ GetRegisterBasic新增DB
+ </summary>
+ <param name="retValue">欲新增的值</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.deleteWriteNewBorn(System.String)">
+ <summary>
+ WriteNewBorn刪除DB
+ </summary>
+ <param name="pk_Card_Sn">卡號</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.deleteUpdateICCard(System.String)">
+ <summary>
+ UpdateICCard刪除DB
+ </summary>
+ <param name="pk_Card_Sn">卡號</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.deleteUnGetSeqNumber(System.String)">
+ <summary>
+ UnGetSeqNumber刪除DB
+ </summary>
+ <param name="pk_Card_Sn">卡號</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.queryGetLastSeqNum(System.String)">
+ <summary>
+ GetLastSeqNum查詢DB
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.updateGetLastSeqNum(System.String,System.String)">
+ <summary>
+ GetLastSeqNum更新DB
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <param name="retLastSeqNum">最近一次就醫序號</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.insertGetLastSeqNum(System.String,System.String)">
+ <summary>
+ GetLastSeqNum新增DB
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <param name="retLastSeqNum">最近一次就醫序號</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.queryGetCriticalIllness(System.String)">
+ <summary>
+ GetCriticalIllness查詢DB
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.updateGetCriticalIllness(System.String,System.String,System.String,System.Data.DataSet)">
+ <summary>
+ GetCriticalIllness更新DB
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <param name="retRetain">保留欄位值</param>
+ <param name="rethospitalMark">指定至特定保險醫事服務機構就醫註記</param>
+ <param name="retValueList">重大傷病資料</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.insertGetCriticalIllness(System.String,System.String,System.String,System.Data.DataSet)">
+ <summary>
+ GetCriticalIllness新增DB
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <param name="retRetain">保留欄位值</param>
+ <param name="rethospitalMark">指定至特定保險醫事服務機構就醫註記</param>
+ <param name="retValueList">重大傷病資料</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.queryGetTreatmentNoNeedHPC(System.String)">
+ <summary>
+ GetTreatmentNoNeedHPC查詢DB
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.updateGetTreatmentNoNeedHPC(System.String,System.Data.DataSet,System.Data.DataSet)">
+ <summary>
+ GetTreatmentNoNeedHPC更新DB
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <param name="retTreatmentValueList">就醫資料</param>
+ <param name="retIllnessValueList">重大傷病資料</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.deleteGetTreatmentNoNeedHPC(System.String)">
+ <summary>
+ GetTreatmentNoNeedHPC刪除DB
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.insertGetTreatmentNoNeedHPC(System.String,System.Data.DataSet,System.Data.DataSet)">
+ <summary>
+ GetTreatmentNoNeedHPC新增DB
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <param name="retTreatmentValueList">就醫資料</param>
+ <param name="retIllnessValueList">重大傷病資料</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.queryGetTreatmentNeedHPC(System.String)">
+ <summary>
+ GetTreatmentNeedHPC查詢資料
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.updateGetTreatmentNeedHPC(System.String,System.Data.DataSet,System.Data.DataSet)">
+ <summary>
+ GetTreatmentNeedHPC更新DB
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <param name="retTreatmentValueList">就醫資料</param>
+ <param name="retIllnessValueList">重大傷病資料</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.deleteGetTreatmentNeedHPC(System.String)">
+ <summary>
+ GetTreatmentNeedHPC刪除DB
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.insertGetTreatmentNeedHPC(System.String,System.Data.DataSet,System.Data.DataSet)">
+ <summary>
+ GetTreatmentNeedHPC新增DB
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <param name="retTreatmentValueList">就醫資料</param>
+ <param name="retIllnessValueList">重大傷病資料</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.queryGetRegisterPrevent(System.String)">
+ <summary>
+ GetRegisterPrevent查詢DB
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.updateGetRegisterPrevent(System.String,System.Data.DataSet)">
+ <summary>
+ GetRegisterPrevent更新DB
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <param name="retValueList">預防保健資料</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.insertGetRegisterPrevent(System.String,System.Data.DataSet)">
+ <summary>
+ GetRegisterPrevent新增DB
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <param name="retValueList">預防保健資料</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.queryGetRegisterPregnant(System.String)">
+ <summary>
+ GetRegisterPregnant查詢DB
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.updateGetRegisterPregnant(System.String,System.Data.DataSet)">
+ <summary>
+ GetRegisterPregnant更新DB
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <param name="retValueList">孕婦產前檢查資料</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.insertGetRegisterPregnant(System.String,System.Data.DataSet)">
+ <summary>
+ GetRegisterPregnant新增DB
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <param name="retValueList">孕婦產前檢查資料</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.queryReadPrescriptMain(System.String)">
+ <summary>
+ ReadPrescriptMain查詢DB
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.updateReadPrescriptMain(System.String,System.Data.DataSet)">
+ <summary>
+ ReadPrescriptMain更新DB
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <param name="retValueList">門診處方箋資料</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.insertReadPrescriptMain(System.String,System.Data.DataSet)">
+ <summary>
+ ReadPrescriptMain新增DB
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <param name="retValueList">門診處方箋資料</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.queryReadPrescriptLongTerm(System.String)">
+ <summary>
+ ReadPrescriptLongTerm
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.updateReadPrescriptLongTerm(System.String,System.Data.DataSet)">
+ <summary>
+ ReadPrescriptLongTerm查詢DB
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <param name="retValueList">長期處方箋資料</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.insertReadPrescriptLongTerm(System.String,System.Data.DataSet)">
+ <summary>
+ ReadPrescriptLongTerm新增DB
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <param name="retValueList">長期處方箋資料</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.queryReadPrescriptHVE(System.String)">
+ <summary>
+ ReadPrescriptHVE查詢DB
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.updateReadPrescriptHVE(System.String,System.Data.DataSet)">
+ <summary>
+ ReadPrescriptHVE更新DB
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <param name="retValueList">重要醫令資料</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.insertReadPrescriptHVE(System.String,System.Data.DataSet)">
+ <summary>
+ ReadPrescriptHVE新增DB
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <param name="retValueList">重要醫令資料</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.queryReadPrescriptAllergic(System.String)">
+ <summary>
+ ReadPrescriptAllergic query
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.updateReadPrescriptAllergic(System.String,System.Data.DataSet)">
+ <summary>
+ ReadPrescriptAllergic update
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <param name="retValueList">過敏藥物資料</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.insertReadPrescriptAllergic(System.String,System.Data.DataSet)">
+ <summary>
+ ReadPrescriptAllergic insert
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <param name="retValueList">過敏藥物資料</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.queryGetInoculateData(System.String)">
+ <summary>
+ GetInoculateData query
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.updateGetInoculateData(System.String,System.Data.DataSet)">
+ <summary>
+ GetInoculateData update
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <param name="retValueList">預防接種資料</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.insertGetInoculateData(System.String,System.Data.DataSet)">
+ <summary>
+ GetInoculateData insert
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <param name="retValueList">預防接種資料</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.queryGetOrganDonate(System.String)">
+ <summary>
+ GetOrganDonate query
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.ProcessPatientOrganDonate(System.String,System.String,System.String,System.Data.IDbConnection@)">
+ <summary>
+ ProcessPatientOrganDonate
+ </summary>
+ <param name="ChartNo" ></param>
+ <param name="DNRKindId"></param>
+ <param name="LoginUser"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.updateGetOrganDonate(System.String,System.String)">
+ <summary>
+ GetOrganDonate update
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <param name="retOrganDonateMark">同意器官捐贈及安寧緩和醫療註記</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.insertGetOrganDonate(System.String,System.String)">
+ <summary>
+ GetOrganDonate insert
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <param name="retOrganDonateMark">同意器官捐贈及安寧緩和醫療註記</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.deleteWriteTreatmentCode(System.String)">
+ <summary>
+ WriteTreatmentCode delete
+ </summary>
+ <param name="pk_Card_Sn">卡號</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.deleteWriteTreatmentFee(System.String)">
+ <summary>
+ WriteTreatmentFee delete
+ </summary>
+ <param name="pk_Card_Sn">卡號</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.deleteWriteHealthInsurance(System.String)">
+ <summary>
+ WriteHealthInsurance delete
+ </summary>
+ <param name="pk_Card_Sn">卡號</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.deleteWriteEmergentTel(System.String)">
+ <summary>
+ WriteEmergentTel delete
+ </summary>
+ <param name="pk_Card_Sn">卡號</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.deleteWritePredeliveryCheckup(System.String)">
+ <summary>
+ WritePredeliveryCheckup delete
+ </summary>
+ <param name="pk_Card_Sn">卡號</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.deleteWriteMultiPrescript(System.String)">
+ <summary>
+ WriteMultiPrescript delete
+ </summary>
+ <param name="pk_Card_Sn">卡號</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.deleteWriteAllergicMedicines(System.String)">
+ <summary>
+ WriteAllergicMedicines delete
+ </summary>
+ <param name="pk_Card_Sn">卡號</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.deleteWriteInoculateData(System.String)">
+ <summary>
+ WriteInoculateData delete
+ </summary>
+ <param name="pk_Card_Sn">卡號</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.deleteWriteOrganDonate(System.String)">
+ <summary>
+ WriteOrganDonate delete
+ </summary>
+ <param name="pk_Card_Sn">卡號</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.queryGetEmergentTel(System.String)">
+ <summary>
+ GetEmergentTel query
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.updateGetEmergentTel(System.String,System.String)">
+ <summary>
+ GetEmergentTel update
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <param name="retEmergentTel">緊急聯絡電話</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.insertGetEmergentTel(System.String,System.String)">
+ <summary>
+ GetEmergentTel insert
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <param name="retEmergentTel">緊急聯絡電話</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.queryGetCumulativeData(System.String)">
+ <summary>
+ GetCumulativeData query
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.updateGetCumulativeData(System.String,System.Data.DataSet)">
+ <summary>
+ GetCumulativeData update
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <param name="retValueList">就醫累計資料</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.insertGetCumulativeData(System.String,System.Data.DataSet)">
+ <summary>
+ GetCumulativeData insert
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <param name="retValueList">就醫累計資料</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.queryGetCumulativeFee(System.String)">
+ <summary>
+ GetCumulativeFee query
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.updateGetCumulativeFee(System.String,System.String,System.String)">
+ <summary>
+ GetCumulativeFee update
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <param name="retOutpatientFeeToatl">門診醫療費用總累計</param>
+ <param name="retHospitalFeeToatl">住診醫療費用總累計</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.insertGetCumulativeFee(System.String,System.String,System.String)">
+ <summary>
+ GetCumulativeFee insert
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <param name="retOutpatientFeeToatl">門診醫療費用總累計</param>
+ <param name="retHospitalFeeToatl">住診醫療費用總累計</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.queryGetBasicData(System.String)">
+ <summary>
+ GetBasicData query
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.updateGetBasicData(System.String,System.Data.DataSet)">
+ <summary>
+ GetBasicData update
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <param name="retValue">基本資料</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.updateGetBasicData2(System.String,System.Data.DataSet)">
+ <summary>
+ GetBasicData update2
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <param name="retValue">基本資料</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.insertGetBasicData(System.String,System.Data.DataSet)">
+ <summary>
+ GetBasicData insert
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <param name="retValue">基本資料</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.deleteGetBasicData(System.String)">
+ <summary>
+ GetBasicData delete
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.insertGetBasicData2(System.String,System.Data.DataSet)">
+ <summary>
+ GetBasicData insert2
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <param name="retValue">基本資料</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.queryReadPrescription(System.String)">
+ <summary>
+ ReadPrescription query
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.updateReadPrescription(System.String,System.Data.DataSet,System.Data.DataSet,System.Data.DataSet,System.Data.DataSet)">
+ <summary>
+ ReadPrescription update
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <param name="retMainValueList">門診處方箋資料</param>
+ <param name="retLongTermValueList">長期處方箋資料</param>
+ <param name="retHVEValueList">重要醫令資料</param>
+ <param name="retAllergicValueList">過敏藥物資料</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.deleteReadPrescription(System.String)">
+ <summary>
+ ReadPrescription delete
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.insertReadPrescription(System.String,System.Data.DataSet,System.Data.DataSet,System.Data.DataSet,System.Data.DataSet)">
+ <summary>
+ ReadPrescription insert
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <param name="retMainValueList">門診處方箋資料</param>
+ <param name="retLongTermValueList">長期處方箋資料</param>
+ <param name="retHVEValueList">重要醫令資料</param>
+ <param name="retAllergicValueList">過敏藥物資料</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.deleteWritePrescription(System.String)">
+ <summary>
+ WritePrescription delete
+ </summary>
+ <param name="pk_Card_Sn">卡號</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.queryGetRegisterBasic2(System.String)">
+ <summary>
+ GetRegisterBasic2 query
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.updateGetRegisterBasic2(System.String,System.Data.DataSet)">
+ <summary>
+ GetRegisterBasic2 update
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <param name="retValue">基本資料</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.insertGetRegisterBasic2(System.String,System.Data.DataSet)">
+ <summary>
+ GetRegisterBasic2 insert
+ </summary>
+ <param name="Card_Sn">卡號</param>
+ <param name="retValue">基本資料</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.deleteWriteTreatmentData(System.String)">
+ <summary>
+ WriteTreatmentData delete
+ </summary>
+ <param name="pk_Card_Sn">卡號</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.CheckPreventData(System.String,System.String,System.String)">
+ <summary>
+ 檢核預防保健記錄IC資料
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.getConfigDataForICCUpload">
+ <summary>
+ 取得醫療院所代碼Config
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.getConnection">
+ <summary>
+ 取得資料庫連結
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.GetIcdName(System.String,System.Boolean,System.Data.IDbConnection@)">
+ <summary>
+ 取得診斷名稱
+ </summary>
+ <param name="IcdCode">診斷碼</param>
+ <param name="IsGetEngName">True:英文, False:中文</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.GetHospName(System.String,System.Data.IDbConnection@)">
+ <summary>
+ 取得醫院名稱
+ </summary>
+ <param name="HospCode">醫療院所代碼</param>
+ <param name="conn"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCCardBS.GetTreatmentName(System.String,System.Data.IDbConnection@)">
+ <summary>
+ 取得治療項目名稱
+ </summary>
+ <param name="TreatmentCode">治療項代碼</param>
+ <param name="conn"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.IccConnectionHistoryBS.QueryIccConnectionHistory(System.Collections.Generic.Dictionary{System.String,System.Object},System.Data.IDbConnection@)">
+ <summary>
+ 查詢 雲端藥歷/關懷用藥 連線記錄
+ </summary>
+ <param name="Param"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.IccConnectionHistoryBS.getConnection">
+ <summary>
+ 取得Pub SQL Connection
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.IccFeedbackDuporderBS.ImportFeedbackDuporderData(System.Collections.Generic.Dictionary{System.String,System.Object},System.Data.DataSet)">
+ <summary>
+ 將回饋檔(用藥重複)存入資料庫
+ </summary>
+ <param name="Param"></param>
+ <param name="InputDs"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.IccFeedbackDuporderBS.deleteALL(System.Data.IDbConnection@)">
+ <summary>
+刪除全部資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.IccFeedbackDuporderBS.QueryFeedBackDuporderData(System.Collections.Generic.Dictionary{System.String,System.Object},System.Data.IDbConnection@)">
+ <summary>
+ 查詢回饋檔(用藥重複)資料
+ </summary>
+ <param name="Param"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.IccFeedbackDuporderBS.getConnection">
+ <summary>
+ 取得Pub SQL Connection
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.IccFeedbackBS.ImportFeedbackData(System.Collections.Generic.Dictionary{System.String,System.Object},System.Data.DataSet)">
+ <summary>
+ 將回饋檔存入資料庫
+ </summary>
+ <param name="Param"></param>
+ <param name="InputDs"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.IccFeedbackBS.QueryMaxCountOfDay(System.DateTime,System.Data.IDbConnection@)">
+ <summary>
+ 查詢當日已匯入次數
+ </summary>
+ <param name="Import_Date">匯入日期</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.IccFeedbackBS.QueryFeedBackData(System.Collections.Generic.Dictionary{System.String,System.Object},System.Data.IDbConnection@)">
+ <summary>
+ 查詢回饋檔資料
+ </summary>
+ <param name="Param"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.IccFeedbackBS.getConnection">
+ <summary>
+ 取得Pub SQL Connection
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.IccStatisticalTableBS.Query24HourUploadedRate(System.Collections.Generic.Dictionary{System.String,System.Object},System.Data.IDbConnection@)">
+ <summary>
+ 查詢24小時上傳比率
+ </summary>
+ <param name="Param"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.IccStatisticalTableBS.Query24HourUnuploadValue(System.String,System.String,System.Data.IDbConnection)">
+ <summary>
+ 24小時未上傳件數, (補正上傳、未有上傳日期，不必計算在內 2017/02/13 Robert.Huang)
+ </summary>
+ <param name="StartDate"></param>
+ <param name="EndDate"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.IccStatisticalTableBS.QueryTotalValue(System.String,System.String,System.Data.IDbConnection)">
+ <summary>
+ 應上傳件數
+ </summary>
+ <param name="StartDate"></param>
+ <param name="EndDate"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.IccStatisticalTableBS.Query24UnuploadData(System.Collections.Generic.Dictionary{System.String,System.Object},System.Data.IDbConnection@)">
+ <summary>
+ 取得24小時未上傳資料
+ </summary>
+ <param name="Param"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.IccStatisticalTableBS.getConnection">
+ <summary>
+ 取得Pub SQL Connection
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCUploadBS.QueryPubOrderExaminationForSecondOrderCode">
+ <summary>
+ QueryPubOrderExaminationForSecondOrderCode query
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCUploadBS.ProcessSecondOrderCode(System.Data.DataSet@)">
+ <summary>
+ ProcessSecondOrderCode 取代第二個開始的健保碼
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCUploadBS.insertInsertHealth(System.String,System.String,System.String,System.String,System.String,System.Data.DataSet,System.Data.DataSet,System.String,System.DateTime,System.String)">
+ <summary>
+ 紀錄健保就醫資料
+ </summary>
+ <param name="seqNumber"></param>
+ <param name="uploadType">上傳類別(1:門診、2:急診、3:住院、4:居家照護、5:精神科社區復健)</param>
+ <param name="sourceType1">來源別1(1:掛號、2:診間、3:批價、4:檢查室、5:資訊室)</param>
+ <param name="srcSeq">來源序號（如門診序號、住院序號等）</param>
+ <param name="medicalRecNo">病歷號碼</param>
+ <param name="mb1Value">傳入健保就醫資料MB1資料段</param>
+ <param name="mb2ValueList">傳入健保就醫資料MB2資料段，，儲存值為Collection mb2Value</param>
+ <param name="createUser">建立者</param>
+ <param name="createTime">建立時間</param>
+ <param name="errorCodeMessage">異常代碼原因</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCUploadBS.insertInsertInoculate(System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Data.DataSet,System.Data.DataSet,System.String,System.DateTime,System.DateTime)">
+ <summary>
+ 紀錄預防接種資料
+ </summary>
+ <param name="seqNumber"></param>
+ <param name="uploadType">上傳類別(1:門診、2:急診、3:住院、4:居家照護、5:精神科社區復健)</param>
+ <param name="sourceType1">來源別1(1:掛號、2:診間、3:批價、4:檢查室、5:資訊室)</param>
+ <param name="srcSeq">來源序號（如門診序號、住院序號等）</param>
+ <param name="medicalRecNo">病歷號碼</param>
+ <param name="fBabyStool">病歷號碼</param>
+ <param name="mb1Value">傳入健保就醫資料MB1資料段</param>
+ <param name="mb2ValueList">傳入健保就醫資料MB2資料段，，儲存值為Collection mb2Value</param>
+ <param name="createUser">建立者</param>
+ <param name="createTime">建立時間</param>
+ <param name="treatmentTime">就診日期時間</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCUploadBS.queryGetMustUploadField(System.String,System.String)">
+ <summary>
+ 取得上傳必要欄位
+ </summary>
+ <param name="treatmentCategoryId">就醫類別</param>
+ <param name="dataType">資料格式(1:正常 2:異常)</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCUploadBS.queryUpload(System.String,System.String,System.String,System.Boolean,System.String,System.String,System.String)">
+ <summary>
+ 上傳作業擷取上傳資料
+ </summary>
+ <param name="healthSnListStr">健保就醫資料序號</param>
+ <param name="inoculationSnListStr">預防接種資料序號</param>
+ <param name="uploadTypeId">上傳類別1:門診、2:急診、3:住院、4:居家照護、5:精神科社區復健</param>
+ <param name="fBatch">是否進行批次作業</param>
+ <param name="user">使用者</param>
+ <param name="Config_Name_Path">儲存路徑</param>
+ <param name="Config_Name_Mail">Email</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCUploadBS.updateUpload(System.Data.DataSet,System.String)">
+ <summary>
+ 更新資料
+ </summary>
+ <param name="ds">欲上傳的資料</param>
+ <param name="user">使用者</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCUploadBS.updateUpload2(System.Data.DataSet,System.String,System.String)">
+ <summary>
+ 更新資料
+ </summary>
+ <param name="ds">欲上傳的資料</param>
+ <param name="UPLOAD_DATE">上傳時間</param>
+ <param name="user">使用者</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCUploadBS.queryMust_Field_Verify(System.String,System.String)">
+ <summary>
+ 必要欄位擷取資料
+ </summary>
+ <param name="mb1ValueA01">mb1Value的欄位A01值</param>
+ <param name="mb1ValueA23">mb1Value的欄位A23值</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCUploadBS.queryField_Length_Verify(System.String)">
+ <summary>
+ 欄位長度檢核
+ </summary>
+ <param name="totalID">所有須檢核的欄位</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCUploadBS.querySelf_Verify(System.String)">
+ <summary>
+ 自我檢核
+ </summary>
+ <param name="totalID">所有須檢核的欄位</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCUploadBS.queryInteract_Verify1">
+ <summary>
+ 交叉檢核1
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCUploadBS.transferTime(System.DateTime,System.Int32)">
+ <summary>
+ 轉換日期格式為民國(3)年(2)月(2)日(2)時(2)分(2)秒(3)毫秒
+ </summary>
+ <param name="source">來源日期</param>
+ <param name="formatNumber">日期格式 1:年月日 2:年月日時分秒 3:年月日時分秒毫秒</param>
+ <returns>字串格式的日期</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCUploadBS.TransferTaiwanYear(System.DateTime)">
+ <summary>
+ 轉換為民國年月日時分 (yy/MM/dd HH:mm)
+ </summary>
+ <param name="PreLend_Date">欲修改的日期</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCUploadBS.transferPublicTime(System.String)">
+ <summary>
+ 轉換民國日期格式為一般日期格式
+ </summary>
+ <param name="str"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCUploadBS.queryOnlineCheck(System.String)">
+ <summary>
+ Online Check query
+ </summary>
+ <param name="ID">ID</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCUploadBS.getConnection">
+ <summary>
+ 取得資料庫連結
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCUploadBS.getPubConnection">
+ <summary>
+ 取得資料庫連結
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCUploadBS.transferMb1ToDataSet(System.String,Microsoft.VisualBasic.Collection)">
+ <summary>
+ 將Collection轉成DataSet
+ </summary>
+ <param name="tableName">表格名稱</param>
+ <param name="mb1Value">欲轉換的mb1Value</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCUploadBS.transferMb2ToDataSet(System.String,System.Collections.ArrayList)">
+ <summary>
+ 將Collection轉成DataSet
+ </summary>
+ <param name="tableName">表格名稱</param>
+ <param name="mb2ValueList">欲轉換的mb2ValueList</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCUploadBS.ResetNhiBodySiteCode(System.Data.DataTable@,System.Data.IDbConnection@)">
+ <summary>
+ 傳入Impl，如果裡面有Nhi_Body_Site_Code欄位，就幫
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCUploadBS.ProcessEmgZBForRegCancelUI(System.Data.DataSet)">
+ <summary>
+ 處理ZB上傳(For 急診退掛使用)
+ </summary>
+ <param name="ds">ZBData</param>
+ <returns></returns>
+ <remarks>2011/11/17 add by Bella</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCUploadDataMaintainBS.InitialIccUploadDataQueryUI(System.Collections.Generic.Dictionary{System.String,System.Object})">
+ <summary>
+ 取得初始化 ICCUploadDataQueryUI 所需資料
+ </summary>
+ <param name="Param"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCUploadDataMaintainBS.QueryPubSyscode(System.Int32,System.Data.IDbConnection)">
+ <summary>
+ 查詢Pub_Syscode
+ </summary>
+ <param name="TypeId"></param>
+ <param name="conn"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCUploadDataMaintainBS.QueryIccUploadData(System.Collections.Generic.Dictionary{System.String,System.Object})">
+ <summary>
+ 查詢上傳檔
+ </summary>
+ <param name="Param"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCUploadDataMaintainBS.QueryIccUploadDataDetail(System.Collections.Generic.Dictionary{System.String,System.Object})">
+ <summary>
+ 查詢上傳檔明細
+ </summary>
+ <param name="Param"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCUploadDataMaintainBS.QueryIccHealthUpload(System.String,System.Data.IDbConnection)">
+ <summary>
+ Query ICC_Order_Upload
+ </summary>
+ <param name="Health_Sn"></param>
+ <param name="conn"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCUploadDataMaintainBS.QueryIccOrderUpload(System.String,System.Data.IDbConnection)">
+ <summary>
+ Query ICC_Order_Upload
+ </summary>
+ <param name="Health_Sn"></param>
+ <param name="conn"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCUploadDataMaintainBS.QueryIccInoculationUpload(System.String,System.Data.IDbConnection)">
+ <summary>
+ Query ICC_Inoculation_Upload
+ </summary>
+ <param name="Inoculation_Sn"></param>
+ <param name="conn"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCUploadDataMaintainBS.QueryIccBacterinUpload(System.String,System.Data.IDbConnection)">
+ <summary>
+ Query ICC_Bacterin_Upload
+ </summary>
+ <param name="Inoculation_Sn"></param>
+ <param name="conn"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCUploadDataMaintainBS.SaveIccUploadData(System.Collections.Generic.Dictionary{System.String,System.Object},System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+ 存檔
+ </summary>
+ <param name="Param"></param>
+ <param name="InputDs"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCUploadDataMaintainBS.CancelData(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+ 作廢上傳資料
+ </summary>
+ <param name="ds" >作廢的DS</param>
+ <returns>Integer</returns>
+ <remarks>by Sean.Lin on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCUploadDataMaintainBS.updateIccHealthUpload(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容 -MB1 IccHealthUpload 
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCUploadDataMaintainBS.updateIccOrderUpload(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容 -MB2 IccOrderUpload 
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.ICC.ICCUploadDataMaintainBS.getConnection">
+ <summary>
+ 取得Pub SQL Connection
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+</members>
+</doc>

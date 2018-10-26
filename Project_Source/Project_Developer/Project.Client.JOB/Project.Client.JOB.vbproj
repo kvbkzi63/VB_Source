@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9CAE6EFE-97D2-4542-8C8B-D609B9B73CC8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Project.Client.JOB</RootNamespace>
+    <AssemblyName>Project.Client.JOB</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Empty</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\SyscomCompile\Project\Client\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\SyscomCompile\Project\Client\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="My Project\app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialog\JobExtensionDialogUI.resx">
+      <DependentUpon>JobExtensionDialogUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\JobSAReplyDialogUI.resx">
+      <DependentUpon>JobSAReplyDialogUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\JobTextDialogUI.resx">
+      <DependentUpon>JobTextDialogUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintain\JobEmployeeMaintainUI.resx">
+      <DependentUpon>JobEmployeeMaintainUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintain\JobMailGroupDetailUI.resx">
+      <DependentUpon>JobMailGroupDetailUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintain\JobPhraseMaintainUI.resx">
+      <DependentUpon>JobPhraseMaintainUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCR\JobQABugListGridviewUC.resx">
+      <DependentUpon>JobQABugListGridviewUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCR\JobQACreateNewBugUC.resx">
+      <DependentUpon>JobQACreateNewBugUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\JobDBmodifyApplyUI.resx">
+      <DependentUpon>JobDBmodifyApplyUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\JobDBModifyReplyUI.resx">
+      <DependentUpon>JobDBModifyReplyUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintain\JobMailGroupMaintainUI.resx">
+      <DependentUpon>JobMailGroupMaintainUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\JobManageTaskListUI.resx">
+      <DependentUpon>JobManageTaskListUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\JobModifiyUI.resx">
+      <DependentUpon>JobModifiyUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\JobPGJobListUI.resx">
+      <DependentUpon>JobPGJobListUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintain\JobProjectMaintainUI.resx">
+      <DependentUpon>JobProjectMaintainUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\JobPGSubmitUI.resx">
+      <DependentUpon>JobPGSubmitUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\JobQACheckBugHistoryUI.resx">
+      <DependentUpon>JobQACheckBugHistoryUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\JobQAJobListUI.resx">
+      <DependentUpon>JobQAJobListUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\JobSAJobListConfirmUI.resx">
+      <DependentUpon>JobSAJobListConfirmUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\JobSAJobListUI.resx">
+      <DependentUpon>JobSAJobListUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\JobServiceRecordUI.resx">
+      <DependentUpon>JobServiceRecordUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\JobSpecHistoryUI.resx">
+      <DependentUpon>JobSpecHistoryUI.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Com.Syscom.WinFormsUI.Docking">
+      <HintPath>..\..\..\..\..\..\..\Kmuh_Source\Mcku_His\ExtLIBs\Com.Syscom.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml">
+      <HintPath>..\Compiler.Client\packages\DocumentFormat.OpenXml.2.5\lib\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="JOBClientServiceFactory, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SyscomCompile\Project\Client\JOBClientServiceFactory.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel">
+      <HintPath>..\..\ExtLIBs\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Client, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExtLIBs\Microsoft.TeamFoundation.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExtLIBs\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.VersionControl.Client, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExtLIBs\Microsoft.TeamFoundation.VersionControl.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Client, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExtLIBs\Microsoft.VisualStudio.Services.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ExtLIBs\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Project.Comm.JOB">
+      <HintPath>..\..\SyscomCompile\Project\Comm\Project.Comm.JOB.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Client.CMM, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SyscomCompile\Syscom\Client\Syscom.Client.CMM.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Client.FTM">
+      <HintPath>..\..\SyscomCompile\Syscom\Client\Syscom.Client.FTM.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Client.ServiceFactory, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SyscomCompile\Syscom\Client\Syscom.Client.ServiceFactory.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Client.UCL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SyscomCompile\Syscom\Client\Syscom.Client.UCL.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Comm.BASE, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SyscomCompile\Syscom\Common\Syscom.Comm.BASE.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Comm.EXP, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SyscomCompile\Syscom\Common\Syscom.Comm.EXP.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Comm.LOG, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SyscomCompile\Syscom\Common\Syscom.Comm.LOG.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Comm.TableFactory, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SyscomCompile\Syscom\Common\Syscom.Comm.TableFactory.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Comm.Utility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SyscomCompile\Syscom\Common\Syscom.Comm.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BPClass\DBConnection.vb" />
+    <Compile Include="BPClass\JobEmployeeMaintainBP\JobEmployeeMaintainBP.vb" />
+    <Compile Include="BPClass\ProjectClientBP.vb" />
+    <Compile Include="BPClass\SendMail.vb" />
+    <Compile Include="Dialog\JobExtensionDialogUI.Designer.vb">
+      <DependentUpon>JobExtensionDialogUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\JobExtensionDialogUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\JobTextDialogUI.Designer.vb">
+      <DependentUpon>JobTextDialogUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\JobTextDialogUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintain\JobEmployeeMaintainUI.Designer.vb">
+      <DependentUpon>JobEmployeeMaintainUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Maintain\JobEmployeeMaintainUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintain\JobMailGroupDetailUI.Designer.vb">
+      <DependentUpon>JobMailGroupDetailUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Maintain\JobMailGroupDetailUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintain\JobPhraseMaintainUI.Designer.vb">
+      <DependentUpon>JobPhraseMaintainUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Maintain\JobPhraseMaintainUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UCR\JobQABugListGridviewUC.Designer.vb">
+      <DependentUpon>JobQABugListGridviewUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCR\JobQABugListGridviewUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCR\JobQACreateNewBugUC.Designer.vb">
+      <DependentUpon>JobQACreateNewBugUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCR\JobQACreateNewBugUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\JobDBModifyReplyUI.Designer.vb">
+      <DependentUpon>JobDBModifyReplyUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\JobDBModifyReplyUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\JobSAReplyDialogUI.Designer.vb">
+      <DependentUpon>JobSAReplyDialogUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog\JobSAReplyDialogUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\JobDBmodifyApplyUI.Designer.vb">
+      <DependentUpon>JobDBmodifyApplyUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\JobDBmodifyApplyUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintain\JobMailGroupMaintainUI.Designer.vb">
+      <DependentUpon>JobMailGroupMaintainUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Maintain\JobMailGroupMaintainUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\JobManageTaskListUI.Designer.vb">
+      <DependentUpon>JobManageTaskListUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\JobManageTaskListUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\JobModifiyUI.Designer.vb">
+      <DependentUpon>JobModifiyUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\JobModifiyUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\JobPGJobListUI.Designer.vb">
+      <DependentUpon>JobPGJobListUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\JobPGJobListUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintain\JobProjectMaintainUI.Designer.vb">
+      <DependentUpon>JobProjectMaintainUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Maintain\JobProjectMaintainUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\JobPGSubmitUI.Designer.vb">
+      <DependentUpon>JobPGSubmitUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\JobPGSubmitUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\JobQACheckBugHistoryUI.Designer.vb">
+      <DependentUpon>JobQACheckBugHistoryUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\JobQACheckBugHistoryUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\JobQAJobListUI.Designer.vb">
+      <DependentUpon>JobQAJobListUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\JobQAJobListUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\JobSAJobListConfirmUI.Designer.vb">
+      <DependentUpon>JobSAJobListConfirmUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\JobSAJobListConfirmUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\JobSAJobListUI.Designer.vb">
+      <DependentUpon>JobSAJobListUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\JobSAJobListUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\JobServiceRecordUI.Designer.vb">
+      <DependentUpon>JobServiceRecordUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\JobServiceRecordUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\JobSpecHistoryUI.Designer.vb">
+      <DependentUpon>JobSpecHistoryUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\JobSpecHistoryUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{94E38DFF-614B-4CBD-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

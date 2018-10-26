@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a40f5633-5042-4531-a310-b840dcd7c139" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:40611/IccService2.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="IccService2.xsd" MetadataType="Schema" ID="20671981-bb1e-458c-a116-5983699ff4a7" SourceId="1" SourceUrl="http://localhost:40611/IccService2.svc?xsd=xsd4" />
+    <MetadataFile FileName="IccService21.xsd" MetadataType="Schema" ID="f6f097e7-c47d-4831-9b52-100e6c802b7c" SourceId="1" SourceUrl="http://localhost:40611/IccService2.svc?xsd=xsd0" />
+    <MetadataFile FileName="IccService21.wsdl" MetadataType="Wsdl" ID="62c18388-4323-4bd6-b264-2a4f9d7493e5" SourceId="1" SourceUrl="http://localhost:40611/IccService2.svc?wsdl" />
+    <MetadataFile FileName="IccService21.disco" MetadataType="Disco" ID="9975b207-e9e1-453e-b430-68fa1d7df486" SourceId="1" SourceUrl="http://localhost:40611/IccService2.svc?disco" />
+    <MetadataFile FileName="IccService22.xsd" MetadataType="Schema" ID="b37b8d23-77e1-4929-835c-fdfa886e084e" SourceId="1" SourceUrl="http://localhost:40611/IccService2.svc?xsd=xsd2" />
+    <MetadataFile FileName="IccService23.xsd" MetadataType="Schema" ID="2ed309a4-111d-4d96-b0c3-3f312564dfeb" SourceId="1" SourceUrl="http://localhost:40611/IccService2.svc?xsd=xsd3" />
+    <MetadataFile FileName="IccService24.xsd" MetadataType="Schema" ID="1e944ff4-0948-4930-a214-0a66bda95949" SourceId="1" SourceUrl="http://localhost:40611/IccService2.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,113 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Project.Server.JOB", "..\Project.Server.JOB\Project.Server.JOB.vbproj", "{5CF1E999-79AD-408D-B923-37679CC48199}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Project.Comm.JOB", "..\Project.Comm.JOB\Project.Comm.JOB.vbproj", "{91118F36-6DD0-4C6D-B1E4-7C041E6D6B39}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ProjectWCFService", "http://localhost:50571", "{B13C5EDD-3DFD-4CCF-9387-A035F6F015FB}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "SAK"
+		SccAuxPath = "SAK"
+		SccLocalPath = "SAK"
+		SccProvider = "SAK"
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_50571"
+		Debug.AspNetCompiler.PhysicalPath = "..\ProjectWCFService\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50571\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_50571"
+		Release.AspNetCompiler.PhysicalPath = "..\ProjectWCFService\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50571\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "..\ProjectWCFService\"
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Syscom.Server.BO", "..\..\Syscom_Developer\Syscom_BO\Syscom.Server.BO\Syscom.Server.BO.vbproj", "{0714D4D2-09E9-41F9-8B6D-AF2338962ED0}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Syscom.Comm.EXP", "..\..\Syscom_Developer\Syscom_Common\Syscom.Comm.EXP\Syscom.Comm.EXP.vbproj", "{B69AD864-DB45-47F4-80EA-ED1038CABE45}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Syscom.Comm.TableFactory", "..\..\Syscom_Developer\Syscom_Common\Syscom.Comm.TableFactory\Syscom.Comm.TableFactory.vbproj", "{C8451FFD-EC4A-4CA2-A27E-98B1A51C9409}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Syscom.Server.PUB", "..\..\Syscom_Developer\Syscom_PUB\Syscom.Server.PUB\Syscom.Server.PUB.vbproj", "{0EB6A0A6-5D9E-4ADF-938A-1BB7EBE39F80}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5CF1E999-79AD-408D-B923-37679CC48199}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CF1E999-79AD-408D-B923-37679CC48199}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CF1E999-79AD-408D-B923-37679CC48199}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CF1E999-79AD-408D-B923-37679CC48199}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91118F36-6DD0-4C6D-B1E4-7C041E6D6B39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91118F36-6DD0-4C6D-B1E4-7C041E6D6B39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91118F36-6DD0-4C6D-B1E4-7C041E6D6B39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91118F36-6DD0-4C6D-B1E4-7C041E6D6B39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B13C5EDD-3DFD-4CCF-9387-A035F6F015FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B13C5EDD-3DFD-4CCF-9387-A035F6F015FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B13C5EDD-3DFD-4CCF-9387-A035F6F015FB}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{B13C5EDD-3DFD-4CCF-9387-A035F6F015FB}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{0714D4D2-09E9-41F9-8B6D-AF2338962ED0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0714D4D2-09E9-41F9-8B6D-AF2338962ED0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0714D4D2-09E9-41F9-8B6D-AF2338962ED0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0714D4D2-09E9-41F9-8B6D-AF2338962ED0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B69AD864-DB45-47F4-80EA-ED1038CABE45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B69AD864-DB45-47F4-80EA-ED1038CABE45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B69AD864-DB45-47F4-80EA-ED1038CABE45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B69AD864-DB45-47F4-80EA-ED1038CABE45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8451FFD-EC4A-4CA2-A27E-98B1A51C9409}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8451FFD-EC4A-4CA2-A27E-98B1A51C9409}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8451FFD-EC4A-4CA2-A27E-98B1A51C9409}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8451FFD-EC4A-4CA2-A27E-98B1A51C9409}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EB6A0A6-5D9E-4ADF-938A-1BB7EBE39F80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EB6A0A6-5D9E-4ADF-938A-1BB7EBE39F80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EB6A0A6-5D9E-4ADF-938A-1BB7EBE39F80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EB6A0A6-5D9E-4ADF-938A-1BB7EBE39F80}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {92074914-D872-40AB-855D-20719E791D29}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 8
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://hisap2.syscom.com.tw:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ..\\Project.Server.JOB\\Project.Server.JOB.vbproj
+		SccProjectName1 = ../../Project.Server.JOB
+		SccLocalPath1 = ..\\Project.Server.JOB
+		SccProjectUniqueName2 = ..\\Project.Comm.JOB\\Project.Comm.JOB.vbproj
+		SccProjectName2 = ../../Project.Comm.JOB
+		SccLocalPath2 = ..\\Project.Comm.JOB
+		SccWebProject3 = true
+		SccProjectUniqueName3 = http://localhost:50571
+		SccProjectName3 = ../../ProjectWCFService
+		SccLocalPath3 = http://localhost:50571/
+		SccProjectEnlistmentChoice3 = 2
+		SccProjectUniqueName4 = ..\\..\\Syscom_Developer\\Syscom_BO\\Syscom.Server.BO\\Syscom.Server.BO.vbproj
+		SccProjectName4 = ../../../Syscom_Developer/Syscom_BO/Syscom.Server.BO
+		SccLocalPath4 = ..\\..\\Syscom_Developer\\Syscom_BO\\Syscom.Server.BO
+		SccProjectUniqueName5 = ..\\..\\Syscom_Developer\\Syscom_Common\\Syscom.Comm.EXP\\Syscom.Comm.EXP.vbproj
+		SccProjectName5 = ../../../Syscom_Developer/Syscom_Common/Syscom.Comm.EXP
+		SccLocalPath5 = ..\\..\\Syscom_Developer\\Syscom_Common\\Syscom.Comm.EXP
+		SccProjectUniqueName6 = ..\\..\\Syscom_Developer\\Syscom_Common\\Syscom.Comm.TableFactory\\Syscom.Comm.TableFactory.vbproj
+		SccProjectName6 = ../../../Syscom_Developer/Syscom_Common/Syscom.Comm.TableFactory
+		SccLocalPath6 = ..\\..\\Syscom_Developer\\Syscom_Common\\Syscom.Comm.TableFactory
+		SccProjectUniqueName7 = ..\\..\\Syscom_Developer\\Syscom_PUB\\Syscom.Server.PUB\\Syscom.Server.PUB.vbproj
+		SccProjectName7 = ../../../Syscom_Developer/Syscom_PUB/Syscom.Server.PUB
+		SccLocalPath7 = ..\\..\\Syscom_Developer\\Syscom_PUB\\Syscom.Server.PUB
+	EndGlobalSection
+EndGlobal

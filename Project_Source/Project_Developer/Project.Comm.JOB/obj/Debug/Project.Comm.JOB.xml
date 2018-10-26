@@ -1,0 +1,721 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Project.Comm.JOB
+</name>
+</assembly>
+<members>
+<member name="T:Project.Comm.JOB.My.Resources.Resources">
+<summary>
+  用於查詢當地語系化字串等的強類型資源類別。
+</summary>
+</member>
+<member name="P:Project.Comm.JOB.My.Resources.Resources.ResourceManager">
+<summary>
+  傳回這個類別使用的快取的 ResourceManager 執行個體。
+</summary>
+</member>
+<member name="P:Project.Comm.JOB.My.Resources.Resources.Culture">
+<summary>
+  覆寫目前執行緒的 CurrentUICulture 屬性，對象是所有
+  使用這個強類型資源類別的資源查閱。
+</summary>
+</member>
+<member name="M:Project.Comm.JOB.JobPgJobRecordDataTableFactory.example">
+ <summary>
+操作 data table 的程式範例，copy 程式碼使用之....
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobPgJobRecordDataTableFactory.getDataTable">
+ <summary>
+取得資料庫表格的 DataTable
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobPgJobRecordDataTableFactory.getDataTableWithSchema">
+ <summary>
+取得資料庫表格的 DataTable 加上各欄位的資料型態
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobPgJobRecordDataTableFactory.getDataTableWithNoPK">
+ <summary>
+取得資料庫表格的 DataTable - 不指定PK
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobPgJobRecordDataTableFactory.getDataSet">
+ <summary>
+取得資料庫表格的 DataSet
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobPgJobRecordDataTableFactory.getDataSetWithSchema">
+ <summary>
+取得資料庫表格的 DataSet 加上各欄位的資料型態
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobPgJobRecordDataTableFactory.getDataSetWithNoPK">
+ <summary>
+取得資料庫表格的 DataSet - 不指定PK
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobQaAttachedFilesDataTableFactory.example">
+ <summary>
+操作 data table 的程式範例，copy 程式碼使用之....
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobQaAttachedFilesDataTableFactory.getDataTable">
+ <summary>
+取得資料庫表格的 DataTable
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobQaAttachedFilesDataTableFactory.getDataTableWithSchema">
+ <summary>
+取得資料庫表格的 DataTable 加上各欄位的資料型態
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobQaAttachedFilesDataTableFactory.getDataTableWithNoPK">
+ <summary>
+取得資料庫表格的 DataTable - 不指定PK
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobQaAttachedFilesDataTableFactory.getDataSet">
+ <summary>
+取得資料庫表格的 DataSet
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobQaAttachedFilesDataTableFactory.getDataSetWithSchema">
+ <summary>
+取得資料庫表格的 DataSet 加上各欄位的資料型態
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobQaAttachedFilesDataTableFactory.getDataSetWithNoPK">
+ <summary>
+取得資料庫表格的 DataSet - 不指定PK
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobQaBugRecordDataTableFactory.example">
+ <summary>
+操作 data table 的程式範例，copy 程式碼使用之....
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobQaBugRecordDataTableFactory.getDataTable">
+ <summary>
+取得資料庫表格的 DataTable
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobQaBugRecordDataTableFactory.getDataTableWithSchema">
+ <summary>
+取得資料庫表格的 DataTable 加上各欄位的資料型態
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobQaBugRecordDataTableFactory.getDataTableWithNoPK">
+ <summary>
+取得資料庫表格的 DataTable - 不指定PK
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobQaBugRecordDataTableFactory.getDataSet">
+ <summary>
+取得資料庫表格的 DataSet
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobQaBugRecordDataTableFactory.getDataSetWithSchema">
+ <summary>
+取得資料庫表格的 DataSet 加上各欄位的資料型態
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobQaBugRecordDataTableFactory.getDataSetWithNoPK">
+ <summary>
+取得資料庫表格的 DataSet - 不指定PK
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobQaBugRecordModifiyLogDataTableFactory.example">
+ <summary>
+操作 data table 的程式範例，copy 程式碼使用之....
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobQaBugRecordModifiyLogDataTableFactory.getDataTable">
+ <summary>
+取得資料庫表格的 DataTable
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobQaBugRecordModifiyLogDataTableFactory.getDataTableWithSchema">
+ <summary>
+取得資料庫表格的 DataTable 加上各欄位的資料型態
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobQaBugRecordModifiyLogDataTableFactory.getDataTableWithNoPK">
+ <summary>
+取得資料庫表格的 DataTable - 不指定PK
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobQaBugRecordModifiyLogDataTableFactory.getDataSet">
+ <summary>
+取得資料庫表格的 DataSet
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobQaBugRecordModifiyLogDataTableFactory.getDataSetWithSchema">
+ <summary>
+取得資料庫表格的 DataSet 加上各欄位的資料型態
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobQaBugRecordModifiyLogDataTableFactory.getDataSetWithNoPK">
+ <summary>
+取得資料庫表格的 DataSet - 不指定PK
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobQaTestRecordDataTableFactory.example">
+ <summary>
+操作 data table 的程式範例，copy 程式碼使用之....
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobQaTestRecordDataTableFactory.getDataTable">
+ <summary>
+取得資料庫表格的 DataTable
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobQaTestRecordDataTableFactory.getDataTableWithSchema">
+ <summary>
+取得資料庫表格的 DataTable 加上各欄位的資料型態
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobQaTestRecordDataTableFactory.getDataTableWithNoPK">
+ <summary>
+取得資料庫表格的 DataTable - 不指定PK
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobQaTestRecordDataTableFactory.getDataSet">
+ <summary>
+取得資料庫表格的 DataSet
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobQaTestRecordDataTableFactory.getDataSetWithSchema">
+ <summary>
+取得資料庫表格的 DataSet 加上各欄位的資料型態
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobQaTestRecordDataTableFactory.getDataSetWithNoPK">
+ <summary>
+取得資料庫表格的 DataSet - 不指定PK
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobSaAssignRecordDataTableFactory.example">
+ <summary>
+操作 data table 的程式範例，copy 程式碼使用之....
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobSaAssignRecordDataTableFactory.getDataTable">
+ <summary>
+取得資料庫表格的 DataTable
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobSaAssignRecordDataTableFactory.getDataTableWithSchema">
+ <summary>
+取得資料庫表格的 DataTable 加上各欄位的資料型態
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobSaAssignRecordDataTableFactory.getDataTableWithNoPK">
+ <summary>
+取得資料庫表格的 DataTable - 不指定PK
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobSaAssignRecordDataTableFactory.getDataSet">
+ <summary>
+取得資料庫表格的 DataSet
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobSaAssignRecordDataTableFactory.getDataSetWithSchema">
+ <summary>
+取得資料庫表格的 DataSet 加上各欄位的資料型態
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobSaAssignRecordDataTableFactory.getDataSetWithNoPK">
+ <summary>
+取得資料庫表格的 DataSet - 不指定PK
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobSaDbmodifiedRecordDataTableFactory.example">
+ <summary>
+操作 data table 的程式範例，copy 程式碼使用之....
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobSaDbmodifiedRecordDataTableFactory.getDataTable">
+ <summary>
+取得資料庫表格的 DataTable
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobSaDbmodifiedRecordDataTableFactory.getDataTableWithSchema">
+ <summary>
+取得資料庫表格的 DataTable 加上各欄位的資料型態
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobSaDbmodifiedRecordDataTableFactory.getDataTableWithNoPK">
+ <summary>
+取得資料庫表格的 DataTable - 不指定PK
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobSaDbmodifiedRecordDataTableFactory.getDataSet">
+ <summary>
+取得資料庫表格的 DataSet
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobSaDbmodifiedRecordDataTableFactory.getDataSetWithSchema">
+ <summary>
+取得資料庫表格的 DataSet 加上各欄位的資料型態
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobSaDbmodifiedRecordDataTableFactory.getDataSetWithNoPK">
+ <summary>
+取得資料庫表格的 DataSet - 不指定PK
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobSaRejectRecordDataTableFactory.example">
+ <summary>
+操作 data table 的程式範例，copy 程式碼使用之....
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobSaRejectRecordDataTableFactory.getDataTable">
+ <summary>
+取得資料庫表格的 DataTable
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobSaRejectRecordDataTableFactory.getDataTableWithSchema">
+ <summary>
+取得資料庫表格的 DataTable 加上各欄位的資料型態
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobSaRejectRecordDataTableFactory.getDataTableWithNoPK">
+ <summary>
+取得資料庫表格的 DataTable - 不指定PK
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobSaRejectRecordDataTableFactory.getDataSet">
+ <summary>
+取得資料庫表格的 DataSet
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobSaRejectRecordDataTableFactory.getDataSetWithSchema">
+ <summary>
+取得資料庫表格的 DataSet 加上各欄位的資料型態
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobSaRejectRecordDataTableFactory.getDataSetWithNoPK">
+ <summary>
+取得資料庫表格的 DataSet - 不指定PK
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobSaSpecfilesDataTableFactory.example">
+ <summary>
+操作 data table 的程式範例，copy 程式碼使用之....
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobSaSpecfilesDataTableFactory.getDataTable">
+ <summary>
+取得資料庫表格的 DataTable
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobSaSpecfilesDataTableFactory.getDataTableWithSchema">
+ <summary>
+取得資料庫表格的 DataTable 加上各欄位的資料型態
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobSaSpecfilesDataTableFactory.getDataTableWithNoPK">
+ <summary>
+取得資料庫表格的 DataTable - 不指定PK
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobSaSpecfilesDataTableFactory.getDataSet">
+ <summary>
+取得資料庫表格的 DataSet
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobSaSpecfilesDataTableFactory.getDataSetWithSchema">
+ <summary>
+取得資料庫表格的 DataSet 加上各欄位的資料型態
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobSaSpecfilesDataTableFactory.getDataSetWithNoPK">
+ <summary>
+取得資料庫表格的 DataSet - 不指定PK
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobServiceRecordDataTableFactory.example">
+ <summary>
+操作 data table 的程式範例，copy 程式碼使用之....
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobServiceRecordDataTableFactory.getDataTable">
+ <summary>
+取得資料庫表格的 DataTable
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobServiceRecordDataTableFactory.getDataTableWithSchema">
+ <summary>
+取得資料庫表格的 DataTable 加上各欄位的資料型態
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobServiceRecordDataTableFactory.getDataTableWithNoPK">
+ <summary>
+取得資料庫表格的 DataTable - 不指定PK
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobServiceRecordDataTableFactory.getDataSet">
+ <summary>
+取得資料庫表格的 DataSet
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobServiceRecordDataTableFactory.getDataSetWithSchema">
+ <summary>
+取得資料庫表格的 DataSet 加上各欄位的資料型態
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobServiceRecordDataTableFactory.getDataSetWithNoPK">
+ <summary>
+取得資料庫表格的 DataSet - 不指定PK
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobServiceReplyRecordDataTableFactory.example">
+ <summary>
+操作 data table 的程式範例，copy 程式碼使用之....
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobServiceReplyRecordDataTableFactory.getDataTable">
+ <summary>
+取得資料庫表格的 DataTable
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobServiceReplyRecordDataTableFactory.getDataTableWithSchema">
+ <summary>
+取得資料庫表格的 DataTable 加上各欄位的資料型態
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobServiceReplyRecordDataTableFactory.getDataTableWithNoPK">
+ <summary>
+取得資料庫表格的 DataTable - 不指定PK
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobServiceReplyRecordDataTableFactory.getDataSet">
+ <summary>
+取得資料庫表格的 DataSet
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobServiceReplyRecordDataTableFactory.getDataSetWithSchema">
+ <summary>
+取得資料庫表格的 DataSet 加上各欄位的資料型態
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.JobServiceReplyRecordDataTableFactory.getDataSetWithNoPK">
+ <summary>
+取得資料庫表格的 DataSet - 不指定PK
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.PrjCustomDataTableFactory.example">
+ <summary>
+操作 data table 的程式範例，copy 程式碼使用之....
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.PrjCustomDataTableFactory.getDataTable">
+ <summary>
+取得資料庫表格(無主鍵)的 DataTable
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.PrjCustomDataTableFactory.getDataTableWithSchema">
+ <summary>
+取得資料庫表格(無主鍵)的 DataTable 加上各欄位的資料型態
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.PrjMailGroupDataTableFactory.example">
+ <summary>
+操作 data table 的程式範例，copy 程式碼使用之....
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.PrjMailGroupDataTableFactory.getDataTable">
+ <summary>
+取得資料庫表格的 DataTable
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.PrjMailGroupDataTableFactory.getDataTableWithSchema">
+ <summary>
+取得資料庫表格的 DataTable 加上各欄位的資料型態
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.PrjMailGroupDataTableFactory.getDataTableWithNoPK">
+ <summary>
+取得資料庫表格的 DataTable - 不指定PK
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.PrjMailGroupDataTableFactory.getDataSet">
+ <summary>
+取得資料庫表格的 DataSet
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.PrjMailGroupDataTableFactory.getDataSetWithSchema">
+ <summary>
+取得資料庫表格的 DataSet 加上各欄位的資料型態
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.PrjMailGroupDataTableFactory.getDataSetWithNoPK">
+ <summary>
+取得資料庫表格的 DataSet - 不指定PK
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.PrjMailGroupDetailDataTableFactory.example">
+ <summary>
+操作 data table 的程式範例，copy 程式碼使用之....
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.PrjMailGroupDetailDataTableFactory.getDataTable">
+ <summary>
+取得資料庫表格的 DataTable
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.PrjMailGroupDetailDataTableFactory.getDataTableWithSchema">
+ <summary>
+取得資料庫表格的 DataTable 加上各欄位的資料型態
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.PrjMailGroupDetailDataTableFactory.getDataTableWithNoPK">
+ <summary>
+取得資料庫表格的 DataTable - 不指定PK
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.PrjMailGroupDetailDataTableFactory.getDataSet">
+ <summary>
+取得資料庫表格的 DataSet
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.PrjMailGroupDetailDataTableFactory.getDataSetWithSchema">
+ <summary>
+取得資料庫表格的 DataSet 加上各欄位的資料型態
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.PrjMailGroupDetailDataTableFactory.getDataSetWithNoPK">
+ <summary>
+取得資料庫表格的 DataSet - 不指定PK
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.PrjProjectDataTableFactory.example">
+ <summary>
+操作 data table 的程式範例，copy 程式碼使用之....
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.PrjProjectDataTableFactory.getDataTable">
+ <summary>
+取得資料庫表格的 DataTable
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.PrjProjectDataTableFactory.getDataTableWithSchema">
+ <summary>
+取得資料庫表格的 DataTable 加上各欄位的資料型態
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.PrjProjectDataTableFactory.getDataTableWithNoPK">
+ <summary>
+取得資料庫表格的 DataTable - 不指定PK
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.PrjProjectDataTableFactory.getDataSet">
+ <summary>
+取得資料庫表格的 DataSet
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.PrjProjectDataTableFactory.getDataSetWithSchema">
+ <summary>
+取得資料庫表格的 DataSet 加上各欄位的資料型態
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.PrjProjectDataTableFactory.getDataSetWithNoPK">
+ <summary>
+取得資料庫表格的 DataSet - 不指定PK
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.PrjProjectSystemDataTableFactory.example">
+ <summary>
+操作 data table 的程式範例，copy 程式碼使用之....
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.PrjProjectSystemDataTableFactory.getDataTable">
+ <summary>
+取得資料庫表格的 DataTable
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.PrjProjectSystemDataTableFactory.getDataTableWithSchema">
+ <summary>
+取得資料庫表格的 DataTable 加上各欄位的資料型態
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.PrjProjectSystemDataTableFactory.getDataTableWithNoPK">
+ <summary>
+取得資料庫表格的 DataTable - 不指定PK
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.PrjProjectSystemDataTableFactory.getDataSet">
+ <summary>
+取得資料庫表格的 DataSet
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.PrjProjectSystemDataTableFactory.getDataSetWithSchema">
+ <summary>
+取得資料庫表格的 DataSet 加上各欄位的資料型態
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.PrjProjectSystemDataTableFactory.getDataSetWithNoPK">
+ <summary>
+取得資料庫表格的 DataSet - 不指定PK
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.PrjProjectSystemFunctionDataTableFactory.example">
+ <summary>
+操作 data table 的程式範例，copy 程式碼使用之....
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.PrjProjectSystemFunctionDataTableFactory.getDataTable">
+ <summary>
+取得資料庫表格(無主鍵)的 DataTable
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.PrjProjectSystemFunctionDataTableFactory.getDataTableWithSchema">
+ <summary>
+取得資料庫表格(無主鍵)的 DataTable 加上各欄位的資料型態
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Comm.JOB.SendMail.SendMail(System.String,System.String,System.String,System.Boolean)">
+ <summary>
+ SendMail
+ <param name="Receiver">收件者</param>
+ <param name="Title">標題</param>
+ <param name="Message">內容</param>
+ <returns></returns>
+ </summary>
+</member>
+<member name="M:Project.Comm.JOB.SendMail.SendMail(System.String,System.String,System.String,System.String,System.Boolean)">
+ <summary>
+ 寄送MAIL 無附加檔案
+ </summary>
+ <param name="MainReceiver">主收件者</param>
+ <param name="CCUser">CC人員，以;分開</param>
+ <param name="Title">標題</param>
+ <param name="Message">內容</param>
+ <returns></returns>
+</member>
+<member name="M:Project.Comm.JOB.SendMail.SendMail(System.String,System.String,System.String,System.String,System.IO.Stream,System.String,System.Boolean)">
+ <summary>
+ 寄送MAIL 附加檔案
+ </summary>
+ <param name="MainReceiver"></param>
+ <param name="CCUser"></param>
+ <param name="Title"></param>
+ <param name="Message"></param>
+ <returns></returns>
+</member>
+</members>
+</doc>

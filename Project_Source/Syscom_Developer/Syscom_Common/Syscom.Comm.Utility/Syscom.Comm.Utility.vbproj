@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5AFBC034-8AFB-42DF-9C1B-91D5F46C1D1B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Syscom.Comm.Utility</RootNamespace>
+    <AssemblyName>Syscom.Comm.Utility</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\..\SyscomCompile\Syscom\Common\</OutputPath>
+    <DocumentationFile>Syscom.Comm.Utility.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\SyscomCompile\Syscom\Common\</OutputPath>
+    <DocumentationFile>Syscom.Comm.Utility.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Com.Syscom.WinFormsUI.Docking, Version=2.2.5298.31716, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\ExtLIBs\Com.Syscom.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="IZipLib">
+      <HintPath>..\..\..\ExtLIBs\IZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\ExtLIBs\Word\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="zxing, Version=0.12.0.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\ExtLIBs\zxing.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="File\FileCodec.vb" />
+    <Compile Include="File\FileCompress.vb" />
+    <Compile Include="File\FileTransferDataFormat.vb" />
+    <Compile Include="File\FileTransferTool.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Utility\AppContext.vb" />
+    <Compile Include="Utility\ByteArrayUtil.vb" />
+    <Compile Include="Utility\ChargeUtil.vb" />
+    <Compile Include="Utility\CheckMethodUtil.vb" />
+    <Compile Include="Utility\ColorUtil.vb" />
+    <Compile Include="Utility\CompareUtil.vb" />
+    <Compile Include="Utility\ConfigUtil.vb" />
+    <Compile Include="Utility\ControlUtil.vb" />
+    <Compile Include="Utility\DataSetUtil.vb" />
+    <Compile Include="Utility\DateUtil.vb" />
+    <Compile Include="Utility\EncodingUtil.vb" />
+    <Compile Include="Utility\FileUtil.vb" />
+    <Compile Include="Utility\FormulaUtil.vb" />
+    <Compile Include="Utility\IDAutomation_FontEncoder_Dotnet.VB" />
+    <Compile Include="Utility\ImageTool.vb" />
+    <Compile Include="Utility\MagicNumbers.vb" />
+    <Compile Include="Utility\MailUtil.vb" />
+    <Compile Include="Utility\MathUtil.vb" />
+    <Compile Include="Utility\MessageQueueUtil.vb" />
+    <Compile Include="Utility\NumberUtil.vb" />
+    <Compile Include="Utility\PassWordUtil.vb" />
+    <Compile Include="Utility\ResourceUtil.vb" />
+    <Compile Include="Utility\ScreenUtil.vb" />
+    <Compile Include="Utility\SerializeFileInfo.vb" />
+    <Compile Include="Utility\SerialNoUtil.vb" />
+    <Compile Include="Utility\StringUtil.vb" />
+    <Compile Include="Utility\Time.vb" />
+    <Compile Include="Utility\UserProfile.vb" />
+    <Compile Include="Utility\WebUtil.vb" />
+    <Compile Include="Utility\XMLUtil.vb" />
+    <Compile Include="Utility\ZipAPI.vb" />
+    <Compile Include="Utility\ZxingNetUtil.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Syscom.Comm.BASE\Syscom.Comm.BASE.vbproj">
+      <Project>{399f9414-7170-40c0-8b24-ba5007901fe0}</Project>
+      <Name>Syscom.Comm.BASE</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Syscom.Comm.EXP\Syscom.Comm.EXP.vbproj">
+      <Project>{b69ad864-db45-47f4-80ea-ed1038cabe45}</Project>
+      <Name>Syscom.Comm.EXP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Syscom.Comm.TableFactory\Syscom.Comm.TableFactory.vbproj">
+      <Project>{c8451ffd-ec4a-4ca2-a27e-98b1a51c9409}</Project>
+      <Name>Syscom.Comm.TableFactory</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

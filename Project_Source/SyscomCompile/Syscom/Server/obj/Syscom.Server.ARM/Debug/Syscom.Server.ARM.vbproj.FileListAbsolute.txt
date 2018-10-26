@@ -1,0 +1,9 @@
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Server\obj\Syscom.Server.ARM\Debug\Syscom.Server.ARM.vbprojResolveAssemblyReference.cache
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Server\obj\Syscom.Server.ARM\Debug\Syscom.Server.ARM.Resources.resources
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Server\obj\Syscom.Server.ARM\Debug\Syscom.Server.ARM.vbproj.GenerateResource.Cache
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Server\obj\Syscom.Server.ARM\Debug\Syscom.Server.ARM.dll
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Server\obj\Syscom.Server.ARM\Debug\Syscom.Server.ARM.xml
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Server\obj\Syscom.Server.ARM\Debug\Syscom.Server.ARM.pdb
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Server\Syscom.Server.ARM.dll
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Server\Syscom.Server.ARM.pdb
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Server\Syscom.Server.ARM.xml

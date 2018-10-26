@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="89ee46a2-2009-4e46-bc70-89ad718834b2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:40611/UclService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="UclService1.xsd" MetadataType="Schema" ID="afa39264-34d0-4d07-b2a3-07e6176a4211" SourceId="1" SourceUrl="http://localhost:40611/UclService.svc?xsd=xsd4" />
+    <MetadataFile FileName="UclService1.disco" MetadataType="Disco" ID="abb871ef-e33a-4035-848e-b646931fd696" SourceId="1" SourceUrl="http://localhost:40611/UclService.svc?disco" />
+    <MetadataFile FileName="UclService32.xsd" MetadataType="Schema" ID="d7c7be6c-fe17-4294-97d2-b22c4a2c6a16" SourceId="1" SourceUrl="http://localhost:40611/UclService.svc?xsd=xsd1" />
+    <MetadataFile FileName="UclService3.xsd" MetadataType="Schema" ID="df5984e2-91f8-406c-a1bf-b70297721cb5" SourceId="1" SourceUrl="http://localhost:40611/UclService.svc?xsd=xsd0" />
+    <MetadataFile FileName="UclService.xsd" MetadataType="Schema" ID="27754b67-f976-4d3f-acb9-0646f584dc25" SourceId="1" SourceUrl="http://localhost:40611/UclService.svc?xsd=xsd3" />
+    <MetadataFile FileName="UclService1.wsdl" MetadataType="Wsdl" ID="88295b4a-e858-4289-acbc-e5b5cc007257" SourceId="1" SourceUrl="http://localhost:40611/UclService.svc?wsdl" />
+    <MetadataFile FileName="UclService31.xsd" MetadataType="Schema" ID="fa506f8b-1982-4c97-a5f6-3376803e6263" SourceId="1" SourceUrl="http://localhost:40611/UclService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

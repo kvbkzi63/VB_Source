@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="69f76e33-3ed6-4449-a7a5-c7210c979963" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:40611/ArmService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ArmService1.disco" MetadataType="Disco" ID="23810920-0985-4c87-9f39-6c42d1dfc2e2" SourceId="1" SourceUrl="http://localhost:40611/ArmService.svc?disco" />
+    <MetadataFile FileName="ArmService1.wsdl" MetadataType="Wsdl" ID="8b0f5bbb-640f-45f4-9eae-dae0db6fb44d" SourceId="1" SourceUrl="http://localhost:40611/ArmService.svc?wsdl" />
+    <MetadataFile FileName="ArmService.xsd" MetadataType="Schema" ID="f18de7f2-7be7-4d6e-8c6d-d0ca436438e7" SourceId="1" SourceUrl="http://localhost:40611/ArmService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ArmService1.xsd" MetadataType="Schema" ID="3cedb716-b9d2-43a8-8572-d5124133b9a2" SourceId="1" SourceUrl="http://localhost:40611/ArmService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ArmService2.xsd" MetadataType="Schema" ID="e33c0b77-0185-4ef6-858f-29f01a489afc" SourceId="1" SourceUrl="http://localhost:40611/ArmService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ArmService3.xsd" MetadataType="Schema" ID="4be2b47f-3485-4e12-880a-376ea51ebb0a" SourceId="1" SourceUrl="http://localhost:40611/ArmService.svc?xsd=xsd3" />
+    <MetadataFile FileName="ArmService4.xsd" MetadataType="Schema" ID="9323cb5a-766f-4b78-acf9-b25124b022b1" SourceId="1" SourceUrl="http://localhost:40611/ArmService.svc?xsd=xsd4" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

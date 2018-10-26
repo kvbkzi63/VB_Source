@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0EB6A0A6-5D9E-4ADF-938A-1BB7EBE39F80}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Syscom.Server.PUB</RootNamespace>
+    <AssemblyName>Syscom.Server.PUB</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\..\SyscomCompile\Syscom\Server\</OutputPath>
+    <DocumentationFile>Syscom.Server.PUB.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <BaseIntermediateOutputPath>..\..\..\SyscomCompile\Syscom\Server\obj</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>..\..\..\SyscomCompile\Syscom\Server\obj\$(MSBuildProjectName)\Debug</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\SyscomCompile\Syscom\Server\</OutputPath>
+    <DocumentationFile>Syscom.Server.PUB.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <BaseIntermediateOutputPath>..\..\..\SyscomCompile\Syscom\Server\obj</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>..\..\..\SyscomCompile\Syscom\Server\obj\$(MSBuildProjectName)\Debug</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\ExtLIBs\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Comm.BASE, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SyscomCompile\Syscom\Common\Syscom.Comm.BASE.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Comm.EXP, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SyscomCompile\Syscom\Common\Syscom.Comm.EXP.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Comm.LOG, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SyscomCompile\Syscom\Common\Syscom.Comm.LOG.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Comm.TableFactory, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SyscomCompile\Syscom\Common\Syscom.Comm.TableFactory.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Comm.Utility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SyscomCompile\Syscom\Common\Syscom.Comm.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Server.BO, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SyscomCompile\Syscom\Server\Syscom.Server.BO.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Server.CMM, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SyscomCompile\Syscom\Server\Syscom.Server.CMM.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Server.NFC, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SyscomCompile\Syscom\Server\Syscom.Server.NFC.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Server.SNC, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SyscomCompile\Syscom\Server\Syscom.Server.SNC.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Server.SQL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SyscomCompile\Syscom\Server\Syscom.Server.SQL.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LA\BO\PUBAccountBO_E2.vb" />
+    <Compile Include="LA\BO\PUBAddPartBO_E2.vb" />
+    <Compile Include="LA\BO\PUBAreaCodeBO_E2.vb" />
+    <Compile Include="LA\BO\PubAreaCodeGovBO_E2.vb" />
+    <Compile Include="LA\BO\PUBAreaCodeNBO_E2.vb" />
+    <Compile Include="LA\BO\PUBBodySiteBO_E2.vb" />
+    <Compile Include="LA\BO\PUBConfigBO_E2.vb" />
+    <Compile Include="LA\BO\PUBContractBO_E2.vb" />
+    <Compile Include="LA\BO\PUBContractPartSetBO_E2.vb" />
+    <Compile Include="LA\BO\PUBContractQuotaBO_E2.vb" />
+    <Compile Include="LA\BO\PUBContractSetBO_E2.vb" />
+    <Compile Include="LA\BO\PUBDeptSectBO_E2.vb" />
+    <Compile Include="LA\BO\PUBDiseaseICD10MappingBO_E2.vb" />
+    <Compile Include="LA\BO\PubDiseaseIcd10pcsInsuMappingBO_E2.vb" />
+    <Compile Include="LA\BO\PUBDisIdentityBO_E2.vb" />
+    <Compile Include="LA\BO\PUBDisIdentitySetBO_E2.vb" />
+    <Compile Include="LA\BO\PUBDoctorBO_E2.vb" />
+    <Compile Include="LA\BO\PUBDoctorLicenseBO_E2.vb" />
+    <Compile Include="LA\BO\PUBExamineBO_E2.vb" />
+    <Compile Include="LA\BO\PubIcd10DeptBO_E2.vb" />
+    <Compile Include="LA\BO\PUBInsuCodeBO_E2.vb" />
+    <Compile Include="LA\BO\PUBOrderAlternativeBO_E2.vb" />
+    <Compile Include="LA\BO\PUBInsuDeptSetupBO_E2.vb" />
+    <Compile Include="LA\BO\PUBMajorcareBO_E2.vb" />
+    <Compile Include="LA\BO\PUBNhiCodeBO_E2.vb" />
+    <Compile Include="LA\BO\PUBOrderMappingSpecimenBO_E2.vb" />
+    <Compile Include="LA\BO\PUBOrderStandingBO_E2.vb" />
+    <Compile Include="LA\BO\PUBPartBO_E2.vb" />
+    <Compile Include="LA\BO\PUBPartDiscountBO_E2.vb" />
+    <Compile Include="LA\BO\PUBPatientContactBO_E2.vb" />
+    <Compile Include="LA\BO\PUBPatientDisabilityBO_E2.vb" />
+    <Compile Include="LA\BO\PubPatientFlagBO_E2.vb" />
+    <Compile Include="LA\BO\PUBPatientHealthCardBO_E2.vb" />
+    <Compile Include="LA\BO\PUBPatientQuotaBO_E2.vb" />
+    <Compile Include="LA\BO\PUBPatientSevereDiseaseBO_E2.vb" />
+    <Compile Include="LA\BO\PUBPhaServicesBO_E2.vb" />
+    <Compile Include="LA\BO\PUBPostalAreaBO_E2.vb" />
+    <Compile Include="LA\BO\PUBPostalCodeBO_E2.vb" />
+    <Compile Include="LA\BO\PUBPostalGovAreaBO_E2.vb" />
+    <Compile Include="LA\BO\PUBPreventiveCareBO_E2.vb" />
+    <Compile Include="LA\BO\PUBPtDisabilityBO_E2.vb" />
+    <Compile Include="LA\BO\PubPuleReasonBO_E2.vb" />
+    <Compile Include="LA\BO\PUBRegisterFeeBO_E2.vb" />
+    <Compile Include="LA\BO\PubRuleBO_E2.vb" />
+    <Compile Include="LA\BO\PubRuleClassBO_E2.vb" />
+    <Compile Include="LA\BO\PubRuleDetailBO_E2.vb" />
+    <Compile Include="LA\BO\PUBSheetBO_E2.vb" />
+    <Compile Include="LA\BO\PUBSheetDetailBO_E2.vb" />
+    <Compile Include="LA\BO\PUBSubIdentityBO_E2.vb" />
+    <Compile Include="LA\BO\PUBSubIdentitySetBO_E2.vb" />
+    <Compile Include="LA\BS\PUBAddPartBS_E2.vb" />
+    <Compile Include="LA\BS\PUBContractPartSetBS_E2.vb" />
+    <Compile Include="LA\BS\PUBContractQuotaBS_E2.vb" />
+    <Compile Include="LA\BS\PUBContractSetBS_E2.vb" />
+    <Compile Include="LA\BS\PUBDisIdentitySetBS_E2.vb" />
+    <Compile Include="LA\BS\PUBInsuCodeBS_E2.vb" />
+    <Compile Include="LA\BS\PUBNhiCodeBS_E2.vb" />
+    <Compile Include="LA\BS\PUBPartBS_E2.vb" />
+    <Compile Include="LA\BS\PUBPartDiscountBS_E2.vb" />
+    <Compile Include="LA\BS\PUBPatientDisabilityBS_E2.vb" />
+    <Compile Include="LA\BS\PUBPatientHealthCardBS_E2.vb" />
+    <Compile Include="LA\BS\PUBPatientQuotaBS_E2.vb" />
+    <Compile Include="LA\BS\pubRuleParserBS.vb" />
+    <Compile Include="LA\BS\PUBRuleTransferN1BS_E2.vb" />
+    <Compile Include="LA\BS\PUBSubIdentitySetBS_E2.vb" />
+    <Compile Include="LA\PUBDelegate.vb" />
+    <Compile Include="LA\BO\PUBDepartmentBO_E2.vb" />
+    <Compile Include="LA\BO\PUBEmployeeBO_E2.vb" />
+    <Compile Include="LA\BO\PUBHospitalBO_E2.vb" />
+    <Compile Include="LA\BO\PUBOrderBO_E2.vb" />
+    <Compile Include="LA\BO\PUBOrderPriceBO_E2.vb" />
+    <Compile Include="LA\BO\PUBPatientAllergyBO_E2.vb" />
+    <Compile Include="LA\BO\PUBPatientBO_E2.vb" />
+    <Compile Include="LA\BO\PubPatientPastDiseaseHistoryBO_E2.vb" />
+    <Compile Include="LA\BO\PUBSysCodeBO_E2.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PUBDelegate.vb" />
+    <Compile Include="TN\BO\OMO\OmoPreventationHealthCare.vb" />
+    <Compile Include="TN\BO\PubAccDeptBO_E1.vb" />
+    <Compile Include="TN\BO\PubDeptLeaderBO_E1.vb" />
+    <Compile Include="TN\BO\PubDrAddControlBO_E1.vb" />
+    <Compile Include="TN\BO\PUBLabIndication04.vb" />
+    <Compile Include="TN\BO\PubMedicalTypeSortBO_E1.vb" />
+    <Compile Include="TN\BO\PUBNhiCodeImportBO_E1.vb" />
+    <Compile Include="TN\BO\PUBNhiCodeImportMBO_E1.vb" />
+    <Compile Include="TN\BO\PubOrderExamNocheckinDeptBO_E1.vb" />
+    <Compile Include="TN\BO\PUBIssItemBO_E1.vb" />
+    <Compile Include="TN\BO\PubOrderExamNoPrintDeptBO_E1.vb" />
+    <Compile Include="TN\BO\PUBPatientISSBO_E1.vb" />
+    <Compile Include="TN\BO\EMR\EMRMedicineRecordBO_E1.vb" />
+    <Compile Include="TN\BO\OMO\OMOMedicalRecordBO_E1.vb" />
+    <Compile Include="TN\BO\OPH\OPHPhraseBO_E1.vb" />
+    <Compile Include="TN\BO\OPH\OPHRuleItemBO_E1.vb" />
+    <Compile Include="TN\BO\PCSIpConfigBO_E1.vb" />
+    <Compile Include="TN\BO\PUBAddOptionOrderBO_E1.vb" />
+    <Compile Include="TN\BO\PUBAddOrderBO_E1.vb" />
+    <Compile Include="TN\BO\PUBAddOrderDetailBO_E1.vb" />
+    <Compile Include="TN\BO\PUBAddPartBO_E1.vb" />
+    <Compile Include="TN\BO\PUBBackupTempBO_E1.vb" />
+    <Compile Include="TN\BO\PUBBodySiteBO_E1.vb" />
+    <Compile Include="TN\BO\PubConfigBO_E1.vb" />
+    <Compile Include="TN\BO\PUBContractBO_E1.vb" />
+    <Compile Include="TN\BO\PUBContractPartSetBO_E1.vb" />
+    <Compile Include="TN\BO\PUBContractQuotaBO_E1.vb" />
+    <Compile Include="TN\BO\PUBCureControlBO_E1.vb" />
+    <Compile Include="TN\BO\PUBDentalAddBO_E1.vb" />
+    <Compile Include="TN\BO\PUBDentalAddControlBO_E1.vb" />
+    <Compile Include="TN\BO\PUBDepartmentBO_E1.vb" />
+    <Compile Include="TN\BO\PUBDeptAddBO_E1.vb" />
+    <Compile Include="TN\BO\PUBDeptSectBO_E1.vb" />
+    <Compile Include="TN\BO\PUBDiseaseICD10BO_E1.vb" />
+    <Compile Include="TN\BO\PUBDiseaseBO_E1.vb" />
+    <Compile Include="TN\BO\PUBDisIdentityBO_E1.vb" />
+    <Compile Include="TN\BO\PUBDisIdentitySetBO_E1.vb" />
+    <Compile Include="TN\BO\PUBDoctorBO_E1.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TN\BO\PUBEmgAddBO_E1.vb" />
+    <Compile Include="TN\BO\PUBEmployeeBO_E1.vb" />
+    <Compile Include="TN\BO\PUBExamineBO_E1.vb" />
+    <Compile Include="TN\BO\PUBExcludeDrugSetBO_E1.vb" />
+    <Compile Include="TN\BO\PUBExportBO_E1.vb" />
+    <Compile Include="TN\BO\PUBExportDetailBO_E1.vb" />
+    <Compile Include="TN\BO\PUBFirstVisitRecordBO_E1.vb" />
+    <Compile Include="TN\BO\PUBHolidayBO_E1.vb" />
+    <Compile Include="TN\BO\PubHospitalBO_E1.vb" />
+    <Compile Include="TN\BO\PUBIndicationBO_E1.vb" />
+    <Compile Include="TN\BO\PUBInsuCodeBO_E1.vb" />
+    <Compile Include="TN\BO\PUBIpConfigBO_E1.vb" />
+    <Compile Include="TN\BO\PUBItemBO_E1.vb" />
+    <Compile Include="TN\BO\PUBItemOperatorBO_E1.vb" />
+    <Compile Include="TN\BO\PUBItemValueUnitBO_E1.vb" />
+    <Compile Include="TN\BO\PUBKidAddBO_E1.vb" />
+    <Compile Include="TN\BO\PUBMajorcareBO_E1.vb" />
+    <Compile Include="TN\BO\PUBMaterialSelfpayApplyBO_E1.vb" />
+    <Compile Include="TN\BO\PubMedicalTypeBO_E1.vb" />
+    <Compile Include="TN\BO\PUBMedicineBO_E1.vb" />
+    <Compile Include="TN\BO\PUBNhiCodeBO_E1.vb" />
+    <Compile Include="TN\BO\PUBNhiIndexSetBO_E1.vb" />
+    <Compile Include="TN\BO\PUBOrderBO_E1.vb" />
+    <Compile Include="TN\BO\PUBOrderExaminationBO_E1.vb" />
+    <Compile Include="TN\BO\PUBOrderMajorcareBO_E1.vb" />
+    <Compile Include="TN\BO\PUBOrderMappingSpecimenBO_E1.vb" />
+    <Compile Include="TN\BO\PUBOrderOrTreatBO_E1.vb" />
+    <Compile Include="TN\BO\PUBOrderPriceBO_E1.vb" />
+    <Compile Include="TN\BO\PUBOrderStandingBO_E1.vb" />
+    <Compile Include="TN\BO\PUBPartBO_E1.vb" />
+    <Compile Include="TN\BO\PUBPartDiscountBO_E1.vb" />
+    <Compile Include="TN\BO\PubPatFlagSortBO_E1.vb" />
+    <Compile Include="TN\BO\PUBPatientAllergyBO_E1.vb" />
+    <Compile Include="TN\BO\PubPatientBodyrecordBO_E1.vb" />
+    <Compile Include="TN\BO\PUBPatientBO_E1.vb" />
+    <Compile Include="TN\BO\PUBPatientDisabilityBO_E1.vb" />
+    <Compile Include="TN\BO\PubPatientDnrBO_E1.vb" />
+    <Compile Include="TN\BO\PUBPatientFlagBO_E1.vb" />
+    <Compile Include="TN\BO\PubPatientPersonalHabitsBO_E1.vb" />
+    <Compile Include="TN\BO\PUBPatientQuotaBO_E1.vb" />
+    <Compile Include="TN\BO\PubPatientScheduleBO_E1.vb" />
+    <Compile Include="TN\BO\PUBPatientSevereDiseaseBO_E1.vb" />
+    <Compile Include="TN\BO\PubPatientToccBO_E1.vb" />
+    <Compile Include="TN\BO\PUBPatientTransferRiskBO_E1.vb" />
+    <Compile Include="TN\BO\PUBPhaServicesBO_E1.vb" />
+    <Compile Include="TN\BO\PUBPostalAreaBO_E1.vb" />
+    <Compile Include="TN\BO\PUBPostalCodeBO_E1.vb" />
+    <Compile Include="TN\BO\PUBPrintConfigBO_E1.vb" />
+    <Compile Include="TN\BO\PUBPrintJobBO_E1.vb" />
+    <Compile Include="TN\BO\PubPrintRecordBO_E1.vb" />
+    <Compile Include="TN\BO\PUBRegisterFeeBO_E1.vb" />
+    <Compile Include="TN\BO\PubReportAlarmBO_E1.vb" />
+    <Compile Include="TN\BO\PubReportDescBO_E1.vb" />
+    <Compile Include="TN\BO\PUBRuleBO_E1.vb" />
+    <Compile Include="TN\BO\PUBRuleClassBO_E1.vb" />
+    <Compile Include="TN\BO\PUBRuleDeatilBO_E1.vb" />
+    <Compile Include="TN\BO\PUBRuleMaintainBO_E1.vb" />
+    <Compile Include="TN\BO\PUBRuleTransactionLogBO_E1.vb" />
+    <Compile Include="TN\BO\PUBSheetBO_E1.vb" />
+    <Compile Include="TN\BO\PUBSheetDetailBO_E1.vb" />
+    <Compile Include="TN\BO\PubSheetDisplayBO_E1.vb" />
+    <Compile Include="TN\BO\PubSheetDisplayOrderBO_E1.vb" />
+    <Compile Include="TN\BO\PUBSheetGroupBO_E1.vb" />
+    <Compile Include="TN\BO\PUBStationBO_E1.vb" />
+    <Compile Include="TN\BO\PUBSubIdentityBO_E1.vb" />
+    <Compile Include="TN\BO\PUBSubIdentitySetBO_E1.vb" />
+    <Compile Include="TN\BO\PubSysCodeBO_E1.vb" />
+    <Compile Include="TN\BO\PubSyscodeTypeBO_E1.vb" />
+    <Compile Include="TN\BO\PUBSystemVersionBO_E1.vb" />
+    <Compile Include="TN\BO\PUBUnitBO_E1.vb" />
+    <Compile Include="TN\BO\PUBZoneRoomBO_E1.vb" />
+    <Compile Include="TN\BS\PubBatchJobBS.vb" />
+    <Compile Include="TN\BS\PubOrderExamNocheckinDeptBS.vb" />
+    <Compile Include="TN\BS\PcsPubDateBS.vb" />
+    <Compile Include="TN\BS\PUBAPI.vb" />
+    <Compile Include="TN\BS\PubConfigBS.vb" />
+    <Compile Include="TN\BS\PUBDynamicBS.vb" />
+    <Compile Include="TN\BS\PUBExaminationSheetDetailMaintainBS.vb" />
+    <Compile Include="TN\BS\PUBExclusiveDrugSetBS.vb" />
+    <Compile Include="TN\BS\PUBExportSetupBS.vb" />
+    <Compile Include="TN\BS\PubHospitalBS.vb" />
+    <Compile Include="TN\BS\PUBIcdRuleCheckBS.vb" />
+    <Compile Include="TN\BS\PUBKidAddBS.vb" />
+    <Compile Include="TN\BS\PUBLisSheetBS.vb" />
+    <Compile Include="TN\BS\PUBOrderBS.vb" />
+    <Compile Include="TN\BS\PubOrderExamNoPrintDeptBS.vb" />
+    <Compile Include="TN\BS\PubPatientFlagBS.vb" />
+    <Compile Include="TN\BS\PUBPrintConfigBS.vb" />
+    <Compile Include="TN\BS\PUBPrintJobBS.vb" />
+    <Compile Include="TN\BS\PUBPrintJobThreadBS.vb" />
+    <Compile Include="TN\BS\PUBRisFormMaintainBS.vb" />
+    <Compile Include="TN\BS\PUBRuleBS.vb" />
+    <Compile Include="TN\BS\PUBRuleCheckBS.vb" />
+    <Compile Include="TN\BS\PUBRuleCheckTreeBS.vb" />
+    <Compile Include="TN\BS\PubSyscodeBS.vb" />
+    <Compile Include="TN\BS\PubSyscodeTypeBS.vb" />
+    <Compile Include="TN\BS\PUBSysTimeBS.vb" />
+    <Compile Include="TN\BS\RuleEngine\PUBRuleEngineAPI.vb" />
+    <Compile Include="TN\PUBDelegate.vb" />
+    <Compile Include="TN\BO\PUBPreventiveCareBO_E1.vb" />
+    <Compile Include="TN\BO\PUBPreventiveCareExeBO_E1.vb" />
+    <Compile Include="TN\BO\PubRuleReasonBO_E1.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

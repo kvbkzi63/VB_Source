@@ -1,0 +1,44 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+JOBClientServiceFactory
+</name>
+</assembly>
+<members>
+<member name="T:JOBClientServiceFactory.My.Resources.Resources">
+<summary>
+  用於查詢當地語系化字串等的強類型資源類別。
+</summary>
+</member>
+<member name="P:JOBClientServiceFactory.My.Resources.Resources.ResourceManager">
+<summary>
+  傳回這個類別使用的快取的 ResourceManager 執行個體。
+</summary>
+</member>
+<member name="P:JOBClientServiceFactory.My.Resources.Resources.Culture">
+<summary>
+  覆寫目前執行緒的 CurrentUICulture 屬性，對象是所有
+  使用這個強類型資源類別的資源查閱。
+</summary>
+</member>
+<member name="M:JOBClientServiceFactory.JOBServiceManager.QueryJobProjectMaintainData(System.String,System.String,System.String,System.String,System.String)">
+ <summary>
+ 查詢專案清單(依據傳入條件)
+ </summary>
+ <param name="Project_ID">專案代號</param>
+ <param name="Project_Name">專案名稱</param>
+ <param name="Start_Date">專案起日</param>
+ <param name="End_Date">專案迄日</param>
+ <param name="Project_Manager">PM</param>
+ <returns></returns>
+</member>
+<member name="M:JOBClientServiceFactory.JOBServiceManager.PRJDoAction(System.Data.DataSet)">
+ <summary>
+ 查詢專案清單(PRJDoAction)
+ </summary>
+ <param name="ds">傳入相關參數(Action必須放在第0個Table)</param>
+ <returns></returns>
+</member>
+</members>
+</doc>

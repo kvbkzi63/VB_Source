@@ -1,0 +1,9 @@
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Common\Syscom.Comm.Utility.dll
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Common\Syscom.Comm.Utility.pdb
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Common\Syscom.Comm.Utility.xml
+C:\TPE_Source\HIS_Source\Project_Source\Syscom_Developer\Syscom_Common\Syscom.Comm.Utility\obj\Release\Syscom.Comm.Utility.vbprojResolveAssemblyReference.cache
+C:\TPE_Source\HIS_Source\Project_Source\Syscom_Developer\Syscom_Common\Syscom.Comm.Utility\obj\Release\Syscom.Comm.Utility.Resources.resources
+C:\TPE_Source\HIS_Source\Project_Source\Syscom_Developer\Syscom_Common\Syscom.Comm.Utility\obj\Release\Syscom.Comm.Utility.vbproj.GenerateResource.Cache
+C:\TPE_Source\HIS_Source\Project_Source\Syscom_Developer\Syscom_Common\Syscom.Comm.Utility\obj\Release\Syscom.Comm.Utility.dll
+C:\TPE_Source\HIS_Source\Project_Source\Syscom_Developer\Syscom_Common\Syscom.Comm.Utility\obj\Release\Syscom.Comm.Utility.xml
+C:\TPE_Source\HIS_Source\Project_Source\Syscom_Developer\Syscom_Common\Syscom.Comm.Utility\obj\Release\Syscom.Comm.Utility.pdb

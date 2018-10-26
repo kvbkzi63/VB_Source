@@ -1,0 +1,2256 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Syscom.Client.CMM
+</name>
+</assembly>
+<members>
+<member name="T:Syscom.Client.CMM.My.Resources.Resources">
+<summary>
+  用於查詢當地語系化字串等的強類型資源類別。
+</summary>
+</member>
+<member name="P:Syscom.Client.CMM.My.Resources.Resources.ResourceManager">
+<summary>
+  傳回這個類別使用的快取的 ResourceManager 執行個體。
+</summary>
+</member>
+<member name="P:Syscom.Client.CMM.My.Resources.Resources.Culture">
+<summary>
+  覆寫目前執行緒的 CurrentUICulture 屬性，對象是所有
+  使用這個強類型資源類別的資源查閱。
+</summary>
+</member>
+<member name="P:Syscom.Client.CMM.My.Resources.Resources.Close_Window">
+<summary>
+  查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+</summary>
+</member>
+<member name="P:Syscom.Client.CMM.My.Resources.Resources.Expand_Window">
+<summary>
+  查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+</summary>
+</member>
+<member name="P:Syscom.Client.CMM.My.Resources.Resources.log4net">
+<summary>
+  查詢類似 &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+&lt;log4net&gt;
+  &lt;appender name=&quot;ConsoleAppender&quot; type=&quot;log4net.Appender.ConsoleAppender&quot;&gt;
+    &lt;layout type=&quot;log4net.Layout.PatternLayout&quot;&gt;
+      &lt;conversionPattern value=&quot;%date [%thread] %-5level %logger [%ndc] - %message%newline&quot;/&gt;
+    &lt;/layout&gt;
+  &lt;/appender&gt;
+
+  &lt;appender name=&quot;SyscomClientLog&quot; type=&quot;log4net.Appender.RollingFileAppender&quot;&gt;
+    &lt;file value=&quot;C:\\Log\\syscom-client.log&quot; /&gt;
+    &lt;appendToFile value=&quot;true&quot; /&gt;
+    &lt;rollingStyle value=&quot;Composite&quot; /&gt;
+  [字串的其餘部分已遭截斷]&quot;; 的當地語系化字串。
+</summary>
+</member>
+<member name="P:Syscom.Client.CMM.My.Resources.Resources.ProgressError">
+<summary>
+  查詢類似 (圖示) 的類型 System.Drawing.Icon 當地語系化資源。
+</summary>
+</member>
+<member name="P:Syscom.Client.CMM.My.Resources.Resources.ProgressInfo">
+<summary>
+  查詢類型 System.Drawing.Bitmap 的當地語系化資源。
+</summary>
+</member>
+<member name="P:Syscom.Client.CMM.My.Resources.Resources.ProgressQuestion">
+<summary>
+  查詢類似 (圖示) 的類型 System.Drawing.Icon 當地語系化資源。
+</summary>
+</member>
+<member name="P:Syscom.Client.CMM.My.Resources.Resources.ProgressWarn">
+<summary>
+  查詢類似 (圖示) 的類型 System.Drawing.Icon 當地語系化資源。
+</summary>
+</member>
+<member name="M:Syscom.Client.CMM.ClientExceptionHandler.#ctor">
+ <summary>
+ 阻止外部直接宣告建立
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.ClientExceptionHandler.ProccessException(System.Exception@,System.Reflection.MethodBase)">
+ <summary>
+ 例外處理
+ </summary>
+ <param name="ex"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.CmmMethodUtil.#ctor">
+ <summary>
+ 阻止外部直接進行新建立的宣告
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.CmmMethodUtil.getApServerSystemNow">
+ <summary>
+ 從Client端取得後端APP 伺服器系統日期時間
+ </summary>
+ <returns>日期格式 </returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.CmmMethodUtil.getApServerSystemDate">
+ <summary>
+ 從Client端取得後端APP 伺服器系統日期；日期格式yyyy/MM/dd
+ </summary>
+ <returns>日期格式yyyy/MM/dd String </returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.CmmMethodUtil.getApServerSystemDateTimeMinute">
+ <summary>
+ 從Client端取得後端APP 伺服器系統日期時間；日期時間格式yyyy/MM/dd HH:mm
+ </summary>
+ <returns>日期時間格式yyyy/MM/dd HH:mm String</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.CmmMethodUtil.getApServerSystemDateTime">
+ <summary>
+ 從Client端取得後端APP 伺服器系統日期時間；日期時間格式yyyy/MM/dd HH:mm:ss
+ </summary>
+ <returns>日期時間格式yyyy/MM/dd HH:mm:ss String</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.CmmMethodUtil.getApServerSystemFullDateTime">
+ <summary>
+ 從Client端取得後端APP 伺服器系統日期時間；日期時間格式yyyy/MM/dd HH:mm:ss.fff
+ </summary>
+ <returns>日期時間格式yyyy/MM/dd HH:mm:ss.ss String</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.CmmMethodUtil.DataToExcelWithFormate(System.Data.DataTable,System.String[],System.String[],System.String,System.String,System.Boolean)">
+ <summary> 
+ 把Data匯出成Excel，包含天地
+ </summary>
+ <param name="dtPrint">資料表</param>
+ <param name="columnName">欄位名稱，nothing 則直接使用ds 的Column </param>
+ <param name="columnWidth">設定資料的寬度，nothing 則使用Auto Header 的Size，如果要用預設的則丟空字串，EX: "0,1,,,,,10"</param>
+ <param name="reportName">報表名稱</param>
+ <param name="reportId">報表 ID </param>
+ <param name="wrapFlag">折行；True:折行；False:不折行</param>
+ <remarks>copy from  Will.Lin,Modified by Sean.Lin on 2015-10-15</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.CmmMethodUtil.DataToExcelWithFormateSetColumWidth(System.Data.DataTable,System.String[],System.String[],System.String,System.String,System.Boolean)">
+ <summary> 
+ 把Data匯出成Excel，包含天地
+ </summary>
+ <param name="dtPrint">資料表</param>
+ <param name="columnName">欄位名稱，nothing 則直接使用ds 的Column </param>
+ <param name="columnWidth">設定資料的寬度，nothing 則使用Auto Header 的Size，如果要用預設的則丟空字串，EX: "0,1,,,,,10"</param>
+ <param name="reportName">報表名稱</param>
+ <param name="reportId">報表 ID </param>
+ <param name="wrapFlag">折行；True:折行；False:不折行</param>
+ <remarks>add by qun,2017/3/10,excel欄位寬度完全按照參數傳入設置</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.CmmMethodUtil.DataToExcelWithFormate(System.Data.DataSet,System.Collections.Generic.List{System.String[]},System.String,System.String,System.Boolean,System.Boolean)">
+ <summary> 
+ 把Data匯出成Excel，包含天地，列印DS 裡面 TableName 所有的資料
+ 
+  單一表單，多個Table 列印在一頁
+ </summary>
+ <param name="dsPrint">資料集</param> 
+ <param name="columnNameList">欄位名稱，nothing 則直接使用ds 的Column </param>
+ <param name="reportName">報表名稱</param>
+ <param name="reportId">報表 ID </param>
+ <remarks>copy from  Will.Lin,Modified by Sean.Lin on 2015-10-15</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.CmmMethodUtil.PrintHeadFont(System.String,System.String,Microsoft.Office.Interop.Excel.Worksheet@,System.Data.DataTable,System.String[],System.Int32@)">
+ <summary>
+ 列印時負責處理表頭與標題欄位的部分
+ <paramref name=" sheet ">列印中的sheet元件</paramref>
+ <paramref name=" dtPrint ">要匯出的資料集</paramref>
+ <paramref name=" columnName ">標題欄位名稱陣列</paramref>
+ </summary>
+ <remarks>by Will.Lin on 2015-8-5</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.CmmMethodUtil.PrintPageHeader(System.String,System.String,Microsoft.Office.Interop.Excel.Worksheet@,System.Data.DataTable,System.String[],System.Int32@)">
+ <summary>
+ 列印時負責處理表頭
+ <paramref name=" sheet ">列印中的sheet元件</paramref>
+ <paramref name=" dtPrint ">要匯出的資料集</paramref>
+ <paramref name=" columnName ">標題欄位名稱陣列</paramref>
+ </summary>
+ <remarks>by Will.Lin on 2015-8-5 ； Sean Lin 2015/11/24</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.CmmMethodUtil.PrintColumnHeader(Microsoft.Office.Interop.Excel.Worksheet@,System.Data.DataTable,System.String[],System.String[],System.Int32@,System.Boolean)">
+ <summary>
+ 列印時負責處理標題欄位的部分
+ <paramref name=" sheet ">列印中的sheet元件</paramref>
+ <paramref name=" dtPrint ">要匯出的資料集</paramref>
+ <paramref name=" columnName ">標題欄位名稱陣列</paramref>
+ </summary>
+ <remarks>by Will.Lin on 2015-8-5 ；Sean Lin 2015/11/24 </remarks>
+</member>
+<member name="M:Syscom.Client.CMM.CmmMethodUtil.PrintColumnHeaderSetColumWidth(Microsoft.Office.Interop.Excel.Worksheet@,System.Data.DataTable,System.String[],System.String[],System.Int32@,System.Boolean)">
+ <summary>
+ 列印時負責處理標題欄位的部分
+ <paramref name=" sheet ">列印中的sheet元件</paramref>
+ <paramref name=" dtPrint ">要匯出的資料集</paramref>
+ <paramref name=" columnName ">標題欄位名稱陣列</paramref>
+ </summary>
+ <remarks>add by qun,2017/3/10,欄位寬度按照參數傳入設置 </remarks>
+</member>
+<member name="M:Syscom.Client.CMM.CmmMethodUtil.PrintdtBody(Microsoft.Office.Interop.Excel.Application@,Microsoft.Office.Interop.Excel.Worksheet@,System.Data.DataTable,System.String[],System.Int32@,System.Boolean)">
+ <summary>
+ 列印時負責處理表格內容的部分
+ <paramref name=" sheet ">列印中的sheet元件</paramref>
+ <paramref name=" dtPrint ">要匯出的資料集</paramref>
+ <paramref name=" columnName ">標題欄位名稱陣列</paramref>
+ </summary>
+ <remarks>by Will.Lin on 2015-8-5 ；Sean Lin 2015/11/24 </remarks>
+</member>
+<member name="M:Syscom.Client.CMM.CmmMethodUtil.ImportExcelDataAndConvertIntoDataSet(System.String,System.Int32,System.String,System.Boolean)">
+ <summary>
+ 匯入Excel檔案
+ </summary>
+ <param name="filePath">欲匯入的檔案完整路徑</param>
+ <param name="SheetIndex">要開啟的指定工作表</param>
+ <param name="OutTableName"> 回傳的Table Name</param>
+ <param name="includeColumnHeader">True：包含第一列、False：不包含第一列</param>
+ <returns>DataSet(OutTableName)</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.CmmMethodUtil.ExcelConvertDataSet(System.Boolean,System.Object[0:,0:],System.String)">
+ <summary>
+ 將Excel的資料轉換成DataSet
+ </summary>
+ <param name="includeColumnHeader">資料是否包含欄位的Header</param>
+ <param name="dataArray">資料的2維陣列</param>
+ <returns>DataSet</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.CmmMethodUtil.DataToPdfWithFormate(System.Data.DataSet,System.String,System.String)">
+ <summary> 
+ 把Data匯出成Pdf，包含天地，列印DS 裡面 TableName 所有的資料
+  單一表單，多個Table 列印在一頁
+ </summary>
+ <param name="dsPrint">資料集</param> 
+ <param name="reportName">報表名稱</param>
+ <param name="reportId">報表 ID </param>
+ <remarks>copy from  Will.Lin,Modified by Sean.Lin on 2015-10-15</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.CmmMethodUtil.GenRecordDataForNormal(System.Data.DataTable)">
+ <summary>
+ 一般報表的列印格式
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.CmmMethodUtil.genReportByFilter(System.Data.DataSet@)">
+ <summary>
+ 產生 Pdf Table
+ </summary>
+ <param name="dsPrintS" >傳入的Data</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.CmmMethodUtil.SplitDT(System.Data.DataTable)">
+ <summary>
+ 分割單一TABLE為多個TABLE
+ </summary>
+ <param name="InputDt"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.CmmMethodUtil.ProcesssPDFHeaderFooter.OnOpenDocument(iTextSharp.text.pdf.PdfWriter,iTextSharp.text.Document)">
+ <summary> 開啟Document Event </summary>
+ <param name="writer">PDF編輯器</param>
+ <param name="document">PDF文件</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.CmmMethodUtil.ProcesssPDFHeaderFooter.OnEndPage(iTextSharp.text.pdf.PdfWriter,iTextSharp.text.Document)">
+ <summary> Pdf頁首Event </summary>
+ <param name="writer">PDF編輯器</param>
+ <param name="document">PDF文件</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.CmmMethodUtil.ProcesssPDFHeaderFooter.OnCloseDocument(iTextSharp.text.pdf.PdfWriter,iTextSharp.text.Document)">
+ <summary> 關閉DocumentEvent </summary>
+ <param name="writer">PDF編輯器</param>
+ <param name="document">PDF文件</param>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.CMM.Colors.BACK_COLOR_ERROR_INPUT">
+當畫面上有錯誤輸入時將背景顏色替換掉
+</member>
+<member name="F:Syscom.Client.CMM.Colors.BACK_COLOR_DEFAULT">
+畫面上輸入的預設顏色
+</member>
+<member name="F:Syscom.Client.CMM.Colors.BACK_COLOR_DEFAULT_INPUT">
+輸入元件的預設顏色
+</member>
+<member name="F:Syscom.Client.CMM.Colors.FORE_COLOR_DEFAULT">
+一般字的預設顏色
+</member>
+<member name="F:Syscom.Client.CMM.Colors.FORE_COLOR_PKEY">
+必輸的顏色
+</member>
+<member name="M:Syscom.Client.CMM.DisplayNotifyWindowHandler.NotifyUIRigthNowForWaitTime(System.String@,System.String@,System.String@,System.String,System.Int32)">
+ <summary>
+ 立即顯示訊息視窗，可自行設定顯示停留時間
+ </summary>
+ <param name="drEmpNo">通知對象</param>
+ <param name="subject">主旨</param>
+ <param name="displayMsg">內容</param>
+ <param name="external">條件</param>
+ <param name="waitTime">停留時間</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.DisplayNotifyWindowHandler.NotifyUIRigthNow(System.String@,System.String@,System.String@,System.String@,System.Int32@,System.Int32@,System.Int32@,System.String@,System.Single@)">
+ <summary>
+  立即顯示訊息視窗，可以自定義顯示視窗大小和字型和停留時間
+ </summary>
+ <param name="drEmpNo">通知對象</param>
+ <param name="subject">主旨</param>
+ <param name="displayMsg">內容</param>
+ <param name="external">條件</param>
+ <param name="waitTime">停留時間</param>
+ <param name="windowWidth">視窗寬度</param>
+ <param name="windowHeight">視窗高度</param>
+ <param name="strFont">字型</param>
+ <param name="size">字型大小</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.#ctor">
+ <summary>
+ 阻止外部直接進行新建立的宣告
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Client.CMM.EventManager.getInstance">
+ <summary>
+ 屬性取得類別實體
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:Syscom.Client.CMM.EventManager.Nested">
+ <summary>
+ 巢狀類別存放建立的類別實體
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.GetCncMutiChoiceSetCellValue">
+ <summary>
+ 多選控制項 回傳至 UC辨識資訊 和 Cell要顯示的值
+ </summary>
+ <param name="ucIdentify">UC 辨識資訊</param>
+ <param name="cellValue">Cell要顯示的值</param>
+ <remarks>by Sean.Lin on 2015-02-11</remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.CncGetBodyPartsData">
+ <summary>
+ 部位檔回傳UI辨識資訊部位代碼、名稱、其他部位資訊
+ </summary>
+ <param name="UI_Identify"></param>
+ <param name="Body_Parts_No"></param>
+ <param name="Body_Parts_Name"></param>
+ <param name="Body_Parts_Others"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.CncDARTRecordQueryDS">
+ <summary>
+ 護理紀錄 查詢UI的結果的Dataset 拋回 護理紀錄主畫面
+ </summary>
+ <param name="DS_QueryResualt"></param>
+ <param name="Input_String_Case_No"></param>
+ <param name="Input_query_Flag_Time_Condition"></param>
+ <param name="Input_query_Flag_Close_Condition"></param>
+ <param name="Input_Start_Time"></param>
+ <param name="Input_End_Time"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.CncDARTRecordOperationData">
+ <summary>
+ 護理紀錄 標點符號或從生命徵象元件帶入的資料 拋回 護理紀錄操作畫面
+ </summary>
+ <param name="Data_String"></param>
+ <param name="Input_Parent_Name"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.CncTeachingToDartRecord">
+ <summary>
+ 護理紀錄 護理指導評估完的資料 拋回 護理紀錄操作畫面
+ </summary>
+ <param name="Data_Array"></param>
+ <param name="Data_Type"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.CncDartRecordDataPreview">
+ <summary>
+ 護理紀錄 護理紀錄儲存預覽完的資料 拋回 護理紀錄操作畫面進行儲存
+ </summary>
+ <param name="DS_Save_Preview"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.CncDartGridToPreview">
+ <summary>
+ 護理紀錄 護理紀錄DARTGridUC 拋回 護理紀錄儲存預覽畫面變動畫面大小
+ </summary>
+ <param name="UI_Size"></param>
+ <param name="UI_Name"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.CncOpenNextEvaluationUI">
+ <summary>
+ 從我的病人開啟持續護理評估畫面
+ </summary>
+ <param name="Form_No"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.CncMyPatientRefresh">
+ <summary>
+ 將我的病人進行更新
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.CncMyPatientManageRefresh">
+ <summary>
+ 管理我的病人進行更新
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.GetCncFocusTemplateData">
+ <summary>
+ 帶回自定義焦點範本資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.GetCncEvlMutilRefresh">
+ <summary>
+ 重新查詢主檔評估資料
+ </summary>
+ <param name="UIName">UI名稱</param>
+ <param name="Form_No">表單編號</param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.GetBodyPart">
+ <summary>
+ 取得三合一UC的部位名稱
+ </summary>
+ <param name="bodyPart">表單編號</param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.CncNextEvilationHistoryBtnSaveVisibleChange">
+ <summary>
+ CncNextEvilationHistory BtnSave Visible
+ </summary>
+ <param name="VisibleBl"></param>
+ <param name="FormNo"></param>
+ <param name="UIobj"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.addButtonByFormNo">
+ <summary>
+ NextEvilationAddButtonFormNo
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseCncNextEvilationHistoryBtnSaveVisible(System.Boolean,System.String,System.Object)">
+ <summary>
+ CncNextEvilationHistory BtnSave Visible
+ </summary>
+ <param name="VisibleBl"></param>
+ <param name="FormNo"></param>
+ <param name="UIobj"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseaddButtonByFormNo(System.String)">
+ <summary>
+ NextEvilationAddButtonFormNo
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseBodyPart(System.String)">
+ <summary>
+ 取得三合一UC的部位名稱
+ </summary>
+ <param name="bodyPart">表單編號</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseCncMutiChoiceSetCellValue(System.String,System.String)">
+ <summary>
+ 多選控制項 拋出 UC辨識資訊 和 Cell要顯示的值
+ </summary>
+ <param name="ucIdentify">UC 辨識資訊</param>
+ <param name="cellValue">Cell要顯示的值</param>
+ <remarks>by Sean.Lin on 2015-02-11</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseCncGetBodyPartsData(System.String,System.String,System.String,System.String)">
+ <summary>
+ 部位檔回傳UI辨識資訊部位代碼、名稱、其他部位資訊
+ </summary>
+ <param name="UI_Identify"></param>
+ <param name="Body_Parts_No"></param>
+ <param name="Body_Parts_Name"></param>
+ <param name="Body_Parts_Others"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseCncDARTRecordQueryDS(System.Data.DataSet,System.String,System.String,System.String,System.String,System.String)">
+ <summary>
+ 護理紀錄 查詢UI的結果的Dataset 拋回 護理紀錄主畫面
+ </summary>
+ <param name="DS_QueryResualt"></param>
+ <param name="Input_String_Case_No"></param>
+ <param name="Input_query_Flag_Time_Condition"></param>
+ <param name="Input_query_Flag_Close_Condition"></param>
+ <param name="Input_Start_Time"></param>
+ <param name="Input_End_Time"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseCncDARTRecordOperationData(System.String,System.String)">
+ <summary>
+ 護理紀錄 標點符號或從生命徵象元件帶入的資料 拋回 護理紀錄操作畫面
+ </summary>
+ <param name="Data_String"></param>
+ <param name="Input_Parent_Name"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseCncTeachingToDartRecord(System.Array,System.String)">
+ <summary>
+ 護理紀錄 護理指導評估完的資料 拋回 護理紀錄操作畫面
+ </summary>
+ <param name="Data_Array"></param>
+ <param name="Data_Type"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseCncDartRecordDataPreview(System.Data.DataSet)">
+ <summary>
+ 護理紀錄 護理紀錄儲存預覽完的資料 拋回 護理紀錄操作畫面進行儲存
+ </summary>
+ <param name="DS_Save_Preview"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseCncDartGridToPreview(System.Int32,System.String)">
+ <summary>
+ 護理紀錄 護理紀錄DARTGridUC 拋回 護理紀錄儲存預覽畫面變動畫面大小
+ </summary>
+ <param name="UI_Size"></param>
+ <param name="UI_Name"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseCncOpenNextEvaluationUI(System.String,System.String,System.String)">
+ <summary>
+ 從我的病人開啟持續護理評估表單
+ </summary>
+ <param name="Form_No"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseCncMyPatientRefresh">
+ <summary>
+ 將我的病人更新
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseCncMyPatientManageRefresh">
+ <summary>
+ 管理我的病人更新
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseCncFocusTemplateData(System.String,System.String,System.String,System.String)">
+ <summary>
+ 帶回自定義焦點範本資料
+ </summary>
+ <param name="strTemplateD"></param>
+ <param name="strTemplateA"></param>
+ <param name="strTemplateR"></param>
+ <param name="strTemplateT"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseCncEvlMutilRefresh(System.String,System.String)">
+ <summary>
+ 重新查詢主檔評估資料
+ </summary>
+ <param name="UIName">UI名稱</param>
+ <param name="Form_No">表單編號</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseGetInpInIcuRecordUIData(System.Data.DataSet)">
+ <summary>
+ 加護病房病患住院原因
+ </summary>
+ <param name="paramDS"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseGetSICD10PCSCodeData(System.Data.DataSet)">
+ <summary>
+ ICD診斷篩選回傳
+ </summary>
+ <param name="paramDS"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.GetDDCDoubtOrderData">
+ <summary>
+ 待確認醫囑原因及說明
+ </summary>
+ <remarks>by Sean.Lin on 2012-03-08</remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.GetDDCRefreshOrderExe">
+ <summary>
+ 醫囑執行重新查詢
+ </summary>
+ <remarks>by Sean.Lin on 2012-03-08</remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.GetDDCLeaveOrderModify">
+ <summary>
+ 離開醫囑修改畫面，Flag 為 0
+ </summary>
+ <remarks>by Sean.Lin on 2012-07-09</remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.GetDDCTreatmentSummary">
+ <summary>
+ 取得計價結果的DS，包含兩個DT，1.OrderCode(Order_Code,count) 2.TreatmentNo(Treatment_No)。 
+ </summary>
+ <remarks>by Sean.Lin on 2013-02-07</remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.GetDDCPatientHistoryTime">
+ <summary>
+ 取得我的病人歷程起迄時間。 
+ </summary>
+ <remarks>by Sean.Lin on 2013-04-1</remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.GetDDCReturnDrugSTA">
+ <summary>
+ 取得計價結果的DS，包含兩個DT，1.OrderCode(Order_Code,count) 2.TreatmentNo(Treatment_No)。 
+ </summary>
+ <remarks>by Sean.Lin on 2013-06-27</remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.GetInpInIcuRecordUIData">
+ <summary>
+ 取得加護病房病患住院原因的DS，包含 DT (InpInIcuRecordUI)。 
+ </summary>
+ <remarks>by Sean.Lin on 2013-06-27</remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.GetSICD10PCSCodeData">
+ <summary>
+ 取得ICD診斷篩選的DS，包含 DT (ICDIcd10CodeSelectorUI)。 
+ </summary>
+ <remarks>by Kudy.Sue on 2016-10-01</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseDDCDoubtOrderData(System.String,System.String,System.Int32,System.String)">
+ <summary>
+ 待確認醫囑原因及說明
+ </summary>
+ <remarks>by Sean.Lin on 2012-03-08</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseDDCRefreshOrderExe(System.String)">
+ <summary>
+ 醫囑執行重新查詢
+ </summary>
+ <remarks>by Sean.Lin on 2012-03-08</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseDDCLeaveOrderModify(System.String)">
+ <summary>
+ 離開醫囑修改畫面，Flag 為 0
+ </summary>
+ <remarks>by Sean.Lin on 2012-07-09</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseDDCTreatmentSummary(System.Data.DataSet)">
+ <summary>
+ 取得計價結果的DS，包含兩個DT，1.OrderCode(Order_Code,count) 2.TreatmentNo(Treatment_No)。 
+ </summary>
+ <remarks>by Sean.Lin on 2012-02-07</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseDDCPatientHistoryTime(System.String[])">
+ <summary>
+ 取得我的病人歷程起迄時間。  
+ </summary>
+ <remarks>by Sean.Lin on 2013-04-01</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseDDCReturnDrugSTA(System.Data.DataSet)">
+ <summary>
+ 取得計價結果的DS，包含兩個DT，1.OrderCode(Order_Code,count) 2.TreatmentNo(Treatment_No)。 
+ </summary>
+ <remarks>by Sean.Lin on 2013-06-27</remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.GetEncDoubtOrderData">
+ <summary>
+ 待確認醫囑原因及說明
+ </summary>
+ <remarks>by Sean.Lin on 2012-03-08</remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.GetEncRefreshOrderExe">
+ <summary>
+ 醫囑執行重新查詢
+ </summary>
+ <remarks>by Sean.Lin on 2012-03-08</remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.GetEncLeaveOrderModify">
+ <summary>
+ 離開醫囑修改畫面，Flag 為 0
+ </summary>
+ <remarks>by Sean.Lin on 2012-07-09</remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.GetEncTreatmentSummary">
+ <summary>
+ 取得計價結果的DS，包含兩個DT，1.OrderCode(Order_Code,count) 2.TreatmentNo(Treatment_No)。 
+ </summary>
+ <remarks>by Sean.Lin on 2013-02-07</remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.GetEncPatientHistoryTime">
+ <summary>
+ 取得我的病人歷程起迄時間。 
+ </summary>
+ <remarks>by Sean.Lin on 2013-04-1</remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.GetEncReturnDrugSTA">
+ <summary>
+ 取得計價結果的DS，包含兩個DT，1.OrderCode(Order_Code,count) 2.TreatmentNo(Treatment_No)。 
+ </summary>
+ <remarks>by Sean.Lin on 2013-06-27</remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.GetEncPatientInfoDS">
+ <summary>
+ 病人資訊 (EncPatientInfoUC) 接收從 我的病人   拋出的事件，取得病人的 資訊DS
+ </summary>
+ <remarks>by Sean.Lin on 2012-02-15</remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.GetEncPatientInfoRefresh">
+ <summary>
+ 病人資訊 (EncPatientInfoUC) 接收從 我的病人   拋出的事件，取得刷新畫面 flag
+ </summary>
+ <remarks>by Sean.Lin on 2012-03-09</remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.GetEncFocusData">
+ <summary> 從外部元件取得資料帶回護理紀錄 </summary>
+ <remarks>by Kevin.Kai on 2015-08-07</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseEncDoubtOrderData(System.String,System.String,System.Int32,System.String)">
+ <summary>
+ 待確認醫囑原因及說明
+ </summary>
+ <remarks>by Sean.Lin on 2012-03-08</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseEncRefreshOrderExe(System.String)">
+ <summary>
+ 醫囑執行重新查詢
+ </summary>
+ <remarks>by Sean.Lin on 2012-03-08</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseEncLeaveOrderModify(System.String)">
+ <summary>
+ 離開醫囑修改畫面，Flag 為 0
+ </summary>
+ <remarks>by Sean.Lin on 2012-07-09</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseEncTreatmentSummary(System.Data.DataSet)">
+ <summary>
+ 取得計價結果的DS，包含兩個DT，1.OrderCode(Order_Code,count) 2.TreatmentNo(Treatment_No)。 
+ </summary>
+ <remarks>by Sean.Lin on 2012-02-07</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseEncPatientHistoryTime(System.String[])">
+ <summary>
+ 取得我的病人歷程起迄時間。  
+ </summary>
+ <remarks>by Sean.Lin on 2013-04-01</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseEncReturnDrugSTA(System.Data.DataSet)">
+ <summary>
+ 取得計價結果的DS，包含兩個DT，1.OrderCode(Order_Code,count) 2.TreatmentNo(Treatment_No)。 
+ </summary>
+ <remarks>by Sean.Lin on 2013-06-27</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseEncPatientInfoDS(System.Data.DataSet)">
+ <summary>
+ 從 我的病人  拋出的事件，傳出一個病人的 資訊DS
+ </summary>
+ <remarks>by Sean.Lin on 2012-02-15</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseEncPatientInfoRefresh(System.Boolean)">
+ <summary>
+ 從 我的病人  拋出的事件，傳出 True 表示刷新畫面了
+ </summary>
+ <remarks>by Sean.Lin on 2012-03-09</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaisENCFocusData(System.String)">
+ <summary> 從外部元件帶資料回護理紀錄 </summary>
+ <remarks>by Kevin.Kai on 2015-08-07</remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.GetAPIPatientInfoChartNo">
+ <summary>
+ 病人資訊 (PCSUCLPatientInfoUC) 接收從 我的病人(PCSUCLMyPatientUI)  拋出的事件，取得病人的 Chart_No
+ </summary>
+ <remarks>by Sean.Lin on 2011-11-29</remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.GetAPIPatientInfoDS">
+ <summary>
+ 病人資訊 (PCSUCLPatientInfoUC) 接收從 我的病人(PCSUCLMyPatientUI)  拋出的事件，取得病人的 資訊DS
+ </summary>
+ <remarks>by Sean.Lin on 2012-02-15</remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.GetAPIPatientInfoRefresh">
+ <summary>
+ 病人資訊 (PCSUCLPatientInfoUC) 接收從 我的病人(PCSUCLMyPatientUI)  拋出的事件，取得刷新畫面 flag
+ </summary>
+ <remarks>by Sean.Lin on 2012-03-09</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseAPIPatientInfoChartNo(System.String)">
+ <summary>
+ 從 我的病人(PCSUCLMyPatientUI) 拋出的事件，傳出一個病人的 Chart_No
+ </summary>
+ <remarks>by Sean.Lin on 2011-11-29</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseAPIPatientInfoDS(System.Data.DataSet)">
+ <summary>
+ 從 我的病人(PCSUCLMyPatientUI) 拋出的事件，傳出一個病人的 資訊DS
+ </summary>
+ <remarks>by Sean.Lin on 2012-02-15</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseAPIPatientInfoRefresh(System.Boolean)">
+ <summary>
+ 從 我的病人(PCSUCLMyPatientUI) 拋出的事件，傳出 True 表示刷新畫面了
+ </summary>
+ <remarks>by Sean.Lin on 2012-03-09</remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.OMOREG">
+ <summary>
+ 診間掛號
+ </summary>
+ <param name="ctlName"></param>
+ <param name="ds"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseOMOREG(System.String,System.Data.DataSet)">
+ <summary>
+ 診間掛號
+ </summary>
+ <param name="ctlName"></param>
+ <param name="ds"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.NFCForceRefresh">
+ <summary>
+ NFC Event (不管什麼狀況，需要讓 『通知訊息 UI 』 立刻更新，便是這一個。)
+ </summary>
+ <remarks>20100624 add by Roger</remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.DisplayStatusBar">
+ <summary>
+ 訊息列需要被更新的事件
+ </summary>
+ <param name="msg">訊息</param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.showDockEven">
+ <summary>
+ 自動顯示被 Dock 的 Form
+ </summary>
+ <param name="msg"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.showErrorMsgForWCF">
+ <summary>
+ 訊息事件-Error(WCF專用)
+ </summary>
+ <param name="inErrorCode"></param>
+ <param name="inMessage"></param>
+ <param name="inDetail"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.showErrorMsg">
+ <summary>
+ 訊息事件-Error
+ </summary>
+ <param name="inErrorCode"></param>
+ <param name="inMessage"></param>
+ <param name="inDetail"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.showWarnMsg">
+ <summary>
+ 訊息事件-Warn
+ </summary>
+ <param name="inErrorCode"></param>
+ <param name="inMessage"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.showQuestionMsg">
+ <summary>
+ 訊息事件-Question
+ </summary>
+ <param name="inErrorCode"></param>
+ <param name="inMessage"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.showInfoMsg">
+ <summary>
+ 訊息事件-Infomation
+ </summary>
+ <param name="inErrorCode"></param>
+ <param name="inMessage"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.UclOpenWindow">
+ <summary>
+ 開啟 OpenWindow 視窗，傳入查詢表格與條件值
+ </summary>
+ <param name="ctlName"></param>
+ <param name="uclTableName"></param>
+ <param name="uclQueryValue"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.UclOpenWindow2">
+ <summary>
+ 開啟 OpenWindow 視窗，傳入查詢表格與條件值
+ </summary>
+ <param name="ctlName"></param>
+ <param name="uclTableName"></param>
+ <param name="uclQueryField"></param>
+ <param name="uclQueryValue"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.UclOpenWindowValue">
+ <summary>
+ OpenWindow 視窗選取值回傳
+ </summary>
+ <param name="ctlName"></param>
+ <param name="uclCodeValue1"></param>
+ <param name="uclCodeValue2"></param>
+ <param name="uclCodeName"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.UclOpenWindowValue2">
+ <summary>
+ OpenWindow 視窗選取值回傳(多選)
+ </summary>
+ <param name="ctlName"></param>
+ <param name="ds"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.OmoToEmrFunctionList">
+ <summary>
+ OpenWindow 視窗選取值回傳(多選)
+ </summary>
+ <param name="ctlName"></param>
+ <param name="ds"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.EmrDittoOmo">
+ <summary>
+ OpenWindow 視窗選取值回傳(多選)
+ </summary>
+ <param name="ctlName"></param>
+ <param name="ds"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.UclOpenWindowMultiSelectValue">
+ <summary>
+ OpenWindow 視窗選取值回傳(多選)
+ </summary>
+ <param name="ctlName"></param>
+ <param name="ds"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.UclOpenWindowComboBoxGridValue">
+ <summary>
+ OpenWindow 視窗選取值回傳(隨輸隨選)
+ </summary>
+ <param name="ctlName"></param>
+ <param name="rowIndex"></param>
+ <param name="colIndex"></param>
+ <param name="row"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.UclOpenAreaWindow">
+ <summary>
+ 開啟 OpenAreaWindow 視窗
+ </summary>
+ <param name="ctlName"></param>
+ <param name="uclCodeValue"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.UclOpenChartNoWindow">
+ <summary>
+ 開啟 OpenChartNoWindow 視窗
+ </summary>
+ <param name="ctlName"></param>
+ <param name="uclCodeValue"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.UclOpenChartNoWindowNew">
+ <summary>
+ 開啟 OpenChartNoWindow 視窗
+ </summary>
+ <param name="ctlName"></param>
+ <param name="uclCodeValue"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.UclOpenComboBoxGridWindow">
+ <summary>
+ 開啟 OpenGridWindow 視窗
+ </summary>
+ <param name="CboName"></param>
+ <param name="SelectedValue"></param>
+ <param name="SelectedName"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.UclGetActiveTreeGridView">
+ <summary>
+ 回傳目前作用中的 TreeGridView
+ </summary>
+ <param name="GridViewName"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.UclFinishDoAction">
+ <summary>
+ 啟動 UclFinishDoAction
+ </summary>
+ <param name="ctlName"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.DEPOrderUIClosed">
+ <summary>
+ 回傳目前關閉 DEPOrderUI
+ </summary>
+ <param name="Flag"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.UclWaitingForm">
+ <summary>
+ 啟動 UclWaitingFormUI
+ </summary>
+ <param name="Action"></param>
+ <param name="Msg"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.UclWaitingForm2">
+ <summary>
+ 啟動 UclWaitingFormUI2
+ </summary>
+ <param name="Action"></param>
+ <param name="Msg"></param>
+ <param name="LocationX"></param>
+ <param name="LocationY"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.GetAPPLockWindow">
+ <summary>
+ 鎖定登入視窗，True: 鎖定；False:解鎖
+ </summary>
+ <remarks>by Sean.Lin on 2012-11-13</remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.SwitchUserEvent">
+ <summary>
+ 切換使用者
+ </summary> 
+ <remarks>Copy by Sean.Lin on 2014-01-28</remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.OpenAgentInstance">
+ <summary>
+ 授權代理
+ </summary> 
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.OpenUIFinished">
+ <summary>
+ 完成開啟動作
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.ImportExcel">
+ <summary>
+ 匯入Excel Ds
+ </summary>
+ <param name="ImportDs"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseNFCForceRefresh">
+ <summary>
+ fire NFC Event (不管什麼狀況，需要讓 『通知訊息 UI 』 立刻更新，便是這一個。)
+ </summary>
+ <remarks>20100624 add by Roger </remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaisShowDockEvent(System.String)">
+ <summary>
+ 自動顯示被 Dock 的 Form
+ </summary>
+ <param name="msg"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaisDisplayStatusBar(System.String)">
+ <summary>
+ 啟動訊息列需要被更新的事件，傳入訊息
+ </summary>
+ <param name="msg"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseShowErrorMsgForWCF(System.String,System.String,System.String)">
+ <summary>
+ 啟動錯誤訊息需要被更新的事件，傳入訊息(WCF專用)
+ </summary>
+ <param name="inErrorCode"></param>
+ <param name="inMessage"></param>
+ <param name="inDetail"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseShowErrorMsg(System.String,System.String[],System.String)">
+ <summary>
+ 啟動錯誤訊息需要被更新的事件，傳入訊息
+ </summary>
+ <param name="inErrorCode"></param>
+ <param name="inMessage"></param>
+ <param name="inDetail"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseShowWarnMsg(System.String,System.String[])">
+ <summary>
+ 啟動警告訊息需要被更新的事件，傳入訊息
+ </summary>
+ <param name="inErrorCode"></param>
+ <param name="inMessage"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseShowQuestionMsg(System.String,System.String[])">
+ <summary>
+ 啟動問題訊息需要被更新的事件，傳入訊息
+ </summary>
+ <param name="inErrorCode"></param>
+ <param name="inMessage"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseShowInfoMsg(System.String,System.String[])">
+ <summary>
+ 啟動資訊訊息需要被更新的事件，傳入訊息
+ </summary>
+ <param name="inErrorCode"></param>
+ <param name="inMessage"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseUclOpenWindow(System.String,System.String,System.String)">
+ <summary>
+ 開啟 OpenWindow 視窗，傳入查詢表格與條件值
+ </summary>
+ <param name="ctlName"></param>
+ <param name="uclTableName"></param>
+ <param name="uclQueryValue"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseUclOpenWindow2(System.String,System.String,System.String,System.String)">
+ <summary>
+ 開啟 OpenWindow 視窗，傳入查詢表格與條件值
+ </summary>
+ <param name="ctlName"></param>
+ <param name="uclTableName"></param>
+ <param name="uclQueryField"></param>
+ <param name="uclQueryValue"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseUclOpenWindowValue(System.String,System.String,System.String,System.String)">
+ <summary>
+ OpenWindow 視窗選取值回傳
+ </summary>
+ <param name="ctlName"></param>
+ <param name="uclCodeValue1"></param>
+ <param name="uclCodeValue2"></param>
+ <param name="uclCodeName"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseUclOpenWindowValue2(System.String,System.Data.DataSet)">
+ <summary>
+ OpenWindow 視窗選取值回傳 
+ </summary>
+ <param name="ctlName"></param>
+ <param name="ds"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseOmoToEmrFunctionList(System.String,System.Data.DataSet)">
+ <summary>
+ OpenWindow 視窗選取值回傳 
+ </summary>
+ <param name="ctlName"></param>
+ <param name="ds"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseEmrDittoOmo(System.String,System.Data.DataSet)">
+ <summary>
+ OpenWindow 視窗選取值回傳 
+ </summary>
+ <param name="ctlName"></param>
+ <param name="ds"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseUclOpenWindowComboBoxGridValue(System.String,System.Int32,System.Int32,System.Windows.Forms.DataGridViewRow)">
+ <summary>
+ OpenWindow 視窗選取值回傳(隨輸隨選)
+ </summary>
+ <param name="ctlName"></param>
+ <param name="rowIndex"></param>
+ <param name="colIndex"></param>
+ <param name="row"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseUclOpenWindowMultiSelectValue(System.String,System.Data.DataSet)">
+ <summary>
+ OpenWindow 視窗選取值回傳(多選)
+ </summary>
+ <param name="ctlName"></param>
+ <param name="ds"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseUclOpenAreaWindow(System.String,System.String)">
+ <summary>
+ 開啟 OpenWindow 視窗
+ </summary>
+ <param name="ctlName"></param>
+ <param name="uclCodeValue"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseUclOpenChartNoWindow(System.String,System.String)">
+ <summary>
+ 開啟 OpenWindow 視窗
+ </summary>
+ <param name="ctlName"></param>
+ <param name="uclCodeValue"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseUclOpenChartNoWindowNew(System.String,System.String,System.String)">
+ <summary>
+ 開啟 OpenWindow 視窗
+ </summary>
+ <param name="ctlName"></param>
+ <param name="uclCodeValue"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseUclOpenComboBoxGridWindow(System.String,System.String,System.String)">
+ <summary>
+ 開啟 OpenWindow 視窗
+ </summary>
+ <param name="CboName"></param>
+ <param name="SelectedValue"></param>
+ <param name="SelectedName"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseUclFinishDoAction(System.String)">
+ <summary>
+ 啟動 UclFinishDoAction
+ </summary>
+ <param name="ctlName"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseDEPOrderUIClosed(System.String)">
+ <summary>
+ 回傳目前作用中的 TreeGridView
+ </summary>
+ <param name="Flag"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseUclGetActiveTreeGridView(System.String)">
+ <summary>
+ 回傳目前作用中的 TreeGridView
+ </summary>
+ <param name="GridViewName"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseUclWaitingForm(System.String,System.String)">
+ <summary>
+ 啟動 UclWaitingFormUI
+ </summary>
+ <param name="Action"></param>
+ <param name="Msg"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseUclWaitingForm2(System.String,System.String,System.Int32,System.Int32)">
+ <summary>
+ 啟動 UclWaitingFormUI 
+ </summary>
+ <param name="Action"></param>
+ <param name="Msg"></param>
+ <param name="LocationX"></param>
+ <param name="LocationY"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseAPPLockWindow(System.String)">
+ <summary>
+ 鎖定登入視窗，True: 鎖定；False:解鎖
+ </summary>
+ <param name="LockFalg"></param>
+ <remarks>by Sean.Lin on 2012-11-13</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseSwitchUserEvent">
+ <summary>
+ 拋出切換使用者
+ </summary> 
+ <remarks>Copy by Sean.Lin on 2014-01-28</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseOpenAgentInstance(System.String,System.String,System.String,System.String,System.String[])">
+ <summary>
+ 授權代理
+ </summary> 
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.RefreshDgvProperty">
+ <summary>
+ 更新 Dgv_Property 事件
+ </summary>
+ <param name="_ctrl"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.SelectdToolCtrl">
+ <summary>
+ 選擇 Control 事件
+ </summary>
+ <param name="sender"></param>
+ <param name="parentForm"></param>
+ <param name="arySelectedCtrl"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.EventSetSelectedCtrl">
+ <summary>
+ 點選控制項
+ </summary>
+ <param name="sender"></param>
+ <param name="ctrl"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.AfterFinsihAddCtrl">
+ <summary>
+ 完成加入控制項
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.SelectedUCR">
+ <summary>
+ 點選自定義控制項
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.PatientInfoSetFinished">
+ <summary>
+ 設定病患資料完成
+ </summary>
+ <param name="_ctrlName"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.EvtSelectingToolBox">
+ <summary>
+ 選取工具箱
+ </summary>
+ <param name="sender"></param>
+ <param name="listSelectedCtrl"></param>
+ <param name="IsSelected"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.EvtAddCtrl2Panel">
+ <summary>
+ 加入控制項
+ </summary>
+ <param name="sender"></param>
+ <param name="ctrl"></param>
+ <param name="IsAdd"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.EvtSelectingCtrl">
+ <summary>
+ 點選 / 取消點選控制項
+ </summary>
+ <param name="sender"></param>
+ <param name="IsSelected"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.EvtSetBaseCtrl">
+ <summary>
+ 設定BaseCtrl
+ </summary>
+ <param name="sender"></param>
+ <param name=" baseCtrl "></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.EvtRaiseSelectingFromOtherCtrl">
+ <summary>
+ 外部控制項點選控制項
+ </summary>
+ <param name="sender"></param>
+ <param name="ctrl"></param>
+ <param name="IsSelected"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseRefreshDgvProperty(System.Object@,System.Windows.Forms.Control@)">
+ <summary>
+ 觸發更新 Dgv_Property 事件
+ </summary>
+ <param name="ctrl"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseSelectdToolCtrl(System.Object@,System.Object,System.Collections.ArrayList@)">
+ <summary>
+ 觸發選擇 Control 事件
+ </summary>
+ <param name="sender"></param>
+ <param name="parentForm"></param>
+ <param name="arySelectedCtrl"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseSetSelectedCtrl(System.Object@,System.Windows.Forms.Control@)">
+ <summary>
+ 觸發點選控制項
+ </summary>
+ <param name="sender"></param>
+ <param name="ctrl"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseAfterFinsihAddCtrl(System.Object@,System.Windows.Forms.Control@)">
+ <summary>
+ 觸發完成加入控制項
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseSelectedUCR(System.Object@,System.Windows.Forms.Control@,System.String@)">
+ <summary>
+ 點選自定義控制項
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaisePatientInfoSetFinished(System.Object@,System.String)">
+ <summary>
+ 設定病患資料完成
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseEvtSelectingToolBox(System.String,System.Object@,System.Boolean,System.Collections.ArrayList@)">
+ <summary>
+ 觸發-選取工具箱
+ </summary>
+ <param name="sender"></param>
+ <param name="IsSelected"></param>
+ <param name="listSelectedCtrl"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseEvtAddCtrl2Panel(System.String,System.Object@,System.Object@,System.Boolean@)">
+ <summary>
+ 觸發-加入控制項
+ </summary>
+ <param name="sender"></param>
+ <param name="ctrl"></param>
+ <param name="IsAdd"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseEvtSelectingCtrl(System.String,System.Object@,System.Boolean)">
+ <summary>
+ 觸發-點選 / 取消點選控制項
+ </summary>
+ <param name="sender"></param>
+ <param name="IsSelected"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseEvtSetBaseCtrl(System.String,System.Object@,System.Object)">
+ <summary>
+ 設定 BaseCtrl
+ </summary>
+ <param name="sender"></param>
+ <param name="baseCtrl"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseEvtSelectingFromOtherCtrl(System.String,System.Object@,System.Windows.Forms.Control@,System.Boolean)">
+ <summary>
+ 外部控制項點選控制項
+ </summary>
+ <param name="sender"></param>
+ <param name="ctrl"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.SetPatientData">
+ <summary>
+ 設定病患資料事件
+ </summary>
+ <param name="_ChartNo"></param>
+ <param name="_MedicalSn"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.EventSetBaseCtrl">
+ <summary>
+ 設定BaseCtrl事件
+ </summary>
+ <param name="baseCtrl"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.EventBtnClick">
+ <summary>
+ BtnClick
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <param name="baseCtrl">參考控制項</param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.EventSetFormRecord">
+ <summary>
+ 設定表單記錄
+ </summary>
+ <param name="TMPId"></param>
+ <param name="TMPSeqNo"></param>
+ <param name="SeqNo"></param>
+ <param name="ChartNo"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.EventSelectingFormList">
+ <summary>
+ 選擇表單清單其中一筆紀錄
+ </summary>
+ <param name="sender"></param>
+ <param name="IsAdd">True: Add or Select ; False: Remove</param>
+ <param name="listObj"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.EventSetButtonStatus">
+ <summary>
+ 設定按鍵狀態
+ </summary>
+ <param name="Area"></param>
+ <param name="Status"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.EventRefreshListStatus">
+ <summary>
+ 存檔後更新清單狀態
+ </summary>
+ <param name="sender"></param>
+ <param name="TmpId"></param>
+ <param name="TmpSeqNo"></param>
+ <param name="SeqNo"></param>
+ <param name="ChartNo"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.EventSetHistoryRecord">
+ <summary>
+ 設定選擇歷史紀錄
+ </summary>
+ <param name="TMPId"></param>
+ <param name="TMPSeqNo"></param>
+ <param name="SeqNo"></param>
+ <param name="ChartNo"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.EventInitFormPatientAndUserData">
+ <summary>
+ 初始化表單病人與使用者資料
+ </summary>
+ <param name="sender"></param>
+ <param name="dtPatient"></param>
+ <param name="dtUser"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseSetPatientData(System.Object@,System.String,System.String)">
+ <summary>
+ 觸發設定病患資料事件
+ </summary>
+ <param name="_ChartNo"></param>
+ <param name="_MedicalSn"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseEventSetBaseCtrl(System.Windows.Forms.Control@)">
+ <summary>
+ 觸發設定BaseCtrl事件
+ </summary>
+ <param name="baseCtrl"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseEventBtnClick(System.Object@,System.EventArgs,System.Windows.Forms.Control@)">
+ <summary>
+ 觸發BtnClick
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <param name="baseCtrl">參考控制項</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseEventSetFormRecord(System.Object@,System.String,System.String,System.String,System.String,System.String)">
+ <summary>
+ 設定表單記錄
+ </summary>
+ <param name="TMPId"></param>
+ <param name="TMPSeqNo"></param>
+ <param name="SeqNo"></param>
+ <param name="ChartNo"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseEventSelectingFormList(System.Object@,System.Boolean,System.Object@)">
+ <summary>
+ 觸發事件- 選擇表單清單其中一筆紀錄
+ </summary>
+ <param name="sender"></param>
+ <param name="IsAdd">True: Add or Select ; False: Remove</param>
+ <param name="listObj"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseEventSetButtonStatus(System.Object@,System.String,System.Object)">
+ <summary>
+ 觸發事件-設定按鍵狀態
+ </summary>
+ <param name="Area"></param>
+ <param name="Status"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseEventRefreshListStatus(System.Object@,System.String,System.Object,System.String,System.String)">
+ <summary>
+ 觸發事件-存檔後更新清單狀態
+ </summary>
+ <param name="sender"></param>
+ <param name="TmpId"></param>
+ <param name="TmpSeqNo"></param>
+ <param name="SeqNo"></param>
+ <param name="ChartNo"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseEventSetHistoryRecord(System.Object@,System.String,System.String,System.String,System.String)">
+ <summary>
+ 設定選擇歷史紀錄
+ </summary>
+ <param name="TMPId"></param>
+ <param name="TMPSeqNo"></param>
+ <param name="SeqNo"></param>
+ <param name="ChartNo"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseEventInitFormPatientAndUserData(System.Object@,System.Data.DataTable,System.Data.DataTable)">
+ <summary>
+ 初始化表單病人與使用者資料
+ </summary>
+ <param name="sender"></param>
+ <param name="dtPatient"></param>
+ <param name="dtUser"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.OmoChemoExecuted">
+ <summary>
+ 門診化療執行
+ </summary>
+ <param name="ChartNo">病歷號</param>
+ <param name="OutpatientSn">門診號</param>
+ <param name="ChemoCardSn">化療卡號</param>
+ <param name="ReturnDs"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.PatientHeightWeightChanged">
+ <summary>
+ 化療身高體重改變
+ </summary>
+<param name="height" ></param>
+ <param name="weight"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseOmoChemoExecuted(System.String,System.String,System.String,System.Data.DataSet)">
+ <summary>
+ 化療執行完畢丟出Event
+ </summary>
+ <param name="ChartNo"></param>
+ <param name="OutpatientSn"></param>
+ <param name="ChemoCardSn"></param>
+ <param name="ReturnDs"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaisePatientHeightWeightChanged(System.String,System.String)">
+ <summary>
+ 化療身高體重改變
+ </summary>
+<param name="height" ></param>
+ <param name="weight"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.CncPatientSelected">
+ <summary>
+ 為 Compile 通過加入，日後會移除
+ </summary>
+ <remarks>by Sean.Lin on 2014-01-24</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaisCncPatientSelected(System.Data.DataTable)">
+ <summary>
+ 啟動病患資料點選時的事件，傳入病患的DataTable
+ </summary>
+ <param name="patiDataTable"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.GetPCSUCLPatientInfoChartNo">
+ <summary>
+ 病人資訊 (PCSUCLPatientInfoUC) 接收從 我的病人(PCSUCLMyPatientUI)  拋出的事件，取得病人的 Chart_No
+ </summary>
+ <remarks>by Sean.Lin on 2011-11-29</remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.GetPCSUCLPatientInfoDS">
+ <summary>
+ 病人資訊 (PCSUCLPatientInfoUC) 接收從 我的病人(PCSUCLMyPatientUI)  拋出的事件，取得病人的 資訊DS
+ </summary>
+ <remarks>by Sean.Lin on 2012-02-15</remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.GetPCSUCLPatientInfoRefresh">
+ <summary>
+ 病人資訊 (PCSUCLPatientInfoUC) 接收從 我的病人(PCSUCLMyPatientUI)  拋出的事件，取得刷新畫面 flag
+ </summary>
+ <remarks>by Sean.Lin on 2012-03-09</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaisePCSUCLPatientInfoChartNo(System.String)">
+ <summary>
+ 從 我的病人(PCSUCLMyPatientUI) 拋出的事件，傳出一個病人的 Chart_No
+ </summary>
+ <remarks>by Sean.Lin on 2011-11-29</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaisePCSUCLPatientInfoDS(System.Data.DataSet)">
+ <summary>
+ 從 我的病人(PCSUCLMyPatientUI) 拋出的事件，傳出一個病人的 資訊DS
+ </summary>
+ <remarks>by Sean.Lin on 2012-02-15</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaisePCSUCLPatientInfoRefresh(System.Boolean)">
+ <summary>
+ 從 我的病人(PCSUCLMyPatientUI) 拋出的事件，傳出 True 表示刷新畫面了
+ </summary>
+ <remarks>by Sean.Lin on 2012-03-09</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseTIhdCboRelationSelectedIndexChanged(System.Boolean)">
+ <summary>
+IHD設定檢核條件作業關聯改變
+ </summary>
+ <remarks>by Charles on 2015-12-10</remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.GetTIhdCboRelationSelectedIndexChanged">
+ <summary>
+ 各自UI 接收從 IHD設定檢核條件作業關聯改變
+ </summary>
+ <remarks>by Charles on 2015-12-10</remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.GetNUTPumpCheckListData">
+ <summary>
+ 灌食機管理畫面與檢核表互相傳遞資料集
+ </summary>
+ <remarks>by Rich on 2012-03-15</remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.GetNUTFormulaIdData">
+ <summary>
+ 營養配方查詢畫面回傳配方代號
+ </summary>
+ <remarks>by Rich on 2012-03-30</remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.UpdateSGAForAssessment">
+ <summary>
+ 營養評估儲存完成後傳遞資料表
+ </summary>
+ <param name="dt"></param>
+ <remarks>by Rich on 2012-08-27</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseNUTPumpCheckListData(System.Data.DataSet)">
+ <summary>
+ 灌食機管理畫面與檢核表互相傳遞資料集
+ </summary>
+ <remarks>by Rich on 2012-03-15</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseNUTFormulaIdData(System.Data.DataRow)">
+ <summary>
+ 營養配方查詢畫面回傳配方代號
+ </summary>
+ <remarks>by Rich on 2012-03-30</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseUpdateSGAForAssessment(System.Data.DataTable)">
+ <summary>
+ 營養評估儲存完成後傳遞資料表
+ </summary>
+ <remarks>by Rich on 2012-08-27</remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.GetIMOOrderUsingOrderListRefresh">
+ <summary>
+ 更新使用中醫囑清單及醫囑清單
+ </summary>
+ <remarks>by Charles 2016-01-28</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseIMOOrderUsingOrderListRefresh">
+ <summary>
+ 更新使用中醫囑及醫囑清單
+ </summary>
+ <remarks>by Charles 2016-01-28</remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.GetOmoChemoOrderListForExecutionDialog">
+ <summary>
+ 呼叫化療處方確認執行功能
+ </summary>
+ <remarks>by Will 2016-06-22</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseOmoChemoOrderListForExecutionDialog">
+ <summary>
+ 呼叫化療處方確認執行功能
+ </summary>
+ <remarks>by Will 2016-06-22</remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.GetAMRAdmissionTemplateToNote">
+ <summary>
+ 複製入院病摘樣版到病摘
+ </summary>
+ <param name="obj"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.GetAMRProgressTemplateToNote">
+ <summary>
+ 複製病程病摘樣版到病摘
+ </summary>
+ <param name="obj"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.GetAMRDischargeTemplateToNote">
+ <summary>
+ 複製出院病摘樣版到病摘
+ </summary>
+ <param name="obj"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.GetAMROtherTemplateToNote">
+ <summary>
+ 複製其他病摘樣版到病摘
+ </summary>
+ <param name="obj"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.GetAMRProgressRecordToNote">
+ <summary>
+ 複製病程病摘紀錄到病摘
+ </summary>
+ <param name="obj"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.GetAMROtherRecordToNote">
+ <summary>
+ 複製其他病摘紀錄到病摘
+ </summary>
+ <param name="_digestTypeId">病摘種類</param>
+ <param name="obj"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.GetAMRSaveProgressRecordToTemplate">
+ <summary>
+ 複製病程病摘紀錄到病摘範本
+ </summary>
+ <param name="obj"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.GetAMRSaveOtherRecordToTemplate">
+ <summary>
+ 複製其他病摘紀錄到病摘範本
+ </summary>
+ <param name="obj"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.GetAMROperationRecordToNote">
+ <summary>
+ 複製手術紀錄紀錄到病摘
+ </summary>
+ <param name="obj"></param>
+ <remarks>by Rudolf on 2012-04-02</remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.GetAMRSaveCommentsToTemplate">
+ <summary>
+  複製評論和其他病摘紀錄到病摘範本
+ </summary>
+ <param name="obj"></param>
+ <remarks></remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.LoadProblemListData">
+ <summary>
+ 載入問題表列資料
+ </summary>
+ <param name="owner">判斷是否要接收Event</param>
+ <param name="dt_Problem">問題表列物件</param>
+ <remarks>By Yaya on 2012-07-22</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseGetAMRAdmissionTemplateToNote(System.Object,System.Object)">
+ <summary>
+ 複製入院病摘樣版到病摘
+ </summary>
+ <param name="obj"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseGetAMRProgressTemplateToNote(System.Object)">
+ <summary>
+ 複製病程病摘樣版到病摘
+ </summary>
+ <param name="obj"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseGetAMRDischargeTemplateToNote(System.Object,System.Object)">
+ <summary>
+ 複製出院病摘樣版到病摘
+ </summary>
+ <param name="obj"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseGetAMROtherTemplateToNote(System.Object)">
+ <summary>
+ 複製其他病摘樣版到病摘
+ </summary>
+ <param name="obj"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseGetAMRProgressRecordToNote(System.Object)">
+ <summary>
+ 複製病程紀錄到病摘
+ </summary>
+ <param name="obj"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseGetAMROtherRecordToNote(System.String,System.Object)">
+ <summary>
+ 複製其他病摘紀錄到病摘
+ </summary>
+ <param name="_digestTypeId">病摘種類</param>
+ <param name="obj"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseGetAMRSaveProgressRecordToTemplate(System.Object)">
+ <summary>
+ 複製病程病摘紀錄到病摘範本
+ </summary>
+ <param name="obj"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseGetAMRSaveOtherRecordToTemplate(System.Object)">
+ <summary>
+ 複製其他病摘紀錄到病摘範本
+ </summary>
+ <param name="obj"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseGetAMROperationRecordToNote(System.Object)">
+ <summary>
+ 複製手術紀錄紀錄到病摘
+ </summary>
+ <param name="obj"></param>
+ <remarks>by Rudolf on 2012-04-02</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseGetAMRSaveCommentsToTemplate(System.Object)">
+ <summary>
+ 複製評論和其他病摘紀錄到病摘範本
+ </summary>
+ <param name="obj"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseLoadProblemListData(System.String,System.Data.DataTable)">
+ <summary>
+ 載入問題表列資料
+ </summary>
+ <param name="owner">判斷是否要接收Event</param>
+ <param name="dt_Problem">問題表列物件</param>
+ <remarks>By Yaya on 2012-07-22</remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.HeightChanged">
+ <summary>
+ 更新身高
+ </summary>
+ <param name="value">身高數值</param>
+ <remarks>By Jun on 2016-09-30</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseHeightChanged(System.String)">
+ <summary>
+ 更新身高
+ </summary>
+ <param name="value">身高數值</param>
+ <remarks>By Jun on 2016-09-30</remarks>
+</member>
+<member name="E:Syscom.Client.CMM.EventManager.WeightChanged">
+ <summary>
+ 更新體重
+ </summary>
+ <param name="value">體重數值</param>
+ <remarks>By Jun on 2016-09-30</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.EventManager.RaiseWeightChanged(System.String)">
+ <summary>
+ 更新體重
+ </summary>
+ <param name="value">體重數值</param>
+ <remarks>By Jun on 2016-09-30</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.LOGDelegate.#ctor">
+ <summary>
+ 阻止外部直接進行新建立的宣告
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Client.CMM.LOGDelegate.getInstance">
+ <summary>
+ 屬性取得類別實體
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:Syscom.Client.CMM.LOGDelegate.Nested">
+ <summary>
+ 巢狀類別存放建立的類別實體
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.LOGDelegate.refreshLogSetting">
+ <summary>
+ 即時讀取 log4net.xml 更新 log4net 檔案設定
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.LOGDelegate.dbDebugMsg(System.String@,System.Exception@)">
+ <summary>
+ 寫入 DB 的日誌檔(層級 Debug)
+ </summary>
+ <param name="msg">訊息</param>
+ <param name="ex">例外</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.LOGDelegate.dbInfoMsg(System.String@,System.Exception@)">
+ <summary>
+ 寫入 DB 的日誌檔(層級 Info)
+ </summary>
+ <param name="msg">訊息</param>
+ <param name="ex">例外</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.LOGDelegate.dbWarnMsg(System.String@,System.Exception@)">
+ <summary>
+寫入 DB 的日誌檔(層級 Warn)
+ </summary>  
+ <param name="msg">訊息</param>
+ <param name="ex">例外</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.LOGDelegate.dbErrorMsg(System.String@,System.Exception@)">
+ <summary>
+寫入 DB 的日誌檔(層級 Error)
+ </summary>  
+ <param name="msg">訊息</param>
+ <param name="ex">例外</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.LOGDelegate.dbFatalMsg(System.String@,System.Exception@)">
+ <summary>
+ 寫入 DB 的日誌檔(層級 Fatal)
+ </summary>
+ <param name="msg">訊息</param>
+ <param name="ex">例外</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.LOGDelegate.dbClientErrorMsg(Syscom.Comm.LOG.LOGDelegate.LogLevel,System.String,System.String,System.String)">
+ <summary>
+ 禁止使用 (僅限特定函式呼叫用)
+ </summary>
+ <param name="callerType"></param>
+ <param name="methodName"></param>
+ <param name="msg"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.MessageHandling.#ctor">
+ <summary>
+ 阻止外部直接進行新建立的宣告
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.MessageHandling.ShowErrorMsg(System.String,System.Reflection.MethodBase@,System.Boolean)">
+ <summary>
+ 顯示錯誤訊息視窗，單一訊息。
+ 
+ inMessage:訊息內容。
+ 
+ </summary>
+ <param name="inMessage" >訊息內容</param>
+ <remarks>by Sean.Lin on 2013-7-22</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.MessageHandling.ShowErrorMsg(System.String,System.String,System.Reflection.MethodBase@,System.Boolean)">
+ <summary>
+ 顯示錯誤訊息視窗，單一訊息。
+ 
+ inErrorCode:訊息代碼。inMessage:訊息內容
+ 
+ </summary>
+ <param name="inErrorCode" >訊息代碼</param>
+ <param name="inMessage" >訊息內容</param>
+ <remarks>by Sean.Lin on 2013-7-22</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.MessageHandling.ShowErrorMsg(System.String,System.String,System.String,System.Reflection.MethodBase@,System.Boolean)">
+ <summary>
+ 顯示錯誤訊息視窗，單一訊息。
+ 
+ inErrorCode:訊息代碼。inMessage:訊息內容。inDetail:Exception 的內容
+ 
+ </summary>
+ <param name="inErrorCode" >訊息代碼</param>
+ <param name="inMessage" >訊息內容</param>
+ <param name="inDetail" >Ex 的內容</param>
+ <remarks>by Sean.Lin on 2013-7-22</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.MessageHandling.ShowErrorMsg(System.String,System.String[],System.String,System.Reflection.MethodBase@,System.Boolean)">
+ <summary>
+ 顯示錯誤訊息視窗，多個訊息，EX:inMessage{0}不得小於inMessage{1}。
+ 
+ inErrorCode:訊息代碼。inMessage:訊息內容陣列。inDetail:Exception 的內容
+ 
+ </summary>
+ <param name="inErrorCode" >訊息代碼</param>
+ <param name="inMessage" >訊息內容陣列</param>
+ <param name="inDetail" >Ex 的內容</param>
+ <remarks>by Sean.Lin on 2013-7-22</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.MessageHandling.ShowErrorMsgForWCF(System.String,System.String,System.String,System.Reflection.MethodBase@,System.Boolean)">
+ <summary>
+ 顯示錯誤訊息視窗，並自動儲存錯誤訊息至Client端 Log，多個訊息，EX:inMessage{0}不得小於inMessage{1}。(WCF專用)
+ 
+ inErrorCode:訊息代碼。inMessage:訊息內容。inDetail:Exception 的內容
+ 
+ </summary>
+ <param name="inErrorCode" >訊息代碼</param>
+ <param name="inMessage" >訊息內容</param>
+ <param name="inDetail" >Ex 的內容</param>
+ <remarks>by Sean.Lin on 2013-7-22</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.MessageHandling.ShowWarnMsg(System.String)">
+ <summary>
+ 顯示警告訊息視窗，單一訊息。
+ 
+ inMessage:訊息內容 
+ 
+ </summary>
+ <param name="inMessage" >訊息內容</param>
+ <remarks>by Sean.Lin on 2013-7-22</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.MessageHandling.ShowWarnMsg(System.String,System.String)">
+ <summary>
+ 顯示警告訊息視窗，單一訊息。
+ 
+ inErrorCode:訊息代碼。inMessage:訊息內容。
+ 
+ </summary>
+ <param name="inErrorCode" >訊息代碼</param>
+ <param name="inMessage" >訊息內容陣列</param> 
+ <remarks>by Sean.Lin on 2013-7-22</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.MessageHandling.ShowWarnMsg(System.String,System.String[])">
+ <summary>
+ 顯示警告訊息視窗，多個訊息，EX:inMessage{0}不得小於inMessage{1}。
+ 
+ inErrorCode:訊息代碼。inMessage:訊息內容陣列。
+ 
+ </summary>
+ <param name="inErrorCode" >訊息代碼</param>
+ <param name="inMessage" >訊息內容陣列</param> 
+ <remarks>by Sean.Lin on 2013-7-22</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.MessageHandling.ShowQuestionMsg(System.String)">
+ <summary>
+ 顯示疑問訊息視窗，單一訊息。
+ 
+ inMessage:訊息代碼。 
+ 
+ </summary>
+ <param name="inMessage" >訊息內容</param>
+ <remarks>by Sean.Lin on 2013-7-22</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.MessageHandling.ShowQuestionMsg(System.String,System.String)">
+ <summary>
+ 顯示疑問訊息視窗，單一訊息。
+ 
+ inErrorCode:訊息代碼。inMessage:訊息內容。
+ 
+ </summary>
+ <param name="inErrorCode" >訊息代碼</param>
+ <param name="inMessage" >訊息內容陣列</param> 
+ <remarks>by Sean.Lin on 2013-7-22</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.MessageHandling.ShowQuestionMsg(System.String,System.String[])">
+ <summary>
+ 顯示疑問訊息視窗，多個訊息，EX:inMessage{0}不得小於inMessage{1}。
+ 
+ inErrorCode:訊息代碼。inMessage:訊息內容陣列。
+ 
+ </summary>
+ <param name="inErrorCode" >訊息代碼</param>
+ <param name="inMessage" >訊息內容陣列</param> 
+ <remarks>by Sean.Lin on 2013-7-22</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.MessageHandling.ShowInfoMsg(System.String)">
+ <summary>
+ 顯示一般訊息於左下方訊息欄，單一訊息。
+ 
+ inMessage:訊息內容。
+ 
+ </summary> 
+ <param name="inMessage" >訊息內容陣列</param> 
+ <remarks>by Sean.Lin on 2013-7-22</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.MessageHandling.ShowInfoMsg(System.String,System.String)">
+ <summary>
+ 顯示一般訊息於左下方訊息欄，單一訊息。
+ 
+ inErrorCode:訊息代碼。inMessage:訊息內容。
+ 
+ </summary>
+ <param name="inErrorCode" >訊息代碼</param>
+ <param name="inMessage" >訊息內容陣列</param> 
+ <remarks>by Sean.Lin on 2013-7-22</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.MessageHandling.ShowInfoMsg(System.String,System.String[])">
+ <summary>
+ 顯示一般訊息於左下方訊息欄，多個訊息，EX:inMessage{0}不得小於inMessage{1}。
+ 
+ inErrorCode:訊息代碼。inMessage:訊息內容陣列。
+ 
+ </summary>
+ <param name="inErrorCode" >訊息代碼</param>
+ <param name="inMessage" >訊息內容陣列</param> 
+ <remarks>by Sean.Lin on 2013-7-22</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.MessageHandling.ClearInfoMsg">
+ <summary>
+ 清除訊息欄。
+ </summary>
+ <remarks>by Sean.Lin on 2013-7-22</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.MessageHandling.ShowInfoMsgBox(System.String)">
+ <summary>
+ 顯示一般訊息，單一訊息。
+ 
+ inMessage:訊息內容。
+ 
+ </summary> 
+ <param name="inMessage" >訊息內容陣列</param> 
+ <remarks>by Charles.Chiou on 2016-7-05</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.MessageHandling.ShowInfoMsgBox(System.String,System.String)">
+ <summary>
+ 顯示一般訊息，單一訊息。
+ 
+ inErrorCode:訊息代碼。inMessage:訊息內容。
+ 
+ </summary>
+ <param name="inErrorCode" >訊息代碼</param>
+ <param name="inMessage" >訊息內容陣列</param> 
+ <remarks>by Charles.Chiou on 2016-7-05</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.MessageHandling.ShowInfoMsgBox(System.String,System.String[])">
+ <summary>
+ 顯示一般訊息，多個訊息，EX:inMessage{0}不得小於inMessage{1}。
+ 
+ inErrorCode:訊息代碼。inMessage:訊息內容陣列。
+ 
+ </summary>
+ <param name="inErrorCode" >訊息代碼</param>
+ <param name="inMessage" >訊息內容陣列</param> 
+ <remarks>by Charles.Chiou on 2016-7-05</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.MessageHandling.getMethodBase">
+ <summary>
+ 取得 Method Base 相關資訊，根據判斷使用到的需求通常為 Shared 函式呼叫
+ 故取得前兩層呼叫函式基本資訊
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.CMM.MessageHandlingUI.SetControlByLanguage">
+ <summary>
+ 根據語言設定控制項的名稱
+ </summary>
+ <remarks>by Sean.Lin on 2013-8-1</remarks>
+</member>
+<member name="M:Syscom.Client.CMM.VersionControl.InstallUpdateSyncWithInfo">
+ <summary>
+ 判斷安裝的版本，若是有新版本顯示訊息，立即更新。
+ </summary>
+ <remarks></remarks>
+</member>
+</members>
+</doc>

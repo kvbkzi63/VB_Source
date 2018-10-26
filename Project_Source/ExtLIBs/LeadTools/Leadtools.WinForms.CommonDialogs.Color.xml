@@ -1,0 +1,707 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>Leadtools.WinForms.CommonDialogs.Color</name>
+  </assembly>
+  <members>
+    <member name="T:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogStringsId">
+      <summary>
+            Indicates the dialog string ID.
+            <seealso cref="T:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogStringsId" /></summary>
+      <noremarks />
+      <example>
+            Refer to <see cref="T:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog" /> example.
+            </example>
+    </member>
+    <member name="F:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogStringsId.WindowLevelCaption">
+      <summary>
+            String ID for the Window Level dialog "Window Level" string.
+            </summary>
+    </member>
+    <member name="F:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogStringsId.WindowLevelRange">
+      <summary>
+            String ID for the Window Level dialog "Range:" string.
+            </summary>
+    </member>
+    <member name="F:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogStringsId.WindowLevelInside">
+      <summary>
+            String ID for the Window Level dialog "Inside" string.
+            </summary>
+    </member>
+    <member name="F:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogStringsId.WindowLevelOutside">
+      <summary>
+            String ID for the Window Level dialog "Outside" string.
+            </summary>
+    </member>
+    <member name="F:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogStringsId.WindowLevelColors">
+      <summary>
+            String ID for the Window Level dialog "Colors" string.
+            </summary>
+    </member>
+    <member name="F:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogStringsId.WindowLevelEndColors">
+      <summary>
+            String ID for the Window Level dialog "End Color:" string.
+            </summary>
+    </member>
+    <member name="F:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogStringsId.WindowLevelStartColors">
+      <summary>
+            String ID for the Window Level dialog "Start Color:" string.
+            </summary>
+    </member>
+    <member name="F:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogStringsId.WindowLevelLUTCurve">
+      <summary>
+            String ID for the Window Level dialog "LUT Carve" string.
+            </summary>
+    </member>
+    <member name="F:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogStringsId.WindowLevelCurveMode">
+      <summary>
+            String ID for the Window Level dialog "Mode:" string.
+            </summary>
+    </member>
+    <member name="F:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogStringsId.WindowLevelFactor">
+      <summary>
+            String ID for the Window Level dialog "Factor:" string.
+            </summary>
+    </member>
+    <member name="F:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogStringsId.WindowLevelLinear">
+      <summary>
+            String ID for the Window Level dialog "Linear" string.
+            </summary>
+    </member>
+    <member name="F:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogStringsId.WindowLevelExponential">
+      <summary>
+            String ID for the Window Level dialog "Exponential" string.
+            </summary>
+    </member>
+    <member name="F:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogStringsId.WindowLevelLogarithmic">
+      <summary>
+            String ID for the Window Level dialog "Logarithmic" string.
+            </summary>
+    </member>
+    <member name="F:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogStringsId.WindowLevelSigmoid">
+      <summary>
+            String ID for the Window Level dialog "Sigmoid" string.
+            </summary>
+    </member>
+    <member name="F:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogStringsId.WindowLevelLowLevel">
+      <summary>
+            String ID for the Window Level dialog "Low Level:" string.
+            </summary>
+    </member>
+    <member name="F:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogStringsId.WindowLevelHighLevel">
+      <summary>
+            String ID for the Window Level dialog "High Level:" string.
+            </summary>
+    </member>
+    <member name="F:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogStringsId.WindowLevelWindow">
+      <summary>
+            String ID for the Window Level dialog "Window" string.
+            </summary>
+    </member>
+    <member name="F:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogStringsId.WindowLevelCenter">
+      <summary>
+            String ID for the Window Level dialog "Center:" string.
+            </summary>
+    </member>
+    <member name="F:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogStringsId.WindowLevelWidth">
+      <summary>
+            String ID for the Window Level dialog "Width:" string.
+            </summary>
+    </member>
+    <member name="F:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogStringsId.WindowLevelOk">
+      <summary>
+            String ID for the Window Level dialog "OK" string.
+            </summary>
+    </member>
+    <member name="F:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogStringsId.WindowLevelCancel">
+      <summary>
+            String ID for the Window Level dialog "Cancel" string.
+            </summary>
+    </member>
+    <member name="F:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogStringsId.WindowLevelHelp">
+      <summary>
+            String ID for the Window Level dialog "Help" string.
+            </summary>
+    </member>
+    <member name="F:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogStringsId.WindowLevelValueDialogLowCaption">
+      <summary>
+            String ID for the Window Level dialog "Low Value Dialog" string.
+            </summary>
+    </member>
+    <member name="F:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogStringsId.WindowLevelValueDialogHighCaption">
+      <summary>
+            String ID for the Window Level dialog "High Value Dialog" string.
+            </summary>
+    </member>
+    <member name="F:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogStringsId.WindowLevelValueDialogValue">
+      <summary>
+            String ID for the Window Level dialog "Value:" string.
+            </summary>
+    </member>
+    <member name="F:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogStringsId.WindowLevelIdleStatus">
+      <summary>
+            String ID for the Window Level idle status
+            </summary>
+    </member>
+    <member name="F:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogStringsId.WindowLevelProcessingStatus">
+      <summary>
+            String ID for the Window Level processing status
+            </summary>
+    </member>
+    <member name="F:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogStringsId.WindowLevelCopyingStatus">
+      <summary>
+            String ID for the Window Level copying status
+            </summary>
+    </member>
+    <member name="F:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogStringsId.WindowLevelZoomToNormal">
+      <summary>
+            String ID for the Window Level zoom to normal option
+            </summary>
+    </member>
+    <member name="F:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogStringsId.WindowLevelZoomToFitWindow">
+      <summary>
+            String ID for the Window Level zoom to fit window option
+            </summary>
+    </member>
+    <member name="F:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogStringsId.WindowLevelNote">
+      <summary>
+            String ID for the Window Level tool tip note
+            </summary>
+    </member>
+    <member name="T:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogString">
+      <summary>
+            Represents a Leadtools dialogs strings class to update the dialogs string with a new string. 
+            </summary>
+      <noremarks />
+      <example>
+            Refer to <see cref="T:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog" /> example.
+            </example>
+    </member>
+    <member name="M:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogString.#ctor(System.String,Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogStringsId)">
+      <summary>
+            Initializes a new instance of the <see cref="T:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogString" /> class.
+            </summary>
+      <noremarks />
+      <param name="defaultString"> New string for the ID</param>
+      <param name="id"> Dialog string id for the string that will be updated</param>
+      <example>
+            Refer to <see cref="T:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog" /> example.
+            </example>
+    </member>
+    <member name="M:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogString.ToString">
+      <summary>
+            This member overrides <see cref="M:System.Object.ToString" /> and returns the 
+            dialog string associated with the object String ID.
+            </summary>
+      <noremarks />
+      <returns>Returns the dialog string associated with the object String ID</returns>
+      <example>
+            Refer to <see cref="T:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog" /> example.
+            </example>
+    </member>
+    <member name="P:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogString.DialogStringId">
+      <summary>
+            Gets the dialog string ID for this object, refer to the <see cref="T:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogStringsId" /> Enumeration.
+            </summary>
+      <value>Represents the dialog string ID for this object <see cref="T:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogStringsId" />.
+            </value>
+      <noremarks />
+      <example>
+            Refer to <see cref="T:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog" /> example.
+            </example>
+    </member>
+    <member name="P:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogString.String">
+      <summary>
+            Gets the dialog string associated with the object String ID.
+            </summary>
+      <noremarks />
+      <value>Represents the dialog string associated with the object String ID.</value>
+      <example>
+            Refer to <see cref="T:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog" /> example.
+            </example>
+    </member>
+    <member name="T:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog">
+      <summary>
+            Displays the Window Level dialog box.
+            </summary>
+      <remarks>
+        <p>The Window Level dialog can be seen below:</p>
+        <para>
+          <img src="WindowLevelDialog.jpg" />
+        </para>
+      </remarks>
+      <example>
+        <para />
+        <code lang="VB">   Public Sub _windowLevleDlg_Help(ByVal sender As Object, ByVal e As RasterColorDialogHelpEventArgs) Handles _windowLevleDlg.Help
+      If e.Dialog = RasterColorDialogHelpName.WindowLevel Then
+         MessageBox.Show("Window Level dialog Help")
+      End If
+   End Sub
+   WithEvents _windowLevleDlg As New RasterWindowLevelDialog
+
+   Public Sub WindowLevelDialogExample()
+      ' Prepare RasterCodecs
+      Dim codecs As New RasterCodecs()
+
+      ' load an image
+        Dim leadImage As RasterImage = codecs.Load(LeadtoolsExamples.Common.ImagesPath.Path + "Image1.cmp")
+
+        Dim size As Integer
+        Dim minMaxBitsCmd As MinMaxBitsCommand = New MinMaxBitsCommand
+        Dim minMaxValuesCmd As MinMaxValuesCommand = New MinMaxValuesCommand
+
+        size = (1 &lt;&lt; (leadImage.HighBit - leadImage.LowBit + 1))
+
+        minMaxBitsCmd.Run(leadImage)
+        _windowLevleDlg.LowBit = minMaxBitsCmd.MinimumBit
+        _windowLevleDlg.HighBit = minMaxBitsCmd.MaximumBit
+
+        minMaxValuesCmd.Run(leadImage)
+        _windowLevleDlg.Low = minMaxValuesCmd.MinimumValue
+        _windowLevleDlg.High = minMaxValuesCmd.MaximumValue
+
+        ReDim _windowLevleDlg.LookupTable(size)
+        _windowLevleDlg.AutoProcess = False
+        _windowLevleDlg.Factor = 0
+        _windowLevleDlg.Image = leadImage
+        _windowLevleDlg.ZoomToFit = True
+        _windowLevleDlg.ShowPreview = True
+        _windowLevleDlg.ShowZoomLevel = True
+        _windowLevleDlg.ShowHelp = False
+        _windowLevleDlg.ShowRange = True
+        _windowLevleDlg.Signed = leadImage.Signed
+        _windowLevleDlg.StartColor = New Leadtools.RasterColor(0, 0, 0)
+        _windowLevleDlg.EndColor = New Leadtools.RasterColor(255, 255, 255)
+        _windowLevleDlg.WindowLevelFlags = Leadtools.RasterPaletteWindowLevelFlags.Inside Or Leadtools.RasterPaletteWindowLevelFlags.Linear
+
+        If DialogResult.OK = _windowLevleDlg.ShowDialog(Nothing) Then
+
+            Dim command As WindowLevelCommand = New WindowLevelCommand
+
+            command.HighBit = _windowLevleDlg.HighBit
+            command.LowBit = _windowLevleDlg.LowBit
+            command.LookupTable = _windowLevleDlg.LookupTable
+            command.Order = Leadtools.RasterByteOrder.Bgr
+
+            command.Run(leadImage)
+        End If
+
+        ' save the resulted image
+        codecs.Save(leadImage, LeadtoolsExamples.Common.ImagesPath.Path + "WindowLevelDialogResult.bmp", RasterImageFormat.Bmp, 24)
+   End Sub</code>
+        <code lang="CS">      public void windowLevelDlg_Help(object sender, RasterColorDialogHelpEventArgs e)
+      {
+         if(e.Dialog == RasterColorDialogHelpName.WindowLevel)
+         {
+            MessageBox.Show ( "Window Level dialog Help" );
+         }
+      }
+
+      public void WindowLevelDialogExample()
+      {
+         // initialize the RasterCodecs
+         RasterCodecs codecs = new RasterCodecs();
+
+         // load an image
+         RasterImage rasterImage = codecs.Load(LeadtoolsExamples.Common.ImagesPath.Path + "Image1.cmp");
+
+         int size ;
+         RasterWindowLevelDialog windowLevelDlg = new RasterWindowLevelDialog();
+         MinMaxBitsCommand minMaxBitsCmd= new MinMaxBitsCommand ( );
+         MinMaxValuesCommand minMaxValuesCmd= new MinMaxValuesCommand ( );
+
+         size= (1 &lt;&lt; (rasterImage.HighBit - rasterImage.LowBit + 1));
+
+         minMaxBitsCmd.Run ( rasterImage );
+         windowLevelDlg.LowBit  = minMaxBitsCmd.MinimumBit ; 
+         windowLevelDlg.HighBit = minMaxBitsCmd.MaximumBit ; 
+
+         minMaxValuesCmd.Run ( rasterImage );
+         windowLevelDlg.Low  = minMaxValuesCmd.MinimumValue ;
+         windowLevelDlg.High = minMaxValuesCmd.MaximumValue ; 
+
+         windowLevelDlg.AutoProcess    = false ;
+         windowLevelDlg.Factor         = 0 ;
+         windowLevelDlg.Image          = rasterImage ;
+         windowLevelDlg.ZoomToFit      = true ;
+         windowLevelDlg.ShowPreview    = true ;
+         windowLevelDlg.ShowZoomLevel  = true ;
+         windowLevelDlg.ShowHelp       = false ;
+         windowLevelDlg.ShowRange      = true ;
+         windowLevelDlg.Signed         = rasterImage.Signed;
+         windowLevelDlg.LookupTable    = new Leadtools.RasterColor [size];
+         windowLevelDlg.StartColor     = new Leadtools.RasterColor ( 0, 0 , 0 ) ; 
+         windowLevelDlg.EndColor       = new Leadtools.RasterColor ( 255, 255, 255 ) ; 
+         windowLevelDlg.WindowLevelFlags = Leadtools.RasterPaletteWindowLevelFlags.Inside | Leadtools.RasterPaletteWindowLevelFlags.Linear;
+         windowLevelDlg.Help           += new EventHandler&lt;RasterColorDialogHelpEventArgs&gt;(windowLevelDlg_Help);
+
+
+         if ( DialogResult.OK == windowLevelDlg.ShowDialog ( null ) )
+         {
+            WindowLevelCommand command = new WindowLevelCommand();
+
+            command.HighBit     = windowLevelDlg.HighBit;
+            command.LowBit      = windowLevelDlg.LowBit;
+            command.LookupTable = windowLevelDlg.LookupTable;
+            command.Order       = Leadtools.RasterByteOrder.Bgr;
+
+            command.Run(rasterImage);
+         }
+
+         // save the resulted image
+         codecs.Save(rasterImage, LeadtoolsExamples.Common.ImagesPath.Path + "WindowLevelDialogResult.bmp", RasterImageFormat.Bmp, 24);
+      }</code>
+        <!--WinForms.CommonDialogs.Color.RasterWindowLevelDialog-->
+      </example>
+      <seealso cref="M:Leadtools.RasterPalette.WindowLevelFillLookupTable(Leadtools.RasterColor[],Leadtools.RasterColor,Leadtools.RasterColor,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,Leadtools.RasterPaletteWindowLevelFlags)" />
+      <seealso cref="T:Leadtools.ImageProcessing.Core.WindowLevelCommand" />
+    </member>
+    <member name="M:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog.OnHelp(Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogHelpEventArgs)">
+      <summary>
+            Raises the <see cref="E:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog.Help" /> event.
+            </summary>
+      <noremarks />
+      <param name="e">
+            The event handler receives an argument of type <see cref="T:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogHelpEventArgs" /> .
+            </param>
+      <example>
+            Refer to <see cref="T:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog" /> example.
+            </example>
+    </member>
+    <member name="M:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog.#ctor">
+      <summary>
+            Creates an instance of the Window Level dialog class.
+            </summary>
+      <noremarks />
+      <example>
+            Refer to <see cref="T:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog" /> example.
+            </example>
+    </member>
+    <member name="M:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog.Dispose(System.Boolean)">
+      <summary>
+            This member supports the LEADTOOLS infrastructure and is not intended to be 
+            used directly from your code.
+            </summary>
+      <noremarks />
+      <param name="disposing">true to release both managed and unmanaged resources; 
+            false to release only unmanaged resources.</param>
+      <example>
+            Refer to <see cref="T:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog" /> example.
+            </example>
+    </member>
+    <member name="M:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog.GetDialogString(Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogStringsId)">
+      <summary>
+            Gets a string for the specified Dialog String ID.
+            </summary>
+      <noremarks />
+      <param name="id"> Dialog ID for the dialog strings.</param>
+      <returns>
+            Returns the dialog string.
+            </returns>
+      <example>
+            Refer to <see cref="T:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog" /> example.
+            </example>
+    </member>
+    <member name="M:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog.SetDialogString(Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogString)">
+      <summary>
+            Sets the new string for the specified Dialog String ID in order to change the 
+            dialog strings.
+            </summary>
+      <noremarks />
+      <param name="newDialogString"> New dialog string <see cref="T:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogStringsId" />.</param>
+      <returns>
+            Returns the old dialog string.
+            </returns>
+      <example>
+            Refer to <see cref="T:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog" /> example.
+            </example>
+    </member>
+    <member name="P:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog.AutoProcess">
+      <summary>
+            Gets or sets the value that determines whether the dialog should 
+            perform window-leveling on the 
+            <see cref="P:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog.Image" /> when the user clicks
+            OK.
+            </summary>
+      <noremarks />
+      <value>
+            true means the dialog should perform window-leveling on the
+            <see cref="P:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog.Image" />, false if otherwise
+            </value>
+      <example>
+            Refer to <see cref="T:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog" /> example.
+            </example>
+    </member>
+    <member name="P:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog.ZoomToFit">
+      <summary>
+            Gets or sets the value that determines whether the dialog should display the <see cref="P:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog.Image" />
+             Zoomed to fit the preview window.
+            </summary>
+      <noremarks />
+      <value>
+            true means the dialog should display the <see cref="P:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog.Image" />
+             Zoomed to fit the preview window, false means the dialog should display the <see cref="P:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog.Image" />
+             with normal size in the preview window.
+            </value>
+      <example>
+            Refer to <see cref="T:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog" /> example.
+            </example>
+    </member>
+    <member name="P:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog.ShowPreview">
+      <summary>
+            Gets or sets the value that determines whether the dialog should include a Preview Window which will 
+            display the <see cref="P:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog.Image" />.
+            </summary>
+      <noremarks />
+      <value>
+            true means the dialog should include Preview Window; false if otherwise.
+            </value>
+      <example>
+            Refer to <see cref="T:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog" /> example.
+            </example>
+    </member>
+    <member name="P:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog.ShowHelp">
+      <summary>
+            Gets or sets a value that indicates whether the dialog box will support Help.
+            </summary>
+      <noremarks />
+      <value>
+            true if the dialog box will display the Help button and support <see cref="E:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog.Help" />.
+            </value>
+      <example>
+            Refer to <see cref="T:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog" /> example.
+            </example>
+    </member>
+    <member name="P:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog.Image">
+      <summary>
+            Gets or sets the RasterImage that the dialog will preview if <see cref="P:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog.ShowPreview" /> is true
+            and will process if <see cref="P:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog.AutoProcess" /> is true.
+            </summary>
+      <noremarks />
+      <value>
+            The <see cref="T:Leadtools.RasterImage" /> that the dialog will preview if <see cref="P:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog.ShowPreview" /> is true
+            and will process if <see cref="P:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog.AutoProcess" /> is true.
+            </value>
+      <example>
+            Refer to <see cref="T:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog" /> example.
+            </example>
+    </member>
+    <member name="P:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog.ShowZoomLevel">
+      <summary>
+            Gets or sets the value that determines whether the dialog should include the Zoom Level Toolbar.
+            </summary>
+      <noremarks />
+      <value>
+            true if the dialog should include the Zoom Level Toolbar; false if otherwise.
+            </value>
+      <example>
+            Refer to <see cref="T:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog" /> example.
+            </example>
+    </member>
+    <member name="P:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog.ShowRange">
+      <summary>
+            Gets or sets the value that determines whether the dialog should include Range combo box.
+            </summary>
+      <noremarks />
+      <value>
+            true the dialog should include the Range combo box; false if otherwise.
+            </value>
+      <example>
+            Refer to <see cref="T:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog" /> example.
+            </example>
+    </member>
+    <member name="P:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog.LookupTable">
+      <summary>
+            Gets or sets the lookup table that can be used to implement a user-defined conversion. 
+            </summary>
+      <noremarks />
+      <value>
+            Represents the lookup table that can be used to implement a user-defined conversion.
+            For every intensity value between 0 and 2 raised to the power of 
+            (HighBit - LowBit + 1) - 1 there should be a corresponding entry in the lookup table 
+            that contains a Rgb quad.
+            </value>
+      <example>
+            Refer to <see cref="T:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog" /> example.
+            </example>
+      <seealso cref="M:Leadtools.RasterPalette.WindowLevelFillLookupTable(Leadtools.RasterColor[],Leadtools.RasterColor,Leadtools.RasterColor,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,Leadtools.RasterPaletteWindowLevelFlags)" />
+    </member>
+    <member name="P:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog.Signed">
+      <summary>
+            Gets or sets the value that determines whether the image that is being window-leveled is Signed or Unsigned.
+            </summary>
+      <noremarks />
+      <value>
+            true if the image that is being window-leveled is Signed; false if the image is Unsigned.
+            </value>
+      <example>
+            Refer to <see cref="T:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog" /> example.
+            </example>
+    </member>
+    <member name="P:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog.LowBit">
+      <summary>
+            Gets or sets a value that indicates the low bit used for leveling.
+            </summary>
+      <noremarks />
+      <value>
+            Represents a value that indicates the low bit 
+            used for leveling. 0 &lt;= LowBit &lt;= HighBit &lt;= (11 for 
+            12-bit grayscale or 15 for 16-bit grayscale).
+            </value>
+      <example>
+            Refer to <see cref="T:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog" /> example.
+            </example>
+    </member>
+    <member name="P:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog.HighBit">
+      <summary>
+            Gets or sets a value that indicates the high bit used for leveling.
+            </summary>
+      <noremarks />
+      <value>
+            Represents a value that indicates the High bit 
+            used for leveling. 0 &lt;= LowBit &lt;= HighBit &lt;= (11 for 
+            12-bit grayscale or 15 for 16-bit grayscale).
+            </value>
+      <example>
+            Refer to <see cref="T:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog" /> example.
+            </example>
+    </member>
+    <member name="P:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog.Low">
+      <summary>
+            Gets or sets the low value for the range to be filled.
+            </summary>
+      <noremarks />
+      <value>
+            Represents the low value for the range to be filled.
+            </value>
+      <example>
+            Refer to <see cref="T:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog" /> example.
+            </example>
+    </member>
+    <member name="P:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog.High">
+      <summary>
+            Gets or sets the high value for the range to be filled.
+            </summary>
+      <noremarks />
+      <value>
+            Represents the high value for the range to be filled.
+            </value>
+      <example>
+            Refer to <see cref="T:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog" /> example.
+            </example>
+    </member>
+    <member name="P:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog.StartColor">
+      <summary>
+            Gets or sets the start color value for the gradient.
+            </summary>
+      <noremarks />
+      <value>
+            Represents the start color value for the gradient.
+            </value>
+      <example>
+            Refer to <see cref="T:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog" /> example.
+            </example>
+    </member>
+    <member name="P:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog.EndColor">
+      <summary>
+            Gets or sets the end color value for the gradient.
+            </summary>
+      <noremarks />
+      <value>
+            Represents the end color value for the gradient.
+            </value>
+      <example>
+            Refer to <see cref="T:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog" /> example.
+            </example>
+    </member>
+    <member name="P:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog.Factor">
+      <summary>
+            Gets or sets the factor to be applied in the method operation specified in the Mode drop-down list box in the LUT Curve section of the Window Leveling dialog box. 
+            </summary>
+      <noremarks />
+      <value>
+            Represents the factor to be applied in the method operation specified in the specified in the Mode drop-down list box in the LUT Curve section of the Window
+            Leveling dialog box. This parameter is used only if the Mode selected is
+            <see cref="T:Leadtools.RasterPaletteWindowLevelFlags">RasterPaletteWindowLevelFlags.Exponential</see>, 
+            <see cref="T:Leadtools.RasterPaletteWindowLevelFlags">RasterPaletteWindowLevelFlags.Logarithmic</see> or 
+            <see cref="T:Leadtools.RasterPaletteWindowLevelFlags">RasterPaletteWindowLevelFlags.Sigmoid</see>.
+            If <see cref="T:Leadtools.RasterPaletteWindowLevelFlags">RasterPaletteWindowLevelFlags.Exponential</see> or
+            <see cref="T:Leadtools.RasterPaletteWindowLevelFlags">RasterPaletteWindowLevelFlags.Sigmoid</see> is specified, its value can be any
+            integer (+1000/-1000). If <see cref="T:Leadtools.RasterPaletteWindowLevelFlags">RasterPaletteWindowLevelFlags.Logarithmic</see> is
+            specified, its value should be &gt;= 0. If factor = 0, the lookup table will be filled linearly.
+            </value>
+      <example>
+            Refer to <see cref="T:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog" /> example.
+            </example>
+    </member>
+    <member name="P:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog.WindowLevelFlags">
+      <summary>
+            Gets or sets the user selection values that will be passed to <see cref="M:Leadtools.RasterPalette.WindowLevelFillLookupTable(Leadtools.RasterColor[],Leadtools.RasterColor,Leadtools.RasterColor,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,Leadtools.RasterPaletteWindowLevelFlags)" />.
+            </summary>
+      <noremarks />
+      <value>
+            Represents the user selection values that will be passed to <see cref="M:Leadtools.RasterPalette.WindowLevelFillLookupTable(Leadtools.RasterColor[],Leadtools.RasterColor,Leadtools.RasterColor,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,Leadtools.RasterPaletteWindowLevelFlags)" />.      
+            </value>
+      <example>
+            Refer to <see cref="T:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog" /> example.
+            </example>
+    </member>
+    <member name="E:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog.Help">
+      <summary>
+            Occurs when the user clicks the help button.
+            </summary>
+      <noremarks />
+      <example>
+            Refer to <see cref="T:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog" /> example.
+            </example>
+    </member>
+    <member name="T:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogHelpName">
+      <summary>
+            Indicates the dialog ID that triggered the help event. 
+            </summary>
+      <noremarks />
+      <example>
+            Refer to <see cref="T:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog" /> example.
+            </example>
+    </member>
+    <member name="F:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogHelpName.WindowLevel">
+      <summary>
+            Window Level dialog help event.
+            </summary>
+    </member>
+    <member name="F:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogHelpName.Unknown">
+      <summary>
+            None dialog help event.
+            </summary>
+    </member>
+    <member name="T:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogHelpEventArgs">
+      <summary>
+            RasterColorDialogHelpEventArgs is the Help event argument data.<br /></summary>
+      <noremarks />
+      <example>
+            Refer to <see cref="T:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog" /> example.
+            </example>
+    </member>
+    <member name="M:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogHelpEventArgs.#ctor">
+      <summary>
+            Initializes a new instance of the RasterColorDialogHelpEventArgs class.
+            </summary>
+      <noremarks />
+      <example>
+            Refer to <see cref="T:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog" /> example.
+            </example>
+    </member>
+    <member name="P:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogHelpEventArgs.Dialog">
+      <summary>
+            Gets the dialog help ID <see cref="T:Leadtools.WinForms.CommonDialogs.Color.RasterColorDialogHelpName" /> that triggered the help event.
+            </summary>
+      <noremarks />
+      <value>
+            Represents the dialog help ID that triggers the help event.
+            </value>
+      <example>
+            Refer to <see cref="T:Leadtools.WinForms.CommonDialogs.Color.RasterWindowLevelDialog" /> example.
+            </example>
+    </member>
+  </members>
+</doc>

@@ -1,0 +1,76 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Syscom.Comm.BASE", "Syscom.Comm.BASE\Syscom.Comm.BASE.vbproj", "{399F9414-7170-40C0-8B24-BA5007901FE0}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Syscom.Comm.RPT", "Syscom.Comm.RPT\Syscom.Comm.RPT.vbproj", "{01B87050-34EB-4AF3-8C4A-6149A635111E}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Syscom.Comm.TableFactory", "Syscom.Comm.TableFactory\Syscom.Comm.TableFactory.vbproj", "{C8451FFD-EC4A-4CA2-A27E-98B1A51C9409}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Syscom.Comm.Utility", "Syscom.Comm.Utility\Syscom.Comm.Utility.vbproj", "{5AFBC034-8AFB-42DF-9C1B-91D5F46C1D1B}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Syscom.Comm.EXP", "Syscom.Comm.EXP\Syscom.Comm.EXP.vbproj", "{B69AD864-DB45-47F4-80EA-ED1038CABE45}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Syscom.Comm.LOG", "Syscom.Comm.LOG\Syscom.Comm.LOG.vbproj", "{C9A807D2-2DB1-4437-8657-6E4253169A8C}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://win-2012dc.lits.com.tw:8080/tfs/defaultcollection
+		SccProjectUniqueName0 = Syscom.Comm.BASE\\Syscom.Comm.BASE.vbproj
+		SccProjectName0 = Syscom.Comm.BASE
+		SccLocalPath0 = Syscom.Comm.BASE
+		SccProjectUniqueName1 = Syscom.Comm.EXP\\Syscom.Comm.EXP.vbproj
+		SccProjectName1 = Syscom.Comm.EXP
+		SccLocalPath1 = Syscom.Comm.EXP
+		SccProjectUniqueName2 = Syscom.Comm.TableFactory\\Syscom.Comm.TableFactory.vbproj
+		SccProjectName2 = Syscom.Comm.TableFactory
+		SccLocalPath2 = Syscom.Comm.TableFactory
+		SccProjectUniqueName3 = Syscom.Comm.Utility\\Syscom.Comm.Utility.vbproj
+		SccProjectName3 = Syscom.Comm.Utility
+		SccLocalPath3 = Syscom.Comm.Utility
+		SccProjectUniqueName4 = Syscom.Comm.RPT\\Syscom.Comm.RPT.vbproj
+		SccProjectName4 = Syscom.Comm.RPT
+		SccLocalPath4 = Syscom.Comm.RPT
+		SccProjectUniqueName5 = Syscom.Comm.LOG\\Syscom.Comm.LOG.vbproj
+		SccProjectName5 = Syscom.Comm.LOG
+		SccLocalPath5 = Syscom.Comm.LOG
+		SccLocalPath6 = .
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{399F9414-7170-40C0-8B24-BA5007901FE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{399F9414-7170-40C0-8B24-BA5007901FE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{399F9414-7170-40C0-8B24-BA5007901FE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{399F9414-7170-40C0-8B24-BA5007901FE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01B87050-34EB-4AF3-8C4A-6149A635111E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01B87050-34EB-4AF3-8C4A-6149A635111E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01B87050-34EB-4AF3-8C4A-6149A635111E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01B87050-34EB-4AF3-8C4A-6149A635111E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8451FFD-EC4A-4CA2-A27E-98B1A51C9409}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8451FFD-EC4A-4CA2-A27E-98B1A51C9409}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8451FFD-EC4A-4CA2-A27E-98B1A51C9409}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8451FFD-EC4A-4CA2-A27E-98B1A51C9409}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AFBC034-8AFB-42DF-9C1B-91D5F46C1D1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AFBC034-8AFB-42DF-9C1B-91D5F46C1D1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AFBC034-8AFB-42DF-9C1B-91D5F46C1D1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AFBC034-8AFB-42DF-9C1B-91D5F46C1D1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B69AD864-DB45-47F4-80EA-ED1038CABE45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B69AD864-DB45-47F4-80EA-ED1038CABE45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B69AD864-DB45-47F4-80EA-ED1038CABE45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B69AD864-DB45-47F4-80EA-ED1038CABE45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9A807D2-2DB1-4437-8657-6E4253169A8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9A807D2-2DB1-4437-8657-6E4253169A8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9A807D2-2DB1-4437-8657-6E4253169A8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9A807D2-2DB1-4437-8657-6E4253169A8C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

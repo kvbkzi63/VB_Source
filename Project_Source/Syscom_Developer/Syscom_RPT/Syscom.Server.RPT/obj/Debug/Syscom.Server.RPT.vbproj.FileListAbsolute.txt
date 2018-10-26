@@ -1,0 +1,27 @@
+C:\Kmuh_Source\Mcku_His\SyscomCompile\Syscom\Server\Syscom.Server.RPT.dll
+C:\Kmuh_Source\Mcku_His\SyscomCompile\Syscom\Server\Syscom.Server.RPT.pdb
+C:\Kmuh_Source\Mcku_His\SyscomCompile\Syscom\Server\Syscom.Server.RPT.xml
+C:\Kmuh_Source\Mcku_His\Syscom_Developer\Syscom_RPT\Syscom.Server.RPT\obj\Debug\Syscom.Server.RPT.vbprojResolveAssemblyReference.cache
+C:\Kmuh_Source\Mcku_His\Syscom_Developer\Syscom_RPT\Syscom.Server.RPT\obj\Debug\Syscom.Server.RPT.Resources.resources
+C:\Kmuh_Source\Mcku_His\Syscom_Developer\Syscom_RPT\Syscom.Server.RPT\obj\Debug\Syscom.Server.RPT.vbproj.GenerateResource.Cache
+C:\Kmuh_Source\Mcku_His\Syscom_Developer\Syscom_RPT\Syscom.Server.RPT\obj\Debug\Syscom.Server.RPT.dll
+C:\Kmuh_Source\Mcku_His\Syscom_Developer\Syscom_RPT\Syscom.Server.RPT\obj\Debug\Syscom.Server.RPT.xml
+C:\Kmuh_Source\Mcku_His\Syscom_Developer\Syscom_RPT\Syscom.Server.RPT\obj\Debug\Syscom.Server.RPT.pdb
+C:\Users\Will\Documents\Visual Studio 2017\Projects\Syscom_Developer\Syscom_RPT\Syscom.Server.RPT\obj\Debug\Syscom.Server.RPT.vbprojResolveAssemblyReference.cache
+C:\Users\Will\Documents\Visual Studio 2017\Projects\Syscom_Developer\Syscom_RPT\Syscom.Server.RPT\obj\Debug\Syscom.Server.RPT.Resources.resources
+C:\Users\Will\Documents\Visual Studio 2017\Projects\Syscom_Developer\Syscom_RPT\Syscom.Server.RPT\obj\Debug\Syscom.Server.RPT.vbproj.GenerateResource.Cache
+C:\Users\Will\Documents\Visual Studio 2017\Projects\Syscom_Developer\Syscom_RPT\Syscom.Server.RPT\obj\Debug\Syscom.Server.RPT.dll
+C:\Users\Will\Documents\Visual Studio 2017\Projects\Syscom_Developer\Syscom_RPT\Syscom.Server.RPT\obj\Debug\Syscom.Server.RPT.xml
+C:\Users\Will\Documents\Visual Studio 2017\Projects\Syscom_Developer\Syscom_RPT\Syscom.Server.RPT\obj\Debug\Syscom.Server.RPT.pdb
+C:\Users\Will\Documents\Visual Studio 2017\Projects\SyscomCompile\Syscom\Server\Syscom.Server.RPT.dll
+C:\Users\Will\Documents\Visual Studio 2017\Projects\SyscomCompile\Syscom\Server\Syscom.Server.RPT.pdb
+C:\Users\Will\Documents\Visual Studio 2017\Projects\SyscomCompile\Syscom\Server\Syscom.Server.RPT.xml
+C:\TPE_Source\HIS_Source\Project_Source\Syscom_Developer\Syscom_RPT\Syscom.Server.RPT\obj\Debug\Syscom.Server.RPT.vbprojResolveAssemblyReference.cache
+C:\TPE_Source\HIS_Source\Project_Source\Syscom_Developer\Syscom_RPT\Syscom.Server.RPT\obj\Debug\Syscom.Server.RPT.Resources.resources
+C:\TPE_Source\HIS_Source\Project_Source\Syscom_Developer\Syscom_RPT\Syscom.Server.RPT\obj\Debug\Syscom.Server.RPT.vbproj.GenerateResource.Cache
+C:\TPE_Source\HIS_Source\Project_Source\Syscom_Developer\Syscom_RPT\Syscom.Server.RPT\obj\Debug\Syscom.Server.RPT.dll
+C:\TPE_Source\HIS_Source\Project_Source\Syscom_Developer\Syscom_RPT\Syscom.Server.RPT\obj\Debug\Syscom.Server.RPT.xml
+C:\TPE_Source\HIS_Source\Project_Source\Syscom_Developer\Syscom_RPT\Syscom.Server.RPT\obj\Debug\Syscom.Server.RPT.pdb
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Server\Syscom.Server.RPT.dll
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Server\Syscom.Server.RPT.pdb
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Server\Syscom.Server.RPT.xml

@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4FB20A19-4B5B-424B-A0EF-8FD1E57077AD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Syscom.Client.ARM</RootNamespace>
+    <AssemblyName>Syscom.Client.ARM</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\..\SyscomCompile\Syscom\Client\</OutputPath>
+    <DocumentationFile>Syscom.Client.ARM.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\SyscomCompile\Syscom\Client\</OutputPath>
+    <DocumentationFile>Syscom.Client.ARM.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Com.Syscom.WinFormsUI.Docking">
+      <HintPath>..\..\..\ExtLIBs\Com.Syscom.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="DateTimePickerUCT">
+      <HintPath>..\..\..\ExtLIBs\DateTimePickerUCT.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\ExtLIBs\Word\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Client.CMM, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SyscomCompile\Syscom\Client\Syscom.Client.CMM.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Client.RPT, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SyscomCompile\Syscom\Client\Syscom.Client.RPT.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Client.ServiceFactory, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SyscomCompile\Syscom\Client\Syscom.Client.ServiceFactory.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Comm.BASE">
+      <HintPath>..\..\..\..\..\..\Users\Will\Documents\Visual Studio 2017\Projects\SyscomCompile\Syscom\Common\Syscom.Comm.BASE.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Comm.EXP">
+      <HintPath>..\..\..\..\..\..\Users\Will\Documents\Visual Studio 2017\Projects\SyscomCompile\Syscom\Common\Syscom.Comm.EXP.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Comm.LOG">
+      <HintPath>..\..\..\..\..\..\Users\Will\Documents\Visual Studio 2017\Projects\SyscomCompile\Syscom\Common\Syscom.Comm.LOG.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Comm.RPT">
+      <HintPath>..\..\..\..\..\..\Users\Will\Documents\Visual Studio 2017\Projects\SyscomCompile\Syscom\Common\Syscom.Comm.RPT.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Comm.TableFactory">
+      <HintPath>..\..\..\..\..\..\Users\Will\Documents\Visual Studio 2017\Projects\SyscomCompile\Syscom\Common\Syscom.Comm.TableFactory.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Comm.Utility">
+      <HintPath>..\..\..\..\..\..\Users\Will\Documents\Visual Studio 2017\Projects\SyscomCompile\Syscom\Common\Syscom.Comm.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RPT\ARMRPT000001Client.vb" />
+    <Compile Include="RPT\ARMRPT000002Client.vb" />
+    <Compile Include="UI\AppSystemMtnUI.designer.vb">
+      <DependentUpon>AppSystemMtnUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AppSystemMtnUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AppSystemMtnUIMult.designer.vb">
+      <DependentUpon>AppSystemMtnUIMult.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AppSystemMtnUIMult.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ArmChangePwdLinkUI.Designer.vb">
+      <DependentUpon>ArmChangePwdLinkUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ArmChangePwdLinkUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ArmLogonFailureUI.Designer.vb">
+      <DependentUpon>ArmLogonFailureUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ArmLogonFailureUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ArmQueryClickTimesUI.Designer.vb">
+      <DependentUpon>ArmQueryClickTimesUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ArmQueryClickTimesUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ArmQueryInformationUI.Designer.vb">
+      <DependentUpon>ArmQueryInformationUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ArmQueryInformationUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ArmResetPwdUI.Designer.vb">
+      <DependentUpon>ArmResetPwdUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ArmResetPwdUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AuthorizationAgentOnlyUI.designer.vb">
+      <DependentUpon>AuthorizationAgentOnlyUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AuthorizationAgentOnlyUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AuthorizationAgentUI.Designer.vb">
+      <DependentUpon>AuthorizationAgentUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AuthorizationAgentUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ChangePwdMtnUI.designer.vb">
+      <DependentUpon>ChangePwdMtnUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ChangePwdMtnUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FakeContainer.designer.vb">
+      <DependentUpon>FakeContainer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FakeContainer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FunSystemMtnUI.designer.vb">
+      <DependentUpon>FunSystemMtnUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FunSystemMtnUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FunSystemMtnUIMult.designer.vb">
+      <DependentUpon>FunSystemMtnUIMult.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FunSystemMtnUIMult.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\LoginModule.designer.vb">
+      <DependentUpon>LoginModule.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\LoginModule.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\RoleMtnUI.designer.vb">
+      <DependentUpon>RoleMtnUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\RoleMtnUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\RoleRightsMtnUI.designer.vb">
+      <DependentUpon>RoleRightsMtnUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\RoleRightsMtnUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\RoleSetMtnUI.designer.vb">
+      <DependentUpon>RoleSetMtnUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\RoleSetMtnUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SubSystemMtnUI.designer.vb">
+      <DependentUpon>SubSystemMtnUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SubSystemMtnUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SubSystemMtnUIMult.designer.vb">
+      <DependentUpon>SubSystemMtnUIMult.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SubSystemMtnUIMult.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\TskSystemMtnUI.designer.vb">
+      <DependentUpon>TskSystemMtnUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TskSystemMtnUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\TskSystemMtnUIMult.designer.vb">
+      <DependentUpon>TskSystemMtnUIMult.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TskSystemMtnUIMult.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UserMtnUI.designer.vb">
+      <DependentUpon>UserMtnUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserMtnUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AppSystemMtnUI.resx">
+      <DependentUpon>AppSystemMtnUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AppSystemMtnUIMult.resx">
+      <DependentUpon>AppSystemMtnUIMult.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ArmChangePwdLinkUI.resx">
+      <DependentUpon>ArmChangePwdLinkUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ArmQueryClickTimesUI.resx">
+      <DependentUpon>ArmQueryClickTimesUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ArmQueryInformationUI.resx">
+      <DependentUpon>ArmQueryInformationUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ArmResetPwdUI.resx">
+      <DependentUpon>ArmResetPwdUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AuthorizationAgentOnlyUI.resx">
+      <DependentUpon>AuthorizationAgentOnlyUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AuthorizationAgentUI.resx">
+      <DependentUpon>AuthorizationAgentUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ChangePwdMtnUI.resx">
+      <DependentUpon>ChangePwdMtnUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FakeContainer.resx">
+      <DependentUpon>FakeContainer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FunSystemMtnUI.resx">
+      <DependentUpon>FunSystemMtnUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FunSystemMtnUIMult.resx">
+      <DependentUpon>FunSystemMtnUIMult.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\LoginModule.resx">
+      <DependentUpon>LoginModule.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\RoleMtnUI.resx">
+      <DependentUpon>RoleMtnUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\RoleRightsMtnUI.resx">
+      <DependentUpon>RoleRightsMtnUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\RoleSetMtnUI.resx">
+      <DependentUpon>RoleSetMtnUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SubSystemMtnUI.resx">
+      <DependentUpon>SubSystemMtnUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SubSystemMtnUIMult.resx">
+      <DependentUpon>SubSystemMtnUIMult.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\TskSystemMtnUI.resx">
+      <DependentUpon>TskSystemMtnUI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\TskSystemMtnUIMult.resx">
+      <DependentUpon>TskSystemMtnUIMult.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserMtnUI.resx">
+      <DependentUpon>UserMtnUI.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Syscom_UCL\Syscom.Client.UCL\Syscom.Client.UCL.vbproj">
+      <Project>{7644d0be-2809-441b-a4d5-c8fd80db0ebc}</Project>
+      <Name>Syscom.Client.UCL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+***********************************************************************************************
+website.publishproj
+
+警告: 請勿修改此檔案，它是在進行 Web 發行程序所使用。
+
+Copyright (C) Microsoft Corporation. 著作權所有，並保留一切權利。
+
+***********************************************************************************************
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.30319</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2bacfa73-a1a1-4513-a0da-3f44b3e53203}</ProjectGuid>
+    <SourceWebPhysicalPath>$(MSBuildThisFileDirectory)</SourceWebPhysicalPath>
+    <SourceWebVirtualPath>/SyscomServerWCFService</SourceWebVirtualPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SourceWebProject>D:\Project\Mcku_His\Syscom_Developer\SyscomServerWCFService</SourceWebProject>
+    <SourceWebMetabasePath>/IISExpress/7.5/LM/W3SVC/2/ROOT</SourceWebMetabasePath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <!-- for VS2010 we need to use 10.5 but for VS2012+ we should use VisualStudioVersion -->
+    <WebPublishTargetsVersion Condition=" '$(WebPublishTargetsVersion)' =='' and '$(VisualStudioVersion)' == 10.0 ">10.5</WebPublishTargetsVersion>
+    <WebPublishTargetsVersion Condition=" '$(WebPublishTargetsVersion)'=='' ">$(VisualStudioVersion)</WebPublishTargetsVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(WebPublishTargetsVersion)</VSToolsPath>
+    <_WebPublishTargetsPath Condition=" '$(_WebPublishTargetsPath)'=='' ">$(VSToolsPath)</_WebPublishTargetsPath>
+    <AssemblyFileVersion Condition="'$(AssemblyFileVersion)' == ''">1.0.0.0</AssemblyFileVersion>
+    <AssemblyVersion Condition="'$(AssemblyVersion)' == ''">1.0.0.0</AssemblyVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AssemblyAttributes Include="AssemblyFileVersion">
+      <Value>$(AssemblyFileVersion)</Value>
+    </AssemblyAttributes>
+    <AssemblyAttributes Include="AssemblyVersion">
+      <Value>$(AssemblyVersion)</Value>
+    </AssemblyAttributes>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Syscom_ARM\Syscom.Server.ARM\Syscom.Server.ARM.vbproj">
+      <Project>{F58B7077-E7E0-4798-8F98-06A97F3FC214}</Project>
+      <Name>Syscom.Server.ARM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Syscom_BO\Syscom.Server.BO\Syscom.Server.BO.vbproj">
+      <Project>{0714D4D2-09E9-41F9-8B6D-AF2338962ED0}</Project>
+      <Name>Syscom.Server.BO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Syscom_CMM\Syscom.Server.CMM\Syscom.Server.CMM.vbproj">
+      <Project>{AB37EC19-9FF0-45BB-B042-A8B1E6370A13}</Project>
+      <Name>Syscom.Server.CMM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Syscom_FTM\Syscom.Server.FTM\Syscom.Server.FTM.vbproj">
+      <Project>{51B01E2C-47EF-4279-926C-776DE7BFBC2C}</Project>
+      <Name>Syscom.Server.FTM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Syscom_ICC\Syscom.Server.ICC\Syscom.Server.ICC.vbproj">
+      <Project>{34FC56BB-D22D-455E-AEB1-C3680C38F637}</Project>
+      <Name>Syscom.Server.ICC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Syscom_NFC\Syscom.Server.NFC\Syscom.Server.NFC.vbproj">
+      <Project>{6FE63174-3D18-4E36-974E-35AB7D845265}</Project>
+      <Name>Syscom.Server.NFC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Syscom_PUB\Syscom.Server.PUB\Syscom.Server.PUB.vbproj">
+      <Project>{0EB6A0A6-5D9E-4ADF-938A-1BB7EBE39F80}</Project>
+      <Name>Syscom.Server.PUB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Syscom_RPT\Syscom.Server.RPT\Syscom.Server.RPT.vbproj">
+      <Project>{B192B9F1-789F-4346-8E4B-2E8950AEAB1E}</Project>
+      <Name>Syscom.Server.RPT</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Syscom_SNC\Syscom.Server.SNC\Syscom.Server.SNC.vbproj">
+      <Project>{56B9B710-A7BB-4DE5-B1BC-682DFEF8C261}</Project>
+      <Name>Syscom.Server.SNC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Syscom_SQL\Syscom.Server.SQL\Syscom.Server.SQL.vbproj">
+      <Project>{8BC06293-F953-4765-802C-82C16F1B5535}</Project>
+      <Name>Syscom.Server.SQL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Syscom_UCL\Syscom.Server.UCL\Syscom.Server.UCL.vbproj">
+      <Project>{D1AB970F-3D39-4AC6-8357-850BCC174505}</Project>
+      <Name>Syscom.Server.UCL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(_WebPublishTargetsPath)\Web\Microsoft.WebSite.Publishing.targets" />
+</Project>

@@ -1,0 +1,2834 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Syscom.Comm.Utility
+</name>
+</assembly>
+<members>
+<member name="T:Syscom.Comm.Utility.My.Resources.Resources">
+<summary>
+  用於查詢當地語系化字串等的強類型資源類別。
+</summary>
+</member>
+<member name="P:Syscom.Comm.Utility.My.Resources.Resources.ResourceManager">
+<summary>
+  傳回這個類別使用的快取的 ResourceManager 執行個體。
+</summary>
+</member>
+<member name="P:Syscom.Comm.Utility.My.Resources.Resources.Culture">
+<summary>
+  覆寫目前執行緒的 CurrentUICulture 屬性，對象是所有
+  使用這個強類型資源類別的資源查閱。
+</summary>
+</member>
+<member name="M:Syscom.Comm.Utility.FileCodec.#ctor">
+ <summary>
+ 阻止外部直接宣告
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.FileCodec.DESEncryptFile(System.String,System.String)">
+ <summary>
+ DES檔案加密
+ </summary>
+ <param name="inFullName">輸入檔案名稱(路徑+檔案名稱)</param>
+ <param name="outFullName">輸出檔案名稱(路徑+檔案名稱)</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.FileCodec.DESDecryptFile(System.String,System.String)">
+ <summary>
+ DES檔案解密
+ </summary>
+ <param name="encryptFile">加密檔案(路徑+檔案名稱)</param>
+ <param name="decryptFile">解密檔案(路徑+檔案名稱)</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.FileCodec.GeneratorRfc">
+ <summary>
+ 使用密碼和 Salt 來衍生金鑰，不管打再長的密碼都會經過 Salt 亂數處理，以符合規則
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.FileCodec.GeneratorRfc32">
+ <summary>
+ 使用密碼和 Salt 來衍生金鑰，不管打再長的密碼都會經過 Salt 亂數處理，以符合規則
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.FileCodec.AESEncryptFile(System.String,System.String,Syscom.Comm.Utility.FileCodec.SaltType)">
+ <summary>
+ AES檔案加密(Key使用SHA256Provider)
+ </summary>
+ <param name="inFullName">輸入檔案名稱(路徑+檔案名稱)</param>
+ <param name="outFullName">輸出檔案名稱(路徑+檔案名稱)</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.FileCodec.AESDecryptFile(System.String,System.String,Syscom.Comm.Utility.FileCodec.SaltType)">
+ <summary>
+ AES檔案解密(Key使用SHA256Provider)
+ </summary>
+ <param name="encryptFile">加密檔案(路徑+檔案名稱)</param>
+ <param name="decryptFile">解密檔案(路徑+檔案名稱)</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.FileCodec.AESEncryptFileByMD5(System.String,System.String,Syscom.Comm.Utility.FileCodec.SaltType)">
+ <summary>
+ AES檔案加密(Key使用MD5Provider)
+ </summary>
+ <param name="inFullName">輸入檔案名稱(路徑+檔案名稱)</param>
+ <param name="outFullName">輸出檔案名稱(路徑+檔案名稱)</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.FileCodec.AESDecryptFileByMD5(System.String,System.String,Syscom.Comm.Utility.FileCodec.SaltType)">
+ <summary>
+ AES檔案解密(Key使用MD5Provider)
+ </summary>
+ <param name="encryptFile">加密檔案(路徑+檔案名稱)</param>
+ <param name="decryptFile">解密檔案(路徑+檔案名稱)</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.FileCompress.#ctor">
+ <summary>
+ 阻止外部直接宣告
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.FileCompress.CompressFolder(System.String,System.String)">
+ <summary>
+ 對目標文件夾進行壓縮
+ </summary>
+ <param name="sourcePath">目標文件夾</param>
+ <param name="destname">壓縮檔案名</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.FileCompress.CreateCompressFile(System.IO.Stream,System.String)">
+ <summary>
+ 壓縮檔案
+ </summary>
+ <param name="source"></param>
+ <param name="destName"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.FileCompress.DecompressFolder(System.String,System.String)">
+ <summary>
+ 對目標文件進行解壓
+ </summary>
+ <param name="sourcePath">目標壓縮檔</param>
+ <param name="destPath">解壓縮的目的路徑</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.FileCompress.DeSerializeFiles(System.IO.Stream,System.String)">
+ <summary>
+ 解壓檔案
+ </summary>
+ <param name="stream"></param>
+ <param name="dirPath"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.FileTransferDataFormat.#ctor">
+ <summary>
+ 阻止外部直接宣告
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.FileTransferDataFormat.example">
+ <summary>
+操作 data table 的程式範例，copy 程式碼使用之....
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.FileTransferDataFormat.getDataTable">
+ <summary>
+取得資料庫表格的 DataTable
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.FileTransferDataFormat.getDataTableWithSchema">
+ <summary>
+取得資料庫表格的 DataTable 加上各欄位的資料型態
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.FileTransferTool.#ctor">
+ <summary>
+ 阻止外部直接宣告
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.FileTransferTool.convertFileToByteArray(System.String@)">
+ <summary>
+ 將檔案轉換成 byte()
+ </summary>
+ <param name="filename">檔案路徑</param>
+ <returns>byte()</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.FileTransferTool.convertByteArrayToFile(System.Byte[]@,System.String@,Syscom.Comm.Utility.FileTransferTool.HandleType)">
+ <summary>
+ 將 byte()轉換成檔案
+ </summary>
+ <param name="fileData">檔案byte()</param>
+ <param name="filename">檔案路徑及名稱</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.AppContext.#ctor">
+ <summary>
+ 阻止外部直接進行新建立的宣告
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Comm.Utility.AppContext.userProfile">
+ <summary>
+ 取得登入者的個人資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.AppContext.setUserProfiletoServer">
+ <summary>
+ 將 client UserProfile 的內容，放入WCF MessageHeader 裡
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ByteArrayUtil.#ctor">
+ <summary>
+ 阻止外部直接進行新建立的宣告
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ByteArrayUtil.getByteArray(System.Byte[],System.Int32,System.Int32)">
+ <summary>
+ 取得 byte array 的 sub array
+ EX:getByteArray( {0,1,2,3,4,5,6,7} ,2 ,4 ) ==>  {2,4}
+ </summary>
+ <param name="data"></param>
+ <param name="startIndex"></param>
+ <param name="endIndex"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ByteArrayUtil.getByteArrayToString(System.Byte[],System.Int32,System.Int32)">
+ <summary>
+ 取得 byte array 的 sub array ,並轉成　String
+ EX:getByteArray( {"A","B","C","D","E"} ,0 ,1 ) ==>  {"A","B"}  ==> "AB"
+ </summary>
+ <param name="data"></param>
+ <param name="startIndex"></param>
+ <param name="endIndex"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ByteArrayUtil.getByteArrayToInteger(System.Byte[],System.Int32,System.Int32,System.Boolean)">
+ <summary>
+ 取得 byte array 的 sub array ,並轉成　Integer
+ EX:getByteArray( {14, 205, 117, 1, 1} ,0 ,2 ,true) ==>  {14, 205, 117}  ==> 970101
+ EX:getByteArray( {"1", "0", "9", "0", "0"} ,0 ,2 ,false) ==>  {"1", "0", "9"}  ==> 109
+ </summary>
+ <param name="data"></param>
+ <param name="startIndex"></param>
+ <param name="endIndex"></param>
+ <param name="isComp"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ByteArrayUtil.getByteArrayToDecimal(System.Byte[],System.Int32,System.Int32,System.Int32,System.Int32)">
+ <summary>
+ 取得 byte array 的 sub array ,並轉成　Decimal
+ EX:getByteArray( {"1", "1", "5", 1, 1} ,0 ,2 , 2, 1 ) ==>  {"1", "1", "5"} 再取　{"1","1"} + "." + {"5"} ==> 11.5
+ EX:getByteArray( {"1", "1", "5", 1, 1} ,0 ,2 , 1, 1 ) ==>  {"1", "1", "5"} 再取　{"1"} + "." + {"1"}     ==>  1.1
+ </summary>
+ <param name="data"></param>
+ <param name="startIndex"></param>
+ <param name="endIndex"></param>
+ <param name="iLength"></param>
+ <param name="dLength"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ByteArrayUtil.getCompToInteger(System.Byte[])">
+ <summary>
+ 將 Comp 值 轉成Integer
+ EX: getCompToInteger( {14, 205, 117} ) ==> 970101
+ </summary>
+ <param name="data"></param>
+ <returns></returns>
+ <remarks>Last modified by Ken at 20090226</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ByteArrayUtil.getCompToInt64(System.Byte[])">
+ <summary>
+ Transform COMP into Int64
+ </summary>
+ <param name="data">byte array of COMP</param>
+ <returns>the original data before COMP</returns>
+ <remarks>Edit by Ken</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ByteArrayUtil.appendCharWithByteArray(System.Byte[],System.Char,System.Int32,System.Boolean)">
+ <summary>
+ 同StringUtil的appendChar 只是以Byte Array來處理　包含固定長度　也是指 byte attary 長度
+ </summary>
+ <param name="byteArray"></param>
+ <param name="apdChar"></param>
+ <param name="totalLength"></param>
+ <param name="appendDirection"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ByteArrayUtil.getIntegerToComp(System.Int32,System.Int32)">
+ <summary>
+ 取得數值轉 Comp 的 byte array
+ EX: getIntegerToComp(970101,4)  => byte{0,14,205,117}    or   getIntegerToComp(970101,3)  => byte{14,205,117}
+ 注意　COBOL 宣告　PIC S9(04) COMP ，在這裡的 compLength 為　2
+ </summary>
+ <param name="srcInteger"></param>
+ <param name="compLength"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ByteArrayUtil.appendArray(System.Byte[],System.Byte[])">
+ <summary>
+ 接合 byte array
+ appendArray( {1,2,3} , {A,B,C} )  ==> {1,2,3,A,B,C}
+ </summary>
+ <param name="srcArray"></param>
+ <param name="apdArray"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ByteArrayUtil.fixByteArray(System.Byte[],System.Int32)">
+ <summary>
+ 調整 byte array 長度
+ fixByteArray( {1,2,3,4,5} , 2 ) ==> {1,2}
+ fixByteArray( {1,2,3,4,5} , 7 ) ==> {1,2,3,4,5,0,0}
+ </summary>
+ <param name="bytes"></param>
+ <param name="fixLength"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ChargeUtil.Dispose(System.Boolean)">
+ <summary>
+ Dispose
+ </summary>
+ <param name="disposing"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ChargeUtil.Dispose">
+ <summary>
+ Dispose
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ChargeUtil.getDrugsAmtAndMaxDayAndHaveSurOrderOrNotInfo(System.Data.DataTable,System.Data.DataTable,System.Data.DataTable,System.Boolean)">
+ <summary>
+ 計算健保全部藥費 及 加收藥費
+ </summary>
+ <param name="orderDT"></param>
+ <param name="chronicInfoDT"></param>
+ <param name="orderPriceDT"></param>
+ <param name="PriceForIntFlag"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ChargeUtil.getSetHealthInsuData(System.Data.DataSet,System.String,System.String,System.Data.DataTable,System.Data.DataTable,System.Collections.Hashtable,System.Data.DataTable,System.Data.DataTable@,System.Data.IDbConnection,System.Data.IDbConnection)">
+ <summary>
+ 程式說明：取得健保資料設定後的資料
+ 開發人員：谷官
+ 開發日期：2009.10.06
+ </summary>
+ <param name="opMsg">
+ { 0, "取得健保資料設定後的資料完成!!"}
+ {-1, "尚未初始化健保資料設定的資料", ""}
+ {-2, "取得健保資料設定後的資料失敗", ""}
+ </param>
+ <returns>
+ dataDT
+ 
+ column0：案件Case_Type_Id
+ column1：部份負擔Part_Code
+ column2：給付類別Insu_Paykind_Id
+ column3：卡序Card_Sn，for 特殊卡序，若回傳為’’，則原呼叫的UI或程式不update本身的卡序
+ column4：就醫類別IC_Medical_Type_Id
+ column5：Contract_Code1
+ column6：Contract_Code2
+ </returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ChargeUtil.transColumnDataArrayToDatatableOrReverse(System.Object,System.Boolean,System.String)">
+ <summary>
+ Array和Datatable之間的轉換 for DataGridView用
+ </summary>
+ <param name="columnDataObj"></param>
+ <param name="transToDataTableOrNotFlag"></param>
+ <param name="dtName"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ChargeUtil.getFlagDataTable(System.String,System.String)">
+ <summary>
+ 取得Flag Datatable
+ </summary>
+ <param name="flagName"></param>
+ <param name="dValue"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.CheckMethodUtil.#ctor">
+ <summary>
+ 阻止外部直接進行新建立的宣告
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.CheckMethodUtil.CheckIsNothing(System.Object)">
+ <summary>
+ 檢查是否為 Nothing 。
+
+ True : 不為 Nothing 。
+
+ False : Nothing。
+
+ </summary>
+ <remarks>by Sean.Lin on 2013-07-10</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.CheckMethodUtil.CheckHasTable(System.Data.DataSet)">
+ <summary>
+ 檢查Tables(0) 是否存在，輸入為DataSet。
+
+ True : 存在 。
+
+ False : Nothing or Tables count 為零。
+
+ </summary>
+ <remarks>by Sean.Lin on 2011-12-02</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.CheckMethodUtil.CheckHasValue(System.Data.DataSet)">
+ <summary>
+ 檢查Tables(0) 是否有資料，輸入為DataSet。
+
+ True : 有值 。
+
+ False : Nothing or Tables count or Row count 為零。
+
+ </summary>
+ <remarks>by Sean.Lin on 2011-10-31</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.CheckMethodUtil.CheckHasValue(System.Data.DataSet,System.String)">
+ <summary>
+ 檢查Tables(TableName) 是否有資料，輸入為DataSet，TableName。
+
+ True : 有值 。
+
+ False : Tables count or Row count 為零
+
+ </summary>
+ <remarks>by Sean.Lin on 2011-10-31</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.CheckMethodUtil.CheckHasValue(System.Data.DataTable)">
+ <summary>
+ 檢查Table 是否有資料，輸入為DataTable 。
+
+ True : 有值 。
+
+ False : Tables count or Row count 為零
+
+ </summary>
+ <remarks>by Sean.Lin on 2011-10-31</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.CheckMethodUtil.CheckHasTable(System.Data.DataSet,System.String)">
+ <summary>
+ 檢查Tables(TableName) 是否存在，輸入為DataSet，TableName。
+
+ True : 存在 。
+
+ False : Tables 不存在
+
+ </summary>
+ <remarks>by Sean.Lin on 2011-12-02</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.CheckMethodUtil.CheckHasValue(System.String)">
+ <summary>
+ 檢查 字串 是否有資料 。
+
+ True : 有值 。
+
+ False : Nothing or Empty String。
+
+ </summary>
+ <remarks>by Sean.Lin on 2011-10-31</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.CheckMethodUtil.CheckTimeFormate(System.String)">
+ <summary>
+ 檢查時間是否不為Null 且為XX:XX or XXOO or XX:OO:XX 格式，
+
+ True : 正確 。
+
+ False : 錯誤，
+
+ </summary>
+ <param name="input_Time" >時間</param>
+ <returns>String</returns>
+ <remarks>by Sean.Lin on 2011-12-14</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.CheckMethodUtil.CheckIsNumber(System.String)">
+ <summary>
+ 檢查是否為數字 - 字串
+
+ True : 正確 。
+
+ False : 錯誤，
+
+ </summary>
+ <returns>Boolean</returns>
+ <remarks>by Sean.Lin on 2011-12-14</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.CheckMethodUtil.CheckIsDate(System.String)">
+ <summary>
+ 檢查是否為日期，(yyyy-MM-dd,yyyy/MM/dd,yyyyyMMdd)
+
+ True : 正確 。
+
+ False : 錯誤，
+ </summary>
+ <returns>boolean</returns>
+ <remarks>by Sean.Lin on 2012-2-10</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.CheckMethodUtil.checkIsDBNull(System.Object)">
+ <summary>
+ 檢查 物件 是否為 DBNull
+  True ：不是DBNull 
+  False： 是DBNull  
+ </summary>
+ <param name= "inputObj" > 傳入值 </param>
+ <returns>
+ </returns>
+ <remarks>by Sean.Lin on 2015-01-21 Copy From CNC </remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.CheckMethodUtil.CheckHasAuthority(System.String)">
+ <summary>
+ 檢查是否有權限，True：有；False：無
+ </summary>
+ <param name="authorityName" >權限(XXX_User)，判斷會統一轉成大寫判斷</param>
+ <returns>boolean</returns>
+ <remarks>by Sean.Lin on 2015-10-23</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.CheckMethodUtil.CheckHasAuthority(System.String[])">
+ <summary>
+ 檢查是否有權限，True：有；False：無
+ </summary>
+ <param name="authorityNameArray" >權限(XXX_User)的集合，判斷會統一轉成大寫判斷</param>
+ <returns>boolean</returns>
+ <remarks>by Sean.Lin on 2015-10-23</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ColorUtil.GetColor(System.String,System.String)">
+ <summary>
+ 取得顏色
+ </summary>
+ <param name="ColorValue"></param>
+ <param name="DefaultColor"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ColorUtil.GetColorRGB(System.Drawing.Color@)">
+ <summary>
+ 取得顏色RGB
+ </summary>
+ <param name="_color"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.CompareUtil.#ctor">
+ <summary>
+ 阻止外部直接進行新建立的宣告
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.CompareUtil.CompareLoginCreateUser(System.String)">
+ <summary>
+ 比對傳入的資料建立者，是否為目前的登入者，相同回傳True，不同回傳False
+ </summary>
+ <param name="CreateUser" >資料建立者</param>
+ <remarks>by Sean.Lin on 2013-10-01</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.CompareUtil.CompareLoginCreateUser(System.String,System.String)">
+ <summary>
+ 比對傳入的資料建立者、登入者，是否相同，相同回傳True，不同回傳False
+ </summary>
+ <param name="CreateUser" >資料建立者</param>
+ <remarks>by Sean.Lin on 2013-10-01</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ControlUtil.AsEnumerable(System.Windows.Forms.Control.ControlCollection)">
+ <summary>
+ 傳回System.Collections.Generic.IEnumerable(Of T)物件，其中泛型參數T為System.Windows.Forms.Control。這個物件可以在LINQ運算式或方法查詢中使用
+ </summary>
+ <param name="controls"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ControlUtil.IsTypeOf``1(System.Windows.Forms.Control)">
+ <summary>
+ 此Control是否為Type T
+ </summary>
+ <typeparam name="T"></typeparam>
+ <param name="control"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ControlUtil.CheckLocRange(System.Windows.Forms.Control@,System.Drawing.Point)">
+ <summary>
+ 檢查座標是否落在 Control 中
+ </summary>
+ <param name="_ctrl"></param>
+ <param name="_point"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ControlUtil.CheckParentContainsSender(System.Object@,System.Object@,System.String)">
+ <summary>
+ 檢查觸發事件元件是否屬於此作業
+ </summary>
+ <param name="sender"></param>
+ <param name="ref"></param>
+ <param name="formName"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DataSetUtil.#ctor">
+ <summary>
+ 阻止外部直接進行新建立的宣告
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DataSetUtil.GenDataSet(System.String,System.String[],System.String[])">
+ <summary>
+ 建立DataSet，傳入 TableName、ColumnsName、pkColums(PK 欄位名稱陣列)
+ </summary>
+ <param name="tableName">DataSet的Table 名稱</param>
+ <param name="columnsName">DataTable的欄位名稱陣列</param>
+ <param name="pkColums">DataTable的 PK 欄位名稱陣列</param>
+ <returns>DataSet</returns>
+ <remarks>Copy From Syscom and Modified by Sean 2013-12-25</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DataSetUtil.GenDataSet(System.String,System.String[])">
+ <summary>
+ 建立DataSet，傳入 TableName、ColumnsName 
+ </summary>
+ <param name="tableName">DataSet的Table名稱</param>
+ <param name="columnsName">DataTable的欄位名稱陣列</param>
+ <returns>DataSet</returns>
+ <remarks>Copy From Syscom and Modified by Sean 2013-12-13</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DataSetUtil.GenDataSet(System.String[])">
+ <summary>
+ 建立DataSet，傳入 ColumnsName，DataTable的預設名稱為DataTable
+ </summary>
+ <param name="columnsName">DataTable的欄位名稱陣列</param>
+ <returns>DataSet</returns>
+ <remarks>Copy From Syscom and Modified by Sean 2013-12-25</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DataSetUtil.GenDataTable(System.String,System.String[],System.String[])">
+ <summary>
+ 建立DataTable，傳入 tableName、columnsName 陣列、pkColums(PK 欄位名稱陣列) 
+ </summary>
+ <param name="tableName">DataTable名稱</param>
+ <param name="columnsName">DataTable的欄位名稱陣列</param>
+ <param name="pkColums">DataTable的 PK 欄位名稱陣列</param>
+ <returns>DataTable</returns>
+ <remarks>Copy From Syscom and Modified by Sean 2013-12-25</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DataSetUtil.GenDataTable(System.String,System.String[])">
+ <summary>
+ 建立DataTable，傳入tableName、columnsName 陣列
+ </summary>
+ <param name="tableName">DataTable名稱</param>
+ <param name="columnsName">DataTable的欄位名稱陣列</param>
+ <returns>DataTable</returns>
+ <remarks>Copy From Syscom and Modified by Sean 2013-12-25</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DataSetUtil.GenDataTable(System.String[])">
+ <summary>
+ 建立DataTable，傳入columnsName 陣列，預設名稱為  DataTable
+ </summary>
+ <param name="columnsName">DataTable的欄位名稱陣列</param>
+ <returns>DataTable</returns>
+ <remarks>Copy From Syscom and Modified by Sean 2013-12-25</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DataSetUtil.GenDataTable(System.String,System.String[],System.String[],System.Int32[])">
+ <summary>
+ 建立DataTable with DataType(靜態函式)
+ </summary>
+ <param name="dtName">DataTable名稱</param>
+ <param name="pkColums">DataTable的PK</param>
+ <param name="columnsName">DataTable的欄位</param>
+ <param name="columnType">DataTable的欄位定義</param>
+ <returns>DataTable</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DataSetUtil.MergeRowData(System.Data.DataSet,System.Array,System.Array,System.String)">
+ <summary>
+ 將DataSet中pkeyIndex欄位相同的多筆資料列合併成ㄧ列，且可合併多個欄位
+ </summary>
+ <param name="dsOrg">DataSet來源名稱</param>
+ <param name="pkeyIndex">合併判斷條件(欄位索引陣列)</param>
+ <param name="mergeIndex">合併欄位名稱陣列</param>
+ <param name="symbol">欄位合併分隔符號</param>
+ <returns>DataSet</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DataSetUtil.MergeRowDataWithNumber(System.Data.DataSet,System.String,System.Array,System.Array,System.Array)">
+ <summary>
+ 將DataSet中pkeyIndex欄位相同的多筆資料列合併成ㄧ列，且可合併多個欄位；
+ 合併的列前面都加上數字，且可指定要插入的位置(請依序)
+ </summary>
+ <param name="dsOrg">DataSet來源</param>
+ <param name="dsTableName">要合併的Table Name</param>
+ <param name="pkeyIndex">合併判斷條件(欄位索引陣列)</param>
+ <param name="mergeIndex">合併欄位名稱陣列</param>
+ <param name="locationIndex">插入位置欄位陣列</param>
+ <returns>DataSet</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DataSetUtil.MergeRowDataWithNumberWithoutvbCrLf(System.Data.DataSet,System.Int32,System.Array,System.Array,System.Array)">
+ <summary>
+ 將DataSet中pkeyIndex欄位相同的多筆資料列合併成ㄧ列，且可合併多個欄位；
+ 合併的列前面都加上數字，且可指定要插入的位置(請依序)，但資料之間不換行
+ </summary>
+ <param name="dsOrg">DataSet來源</param>
+ <param name="dsTableName">要合併的Table Name</param>
+ <param name="pkeyIndex">合併判斷條件(欄位索引陣列)</param>
+ <param name="mergeIndex">合併欄位名稱陣列</param>
+ <param name="locationIndex">插入位置欄位陣列</param>
+ <returns>DataSet</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DataSetUtil.MergeRowDataWithNumberBase(System.Data.DataSet,System.Int32,System.Array,System.Array,System.Array,System.Boolean)">
+ <summary>
+ 將DataSet中pkeyIndex欄位相同的多筆資料列合併成ㄧ列，且可合併多個欄位；
+ 合併的列前面都加上數字，且可指定要插入的位置(請依序)，換行記號，True: 換行，False 不換行。
+ </summary>
+ <param name="dsOrg">DataSet來源</param>
+ <param name="dsTableName">要合併的Table Name</param>
+ <param name="pkeyIndex">合併判斷條件(欄位索引陣列)</param>
+ <param name="mergeIndex">合併欄位名稱陣列</param>
+ <param name="locationIndex">插入位置欄位陣列</param>
+ <param name="wrapFlag" >換行記號，True: 換行，False 不換行 </param>
+ <returns>DataSet</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DataSetUtil.divideDataTable(System.Data.DataTable@,System.Int32)">
+ <summary>
+ 分割DataTable,每個DataTable的名稱為其索引值
+ </summary>
+ <param name="dt">整個DataTable</param>
+ <param name="perCount">每個DataTable所要存放的資料筆數</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DataSetUtil.DataSetToExcel(System.Data.DataSet,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String[]},System.Boolean)">
+ <summary> 把DataSet指定的資料表匯出成Excel </summary>
+ <param name="ds">資料集</param>
+ <param name="TableName">資料表名稱</param>
+ <param name="columnName">欄位名稱</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DataSetUtil.DataSetToExcel(System.Data.DataSet,System.String[],System.Boolean)">
+ <summary> 把DataSet的第一張資料表匯出成Excel </summary>
+ <param name="ds">資料集</param>
+ <param name="columnName">欄位名稱</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DataSetUtil.DataTableToExcel(System.Data.DataTable,System.String[],System.Boolean)">
+ <summary> 把DataTable匯出成Excel </summary>
+ <param name="dt">資料表</param>
+ <param name="columnName">欄位名稱</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DataSetUtil.FinishWork(System.Windows.Forms.Application@)">
+ <summary>
+ 關閉 Word 程式
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DataSetUtil.FinishWork(Microsoft.Office.Interop.Excel.Application@)">
+ <summary>
+ 關閉 Excel 程式
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DataSetUtil.GetDataTableContentForCsv(System.Data.DataTable,System.Boolean)">
+ <summary>
+ 程式說明：取得DataTable內的所有Content，回傳For Csv字串
+ 開發人員：Charles
+ 開發日期：2013.07.02
+ </summary>
+ <param name="SourceDt">來源資料表</param>
+ <param name="ISstringFlag">文字型態輸出:true: ="內容",False :  內容</param>
+ <returns>Str</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DataSetUtil.GetRowContentForCsv(System.Data.DataRow,System.Boolean)">
+ <summary>
+ 程式說明：取得DataRow內的所有Content，回傳For Csv字串
+ 開發人員：Charles
+ 開發日期：2013.07.02
+ </summary>
+ <param name="SourceRow">來源資料列</param>
+ <param name="ISstringFlag">文字型態輸出:true: ="內容",False :  內容</param>
+ <returns>Str</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DataSetUtil.CheckTableExistOrNot(System.Data.DataSet,System.String,System.Boolean,System.Boolean,System.String[])">
+ <summary>
+ 檢查Table是否存在於DataSet
+ </summary>
+ <param name="ds">DataSet</param>
+ <param name="dtName">Table Name</param>
+ <param name="checkIncludeDataFlag">包含檢查資料與否</param>
+ <param name="checkColumnExistOrNotFlag">包含檢查欄位與否</param>
+ <returns></returns>
+</member>
+<member name="M:Syscom.Comm.Utility.DataSetUtil.CheckColumnExistOrNot(System.Data.DataTable,System.String[],System.Boolean)">
+ <summary>
+ 檢查欄位是否存在於Table
+ </summary>
+ <param name="dt">Table</param>
+ <param name="columnName">欄位資料</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DataSetUtil.createDataSet(System.String,System.String[])">
+ <summary>
+ 建立只有一個DataTable的DataSet
+ </summary>
+ <param name="TableName"></param>
+ <param name="columnsName"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DataSetUtil.createDataSet(System.String[])">
+ <summary>
+ 建立只有一個DataTable的DataSet,DataSet的預設名稱為"DataSet"
+ </summary>
+ <param name="columnsName">DataTable的欄位</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DataSetUtil.createDataTable(System.String,System.String[],System.String[])">
+ <summary>
+ 建立DataTable
+ </summary>
+ <param name="dtName">DataTable名稱</param>
+ <param name="pkColums">DataTable的PK</param>
+ <param name="columnsName">DataTable的欄位</param>
+ <returns>DataTable</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DataSetUtil.createDataTable(System.String[])">
+ <summary>
+ 建立DataTable,預設名稱為"DataTable"
+ </summary>
+ <param name="columnsName">DataTable的欄位</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DataSetUtil.createDataTable(System.String,System.String[])">
+ <summary>
+ 建立DataTable
+ </summary>
+ <param name="dtName">DataTable名稱</param>
+ <param name="columnsName">DataTable的欄位</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DataSetUtil.createDataTable(System.String,System.String[],System.String[][])">
+ <summary>
+ 建立DataTable與使用不規則二元陣列的值
+ </summary>
+ <param name="dtName">DataTable名稱</param>
+ <param name="columnsName">DataTable的欄位</param>
+ <param name="columnsValue">DataTable的資料</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DataSetUtil.createDataTable(System.String,System.String[],System.String[0:,0:])">
+ <summary>
+ 建立DataTable與規則二元陣列的值
+ </summary>
+ <param name="dtName">DataTable名稱</param>
+ <param name="columnsName">DataTable的欄位</param>
+ <param name="columnsValue">DataTable的資料</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DataSetUtil.createDataTable(System.String,System.String[],System.String[],System.Int32[])">
+ <summary>
+ 建立DataTable with DataType(靜態函式)
+ </summary>
+ <param name="dtName">DataTable名稱</param>
+ <param name="pkColums">DataTable的PK</param>
+ <param name="columnsName">DataTable的欄位</param>
+ <param name="columnType">DataTable的欄位定義</param>
+ <returns>DataTable</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DataSetUtil.genDs(System.Data.DataTable,System.String)">
+ <summary>
+ 依照傳入的DataTable建立新的DataSet物件
+ 因為和CNC的名稱重複,故改成genDs
+ </summary>
+ <param name="dt"></param>
+ <param name="dsName"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DataSetUtil.displayDataTable(System.Data.DataTable)">
+ <summary>
+ 顯示DataTable
+ </summary>
+ <param name="table">DataTable</param>    
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DataSetUtil.cloneRowDataSet(System.Data.DataSet,System.Int32,System.Int32)">
+ <summary>
+ 取得原DataSet中某一列資料，並複製到另一個新的DataSet
+ </summary>
+ <param name="Originalds">原DataSet</param>
+ <param name="TableIndex">表格Index</param>
+ <param name="RowIndex">資料列Index</param>
+ <returns>DataSet</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DataSetUtil.SortDataSet(System.Data.DataSet,System.Int32,System.Int32)">
+ <summary>
+ Sort Dataset
+ </summary>
+ <param name="Originalds">原DataSet</param>
+ <param name="TableIndex">表格Index</param>
+ <param name="ColumnIndex">資料行Index</param>
+ <returns>DataSet</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DataSetUtil.MergeRowDataWithNumber(System.Data.DataSet,System.Int32,System.Array,System.Array,System.Array)">
+ <summary>
+ 將DataSet中PKeyIndex欄位相同的多筆資料列合併成ㄧ列，且可合併多個欄位
+ 合併的列前面都加上數字，且可指定要插入的位置(請依序)
+ </summary>
+ <param name="orgDS">DataSet來源名稱</param>
+ <param name="PKeyIndex">合併判斷條件(欄位索引陣列)</param>
+ <param name="MergeIndex">合併欄位名稱陣列</param>
+ <param name="LocationIndex">插入位置欄位陣列</param>
+ <returns>DataSet</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DataSetUtil.isSameDataTable(System.Data.DataTable,System.Data.DataTable,System.String[])">
+ <summary>
+ 檢查dt1與dt2的欄位資料是否相同,chkCols若有輸入則是代表指檢查這些欄位,若沒輸入則表示檢察dt1的所有欄位
+ 要注意dt1與dt2的欄位要完全相同,否則視為不同
+ </summary>
+ <param name="dt1"></param>
+ <param name="dt2"></param>
+ <param name="chkCols"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.DateUtil.DateTimeFullTypeDash">
+ <summary>
+ yyyy-MM-dd HH:mm:ss.fff
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.DateUtil.DateTimeTypeDash">
+ <summary>
+ yyyy-MM-dd HH:mm:ss
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.DateUtil.DateTimeMinuteTypeDash">
+ <summary>
+ yyyy-MM-dd HH:mm
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.DateUtil.DateTypeDash">
+ <summary>
+ yyyy-MM-dd
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.DateUtil.DateTimeFullTypeSlash">
+ <summary>
+ yyyy/MM/dd HH:mm:ss.fff
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.DateUtil.DateTimeTypeSlash">
+ <summary>
+ yyyy/MM/dd HH:mm:ss
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.DateUtil.DateTimeMinuteTypeSlash">
+ <summary>
+ yyyy/MM/dd HH:mm
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.DateUtil.DateTypeSlash">
+ <summary>
+ yyyy/MM/dd
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DateUtil.#ctor">
+ <summary>
+ 阻止外部直接進行新建立的宣告
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DateUtil.GetAge(System.DateTime,System.DateTime)">
+ <summary>
+ 取得年齡(歲月天)，輸入西元生日與西元計算年齡截止日期。回傳 age(0):歲,age(1):月,age(2):天,age(3):幾歲幾月幾天(依規定顯示月或天)
+ </summary>
+ ''' <param name="birthDate">出生日期(yyyy/MM/dd)</param>
+ <param name="endDate">計算年齡截止日期(yyyy/MM/dd)</param>
+ <returns> Integer()</returns>
+ <remarks>by Sean.Lin Refactory on 2011-11-8</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DateUtil.GetAge(System.String,System.String)">
+ <summary>
+ 取得年齡(歲月天)，輸入西元生日與西元計算年齡截止日期。回傳 age(0):歲,age(1):月,age(2):天,age(3):幾歲幾月幾天(依規定顯示月或天)
+ </summary>
+ ''' <param name="birthDate">出生日期(yyyy/MM/dd)</param>
+ <param name="endDate">計算年齡截止日期(yyyy/MM/dd)</param>
+ <returns> Integer()</returns>
+ <remarks>by Sean.Lin Refactory on 2011-11-8</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DateUtil.GetAge(System.DateTime)">
+  ''' <summary>
+ 取得年齡(歲月天)，輸入西元生日。回傳 age(0):歲,age(1):月,age(2):天,age(3):幾歲幾月幾天(依規定顯示月或天)
+ </summary>
+ <param name="birthDate">出生日期(yyyy/MM/dd)</param>
+ <returns> Integer()</returns>
+ <remarks>by Sean.Lin Refactory on 2011-11-8</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DateUtil.GetAge(System.String)">
+  ''' <summary>
+ 取得年齡(歲月天)，輸入西元生日。回傳 age(0):歲,age(1):月,age(2):天,age(3):幾歲幾月幾天(依規定顯示月或天)
+ </summary>
+ <param name="birthDate">出生日期(yyyy/MM/dd)</param>
+ <returns> Integer()</returns>
+ <remarks>by Sean.Lin Refactory on 2011-11-8</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DateUtil.transTimeToString(System.Object)">
+ <summary>
+ 將日期轉換成字串(“yyyy/MM/dd HH:mm:ss”)；若為null 則回傳空字串
+ </summary>
+ <remarks>by Sean.Lin on 2015-08-19</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DateUtil.transDateToString(System.Object)">
+ <summary>
+ 將日期轉換成字串(“yyyy/MM/dd”)；若為null 則回傳空字串
+ </summary>
+ <remarks>by Sean.Lin on 2015-08-19</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DateUtil.TransYearToROC(System.String)">
+ <summary>
+ 西元年轉成民國年
+ 
+ 輸入為字串格式，為 yyyy  => 回傳 yy or yyy。
+ 
+ </summary>
+ <returns>String</returns>
+ <remarks>by Sean.Lin on 2015-11-24</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DateUtil.TransYMToROC(System.String)">
+ <summary>
+ 西元年月轉成民國年月，
+ 
+ 輸入為字串格式，為 yyyyMM  => 回傳 yyMM or yyyMM。
+ 
+ 輸入為字串格式，為 yyyy/MM => 回傳 yy/MM or yyy/MM。
+ 
+ 輸入為字串格式，為 yyyy-MM => 回傳 yy-MM or yyy-MM。
+ 
+ </summary>
+ <returns>String</returns>
+ <remarks>by Sean.Lin on 2015-11-24</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DateUtil.TransDateToROC(System.DateTime)">
+ <summary>
+ 將西元年月日轉成民國年月日，輸入為Date格式，回傳 yy/MM/dd or  yyy/MM/dd 
+ </summary>
+ <param name="dateValue" ></param>
+ <returns>String</returns>
+ <remarks>by Sean.Lin on 2011-11-8</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DateUtil.TransDateToROC(System.String)">
+ <summary>
+ 將西元年月日轉成民國年月日，
+ 
+ 輸入為字串格式，為 yyyyMMdd   => 回傳 yyMMdd or yyyMMdd。
+ 
+ 輸入為字串格式，為 yyyy/MM/dd => 回傳 yy/MM/dd or yyy/MM/dd。
+ 
+ 輸入為字串格式，為 yyyy-MM-dd => 回傳 yy-MM-dd or yyy-MM-dd。
+ 
+ </summary>
+ <returns>String</returns>
+ <remarks>by Sean.Lin on 2011-11-8</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DateUtil.TransDateTimeToROC(System.DateTime)">
+ <summary>
+ 將西元年日期時分轉成民國年日期時分，
+ 輸入為DateTime格式，回傳 yy/MM/dd HH:mm or  yyy/MM/dd HH:mm 。
+ </summary>
+ <param name="dateTimeValue" >西元年日期時分</param>
+ <returns>String</returns>
+ <remarks>by Sean.Lin on 2011-11-8</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DateUtil.TransDateTimeToROC(System.String)">
+ <summary>
+ 將西元年日期時分轉成民國年日期時分，
+ 
+ 輸入為字串格式，為 yyyy/MM/dd HH:mm:ss => 回傳 yy/MM/dd HH:mm:ss or yyy/MM/dd HH:mm:ss。
+ 
+ 輸入為字串格式，為 yyyy-MM-dd HH:mm:ss => 回傳 yy-MM-dd HH:mm:ss or yyy-MM-dd HH:mm:ss。
+ 
+ 輸入為字串格式，為 yyyy/MM/dd HH:mm => 回傳 yy/MM/dd HH:mm or yyy/MM/dd HH:mm。
+ 
+ 輸入為字串格式，為 yyyy-MM-dd HH:mm => 回傳 yy-MM-dd HH:mm or yyy-MM-dd HH:mm。
+ 
+ </summary>
+ <returns>String</returns>
+ <remarks>by Sean.Lin on 2011-11-8</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DateUtil.TransDateToROCText(System.String)">
+ <summary>
+ 將西元年轉成民國 X 年 X 月 X 日 (一)，
+ 
+ 輸入為字串格式，為 yyyyMMdd  or  yyyy/MM/dd or yyyy-MM-dd => 回傳 民國 yyy 年 M 月 d 日 (一)
+ 
+ </summary>
+ <returns>String</returns>
+ <remarks>by Sean.Lin on 2012-8-8</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DateUtil.TransDateToROCBase(System.String)">
+ <summary>
+ 將西元年轉成民國年月日星期，回傳為一個字串陣列包含五個值，依序為分隔符號、年、月、日、星期幾
+ 
+ </summary>
+ <returns>String</returns>
+ <remarks>by Sean.Lin on 2011-11-8</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DateUtil.TransYearToWE(System.String)">
+ <summary>
+ 民國年轉成西元年，
+ 
+ 輸入為字串格式，為 y or yy or yyy     => 回傳 yyyy。
+ 
+ 若不為民國年，則回傳原始字串
+ 
+ </summary>
+ <param name="dateValue">民國年日期：y、yy、yyy</param>
+ <returns>String</returns>
+ <remarks>by Sean.Lin on 2015-11-24</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DateUtil.TransYMToWE(System.String)">
+ <summary>
+ 民國年月轉成西元年月，
+ 
+ 輸入為字串格式，為 yMMdd or yyMM or yyyMM     => 回傳 yyyyMM。
+ 
+ 輸入為字串格式，為 y/MM/dd or  yy/MM or yyy/MM => 回傳 yyyy/MM。
+ 
+ 輸入為字串格式，為 y-MM-dd or  yy-MM or yyy-MM => 回傳 yyyy-MM。
+ 
+ 若不為民國年，則回傳原始字串
+ 
+ </summary>
+ <param name="dateValue">民國年日期：yMMdd、yyMMdd、yyyMMdd、y/MM/dd、yy/MM/dd、yyy/MM/dd、y-MM-dd、yy-MM-dd、yyy-MM-dd </param>
+ <returns>String</returns>
+ <remarks>by Sean.Lin on 2015-11-24</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DateUtil.TransDateToWE(System.String)">
+ <summary>
+ 將民國年月日轉成西元年月日，
+ 
+ 輸入為字串格式，為 yMMdd or yyMMdd or yyyMMdd     => 回傳 yyyyMMdd。
+ 
+ 輸入為字串格式，為 y/MM/dd oryy/MM/dd or yyy/MM/dd => 回傳 yyyy/MM/dd。
+ 
+ 輸入為字串格式，為 y-MM-dd oryy-MM-dd or yyy-MM-dd => 回傳 yyyy-MM-dd。
+ 
+ 若不為民國年，則回傳原始字串
+ 
+ </summary>
+ <param name="dateValue">民國年日期：yMMdd、yyMMdd、yyyMMdd、y/MM/dd、yy/MM/dd、yyy/MM/dd、y-MM-dd、yy-MM-dd、yyy-MM-dd </param>
+ <returns>String</returns>
+ <remarks>by Sean.Lin on 2012-8-8</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DateUtil.TransDateToWE(System.String,System.String)">
+ <summary>
+ 將民國年月日轉成西元年月日，delimiter 為分隔符號，以指定的分隔符號隔開
+ 
+ 輸入為字串格式，為 yMMdd or yyMMdd or yyyMMdd  , y/MM/dd or yy/MM/dd or yyy/MM/dd ,y-MM-dd or yy-MM-dd or yyy-MM-dd 
+ 
+ 回傳 yyyy delimiter MM delimiter dd。
+ 
+ 若不為民國年，則回傳原始字串
+ 
+ </summary>
+ <param name="dateValue">民國年日期：yMMdd、yyMMdd、yyyMMdd、y/MM/dd、yy/MM/dd、yyy/MM/dd、y-MM-dd、yy-MM-dd、yyy-MM-dd </param>
+ <param name="delimiter">分隔符號</param>
+ <returns>String</returns>
+ <remarks>by Sean.Lin on 2012-8-8</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DateUtil.TransDateToGlobal(System.String,System.String)">
+ <summary>
+ 將民國年月日轉成西元年月日，delimiter 為分隔符號，以指定的分隔符號隔開
+ 
+ 輸入為字串格式，為 yyMMdd or yyyMMdd  , yy/MM/dd or yyy/MM/dd , yy-MM-dd or yyy-MM-dd 
+ 
+ 回傳 yyyy delimiter MM delimiter dd。
+ 
+ 若不為民國年，則回傳原始字串
+ 
+ </summary>
+ <param name="dateValue">民國年日期：yyMMdd、yyyMMdd、yy/MM/dd、yyy/MM/dd、yy-MM-dd、yyy-MM-dd </param>
+ <param name="delimiter">分隔符號</param>
+ <returns>String</returns>
+ <remarks>by Charles on 2016-6-28</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DateUtil.TransStrToTime(System.String)">
+ <summary>
+ 轉換時間，將四位數的時間數字OOXX，轉換成OO:XX，不為四位數則會回傳空字串
+ </summary>
+ <param name="inputTime" >四位數的時間數字OOXX</param>
+ <returns>String</returns>
+ <remarks>by Sean.Lin on 2012-3-30</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DateUtil.TransTimeToStr(System.String)">
+ <summary>
+ 轉換時間，將OO:XX，轉換成四位數的時間數字OOXX，不為OO:XX則會回傳空字串
+ </summary>
+ <param name="inputTime" >時間OO:XX</param>
+ <returns>String</returns>
+ <remarks>by Sean.Lin on 2012-3-30</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DateUtil.transDateToDBFormate(System.String)">
+ <summary>
+ 日期形態要 Insert 時使用，判斷是否是空字串，是的話，改成Null，否的話回傳原值，
+ 主要用於 將空字串轉成Null， 避免Insert DB 失敗
+ </summary>
+ <param name="dateString">字串型態的日期</param>
+ <remarks>by Sean.Lin on 2015-08-18</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DateUtil.toDateString(System.Object@,System.String)">
+ <summary>
+ 將字串轉為特定的日期格式
+ </summary>
+ <param name="_strDateTime">日期字串</param>
+ <param name="_format">傳回的日期格式</param>
+ <returns>日期</returns>
+ <remarks>
+ 1.若是傳進來的日期可以轉換成指定的日期格式則傳會傳回轉換完成的日期字串否則傳回空白字串
+ 2.傳回的日期格式可以自己指定會是不指定會統一傳回yyyy/MM/dd HH:mm:ss的格式
+ </remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DateUtil.GetTwDate7StrForICCard(System.String)">
+ <summary>
+ 西元年轉7位民國年(yyymmdd)
+ </summary>
+ <param name="UsDate"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DateUtil.transDateStringToDate(System.String)">
+ <summary>
+ 將日期字串轉換成可轉成Date的字串(yyyyMMdd => yyyy-MM-dd)。
+ </summary>
+ <param name="dateString" ></param>
+ <returns>String</returns>
+ <remarks>by Sean.Lin on 2011-11-8</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DateUtil.IsDateTextPassVerify(System.String,System.Int32)">
+ <summary>
+ 回傳民國日期是否符合檢核模式
+ 考慮移除，聯絡敬發，只有OHMRptDataNewUI 使用
+ </summary>
+ <param name="VerifyDate"></param>
+ <param name="Length"></param>
+ <returns></returns>
+ <remarks>
+ Modify@2011/07/18
+ By Charles
+ </remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DateUtil.GetTwYear(System.String)">
+ <summary>
+ 回傳台灣日期的年份
+ </summary>
+ <param name="d"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DateUtil.GetUsYear(System.String)">
+ <summary>
+ 回傳西元日期的年份
+ </summary>
+ <param name="d"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DateUtil.GetMonth(System.String)">
+ <summary>
+ 回傳日期的月份
+ </summary>
+ <param name="d"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DateUtil.GetDay(System.String)">
+ <summary>
+ 回傳日期的日數
+ </summary>
+ <param name="d"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DateUtil.ParseStringToDateTime(System.String,System.String)">
+ <summary>
+ 暫時加上以接上舊有多個程式使用
+ </summary>
+ <param name="targetValue"></param>
+ <param name="Format"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DateUtil.getSystemDate">
+ <summary>
+ 取得系統日期(西元年)
+ </summary>
+ <returns>西元年系統日期</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DateUtil.SystemDate(System.String)">
+ <summary>
+ 取得系統日期(西元年)
+ </summary>
+ <param name="format">日期格式</param>
+ <returns>西元年系統日期</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.DateUtil.computeDayOfWeek(System.String)">
+ <summary>
+ 取得傳入日期所對應之星期
+ </summary>
+ <param name="USDate">日期(YYYY/MM/DD)</param>
+ <returns>星期別(1:星期一,2:星期二,...,7:星期日</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.EncodingUtil.#ctor">
+ <summary>
+ 阻止外部直接進行新建立的宣告
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.EncodingUtil.uftTobig5(System.String@)">
+ <summary>
+ 將 utf8 字串轉成 big5 字串
+ </summary>
+ <param name="inputString">utf8 字串</param>
+ <returns></returns>
+ <remarks>請確保輸入字串為 utf8 格式</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.EncodingUtil.big5Toutf8(System.String@)">
+ <summary>
+ 將 big5 字串轉成 utf8 字串
+ </summary>
+ <param name="inputString">big5 字串</param>
+ <returns></returns>
+ <remarks>請確保輸入字串為 big5 格式</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.EncodingUtil.encodingTranslate(System.Text.Encoding@,System.Text.Encoding@,System.String@)">
+ <summary>
+ 將 A 格式編碼字串轉成 B 格式編碼字串
+ </summary>
+ <param name="srcEncoding">來源 格式編碼</param>
+ <param name="dstEncoding">目的地 格式編碼</param>
+ <param name="objectString">來源格式編碼字串</param>
+ <returns></returns>
+ <remarks>請確保輸入字串為來源格式編碼</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.EncodingUtil.Str2ByteArray(System.String@)">
+ <summary>
+ 字串轉byte陣列
+ </summary>
+ <param name="str"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.EncodingUtil.ByteArray2Str(System.Byte[])">
+ <summary>
+ byte陣列轉字串
+ </summary>
+ <param name="byteAry"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.FileUtil.ReadFileFromFileName(System.String)">
+ <summary>
+ 讀取檔案
+ </summary>
+ <param name="fileName"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.FileUtil.checkFilePath(System.String,System.Boolean)">
+ <summary>
+ 檢查路徑(目錄及檔名)
+ </summary>
+ <param name="fileName">若無目錄存在, 則建立目錄</param>
+ <param name="IsDelete">True: 檔案存在則強制刪除</param>
+ <remarks>若無資料夾存在, 則建立資料夾</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.FileUtil.CheckFileExist(System.String,System.Boolean)">
+ <summary>
+ 檢查檔案是否存在
+ </summary>
+ <param name="fileName"></param>
+ <param name="IsDelete"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.FileUtil.WriteFileToFileName(System.String@,System.String,System.String,System.Text.Encoding,System.String@)">
+ <summary>
+ 寫入檔案
+ </summary>
+ <param name="strData"></param>
+ <param name="fileName"></param>
+ <param name="directory"></param>
+ <param name="txtEncode"></param>
+ <param name="fileExtension"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.FileUtil.SelectFileDirectory">
+ <summary>
+ 選擇目錄
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.FileUtil.SelectFilePath">
+ <summary>
+ 選擇檔案
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.FileUtil.DataTableToTxtFile(System.Data.DataTable,System.String,System.String)">
+ <summary>
+ 程式說明：DataTable轉Txt
+ 開發人員：Charles
+ 開發日期：2012/05/28
+ </summary>
+ <param name="SourceTable">來源資料表</param>
+ <param name="fileName">檔案名稱(ex:drgInput)</param>
+ <param name="directory">路徑名稱(C:\TempFile)</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.FileUtil.TxtToDataTable(System.String,System.String,System.String,System.Data.DataTable)">
+ <summary>
+ 程式說明：Txt檔轉DataTalbe
+ 開發人員：Charles
+ 開發日期：2012/05/28
+ </summary>
+ <param name="AppendHeaderStr">首行插入字串</param>
+ <param name="SourceStr">來源字串</param>
+ <param name="AppendEndStr">插入尾行字串</param>
+ <param name="SourceDt">來源資料表</param>
+ <returns>DataTable</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.FileUtil.TxtToDataTable(System.Collections.Generic.List{System.Array},System.Data.DataTable)">
+ <summary>
+ 程式說明：Txt檔轉DataTalbe
+ 開發人員：Charles
+ 開發日期：2012/05/28
+ </summary>
+ <param name="SourceList">來源資料List</param>
+ <param name="SourceDt">來源資料表</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.FileUtil.DoDRGExe(System.String,System.String,System.String,System.Boolean)">
+ <summary>
+ 呼叫健保局單機版(DRG)
+ </summary>
+ <param name="DrgsPath">單機版路徑(C:\Program Files (x86)\P_DRGService\DRG.exe)</param>
+ <param name="InputFullName">輸入檔案(C:\TempFile\drgInput.txt)</param>
+ <param name="OutputFullName">輸出檔案(C:\TempFile\drgOutput.txt)</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.FormulaUtil.#ctor">
+ <summary>
+ 阻止外部直接進行新建立的宣告
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.FormulaUtil.CalculateBMI_CM(System.Decimal,System.Decimal)">
+ <summary>
+ 計算BMI值 -  傳入身高(公分)、體重(公斤)(計算至小數點第一位，餘以四捨五入計)
+ </summary>
+ <param name="Height" >身高 - 公分</param>
+ <param name="Weight" >體重 - 公斤</param>
+ <returns>String</returns>
+ <remarks>by Sean.Lin on 2013-8-6</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.FormulaUtil.CalculateBMI_M(System.Decimal,System.Decimal)">
+ <summary>
+ 計算BMI值 -  傳入身高(公尺)、體重(公斤)(計算至小數點第一位，餘以四捨五入計)
+ </summary>
+ <param name="Height" >身高 - 公尺</param>
+ <param name="Weight" >體重 - 公斤</param>
+ <returns>String</returns>
+ <remarks>by Sean.Lin on 2013-8-6</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.FormulaUtil.CalculateKG(System.String,System.Decimal,System.Decimal)">
+ <summary>
+ 計算體重值 -  傳入性別、臀圍(公分)、上臂圍(公分) (計算至小數點第一位，餘以四捨五入計)
+ </summary>
+ <param name="Sex">性別</param>
+ <param name="Hips">臀圍 </param>
+ <param name="Upperarm">上臂圍</param>
+ <returns>Decimal</returns>
+ <remarks>by Jimmy.Hsiao on 2016-6-24</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ImageTool.#ctor">
+ <summary>
+ 阻止外部直接進行新建立的宣告
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ImageTool.getFormatByFileName(System.String@)">
+ <summary>
+ 根據檔名來判斷使用哪一種格式處理圖片
+ </summary>
+ <param name="fileName">檔名</param>
+ <returns>圖檔格式</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ImageTool.getFormatByFileExtension(System.String@)">
+ <summary>
+ 根據副檔名來判斷使用哪一種格式處理圖片
+ </summary>
+ <param name="fileExtension">檔名</param>
+ <returns>圖檔格式</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ImageTool.IsImage(System.String@)">
+ <summary>
+ 判斷可否為.net讀取的圖檔格式
+ </summary>
+ <param name="fileName">檔案位置</param>
+ <returns>true 代表為可判讀的圖檔，false 反之</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ImageTool.getThumbnailImage(System.String@)">
+ <summary>
+ 取得縮圖，大小為預設
+ </summary>
+ <param name="fileName">檔案位置</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ImageTool.getThumbnailImage(System.String@,System.Int32@,System.Int32@)">
+ <summary>
+ 取得縮圖
+ </summary>
+ <param name="fileName">檔案位置</param>
+ <param name="width">縮圖寬</param>
+ <param name="height">縮圖高</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ImageTool.getThumbnailImage(System.Drawing.Image@)">
+ <summary>
+ 取得縮圖，大小為預設
+ </summary>
+ <param name="image">image</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ImageTool.getThumbnailImage(System.Drawing.Image@,System.Int32@,System.Int32@)">
+ <summary>
+ 取得縮圖
+ </summary>
+ <param name="image">image</param>
+ <param name="width">縮圖寬</param>
+ <param name="height">縮圖高</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ImageTool.getThumbnailImageNew(System.Drawing.Image@,System.Int32@,System.Int32@)">
+ <summary>
+ 取得縮圖-新(等比例)
+ </summary>
+ <param name="OrigImage">原圖</param>
+ <param name="pWidth">縮圖寬</param>
+ <param name="pHeight">縮圖高</param>
+ <returns></returns>
+ <remarks>2013.05.08 add by Bella</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ImageTool.convertImageToByteArray(System.String@)">
+ <summary>
+ 將　Image 檔案內容 轉成　byte array
+ </summary>
+ <param name="fileName">目標 Image 檔名</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ImageTool.convertImageToByteArray(System.String@,System.Drawing.Imaging.ImageFormat@)">
+ <summary>
+ 將　Image 檔案內容 轉成　byte array
+ </summary>
+ <param name="fileName">目標 Image 檔案</param>
+ <returns>byte array</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ImageTool.convertImageToByteArray(System.Drawing.Image@,System.Drawing.Imaging.ImageFormat@)">
+ <summary>
+ 將　Image  轉成　byte array
+ </summary>
+ <param name="img">目標 Image</param>
+ <returns>byte array</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ImageTool.convertByteArrayToImage(System.Byte[]@)">
+ <summary>
+ 將　byte array  轉成　Image
+ </summary>
+ <param name="imgData">目標 byte array</param>
+ <returns>Image</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ImageTool.ResizeImage(System.Drawing.Image,System.Int32,System.Int32,System.Int32)">
+ <summary>
+ 重新調整圖形大小
+ </summary>
+ <param name="img">圖檔</param>
+ <param name="vintWidth">寬度</param>
+ <param name="vintHeight">高度</param>
+ <param name="resize">重新調整的比例</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ImageTool.ResizeImageBella(System.String,System.Drawing.Image,System.String,System.String,System.String,System.Int32)">
+ <summary>
+ 重新調整圖形大小 From Bella
+ </summary>
+ <param name="imgPath">圖檔路徑</param> 
+ <returns></returns>
+ <remarks>Copy from Bella by Sean 2014-03-27</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ImageTool.GetEncoder(System.Drawing.Imaging.ImageFormat)">
+ <summary>
+ 編碼
+ </summary> 
+ <returns></returns>
+ <remarks>Copy from Bella by Sean 2014-03-27</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ImageTool.ImageToBase64(System.String)">
+ <summary>
+ 將Image File轉為Base64字串
+ </summary>
+ <param name="srcFile">Image檔案來源</param>
+ <returns></returns>
+ <remarks>2013.10.15 add by Alan</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ImageTool.ImageToBase64(System.Drawing.Image)">
+ <summary>
+ 將圖片轉成Base64字串
+ </summary>
+ <param name="image"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ImageTool.Base64ToString(System.String)">
+ <summary>
+ 將Base64 轉回string
+ </summary>
+ <param name="strBase64"></param>
+ <returns></returns>
+ <remarks>2013.11.13 add by Bella</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ImageTool.CompareImage(System.Drawing.Image@,System.Drawing.Image@)">
+ <summary>
+ 將圖片轉成Byte()比較, 是否相同
+ </summary>
+ <param name="Img1"></param>
+ <param name="Img2"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ImageTool.CompareImage(System.String,System.String)">
+ <summary>
+ 將圖片轉成Byte()比較, 是否相同
+ </summary>
+ <param name="fileName1"></param>
+ <param name="fileName2"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ImageTool.reSizeImgByFullPath(System.String,System.Int32,System.Int16)">
+ <summary>
+ 將原圖縮圖後覆蓋原檔案後傳回路徑
+ </summary>
+ <param name="bmpPathFile"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:Syscom.Comm.Utility.MagicNumbers.TYPE">
+ <summary>
+ 定義所有的類別 譬如性別 教育程度 等等~
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.MagicNumbers.SYSMODLIST">
+ <summary>
+ 定義類型中所需塞入的系統和模組代碼
+ </summary>
+ <remarks>...是要加註解 要多中文就多一column append在後</remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.MagicNumbers.CODE_NO_CATHARTIC">
+ <summary>
+ 瀉劑
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.MagicNumbers.CODE_NO_MIX_FEE">
+ <summary>
+ 調劑費
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.MagicNumbers.CODE_NO_UNSENT">
+ <summary>
+ 未寄
+ </summary>
+ <remarks>個案資料查詢列印</remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.MagicNumbers.CODE_NO_SENT">
+ <summary>
+ 已寄
+ </summary>
+ <remarks>個案資料查詢列印</remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.MagicNumbers.CODE_NO_SENTAll">
+ <summary>
+ 全部
+ </summary>
+ <remarks>個案資料查詢列印</remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.MagicNumbers.NON_PRINT_CHARGE_NO">
+ <summary>
+ 檢驗檢查單不用列印出來的批價項目
+ </summary>
+ <remarks></remarks>
+ 4210103 恢復要列印檢驗查單 (2011/5/20)
+ 1600101EKG改為要列印檢查單(fangchen)
+</member>
+<member name="F:Syscom.Comm.Utility.MagicNumbers.HEM_EYE_CONSULT_CHARGE_CODE">
+ <summary>
+ 眼科會診批價碼
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.MagicNumbers.HEM_ENT_CONSULT_CHARGE_CODE">
+ <summary>
+ 耳鼻喉科會診批價碼
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.MagicNumbers.HEM_DENTAL_CONSULT_CHARGE_CODE">
+ <summary>
+ 牙科會診批價碼
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.MagicNumbers.HEM_GYN_CONSULT_CHARGE_CODE">
+ <summary>
+ 婦產科會診批價碼
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.MagicNumbers.HEM_EYE_STATION_NO">
+ <summary>
+ 眼科會診流程站
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.MagicNumbers.HEM_ENT_STATION_NO">
+ <summary>
+ 耳鼻喉科會診流程站
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.MagicNumbers.HEM_DENTAL_STATION_NO">
+ <summary>
+ 牙科會診流程站
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.MagicNumbers.HEM_GYN_STATION_NO">
+ <summary>
+ 婦產科會診流程站
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.MagicNumbers.OHM_Rpt_Language_CH">
+ <summary>
+ 中文報告
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.MagicNumbers.OHM_Rpt_Language_EN">
+ <summary>
+ 英文報告
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.MagicNumbers.OHM_Rpt_Status_PH_UnDone">
+ <summary>
+ 0-理學報告未完成
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.MagicNumbers.OHM_Rpt_Status_PH_Done">
+ <summary>
+ 1-理學報告已完成
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.MagicNumbers.OHM_Rpt_Status_LIS_Done">
+ <summary>
+ 2-已發檢驗報告,待住院醫師總評
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.MagicNumbers.OHM_Rpt_Status_LIS_Change">
+ <summary>
+ 3-更改檢驗報告,待住院醫師總評
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.MagicNumbers.OHM_Rpt_Status_DR_Done">
+ <summary>
+ 4-住院醫師已完成總評
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.MagicNumbers.OHM_Rpt_Status_VS_Done">
+ <summary>
+ 5-主治醫師已完成確認
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.MagicNumbers.OHM_Rpt_Status_Temporary">
+ <summary>
+ 99--暫存
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.MagicNumbers.PUB_ORDER_CODE">
+ <summary>
+ 醫令類型
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.MagicNumbers.PUB_FEE_ITEMS">
+ <summary>
+ 費用項目
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.MagicNumbers.Main_Identity_Id_Self">
+ <summary>
+ 自費身分
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.MagicNumbers.Main_Identity_Id_NHI">
+ <summary>
+ 健保身分
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.MagicNumbers.OPSR_TEL">
+ <summary>
+ 意見來源--電話
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.MagicNumbers.OPSR_EMAIL">
+ <summary>
+ 意見來源--EMAIL
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.MagicNumbers.OPSR_NET">
+ <summary>
+ 意見來源--網路
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.MagicNumbers.OPSR_FAX">
+ <summary>
+ 意見來源--傳真
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.MagicNumbers.OPSR_LOC">
+ <summary>
+ 意見來源--現場
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.MagicNumbers.OPSR_OTHER">
+ <summary>
+ 意見來源--其他
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.MagicNumbers.OPCT_COMPLAIN">
+ <summary>
+ 意見類別--抱怨
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.MagicNumbers.OPCT_ADVICE">
+ <summary>
+ 意見類別--建議
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.MagicNumbers.OPCT_CHEER">
+ <summary>
+ 意見類別--鼓勵
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.MagicNumbers.OPCT_OTHER">
+ <summary>
+ 意見類別--其他
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.MagicNumbers.CODE_REPAID">
+ <summary>
+ 回覆狀態--已回覆
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.MagicNumbers.CODE_REPLY_YET">
+ <summary>
+ 回覆狀態--未回覆
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.MagicNumbers.CODE_REPlY_NO">
+ <summary>
+ 回覆狀態--不需回覆
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.MagicNumbers.DELETE_IMPORT">
+ <summary>
+ QA資料匯入方式
+ </summary>
+ <remarks>刪除資料後匯入</remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.MagicNumbers.APPEND_IMPORT">
+ <summary>
+ QA資料匯入方式
+ </summary>
+ <remarks>附加原先的資料</remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.MagicNumbers.Notify_Deploy">
+ <summary>
+ 更新版本及時通知(ExternalFunction)
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.MailUtil.#ctor">
+ <summary>
+ 阻止外部直接進行新建立的宣告
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.MailUtil.Send_mail(System.String,System.String,System.String,System.String,System.String,System.Net.Mail.MailPriority,System.String,System.Int32,System.String,System.String,System.Boolean,System.String[],System.Boolean,System.Boolean)">
+ <summary>
+ 寄送Email
+ </summary>
+ <param name="fromEmail">收件者</param>
+ <param name="fromName">收件者名稱</param>
+ <param name="toEmail">寄件者</param>
+ <param name="subject">主旨</param>
+ <param name="body">內容</param>
+ <param name="Priority">重要性</param>
+ <param name="SMTP_Host">SMTP位址</param>
+ <param name="Port">埠</param>
+ <param name="Id">使用者帳號</param>
+ <param name="Password">使用者密碼</param>
+ <param name="MsgWindow">是否彈出寄送結果訊息視窗</param>
+ <param name="attachments">附加檔案的路徑(字串陣列)</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.MailUtil.client_SendCompleted(System.Object,System.ComponentModel.AsyncCompletedEventArgs)">
+ <summary>
+ 完成郵寄
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.MathUtil.FromBase10(System.Int32,System.Int32,System.Int32)">
+ <summary>
+ 十進制轉換為 n 進制, n 介於 2~36
+ </summary>
+ <param name="number">數值</param>
+ <param name="base"> n 進制</param>
+ <param name="len">回傳字串長度</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.MathUtil.ToBase10(System.String,System.Int32,System.Int32)">
+ <summary>
+ 從 n 進制轉換為十進制, n 介於 2~36
+ </summary>
+ <param name="number">數值</param>
+ <param name="base">n 進制</param>
+ <param name="len">回傳字串長度</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.MathUtil.Round(System.Object,System.Int32)">
+ <summary>
+ 四捨五入到小數第n位
+ </summary>
+ <param name="num"></param>
+ <param name="decimals">小數第n位</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.MathUtil.Round(System.Object)">
+ <summary>
+ 四捨五入到整數
+ </summary>
+ <param name="num"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.MessageQueueUtil.#ctor">
+ <summary>
+ 阻止外部直接進行新建立的宣告
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Comm.Utility.MessageQueueUtil.getInstance">
+ <summary>
+ 屬性取得類別實體
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:Syscom.Comm.Utility.MessageQueueUtil.Nested">
+ <summary>
+ 巢狀類別存放建立的類別實體
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.MessageQueueUtil.sendReportMessage(System.Object@)">
+ <summary>
+ 後端列印機制使用的MSMQ
+ </summary>
+ <param name="data">報表擋案的FID</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.MessageQueueUtil.sendReportMessageTx(System.Object@)">
+ <summary>
+ 後端列印機制使用的MSMQ Tx
+ </summary>
+ <param name="data">報表擋案的FID</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.MessageQueueUtil.getReportMessageBody">
+ <summary>
+ 後端列印機制使用的MSMQ Message Body
+ </summary>    
+ <remarks>Message Body 的資料格式</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.MessageQueueUtil.sendNotificationMessage(System.Object@)">
+ <summary>
+ Notification Module 使用的MSMQ
+ </summary>
+ <param name="data">訊息字串</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.MessageQueueUtil.sendNotificationMessageTx(System.Object@)">
+ <summary>
+ Notification Module 使用的MSMQ Tx
+ </summary>
+ <param name="data">訊息字串</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.MessageQueueUtil.getNotificationMessageBody">
+ <summary>
+ Notification Module 使用的MSMQ
+ </summary>    
+ <remarks>Message Body 的資料格式</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.MessageQueueUtil.sendBackupTableMessage(System.Object@)">
+ <summary>
+ 敏感資料備份 使用的MSMQ
+ </summary>
+ <param name="data">訊息字串</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.MessageQueueUtil.sendBackupTableMessageTx(System.Object@)">
+ <summary>
+ 敏感資料備份 使用的MSMQ Tx
+ </summary>
+ <param name="data">訊息字串</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.MessageQueueUtil.sendPILogMessage(System.Object@)">
+ <summary>
+ 個資法Log 使用的MSMQ
+ </summary>
+ <param name="data">訊息字串</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.MessageQueueUtil.sendPILogMessageTx(System.Object@)">
+ <summary>
+ 個資法Log 使用的MSMQ Tx
+ </summary>
+ <param name="data">訊息字串</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.MessageQueueUtil.sendApplicationMessage(System.Object@)">
+ <summary>
+ 一般AP程式使用的MSMQ
+ </summary>
+ <param name="data">物件</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.MessageQueueUtil.sendApplicationMessageTx(System.Object@)">
+ <summary>
+ 一般AP程式使用的MSMQ Tx
+ </summary>
+ <param name="data">物件</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.MessageQueueUtil.sendMessage(System.String@,System.Object@)">
+ <summary>
+ 傳送 MSMQ 訊息
+ </summary>
+ <param name="mqLabel">標籤</param>
+ <param name="mqData">資料</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.MessageQueueUtil.sendMessageTx(System.String@,System.Object@)">
+ <summary>
+ 傳送 MSMQ 訊息 Tx
+ </summary>
+ <param name="mqLabel">標籤</param>
+ <param name="mqData">資料</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.MessageQueueUtil.getNewMessageQueue(System.String@)">
+ <summary>
+ 取得新的 MessageQueue
+ </summary>
+ <returns>MessageQueue</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.MessageQueueUtil.getNewMessageQueueTx(System.String@)">
+ <summary>
+ 取得新的 MessageQueueTx
+ </summary>
+ <returns>MessageQueueTx</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.NumberUtil.#ctor">
+ <summary>
+ 阻止外部直接進行新建立的宣告
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.NumberUtil.Convert(System.String)">
+ <summary>
+ 大寫金額
+ </summary>
+ <param name="str"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.NumberUtil.isPeriodLapped(System.Int32@,System.Int32@,System.Int32@,System.Int32@)">
+ <summary>
+ 檢查開始值(區間)與比較值(區間)是否重疊
+ </summary>
+ <param name="startPeriod"></param>
+ <param name="endPeriod"></param>
+ <param name="compareStartPeriod"></param>
+ <param name="compareEndPeriod"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.NumberUtil.thousandDivide(System.Int32)">
+ <summary>
+ 加入千分隔號,
+ </summary>
+ <param name="money"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.NumberUtil.PointToScore(System.String)">
+ <summary>
+ 小數轉分數
+ </summary>
+ <param name="inPoint">傳入小數值</param>
+ <returns>分數字串</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.NumberUtil.PointToScore1(System.String)">
+ <summary>
+ 分數轉整數或小數2位
+ </summary>
+ <param name="inPoint">傳入小數值</param>
+ <returns>分數字串</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.NumberUtil.toArray(System.String)">
+ <summary>
+ 整數與小數部分轉換 由高至低位
+ </summary>
+ <param name="number"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.NumberUtil.getChineseInteger(System.Int32[],System.Boolean)">
+ <summary>
+ 中文金額整數
+ </summary>
+ <param name="integers"></param>
+ <param name="isMust5"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.NumberUtil.getChineseDecimal(System.Int32[])">
+ <summary>
+ 小數部分中文
+ </summary>
+ <param name="decimals"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.NumberUtil.isMust5w(System.String)">
+ <summary>
+ 判斷萬單位是否要加入
+ </summary>
+ <param name="integerStr"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.NumberUtil.RangeExpanding(System.String)">
+ <summary>
+ 數字範圍展開
+ </summary>
+ <param name="RangeStr"></param>
+ <returns></returns>
+ <remarks>1,2,4-7 => 1,2,4,5,6,7</remarks>
+ <author>Ken</author>
+</member>
+<member name="M:Syscom.Comm.Utility.PassWordUtil.#ctor">
+ <summary>
+ 阻止外部直接進行新建立的宣告
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Comm.Utility.PassWordUtil.getPrimaryKey">
+ <summary>
+ 取得密碼的加密金鑰
+ </summary>
+ <remarks>by Sean.Lin on 2013-9-2</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.PassWordUtil.Encrypt(System.String,System.String)">
+ <summary>
+ 密碼的加密相關功能
+ </summary>
+ <remarks>by Sean.Lin on 2013-9-2 Copy from Lits</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.PassWordUtil.Decrypt(System.String,System.String)">
+ <summary>
+ 密碼的解密相關功能
+ </summary>
+ <remarks>by Sean.Lin on 2013-9-2 Copy from Lits</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ResourceUtil.#ctor">
+ <summary>
+ 阻止外部直接進行新建立的宣告
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ResourceUtil.getString(System.String,System.String)">
+ <summary>
+取得對應字串
+ </summary>
+ <param name="res"></param>
+ <param name="key"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.ScreenUtil.BACK_COLOR_ERROR_INPUT">
+當畫面上有錯誤輸入時將背景顏色替換掉
+</member>
+<member name="F:Syscom.Comm.Utility.ScreenUtil.BACK_COLOR_DEFAULT">
+畫面上輸入的預設顏色
+</member>
+<member name="M:Syscom.Comm.Utility.ScreenUtil.setRowFocus(System.Windows.Forms.DataGridView@,System.Int32[]@,System.String[]@)">
+ <summary>
+ 處理 sort 之後，focus 位移的問題
+ </summary>
+ <param name="DataGridView1">DataGridView 控制項</param>
+ <param name="columnIndex">cell index</param>
+ <param name="values">與cell 比對的值</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ScreenUtil.setRowFocusByPrimaryKey(System.Windows.Forms.DataGridView@,System.Data.DataTable@,System.Data.DataRow@)">
+ <summary>
+ 利用grid key定位focus位移
+ </summary>
+ <param name="DataGridView1">DataGridView</param>
+ <param name="DataTable1">DataTable</param>
+ <param name="DataRow1">DataRow</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ScreenUtil.setRowFocusByDataRow(System.Windows.Forms.DataGridView@,System.Data.DataRow@)">
+ <summary>
+ 利用grid DataRow定位focus位移
+ </summary>
+ <param name="DataGridView1">DataGridView</param>
+ <param name="DataRow1">DataRow</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ScreenUtil.setRowFocusByDataRowView(System.Windows.Forms.DataGridView@,System.Data.DataRowView@)">
+ <summary>
+ 利用grid DataRowView定位focus位移
+ </summary>
+ <param name="DataGridView1">DataGridView</param>
+ <param name="DataRowView1">DataRowView</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ScreenUtil.showDataGridViewResult(System.Windows.Forms.DataGridView@,System.Data.DataTable,System.String[0:,0:],System.Boolean)">
+ <summary>
+ 程式說明：顯示格式化過的資料在DataGridView
+ 開發人員：谷官
+ 開發日期：2009.10.21
+ </summary>
+ <param name="dgv">顯示資料的DataGridView</param>
+ <param name="dt">欲顯示的資料</param>
+ <param name="columnNameMap">DataGridView欄位和資料庫欄位Mapping的Array</param>
+ <param name="clearSelectionFlag">是否清除資料行的選取狀態</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ScreenUtil.addGridViewColumns(System.Windows.Forms.DataGridView,System.String[0:,0:],System.Boolean)">
+ <summary>
+ Add Columns to DataGridView
+ 開發人員：Fang-Chen Hwang
+ 開發日期：2012.10.08
+ </summary>
+ 設定DataGridView的欄位,並依據參數決定是否要增加"選"(checkbox)的欄位
+ <param name="dgv">欲顯示資料的DataGridView控制項</param>
+ <param name="columnNameMap">DataGridView欄位和資料庫欄位Mapping的Array</param>
+ <param name="checkBoxColumn">是否要增加"選"的欄位</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ScreenUtil.showReadonlyDataGridView(System.Windows.Forms.DataGridView@,System.Data.DataTable,System.String[0:,0:],System.Boolean)">
+ <summary>
+ 程式說明：顯示Readonly格式化過的資料在DataGridView(允許dt與columnNameMap的欄位不同)
+ 開發人員：Fang-Chen Hwang
+ 開發日期：2012.10.08
+ </summary>
+ <param name="dgv">顯示資料的DataGridView</param>
+ <param name="dt">欲顯示的資料</param>
+ <param name="columnNameMap">DataGridView欄位和資料庫欄位Mapping的Array</param>
+ <param name="checkBoxColumn">是否清除資料行的選取狀態</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ScreenUtil.closeDockForm(Com.Syscom.WinFormsUI.Docking.DockPanel@,System.String)">
+ <summary>
+ 關閉DockPanel的Form
+ </summary>
+ <param name="dp">DockPanel</param>
+ <param name="formName">表單名稱</param>
+</member>
+<member name="M:Syscom.Comm.Utility.ScreenUtil.openDockForm(Com.Syscom.WinFormsUI.Docking.DockPanel@,System.String)">
+ <summary>
+ 開啟DockPanel的Form
+ </summary>
+ <param name="dp">DockPanel</param>
+ <param name="formName">表單名稱</param>
+ 
+</member>
+<member name="M:Syscom.Comm.Utility.ScreenUtil.ValidateString(Syscom.Comm.Utility.ScreenUtil.CustomerValidateType,System.String,System.Int32)">
+ <summary>
+ 驗證數字
+ </summary>
+ <param name="type">型態</param>
+ <param name="data">驗證的字串</param>
+ <param name="count">小數位數</param>
+ <returns></returns>
+ <remarks>
+ count為取到小數第幾位，若沒有就以小數第一位為default
+ </remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ScreenUtil.selectedComboBoxValue(System.Windows.Forms.ComboBox@)">
+ <summary>
+ combobox選取的Value
+ </summary>
+ <param name="cbo"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ScreenUtil.AutoAdjustComboBox(System.Windows.Forms.ComboBox@)">
+ <summary>
+ 自動設定ComboBox下拉選單的自動寬度
+ </summary>
+ <param name="obj"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ScreenUtil.AutoAdjustComboBoxWidth(System.Windows.Forms.ComboBox@)">
+ <summary>
+ 取得combobox 下拉選單的適當寬度
+ </summary>
+ <param name="obj"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ScreenUtil.AutoAdjustComboBoxWidth(System.Windows.Forms.DataGridViewComboBoxColumn@)">
+ <summary>
+ 取得combobox 下拉選單的適當寬度
+ </summary>
+ <param name="obj"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ScreenUtil.setComboBoxInfo(System.Windows.Forms.ComboBox,System.String,System.String,System.Data.DataTable,System.Boolean,System.Int32)">
+ <summary>
+ 將資料填入comboBox中
+ </summary>
+ <param name="cbo">comboBox object</param>
+ <param name="dt">dataTable</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.SerialNoUtil.IsLegalPharmacySerialNo(System.String@)">
+ <summary>
+ 是否合法領藥號序號
+ </summary>
+ <param name="PharmacySerialNo"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.StringUtil.#ctor">
+ <summary>
+ 阻止外部直接進行新建立的宣告
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:Syscom.Comm.Utility.StringUtil.appendDirection">
+ <summary>
+ 列舉附加字元方向
+ 
+ appendToLeft：附加至左邊，appendToRight：附加至右邊
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.StringUtil.appendCharToLeft(System.String,System.Char,System.Int32)">
+ <summary>
+ 將字串從左補滿字元(字元只限英數字元)，例如 appendCharToLeft("123","A",5)  ==> AA123
+ </summary>
+ <param name="srcString">來源字串</param>
+ <param name="apdChar">補滿字元</param>
+ <param name="totalLength">補滿長度</param>
+ <returns>從左補滿字元的字串</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.StringUtil.appendCharToLeft(System.Int32,System.Char,System.Int32)">
+ <summary>
+ 將整數轉字串後，從左補滿字元(字元只限英數字元)，例如 appendCharToLeft(123,"A",5)  ==> AA123
+ </summary>
+ <param name="srcInteger">來源數值</param>
+ <param name="apdChar">補滿字元</param>
+ <param name="totalLength">補滿長度</param>
+ <returns>從左補滿字元的字串</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.StringUtil.appendCharToRight(System.String,System.Char,System.Int32)">
+ <summary>
+ 將字串從右補滿字元(字元只限英數字元)，例如 appendCharToRight("123","A",5)  ==> 123AA
+ </summary>
+ <param name="srcString">來源字串</param>
+ <param name="apdChar">補滿字元</param>
+ <param name="totalLength">補滿長度</param>
+ <returns>從右補滿字元的字串</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.StringUtil.appendCharToRight(System.Int32,System.Char,System.Int32)">
+ <summary>
+ 將整數轉字串後，從右補滿字元(字元只限英數字元)，例如 appendCharToLeft(123,"A",5)  ==> 123AA
+ </summary>
+ <param name="srcInteger"></param>
+ <param name="apdChar"></param>
+ <param name="totalLength"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.StringUtil.appendChar(System.String,System.Char,System.Int32,Syscom.Comm.Utility.StringUtil.appendDirection)">
+ <summary>
+ 將來源字串補滿需求長度的字元後回傳(字元只限英數字元)
+ </summary>
+ <param name="srcString">來源字串</param>
+ <param name="apdChar">補滿字元</param>
+ <param name="totalLength">補滿長度</param>
+ <param name="appendDirection">補滿方向</param>
+ <returns>補滿需求長度字元的字串</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.StringUtil.StringLengthCount(System.String@)">
+ <summary>
+ 計算字串長度(英半：1，中：2)
+ </summary>
+ <param name="DestStr"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.StringUtil.appendCString(System.String,System.String,System.Int32,Syscom.Comm.Utility.StringUtil.appendDirection)">
+ <summary>
+ 將字串加入原字串的左邊或是右邊，直到所指定的大小
+ 注意：本方法中 srcString 與 appendStr 的中文字會被當作2個字元來計算
+ </summary>
+ <param name="srcString"></param>
+ <param name="appendStr"></param>
+ <param name="totalLength"></param>
+ <param name="appendDirection"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.StringUtil.appendCString(System.String,System.String,System.Int32)">
+ <summary>
+ 預設將字串附加到字串的右邊
+ </summary>
+ <param name="srcString"></param>
+ <param name="appendStr"></param>
+ <param name="totalLength"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.StringUtil.isStringContainsInfo(System.String@)">
+ <summary>
+ 檢查字串內是否有資料
+ </summary>
+ <param name="exeString"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.StringUtil.ConvertMoney(System.String)">
+ <summary>
+ 將數字轉大寫字
+ </summary>
+ <param name="Money"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.StringUtil.GetFilterString(System.String,System.String)">
+ <summary>
+  設假設輸入一字串 '8211001!CHOL8=200)!(8211001!CHOL8=240)，我們要取得8xx8裡邊字串
+ </summary>
+ <param name="srcString">(8211001!CHOL8=200)!(8211001!CHOL8=240)</param>
+ <param name="filterString">8</param>
+ <returns>string(0) = 211001!CHOL ，string(1) = 211001!CHOL</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.StringUtil.DeleteLastComa(System.String)">
+ <summary>
+ 去除字串中最後一個逗號，若最後一個字不是逗號，回傳原值
+ </summary>
+ <param name="inputStr" >輸入的字串</param>
+ <returns>String</returns>
+ <remarks>by Sean.Lin on 2012-3-30</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.StringUtil.IsLetter(System.String)">
+ <summary>
+ 判斷傳入字元是否為英文字母 (只判斷第一個字元)
+ </summary>
+ <param name="letterChar">傳入字元</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.StringUtil.ToWide(System.String@)">
+ <summary>
+ 半形轉全形
+ </summary>
+ <param name="data"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.StringUtil.ToNarrow(System.String@)">
+ <summary>
+ 全形轉半形
+ </summary>
+ <param name="data"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.StringUtil.ToTraditionalChinese(System.String@)">
+ <summary>
+ 繁體中文轉換成簡體中文
+ </summary>
+ <param name="data"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.StringUtil.ToSimplifiedChinese(System.String@)">
+ <summary>
+ 簡體中文轉換成繁體中文
+ </summary>
+ <param name="data"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.StringUtil.IsBoolean(System.String)">
+ <summary>
+ 判斷字串是否為Boolean值
+ </summary>
+ <param name="_str"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.StringUtil.IsYN(System.String)">
+ <summary>
+ 判斷字串是否為 Y/N 值
+ </summary>
+ <param name="_str"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.StringUtil.TransBoolean2YN(System.Boolean)">
+ <summary>
+ 將 Boolean 轉換為 Y / N
+ </summary>
+ <param name="_bol"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.StringUtil.TransYN2Boolean(System.String)">
+ <summary>
+ 將 Y/N 轉換為 Boolean 值
+ </summary>
+ <param name="_bol"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.StringUtil.TransArrayToString(System.String[]@)">
+ <summary>
+ 字串陣列轉換為字串, 以分隔符號連結
+ </summary>
+ <param name="_ary"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.StringUtil.Tab2Space(System.String,System.Int32)">
+ <summary>
+ Tab 轉換為固定 Space長度
+ </summary>
+ <param name="source"></param>
+ <param name="tabSize"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.StringUtil.Tab2SpaceAlign(System.String,System.Int32)">
+ <summary>
+ Tab 轉換為固定 Space長度
+ </summary>
+ <param name="source"></param>
+ <param name="tabSize"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.StringUtil.CutPrintMultiLines(System.String,System.Int32)">
+ <summary>
+ 切割多行字串
+ </summary>
+ <param name="vstrData">要切割的字串</param>
+ <param name="vintCountPerLine">每行字數</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.StringUtil.CountSign(System.String,System.String)">
+ <summary>
+ 計算字串中共含有多少個符號
+ </summary>
+ <param name="_str"></param>
+ <param name="_sign"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.StringUtil.FindSignIndex(System.String,System.String)">
+ <summary>
+ 找尋符號所在位置
+ </summary>
+ <param name="str"></param>
+ <param name="sign"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.StringUtil.PatternOptions.pattern1">
+ <summary>
+ 大括號{}
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Comm.Utility.StringUtil.PatternOptions.pattern2">
+ <summary>
+ 大括號和小括號{()}
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.StringUtil.GetSpecificData(System.String,Syscom.Comm.Utility.StringUtil.PatternOptions,System.Boolean)">
+ <summary>
+ 字串依據模組分割資料
+ </summary>
+ <param name="inputData">輸入的字串資料</param>
+ <param name="options">模組(分割符號)</param>
+ <param name="IsOnlyData">是否只有資料;不包含分割符號</param>
+ <returns>
+ matches：符合分割字串陣列
+ </returns>
+ <remarks>比對英文不分大小寫</remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.UserProfile.Encrypt(System.String)">
+ <summary>
+ 字串加密
+ </summary>
+ <param name="sourceString">明文</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.UserProfile.Decrypt(System.String)">
+ <summary>
+ 字串解密
+ </summary>
+ <param name="encryptedString">密文</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.WebUtil.#ctor">
+ <summary>
+ 阻止外部直接進行新建立的宣告
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.WebUtil.doPost(System.String)">
+ <summary>
+ 呼叫外部系統API
+ </summary>
+ <param name="postUrl">呼叫外部系統API網址及傳入參數字串</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.WebUtil.doPost(System.String,System.Byte[])">
+ <summary>
+ 呼叫外部系統API
+ </summary>
+ <param name="inPostUrl">呼叫外部系統API網址</param>
+ <param name="inPostData">傳入已加密Base64參數字串</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.WebUtil.CheckUrlExist(System.String)">
+ <summary>
+ 確認位置是否存在
+ </summary>
+ <param name="url">Ex: Http:// url </param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.XMLUtil.#ctor">
+ <summary>
+ 阻止外部直接進行新建立的宣告
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.XMLUtil.XmlToDataSet(System.String)">
+ <summary>
+ 將傳入的 XML 轉換成 Dataset
+ </summary>
+ <param name="xmlStr"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.XMLUtil.DataSetToXML(System.Data.DataSet)">
+ <summary>
+ 將傳入的 Dataset 轉換成 XML
+ </summary>
+ <param name="ds"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.XMLUtil.SetXmlInnerText(System.Xml.XmlNode@,System.String,System.String,System.String)">
+ <summary>
+ 設定 InnerText
+ </summary>
+ <param name="xNode"></param>
+ <param name="NodeName"></param>
+ <param name="AttributeName"></param>
+ <param name="Value"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.XMLUtil.GetXmlInnerText(System.Xml.XmlNode@,System.String,System.String)">
+ <summary>
+ 取得 InnerText
+ </summary>
+ <param name="xNode"></param>
+ <param name="NodeName"></param>
+ <param name="AttributeName"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Comm.Utility.ZxingNetUtil.EncodeProcess(System.String,System.Int32,System.String,System.String,System.Int32,System.String,System.String)">
+ <summary>
+ 產生QR Code圖形檔
+ </summary>
+ <param name="inQRString">來源內容字串</param>
+ <param name="inMaxLength">QR Code最大字串長度：建議用1024 Bytes</param>
+ <param name="inErrorCorrectionLevel">容錯等級: L(7%) , M(15%) , Q(25%) ,H(30%) </param>
+ <param name="inCharacterSet">字元集: "ISO-8859-1" , "UTF-8" </param>
+ <param name="inHW">圖檔長寬</param>
+ <param name="inNextStr">換頁符號</param>
+ <param name="inEndStr">結束符號</param>     
+ <returns></returns>
+ <History>Created by Alan in 2013-10-22  </History>
+ <Remark></Remark>
+</member>
+<member name="M:Syscom.Comm.Utility.ZxingNetUtil.DecodeProcess(System.Drawing.Bitmap)">
+ <summary>
+ QR Code圖形檔解碼
+ </summary>
+ <param name="inQRBitmap">QR Code圖形檔Bitmap</param>    
+ <returns></returns>
+ <History>Created by Alan in 2014-02-14  </History>
+ <Remark></Remark>
+</member>
+</members>
+</doc>

@@ -1,0 +1,616 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FCBA04C3-B37F-4DD8-9871-E034F6CEAFB7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Syscom.Client.Servicefactory</RootNamespace>
+    <AssemblyName>Syscom.Client.ServiceFactory</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\SyscomCompile\Syscom\Client\</OutputPath>
+    <DocumentationFile>Syscom.Client.ServiceFactory.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <BaseIntermediateOutputPath>..\..\SyscomCompile\Syscom\Client\obj</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>..\..\SyscomCompile\Syscom\Client\obj\$(MSBuildProjectName)\Debug</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\SyscomCompile\Syscom\Client\</OutputPath>
+    <DocumentationFile>Syscom.Client.ServiceFactory.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <BaseIntermediateOutputPath>..\..\SyscomCompile\Syscom\Client\obj</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>..\..\SyscomCompile\Syscom\Client\obj\$(MSBuildProjectName)\Debug</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Syscom.Comm.BASE, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SyscomCompile\Syscom\Common\Syscom.Comm.BASE.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Comm.EXP, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SyscomCompile\Syscom\Common\Syscom.Comm.EXP.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Comm.LOG, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SyscomCompile\Syscom\Common\Syscom.Comm.LOG.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Comm.TableFactory, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SyscomCompile\Syscom\Common\Syscom.Comm.TableFactory.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Comm.Utility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SyscomCompile\Syscom\Common\Syscom.Comm.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BASE\ARM\ArmServiceManager.vb" />
+    <Compile Include="BASE\ARM\IArmServiceManager.vb" />
+    <Compile Include="BASE\CMM\CmmServiceManager.vb" />
+    <Compile Include="BASE\CMM\ICmmServiceManager.vb" />
+    <Compile Include="BASE\FTM\FtmServiceManager.vb" />
+    <Compile Include="BASE\FTM\IFtmServiceManager.vb" />
+    <Compile Include="BASE\ICC\IccServiceManager.vb" />
+    <Compile Include="BASE\ICC\IIccServiceManager.vb" />
+    <Compile Include="BASE\NFC\INfcServiceManager.vb" />
+    <Compile Include="BASE\NFC\NfcServiceManager.vb" />
+    <Compile Include="BASE\PUB\IPubServiceManager.vb" />
+    <Compile Include="BASE\PUB\PubServiceManager.vb" />
+    <Compile Include="BASE\RPT\IRptServiceManager.vb" />
+    <Compile Include="BASE\RPT\RptServiceManager.vb" />
+    <Compile Include="BASE\SNC\ISncServiceManager.vb" />
+    <Compile Include="BASE\SNC\SncServiceManager.vb" />
+    <Compile Include="BASE\UCL\IUclServiceManager.vb" />
+    <Compile Include="BASE\UCL\UclServiceManager.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Service References\ArmServiceReference\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CmmServiceReference\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\FtmServiceReference\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\IccService2Reference\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\IccServiceLReference\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\IccServiceReference\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\NfcServiceReference\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\PubServiceLReference\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\PubServiceReference\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\RptServiceReference\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SncServiceReference\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UclServiceReference\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="System\ARM\ArmServiceManager.vb" />
+    <Compile Include="System\ARM\IArmServiceManager_T.vb" />
+    <Compile Include="System\CMM\CmmServiceManager.vb" />
+    <Compile Include="System\CMM\ICmmServiceManager_T.vb" />
+    <Compile Include="System\FTM\FtmServiceManager.vb" />
+    <Compile Include="System\FTM\IFtmServiceManager_T.vb" />
+    <Compile Include="System\ICC\IccServiceManager.vb" />
+    <Compile Include="System\ICC\IIccServiceManager_T.vb" />
+    <Compile Include="System\ICC\LA\IccServiceManager.vb" />
+    <Compile Include="System\ICC\LA\IIccServiceManager_L.vb" />
+    <Compile Include="System\NFC\INfcServiceManager_T.vb" />
+    <Compile Include="System\NFC\NfcServiceManager.vb" />
+    <Compile Include="System\PUB\LA\IPubServiceManager_L.vb" />
+    <Compile Include="System\PUB\LA\PubServiceManager.vb" />
+    <Compile Include="System\PUB\TN\IPubServiceManager_T.vb" />
+    <Compile Include="System\PUB\TN\PubServiceManager.vb" />
+    <Compile Include="System\RPT\IRptServiceManager_T.vb" />
+    <Compile Include="System\RPT\RptServiceManager.vb" />
+    <Compile Include="System\SNC\ISncServiceManager_T.vb" />
+    <Compile Include="System\SNC\SncServiceManager.vb" />
+    <Compile Include="System\UCL\IUclServiceManager_T.vb" />
+    <Compile Include="System\UCL\UclServiceManager.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Service References\ArmServiceReference\ArmService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IccService2Reference\IccService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IccService2Reference\IccService21.wsdl" />
+    <None Include="Service References\IccService2Reference\IccService21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IccService2Reference\IccService22.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IccService2Reference\IccService23.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IccService2Reference\IccService24.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IccServiceLReference\IccServiceL.wsdl" />
+    <None Include="Service References\IccServiceLReference\IccServiceL.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IccServiceLReference\IccServiceL1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IccServiceLReference\IccServiceL2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NfcServiceReference\NfcService1.wsdl" />
+    <None Include="Service References\NfcServiceReference\NfcService11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NfcServiceReference\NfcService12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NfcServiceReference\NfcService13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NfcServiceReference\NfcService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PubServiceLReference\PubServiceL1.wsdl" />
+    <None Include="Service References\PubServiceLReference\PubServiceL10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PubServiceLReference\PubServiceL11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PubServiceLReference\PubServiceL12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PubServiceLReference\PubServiceL13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PubServiceLReference\PubServiceL5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PubServiceLReference\PubServiceL51.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PubServiceLReference\PubServiceL52.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PubServiceLReference\PubServiceL53.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PubServiceLReference\PubServiceL54.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PubServiceReference\PubService1.wsdl" />
+    <None Include="Service References\PubServiceReference\PubService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PubServiceReference\PubService61.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PubServiceReference\PubService62.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PubServiceReference\PubService63.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PubServiceReference\PubService64.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PubServiceReference\PubService65.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SncServiceReference\SncService.wsdl" />
+    <None Include="Service References\SncServiceReference\SncService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SncServiceReference\SncService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UclServiceReference\UclService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UclServiceReference\UclService1.wsdl" />
+    <None Include="Service References\UclServiceReference\UclService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UclServiceReference\UclService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UclServiceReference\UclService31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UclServiceReference\UclService32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ArmServiceReference\" />
+    <WCFMetadataStorage Include="Service References\CmmServiceReference\" />
+    <WCFMetadataStorage Include="Service References\FtmServiceReference\" />
+    <WCFMetadataStorage Include="Service References\IccService2Reference\" />
+    <WCFMetadataStorage Include="Service References\IccServiceLReference\" />
+    <WCFMetadataStorage Include="Service References\IccServiceReference\" />
+    <WCFMetadataStorage Include="Service References\NfcServiceReference\" />
+    <WCFMetadataStorage Include="Service References\PubServiceLReference\" />
+    <WCFMetadataStorage Include="Service References\PubServiceReference\" />
+    <WCFMetadataStorage Include="Service References\RptServiceReference\" />
+    <WCFMetadataStorage Include="Service References\SncServiceReference\" />
+    <WCFMetadataStorage Include="Service References\UclServiceReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ArmServiceReference\ArmService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ArmServiceReference\ArmService1.wsdl" />
+    <None Include="Service References\ArmServiceReference\ArmService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ArmServiceReference\ArmService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ArmServiceReference\ArmService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ArmServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ArmServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\DataSources\System.Data.DataSet.datasource" />
+    <None Include="My Project\DataSources\System.Data.DataTable.datasource" />
+    <None Include="Service References\ArmServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CmmServiceReference\CmmService1.wsdl" />
+    <None Include="Service References\CmmServiceReference\CmmService41.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CmmServiceReference\CmmService42.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CmmServiceReference\CmmService43.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CmmServiceReference\CmmService44.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CmmServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CmmServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CmmServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FtmServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FtmServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FtmServiceReference\FtmService1.wsdl" />
+    <None Include="Service References\FtmServiceReference\FtmService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FtmServiceReference\FtmService41.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FtmServiceReference\FtmService42.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FtmServiceReference\FtmService43.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FtmServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\IccServiceReference\IccService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IccServiceReference\IccService1.wsdl" />
+    <None Include="Service References\IccServiceReference\IccService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IccServiceReference\IccService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PubServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PubServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PubServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Service References\RptServiceReference\RptService1.wsdl" />
+    <None Include="Service References\RptServiceReference\RptService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RptServiceReference\RptService21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UclServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UclServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UclServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\IccServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\IccServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\IccServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\IccService2Reference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\IccService2Reference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Service References\CmmServiceReference\CmmService5.xsd" />
+    <None Include="Service References\IccService2Reference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RptServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RptServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RptServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ArmServiceReference\ArmService1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CmmServiceReference\CmmService1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FtmServiceReference\FtmService1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\IccServiceReference\IccService1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RptServiceReference\RptService1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UclServiceReference\UclService1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\NfcServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\NfcServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\NfcServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\NfcServiceReference\NfcService1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\IccServiceLReference\IccServiceL.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\IccServiceLReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\IccServiceLReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\IccServiceLReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SncServiceReference\SncService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SncServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SncServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SncServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PubServiceReference\PubService1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PubServiceLReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PubServiceLReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PubServiceLReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\IccService2Reference\IccService21.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PubServiceLReference\PubServiceL1.disco" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="NfcService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_INfcService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:40611/NfcService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:40611/NfcService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:40611/NfcService.svc?xsd=xsd2" />
+      <xsd:import schemaLocation="http://localhost:40611/NfcService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="INfcService_readUIMessage24HrAuto_InputMessage">
+    <wsdl:part name="parameters" element="tns:readUIMessage24HrAuto" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_readUIMessage24HrAuto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:readUIMessage24HrAutoResponse" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_readUIMessage24Hr_InputMessage">
+    <wsdl:part name="parameters" element="tns:readUIMessage24Hr" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_readUIMessage24Hr_OutputMessage">
+    <wsdl:part name="parameters" element="tns:readUIMessage24HrResponse" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_readUIMessageAuto_InputMessage">
+    <wsdl:part name="parameters" element="tns:readUIMessageAuto" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_readUIMessageAuto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:readUIMessageAutoResponse" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_readUIMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:readUIMessage" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_readUIMessage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:readUIMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_NotifyAllUI_InputMessage">
+    <wsdl:part name="parameters" element="tns:NotifyAllUI" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_NotifyAllUI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NotifyAllUIResponse" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_NotifyAllUIExternal_InputMessage">
+    <wsdl:part name="parameters" element="tns:NotifyAllUIExternal" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_NotifyAllUIExternal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NotifyAllUIExternalResponse" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_NotifyDepUI_InputMessage">
+    <wsdl:part name="parameters" element="tns:NotifyDepUI" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_NotifyDepUI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NotifyDepUIResponse" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_NotifyDepUIExternal_InputMessage">
+    <wsdl:part name="parameters" element="tns:NotifyDepUIExternal" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_NotifyDepUIExternal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NotifyDepUIExternalResponse" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_NotifyUIMulti_InputMessage">
+    <wsdl:part name="parameters" element="tns:NotifyUIMulti" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_NotifyUIMulti_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NotifyUIMultiResponse" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_NotifyUIMultiExternal_InputMessage">
+    <wsdl:part name="parameters" element="tns:NotifyUIMultiExternal" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_NotifyUIMultiExternal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NotifyUIMultiExternalResponse" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_NotifyUI_InputMessage">
+    <wsdl:part name="parameters" element="tns:NotifyUI" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_NotifyUI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NotifyUIResponse" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_NotifyUIExternal_InputMessage">
+    <wsdl:part name="parameters" element="tns:NotifyUIExternal" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_NotifyUIExternal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NotifyUIExternalResponse" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_NotifyMailMulti_InputMessage">
+    <wsdl:part name="parameters" element="tns:NotifyMailMulti" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_NotifyMailMulti_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NotifyMailMultiResponse" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_NotifyMailMultiReply_InputMessage">
+    <wsdl:part name="parameters" element="tns:NotifyMailMultiReply" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_NotifyMailMultiReply_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NotifyMailMultiReplyResponse" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_NotifyMail_InputMessage">
+    <wsdl:part name="parameters" element="tns:NotifyMail" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_NotifyMail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NotifyMailResponse" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_NotifyMailReply_InputMessage">
+    <wsdl:part name="parameters" element="tns:NotifyMailReply" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_NotifyMailReply_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NotifyMailReplyResponse" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_NotifySMS_InputMessage">
+    <wsdl:part name="parameters" element="tns:NotifySMS" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_NotifySMS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NotifySMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_NotifySMSMulti_InputMessage">
+    <wsdl:part name="parameters" element="tns:NotifySMSMulti" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_NotifySMSMulti_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NotifySMSMultiResponse" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_NotifyByFunctionNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:NotifyByFunctionNo" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_NotifyByFunctionNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NotifyByFunctionNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_queryNFCNotifierByFunc_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryNFCNotifierByFunc" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_queryNFCNotifierByFunc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryNFCNotifierByFuncResponse" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_saveNFCNotifierByFunc_InputMessage">
+    <wsdl:part name="parameters" element="tns:saveNFCNotifierByFunc" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_saveNFCNotifierByFunc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:saveNFCNotifierByFuncResponse" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_deleteNFCNotifierByFunc_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteNFCNotifierByFunc" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_deleteNFCNotifierByFunc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteNFCNotifierByFuncResponse" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_getNotifyMessageByDeploy_InputMessage">
+    <wsdl:part name="parameters" element="tns:getNotifyMessageByDeploy" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_getNotifyMessageByDeploy_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getNotifyMessageByDeployResponse" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_QueryDeployByToDay_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryDeployByToDay" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_QueryDeployByToDay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryDeployByToDayResponse" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_NotifyUIExternalRightNow_InputMessage">
+    <wsdl:part name="parameters" element="tns:NotifyUIExternalRightNow" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_NotifyUIExternalRightNow_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NotifyUIExternalRightNowResponse" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_NotifySMSMultiWithSubject_InputMessage">
+    <wsdl:part name="parameters" element="tns:NotifySMSMultiWithSubject" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_NotifySMSMultiWithSubject_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NotifySMSMultiWithSubjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_NotifyMailWithEsrFormat_InputMessage">
+    <wsdl:part name="parameters" element="tns:NotifyMailWithEsrFormat" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_NotifyMailWithEsrFormat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NotifyMailWithEsrFormatResponse" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_NotifyUIWithStartAndEndTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:NotifyUIWithStartAndEndTime" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_NotifyUIWithStartAndEndTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NotifyUIWithStartAndEndTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_reMarkRead_InputMessage">
+    <wsdl:part name="parameters" element="tns:reMarkRead" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_reMarkRead_OutputMessage">
+    <wsdl:part name="parameters" element="tns:reMarkReadResponse" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_InsertNFCNotifyMsg_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertNFCNotifyMsg" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_InsertNFCNotifyMsg_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertNFCNotifyMsgResponse" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_QueryNFCNotifyMsgByUserId_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryNFCNotifyMsgByUserId" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_QueryNFCNotifyMsgByUserId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryNFCNotifyMsgByUserIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_QueryNFCNotifyMsgByCond_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryNFCNotifyMsgByCond" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_QueryNFCNotifyMsgByCond_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryNFCNotifyMsgByCondResponse" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_initialNfcQueryExportUI_InputMessage">
+    <wsdl:part name="parameters" element="tns:initialNfcQueryExportUI" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_initialNfcQueryExportUI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:initialNfcQueryExportUIResponse" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_insertGroupMember_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertGroupMember" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_insertGroupMember_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertGroupMemberResponse" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_deleteGroupMember_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteGroupMember" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_deleteGroupMember_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteGroupMemberResponse" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_deleteGroupMembers_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteGroupMembers" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_deleteGroupMembers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteGroupMembersResponse" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_queryGroupMember_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryGroupMember" />
+  </wsdl:message>
+  <wsdl:message name="INfcService_queryGroupMember_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryGroupMemberResponse" />
+  </wsdl:message>
+  <wsdl:portType name="INfcService">
+    <wsdl:operation name="readUIMessage24HrAuto">
+      <wsdl:input wsaw:Action="http://tempuri.org/INfcService/readUIMessage24HrAuto" message="tns:INfcService_readUIMessage24HrAuto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INfcService/readUIMessage24HrAutoResponse" message="tns:INfcService_readUIMessage24HrAuto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="readUIMessage24Hr">
+      <wsdl:input wsaw:Action="http://tempuri.org/INfcService/readUIMessage24Hr" message="tns:INfcService_readUIMessage24Hr_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INfcService/readUIMessage24HrResponse" message="tns:INfcService_readUIMessage24Hr_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="readUIMessageAuto">
+      <wsdl:input wsaw:Action="http://tempuri.org/INfcService/readUIMessageAuto" message="tns:INfcService_readUIMessageAuto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INfcService/readUIMessageAutoResponse" message="tns:INfcService_readUIMessageAuto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="readUIMessage">
+      <wsdl:input wsaw:Action="http://tempuri.org/INfcService/readUIMessage" message="tns:INfcService_readUIMessage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INfcService/readUIMessageResponse" message="tns:INfcService_readUIMessage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyAllUI">
+      <wsdl:input wsaw:Action="http://tempuri.org/INfcService/NotifyAllUI" message="tns:INfcService_NotifyAllUI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INfcService/NotifyAllUIResponse" message="tns:INfcService_NotifyAllUI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyAllUIExternal">
+      <wsdl:input wsaw:Action="http://tempuri.org/INfcService/NotifyAllUIExternal" message="tns:INfcService_NotifyAllUIExternal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INfcService/NotifyAllUIExternalResponse" message="tns:INfcService_NotifyAllUIExternal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyDepUI">
+      <wsdl:input wsaw:Action="http://tempuri.org/INfcService/NotifyDepUI" message="tns:INfcService_NotifyDepUI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INfcService/NotifyDepUIResponse" message="tns:INfcService_NotifyDepUI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyDepUIExternal">
+      <wsdl:input wsaw:Action="http://tempuri.org/INfcService/NotifyDepUIExternal" message="tns:INfcService_NotifyDepUIExternal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INfcService/NotifyDepUIExternalResponse" message="tns:INfcService_NotifyDepUIExternal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyUIMulti">
+      <wsdl:input wsaw:Action="http://tempuri.org/INfcService/NotifyUIMulti" message="tns:INfcService_NotifyUIMulti_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INfcService/NotifyUIMultiResponse" message="tns:INfcService_NotifyUIMulti_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyUIMultiExternal">
+      <wsdl:input wsaw:Action="http://tempuri.org/INfcService/NotifyUIMultiExternal" message="tns:INfcService_NotifyUIMultiExternal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INfcService/NotifyUIMultiExternalResponse" message="tns:INfcService_NotifyUIMultiExternal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyUI">
+      <wsdl:input wsaw:Action="http://tempuri.org/INfcService/NotifyUI" message="tns:INfcService_NotifyUI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INfcService/NotifyUIResponse" message="tns:INfcService_NotifyUI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyUIExternal">
+      <wsdl:input wsaw:Action="http://tempuri.org/INfcService/NotifyUIExternal" message="tns:INfcService_NotifyUIExternal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INfcService/NotifyUIExternalResponse" message="tns:INfcService_NotifyUIExternal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyMailMulti">
+      <wsdl:input wsaw:Action="http://tempuri.org/INfcService/NotifyMailMulti" message="tns:INfcService_NotifyMailMulti_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INfcService/NotifyMailMultiResponse" message="tns:INfcService_NotifyMailMulti_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyMailMultiReply">
+      <wsdl:input wsaw:Action="http://tempuri.org/INfcService/NotifyMailMultiReply" message="tns:INfcService_NotifyMailMultiReply_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INfcService/NotifyMailMultiReplyResponse" message="tns:INfcService_NotifyMailMultiReply_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyMail">
+      <wsdl:input wsaw:Action="http://tempuri.org/INfcService/NotifyMail" message="tns:INfcService_NotifyMail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INfcService/NotifyMailResponse" message="tns:INfcService_NotifyMail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyMailReply">
+      <wsdl:input wsaw:Action="http://tempuri.org/INfcService/NotifyMailReply" message="tns:INfcService_NotifyMailReply_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INfcService/NotifyMailReplyResponse" message="tns:INfcService_NotifyMailReply_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifySMS">
+      <wsdl:input wsaw:Action="http://tempuri.org/INfcService/NotifySMS" message="tns:INfcService_NotifySMS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INfcService/NotifySMSResponse" message="tns:INfcService_NotifySMS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifySMSMulti">
+      <wsdl:input wsaw:Action="http://tempuri.org/INfcService/NotifySMSMulti" message="tns:INfcService_NotifySMSMulti_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INfcService/NotifySMSMultiResponse" message="tns:INfcService_NotifySMSMulti_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyByFunctionNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/INfcService/NotifyByFunctionNo" message="tns:INfcService_NotifyByFunctionNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INfcService/NotifyByFunctionNoResponse" message="tns:INfcService_NotifyByFunctionNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryNFCNotifierByFunc">
+      <wsdl:input wsaw:Action="http://tempuri.org/INfcService/queryNFCNotifierByFunc" message="tns:INfcService_queryNFCNotifierByFunc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INfcService/queryNFCNotifierByFuncResponse" message="tns:INfcService_queryNFCNotifierByFunc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="saveNFCNotifierByFunc">
+      <wsdl:input wsaw:Action="http://tempuri.org/INfcService/saveNFCNotifierByFunc" message="tns:INfcService_saveNFCNotifierByFunc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INfcService/saveNFCNotifierByFuncResponse" message="tns:INfcService_saveNFCNotifierByFunc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteNFCNotifierByFunc">
+      <wsdl:input wsaw:Action="http://tempuri.org/INfcService/deleteNFCNotifierByFunc" message="tns:INfcService_deleteNFCNotifierByFunc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INfcService/deleteNFCNotifierByFuncResponse" message="tns:INfcService_deleteNFCNotifierByFunc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getNotifyMessageByDeploy">
+      <wsdl:input wsaw:Action="http://tempuri.org/INfcService/getNotifyMessageByDeploy" message="tns:INfcService_getNotifyMessageByDeploy_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INfcService/getNotifyMessageByDeployResponse" message="tns:INfcService_getNotifyMessageByDeploy_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryDeployByToDay">
+      <wsdl:input wsaw:Action="http://tempuri.org/INfcService/QueryDeployByToDay" message="tns:INfcService_QueryDeployByToDay_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INfcService/QueryDeployByToDayResponse" message="tns:INfcService_QueryDeployByToDay_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyUIExternalRightNow">
+      <wsdl:input wsaw:Action="http://tempuri.org/INfcService/NotifyUIExternalRightNow" message="tns:INfcService_NotifyUIExternalRightNow_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INfcService/NotifyUIExternalRightNowResponse" message="tns:INfcService_NotifyUIExternalRightNow_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifySMSMultiWithSubject">
+      <wsdl:input wsaw:Action="http://tempuri.org/INfcService/NotifySMSMultiWithSubject" message="tns:INfcService_NotifySMSMultiWithSubject_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INfcService/NotifySMSMultiWithSubjectResponse" message="tns:INfcService_NotifySMSMultiWithSubject_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyMailWithEsrFormat">
+      <wsdl:input wsaw:Action="http://tempuri.org/INfcService/NotifyMailWithEsrFormat" message="tns:INfcService_NotifyMailWithEsrFormat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INfcService/NotifyMailWithEsrFormatResponse" message="tns:INfcService_NotifyMailWithEsrFormat_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NotifyUIWithStartAndEndTime">
+      <wsdl:input wsaw:Action="http://tempuri.org/INfcService/NotifyUIWithStartAndEndTime" message="tns:INfcService_NotifyUIWithStartAndEndTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INfcService/NotifyUIWithStartAndEndTimeResponse" message="tns:INfcService_NotifyUIWithStartAndEndTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="reMarkRead">
+      <wsdl:input wsaw:Action="http://tempuri.org/INfcService/reMarkRead" message="tns:INfcService_reMarkRead_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INfcService/reMarkReadResponse" message="tns:INfcService_reMarkRead_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertNFCNotifyMsg">
+      <wsdl:input wsaw:Action="http://tempuri.org/INfcService/InsertNFCNotifyMsg" message="tns:INfcService_InsertNFCNotifyMsg_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INfcService/InsertNFCNotifyMsgResponse" message="tns:INfcService_InsertNFCNotifyMsg_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryNFCNotifyMsgByUserId">
+      <wsdl:input wsaw:Action="http://tempuri.org/INfcService/QueryNFCNotifyMsgByUserId" message="tns:INfcService_QueryNFCNotifyMsgByUserId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INfcService/QueryNFCNotifyMsgByUserIdResponse" message="tns:INfcService_QueryNFCNotifyMsgByUserId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryNFCNotifyMsgByCond">
+      <wsdl:input wsaw:Action="http://tempuri.org/INfcService/QueryNFCNotifyMsgByCond" message="tns:INfcService_QueryNFCNotifyMsgByCond_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INfcService/QueryNFCNotifyMsgByCondResponse" message="tns:INfcService_QueryNFCNotifyMsgByCond_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="initialNfcQueryExportUI">
+      <wsdl:input wsaw:Action="http://tempuri.org/INfcService/initialNfcQueryExportUI" message="tns:INfcService_initialNfcQueryExportUI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INfcService/initialNfcQueryExportUIResponse" message="tns:INfcService_initialNfcQueryExportUI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertGroupMember">
+      <wsdl:input wsaw:Action="http://tempuri.org/INfcService/insertGroupMember" message="tns:INfcService_insertGroupMember_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INfcService/insertGroupMemberResponse" message="tns:INfcService_insertGroupMember_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteGroupMember">
+      <wsdl:input wsaw:Action="http://tempuri.org/INfcService/deleteGroupMember" message="tns:INfcService_deleteGroupMember_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INfcService/deleteGroupMemberResponse" message="tns:INfcService_deleteGroupMember_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteGroupMembers">
+      <wsdl:input wsaw:Action="http://tempuri.org/INfcService/deleteGroupMembers" message="tns:INfcService_deleteGroupMembers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INfcService/deleteGroupMembersResponse" message="tns:INfcService_deleteGroupMembers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryGroupMember">
+      <wsdl:input wsaw:Action="http://tempuri.org/INfcService/queryGroupMember" message="tns:INfcService_queryGroupMember_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INfcService/queryGroupMemberResponse" message="tns:INfcService_queryGroupMember_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSHttpBinding_INfcService" type="tns:INfcService">
+    <wsp:PolicyReference URI="#WSHttpBinding_INfcService_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="readUIMessage24HrAuto">
+      <soap12:operation soapAction="http://tempuri.org/INfcService/readUIMessage24HrAuto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="readUIMessage24Hr">
+      <soap12:operation soapAction="http://tempuri.org/INfcService/readUIMessage24Hr" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="readUIMessageAuto">
+      <soap12:operation soapAction="http://tempuri.org/INfcService/readUIMessageAuto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="readUIMessage">
+      <soap12:operation soapAction="http://tempuri.org/INfcService/readUIMessage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyAllUI">
+      <soap12:operation soapAction="http://tempuri.org/INfcService/NotifyAllUI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyAllUIExternal">
+      <soap12:operation soapAction="http://tempuri.org/INfcService/NotifyAllUIExternal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyDepUI">
+      <soap12:operation soapAction="http://tempuri.org/INfcService/NotifyDepUI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyDepUIExternal">
+      <soap12:operation soapAction="http://tempuri.org/INfcService/NotifyDepUIExternal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyUIMulti">
+      <soap12:operation soapAction="http://tempuri.org/INfcService/NotifyUIMulti" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyUIMultiExternal">
+      <soap12:operation soapAction="http://tempuri.org/INfcService/NotifyUIMultiExternal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyUI">
+      <soap12:operation soapAction="http://tempuri.org/INfcService/NotifyUI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyUIExternal">
+      <soap12:operation soapAction="http://tempuri.org/INfcService/NotifyUIExternal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyMailMulti">
+      <soap12:operation soapAction="http://tempuri.org/INfcService/NotifyMailMulti" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyMailMultiReply">
+      <soap12:operation soapAction="http://tempuri.org/INfcService/NotifyMailMultiReply" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyMail">
+      <soap12:operation soapAction="http://tempuri.org/INfcService/NotifyMail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyMailReply">
+      <soap12:operation soapAction="http://tempuri.org/INfcService/NotifyMailReply" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifySMS">
+      <soap12:operation soapAction="http://tempuri.org/INfcService/NotifySMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifySMSMulti">
+      <soap12:operation soapAction="http://tempuri.org/INfcService/NotifySMSMulti" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyByFunctionNo">
+      <soap12:operation soapAction="http://tempuri.org/INfcService/NotifyByFunctionNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryNFCNotifierByFunc">
+      <soap12:operation soapAction="http://tempuri.org/INfcService/queryNFCNotifierByFunc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveNFCNotifierByFunc">
+      <soap12:operation soapAction="http://tempuri.org/INfcService/saveNFCNotifierByFunc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteNFCNotifierByFunc">
+      <soap12:operation soapAction="http://tempuri.org/INfcService/deleteNFCNotifierByFunc" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNotifyMessageByDeploy">
+      <soap12:operation soapAction="http://tempuri.org/INfcService/getNotifyMessageByDeploy" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryDeployByToDay">
+      <soap12:operation soapAction="http://tempuri.org/INfcService/QueryDeployByToDay" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyUIExternalRightNow">
+      <soap12:operation soapAction="http://tempuri.org/INfcService/NotifyUIExternalRightNow" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifySMSMultiWithSubject">
+      <soap12:operation soapAction="http://tempuri.org/INfcService/NotifySMSMultiWithSubject" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyMailWithEsrFormat">
+      <soap12:operation soapAction="http://tempuri.org/INfcService/NotifyMailWithEsrFormat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NotifyUIWithStartAndEndTime">
+      <soap12:operation soapAction="http://tempuri.org/INfcService/NotifyUIWithStartAndEndTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="reMarkRead">
+      <soap12:operation soapAction="http://tempuri.org/INfcService/reMarkRead" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertNFCNotifyMsg">
+      <soap12:operation soapAction="http://tempuri.org/INfcService/InsertNFCNotifyMsg" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryNFCNotifyMsgByUserId">
+      <soap12:operation soapAction="http://tempuri.org/INfcService/QueryNFCNotifyMsgByUserId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryNFCNotifyMsgByCond">
+      <soap12:operation soapAction="http://tempuri.org/INfcService/QueryNFCNotifyMsgByCond" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="initialNfcQueryExportUI">
+      <soap12:operation soapAction="http://tempuri.org/INfcService/initialNfcQueryExportUI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertGroupMember">
+      <soap12:operation soapAction="http://tempuri.org/INfcService/insertGroupMember" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteGroupMember">
+      <soap12:operation soapAction="http://tempuri.org/INfcService/deleteGroupMember" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteGroupMembers">
+      <soap12:operation soapAction="http://tempuri.org/INfcService/deleteGroupMembers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryGroupMember">
+      <soap12:operation soapAction="http://tempuri.org/INfcService/queryGroupMember" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="NfcService">
+    <wsdl:port name="WSHttpBinding_INfcService" binding="tns:WSHttpBinding_INfcService">
+      <soap12:address location="http://localhost:40611/NfcService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://localhost:40611/NfcService.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Dns>localhost</Dns>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

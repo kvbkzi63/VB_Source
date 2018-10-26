@@ -1,0 +1,5600 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Syscom.Client.ServiceFactory
+</name>
+</assembly>
+<members>
+<member name="T:Syscom.Client.Servicefactory.My.Resources.Resources">
+<summary>
+  用於查詢當地語系化字串等的強類型資源類別。
+</summary>
+</member>
+<member name="P:Syscom.Client.Servicefactory.My.Resources.Resources.ResourceManager">
+<summary>
+  傳回這個類別使用的快取的 ResourceManager 執行個體。
+</summary>
+</member>
+<member name="P:Syscom.Client.Servicefactory.My.Resources.Resources.Culture">
+<summary>
+  覆寫目前執行緒的 CurrentUICulture 屬性，對象是所有
+  使用這個強類型資源類別的資源查閱。
+</summary>
+</member>
+<member name="M:Syscom.Client.Servicefactory.ArmServiceManager.#ctor">
+ <summary>
+ 阻止外部直接進行新建立的宣告
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Client.Servicefactory.ArmServiceManager.getInstance">
+ <summary>
+ 屬性取得類別實體
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:Syscom.Client.Servicefactory.ArmServiceManager.Nested">
+ <summary>
+ 巢狀類別存放建立的類別實體
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.ArmServiceManager.LoginModuleLoginBySectionCode(System.String,System.String,System.String)">
+ <summary>
+ 回傳個人資料、授權功能資料，根據ID、PassWord、Section_ID
+ </summary>
+ <returns>DataSet</returns>    ''' <remarks>by Sean.Lin on 2013-09-25</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.ArmServiceManager.queryForRoleRightsMaintain(System.String)">
+ <summary>
+ 取得角色功能設定維護畫面的資料
+ </summary>
+ <param name="RoleID"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.ArmServiceManager.ConfirmRoleRights(System.Data.DataSet)">
+ <summary>
+ Role權限的新增與刪除
+ </summary>
+ <param name="ds"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.ArmServiceManager.saveLogonFailure(System.String,System.String,System.String)">
+ <summary>
+ 記錄登入失敗
+ </summary>
+ <param name="employeeCode"></param>
+ <param name="ip"></param>
+ <param name="machineName"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.ArmServiceManager.RoleQueryByEmployee(System.String)">
+ <summary>
+ 查詢人員的角色與功能
+ </summary>
+ <param name="Employee_Code" >員工代碼</param>
+ <returns>Dataset</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.ArmServiceManager.EmployeeQueryByRole(System.String)">
+ <summary>
+ 查詢角色歸屬的人員
+ </summary>
+ <param name="Role_Id" >角色代碼</param>
+ <returns>Dataset</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.ArmServiceManager.EmployeeQueryByFunction(System.String)">
+ <summary>
+ 查詢功能歸屬的人員
+ </summary>
+ <param name="Fun_Function_No" >功能代碼</param>
+ <returns>Dataset</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.ArmServiceManager.queryRoleRightsByMemberOf(System.String)">
+ <summary>
+ 查詢角色ID 以 userMemberOf 為索引
+ </summary>
+ <param name="userMemberOf">使用者歸屬角色</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.ArmServiceManager.ArmLogonFailureQueryLoginFailure(System.String,System.String)">
+ <summary>
+ 登入失敗超過3次查詢
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Hsiao,Kaiwen on 2016-02-18</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.CmmServiceManager.#ctor">
+ <summary>
+ 阻止外部直接進行新建立的宣告
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Client.Servicefactory.CmmServiceManager.getInstance">
+ <summary>
+ 屬性取得類別實體
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:Syscom.Client.Servicefactory.CmmServiceManager.Nested">
+ <summary>
+ 巢狀類別存放建立的類別實體
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.CmmServiceManager.getPrinterName(System.String,System.Int32,System.Object)">
+ <summary>
+ 取得印表機名稱
+ Add By Jen
+ </summary>
+ <param name="id"></param>
+ <param name="type"></param>
+ <param name="con"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.CmmServiceManager.CMMSysCodeBSSysCodeQuery(System.Int32)">
+ <summary>
+ 基本代碼查詢 - 不限系統；CodeType:查詢代碼；回傳 TableName 為 CodeType 的 Dataset;包含 Code_ID,Code_Name,Code_EN_Name,Combine_Name,Combine_EN_Name 
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Sean.Lin on 2013-7-19</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.CmmServiceManager.CMMSysCodeBSSysCodeQueryMuti(System.Int32[])">
+ <summary>
+ 基本代碼查詢 - 不限系統 - 多筆 ；CodeType:查詢代碼的陣列；回傳 TableName 為 CodeType 的 Dataset;包含 Code_ID,Code_Name,Code_EN_Name,Combine_Name,Combine_EN_Name 
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Sean.Lin on 2013-7-19</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.CmmServiceManager.CMMSysCodeTypeBSSysCodeTypeQuery(System.String,System.String)">
+ <summary>
+ 基本類別代碼查詢 - 不限系統；CodeType:查詢代碼；回傳 TableName 為 SystemName 的 Dataset
+ 查詢 Pub_Syscode_Type By TypeId 與 SystemName
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Lewis on 2014-2-13</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.CmmServiceManager.CMMSysCodequerySectionCode">
+ <summary>
+ 院區代碼查詢
+ </summary>
+ <returns>DataSet</returns>    ''' <remarks>by Sean.Lin on 2013-09-16</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.CmmServiceManager.CMMSysCodequeryDeptTCodeBySectionCode">
+ <summary>
+ 部門代碼查詢
+ </summary>
+ <returns>DataSet</returns>    ''' <remarks>by Sean.Lin on 2013-09-16</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.CmmServiceManager.CMMSysCodeQueryPubConfigMuti(System.String[],System.Data.IDbConnection@)">
+ <summary>
+ 查詢參數檔 - 多筆，回傳一個DS，Table Name 為 傳入的 configName
+ </summary>
+ <param name="configName" >參數名</param>
+ <returns>Dataset</returns>
+ <remarks>by Sean.Lin on 2016-05-18</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.FtmServiceManager.#ctor">
+ <summary>
+ 阻止外部直接進行新建立的宣告
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Client.Servicefactory.FtmServiceManager.getInstance">
+ <summary>
+ 屬性取得類別實體
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:Syscom.Client.Servicefactory.FtmServiceManager.Nested">
+ <summary>
+ 巢狀類別存放建立的類別實體
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.FtmServiceManager.uploadNewFile(System.Data.DataSet@,System.Data.DataSet@)">
+ <summary>
+ 上傳檔案
+ </summary>
+ <param name="data">上傳檔案資料</param>
+ <param name="fileVersionData">檔案版本資訊</param>
+ <returns>FID</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.FtmServiceManager.getImageThumb(System.String@)">
+ <summary>
+ 取得縮圖
+ </summary>
+ <param name="FID">FID</param>
+ <returns>縮圖的byte array</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.FtmServiceManager.downloadFile(System.String@,System.Boolean@)">
+ <summary>
+ 下載檔案
+ </summary>
+ <param name="FID">FID</param>
+ <param name="old_file_name">是否使用上傳時的原擋名</param>
+ <returns>(0) 檔案資料byte() , (1) client端的預設檔名</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.FtmServiceManager.uploadNewFilePath(System.String,System.String,System.String,System.Data.DataSet@,System.Data.DataSet@)">
+ <summary>
+ 上傳檔案BY PATH
+ </summary>
+ <param name="inUNCPathTag"></param>
+ <param name="inAccessIDTag"></param>
+ <param name="inAccessPWTag"></param>
+ <param name="data"></param>
+ <param name="fileVersionData"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.FtmServiceManager.downloadFilePath(System.String@,System.String,System.String,System.String,System.String,System.Boolean@)">
+ <summary>
+ 下載檔案 By PATH
+ </summary>
+ <param name="FID"></param>
+ <param name="inUNCPathTag"></param>
+ <param name="inAccessIDTag"></param>
+ <param name="inAccessPWTag"></param>
+ <param name="inExtensionName"></param>
+ <param name="old_file_name"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.#ctor">
+ <summary>
+ 阻止外部直接進行新建立的宣告
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Client.Servicefactory.IccServiceManager.getInstance">
+ <summary>
+ 屬性取得類別實體
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:Syscom.Client.Servicefactory.IccServiceManager.Nested">
+ <summary>
+ 巢狀類別存放建立的類別實體
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.QueryIccConnectionHistory(System.Collections.Generic.Dictionary{System.String,System.Object})">
+ <summary>
+ 查詢 雲端藥歷/關懷用藥 連線記錄
+ </summary>
+ <param name="Param"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.InitialIccUploadDataQueryUI(System.Collections.Generic.Dictionary{System.String,System.Object})">
+ <summary>
+ 取得初始化 ICCUploadDataQueryUI 所需資料
+ </summary>
+ <param name="Param"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.QueryIccUploadData(System.Collections.Generic.Dictionary{System.String,System.Object})">
+ <summary>
+ 查詢上傳檔
+ </summary>
+ <param name="Param"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.QueryIccUploadDataDetail(System.Collections.Generic.Dictionary{System.String,System.Object})">
+ <summary>
+ 查詢上傳檔明細
+ </summary>
+ <param name="Param"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.SaveIccUploadData(System.Collections.Generic.Dictionary{System.String,System.Object},System.Data.DataSet)">
+ <summary>
+ 存檔
+ </summary>
+ <param name="Param"></param>
+ <param name="InputDs"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ImportFeedbackData(System.Collections.Generic.Dictionary{System.String,System.Object},System.Data.DataSet)">
+ <summary>
+ 將回饋檔存入資料庫
+ </summary>
+ <param name="Param"></param>
+ <param name="InputDs"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.QueryMaxCountOfDay(System.DateTime)">
+ <summary>
+ 查詢當日已匯入次數
+ </summary>
+ <param name="Import_Date">匯入日期</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.QueryFeedBackData(System.Collections.Generic.Dictionary{System.String,System.Object})">
+ <summary>
+ 查詢回饋檔資料
+ </summary>
+ <param name="Param"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ImportFeedbackDuporderData(System.Collections.Generic.Dictionary{System.String,System.Object},System.Data.DataSet)">
+ <summary>
+ 將回饋檔(用藥重複)存入資料庫
+ </summary>
+ <param name="Param"></param>
+ <param name="InputDs"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.QueryFeedBackDuporderData(System.Collections.Generic.Dictionary{System.String,System.Object})">
+ <summary>
+ 查詢回饋檔(用藥重複)資料
+ </summary>
+ <param name="Param"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.Query24HourUploadedRate(System.Collections.Generic.Dictionary{System.String,System.Object})">
+ <summary>
+ 查詢24小時上傳比率
+ </summary>
+ <param name="Param"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.Query24UnuploadData(System.Collections.Generic.Dictionary{System.String,System.Object})">
+ <summary>
+ 取得24小時未上傳資料
+ </summary>
+ <param name="Param"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.getConfigDataForICCUpload">
+ <summary>
+ 取得醫療院所代碼Config
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCCloudDrugPatientQueryCountByChartNo(System.String)">
+ <summary>
+ 查詢病人雲端藥歷筆數
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by ChenYu.Guo on 2015-09-17</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCCloudDrugPatientQueryEffectivePatient">
+ <summary>
+ 查詢雲端藥歷有效病人
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by ChenYu.Guo on 2015-09-18</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCCloudDrugsQueryAssignColumnsByIdNo(System.String)">
+ <summary>
+ 指定顯示欄位查詢
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by ChenYu.Guo on 2015-09-17</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCMustFieldVerifydeleteByPk(System.String)">
+ <summary>
+ 刪除
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-27</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCMustFieldVerifyinsert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-27</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCMustFieldVerifyupdate(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-27</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCMustFieldVerifyqueryAll">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-27</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCMustFieldVerifyqueryByPK(System.String@)">
+ <summary>
+ 序號查詢
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-27</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCMustFieldVerifyqueryByPKYNShow(System.String@)">
+ <summary>
+ 序號查詢
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-27</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCMustFieldVerifyqueryAllYNShow">
+ <summary>
+ 序號查詢
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-27</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCFieldLengthVerifydelete(System.String)">
+ <summary>
+ 刪除
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-27</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCFieldLengthVerifyqueryByPK(System.String@)">
+ <summary>
+ ID查詢
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-27</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCFieldLengthVerifyinsert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-27</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCFieldLengthVerifyupdate(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-27</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCFieldLengthVerifyqueryAll">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-27</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCOnlineCheckdelete(System.String)">
+ <summary>
+ 刪除
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-28</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCOnlineCheckqueryByPK(System.String@)">
+ <summary>
+ ID查詢
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-28</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCOnlineCheckqueryAllYNShow">
+ <summary>
+ 查詢全部(顯示是,否)
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-28</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCOnlineCheckqueryByPKYNShow(System.String@)">
+ <summary>
+ ID查詢(顯示是,否)
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-28</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCOnlineCheckinsert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-28</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCOnlineCheckupdate(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-28</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCOnlineCheckqueryAll">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-28</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCSelfVerifydelete(System.String)">
+ <summary>
+ 刪除
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-28</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCSelfVerifyqueryByPK(System.String@)">
+ <summary>
+ ID查詢
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-28</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCSelfVerifyqueryAllYNShow">
+ <summary>
+ 查詢全部(顯示是,否)
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-28</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCSelfVerifyqueryByPKYNShow(System.String@)">
+ <summary>
+ ID查詢(顯示是,否)
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-28</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCSelfVerifyinsert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-28</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCSelfVerifyupdate(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-28</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCSelfVerifyqueryAll">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-28</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCInteractVerify1delete(System.String@)">
+ <summary>
+ 刪除
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCInteractVerify1queryByPK(System.String@)">
+ <summary>
+ 序號查詢
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCInteractVerify1queryAllYNShow">
+ <summary>
+ 查詢全部(顯示是否)
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCInteractVerify1queryByPKYNShow(System.String@)">
+ <summary>
+ 序號查詢(顯示是否)
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCInteractVerify1insert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCInteractVerify1update(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCInteractVerify1queryAll">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCInteractVerify2delete(System.String@)">
+ <summary>
+ 刪除
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCInteractVerify2queryByPK(System.String@)">
+ <summary>
+ 序號查詢
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCInteractVerify2queryAllYNShow">
+ <summary>
+ 查詢全部(顯示是否)
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCInteractVerify2queryByPKYNShow(System.String@)">
+ <summary>
+ 序號查詢(顯示是否)
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCInteractVerify2insert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCInteractVerify2update(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCInteractVerify2queryAll">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCInteractVerify3delete(System.String@)">
+ <summary>
+ 刪除
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCInteractVerify3queryByPK(System.String@)">
+ <summary>
+ 序號查詢
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCInteractVerify3insert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCInteractVerify3update(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCInteractVerify3queryAll">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCInteractVerify4delete(System.String@)">
+ <summary>
+ 刪除
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCInteractVerify4queryByPK(System.String@)">
+ <summary>
+ 序號查詢
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCInteractVerify4queryAllYNShow">
+ <summary>
+ 查詢全部(顯示是否)
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCInteractVerify4queryByPKYNShow(System.String@)">
+ <summary>
+ 序號查詢(顯示是否)
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCInteractVerify4insert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCInteractVerify4update(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCInteractVerify4queryAll">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ICCUploadDataMaintainBSCancelData(System.Data.DataSet)">
+ <summary>
+ 作廢上傳資料
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Sean.Lin on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.GetIcdName(System.String,System.Boolean)">
+ <summary>
+ 取得診斷名稱
+ </summary>
+ <param name="IcdCode">診斷碼</param>
+ <param name="IsGetEngName">True:英文, False:中文</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.GetHospName(System.String)">
+ <summary>
+ 取得醫院名稱
+ </summary>
+ <param name="HospCode">醫療院所代碼</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.GetTreatmentName(System.String)">
+ <summary>
+ 取得治療項目名稱
+ </summary>
+ <param name="TreatmentCode">治療項代碼</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.ProcessPatientOrganDonate(System.String,System.String,System.String)">
+ <summary>
+ 作廢上傳資料
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Sean.Lin on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.QueryIccCloudDrugPatientByCond(System.String,System.String)">
+ <summary>
+ 依條件查詢雲端藥歷轉檔同意書名單
+ </summary>
+ <param name="strIdno">身份證</param>
+ <param name="dMedicalDate">就醫日</param>
+ <returns>ds</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.InsertIccCloudDrugPatient(System.Data.DataSet)">
+ <summary>
+ 新增雲端藥歷轉檔同意書名單
+ </summary>
+ <param name="dsSaveData">ds新增資料</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.DeleteIccCloudDrugPatientByPK(System.String,System.DateTime)">
+ <summary>
+ 依據PK刪除雲端藥歷轉檔同意書名單
+ </summary>
+ <param name="strIdno">身份證</param>
+ <param name="dMedicalDate">就醫日</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.UpdateIccCloudDrugPatient(System.Data.DataSet)">
+ <summary>
+ 更新雲端藥歷轉檔同意書名單
+ </summary>
+ <param name="dsSaveData">更新資料</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.QueryIccAlertRecByCond(System.String@,System.String,System.String,System.String)">
+ <summary>
+ 雲端藥歷重複用藥查詢
+ </summary>
+ <param name="Query_Type">查詢類別</param>
+ <param name="ST_Visit_Date">就醫日期(起)</param>
+ <param name="ED_Visit_Date">就醫日期(迄)</param>
+ <param name="Chart_No">病歷號</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IccServiceManager.QueryIccCloudPatientQryByCond(System.String,System.String,System.String,System.String)">
+ <summary>
+ 依條件查詢雲端藥歷同意書登錄
+ </summary>
+ <param name="dCreate_Time">The d create_ time.</param>
+ <param name="dModified_Time">The d modified_ time.</param>
+ <returns> ds </returns>
+</member>
+<member name="M:Syscom.Client.Servicefactory.NfcServiceManager.#ctor">
+ <summary>
+ 阻止外部直接進行新建立的宣告
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Client.Servicefactory.NfcServiceManager.getInstance">
+ <summary>
+ 屬性取得類別實體
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:Syscom.Client.Servicefactory.NfcServiceManager.Nested">
+ <summary>
+ 巢狀類別存放建立的類別實體
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.NfcServiceManager.queryGroupMember(System.String)">
+ <summary>
+ 查詢訊息群組成員
+ </summary>
+ <param name="GroupID"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.NfcServiceManager.readUIMessage24Hr(System.String)">
+ <summary>
+ 讀取24小時前的個人訊息，不需傳 depNo，由程式去撈資料
+ </summary>
+ <param name="empNO">員工號</param>    
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.NfcServiceManager.readUIMessage24Hr(System.String,System.String)">
+ <summary>
+ 讀取24小時前的個人訊息，需傳 depNo
+ </summary>
+</member>
+<member name="M:Syscom.Client.Servicefactory.NfcServiceManager.readUIMessage(System.String)">
+ <summary>
+ 讀取個人訊息，不需傳 depNo，由程式去撈資料
+ </summary>
+ <param name="empNO">員工號</param>    
+</member>
+<member name="M:Syscom.Client.Servicefactory.NfcServiceManager.readUIMessage(System.String,System.String)">
+ <summary>
+ 讀取個人訊息，需傳 depNo 
+ </summary>
+</member>
+<member name="M:Syscom.Client.Servicefactory.NfcServiceManager.NotifyAllUI(System.String,System.String,System.DateTime,System.DateTime,System.String,System.String,System.String,System.String)">
+ <summary>
+ 通知到所有使用者 UI 畫面
+ </summary>    
+</member>
+<member name="M:Syscom.Client.Servicefactory.NfcServiceManager.NotifyAllUI(System.String,System.String,System.DateTime,System.DateTime,System.String,System.String,System.String,System.String,System.String)">
+ <summary>
+ 通知到所有使用者 UI 畫面
+ </summary>    
+</member>
+<member name="M:Syscom.Client.Servicefactory.NfcServiceManager.NotifyDepUI(System.String,System.String,System.String,System.DateTime,System.DateTime,System.String,System.String,System.String,System.String)">
+ <summary>
+ 通知到部門使用者 UI 畫面
+ </summary>
+</member>
+<member name="M:Syscom.Client.Servicefactory.NfcServiceManager.NotifyDepUI(System.String,System.String,System.String,System.DateTime,System.DateTime,System.String,System.String,System.String,System.String,System.String)">
+ <summary>
+ 通知到部門使用者 UI 畫面
+ </summary>
+</member>
+<member name="M:Syscom.Client.Servicefactory.NfcServiceManager.NotifyUI(System.String[],System.String,System.String,System.String,System.String,System.String,System.String)">
+ <summary>
+ 通知到使用者 UI 畫面
+ </summary>
+ <param name="drEmpNo">員工號</param>
+ <param name="msg">通知訊息</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.NfcServiceManager.NotifyUI(System.String[],System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+ <summary>
+ 通知到使用者 UI 畫面
+ </summary>
+ <param name="drEmpNo">員工號</param>
+ <param name="msg">通知訊息</param>
+ <param name="external">預留其他的功能所需的值</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.NfcServiceManager.NotifyUI(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+ <summary>
+ 通知到使用者 UI 畫面
+ </summary>
+ <param name="drEmpNo">員工號</param>
+ <param name="msg">通知訊息</param>    
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.NfcServiceManager.NotifyUI(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+ <summary>
+ 通知到使用者 UI 畫面
+ </summary>
+ <param name="drEmpNo">員工號</param>
+ <param name="msg">通知訊息</param>
+ <param name="external">預留其他的功能所需的值</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.NfcServiceManager.NotifyMail(System.String[],System.String,System.String,System.String,System.String,System.String,System.String)">
+ <summary>
+ 通知到多個使用者 Mail
+ </summary>
+ <param name="subject">主旨</param>
+ <param name="msg">內容</param>    
+ <remarks>Mail 格式可以兩種：1. john.smith@example.com 2. "John Smith"＜john.smith@example.com＞  ,第二種比較好</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.NfcServiceManager.NotifyMail(System.String[],System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+ <summary>
+ 通知到多個使用者 Mail
+ </summary>
+ <param name="subject">主旨</param>
+ <param name="msg">內容</param>
+ <param name="replymsg">需要回覆或連絡時的內容 ex: 請回 call 2065  陳先生 </param>
+ <remarks>Mail 格式可以兩種：1. john.smith@example.com 2. "John Smith"＜john.smith@example.com＞  ,第二種比較好</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.NfcServiceManager.NotifyMail(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+ <summary>
+ 通知到使用者 Mail
+ </summary>
+ <param name="subject">主旨</param>
+ <param name="msg">內容</param>    
+ <remarks>Mail 格式可以兩種：1. john.smith@example.com 2. "John Smith"＜john.smith@example.com＞  ,第二種比較好</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.NfcServiceManager.NotifyMail(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+ <summary>
+ 通知到使用者 Mail
+ </summary>
+ <param name="subject">主旨</param>
+ <param name="msg">內容</param>
+ <param name="replymsg">需要回覆或連絡時的內容 ex: 請回 call 2065  陳先生 </param>
+ <remarks>Mail 格式可以兩種：1. john.smith@example.com 2. "John Smith"＜john.smith@example.com＞  ,第二種比較好</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.NfcServiceManager.NotifySMS(System.String[],System.String,System.String,System.String,System.String,System.String)">
+ <summary>
+ 通知到使用者 B.B.Call 
+ </summary>
+ <param name="drEmpNo">多個員工號</param>
+ <param name="msg">通知訊息</param>    
+ <remarks>通知訊息最多 160 個字</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.NfcServiceManager.NotifySMS(System.String,System.String,System.String,System.String,System.String,System.String)">
+ <summary>
+ 通知到使用者 B.B.Call 
+ </summary>
+ <param name="drEmpNo">員工號</param>
+ <param name="msg">通知訊息</param>    
+ <remarks>通知訊息最多 160 個字</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.NfcServiceManager.queryNFCNotifierByFunc(System.String[],System.Object[])">
+ <summary>
+ 通知對象維護-查詢
+ </summary>
+ <param name="columnName">欄位名稱</param>
+ <param name="columnValue">欄位值</param>    
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.NfcServiceManager.saveNFCNotifierByFunc(System.Data.DataSet)">
+ <summary>
+ 通知對象維護-存檔
+ </summary>
+ <param name="inSaveData">存檔資料</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.NfcServiceManager.deleteNFCNotifierByFunc(System.Data.DataSet)">
+ <summary>
+ 通知對象維護-刪除
+ </summary>
+ <param name="inDeleteData">刪除資料</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.NfcServiceManager.getNotifyMessageByDeploy(System.String[]@,System.Object[]@)">
+ <summary>
+  取得發版通知-查詢
+ </summary>
+ <param name="columnName">欄位名稱</param>
+ <param name="columnValue">欄位值</param>    
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.NfcServiceManager.QueryDeployByToDay(System.String,System.String)">
+ <summary>
+  取得發版通知-查詢-By Extunction
+ </summary>
+ <param name="_type">_Type</param>
+ <param name="user">user</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.NfcServiceManager.NotifyUIRigthNow(System.String[],System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+ <summary>
+ 通知到使用者 UI 畫面
+ </summary>
+ <param name="drEmpNo">員工號</param>
+ <param name="msg">通知訊息</param>
+ <param name="external">預留其他的功能所需的值</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.NfcServiceManager.NotifySMSMultiWithSubject(System.String[],System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+ <summary>
+ 通知到使用者 B.B.Call 
+ </summary>
+ <param name="drEmpNo">多個員工號</param>
+ <param name="subject">主旨</param>
+ <param name="msg">通知訊息</param>
+ <remarks>
+ Created in  2014/11/6, 下午 05:12 by Chris
+ </remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.NfcServiceManager.NotifyMailWithEsrFormat(System.String[],System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+ <summary>
+ 異常通報系統回饋到使用者 Mail
+ </summary>
+ <param name="EmpMail">多個員工 Mail</param>
+ <param name="subject">主旨</param>
+ <param name="msg">內容</param>
+ <param name="replymsg"></param>
+ <remarks>
+ Mail 格式可以兩種：1. john.smith@example.com 2. "John Smith"＜john.smith@example.com＞  ,第二種比較好
+ Created in  2014/11/6, 下午 05:32 by Chris
+ </remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.NfcServiceManager.NotifyUIWithStartAndEndTime(System.String[],System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+ <summary>
+ 通知到多個使用者 UI 畫面
+ </summary>
+ <param name="drEmpNo"> 原工編號 </param>
+ <param name="subject"> 主旨 </param>
+ <param name="msg"> 訊息 </param>
+ <param name="Start_Time"> 開始時間 </param>
+ <param name="End_Time"> 結束時間 </param>
+ <remarks>
+ Created in  2014/11/6, 下午 05:58 by Chris
+ </remarks>
+ <exception cref="T:Syscom.Comm.EXP.CommonException"> CMMCMMD001 </exception>
+</member>
+<member name="M:Syscom.Client.Servicefactory.NfcServiceManager.updateNfcNotifyMsgEndTime(System.Data.DataSet)">
+ <summary>
+ 更新訊息結束時間
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Jun on 2017-03-10</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.NfcServiceManager.queryNfcNotifyMsgBySubject(System.String)">
+ <summary>
+ 以主旨取得通知訊息
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Jun on 2017-03-10</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.#ctor">
+ <summary>
+ 阻止外部直接進行新建立的宣告
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Client.Servicefactory.PubServiceManager.getInstance">
+ <summary>
+ 屬性取得類別實體
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:Syscom.Client.Servicefactory.PubServiceManager.Nested">
+ <summary>
+ 巢狀類別存放建立的類別實體
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBDeptSectqueryCboData(System.Int32)">
+ <summary>
+ 科診屬性代碼查詢
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-11-11</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBPatientSevereDiseasequeryByPKYNShow(System.String@,System.String@,System.DateTime@)">
+ <summary>
+ 病歷號查詢(顯示是否)
+ </summary>
+ <returns>String) as DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-11-03</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.queryPUBContractSetByCond(System.DateTime,System.String,System.String,System.String,System.String,System.String,System.Boolean)">
+ <summary>
+ 根據生效日 合約機關代碼 醫令類型 院內費用項目 醫令項目代碼取得所有資料
+ </summary>
+ <param name="dateEffectDate"></param>
+ <param name="strContractCode"></param>
+ <param name="strSubIdentityCode"></param>
+ <param name="strOrderTypeId"></param>
+ <param name="strAccountId"></param>
+ <param name="strOrderCode"></param>
+ <param name="isNullQuerySubIdentityCode">True:按空字串查詢  False：不作為必要查詢條件</param>
+ <returns></returns>
+ <remarks></remarks>
+ 
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.queryPUBDoctorByDeptCode(System.String)">
+ <summary>
+ 查詢所屬科室之醫師信息
+ </summary>
+ <param name="DeptCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.queryDefault_Body_Site_Code(System.String,System.String)">
+ <summary>
+ 醫令代碼讀取手術處置基本檔 (PubOrderOrTreatBO) 中預設部位
+ </summary>
+ <param name="strOrder_Code">令代碼</param>
+ <returns>手術處置基本檔 (PubOrderOrTreatBO) 中預設部位</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.queryPUBBodySiteUnDelete">
+ <summary>
+ 查找部位當中的所有沒有刪除的部位資料
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.QuerymessageDataSet_L(System.Data.DataSet,System.Data.DataSet,System.Int32@,System.Data.DataSet@)">
+ <summary>
+ 與RuleTransfer_N1關聯的切出部分
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by liuye on 2012-5-24</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.queryPUBConfigByPK_L(System.String)">
+ <summary>
+ 查詢 PUBConfigBO_E2
+ </summary>
+ <param name="pk_Config_Name"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.queryPUBPatientAndBasicData(System.String)">
+ <summary>
+  國際疫苗申請書輸入依條件查詢
+ </summary>
+ <param name="strChart_No"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.getExprre(System.String)">
+ <summary>
+ 改名稱
+ </summary>
+ <param name="ds"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.queryPUBSysCodeNot0(System.String[]@,System.Object[]@)">
+ <summary>
+ 獲取Department資料
+ </summary>
+ <returns>DataSet</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.queryPUBPatientAndArea(System.String)">
+ <summary>
+ 取得病患資料及戶籍地
+ </summary>
+ <returns></returns>
+ <remarks>by Runxia on 2012-3-26</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.queryPUBDepartmentCodeIsIpdDeptY_L">
+ <summary>
+ 科室/團隊查詢
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by liuye on 2012-4-2</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.updatePUBInsuCodeByPK_L(System.Data.DataSet)">
+ <summary>
+ 醫令項目代碼對應健保碼修改
+ </summary>
+ <param name="ds"></param>
+ <returns>Integer</returns>
+ <remarks>by Chen Yang on 2012-5-14</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBPreventiveCareInsert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Remote_Liu on 2016-05-17</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBPreventiveCareUpdate(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Remote_Liu on 2016-05-17</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PubPreventiveCareDeleteByPK(System.String@,System.String@,System.String@)">
+ <summary>
+ 刪除資料
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Remote_Liu on 2016-05-17</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBPreventiveCareQueryByPK(System.String@,System.String@,System.String@)">
+ <summary>
+ 以PK查詢資料
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Remote_Liu on 2016-05-17</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBPreventiveCareQueryAll">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Remote_Liu on 2016-05-17</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBPreventiveCareQueryByLikePK(System.String@)">
+ <summary>
+ 查詢
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Remote_Liu on 2016-05-17</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.queryPUBCareItemAgeSex">
+ <summary>
+ 取得ComboBox資料
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Remote_Liu on 2016-05-17</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBInsuDeptdeleteChoose(System.Data.DataSet)">
+ <summary>
+ 
+ 刪除多筆資料
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Xiaozhi,Yu on 2016-05-12</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBInsuDeptQueryByPKROC(System.String@)">
+ <summary>
+ 以PK查詢資料(健保科別代碼)
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Xiaozhi,Yu on 2016-05-12</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.queryAllROC">
+ <summary>
+ 查詢全部(民國年)
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Xiaozhi,Yu on 2016-05-12</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBInsuDeptInsertByPK(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Xiaozhi,Yu on 2016-05-12</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBInsuDeptUpdateByPK(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Xiaozhi on 2016-05-06</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBAreaCodeNdeleteChoose(System.Data.DataSet)">
+ <summary>
+ 
+ 刪除多筆資料
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Xiaozhi,Yu on 2016-05-24</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBAreaCodeNQueryByPKROC(System.String@)">
+ <summary>
+ 以PK查詢資料(戶籍地代碼)
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Xiaozhi,Yu on 2016-05-24</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.queryAreaCodeAll">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Xiaozhi,Yu on 2016-05-24</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBAreaCodeNInsertByPK(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Xiaozhi,Yu on 2016-05-24</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBAreaCodeNUpdateByPK(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Xiaozhi on 2016-05-24</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBAreaCodeGovdeleteChoose(System.Data.DataSet)">
+ <summary>
+ 
+ 刪除多筆資料
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Xiaozhi,Yu on 2016-05-25</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBAreaCodeGovQueryByPKROC(System.String@)">
+ <summary>
+ 以PK查詢資料(縣市代碼)
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Xiaozhi,Yu on 2016-05-25</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.queryAreaCodeGovAll">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Xiaozhi,Yu on 2016-05-25</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBAreaCodeGovInsertByPK(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Xiaozhi,Yu on 2016-05-25</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBAreaCodeGovUpdateByPK(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Xiaozhi on 2016-05-25</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBPostalAreadeleteChoose(System.Data.DataSet)">
+ <summary>
+ 
+ 刪除多筆資料
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Xiaozhi,Yu on 2016-05-26</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBPostalAreaQueryByPK(System.String@)">
+ <summary>
+ 以PK查詢資料(縣市代碼)
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Xiaozhi,Yu on 2016-05-26</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBPostalAreaQueryByPKAll(System.String@,System.String@)">
+ <summary>
+ 以PK查詢資料(縣市代碼)
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Xiaozhi,Yu on 2016-05-26</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.queryPostalAreaAll">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Xiaozhi,Yu on 2016-05-26</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBPostalAreaInsertByPK(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Xiaozhi,Yu on 2016-05-26</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBPostalAreaUpdateByPK(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Xiaozhi on 2016-05-26</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBPostalGovAreadeleteChoose(System.Data.DataSet)">
+ <summary>
+ 
+ 刪除多筆資料
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Xiaozhi,Yu on 2016-05-26</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBPostalGovAreaQueryByPK(System.String@)">
+ <summary>
+ 以PK查詢資料(縣市代碼)
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Xiaozhi,Yu on 2016-05-26</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.queryPostalGovAreaAll">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Xiaozhi,Yu on 2016-05-26</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBPostalGovAreaInsertByPK(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Xiaozhi,Yu on 2016-05-26</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBPostalGovAreaUpdateByPK(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Xiaozhi on 2016-05-26</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.queryMedicalSn(System.String[])">
+ <summary>
+ 取得就醫序號
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Remote_Liu on 2016-06-20</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.queryMotherName(System.String[])">
+ <summary>
+ 取得媽媽姓名
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Remote_Liu on 2016-06-20</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBDiseaseICD10MappinginsertData(System.Data.DataSet)">
+ <summary>
+ 新增 Method
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Li,Han on 2016-06-28</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBDiseaseICD10MappingupdateData(System.Data.DataSet)">
+ <summary>
+ 修改 Method
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Li,Han on 2016-06-28</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBDiseaseICD10MappingdeleteData(System.String@,System.String@,System.String@)">
+ <summary>
+ 刪除 Method
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Li,Han on 2016-06-28</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBDiseaseICD10MappingqueryGridData(System.String@,System.String@,System.String@)">
+ <summary>
+ 取得Gird資料
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Li,Han on 2016-06-28</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBDiseaseICD10MappingqueryGridDataByPk(System.String@,System.String@,System.String@)">
+ <summary>
+ 取得Gird資料ByPk
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Li,Han on 2016-06-29</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBDiseaseICD10MappingquertCmbData">
+ <summary>
+ 取得Combox資料
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Li,Han on 2016-06-28</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBDiseaseICD10MappingfCheckIcdCode(System.String,System.String)">
+ <summary>
+ 檢查該診斷是否存在
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Li,Han on 2016-06-28</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBICD10DeptinsertData(System.Data.DataSet)">
+ <summary>
+ 新增 Method
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Li,Han on 2016-06-29</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBICD10DeptdeleteData(System.String@,System.String@,System.String@,System.String@,System.String@)">
+ <summary>
+ 刪除 Method
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Li,Han on 2016-06-29</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBICD10DeptqueryGridData(System.String@,System.String@,System.String@,System.String@,System.String@)">
+ <summary>
+ 取得Gird資料
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Li,Han on 2016-06-29</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBICD10DeptqueryGridDataByPk(System.String@,System.String@,System.String@,System.String@,System.String@)">
+ <summary>
+ 取得Gird資料ByPK
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Li,Han on 2016-06-29</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBICD10DeptqueryCmbData(System.String@,System.String@)">
+ <summary>
+ 取得Combox資料
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Li,Han on 2016-06-29</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBICD10DeptfCheckIcdCode(System.String,System.String)">
+ <summary>
+ 檢查該診斷是否存在
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Li,Han on 2016-06-29</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBOrderOrderName(System.String[])">
+ <summary>
+ 取得手術法
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Remote_Liu on 2016-06-28</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBOrderPrice(System.String[])">
+ <summary>
+ 取得費用
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Remote_Liu on 2016-06-28</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBSyscodeWoundType">
+ <summary>
+ 傷口分類
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Remote_Liu on 2016-06-28</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBBodySiteBodyparts">
+ <summary>
+ 部位
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Remote_Liu on 2016-06-28</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBSyscodeBodySide">
+ <summary>
+ 側位
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Remote_Liu on 2016-06-28</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBSyscodeUrgentClass">
+ <summary>
+ 急作手術分級
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Remote_Liu on 2016-07-04</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.queryPUBSheetCode">
+ <summary>
+ 檢驗單
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Remote_Liu on 2016-08-13</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.queryICD10PCS_Code(System.String)">
+ <summary>
+ 
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBOrderAlternativeInsertByPK(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Xiaozhi,Yu on 2016-05-12</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBOrderAlternativeUpdateByPK(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Xiaozhi on 2016-05-06</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBOrderAlternativedeleteChoose(System.Data.DataSet)">
+ <summary>
+ 
+ 刪除多筆資料
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Xiaozhi,Yu on 2016-05-12</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBOrderAlternativequeryByPKOrderCode(System.String@)">
+ <summary>
+ 以PK查詢資料(醫令碼)
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Xiaozhi,Yu on 2016-05-12</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PubExportQueryData(System.String,System.String)">
+ <summary>
+ 程式說明：報表資料查詢
+ 開發人員：Will,Lin
+ 開發日期：2015/08/12
+ </summary> 
+ <returns>資料新增</returns>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PubExportListDataQuery(System.String)">
+ <summary>
+ 程式說明：初始化欄位查詢資訊
+ 開發人員：Will,Lin
+ 開發日期：2015/08/13
+ </summary> 
+ <returns>資料新增</returns>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBExportInsertData(System.Data.DataSet)">
+ <summary>
+ 程式說明：資料新增
+ 開發人員：Will,Lin
+ 開發日期：2015/08/10
+ </summary> 
+ <returns>資料新增</returns>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBExportUpdateData(System.String,System.Data.DataSet)">
+ <summary>
+ 程式說明：資料修改
+ 開發人員：Will,Lin
+ 開發日期：2015/08/10
+ </summary> 
+ <returns>資料修改</returns>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBExportDeleteData(System.String)">
+ <summary>
+ 程式說明：資料刪除
+ 開發人員：Will,Lin
+ 開發日期：2015/08/10
+ </summary> 
+ <returns>資料刪除</returns>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBExportMasterDataQuery(System.String)">
+ <summary>
+ 程式說明：資料查詢
+ 開發人員：Will,Lin
+ 開發日期：2015/08/10
+ </summary> 
+ <returns>資料查詢-主表單</returns>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBExportDetailDataQuery(System.String)">
+ <summary>
+ 程式說明：資料查詢
+ 開發人員：Will,Lin
+ 開發日期：2015/08/10
+ </summary> 
+ <returns>資料查詢-表身</returns>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBExportQueryForInsert(System.String)">
+ <summary>
+ 程式說明：資料查詢
+ 開發人員：Will,Lin
+ 開發日期：2015/08/10
+ </summary> 
+ <returns>資料查詢-新增後查詢</returns>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.queryPUBOrderByCond(System.String,System.String,System.String,System.String,System.String)">
+ <summary>
+ 程式說明：一般醫令查詢
+ 開發人員：Alan
+ 開發日期：2009.09.18
+ </summary> 
+ <returns>一般醫令查詢結果</returns>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.queryPubPatientByPK(System.String@)">
+ <summary>
+ 以ＰＫ查詢資料
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by ChenYu.Guo on 2015-09-09</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBDOCTORBOE1queryForCbo(System.String)">
+ <summary>
+ 查詢醫師檔作為CBO 資料
+ </summary>
+ <returns>DataSet</returns>    ''' <remarks>by Sean.Lin on 2013-09-25</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.queryDoctorFromEmployee(System.String,System.String)">
+ <summary>
+ 進行醫師驗證
+ </summary>
+ <returns>Dataset</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBEmployeequeryEmployeeByEmpCode(System.String)">
+ <summary>
+ 根據員工編號取得員工資料
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Sean.Lin on 2014-09-01</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBEmployeequeryEmployeeByEmpCodeAndDate(System.String,System.DateTime)">
+ <summary>
+ 根據員工編號和日期取得有效期限的員工資料
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Sean.Lin on 2014-09-01</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PubConfigQueryByConfigName(System.String)">
+ <summary>
+ 查詢By參數設定名稱
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Sean.Lin on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PubConfigqueryByPK(System.String@)">
+ <summary>
+ 以ＰＫ查詢資料
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Sean.Lin on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PubConfigdelete(System.String@)">
+ <summary>
+ 以ＰＫ刪除資料
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Sean.Lin on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PubConfiginsert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Sean.Lin on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PubConfigupdate(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Sean.Lin on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PubConfigqueryAll">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Sean.Lin on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PubConfigdynamicQueryWithColumnValue(System.String[]@,System.Object[]@)">
+ <summary>
+ 動態查詢
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Sean.Lin on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.queryPUBConfigLikePKey(System.String)">
+ <summary>
+ 根據系統參數名稱查詢
+ </summary>
+ <returns>DataSet</returns>    
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.qureyPUBConfigAll">
+ <summary>
+ 查詢全部資料
+ </summary>
+ <returns>DataSet</returns>    
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.savePUBConfig(System.Data.DataSet)">
+ <summary>
+ 存檔
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.deletePUBConfig(System.Data.DataSet)">
+ <summary>
+ 將傳入資料進行刪除
+ </summary>
+ <returns>DataSet</returns>    
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.queryPUBSyscodeTypeLikePKey(System.String)">
+ <summary>
+ 根據類別代碼查詢
+ </summary>
+ <returns>DataSet</returns>    
+ <remarks>by Alan.Tsai on 2014-11-08</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.qureyPUBSyscodeTypeAll">
+ <summary>
+ 查詢全部資料
+ </summary>
+ <returns>DataSet</returns>    
+ <remarks>by Alan.Tsai on 2014-11-08</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.savePUBSyscodeType(System.Data.DataSet)">
+ <summary>
+ 存檔
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Alan.Tsai on 2014-11-08</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.deletePUBSyscodeType(System.Data.DataSet)">
+ <summary>
+ 將傳入資料進行刪除
+ </summary>
+ <returns>DataSet</returns>    
+ <remarks>by Alan.Tsai on 2014-11-08</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.queryPUBSyscodeLikePKey(System.String,System.String)">
+ <summary>
+ 根據類別代碼、公用代碼查詢
+ </summary>
+ <returns>DataSet</returns>    
+ <remarks>by Alan.Tsai on 2014-11-09</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.qureyPUBSyscodeAll">
+ <summary>
+ 查詢全部資料
+ </summary>
+ <returns>DataSet</returns>    
+ <remarks>by Alan.Tsai on 2014-11-09</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.savePUBSyscode(System.Data.DataSet)">
+ <summary>
+ 存檔
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Alan.Tsai on 2014-11-09</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.deletePUBSyscode(System.Data.DataSet)">
+ <summary>
+ 將傳入資料進行刪除
+ </summary>
+ <returns>DataSet</returns>    
+ <remarks>by Alan.Tsai on 2014-11-09</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.queryPUBHospitalLikePKey(System.String,System.String,System.String)">
+ <summary>
+ 根據類別、生效日期與醫院代碼查詢
+ </summary>
+ <returns>DataSet</returns>    
+ <remarks>by Alan.Tsai on 2014-11-09</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.qureyPUBHospitalAll">
+ <summary>
+ 查詢全部資料
+ </summary>
+ <returns>DataSet</returns>    
+ <remarks>by Alan.Tsai on 2014-11-09</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.initPubHospital">
+ <summary>
+ 畫面初始化資料查詢
+ </summary>
+ <returns>DataSet</returns>    
+ <remarks>by Alan.Tsai on 2014-11-10</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.savePUBHospital(System.Data.DataSet)">
+ <summary>
+ 存檔
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Alan.Tsai on 2014-11-09</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.deletePUBHospital(System.Data.DataSet)">
+ <summary>
+ 將傳入資料進行刪除
+ </summary>
+ <returns>DataSet</returns>    
+ <remarks>by Alan.Tsai on 2014-11-09</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.queryEmployeeALL(System.Data.IDbConnection@)">
+ <summary>
+ 取得員工全部資料 By Dept
+ </summary>
+ <returns>DataSet</returns>    
+ <remarks>by Lits on 2014-11-09</remarks>
+ 
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.queryEmployeeByDept(System.String)">
+ <summary>
+ 取得員工全部資料 By Dept
+ </summary>
+ <returns>DataSet</returns>    
+ <remarks>by Lits on 2014-11-09</remarks>
+ 
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.queryPUBDepartmentBySmallDept">
+ <summary>
+ 取得小分科資料 (k)
+ </summary>
+ <returns>科室資料</returns>
+ <author>Ken</author>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.queryPUBDepartmentAll_D2(System.String)">
+ <summary>
+ 程式說明：依據來源別O、E、I，取得對應的門診、急診、住院 科別
+ 開發人員：Charles
+ 調整日期：2015/12/16
+ </summary>
+ <param name="SourceType">O：門診、E：急診、I：住院</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.getMedicalPartAmt(System.DateTime,System.Decimal)">
+ <summary>
+ 藥品加收部負
+ </summary>
+ <param name="OpdChargeDate">門診批價日</param>
+ <param name="MedicalAmt">藥品金額</param>
+ <returns></returns>
+ <remarks>For OPCAPI用</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.getEndDateForReceiptUI(System.String,System.String)">
+ <summary>
+ 程式說明：取得殘障記錄的迄日
+ 開發人員：谷官
+ 開發日期：2009.08.04
+ </summary>
+ <param name="ChartNo">病歷號</param>
+ <param name="OpdVisitDate">看診日期</param>
+ <returns>殘障記錄的迄日</returns>
+ <remarks>For OPC收退費用</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.getPatientDisabilityRecordForReceiptUI(System.String)">
+ <summary>
+ 程式說明：取得是否有有效的殘障紀錄 by Chart_No
+ 開發人員：Will
+ 開發日期：20151014
+ </summary>
+ <param name="ChartNo">病歷號</param>
+ <returns>回傳0，則無相關紀錄，回傳1則有</returns>
+ <remarks>For OPC收退費用</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.insertPatientDisabilityRecordForReceiptUI(System.Data.DataSet)">
+ <summary>
+ 程式說明：新增有效的殘障紀錄 by Chart_No
+ 開發人員：Will
+ 開發日期：20151014
+ </summary>
+ <param name="ds"></param>
+ <returns></returns>
+ <remarks>For OPC收退費用</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.updatePatientDisabilityRecordForReceiptUI(System.Data.DataSet)">
+ <summary>
+ 程式說明：修改有效的殘障紀錄 by Chart_No
+ 開發人員：Will
+ 開發日期：20151014
+ </summary>
+ <param name="ds"></param>
+ <returns></returns>
+ <remarks>For OPC收退費用</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.getMaxPatientDisabilityNoForReceiptUI(System.String)">
+ <summary>
+ 程式說明：取得殘障序號的最大值 by Chart_No
+ 開發人員：谷官
+ 開發日期：2009.08.06
+ </summary>
+ <param name="ChartNo">病歷號</param>
+ <returns>殘障記錄的迄日</returns>
+ <remarks>For OPC收退費用</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.getIcdCodeForReceiptUI(System.String,System.String,System.Data.DataTable)">
+ <summary>
+ 程式說明：取得重大傷病的Icd_Code、證明文號、起迄日
+ 開發人員：谷官
+ 開發日期：2009.08.04
+ </summary>
+ <param name="ChartNo">病歷號</param>
+ <param name="OpdVisitDate">看診日期</param>
+ <param name="IcdCodeDT">診斷檔的前3個診斷的Icd_Code、證明文號、起迄日</param>
+ <returns>Icd_Code</returns>
+ <remarks>For OPC收退費用</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.queryPUBSheetSheetSheetCodeByDeptCode(System.String)">
+ <summary>
+ 依科室代碼查詢表單代碼 (已trim掉空白)
+ </summary>
+ <param name="DeptCode">科室代碼</param>
+ <returns>查詢結果</returns>
+ <remarks>
+ Sheet_Type_Id = '2'
+ </remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.RuleDynamicQueryNotPub(System.String@)">
+ <summary>
+ 非PUB動態SQL
+ </summary>
+ <param name="sqlString"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBRuleEngineAPI_H50_ChkInteraction_qryOMOTypeE(System.String,System.String)">
+ <summary>
+ 撈出病人之前看診的紀錄並找出有開立藥品且藥品尚未過期的藥
+ </summary>
+ <param name="Chart_No"></param>
+ <param name="Outpatient_Sn"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.QuerySameKineMedicine(System.String)">
+ <summary>
+ 同類藥檢核查詢
+ </summary>
+ <param name="Phamarcy12code">成大十二碼</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.EMRMedicineRecordRuleQuery(System.String,System.String,System.String)">
+ <summary>
+ 程式功能：化療藥品與相關檢核
+ 開發人員：markwu
+ 開發時間：2009/11
+ </summary>
+ <param name="Chart_no">病歷號</param>
+ <param name="orderCode">成大碼</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.EMRMedicineRecordRuleQuery2(System.String,System.String,System.String,System.String)">
+ <summary>
+ 程式功能：化療藥品與相關檢核
+ 開發人員：markwu
+ 開發時間：2009/11
+ </summary>
+ <param name="Chart_no">病歷號</param>
+ <param name="orderCode">成大碼</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.GetCurrentOrderset(System.String,System.String,System.String)">
+ <summary>
+ 搜尋歷史醫令
+ </summary>
+ <param name="Medical_Sn">就醫序號</param>
+ <param name="SystemType">系統歸屬 {O}門診 or {E}急診 or {I}住院</param>
+ <param name="Location">C,P,S</param>
+ <returns>所有歷史醫令的資料集</returns>
+ <remarks>by Rich on 2012-05-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.queryInsuCodeByOrderCode(System.Data.DataSet,System.String)">
+ <summary>
+ 成大碼轉健保碼
+ </summary>
+ <param name="OrderCodeDS"></param>
+ <param name="BasicDate"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PubReportDescdelete(System.String@)">
+ <summary>
+ 刪除
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by ChenYu.Guo on 2015-06-01</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PubReportDescQueryByLikeColumn(System.String@,System.String@,System.String@)">
+ <summary>
+ 查詢
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by ChenYu.Guo on 2015-06-01</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PubReportDescQueryByPK(System.String@)">
+ <summary>
+ QueryByPK
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by ChenYu.Guo on 2015-06-01</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PubReportDescinsert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by ChenYu.Guo on 2015-06-01</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PubReportDescupdate(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by ChenYu.Guo on 2015-06-01</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PubPrintRecordQueryPrintRecord(System.String@,System.String@,System.String@,System.String@,System.String@,System.String@)">
+ <summary>
+ 查詢
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by ChenYu.Guo on 2015-06-01</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.insertRPTPrintClient(System.Data.DataSet)">
+ <summary>
+ 將列印報表、預覽報表的資料 新增至 PUB_Print_Record
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Hsiao.Kaiwen on 2015-08-07</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.queryReportConfigByReportId(System.String)">
+ <summary>
+ 依Report_ID取得報表設定資料
+ </summary>
+ <param name="inReportId"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.queryReportMode(System.String)">
+ <summary>
+ 依Report_ID取得報表列印模式
+ </summary>
+ <param name="inReportId"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.getReportInfo(System.String,System.String,System.String)">
+ <summary>
+ 取得報表列印資訊
+ </summary>
+ <param name="repprtID"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.queryReportAllConfig(System.String,System.String,System.String)">
+ <summary>
+ 依Report_ID取得報表設定資料
+ </summary>
+ <param name="inReportId"></param>
+ <param name="inStationNo"></param>
+ <param name="inTermCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBPrintConfiginsert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Kaiwen,Hsiao on 2015-07-10</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBPrintConfigupdate(System.Data.DataSet,System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Kaiwen,Hsiao on 2015-07-10</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBPrintConfigqueryAll">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Kaiwen,Hsiao on 2015-07-10</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBPrintConfigdynamicQueryWithColumnValue(System.String[]@,System.Object[]@)">
+ <summary>
+ 動態查詢
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Kaiwen,Hsiao on 2015-07-10</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBPrintConfigQueryByLikeColumn(System.String,System.String,System.String,System.String,System.String)">
+ <summary>
+ 報表列印記錄檔查詢
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Kaiwen,Hsiao on 2015-07-10</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBPrintConfigBSInsert(System.Data.DataSet,System.Data.DataSet)">
+ <summary>
+ 新增 PUB_Print_Config、PUB_Report_Desc 資料
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Kaiwen,Hsiao on 2015-07-10</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.queryPUBDepartmentCount">
+ <summary>
+ 大分科所屬細分科統計
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by ChenYu.Guo on 2015-07-15</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PubPatientBodyRecorddelete(System.String@,System.DateTime@)">
+ <summary>
+ 刪除
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Sharon.Du on 2015-07-14</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PubPatientBodyRecordqueryByPK(System.String@,System.DateTime@)">
+ <summary>
+ 以PK查詢
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Sharon.Du on 2015-07-14</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PubPatientBodyRecordqueryPubPatientBodyrecordByCond(System.String,System.String,System.String)">
+ <summary>
+ 以病歷號、來源別、登錄單位查詢
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Sharon.Du on 2015-07-14</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PubPatientBodyRecordinsert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Sharon.Du on 2015-07-14</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PubPatientBodyRecordupdate(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Sharon.Du on 2015-07-14</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PubOrderqueryByOrderCode(System.String,System.String,System.String)">
+ <summary>
+ 查詢醫令項目基本檔   
+ </summary>
+ <param name="strOrderCode">醫令項目碼</param>
+ <param name="dc">Y、N，空字串表示不判斷</param>
+ <param name="judgeDate" >yyyy/MM/dd，空字串表示不判斷，判斷日當天仍有效的Order</param>
+ <remarks>by Sean.Lin on 2015-07-27</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBReportAlarminsert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Hsiao.Kaiwen on 2015-08-07</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBReportAlarmupdate(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Hsiao.Kaiwen on 2015-08-07</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBReportAlarmQueryByLikeColumn(System.String,System.String,System.String,System.String)">
+ <summary>
+ 查詢
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Kaiwen,Hsiao on 2015-07-10</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBReportAlarmQueryByPK(System.String)">
+ <summary>
+ 查詢PK資料
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Kaiwen,Hsiao on 2015-07-10</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBReportAlarmQueryReportId">
+ <summary>
+ 查詢報表ID-初始化Combobox
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Kaiwen,Hsiao on 2015-07-10</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBReportAlarmCountQuery(System.String)">
+ <summary>
+ 查詢 Alarm Count
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Kaiwen,Hsiao on 2015-07-10</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.QueryInOneYearAdmonishRecord(System.String@)">
+ <summary>
+ 查詢該病患最近一年內的勸戒之記錄
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by ChenYu.Guo on 2015-08-12</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBPatientPersonalHabitsinsert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by ChenYu.Guo on 2015-10-11</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBPatientPersonalHabitsupdate(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by ChenYu.Guo on 2015-10-11</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBPatientPersonalHabitsqueryByPK(System.String@)">
+ <summary>
+ 查詢
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by ChenYu.Guo on 2015-10-11</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBPatientTOCCQueryTodayPatientTOCCRecord(System.String@)">
+ <summary>
+ 查詢是否存在該患當日之記錄
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by ChenYu.Guo on 2015-08-12</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBPatientTOCCinsert(System.Data.DataSet)">
+ <summary>
+ 新增TOCC問卷結果
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Chen.Yu on 2015-08-14</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBPatientTOCCupdate(System.Data.DataSet)">
+ <summary>
+ 修改TOCC問卷結果
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by ChenYu.Guo on 2015-10-05</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.queryPUBZoneRoomForMissMeal(System.String)">
+ <summary>
+ queryPUBZoneRoomForMissMeal
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by ChenYu.Guo on 2015-08-21</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBConfigQueryExpandWeek">
+ <summary>
+ 查診展班週數
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by ChenYu.Guo on 2015-09-10</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.getPUBMedicalTypeId">
+ <summary>
+ 查詢看診目的
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Will,Lin on 2015-09-28</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.Get_PharmacyBase(System.String@)">
+ <summary>
+ 取得藥品名稱自動搜尋視窗的藥品資料
+ </summary>
+ <returns>DataTable</returns>
+ <remarks>by ChenYu.Guo on 2015-09-29</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.Get_PharmacyClassAndCompositionAndATC(System.String,System.String)">
+ <summary>
+ 取得藥品分類、藥品成份、ATC碼自動搜尋視窗的藥品資料(原Get_PharmacyClass)
+ </summary>
+ <returns>DataTable</returns>
+ <remarks>by ChenYu.Guo on 2015-09-29</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBConfigQueryTOCCCloseWindows">
+ <summary>
+ 查詢TOCC關閉視窗之控制
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by ChenYu.Guo on 2015-09-10</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.queryPUBPatientAllergyByCond(System.String@)">
+ <summary>
+ 過敏藥品查詢
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBMedicalTypequery(System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32@,System.Int32,System.Int32,System.Int32)">
+ <summary>
+ 一般查詢
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-11-11</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBMedicalTypedelete(System.String@)">
+ <summary>
+ 刪除
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-11-11</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBMedicalTypeinsert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-11-11</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBMedicalTypeupdate(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-11-11</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBMedicalTypequeryAll">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-11-11</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBMedicalTypequeryCboData">
+ <summary>
+ 取得Cbo資料
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-11-11</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.querySyscodeByTypeIds(System.Int32[])">
+ <summary>
+ 找多個TypeId的syscode
+ </summary>
+ <param name="TypeIds"></param>
+ <returns></returns>
+ <remarks>Add by Jen</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.deletePUBOrderLog(System.String,System.String,System.String,System.String,System.String)">
+ <summary>
+ 依醫令刪除所有相關表格資料 Log
+ </summary>
+ <param name="inOrderCode"></param>
+ <param name="inOrderName"></param>
+ <param name="inOrderTypeId"></param>
+ <param name="inOrderMode"></param>
+ <param name="inExecutionUser"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.UpdateAddOrder(System.Data.DataSet)">
+ <summary>
+ InsertTo AddOrderDT/AddOrderDetailDT 
+ </summary>
+ <param name="ds"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.deleteAddOrder(System.String)">
+ <summary>
+ delete AddOrderDT/AddOrderDetailDT 
+ </summary>
+ <param name="addOrderCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.queryPUBDepartmentBySourceType(System.String)">
+ <summary>
+ 依來源別(O,E,I)取得小分科
+ </summary>
+ <param name="inSourceType"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBExaminationSheetDetailMaintainWriteBackEditedInfo(System.Data.DataSet,System.String)">
+ <summary>
+ 將修改過的資訊寫回資料庫
+ </summary>
+ <param name="InputData">欲寫入之資料庫</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBExaminationSheetDetailMaintainQuerySheetDetail(System.String,System.String)">
+ <summary>
+ 查詢Pub_Sheet_Detail中符合輸入條件之資料
+ </summary>
+ <param name="SheetCode">表單代碼</param>
+ <param name="OrderCode">醫令代碼</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBExaminationSheetDetailMaintainInsertIntoPubSheetDetail(System.Data.DataSet)">
+ <summary>
+ 新增一筆Order至Pub_Sheet_Detail
+ </summary>
+ <param name="InputData">欲新增之資料</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.InsertIntoPubSheetDetailAndPubOrderExamination(System.Data.DataSet,System.String)">
+ <summary>
+ 新增一筆資料至Pub_Sheet_Detail與Pub_Order_Examination
+ </summary>
+ <param name="InputData">欲新增之資料</param>
+ <param name="User">操作者</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.DeleteFromPubSheetDetailAndPubOrderExamination(System.Data.DataSet,System.String)">
+ <summary>
+ 自Pub_Sheet_Detail與Pub_Order_Examination刪除一筆資料
+ </summary>
+ <param name="InputData">欲刪除之資料</param>
+ <param name="User">操作者</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.QueryPubSheetDisplayByCond(System.String,System.String,System.String)">
+ <summary>
+ 表單開單顯示維護查詢
+ </summary>
+ <param name="Sheet_Type_Id">表單類別</param>
+ <param name="Sheet_Main_Display">表單顯示主分類</param>
+ <param name="Sheet_Sub_Display">表單顯示次分類</param>
+ <returns>DataSet</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBSheetDisplayInsert(System.Data.DataSet)">
+ <summary>
+ 表單開單顯示維護Insert
+ </summary>
+ <param name="InputData">表單類別</param>
+ <returns>DataSet</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBSheetDisplayUpdate(System.Data.DataSet)">
+ <summary>
+ 表單開單顯示維護修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBSheetDisplayDelete(System.String@,System.String@,System.String@)">
+ <summary>
+表單開單顯示維護以ＰＫ刪除資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.QueryPubSheetDisplayOrderByCond(System.String,System.String,System.String,System.String)">
+ <summary>
+ 表單開單顯示醫令檔維護查詢
+ </summary>
+ <param name="Sheet_Sub_Display">表單顯示次分類</param>
+ <param name="Order_Code">醫令代碼</param>
+ <param name="Order_Display_Code">醫令顯示代碼</param>
+  <param name="Order_Display_Name">醫令顯示名稱</param>
+ <returns>DataSet</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBSheetDisplayOrderInsert(System.Data.DataSet)">
+ <summary>
+ 表單開單顯示維護Insert
+ </summary>
+ <param name="InputData">表單類別</param>
+ <returns>DataSet</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBSheetDisplayOrderUpdate(System.Data.DataSet)">
+ <summary>
+ 表單開單顯示維護修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBSheetDisplayOrderDelete(System.String@,System.String@)">
+ <summary>
+表單開單顯示維護以ＰＫ刪除資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.queryPUBBodySiteMainSiteData">
+ <summary>
+ 部位資料
+ </summary>
+ <returns>datatable</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.QueryPubSheetDisplayOrderCombodata(System.String,System.Data.IDbConnection@)">
+ <summary>
+ 表單開單顯示醫令檔維護_取得ComboBox資料
+ </summary>
+ <returns>datatable</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PostalCodeInsert(System.Data.DataSet)">
+ <summary>
+ 郵遞區號設定維護新增
+ </summary>
+ <param name="ds"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PostalCodeupdate(System.Data.DataSet)">
+ <summary>
+ 郵遞區號設定維護修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PostalCodedelete(System.String)">
+ <summary>
+郵遞區號設定維護以ＰＫ刪除資料
+ </summary>
+ <param name="Postal_Code"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PostalCodequery(System.String,System.String,System.String,System.String,System.Data.IDbConnection@)">
+ <summary>
+ 郵遞區號設定維護查詢
+ </summary>
+ <returns>Integer</returns>
+ <remarks>b</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.queryPUBPreventiveCareExeByCond(System.String,System.String,System.String)">
+ <summary>
+ 查詢
+ </summary>
+ <returns>dataset</returns>
+ <remarks>by Roger</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBPatientDNRinsertWithDNRNo(System.Data.DataSet)">
+ <summary>
+ 新增With DNR流水號
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2016-05-20</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBPatientDNRqueryByPKROC(System.String@,System.String@)">
+ <summary>
+ 以ＰＫ查詢資料
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2016-05-20</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBPatientDNRdelete(System.String@,System.String@,System.Int32@)">
+ <summary>
+ 以ＰＫ刪除資料
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2016-05-20</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBPatientDNRqueryCboDs">
+ <summary>
+ 取得ComboBox資料
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Eddie,Lu on 2016-05-20</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBPatientDNRupdate(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2016-05-20</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.insertPubStation(System.Data.DataSet)">
+ <summary>
+ 新增護理站基本檔資料
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Hanru on 2016-06-29</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.updatePubStation(System.Data.DataSet)">
+ <summary>
+ 修改護理站基本檔資料
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Hanru on 2016-06-29</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.deletePubStation(System.String@)">
+ <summary>
+ 刪除護理站基本檔資料
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Hanru on 2016-06-29</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.queryPubStationByCond(System.String)">
+ <summary>
+ 查詢護理站基本檔資料
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Hanru on 2016-06-29</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.updatePatContactInfo(System.Data.DataSet)">
+ <summary>
+更新病人聯絡資料
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBPatFlagSortdelete(System.String@)">
+ <summary>
+ 以ＰＫ刪除資料
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2016-05-20</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBPatFlagSortqueryByPKROC(System.String@,System.String@)">
+ <summary>
+ 以ＰＫ查詢資料
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2016-05-20</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBPatFlagSortqueryCboDs">
+ <summary>
+ 取得ComboBox資料
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Eddie,Lu on 2016-05-20</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBPatFlagSortinsert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2016-05-20</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBPatFlagSortupdate(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2016-05-20</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PubHospitalqueryByNow">
+ <summary>
+ 查詢透析院所代號
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by ChenYu.Guo on 2016-06-07</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PubPatientBodyrecordQueryByChartNo(System.String@)">
+ <summary>
+ 通過Chart_No查詢PUB_Patient_BodyRecord中[Measure_Time]最近的一筆紀錄
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by ChenYu.Guo on 2016-06-07</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PubSyscodeQueryByTypeId(System.Int32@)">
+ <summary>
+ 以 Type_Id 查詢資料
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Kira on 2016-06-13</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PubPatientAllergyqueryTopByChartNo(System.String@)">
+ <summary>
+ 通過Chart_No查詢PUB_Patient_Allergy的資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PubIssItemInsert(System.Data.DataSet@)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Will on 2016-06-17</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PubIssItemUpdate(System.Data.DataSet@)">
+ <summary>
+ 更新
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Will on 2016-06-17</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PubIssItemQueryAll">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Will on 2016-06-17</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBPatientISSBOqueryByPK(System.String@,System.String@)">
+ <summary>
+ 查詢最近一筆評分資料
+ </summary>
+ <param name="pk_Chart_No"></param>
+ <param name="pk_Medical_Sn"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBPatientISSDelete(System.String,System.Data.IDbConnection@)">
+ <summary>
+ 刪除
+ </summary>
+ <param name="Medical_Sn"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PubPatient_BodyRecordUpdateHBbyChartNoForMohw(System.Data.DataSet)">
+ <summary>
+ 入院護理評估的身高體重塞入PUB_Patient_BodyRecord
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Kasim on 20160623</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.getInitialOrderExamNoCheckinDept(System.String)">
+ <summary>
+ 取得門急住個別的不需報到科別
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Jun on 2016-06-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBOrderExamNocheckinDeptinsert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Jun on 2016-06-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBOrderExamNocheckinDeptdelete(System.String@)">
+ <summary>
+ 刪除
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Jun on 2016-06-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBLabIndication04QureyPUBLabIndication04">
+ <summary>
+ 特殊屬性輸入元件
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Margaret.Tsai on 2016-07-15</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBAccDeptinsert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Chi,Wang on 2016-08-25</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBAccDeptupdate(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Chi,Wang on 2016-08-25</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.QueryPubAccDeptByPK(System.String)">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Chi,Wang on 2016-08-25</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBAccDeptDelete(System.String)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Chi,Wang on 2016-08-25</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.QueryPubAccDeptName(System.Data.IDbConnection@)">
+ <summary>
+ 成本中心部門查詢
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by 林承毅 on 2016-09-19</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBNhiCodeImportBOE1ImportCase(System.Data.DataSet,System.String,System.String)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Chi,Wang on 2016/09/19 </remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBNhiCodeImportBOE1importorderprice(System.Data.DataSet,System.String)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Chi,Wang on 2016/09/19 </remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBNhiCodeImportBOE1query(System.String,System.String,System.String)">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Chi,Wang on 2016/09/19 </remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.queryOrderAlternativeForOEIOtherLack(System.String)">
+ <summary>
+ 尋找停用醫令替代項目
+ </summary>
+ <param name="OrderCode"></param>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Will Lin 2016/10/01 </remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.queryPUBOrderDC(System.String)">
+ <summary>
+ 查詢被停用的醫令
+ </summary>
+ <param name="inOrderCode"></param>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Will Lin 2016/10/01 </remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.queryUserMappingPUBSheet(System.String)">
+ <summary>
+ 查詢登入使用者可用的表單類別
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Jun 2016/10/04 </remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.queryUserMappingApparatusCode(System.String)">
+ <summary>
+ 查詢登入使用者可用的表單對應儀器
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Jun 2016/10/04 </remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBMaterialSelfpayApplyinsert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Hsiao,Kaiwen on 2016-12-15</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBMaterialSelfpayApplyupdate(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Hsiao,Kaiwen on 2016-12-15</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBMaterialSelfpayApplyDelete(System.String,System.String)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Hsiao,Kaiwen on 2016-12-15</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.queryPubMaterialSelfpayApplyByPK(System.String,System.String)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Hsiao,Kaiwen on 2016-12-15</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.queryPubMaterialSelfpayApplyByPKLike(System.String,System.String)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Hsiao,Kaiwen on 2016-12-15</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBNhiCodeImportMImportCase(System.Data.DataSet,System.String,System.String)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Chi,Wang on 2017-02-23 </remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBNhiCodeImportMimportorderprice(System.Data.DataSet,System.String)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Chi,Wang on 2017-02-23 </remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBNhiCodeImportMquery(System.String,System.String,System.String)">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Chi,Wang on 2017-02-23 </remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.InsertIntoPUBPatientTransferRisk(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>System.Data.Integer</returns>
+ <remarks>by Will,Lin on 2017-03-21</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.QueryPUBPatientTransferRiskLevel(System.String,System.String)">
+ <summary>
+ 查詢病患風險層級
+ </summary>
+ <returns>System.Data.String</returns>
+ <remarks>by Will,Lin on 2017-03-21</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.InsertPubMedicalTypeSort(System.String)">
+ <summary>
+ 新增
+ </summary>
+ <returns>System.Data.Integer</returns>
+ <remarks>by Chi,Wang on 2017-04-06</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.QueryPubMedicalTypeSort(System.String)">
+ <summary>
+ 查詢
+ </summary>
+ <returns>System.Data.String</returns>
+ <remarks>by Chi,Wang on 2017-04-06</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.DeletePubMedicalTypeSort(System.String)">
+ <summary>
+ 刪除
+ </summary>
+ <returns>System.Data.Integer</returns>
+ <remarks>by Chi,Wang on 2017-04-06</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.UpdatePubMedicalTypeSort(System.Data.DataSet,System.String)">
+ <summary>
+ 修改
+ </summary>
+ <returns>System.Data.Integer</returns>
+ <remarks>by Chi,Wang on 2017-04-06</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.getInitialOrderExamNoPrintDept(System.String)">
+ <summary>
+ 取得門急住個別的不需列印科別
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Michelle on 2017-04-13</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBOrderExamNoPrintDeptdelete(System.String@)">
+ <summary>
+ 刪除
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Michelle on 2017-04-13</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PUBOrderExamNoPrintDeptinsert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Michelle on 2017-04-13</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PubDrAddControlInsert(System.Data.DataSet)">
+ <summary>
+ 特定醫師加成控制檔維護_新增
+ </summary>
+ <param name="ds">新增資料</param>
+ <returns>新增筆數</returns>
+ <remarks>by Hsu-Yuan,Yang on 2017-04-14</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PubDrAddControlUpdate(System.Data.DataSet)">
+ <summary>
+ 特定醫師加成控制檔維護_修改
+ </summary>
+ <param name="ds">更新資料</param>
+ <returns>Integer</returns>
+ <remarks>by Hsu-Yuan,Yang on 2017-04-14</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.PubDrAddControlDelete(System.String@,System.String@,System.String@)">
+ <summary>
+ 特定醫師加成控制檔維護_以PK刪除資料
+ </summary>
+ <param name="pk_Dept_Code">院內看診科別代碼</param>
+ <param name="pk_Employee_Code">醫令碼</param>
+ <param name="pk_Order_Code">醫師代號</param>
+ <remarks>by Hsu-Yuan,Yang on 2017-04-14</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.PubServiceManager.QueryPubDrAddControlByPK(System.String@,System.String@,System.String@)">
+ <summary>
+ 特定醫師加成控制檔維護_以PK查詢資料，若查詢條件皆無，則全查
+ </summary>
+ <param name="deptCode">院內看診科別代碼 (可傳空字串)</param>
+ <param name="orderCode">醫令碼 (可傳空字串)</param>
+ <param name="employeeCode">醫師代號 (可傳空字串)</param>
+ <returns>查詢DataSet結果</returns>
+ <remarks>by Hsu-Yuan,Yang on 2017-04-14</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.RptServiceManager.#ctor">
+ <summary>
+ 阻止外部直接進行新建立的宣告
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Client.Servicefactory.RptServiceManager.getInstance">
+ <summary>
+ 屬性取得類別實體
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:Syscom.Client.Servicefactory.RptServiceManager.Nested">
+ <summary>
+ 巢狀類別存放建立的類別實體
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.RptServiceManager.getPrinterName(System.String,System.Int32,System.Object)">
+ <summary>
+ 取得印表機名稱
+ Add By Jen
+ </summary>
+ <param name="id"></param>
+ <param name="type"></param>
+ <param name="con"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.RptServiceManager.getReportID">
+ <summary>
+ 取得報表 ID
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.SncServiceManager.#ctor">
+ <summary>
+ 阻止外部直接進行新建立的宣告
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Client.Servicefactory.SncServiceManager.getInstance">
+ <summary>
+ 屬性取得類別實體
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:Syscom.Client.Servicefactory.SncServiceManager.Nested">
+ <summary>
+ 巢狀類別存放建立的類別實體
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.SncServiceManager.getCmmSerialNoTx(System.String,System.String,System.String,System.String)">
+ <summary>
+ 獲取西元年月日+序列號
+ </summary>
+ <param name="strVKey">vKey值</param>
+ <returns>序列號</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.UclServiceManager.#ctor">
+ <summary>
+ 阻止外部直接進行新建立的宣告
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Client.Servicefactory.UclServiceManager.getInstance">
+ <summary>
+ 屬性取得類別實體
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:Syscom.Client.Servicefactory.UclServiceManager.Nested">
+ <summary>
+ 巢狀類別存放建立的類別實體
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.UclServiceManager.UclHintDataBOinsert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Sean.Lin on 2013-2-23</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.UclServiceManager.UclHintDataBOqueryByPK(System.String@,System.Int32@)">
+ <summary>
+ 以ＰＫ查詢資料
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Sean.Lin on 2013-2-23</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.UclServiceManager.UclHintDataBOdelete(System.String@,System.Int32@)">
+ <summary>
+ 以ＰＫ刪除資料
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Sean.Lin on 2013-2-23</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.UclServiceManager.UclHintDataBOupdate(System.Data.DataSet)">
+ <summary>
+ 更新資料庫內容
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Sean.Lin on 2013-2-23</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.UclServiceManager.UclHintDataBOqueryData(System.String)">
+ <summary>
+ 查詢提示資料
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Sean.Lin on 2013-2-23</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.UclServiceManager.UclHintDataBOqueryDataAll">
+ <summary>
+ 查詢提示資料全部
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Sean.Lin on 2013-3-6</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.UclServiceManager.queryOMOPhraseForUCL(System.String,System.String,System.String,System.String)">
+ <summary>
+ 片語查詢
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Alan.Tsai on 2015-4-10</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.UclServiceManager.QueryPrintCondition(System.Collections.Generic.Dictionary{System.String,System.Object})">
+ <summary>
+ 查詢 Print Condition
+ </summary>
+ <param name="Param">查詢參數</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.UclServiceManager.GetLoginUserPrintCond(System.Collections.Generic.Dictionary{System.String,System.Object})">
+ <summary>
+ 取得登入者Term_Code所囑之Print Condition
+ </summary>
+ <param name="Param"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IArmServiceManager_T.RoleQueryByEmployee(System.String)">
+ <summary>
+ 查詢人員的角色與功能
+ </summary>
+ <param name="Employee_Code" >員工代碼</param>
+ <returns>Dataset</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IArmServiceManager_T.EmployeeQueryByRole(System.String)">
+ <summary>
+ 查詢角色歸屬的人員
+ </summary>
+ <param name="Role_Id" >角色代碼</param>
+ <returns>Dataset</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IArmServiceManager_T.EmployeeQueryByFunction(System.String)">
+ <summary>
+ 查詢功能歸屬的人員
+ </summary>
+ <param name="Fun_Function_No" >功能代碼</param>
+ <returns>Dataset</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IArmServiceManager_T.queryRoleRightsByMemberOf(System.String)">
+ <summary>
+ 查詢角色ID 以 userMemberOf 為索引
+ </summary>
+ <param name="userMemberOf">使用者歸屬角色</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IArmServiceManager_T.ArmLogonFailureQueryLoginFailure(System.String,System.String)">
+ <summary>
+ 登入失敗超過3次查詢
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Hsiao,Kaiwen on 2016-02-18</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.ICmmServiceManager_T.getPrinterName(System.String,System.Int32,System.Object)">
+ <summary>
+ 取得印表機名稱
+ Add By Jen
+ </summary>
+ <param name="id"></param>
+ <param name="type"></param>
+ <param name="con"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.ICmmServiceManager_T.CMMSysCodeBSSysCodeQuery(System.Int32)">
+ <summary>
+ 基本代碼查詢 - 不限系統；CodeType:查詢代碼；回傳 TableName 為 CodeType 的 Dataset;包含 Code_ID,Code_Name,Code_EN_Name,Combine_Name,Combine_EN_Name 
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Sean.Lin on 2013-7-19</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.ICmmServiceManager_T.CMMSysCodeBSSysCodeQueryMuti(System.Int32[])">
+ <summary>
+ 基本代碼查詢 - 不限系統 - 多筆 ；CodeType:查詢代碼的陣列；回傳 TableName 為 CodeType 的 Dataset;包含 Code_ID,Code_Name,Code_EN_Name,Combine_Name,Combine_EN_Name 
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Sean.Lin on 2013-7-19</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.ICmmServiceManager_T.CMMSysCodeTypeBSSysCodeTypeQuery(System.String,System.String)">
+ <summary>
+ 基本類別代碼查詢 - 不限系統；CodeType:查詢代碼；回傳 TableName 為 SystemName 的 Dataset
+ 查詢 Pub_Syscode_Type By TypeId 與 SystemName
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Lewis on 2014-2-13</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.ICmmServiceManager_T.CMMSysCodequerySectionCode">
+ <summary>
+ 院區代碼查詢
+ </summary>
+ <returns>DataSet</returns>    ''' <remarks>by Sean.Lin on 2013-09-16</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.ICmmServiceManager_T.CMMSysCodequeryDeptTCodeBySectionCode">
+ <summary>
+ 部門代碼查詢
+ </summary>
+ <returns>DataSet</returns>    ''' <remarks>by Sean.Lin on 2013-09-16</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.ICmmServiceManager_T.CMMSysCodeQueryPubConfigMuti(System.String[],System.Data.IDbConnection@)">
+ <summary>
+ 查詢參數檔 - 多筆，回傳一個DS，Table Name 為 傳入的 configName
+ </summary>
+ <param name="configName" >參數名</param>
+ <returns>Dataset</returns>
+ <remarks>by Sean.Lin on 2016-05-18</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.QueryIccConnectionHistory(System.Collections.Generic.Dictionary{System.String,System.Object})">
+ <summary>
+ 查詢 雲端藥歷/關懷用藥 連線記錄
+ </summary>
+ <param name="Param"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.InitialIccUploadDataQueryUI(System.Collections.Generic.Dictionary{System.String,System.Object})">
+ <summary>
+ 取得初始化 ICCUploadDataQueryUI 所需資料
+ </summary>
+ <param name="Param"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.QueryIccUploadData(System.Collections.Generic.Dictionary{System.String,System.Object})">
+ <summary>
+ 查詢上傳檔
+ </summary>
+ <param name="Param"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.QueryIccUploadDataDetail(System.Collections.Generic.Dictionary{System.String,System.Object})">
+ <summary>
+ 查詢上傳檔明細
+ </summary>
+ <param name="Param"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.SaveIccUploadData(System.Collections.Generic.Dictionary{System.String,System.Object},System.Data.DataSet)">
+ <summary>
+ 存檔
+ </summary>
+ <param name="Param"></param>
+ <param name="InputDs"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.Query24HourUploadedRate(System.Collections.Generic.Dictionary{System.String,System.Object})">
+ <summary>
+ 查詢24小時上傳比率
+ </summary>
+ <param name="Param"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.Query24UnuploadData(System.Collections.Generic.Dictionary{System.String,System.Object})">
+ <summary>
+ 取得24小時未上傳資料
+ </summary>
+ <param name="Param"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ImportFeedbackData(System.Collections.Generic.Dictionary{System.String,System.Object},System.Data.DataSet)">
+ <summary>
+ 將回饋檔存入資料庫
+ </summary>
+ <param name="Param"></param>
+ <param name="InputDs"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.QueryMaxCountOfDay(System.DateTime)">
+ <summary>
+ 查詢當日已匯入次數
+ </summary>
+ <param name="Import_Date">匯入日期</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.QueryFeedBackData(System.Collections.Generic.Dictionary{System.String,System.Object})">
+ <summary>
+ 查詢回饋檔資料
+ </summary>
+ <param name="Param"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ImportFeedbackDuporderData(System.Collections.Generic.Dictionary{System.String,System.Object},System.Data.DataSet)">
+ <summary>
+ 將回饋檔(用藥重複)存入資料庫
+ </summary>
+ <param name="Param"></param>
+ <param name="InputDs"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.QueryFeedBackDuporderData(System.Collections.Generic.Dictionary{System.String,System.Object})">
+ <summary>
+ 查詢回饋檔(用藥重複)資料
+ </summary>
+ <param name="Param"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCCloudDrugPatientQueryCountByChartNo(System.String)">
+ <summary>
+ 查詢病人雲端藥歷筆數
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by ChenYu.Guo on 2015-09-17</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCCloudDrugPatientQueryEffectivePatient">
+ <summary>
+ 查詢雲端藥歷有效病人
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by ChenYu.Guo on 2015-09-18</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCCloudDrugsQueryAssignColumnsByIdNo(System.String)">
+ <summary>
+ 指定顯示欄位查詢
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by ChenYu.Guo on 2015-09-17</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCMustFieldVerifydeleteByPk(System.String)">
+ <summary>
+ 刪除
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-27</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCMustFieldVerifyinsert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-27</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCMustFieldVerifyupdate(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-27</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCMustFieldVerifyqueryAll">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-27</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCMustFieldVerifyqueryByPK(System.String@)">
+ <summary>
+ 序號查詢
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-27</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCMustFieldVerifyqueryByPKYNShow(System.String@)">
+ <summary>
+ 序號查詢(顯示是,否)
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-27</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCMustFieldVerifyqueryAllYNShow">
+ <summary>
+ 查詢全部(顯示是,否)
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-27</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCFieldLengthVerifydelete(System.String)">
+ <summary>
+ 刪除
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-27</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCFieldLengthVerifyqueryByPK(System.String@)">
+ <summary>
+ ID查詢
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-27</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCFieldLengthVerifyinsert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-27</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCFieldLengthVerifyupdate(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-27</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCFieldLengthVerifyqueryAll">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-27</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCOnlineCheckdelete(System.String)">
+ <summary>
+ 刪除
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-28</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCOnlineCheckqueryByPK(System.String@)">
+ <summary>
+ ID查詢
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-28</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCOnlineCheckqueryAllYNShow">
+ <summary>
+ 查詢全部(顯示是,否)
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-28</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCOnlineCheckqueryByPKYNShow(System.String@)">
+ <summary>
+ ID查詢(顯示是,否)
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-28</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCOnlineCheckinsert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-28</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCOnlineCheckupdate(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-28</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCOnlineCheckqueryAll">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-28</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCSelfVerifydelete(System.String)">
+ <summary>
+ 刪除
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-28</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCSelfVerifyqueryByPK(System.String@)">
+ <summary>
+ ID查詢
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-28</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCSelfVerifyqueryAllYNShow">
+ <summary>
+ 查詢全部(顯示是,否)
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-28</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCSelfVerifyqueryByPKYNShow(System.String@)">
+ <summary>
+ ID查詢(顯示是,否)
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-28</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCSelfVerifyinsert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-28</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCSelfVerifyupdate(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-28</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCSelfVerifyqueryAll">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-28</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCInteractVerify1delete(System.String@)">
+ <summary>
+ 刪除
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCInteractVerify1queryByPK(System.String@)">
+ <summary>
+ 序號查詢
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCInteractVerify1queryAllYNShow">
+ <summary>
+ 查詢全部(顯示是否)
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCInteractVerify1queryByPKYNShow(System.String@)">
+ <summary>
+ 序號查詢(顯示是否)
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCInteractVerify1insert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCInteractVerify1update(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCInteractVerify1queryAll">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCInteractVerify2delete(System.String@)">
+ <summary>
+ 刪除
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCInteractVerify2queryByPK(System.String@)">
+ <summary>
+ 序號查詢
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCInteractVerify2queryAllYNShow">
+ <summary>
+ 查詢全部(顯示是否)
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCInteractVerify2queryByPKYNShow(System.String@)">
+ <summary>
+ 序號查詢(顯示是否)
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCInteractVerify2insert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCInteractVerify2update(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCInteractVerify2queryAll">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCInteractVerify3delete(System.String@)">
+ <summary>
+ 刪除
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCInteractVerify3queryByPK(System.String@)">
+ <summary>
+ 序號查詢
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCInteractVerify3insert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCInteractVerify3update(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCInteractVerify3queryAll">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCInteractVerify4delete(System.String@)">
+ <summary>
+ 刪除
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCInteractVerify4queryByPK(System.String@)">
+ <summary>
+ 序號查詢
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCInteractVerify4queryAllYNShow">
+ <summary>
+ 查詢全部(顯示是否)
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCInteractVerify4queryByPKYNShow(System.String@)">
+ <summary>
+ 序號查詢(顯示是否)
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCInteractVerify4insert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCInteractVerify4update(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCInteractVerify4queryAll">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.ICCUploadDataMaintainBSCancelData(System.Data.DataSet)">
+ <summary>
+ 作廢上傳資料
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Sean.Lin on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.GetIcdName(System.String,System.Boolean)">
+ <summary>
+ 取得診斷名稱
+ </summary>
+ <param name="IcdCode">診斷碼</param>
+ <param name="IsGetEngName">True:英文, False:中文</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.GetHospName(System.String)">
+ <summary>
+ 取得醫院名稱
+ </summary>
+ <param name="HospCode">醫療院所代碼</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_T.GetTreatmentName(System.String)">
+ <summary>
+ 取得治療項目名稱
+ </summary>
+ <param name="TreatmentCode">治療項代碼</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IIccServiceManager_L.QueryIccAlertRecByCond(System.String@,System.String,System.String,System.String)">
+ <summary>
+ 雲端藥歷重複用藥查詢
+ </summary>
+ <param name="Query_Type">查詢類別</param>
+ <param name="ST_Visit_Date">就醫日期(起)</param>
+ <param name="ED_Visit_Date">就醫日期(迄)</param>
+ <param name="Chart_No">病歷號</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PUBDeptSectqueryCboData(System.Int32)">
+ <summary>
+ 科診屬性代碼查詢
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-11-11</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PUBPatientSevereDiseasequeryByPKYNShow(System.String@,System.String@,System.DateTime@)">
+ <summary>
+ 病歷號查詢(顯示是否)
+ </summary>
+ <returns>String) as DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-11-03</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.queryPUBDoctorByDeptCode(System.String)">
+ <summary>
+ 查詢所屬科室之醫師信息
+ </summary>
+ <param name="DeptCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.queryDefault_Body_Site_Code(System.String,System.String)">
+ <summary>
+ 醫令代碼讀取手術處置基本檔 (PubOrderOrTreatBO) 中預設部位
+ </summary>
+ <param name="strOrder_Code">令代碼</param>
+ <returns>手術處置基本檔 (PubOrderOrTreatBO) 中預設部位</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.queryPUBBodySiteUnDelete">
+ <summary>
+ 查找部位當中的所有沒有刪除的部位資料
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.QuerymessageDataSet_L(System.Data.DataSet,System.Data.DataSet,System.Int32@,System.Data.DataSet@)">
+ <summary>
+ 與RuleTransfer_N1關聯的切出部分
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by liuye on 2012-5-24</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.queryPUBConfigByPK_L(System.String)">
+ <summary>
+ 查詢 PUBConfigBO_E2
+ </summary>
+ <param name="pk_Config_Name"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.queryPUBPatientAndBasicData(System.String)">
+ <summary>
+  國際疫苗申請書輸入依條件查詢
+ </summary>
+ <param name="strChart_No"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.getExprre(System.String)">
+ <summary>
+ 改名稱
+ </summary>
+ <param name="ds"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.queryPUBSysCodeNot0(System.String[]@,System.Object[]@)">
+ <summary>
+ 獲取Department資料
+ </summary>
+ <returns>DataSet</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.queryPUBPatientAndArea(System.String)">
+ <summary>
+ 取得病患資料及戶籍地
+ </summary>
+ <returns></returns>
+ <remarks>by Runxia on 2012-3-26</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.queryPUBDepartmentCodeIsIpdDeptY_L">
+ <summary>
+ 科室/團隊查詢
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by liuye on 2012-4-2</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.updatePUBInsuCodeByPK_L(System.Data.DataSet)">
+ <summary>
+ 醫令項目代碼對應健保碼修改
+ </summary>
+ <param name="ds"></param>
+ <returns>Integer</returns>
+ <remarks>by Kaiwen</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PUBPreventiveCareInsert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Remote_Liu on 2016-05-17</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PUBPreventiveCareUpdate(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Remote_Liu on 2016-05-17</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PubPreventiveCareDeleteByPK(System.String@,System.String@,System.String@)">
+ <summary>
+ 刪除資料
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Remote_Liu on 2016-05-17</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PUBPreventiveCareQueryByPK(System.String@,System.String@,System.String@)">
+ <summary>
+ 以PK查詢資料
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Remote_Liu on 2016-05-17</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PUBPreventiveCareQueryAll">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Remote_Liu on 2016-05-17</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PUBPreventiveCareQueryByLikePK(System.String@)">
+ <summary>
+ 查詢
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Remote_Liu on 2016-05-17</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.queryPUBCareItemAgeSex">
+ <summary>
+ 取得ComboBox資料
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Remote_Liu on 2016-05-17</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PUBInsuDeptdeleteChoose(System.Data.DataSet)">
+ <summary>
+ 刪除多筆資料
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Xiaozhi on 2016-05-16</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PUBInsuDeptQueryByPKROC(System.String@)">
+ <summary>
+ 以PK查詢資料(健保科別代碼)
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Xiaozhi on 2016-05-16</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.queryAllROC">
+ <summary>
+ 查詢全部(民國年)
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Elly on 2016-05-06</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PUBInsuDeptInsertByPK(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Xiaozhi on 2016-05-16</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PUBInsuDeptUpdateByPK(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Xiaozhi on 2016-05-06</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PUBAreaCodeNdeleteChoose(System.Data.DataSet)">
+ <summary>
+ 刪除多筆資料
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Xiaozhi on 2016-05-24</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PUBAreaCodeNQueryByPKROC(System.String@)">
+ <summary>
+ 以PK查詢資料(戶籍地代碼)
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Xiaozhi on 2016-05-24</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.queryAreaCodeAll">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Elly on 2016-05-24</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PUBAreaCodeNInsertByPK(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Xiaozhi on 2016-05-24</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PUBAreaCodeNUpdateByPK(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Xiaozhi on 2016-05-24</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PUBAreaCodeGovdeleteChoose(System.Data.DataSet)">
+ <summary>
+ 刪除多筆資料
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Xiaozhi on 2016-05-25</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PUBAreaCodeGovQueryByPKROC(System.String@)">
+ <summary>
+ 以PK查詢資料(戶籍地代碼)
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Xiaozhi on 2016-05-25</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.queryAreaCodeGovAll">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Elly on 2016-05-25</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PUBAreaCodeGovInsertByPK(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Xiaozhi on 2016-05-25</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PUBAreaCodeGovUpdateByPK(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Xiaozhi on 2016-05-25</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PUBPostalAreadeleteChoose(System.Data.DataSet)">
+ <summary>
+ 刪除多筆資料
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Xiaozhi on 2016-05-26</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PUBPostalAreaQueryByPK(System.String@)">
+ <summary>
+ 以PK查詢資料(郵遞區號)
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Xiaozhi on 2016-05-26</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PUBPostalAreaQueryByPKAll(System.String@,System.String@)">
+ <summary>
+ 以所有PK查詢資料()
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Xiaozhi on 2016-05-26</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.queryPostalAreaAll">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Xiaozhi on 2016-05-26</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PUBPostalAreaInsertByPK(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Xiaozhi on 2016-05-26</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PUBPostalAreaUpdateByPK(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Xiaozhi on 2016-05-26</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PUBPostalGovAreadeleteChoose(System.Data.DataSet)">
+ <summary>
+ 刪除多筆資料
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Xiaozhi on 2016-05-26</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PUBPostalGovAreaQueryByPK(System.String@)">
+ <summary>
+ 以PK查詢資料(郵遞區號)
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Xiaozhi on 2016-05-26</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.queryPostalGovAreaAll">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Xiaozhi on 2016-05-26</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PUBPostalGovAreaInsertByPK(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Xiaozhi on 2016-05-26</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PUBPostalGovAreaUpdateByPK(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Xiaozhi on 2016-05-26</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.queryMedicalSn(System.String[])">
+ <summary>
+ 取得就醫序號
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Remote_Liu on 2016-06-20</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.queryMotherName(System.String[])">
+ <summary>
+ 取得媽媽姓名
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Remote_Liu on 2016-06-20</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PUBDiseaseICD10MappinginsertData(System.Data.DataSet)">
+ <summary>
+ 新增 Method
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Li,Han on 2016-06-28</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PUBDiseaseICD10MappingupdateData(System.Data.DataSet)">
+ <summary>
+ 修改 Method
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Li,Han on 2016-06-28</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PUBDiseaseICD10MappingdeleteData(System.String@,System.String@,System.String@)">
+ <summary>
+ 刪除 Method
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Li,Han on 2016-06-28</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PUBDiseaseICD10MappingqueryGridData(System.String@,System.String@,System.String@)">
+ <summary>
+ 取得Gird資料
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Li,Han on 2016-06-28</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PUBDiseaseICD10MappingqueryGridDataByPk(System.String@,System.String@,System.String@)">
+ <summary>
+ 取得Gird資料ByPk
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Li,Han on 2016-06-29</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PUBDiseaseICD10MappingquertCmbData">
+ <summary>
+ 取得Combox資料
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Li,Han on 2016-06-28</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PUBDiseaseICD10MappingfCheckIcdCode(System.String,System.String)">
+ <summary>
+ 檢查該診斷是否存在
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Li,Han on 2016-06-28</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PUBICD10DeptinsertData(System.Data.DataSet)">
+ <summary>
+ 新增 Method
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Li,Han on 2016-06-29</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PUBICD10DeptdeleteData(System.String@,System.String@,System.String@,System.String@,System.String@)">
+ <summary>
+ 刪除 Method
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Li,Han on 2016-06-29</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PUBICD10DeptqueryGridData(System.String@,System.String@,System.String@,System.String@,System.String@)">
+ <summary>
+ 取得Gird資料
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Li,Han on 2016-06-29</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PUBICD10DeptqueryGridDataByPk(System.String@,System.String@,System.String@,System.String@,System.String@)">
+ <summary>
+ 取得Gird資料ByPK
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Li,Han on 2016-06-29</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PUBICD10DeptqueryCmbData(System.String@,System.String@)">
+ <summary>
+ 取得Combox資料
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Li,Han on 2016-06-29</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PUBICD10DeptfCheckIcdCode(System.String,System.String)">
+ <summary>
+ 檢查該診斷是否存在
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Li,Han on 2016-06-29</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PUBSyscodeWoundType">
+ <summary>
+ 傷口分類
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Remote_Liu on 2016-06-28</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PUBBodySiteBodyparts">
+ <summary>
+ 部位
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Remote_Liu on 2016-06-28</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PUBSyscodeBodySide">
+ <summary>
+ 側位
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Remote_Liu on 2016-06-28</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PUBSyscodeUrgentClass">
+ <summary>
+ 急作手術分級
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Remote_Liu on 2016-07-04</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.queryPUBSheetCode">
+ <summary>
+ 檢驗單
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Remote_Liu on 2016-08-13</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.queryICD10PCS_Code(System.String)">
+ <summary>
+ 
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PUBOrderAlternativeInsertByPK(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Xiaozhi on 2016-05-16</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PUBOrderAlternativeUpdateByPK(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Xiaozhi on 2016-05-06</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PUBOrderAlternativedeleteChoose(System.Data.DataSet)">
+ <summary>
+ 刪除多筆資料
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Xiaozhi on 2016-05-16</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_L.PUBOrderAlternativequeryByPKOrderCode(System.String@)">
+ <summary>
+ 以PK查詢資料(醫令碼)
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Xiaozhi on 2016-05-16</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBDOCTORBOE1queryForCbo(System.String)">
+ <summary>
+ 查詢醫師檔作為CBO 資料
+ </summary>
+ <returns>DataSet</returns>    ''' <remarks>by Sean.Lin on 2013-09-25</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.queryDoctorFromEmployee(System.String,System.String)">
+ <summary>
+ 進行醫師驗證
+ </summary>
+ <returns>Dataset</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.queryPubPatientByPK(System.String@)">
+ <summary>
+ 以ＰＫ查詢資料
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by ChenYu.Guo on 2015-09-09</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBEmployeequeryEmployeeByEmpCode(System.String)">
+ <summary>
+ 根據員工編號取得員工資料
+ </summary>
+ <returns>DataSet</returns>    ''' <remarks>by Sean.Lin on 2014-09-01</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBEmployeequeryEmployeeByEmpCodeAndDate(System.String,System.DateTime)">
+ <summary>
+ 根據員工編號和日期取得有效期限的員工資料
+ </summary>
+ <returns>DataSet</returns>    ''' <remarks>by Sean.Lin on 2014-09-01</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PubConfigQueryByConfigName(System.String)">
+ <summary>
+ 查詢By參數設定名稱
+ </summary>
+ <returns>DataSet</returns>    ''' <remarks>by Sean.Lin on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PubConfigqueryByPK(System.String@)">
+ <summary>
+ 以ＰＫ查詢資料
+ </summary>
+ <returns>DataSet</returns>    ''' <remarks>by Sean.Lin on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PubConfigdelete(System.String@)">
+ <summary>
+ 以ＰＫ刪除資料
+ </summary>
+ <returns>Integer</returns>    ''' <remarks>by Sean.Lin on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PubConfiginsert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>    ''' <remarks>by Sean.Lin on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PubConfigupdate(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>    ''' <remarks>by Sean.Lin on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PubConfigqueryAll">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>System.Data.DataSet</returns>    ''' <remarks>by Sean.Lin on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PubConfigdynamicQueryWithColumnValue(System.String[]@,System.Object[]@)">
+ <summary>
+ 動態查詢
+ </summary>
+ <returns>System.Data.DataSet</returns>    ''' <remarks>by Sean.Lin on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.queryPUBConfigLikePKey(System.String)">
+ <summary>
+ 根據系統參數名稱查詢
+ </summary>
+ <returns>DataSet</returns>    
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.qureyPUBConfigAll">
+ <summary>
+ 查詢全部資料
+ </summary>
+ <returns>DataSet</returns>    
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.savePUBConfig(System.Data.DataSet)">
+ <summary>
+ 存檔
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.deletePUBConfig(System.Data.DataSet)">
+ <summary>
+ 將傳入資料進行刪除
+ </summary>
+ <returns>DataSet</returns>    
+ <remarks>by Alan.Tsai on 2014-11-04</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.queryPUBSyscodeTypeLikePKey(System.String)">
+ <summary>
+ 根據類別代碼查詢
+ </summary>
+ <returns>DataSet</returns>    
+ <remarks>by Alan.Tsai on 2014-11-08</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.qureyPUBSyscodeTypeAll">
+ <summary>
+ 查詢全部資料
+ </summary>
+ <returns>DataSet</returns>    
+ <remarks>by Alan.Tsai on 2014-11-08</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.savePUBSyscodeType(System.Data.DataSet)">
+ <summary>
+ 存檔
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Alan.Tsai on 2014-11-08</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.deletePUBSyscodeType(System.Data.DataSet)">
+ <summary>
+ 將傳入資料進行刪除
+ </summary>
+ <returns>DataSet</returns>    
+ <remarks>by Alan.Tsai on 2014-11-08</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.queryPUBSyscodeLikePKey(System.String,System.String)">
+ <summary>
+ 根據類別代碼、公用代碼查詢
+ </summary>
+ <returns>DataSet</returns>    
+ <remarks>by Alan.Tsai on 2014-11-09</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.qureyPUBSyscodeAll">
+ <summary>
+ 查詢全部資料
+ </summary>
+ <returns>DataSet</returns>    
+ <remarks>by Alan.Tsai on 2014-11-09</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.savePUBSyscode(System.Data.DataSet)">
+ <summary>
+ 存檔
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Alan.Tsai on 2014-11-09</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.deletePUBSyscode(System.Data.DataSet)">
+ <summary>
+ 將傳入資料進行刪除
+ </summary>
+ <returns>DataSet</returns>    
+ <remarks>by Alan.Tsai on 2014-11-09</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.queryPUBHospitalLikePKey(System.String,System.String,System.String)">
+ <summary>
+ 根據類別、生效日期與醫院代碼查詢
+ </summary>
+ <returns>DataSet</returns>    
+ <remarks>by Alan.Tsai on 2014-11-09</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.qureyPUBHospitalAll">
+ <summary>
+ 查詢全部資料
+ </summary>
+ <returns>DataSet</returns>    
+ <remarks>by Alan.Tsai on 2014-11-09</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.initPubHospital">
+ <summary>
+ 畫面初始化資料查詢
+ </summary>
+ <returns>DataSet</returns>    
+ <remarks>by Alan.Tsai on 2014-11-10</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.savePUBHospital(System.Data.DataSet)">
+ <summary>
+ 存檔
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Alan.Tsai on 2014-11-09</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.deletePUBHospital(System.Data.DataSet)">
+ <summary>
+ 將傳入資料進行刪除
+ </summary>
+ <returns>DataSet</returns>    
+ <remarks>by Alan.Tsai on 2014-11-09</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.queryEmployeeALL(System.Data.IDbConnection@)">
+ <summary>
+ 取得員工全部資料 
+ </summary>
+ <returns>DataSet</returns>    
+ <remarks>by Lits on 2014-11-09</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.queryEmployeeByDept(System.String)">
+ <summary>
+ 取得員工全部資料 By Dept
+ </summary>
+ <returns>DataSet</returns>    
+ <remarks>by Lits on 2014-11-09</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.RuleDynamicQueryNotPub(System.String@)">
+ <summary>
+ 非PUB動態SQL
+ </summary>
+ <param name="sqlString"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBRuleEngineAPI_H50_ChkInteraction_qryOMOTypeE(System.String,System.String)">
+ <summary>
+ 撈出病人之前看診的紀錄並找出有開立藥品且藥品尚未過期的藥
+ </summary>
+ <param name="Chart_No"></param>
+ <param name="Outpatient_Sn"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.QuerySameKineMedicine(System.String)">
+ <summary>
+ 同類藥檢核查詢
+ </summary>
+ <param name="Phamarcy12code">成大十二碼</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.EMRMedicineRecordRuleQuery(System.String,System.String,System.String)">
+ <summary>
+ 程式功能：化療藥品與相關檢核
+ 開發人員：markwu
+ 開發時間：2009/11
+ </summary>
+ <param name="Chart_no">病歷號</param>
+ <param name="orderCode">成大碼</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.EMRMedicineRecordRuleQuery2(System.String,System.String,System.String,System.String)">
+ <summary>
+ 程式功能：化療藥品與相關檢核
+ 開發人員：markwu
+ 開發時間：2009/11
+ </summary>
+ <param name="Chart_no">病歷號</param>
+ <param name="orderCode">成大碼</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.InsertOPH_Alert_Record(System.Data.DataSet)">
+ <summary>
+ Insert OPH_Alert_Record
+ </summary>
+ <param name="InputDs"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.GetCurrentOrderset(System.String,System.String,System.String)">
+ <summary>
+ 搜尋歷史醫令
+ </summary>
+ <param name="Medical_Sn">就醫序號</param>
+ <param name="SystemType">系統歸屬 {O}門診 or {E}急診 or {I}住院</param>
+ <param name="Location">C,P,S</param>
+ <returns>所有歷史醫令的資料集</returns>
+ <remarks>by Rich on 2012-05-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.queryInsuCodeByOrderCode(System.Data.DataSet,System.String)">
+ <summary>
+ 成大碼轉健保碼
+ </summary>
+ <param name="OrderCodeDS"></param>
+ <param name="BasicDate"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PubReportDescdelete(System.String@)">
+ <summary>
+ 刪除
+ </summary>
+ <returns>Integer</returns>    ''' <remarks>by ChenYu.Guo on 2015-06-01</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PubReportDescQueryByLikeColumn(System.String@,System.String@,System.String@)">
+ <summary>
+ 查詢
+ </summary>
+ <returns>DataSet</returns>    ''' <remarks>by ChenYu.Guo on 2015-06-01</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PubReportDescQueryByPK(System.String@)">
+ <summary>
+ QueryByPK
+ </summary>
+ <returns>System.Data.DataSet</returns>    ''' <remarks>by ChenYu.Guo on 2015-06-01</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PubReportDescinsert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>    ''' <remarks>by ChenYu.Guo on 2015-06-01</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PubReportDescupdate(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>    ''' <remarks>by ChenYu.Guo on 2015-06-01</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PubPrintRecordQueryPrintRecord(System.String@,System.String@,System.String@,System.String@,System.String@,System.String@)">
+ <summary>
+ 查詢
+ </summary>
+ <returns>DataSet</returns>    ''' <remarks>by ChenYu.Guo on 2015-06-01</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.insertRPTPrintClient(System.Data.DataSet)">
+ <summary>
+ 將列印報表、預覽報表的資料 新增至 PUB_Print_Record
+ </summary>
+ <returns>Integer</returns>    ''' <remarks>by Hsiao.Kaiwen on 2015-08-07</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.queryReportConfigByReportId(System.String)">
+ <summary>
+ 依Report_ID取得報表設定資料
+ </summary>
+ <param name="inReportId"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.queryReportMode(System.String)">
+ <summary>
+ 依Report_ID取得報表列印模式
+ </summary>
+ <param name="inReportId"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.queryReportAllConfig(System.String,System.String,System.String)">
+ <summary>
+ 依Report_ID取得報表設定資料
+ </summary>
+ <param name="inReportId"></param>
+ <param name="inStationNo"></param>
+ <param name="inTermCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.getReportInfo(System.String,System.String,System.String)">
+ <summary>
+ 取得報表列印資訊
+ </summary>
+ <param name="repprtID"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBPrintConfiginsert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>    ''' <remarks>by Kaiwen,Hsiao on 2015-07-10</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBPrintConfigupdate(System.Data.DataSet,System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>    ''' <remarks>by Kaiwen,Hsiao on 2015-07-10</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBPrintConfigdelete(System.String@,System.String@,System.String@)">
+ <summary>
+ 刪除
+ </summary>
+ <returns>Integer</returns>    ''' <remarks>by Kaiwen,Hsiao on 2015-07-10</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBPrintConfigQueryByPK(System.String@,System.String@,System.String@)">
+ <summary>
+ QueryByPK
+ </summary>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBPrintConfigqueryAll">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>System.Data.DataSet</returns>    ''' <remarks>by Kaiwen,Hsiao on 2015-07-10</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBPrintConfigdynamicQueryWithColumnValue(System.String[]@,System.Object[]@)">
+ <summary>
+ 動態查詢
+ </summary>
+ <returns>System.Data.DataSet</returns>    ''' <remarks>by Kaiwen,Hsiao on 2015-07-10</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBPrintConfigQueryByLikeColumn(System.String,System.String,System.String,System.String,System.String)">
+ <summary>
+ 報表列印記錄檔查詢
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Kaiwen,Hsiao on 2015-07-10</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBPrintConfigBSInsert(System.Data.DataSet,System.Data.DataSet)">
+ <summary>
+ 新增 PUB_Print_Config、PUB_Report_Desc 資料
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Kaiwen,Hsiao on 2015-07-10</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.queryPUBDepartmentCount">
+ <summary>
+ 大分科所屬細分科統計
+ </summary>
+ <returns>DataSet</returns>    ''' <remarks>by ChenYu.Guo on 2015-07-15</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PubPatientBodyRecorddelete(System.String@,System.DateTime@)">
+ <summary>
+ 刪除
+ </summary>
+ <returns>Integer</returns>    ''' <remarks>by Sharon.Du on 2015-07-14</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PubPatientBodyRecordqueryByPK(System.String@,System.DateTime@)">
+ <summary>
+ 以PK查詢
+ </summary>
+ <returns>System.Data.DataSet</returns>    ''' <remarks>by Sharon.Du on 2015-07-14</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PubPatientBodyRecordqueryPubPatientBodyrecordByCond(System.String,System.String,System.String)">
+ <summary>
+ 以病歷號、來源別、登錄單位查詢
+ </summary>
+ <returns>System.Data.DataSet</returns>    ''' <remarks>by Sharon.Du on 2015-07-14</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PubPatientBodyRecordinsert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>    ''' <remarks>by Sharon.Du on 2015-07-14</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PubPatientBodyRecordupdate(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>    ''' <remarks>by Sharon.Du on 2015-07-14</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PubOrderqueryByOrderCode(System.String,System.String,System.String)">
+ <summary>
+ 查詢醫令項目基本檔   
+ </summary>
+ <param name="strOrderCode">醫令項目碼</param>
+ <param name="dc">Y、N，空字串表示不判斷</param>
+ <param name="judgeDate" >yyyy/MM/dd，空字串表示不判斷，判斷日當天仍有效的Order</param>
+ <remarks>by Sean.Lin on 2015-07-27</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBReportAlarminsert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>    ''' <remarks>by Hsiao.Kaiwen on 2015-08-07</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBReportAlarmupdate(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>    ''' <remarks>by Hsiao.Kaiwen on 2015-08-07</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBReportAlarmdelete(System.String@)">
+ <summary>
+ 刪除
+ </summary>
+ <returns>Integer</returns>    ''' <remarks>by Kaiwen,Hsiao on 2015-07-10</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBReportAlarmQueryByLikeColumn(System.String,System.String,System.String,System.String)">
+ <summary>
+ 查詢報表列印記錄檔
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Kaiwen,Hsiao on 2015-07-10</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBReportAlarmQueryByPK(System.String)">
+ <summary>
+ 查詢PK資料
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Kaiwen,Hsiao on 2015-07-10</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBReportAlarmQueryReportId">
+ <summary>
+ 查詢報表ID-初始化Combobox
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Kaiwen,Hsiao on 2015-07-10</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBReportAlarmCountQuery(System.String)">
+ <summary>
+ 查詢 Alarm Count
+ </summary>
+ <returns>Integer</returns>    ''' <remarks>by Kaiwen,Hsiao on 2015-07-10</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.QueryInOneYearAdmonishRecord(System.String@)">
+ <summary>
+ 查詢該病患最近一年內的勸戒之記錄
+ </summary>
+ <returns>DataSet</returns> 
+ <remarks>by ChenYu.Guo on 2015-08-12</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBPatientPersonalHabitsinsert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by ChenYu.Guo on 2015-10-11</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBPatientPersonalHabitsupdate(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by ChenYu.Guo on 2015-10-11</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBPatientPersonalHabitsqueryByPK(System.String@)">
+ <summary>
+ 查詢
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by ChenYu.Guo on 2015-10-11</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.QueryTodayPatientTOCCRecord(System.String@)">
+ <summary>
+ 查詢是否存在該患當日之記錄
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by ChenYu.Guo on 2015-08-12</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBPatientTOCCinsert(System.Data.DataSet)">
+ <summary>
+ 新增TOCC問卷結果
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Chen.Yu on 2015-08-14</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBPatientTOCCupdate(System.Data.DataSet)">
+ <summary>
+ 修改TOCC問卷結果
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by ChenYu.Guo on 2015-10-05</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.getApServerSystemDateTime">
+ <summary>
+ 取得APP 伺服器系統日期時間
+ </summary>
+ <returns>伺服器系統日期時間 </returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.queryPUBZoneRoomForMissMeal(System.String)">
+ <summary>
+ queryPUBZoneRoomForMissMeal
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by ChenYu.Guo on 2015-08-21</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBConfigQueryExpandWeek">
+ <summary>
+ 查診展班週數
+ </summary>
+ <returns>DataSet</returns>    ''' <remarks>by ChenYu.Guo on 2015-09-10</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.Get_PharmacyBase(System.String@)">
+ <summary>
+ 取得藥品名稱自動搜尋視窗的藥品資料
+ </summary>
+ <returns>DataTable</returns>
+ <remarks>by ChenYu.Guo on 2015-09-29</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.Get_PharmacyClassAndCompositionAndATC(System.String,System.String)">
+ <summary>
+ 取得藥品分類、藥品成份、ATC碼自動搜尋視窗的藥品資料(原Get_PharmacyClass)
+ </summary>
+ <returns>DataTable</returns>
+ <remarks>by ChenYu.Guo on 2015-09-29</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBConfigQueryTOCCCloseWindows">
+ <summary>
+ 查詢TOCC關閉視窗之控制
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by ChenYu.Guo on 2015-10-05</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.queryPUBPatientAllergyByCond(System.String@)">
+ <summary>
+ 過敏藥品查詢
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-10-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBMedicalTypequery(System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.String@,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32@,System.Int32,System.Int32,System.Int32)">
+ <summary>
+ 一般查詢
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-11-11</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBMedicalTypedelete(System.String@)">
+ <summary>
+ 刪除
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-11-11</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBMedicalTypeinsert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-11-11</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBMedicalTypeupdate(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2015-11-11</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBMedicalTypequeryAll">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-11-11</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBMedicalTypequeryCboData">
+ <summary>
+ 取得Cbo資料
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Eddie,Lu on 2015-11-11</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.querySyscodeByTypeIds(System.Int32[])">
+ <summary>
+ 找多個TypeId的syscode
+ </summary>
+ <param name="TypeIds"></param>
+ <returns></returns>
+ <remarks>Add by Jen</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.QueryAdd(System.String)">
+ <summary>
+ 兒童加成查詢
+ </summary>
+ <param name="Order_Code"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.QueryAdd_EMG(System.String)">
+ <summary>
+ 急件加成查詢
+ </summary>
+ <param name="Order_Code"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.QueryAdd_Dental(System.String)">
+ <summary>
+ 牙科轉診加成查詢
+ </summary>
+ <param name="Order_Code"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.QueryAdd_Dept(System.String)">
+ <summary>
+ 科別加成查詢
+ </summary>
+ <param name="Order_Code"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.UpdateAddOrder(System.Data.DataSet)">
+ <summary>
+ InsertTo AddOrderDT/AddOrderDetailDT 
+ </summary>
+ <param name="ds"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.deleteAddOrder(System.String)">
+ <summary>
+ Delete AddOrderDT/AddOrderDetailDT 
+ </summary>
+ <param name="addOrderCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBPatientDNRinsertWithDNRNo(System.Data.DataSet)">
+ <summary>
+ 新增With DNR流水號
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2016-05-20</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBPatientDNRqueryByPKROC(System.String@,System.String@)">
+ <summary>
+ 以ＰＫ查詢資料
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2016-05-20</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBPatientDNRdelete(System.String@,System.String@,System.Int32@)">
+ <summary>
+ 以ＰＫ刪除資料
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2016-05-20</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBPatientDNRqueryCboDs">
+ <summary>
+ 取得ComboBox資料
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Eddie,Lu on 2016-05-20</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBPatientDNRupdate(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2016-05-20</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBPatFlagSortdelete(System.String@)">
+ <summary>
+ 以ＰＫ刪除資料
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2016-05-20</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBPatFlagSortqueryByPKROC(System.String@,System.String@)">
+ <summary>
+ 以ＰＫ查詢資料
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Eddie,Lu on 2016-05-20</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBPatFlagSortqueryCboDs">
+ <summary>
+ 取得ComboBox資料
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Eddie,Lu on 2016-05-20</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBPatFlagSortinsert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2016-05-20</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBPatFlagSortupdate(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Eddie,Lu on 2016-05-20</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBRulequeryRuleNameByCode(System.String)">
+ <summary>
+ 取得中文名稱
+ </summary>
+ <param name="strSQL"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PubHospitalqueryByNow">
+ <summary>
+ 查詢透析院所代號
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by ChenYu.Guo on 2016-06-07</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PubPatientBodyrecordQueryByChartNo(System.String@)">
+ <summary>
+ 通過Chart_No查詢PUB_Patient_BodyRecord中[Measure_Time]最近的一筆紀錄
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by ChenYu.Guo on 2016-06-07</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PubSyscodeQueryByTypeId(System.Int32@)">
+ <summary>
+ 以 Type_Id 查詢資料
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Gary on 2016-05-16</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PubPatientAllergyqueryTopByChartNo(System.String@)">
+ <summary>
+ 通過Chart_No查詢PUB_Patient_Allergy的資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PubIssItemInsert(System.Data.DataSet@)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Will on 2016-06-17</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PubIssItemUpdate(System.Data.DataSet@)">
+ <summary>
+ 更新
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Will on 2016-06-17</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PubIssItemQueryAll">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Will on 2016-06-17</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBPatientISSBOqueryByPK(System.String@,System.String@)">
+ <summary>
+ 查詢最近一筆評分資料
+ </summary>
+ <param name="pk_Chart_No"></param>
+ <param name="pk_Medical_Sn"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBPatientISSDelete(System.String,System.Data.IDbConnection@)">
+ <summary>
+ 刪除
+ </summary>
+ <param name="Medical_Sn"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PubPatient_BodyRecordUpdateHBbyChartNoForMohw(System.Data.DataSet)">
+ <summary>
+ 入院護理評估的身高體重塞入PUB_Patient_BodyRecord
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Kasim on 20160623</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.insertPubStation(System.Data.DataSet)">
+ <summary>
+ 新增護理站基本檔資料
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Hanru on 2016-06-29</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.updatePubStation(System.Data.DataSet)">
+ <summary>
+ 修改護理站基本檔資料
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Hanru on 2016-06-29</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.deletePubStation(System.String@)">
+ <summary>
+ 刪除護理站基本檔資料
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Hanru on 2016-06-29</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.queryPubStationByCond(System.String)">
+ <summary>
+ 查詢護理站基本檔資料
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Hanru on 2016-06-29</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.getInitialOrderExamNoCheckinDept(System.String)">
+ <summary>
+ 取得門急住個別的不需報到科別
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Jun on 2016-06-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBOrderExamNocheckinDeptinsert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Jun on 2016-06-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBOrderExamNocheckinDeptdelete(System.String@)">
+ <summary>
+ 刪除
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Jun on 2016-06-30</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBLabIndication04QureyPUBLabIndication04">
+ <summary>
+ 特殊屬性輸入元件
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Margaret.Tsai on 2016-07-15</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.updatePatContactInfo(System.Data.DataSet)">
+ <summary>
+更新病人聯絡資料
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBAccDeptinsert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Chi,Wang on 2016-08-25</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBAccDeptupdate(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Chi,Wang on 2016-08-25</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.QueryPubAccDeptByPK(System.String)">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Chi,Wang on 2016-08-25</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBAccDeptDelete(System.String)">
+ <summary>
+ 刪除
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Chi,Wang on 2016-08-25</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.QueryPubAccDeptName(System.Data.IDbConnection@)">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by 林承毅 on 2016-09-19</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBNhiCodeImportBOE1ImportCase(System.Data.DataSet,System.String,System.String)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Chi,Wang on 2016-09-19</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBNhiCodeImportBOE1importorderprice(System.Data.DataSet,System.String)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Chi,Wang on 2016-09-19</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBNhiCodeImportBOE1query(System.String,System.String,System.String)">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Chi,Wang on 2016-09-19</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.queryOrderAlternativeForOEIOtherLack(System.String)">
+ <summary>
+ 尋找停用醫令替代項目
+ </summary>
+ <param name="OrderCode"></param>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Will Lin 2016/10/01 </remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.queryPUBOrderDC(System.String)">
+ <summary>
+ 查詢被DC的醫令
+ </summary>
+ <param name="inOrderCode"></param>
+ <returns></returns>
+ <remarks>by Will Lin 2016/10/01 </remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.queryUserMappingPUBSheet(System.String)">
+ <summary>
+ 查詢登入使用者可用的表單類別
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Jun 2016/10/04 </remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.queryUserMappingApparatusCode(System.String)">
+ <summary>
+ 查詢登入使用者可用的表單對應儀器
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Jun 2016/10/04 </remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBMaterialSelfpayApplyinsert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Hsiao,Kaiwen on 2016-12-15</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBMaterialSelfpayApplyupdate(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Hsiao,Kaiwen on 2016-12-15</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBMaterialSelfpayApplyDelete(System.String,System.String)">
+ <summary>
+ 刪除
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Hsiao,Kaiwen on 2016-12-15</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.queryPubMaterialSelfpayApplyByPK(System.String,System.String)">
+ <summary>
+ 以ＰＫ查詢資料
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Hsiao,Kaiwen on 2016-12-15</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.queryPubMaterialSelfpayApplyByPKLike(System.String,System.String)">
+ <summary>
+ 以ＰＫ Like 查詢資料
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Hsiao,Kaiwen on 2016-12-15</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBNhiCodeImportMImportCase(System.Data.DataSet,System.String,System.String)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Chi,Wang on 2017-02-23 </remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBNhiCodeImportMimportorderprice(System.Data.DataSet,System.String)">
+ <summary>
+ 修改
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Chi,Wang on 2017-02-23 </remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBNhiCodeImportMquery(System.String,System.String,System.String)">
+ <summary>
+ 查詢全部
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Chi,Wang on 2017-02-23 </remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.InsertIntoPUBPatientTransferRisk(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>System.Data.Integer</returns>
+ <remarks>by Will,Lin on 2017-03-21</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.QueryPUBPatientTransferRiskLevel(System.String,System.String)">
+ <summary>
+ 查詢
+ </summary>
+ <returns>System.Data.String</returns>
+ <remarks>by Will,Lin on 2017-03-21</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.InsertPubMedicalTypeSort(System.String)">
+ <summary>
+ 新增
+ </summary>
+ <returns>System.Data.Integer</returns>
+ <remarks>by Chi,Wang on 2017-04-06</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.QueryPubMedicalTypeSort(System.String)">
+ <summary>
+ 查詢
+ </summary>
+ <returns>System.Data.String</returns>
+ <remarks>by Chi,Wang on 2017-04-06</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.DeletePubMedicalTypeSort(System.String)">
+ <summary>
+ 刪除
+ </summary>
+ <returns>System.Data.Integer</returns>
+ <remarks>by Chi,Wang on 2017-04-06</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.UpdatePubMedicalTypeSort(System.Data.DataSet,System.String)">
+ <summary>
+ 修改
+ </summary>
+ <returns>System.Data.Integer</returns>
+ <remarks>by Chi,Wang on 2017-04-06</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.getInitialOrderExamNoPrintDept(System.String)">
+ <summary>
+ 取得門急住個別的不需列印科別
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Michelle on 2017-04-13</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBOrderExamNoPrintDeptdelete(System.String@)">
+ <summary>
+ 刪除
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Michelle on 2017-04-13</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IPubServiceManager_T.PUBOrderExamNoPrintDeptinsert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Michelle on 2017-04-13</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IRptServiceManager_T.getPrinterName(System.String,System.Int32,System.Object)">
+ <summary>
+ 取得印表機名稱
+ Add By Jen
+ </summary>
+ <param name="id"></param>
+ <param name="type"></param>
+ <param name="con"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IRptServiceManager_T.getReportID">
+ <summary>
+ 取得報表ID
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IUclServiceManager_T.UclHintDataBOinsert(System.Data.DataSet)">
+ <summary>
+ 新增
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Sean.Lin on 2013-2-23</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IUclServiceManager_T.UclHintDataBOqueryByPK(System.String@,System.Int32@)">
+ <summary>
+ 以ＰＫ查詢資料
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Sean.Lin on 2013-2-23</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IUclServiceManager_T.UclHintDataBOdelete(System.String@,System.Int32@)">
+ <summary>
+ 以ＰＫ刪除資料
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Sean.Lin on 2013-2-23</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IUclServiceManager_T.UclHintDataBOupdate(System.Data.DataSet)">
+ <summary>
+ 更新資料庫內容
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Sean.Lin on 2013-2-23</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IUclServiceManager_T.UclHintDataBOqueryData(System.String)">
+ <summary>
+ 查詢提示資料
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Sean.Lin on 2013-2-23</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IUclServiceManager_T.UclHintDataBOqueryDataAll">
+ <summary>
+ 查詢提示資料全部
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Sean.Lin on 2013-3-6</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IUclServiceManager_T.queryOMOPhraseForUCL(System.String,System.String,System.String,System.String)">
+ <summary>
+ 片語查詢
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>by Alan.Tsai on 2015-4-10</remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IUclServiceManager_T.QueryPrintCondition(System.Collections.Generic.Dictionary{System.String,System.Object})">
+ <summary>
+ 查詢 Print Condition
+ </summary>
+ <param name="Param">查詢參數</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.Servicefactory.IUclServiceManager_T.GetLoginUserPrintCond(System.Collections.Generic.Dictionary{System.String,System.Object})">
+ <summary>
+ 取得登入者Term_Code所囑之Print Condition
+ </summary>
+ <param name="Param"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+</members>
+</doc>

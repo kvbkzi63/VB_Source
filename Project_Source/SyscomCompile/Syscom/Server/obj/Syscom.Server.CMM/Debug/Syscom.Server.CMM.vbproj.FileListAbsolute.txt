@@ -1,0 +1,9 @@
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Server\obj\Syscom.Server.CMM\Debug\Syscom.Server.CMM.vbprojResolveAssemblyReference.cache
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Server\obj\Syscom.Server.CMM\Debug\Syscom.Server.CMM.Resources.resources
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Server\obj\Syscom.Server.CMM\Debug\Syscom.Server.CMM.vbproj.GenerateResource.Cache
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Server\obj\Syscom.Server.CMM\Debug\Syscom.Server.CMM.dll
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Server\obj\Syscom.Server.CMM\Debug\Syscom.Server.CMM.xml
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Server\obj\Syscom.Server.CMM\Debug\Syscom.Server.CMM.pdb
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Server\Syscom.Server.CMM.dll
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Server\Syscom.Server.CMM.pdb
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Server\Syscom.Server.CMM.xml

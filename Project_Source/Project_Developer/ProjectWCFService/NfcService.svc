@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="VB" Debug="true" Service="NfcService" CodeBehind="~/App_Code/System/NfcService.vb" %>

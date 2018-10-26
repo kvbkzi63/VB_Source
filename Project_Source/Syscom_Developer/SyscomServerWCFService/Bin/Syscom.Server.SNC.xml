@@ -1,0 +1,225 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Syscom.Server.SNC
+</name>
+</assembly>
+<members>
+<member name="T:Syscom.Server.SNC.My.Resources.Resources">
+<summary>
+  用於查詢當地語系化字串等的強類型資源類別。
+</summary>
+</member>
+<member name="P:Syscom.Server.SNC.My.Resources.Resources.ResourceManager">
+<summary>
+  傳回這個類別使用的快取的 ResourceManager 執行個體。
+</summary>
+</member>
+<member name="P:Syscom.Server.SNC.My.Resources.Resources.Culture">
+<summary>
+  覆寫目前執行緒的 CurrentUICulture 屬性，對象是所有
+  使用這個強類型資源類別的資源查閱。
+</summary>
+</member>
+<member name="M:Syscom.Server.SNC.AbstractFactory.getSerialNo(Syscom.Server.SNC.AbstractFactory.SncType,System.String,System.Int32,System.Int32,System.Int32,System.Data.IDbConnection)">
+ <summary>
+ 取得序號
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.SNC.CmmSerialNoFactory.#ctor">
+ <summary>
+ 阻止外部直接進行新建立的宣告
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Server.SNC.CmmSerialNoFactory.getInstance">
+ <summary>
+ 屬性取得類別實體
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:Syscom.Server.SNC.CmmSerialNoFactory.Nested">
+ <summary>
+ 巢狀類別存放建立的類別實體
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.SNC.CmmSerialNoFactory.getSerialNo(Syscom.Server.SNC.AbstractFactory.SncType,System.String,System.Int32,System.Int32,System.Int32,System.Data.IDbConnection)">
+ <summary>
+ 取得序號
+ </summary>
+ <param name="Type">A:日循環 B:月循環 C:年循環 D:不循環直到最大號 </param>
+ <param name="Key">識別系統與資訊的值</param>
+ <param name="MinNo">最小號，default 給 1</param>
+ <param name="MaxNo">建議給99999999，沒有限制最大號給 -1</param>
+ <param name="Inc">兩次號碼之間增加的數值</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.SNC.MmrJumpSerialNoFactory.getMMRSerialNo(System.Int32@,System.Data.IDbConnection)">
+ <summary>
+ 一次取得連續序號
+ </summary>
+ <param name="Inc">每次增加的數量</param>
+ <returns>給連續序號的第一個值</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.SNC.RefApiSequentialNoFactory.getUSYearMonthTypeBSerialNo(System.String,System.Data.IDbConnection)">
+ <summary>
+  西元年月 + 序列號
+ </summary>
+ <param name="strVKey"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.SNC.RefApiSequentialNoFactory.getCNCGEFLUP_SN(System.String,System.String,System.String,System.Data.IDbConnection)">
+ <summary>
+  西元年+月+日+指導類別+檔案類型+序號
+ </summary>
+ <param name="strVKey"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.SNC.SchUpdateRecordSnFactory.getSerialNo">
+ <summary>
+ 取得Sch_Update_Record序號
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.SNC.SerialNoServiceClient.#ctor">
+ <summary>
+ 阻止外部直接進行新建立的宣告
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Server.SNC.SerialNoServiceClient.getInstance">
+ <summary>
+ 屬性取得類別實體
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:Syscom.Server.SNC.SerialNoServiceClient.Nested">
+ <summary>
+ 巢狀類別存放建立的類別實體
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.SNC.SerialNoServiceClient.getSerialNo(Syscom.Server.SNC.AbstractFactory.SncType,System.String,System.Int32,System.Int32,System.Int32,System.Data.IDbConnection)">
+ <summary>
+ 取得序號
+ </summary>
+ <param name="vType">A:日循環 B:月循環 C:年循環 D:不循環直到最大號 </param>
+ <param name="vKey">識別系統與資訊的值</param>
+ <param name="vMinNo">最小號，default 給 1</param>
+ <param name="vMaxNo">建議給99999999，沒有限制最大號給 -1</param>
+ <param name="vInc">兩次號碼之間增加的數值</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.SNC.SNCDelegate.#ctor">
+ <summary>
+ 阻止外部直接進行新建立的宣告
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Server.SNC.SNCDelegate.getInstance">
+ <summary>
+ 屬性取得類別實體
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:Syscom.Server.SNC.SNCDelegate.Nested">
+ <summary>
+ 巢狀類別存放建立的類別實體
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.SNC.SNCDelegate.getCmmSerialNoTx(Syscom.Server.SNC.AbstractFactory.SncType,System.String,System.Int32,System.Int32,System.Data.IDbConnection,System.Int32)">
+ <summary>
+ 加入交易，代表執行失敗不跳號處理
+ </summary>
+ <param name="Type">A:日循環 B:月循環 C:年循環 D:不循環直到最大號 </param>
+ <param name="Key">識別系統與資訊的值</param>
+ <param name="MinNo">最小號，default 給 1</param>
+ <param name="MaxNo">建議給99999999，沒有限制最大號給 -1</param>
+ <returns>序號</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.SNC.SNCDelegate.getCmmSerialNo(Syscom.Server.SNC.AbstractFactory.SncType,System.String,System.Int32,System.Int32,System.Int32)">
+ <summary>
+ 執行失敗仍會跳號處理
+ </summary>
+ <param name="Type">A:日循環 B:月循環 C:年循環 D:不循環直到最大號 </param>
+ <param name="Key">識別系統與資訊的值</param>
+ <param name="MinNo">最小號，default 給 1</param>
+ <param name="MaxNo">建議給99999999，沒有限制最大號給 -1</param>
+ <returns>序號</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.SNC.SNCDelegate.getFileSerialNo">
+ <summary>
+ 取得檔案編號 FID
+ </summary>
+ <returns>流水號</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.SNC.SNCDelegate.getReportSerialNo">
+ <summary>
+ 取得報表編號 RID
+ </summary>
+ <returns>流水號</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.SNC.SNCDelegate.getRequestNo(System.String,System.String)">
+ <summary>
+ 取得檢驗單號
+ </summary>
+ <param name="vSectionName"></param> --I:住院  O:門診   E:急診   H:健檢
+ <param name="vSoureKind"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.SNC.SNCDelegate.getTWYearApiSequentialNo(System.String)">
+ <summary>
+ REF API sequential number generator.
+ Fail 會跳號
+ </summary>
+ <param name="strVKey">標定 Label,表標示</param>
+ <returns></returns>
+ <remarks>獲取民國年 + 序列號</remarks>
+</member>
+<member name="M:Syscom.Server.SNC.SNCDelegate.getMmrSerialNo(System.Int32)">
+ <summary>
+ MMR 系統一次取得連續序號
+ </summary>
+ <param name="Inc">每次增加的數量</param>
+ <returns>給連續序號的第一個值</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.SNC.SNCDelegate.getSchUpdateRecordSn">
+ <summary>
+ 取得Sch_Update_Record 用之流水序號
+ </summary>
+ <returns>serial number</returns>
+ <remarks></remarks>
+ <author>Ken</author>
+</member>
+<member name="M:Syscom.Server.SNC.SNCDelegate.getOrderRuleORD">
+ <summary>
+ "重覆醫令"用序號機
+ </summary>
+ <returns>組好之Rule Code</returns>
+ <remarks></remarks>
+</member>
+</members>
+</doc>

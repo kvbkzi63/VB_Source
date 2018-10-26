@@ -1,0 +1,1325 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Syscom.Client.HCA
+</name>
+</assembly>
+<members>
+<member name="T:Syscom.Client.HCA.My.Resources.Resources">
+<summary>
+  用於查詢當地語系化字串等的強類型資源類別。
+</summary>
+</member>
+<member name="P:Syscom.Client.HCA.My.Resources.Resources.ResourceManager">
+<summary>
+  傳回這個類別使用的快取的 ResourceManager 執行個體。
+</summary>
+</member>
+<member name="P:Syscom.Client.HCA.My.Resources.Resources.Culture">
+<summary>
+  覆寫目前執行緒的 CurrentUICulture 屬性，對象是所有
+  使用這個強類型資源類別的資源查閱。
+</summary>
+</member>
+<member name="T:Syscom.Client.HCA.CSPAPI">
+ <summary>
+ DotNetCSPAPI(非IC卡符記憑證介面)
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.CSPAPI.gHCAAPISetting">
+ <summary>
+ HCA API 設定
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.CSPAPI.gCardInfo">
+ <summary>
+ 簽章憑證資訊(憑證有效開始日期和憑證有效結束日期)
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.CSPAPI.gDateTimeFormat">
+ <summary>
+ 日期時間格式
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.CSPAPI.gCSP">
+ <summary>
+ RSA Service Provider
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Client.HCA.CSPAPI.GetCertExpirationDate">
+ <summary>
+ 取得簽章憑證有效開始日期和憑證有效結束日期
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.CSPAPI.GetSignCert">
+ <summary>
+  取得簽章憑證
+ </summary>
+ <returns>簽章憑證</returns>
+ <remarks>
+ 根據憑證序號至個人憑證區中取得簽章憑證的資訊
+ </remarks>
+</member>
+<member name="M:Syscom.Client.HCA.CSPAPI.GetCardInfo">
+ <summary>
+ 取得卡片資訊，包含發卡日期、卡片生效日、卡片結束日
+ </summary>
+ <returns>CardInfo:發卡日期、卡片生效日、卡片結束日</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.CSPAPI.GetCardSerialNum">
+ <summary>
+ 取得卡片序號
+ </summary>
+ <returns>卡片序號</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.CSPAPI.SignXmlFile(System.String)">
+ <summary>
+ 簽章
+ </summary>
+ <param name="fileName">原始簽章檔案完整名稱(路徑+名稱)</param>
+ <returns>簽章時戳時間</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.CSPAPI.SignXml(System.String,System.String,System.String)">
+ <summary>
+ 簽章
+ </summary>
+ <param name="InFile">簽章資料檔</param>
+ <param name="signedFile">簽章檔</param>
+ <param name="XmlSignatureId">簽章文件編號</param>
+ <returns>簽章時間</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.CSPAPI.GetDigestValue(System.Security.Cryptography.X509Certificates.X509Certificate2,System.Byte[])">
+ <summary>
+ 取得Digest Value
+ </summary>
+ <param name="SignCert">簽章憑證</param>
+ <param name="byteXmlDoc">XML資料</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.CSPAPI.GetSignatureValue(System.Byte[])">
+ <summary>
+ 取得簽章值
+ </summary>
+ <param name="byteSignedInfo">簽章資料</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.CSPAPI.VerifySignatureXmlFile(System.String)">
+ <summary>
+ 驗章XML檔案
+ </summary>
+ <param name="SignatureFile">已簽章XML(路徑+檔名)</param>
+ <returns>
+ 0:表示成功
+ 非0:表示錯誤訊息
+ </returns>
+ <remarks>
+ 1.驗證原文Hash的資料
+ 2.驗證SignedInfo的Hash的資料
+ 若1和2都成功表示驗章成功
+ </remarks>
+</member>
+<member name="M:Syscom.Client.HCA.CSPAPI.GetCertificateRawDataFromKeyInfoToX509(System.Security.Cryptography.Xml.SignedXml)">
+ <summary>
+ 取得憑證未經處理的資料(憑證資料)
+ </summary>
+ <param name="_signedXml"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.CSPAPI.GetTimeStamp(System.Byte[])">
+ <summary>
+ 從時戳伺服器取得簽章時戳
+ </summary>
+ <param name="signedData">簽章資料</param>
+ <returns>
+ 1:簽章時間
+ 2:Base64String簽章時戳資料
+ </returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.CSPAPI.GetTSTime(System.Byte[],System.Boolean)">
+ <summary>
+ 取得簽章時戳時間
+ </summary>
+ <param name="TSInfo">時戳資訊</param>
+ <param name="IsConvertGMTToLocal">是否要將GMT時間轉換為本地時間</param>
+ <returns>時戳時間(yyyy-MM-dd HH:mm:ss.ttt)</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCAAPIFactory.CreateHCAAPI(System.Int32)">
+ <summary>
+ 建立HCAAPI類別
+ </summary>
+ <param name="pHCAAPIType">API類型</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.SignedXmlFolder">
+ <summary>
+ 簽章文件存放位置
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.TSAddress">
+ <summary>
+ Time Server位置
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.TSAPort">
+ <summary>
+ Time Server Port
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.SignedTimeFormat">
+ <summary>
+ 簽章時間格式--yyyyMMddHHmm
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.SignedTimeFormatByTS">
+ <summary>
+ 時戳時間格式
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.XAdESESTIUrl">
+ <summary>
+ XAdES ESTI URI
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.DSPrefix">
+ <summary>
+ ds prefix
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.XAdESPrefix">
+ <summary>
+ XAdES prefix
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.cdpPrefix">
+ <summary>
+ cdp Prefix
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.cdpNamespaceUrl">
+ <summary>
+ cdp Namespace Url
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.xmimePrefix">
+ <summary>
+ xmime Prefix
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.xmimeNamespaceUrl">
+ <summary>
+ xmime Namespace Url
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.xsiPrefix">
+ <summary>
+ xsi Prefix
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.xsiNamespaceUrl">
+ <summary>
+ xsi Namespace Url
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.nsPrefix">
+ <summary>
+ ns Prefix
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.nsNamespaceUrl">
+ <summary>
+ ns Namespace Url
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:Syscom.Client.HCA.HCAAPISetting.HCAAPITypes">
+ <summary>
+ HCAAPI類別
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.HCAAPITypes.HCAAPI">
+ <summary>
+ 一般卡機(PC/SC)
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.HCAAPITypes.HCACSAPI">
+ <summary>
+ 健保卡機
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.HCAAPITypes.CSPAPI">
+ <summary>
+ 非IC卡符記憑證(軟體憑證)
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:Syscom.Client.HCA.HCAAPISetting.CardType">
+ <summary>
+ 卡別
+ </summary>
+ <remarks>
+ </remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.CardType.MIC">
+ <summary>
+ 1.0醫事機構卡
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.CardType.MPC">
+ <summary>
+ 1.0醫事人員卡
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.CardType.MIC2">
+ <summary>
+ 2.0醫事機構卡
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.CardType.MPC2">
+ <summary>
+ 2.0醫事人員卡
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.CardType.CSP">
+ <summary>
+ 非IC卡符記軟體憑證
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:Syscom.Client.HCA.HCAAPISetting.TSInfoType">
+ <summary>
+ 時戳資訊類別
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.TSInfoType.Time">
+ <summary>
+ 時戳時間
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.TSInfoType.TSInfo">
+ <summary>
+ 時戳資訊
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:Syscom.Client.HCA.HCAAPISetting.MICBasicInfo">
+ <summary>
+ 醫事機構卡基本資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.MICBasicInfo.MICCardVersion">
+ <summary>
+ 卡片版本(1.0,2.0)
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.MICBasicInfo.MICCardTypeAtti">
+ <summary>
+ 卡片類型(醫事機構卡)
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.MICBasicInfo.MICCode">
+ <summary>
+ 醫事機構代碼
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.MICBasicInfo.MICName">
+ <summary>
+ 醫事機構名稱
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.MICBasicInfo.MICCardTimes">
+ <summary>
+ 卡次
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.MICBasicInfo.MICCardKind">
+ <summary>
+ 醫事機構種類
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.MICBasicInfo.MICCardType">
+ <summary>
+ 醫事機構類型
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.MICBasicInfo.MICCardAddress">
+ <summary>
+ 醫事機構地址
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.MICBasicInfo.MICTel">
+ <summary>
+ 醫事機構聯絡電話
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.MICBasicInfo.MICOwner">
+ <summary>
+ 醫事機構擁有者
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:Syscom.Client.HCA.HCAAPISetting.MPCBasicInfo">
+ <summary>
+ 醫事人員卡基本資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.MPCBasicInfo.MPCCardVersion">
+ <summary>
+ 卡片版本(1.0,2.0)
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.MPCBasicInfo.MPCCardTypeAtti">
+ <summary>
+ 卡片類型(醫事人員卡)
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.MPCBasicInfo.MPCCNName">
+ <summary>
+ 醫事人員中文姓名
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.MPCBasicInfo.MPCENName">
+ <summary>
+ 醫事人員英文姓名
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.MPCBasicInfo.MPCSex">
+ <summary>
+ 醫事人員性別
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.MPCBasicInfo.MPCBirthday">
+ <summary>
+ 醫事人員出生日期
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.MPCBasicInfo.MPCIdNo">
+ <summary>
+ 醫事人員身份證號
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.MPCBasicInfo.MPCType">
+ <summary>
+ 醫事人員類別
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:Syscom.Client.HCA.HCAAPISetting.SignConfigSetting">
+ <summary>
+ 簽章設定檔資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.SignConfigSetting.BGSignLimit">
+ <summary>
+ 背景簽章時間限制(例如:24表示24小時內建立的病歷允許背景簽章)
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.SignConfigSetting.SignInterval">
+ <summary>
+ 背景簽章間隔秒數
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.SignConfigSetting.TSInfoByInside">
+ <summary>
+ 院內簽章是否要取時戳伺服器(Y/N)
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.SignConfigSetting.TimeStampServer">
+ <summary>
+ 時戳伺服器IP(多個用分號格開)
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.SignConfigSetting.TSSPort">
+ <summary>
+ 時戳伺服器Port
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.SignConfigSetting.SignPageSize">
+ <summary>
+ 背景簽章每次查詢的筆數
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.SignConfigSetting.SignOvertimeByHosp">
+ <summary>
+ 文件建立超過X小時未簽章,使用醫事機構卡代替簽章(例如:18,表示文件建立超過18小時未簽章)
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.SignConfigSetting.SystemDate">
+ <summary>
+ 系統日期(yyyy/MM/dd)
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.SignConfigSetting.SignCertSerialNumber">
+ <summary>
+ 非IC卡符記憑證序號
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.SignConfigSetting.SignCertName">
+ <summary>
+ 非IC卡符記憑證名稱
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.SignConfigSetting.MOHWHospCode">
+ <summary>
+ 醫事機構代號
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.SignConfigSetting.SignMachineIPByCSP">
+ <summary>
+ 允許使用非IC卡符記簽章的機器IP(若是多台用分號區隔)
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:Syscom.Client.HCA.HCAAPISetting.CardInfo">
+ <summary>
+ 卡片資訊
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.CardInfo.CardIssuingDate">
+ <summary>
+ 發卡日期(yyyMMdd)
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.CardInfo.CardEffectiveDate">
+ <summary>
+ 卡片生效日(yyyMMdd)
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPISetting.CardInfo.CardEndDate">
+ <summary>
+ 卡片結束日(yyyMMdd)
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCAAPITypes.CERT_EXPIRED">
+ <summary>
+ 憑證已過期
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Client.HCA.HCAAPITypes.SignConfigSetting">
+ <summary>
+ 簽章設定檔
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Client.HCA.HCAAPITypes.CardKeySize">
+ <summary>
+ 卡片金鑰長度
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCAAPITypes.GetCardSerialNum">
+ <summary>
+ 取得卡片序號
+ </summary>
+ <returns>卡片序號</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCAAPITypes.GetCardInfo">
+ <summary>
+ 取得卡片資訊，包含發卡日期、卡片生效日、卡片結束日
+ </summary>
+ <returns>CardInfo:發卡日期、卡片生效日、卡片結束日</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCAAPITypes.VerifyPIN(System.String)">
+ <summary>
+ 驗證PIN碼
+ </summary>
+ <param name="PINCode">PIN碼</param>
+ <returns>如果回傳值不等於0，請查詢錯誤代碼表</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCAAPITypes.GetCardBasicInfo">
+ <summary>
+ 取得卡片基本資料
+ </summary>
+ <returns>卡片基本資料</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCAAPITypes.SignXmlFile(System.String)">
+ <summary>
+ 簽章
+ </summary>
+ <param name="fileName">原始簽章檔案完整名稱(路徑+名稱)</param>
+ <returns>簽章時戳時間</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCAAPITypes.VerifySignatureXmlFile(System.String)">
+ <summary>
+ 驗章XML檔案
+ </summary>
+ <param name="SignatureFile">已簽章XML(路徑+檔名)</param>
+ <returns>
+ 0:表示成功
+ 非0:表示錯誤訊息
+ </returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCAAPITypes.ClosePortAndModule">
+ <summary>
+ 關閉連接埠和模組
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCAAPITypes.CheckReaderDriver">
+ <summary>
+ 檢查Reader元件版本是否正確
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCAAPITypes.CheckReaderDriverAndGetKeySize">
+ <summary>
+ 檢查Reader元件版本是否正確，並傳回卡片金鑰長度
+ </summary>
+ <returns>卡片金鑰長度</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCAAPITypes.CheckCardIsValid(System.DateTime@)">
+ <summary>
+ 檢查卡片有效日期是否有效和卡片是否作廢
+ </summary>
+ <param name="NowDate">現在時間(yyyy/MM/dd)</param>
+ <returns>0:有效，5011:卡片憑證已過期</returns>
+ <remarks></remarks>
+</member>
+<member name="T:Syscom.Client.HCA.HCACSAPI">
+ <summary>
+ HCACSAPI(健保讀卡機專用介面)
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:Syscom.Client.HCA.HCACSAPI.gKeySize">
+ <summary>
+ 金鑰長度(128代表1024 Bits金鑰；256代表2048 Bits金鑰)
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCACSAPI.GetErrorMsg(System.Int32)">
+ <summary>
+ 擷取錯誤訊息函數
+ </summary>
+ <param name="nErrorCode">為函數回傳值的錯誤代碼</param>
+ <returns>錯誤代碼代表的錯誤訊息</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCACSAPI.GetErrorMsgByErrorCode(System.Int32)">
+ <summary>
+ 依據錯誤代碼取得錯誤訊息
+ </summary>
+ <param name="nError">錯誤代碼</param>
+ <returns>錯誤訊息</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCACSAPI.GetCardSerialNum">
+ <summary>
+ 取得卡片序號
+ </summary>
+ <returns>卡片序號</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCACSAPI.GetCardInfo">
+ <summary>
+ 取得卡片資訊，包含發卡日期、卡片生效日、卡片結束日
+ </summary>
+ <returns>CardInfo:發卡日期、卡片生效日、卡片結束日</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCACSAPI.SignXmlFile(System.String)">
+ <summary>
+ 簽章
+ </summary>
+ <param name="fileName">原始簽章檔案完整名稱(路徑+名稱)</param>
+ <returns>簽章時戳時間</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCACSAPI.SignXml(System.String,System.String,System.String)">
+ <summary>
+ 簽章
+ </summary>
+ <param name="InFile">簽章資料檔</param>
+ <param name="signedFile">簽章檔</param>
+ <param name="XmlSignatureId">簽章文件編號</param>
+ <returns>簽章時間</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCACSAPI.GetSignCert(System.Boolean)">
+ <summary>
+  取得簽章憑證
+ </summary>
+ <param name="IsOpenPort">是否要開啟COM Port</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCACSAPI.GetDigestValue(System.Byte[],System.Boolean)">
+ <summary>
+ 取得HASH資料
+ </summary>
+ <param name="byteXmlDoc">xml文件資料</param>
+ <param name="IsOpenPort">是否要開啟COM Port</param>
+ <returns>文件Digest Value</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCACSAPI.GetSignatureValue(System.Byte[])">
+ <summary>
+ 取得簽章值
+ </summary>
+ <param name="byteXmlDoc">簽章資料</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCACSAPI.GetSignValue(System.Byte[],System.Int32,System.Boolean)">
+ <summary>
+ 取得簽章值
+ </summary>
+ <param name="byteXmlDoc">簽章資料</param>
+ <param name="keySize">金鑰長度(128代表1024 Bits金鑰；256代表2048 Bits金鑰)</param>
+ <param name="IsOpenPort">是否要開啟COM Port</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCACSAPI.VerifySignatureXmlFile(System.String)">
+ <summary>
+ 驗章XML檔案
+ </summary>
+ <param name="SignatureFile">已簽章XML(路徑+檔名)</param>
+ <returns>
+ 0:表示成功
+ 非0:表示錯誤訊息
+ </returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCACSAPI.GetTimeStamp(System.Byte[])">
+ <summary>
+ 從時戳伺服器取得簽章時戳
+ </summary>
+ <param name="signedData">簽章資料</param>
+ <returns>
+ 1:簽章時間
+ 2:Base64String簽章時戳資料
+ </returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCACSAPI.GetTSTime(System.Byte[],System.Boolean)">
+ <summary>
+ 取得簽章時戳時間
+ </summary>
+ <param name="TSInfo">時戳資訊</param>
+ <param name="IsConvertGMTToLocal">是否要將GMT時間轉換為本地時間</param>
+ <returns>時戳時間(yyyy-MM-dd HH:mm:ss.ttt)</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCACSAPI.GetKeySize">
+ <summary>
+ 取得金鑰長度
+ </summary>
+ <returns>128代表1024 Bits金鑰；256代表2048 Bits金鑰</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCACSAPI.GetCardBasicInfo">
+ <summary>
+ 取得卡片基本資料
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCACSAPI.GetCardBasicData(System.Boolean)">
+ <summary>
+ 取得卡片基本資料
+ </summary>
+ <param name="IsOpenPort">是否要開啟COM Port</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCACSAPI.OpenCOMPort">
+ <summary>
+ 開啟讀卡機連結埠
+ </summary>
+ <returns>0：無任何錯誤，其它則為讀取錯誤</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCACSAPI.CloseCOMPort">
+ <summary>
+ 關閉讀卡機連結埠
+ </summary>
+ <returns>0：無任何錯誤，其它則為讀取錯誤</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCACSAPI.VerifyPIN(System.String)">
+ <summary>
+ 驗證PIN碼(健保卡機)
+ </summary>
+ <param name="PINCode">PIN碼</param>
+ <returns>如果回傳值不等於0，請查詢錯誤代碼表</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCACSAPI.ClosePortAndModule">
+ <summary>
+ 關閉連接埠
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCACSAPI.CheckReaderDriver">
+ <summary>
+ 檢查Reader元件版本是否正確
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCACSAPI.CheckReaderDriverAndGetKeySize">
+ <summary>
+ 檢查Reader元件版本是否正確，並傳回卡片金鑰長度
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:Syscom.Client.HCA.HCACSMod">
+ <summary>
+ HCA模組程式(健保讀卡機)
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCACSMod.GNFuncCall(System.Int32,System.Byte[],System.Byte@,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+ <summary>
+ HCACSAPI入口函式
+ </summary>
+ <param name="FuncID">函式代碼，請參考函式代碼表</param>
+ <param name="InBuf">傳入資料</param>
+ <param name="OutBuf">傳回資料</param>
+ <param name="P1">傳入參數1</param>
+ <param name="P2">傳入參數2</param>
+ <param name="P3">傳入參數3</param>
+ <param name="P4">傳入參數4</param>
+ <param name="P5">傳入參數5</param>
+ <returns>如果回傳值不等於0，請查詢錯誤代碼表</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.SerialPortFixer.#ctor(System.String)">
+ <summary>
+ 檢查COM Port是否使用中
+ </summary>
+ <param name="portName">COM Port Name</param>
+ <remarks></remarks>
+</member>
+<member name="T:Syscom.Client.HCA.HCAPCSCAPI">
+ <summary>
+ 一般卡機介面
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCAPCSCAPI.GetErrorMsg(System.Int32)">
+ <summary>
+ 擷取錯誤訊息函數
+ </summary>
+ <param name="nErrorCode">為函數回傳值的錯誤代碼</param>
+ <returns>錯誤代碼代表的錯誤訊息</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCAPCSCAPI.GetErrorMsgByErrorCode(System.Int32)">
+ <summary>
+ 依據錯誤代碼取得錯誤訊息
+ </summary>
+ <param name="nErrorCode">錯誤代碼</param>
+ <returns>錯誤訊息</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCAPCSCAPI.InitModule">
+ <summary>
+ 初始化密碼模組
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCAPCSCAPI.CloseModule">
+ <summary>
+ 關閉密碼模組
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCAPCSCAPI.InitSession(System.String)">
+ <summary>
+ 初始化SESSION
+ </summary>
+ <param name="PINCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCAPCSCAPI.CloseSession">
+ <summary>
+ 關閉SESSION
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCAPCSCAPI.GetCardSerialNum">
+ <summary>
+ 取得卡片序號
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCAPCSCAPI.GetCardInfo">
+ <summary>
+ 取得卡片資訊，包含發卡日期、卡片生效日、卡片結束日
+ </summary>
+ <returns>CardInfo:發卡日期、卡片生效日、卡片結束日</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCAPCSCAPI.VerifyPIN(System.String)">
+ <summary>
+ 驗證PIN碼
+ </summary>
+ <param name="PINCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCAPCSCAPI.VerifySignatureXmlFile(System.String)">
+ <summary>
+ 驗章
+ </summary>
+ <param name="SignatureFile"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCAPCSCAPI.GetKeySize">
+ <summary>
+ 取得金鑰長度
+ </summary>
+ <returns>128代表1024 Bits金鑰；256代表2048 Bits金鑰</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCAPCSCAPI.GetCACert">
+ <summary>
+  取得CA憑證
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCAPCSCAPI.GetSignCert">
+ <summary>
+  取得簽章憑證
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCAPCSCAPI.GetEncCert">
+ <summary>
+  取得加密憑證
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCAPCSCAPI.GetGRCACert">
+ <summary>
+  取得GRCA憑證
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCAPCSCAPI.SignXmlFile(System.String)">
+ <summary>
+ 簽章
+ </summary>
+ <param name="fileName"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCAPCSCAPI.SignXml(System.String,System.String,System.String)">
+ <summary>
+ 簽章
+ </summary>
+ <param name="InFile">簽章資料檔</param>
+ <param name="signedFile">簽章檔</param>
+ <param name="XmlSignatureId">簽章文件編號</param>
+ <returns>簽章時間</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCAPCSCAPI.GetDigestValue(System.Byte[])">
+ <summary>
+ 取得HASH資料
+ </summary>
+ <param name="byteXmlDoc">xml原文資料</param>
+ <returns>文件Digest Value</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCAPCSCAPI.GetSignatureValue(System.Byte[])">
+ <summary>
+ 取得簽章值
+ </summary>
+ <param name="byteXmlDoc">簽章資料</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCAPCSCAPI.GetTimeStamp(System.Byte[])">
+ <summary>
+ 從時戳伺服器取得簽章時戳
+ </summary>
+ <param name="signedData">簽章資料</param>
+ <returns>
+ 1:簽章時間
+ 2:Base64String簽章時戳資料
+ </returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCAPCSCAPI.GetTSTime(System.Byte[],System.Boolean)">
+ <summary>
+ 取得簽章時戳時間
+ </summary>
+ <param name="TSInfo">時戳資訊</param>
+ <param name="IsConvertGMTToLocal">是否要將GMT時間轉換為本地時間</param>
+ <returns>時戳時間(yyyy-MM-dd HH:mm:ss.ttt)</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCAPCSCAPI.GetCardBasicInfo">
+ <summary>
+ 取得卡片基本資料
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCAPCSCAPI.IsInit(System.Int32)">
+ <summary>
+ 判斷是否有初始化模組或初始化Session
+ </summary>
+ <param name="checkType">判斷類型</param>
+ <returns></returns>
+ <remarks>
+ 1:判斷是否有初始化密碼模組
+ 2:判斷是否初始化密碼模組和Session
+ </remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCAPCSCAPI.ClosePortAndModule">
+ <summary>
+ 關閉Session和模組
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCAPCSCAPI.CheckReaderDriver">
+ <summary>
+ 檢查Reader元件版本是否正確
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.HCAPCSCAPI.CheckReaderDriverAndGetKeySize">
+ <summary>
+ 檢查Reader元件版本是否正確，並傳回卡片金鑰長度
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:Syscom.Client.HCA.HCAPCSCMod">
+ <summary>
+ HCA模組程式(一般卡機)
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Client.HCA.IHCAAPIProvide.SignConfigSetting">
+ <summary>
+ 簽章設定檔資料
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Client.HCA.IHCAAPIProvide.CardKeySize">
+ <summary>
+ 卡片金鑰長度
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Client.HCA.IHCAAPIProvide.SignCertInfo">
+ <summary>
+ 簽章憑證
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.IHCAAPIProvide.GetCardSerialNum">
+ <summary>
+ 取得卡片序號
+ </summary>
+ <returns>卡片序號</returns>
+</member>
+<member name="M:Syscom.Client.HCA.IHCAAPIProvide.GetCardInfo">
+ <summary>
+ 取得卡片資訊
+ </summary>
+ <returns>卡片資訊，包含卡片生效日和卡片結束日</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.IHCAAPIProvide.SignXmlFile(System.String)">
+ <summary>
+ 簽章檔案
+ </summary>
+ <param name="fileName">原始簽章檔案完整名稱(路徑+名稱)</param>
+ <returns>簽章時戳時間</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.IHCAAPIProvide.VerifySignatureXmlFile(System.String)">
+ <summary>
+ 驗章XML檔案
+ </summary>
+ <param name="SignatureFile">已簽章XML(路徑+檔名)</param>
+ <returns>
+ 0:表示成功
+ 非0:表示錯誤訊息
+ </returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.IHCAAPIProvide.GetTimeStamp(System.Byte[])">
+ <summary>
+ 取得時戳資訊
+ </summary>
+ <param name="signValue"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.IHCAAPIProvide.GetSignatureValue(System.Byte[])">
+ <summary>
+ 取得簽章值
+ </summary>
+ <param name="byteSignedInfo"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.IHCAAPIProvide.ClosePortAndModule">
+ <summary>
+ 關閉Port和模組
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.IHCAAPIProvide.VerifyPIN(System.String)">
+ <summary>
+ 驗證PIN碼(健保卡機)或開啟SESSION(一般卡機)
+ </summary>
+ <param name="PINCode">PIN碼</param>
+ <returns>如果回傳值不等於0，請查詢錯誤代碼表</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.IHCAAPIProvide.GetCardBasicInfo">
+ <summary>
+ 取得卡片基本資料
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.IHCAAPIProvide.CheckReaderDriver">
+ <summary>
+ 檢查Reader元件版本是否正確
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.IHCAAPIProvide.CheckReaderDriverAndGetKeySize">
+ <summary>
+ 檢查Reader元件版本是否正確，若有插卡則傳回卡片金鑰長度
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.IHCAAPIProvide.CheckDirectory(System.String)">
+ <summary>
+ 檢查資料夾是否存在，若不存在則產生新的資料夾
+ </summary>
+ <param name="dirPath">資料夾路徑</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.IHCAAPIProvide.GetCanonicalizationXML(System.Xml.XmlDocument)">
+ <summary>
+ XML正規化
+ </summary>
+ <param name="xmlDoc">xml文件</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.IHCAAPIProvide.SetSignedTime(System.Xml.XmlDocument@)">
+ <summary>
+ 填入簽章時間(系統時間)至XML文件中後再進行簽章
+ </summary>
+ <param name="xmlDoc">簽章原文</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.IHCAAPIProvide.GetCertificateRawDataFromKeyInfo(System.Security.Cryptography.Xml.SignedXml)">
+ <summary>
+ 取得憑證未經處理的資料(憑證資料)
+ </summary>
+ <param name="_signedXml"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.IHCAAPIProvide.AddSignature(System.String,System.String@,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
+ <summary>
+ 加入Signature資訊
+ </summary>
+ <param name="XmlSignatureId"></param>
+ <param name="signedTime"></param>
+ <param name="base64DigestValue"></param>
+ <param name="xmlNamespace"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.IHCAAPIProvide.AddSignedInfo(System.String,System.String@,System.String)">
+ <summary>
+ 加入SignedInfo資訊
+ </summary>
+ <param name="XmlSignatureId"></param>
+ <param name="signedTime"></param>
+ <param name="base64DigestValue"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.IHCAAPIProvide.AddSignatureValue(System.String,System.String)">
+ <summary>
+ 加入簽章值
+ </summary>
+ <param name="XmlSignatureId"></param>
+ <param name="base64SignValue"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.IHCAAPIProvide.AddKeyInfo(System.String,System.String@,System.String)">
+ <summary>
+ 加入憑證資訊
+ </summary>
+ <param name="XmlSignatureId"></param>
+ <param name="signedTime"></param>
+ <param name="base64Cert"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.IHCAAPIProvide.AddObject(System.String,System.String@,System.Byte[])">
+ <summary>
+ 加入時戳資訊
+ </summary>
+ <param name="XmlSignatureId"></param>
+ <param name="signedTime"></param>
+ <param name="signValue"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.IHCAAPIProvide.GetSignedInfoAndCanonical(System.Xml.XmlDocument@)">
+ <summary>
+ 取得SignedInfo資料做正規化
+ </summary>
+ <param name="xmlDoc"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.IHCAAPIProvide.GetXmlSignatureNamespaceManager(System.Xml.XmlNameTable@)">
+ <summary>
+ Get Signature Namespace Manager
+ </summary>
+ <param name="_xmlNameTable"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.IHCAAPIProvide.GetXmlAllNamespaceManager(System.Xml.XmlNameTable@)">
+ <summary>
+ Get All Namespace Manager
+ </summary>
+ <param name="_xmlNameTable"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.HCA.IHCAAPIProvide.ConvertGMTToLocalDatetime(System.String,System.String,System.String)">
+ <summary>
+ 將GMT時間轉換為本地時間
+ </summary>
+ <param name="GMTDatetime">GMT時間</param>
+ <param name="InFormat">輸入時間格式</param>
+ <param name="OutFormat">輸出時間格式</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+</members>
+</doc>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="FtmService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_IFtmService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:40611/FtmService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:40611/FtmService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:40611/FtmService.svc?xsd=xsd2" />
+      <xsd:import schemaLocation="http://localhost:40611/FtmService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IFtmService_uploadNewFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:uploadNewFile" />
+  </wsdl:message>
+  <wsdl:message name="IFtmService_uploadNewFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:uploadNewFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFtmService_downloadFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:downloadFile" />
+  </wsdl:message>
+  <wsdl:message name="IFtmService_downloadFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:downloadFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFtmService_downloadFiles_InputMessage">
+    <wsdl:part name="parameters" element="tns:downloadFiles" />
+  </wsdl:message>
+  <wsdl:message name="IFtmService_downloadFiles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:downloadFilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFtmService_getImageThumb_InputMessage">
+    <wsdl:part name="parameters" element="tns:getImageThumb" />
+  </wsdl:message>
+  <wsdl:message name="IFtmService_getImageThumb_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getImageThumbResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFtmService_doMyReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:doMyReport" />
+  </wsdl:message>
+  <wsdl:message name="IFtmService_doMyReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:doMyReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFtmService_uploadNewFilePath_InputMessage">
+    <wsdl:part name="parameters" element="tns:uploadNewFilePath" />
+  </wsdl:message>
+  <wsdl:message name="IFtmService_uploadNewFilePath_OutputMessage">
+    <wsdl:part name="parameters" element="tns:uploadNewFilePathResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFtmService_downloadFilePath_InputMessage">
+    <wsdl:part name="parameters" element="tns:downloadFilePath" />
+  </wsdl:message>
+  <wsdl:message name="IFtmService_downloadFilePath_OutputMessage">
+    <wsdl:part name="parameters" element="tns:downloadFilePathResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IFtmService">
+    <wsdl:operation name="uploadNewFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFtmService/uploadNewFile" message="tns:IFtmService_uploadNewFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFtmService/uploadNewFileResponse" message="tns:IFtmService_uploadNewFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="downloadFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFtmService/downloadFile" message="tns:IFtmService_downloadFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFtmService/downloadFileResponse" message="tns:IFtmService_downloadFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="downloadFiles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFtmService/downloadFiles" message="tns:IFtmService_downloadFiles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFtmService/downloadFilesResponse" message="tns:IFtmService_downloadFiles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getImageThumb">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFtmService/getImageThumb" message="tns:IFtmService_getImageThumb_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFtmService/getImageThumbResponse" message="tns:IFtmService_getImageThumb_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="doMyReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFtmService/doMyReport" message="tns:IFtmService_doMyReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFtmService/doMyReportResponse" message="tns:IFtmService_doMyReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="uploadNewFilePath">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFtmService/uploadNewFilePath" message="tns:IFtmService_uploadNewFilePath_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFtmService/uploadNewFilePathResponse" message="tns:IFtmService_uploadNewFilePath_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="downloadFilePath">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFtmService/downloadFilePath" message="tns:IFtmService_downloadFilePath_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFtmService/downloadFilePathResponse" message="tns:IFtmService_downloadFilePath_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSHttpBinding_IFtmService" type="tns:IFtmService">
+    <wsp:PolicyReference URI="#WSHttpBinding_IFtmService_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="uploadNewFile">
+      <soap12:operation soapAction="http://tempuri.org/IFtmService/uploadNewFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="downloadFile">
+      <soap12:operation soapAction="http://tempuri.org/IFtmService/downloadFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="downloadFiles">
+      <soap12:operation soapAction="http://tempuri.org/IFtmService/downloadFiles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getImageThumb">
+      <soap12:operation soapAction="http://tempuri.org/IFtmService/getImageThumb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="doMyReport">
+      <soap12:operation soapAction="http://tempuri.org/IFtmService/doMyReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uploadNewFilePath">
+      <soap12:operation soapAction="http://tempuri.org/IFtmService/uploadNewFilePath" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="downloadFilePath">
+      <soap12:operation soapAction="http://tempuri.org/IFtmService/downloadFilePath" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FtmService">
+    <wsdl:port name="WSHttpBinding_IFtmService" binding="tns:WSHttpBinding_IFtmService">
+      <soap12:address location="http://localhost:40611/FtmService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://localhost:40611/FtmService.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Dns>localhost</Dns>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

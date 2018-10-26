@@ -1,0 +1,2 @@
+*D*ftp://Win-2017.syscom.com.tw/JOBCompare/Client/Project.Client.JOB.dll
+*D*ftp://Win-2017.syscom.com.tw/JOBCompare/Client/Project.Comm.JOB.dll

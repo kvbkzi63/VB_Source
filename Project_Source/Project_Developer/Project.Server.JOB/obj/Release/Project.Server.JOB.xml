@@ -1,0 +1,2294 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Project.Server.JOB
+</name>
+</assembly>
+<members>
+<member name="T:Project.Server.JOB.My.Resources.Resources">
+<summary>
+  用於查詢當地語系化字串等的強類型資源類別。
+</summary>
+</member>
+<member name="P:Project.Server.JOB.My.Resources.Resources.ResourceManager">
+<summary>
+  傳回這個類別使用的快取的 ResourceManager 執行個體。
+</summary>
+</member>
+<member name="P:Project.Server.JOB.My.Resources.Resources.Culture">
+<summary>
+  覆寫目前執行緒的 CurrentUICulture 屬性，對象是所有
+  使用這個強類型資源類別的資源查閱。
+</summary>
+</member>
+<member name="M:Project.Server.JOB.JobDBModifiyBO_E1.QuerySADBModifyRecord(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+ DB異動申請(PG回覆初始化查詢)
+ </summary>
+ <returns>Dataset</returns>
+ <remarks>by Will.Lin on 2017-05-02</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobDBModifiyBO_E1.DBAReplyModify(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+ DB異動申請(DBA回覆)
+ </summary>
+ <returns>Dataset</returns>
+ <remarks>by Will.Lin on 2017-05-02</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobEmployeeMaintainBO_E1.InitialJobEmployeeMaintainUI(System.Data.IDbConnection@)">
+ <summary>
+ 初始化相關資料
+ </summary>
+ <returns>Dataset</returns>
+ <remarks>by Will.Lin on 2017-07-03</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobMailGroupBO_E1.InsertNewMailGroup(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+ 信件群組設定
+ </summary>
+ <param name="ds" >新增資料</param>
+ <returns>Integer</returns>
+ <remarks>by Will.Lin on 2017-06-16</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobMailGroupBO_E1.InsertMailGroupDetail(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+ 信件群組設定
+ </summary>
+ <param name="ds" >新增資料</param>
+ <returns>Integer</returns>
+ <remarks>by Will.Lin on 2017-06-16</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobMailGroupBO_E1.QueryTempGroupId(System.String,System.Data.IDbConnection@)">
+ <summary>
+ 取得流水號
+ </summary>
+ <returns>Dataset</returns>
+ <remarks>by Will.Lin on 2017-08-10</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobMailGroupBO_E1.UpdateMailGroup(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+ 信件群組設定
+ </summary>
+ <param name="ds" >修改資料</param>
+ <returns>Integer</returns>
+ <remarks>by Will.Lin on 2017-06-16</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobMailGroupBO_E1.UpdateMailGroupDetail(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+ 信件群組設定
+ </summary>
+ <param name="ds" >修改資料</param>
+ <returns>Integer</returns>
+ <remarks>by Will.Lin on 2017-06-16</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobMailGroupBO_E1.DeleteMailGroup(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+ 刪除
+ </summary>
+ <param name="ds" >修改資料</param>
+ <returns>Integer</returns>
+ <remarks>by Will.Lin on 2017-06-16</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobMailGroupBO_E1.DeleteMailGroupDetail(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+ 刪除
+ </summary>
+ <param name="ds" >修改資料</param>
+ <returns>Integer</returns>
+ <remarks>by Will.Lin on 2017-06-16</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobPGJobBO_E1.QyeryPGJobList(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+ 查詢PG工作清單
+ </summary>
+ <param name="ds" >傳入員工號</param>
+ <returns>Dataset</returns>
+ <remarks>by Will.Lin on 2017-04-19</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobPGJobBO_E1.QueryTodoList(System.String,System.Data.IDbConnection@)">
+ <summary>
+ 查詢代辦清單
+ </summary>
+ <returns>Dataset</returns>
+ <remarks>by Will.Lin on 2018-09-21</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobPGJobBO_E1.UpdatePGJobSubmit(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+ 提交工作
+ </summary>
+ <param name="ds" >修改資料</param>
+ <returns>Integer</returns>
+ <remarks>by Will.Lin on 2017-04-19</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobProjectMaintainBO_E1.ImportSystemAndFunctionList(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+ 專案功能整批匯入
+ </summary>
+ <param name="input"></param>
+ <param name="conn"></param>
+ <returns></returns>
+</member>
+<member name="M:Project.Server.JOB.JobProjectMaintainBO_E1.InsertNewSystemOneByOne(System.Data.DataRow,System.Data.IDbConnection@)">
+ <summary>
+ 單筆新增(整批匯入用)
+ </summary>
+ <param name="input"></param>
+ <param name="conn"></param>
+ <returns></returns>
+</member>
+<member name="M:Project.Server.JOB.JobProjectMaintainBO_E1.InsertNewFunctionOneByOne(System.Data.DataRow,System.Data.IDbConnection@)">
+ <summary>
+ 單筆新增(整批匯入用)
+ </summary>
+ <param name="input"></param>
+ <param name="conn"></param>
+ <returns></returns>
+</member>
+<member name="M:Project.Server.JOB.JobProjectMaintainBO_E1.QueryJobProjectMaintainData(System.String,System.String,System.String,System.String,System.String,System.Data.IDbConnection@)">
+ <summary>
+ 專案維護作業(查詢專案清單)
+ </summary>
+ <returns>Dataset</returns>
+ <remarks>by Will.Lin on 2017-04-14</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobProjectMaintainBO_E1.QueryJobProjectSystem(System.String,System.Data.IDbConnection@)">
+ <summary>
+ 專案維護作業(查詢系統清單)
+ </summary>
+ <returns>Dataset</returns>
+ <remarks>by Will.Lin on 2017-04-14</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobProjectMaintainBO_E1.QueryJobProjectSystemFunction(System.String,System.String,System.Data.IDbConnection@)">
+ <summary>
+ 專案維護作業(查詢功能清單)
+ </summary>
+ <param name="Project_ID"></param>
+ <param name="conn"></param>
+ <returns></returns>
+</member>
+<member name="M:Project.Server.JOB.JobQaBugRecordBO_E1.CreateNewBug(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+ 新增BUG
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Will.Lin on 2017-10-01</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaBugRecordBO_E1.UpdateBugAmount(System.Data.DataSet,Project.Server.JOB.JobQaBugRecordBO_E1.UpdateAmountType,System.Data.IDbConnection@)">
+ <summary>
+ 更新版次的BUG數量
+ </summary>
+ <param name="ds" >修改資料</param>
+ <returns>Integer</returns>
+ <remarks>by Will.Lin on 2017-10-01</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaBugRecordBO_E1.UpdateUnTestAmount(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+ 更新版次的複測數量
+ </summary>
+ <param name="ds" >修改資料</param>
+ <returns>Integer</returns>
+ <remarks>by Will.Lin on 2017-10-01</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaBugRecordBO_E1.UpdateBugRecordForRetest(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+ 儲存複測結果
+ </summary>
+ <param name="input" >修改資料</param>
+ <returns>Integer</returns>
+ <remarks>by Will.Lin on 2017-10-02</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaBugRecordBO_E1.InsertNewBugModifiedLog(System.String,System.String,System.Data.IDbConnection@)">
+ <summary>
+ 寫入Log
+ </summary>
+ <param name="Bug_Id"></param>
+ <param name="conn"></param>
+ <returns></returns>
+</member>
+<member name="M:Project.Server.JOB.JobQaBugRecordBO_E1.JobReject(System.String,System.String,System.Data.IDbConnection@)">
+ <summary>
+ QA退件
+ </summary>
+ <param name="Bug_Id"></param>
+ <param name="conn"></param>
+ <returns></returns>
+</member>
+<member name="M:Project.Server.JOB.JobQaBugRecordBO_E1.TestVersionClose(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+ 版次關帳
+ </summary>
+ <param name="ds" >修改資料</param>
+ <returns>Integer</returns>
+ <remarks>by Will.Lin on 2017-10-03</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaBugRecordBO_E1.CheckJobStatusBeforeClose(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+ 查詢是否有進行中的派工
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Will.Lin on 2017-10-03</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaBugRecordBO_E1.DeleteAttFiles(System.String,System.String,System.Data.IDbConnection@)">
+ <summary>
+ 刪除附件
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Will.Lin on 2017-10-02</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaBugRecordBO_E1.QueryBugDetailForModifiy(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+ 查看BUG明細
+ </summary>
+ <returns>Dataset</returns>
+ <remarks>by Will.Lin on 2017-10-02</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaBugRecordBO_E1.InitialJobNoteGrid(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+ 初始化註記相關GRID
+ </summary>
+ <returns>Dataset</returns>
+ <remarks>by Will.Lin on 2017-10-02</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaBugRecordBO_E1.GetMaxSeqNo(System.String,System.Data.IDbConnection@)">
+ <summary>
+ GetMaxSeqNo
+ </summary>
+ <returns>Dataset</returns>
+ <remarks>by Will.Lin on 2017-10-02</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaTestRecordBO_E1.CreateNewTestVer(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+ 新增版次
+ </summary>
+ <param name="ds" >新增資料</param>
+ <returns>Integer</returns>
+ <remarks>by Will.Lin on 2017-10-01</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaTestRecordBO_E1.UpdateVersionDesc(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+ 更新版次說明
+ </summary>
+ <param name="ds" >修改資料</param>
+ <returns>Integer</returns>
+ <remarks>by Will.Lin on 2017-10-01</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaTestRecordBO_E1.QueryTestVerByProjectAndDeployKind(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+ 查詢版次列表
+ </summary>
+ <returns>Dataset</returns>
+ <remarks>by Will.Lin on 2017-10-01</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaTestRecordBO_E1.GetMaxTestVersionBeforeCreate(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+ 取得最大版號
+ </summary>
+ <returns>Dataset</returns>
+ <remarks>by Will.Lin on 2017-10-01</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaTestRecordBO_E1.QueryBugRecord(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+ 查看BUG清單
+ </summary>
+ <param name="input" ></param>
+ <returns>Dataset</returns>
+ <remarks>by Will.Lin on 2017-10-02</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSAAssignRecordBO_E1.initialSAAssignJobUI(System.String,System.Data.IDbConnection@)">
+ <summary>
+ 初始化資料
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Will.Lin on 2017-04-15</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSAAssignRecordBO_E1.InitialSAReplyDialogUI(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+ 初始化資料
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Will.Lin on 2017-04-15</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSAAssignRecordBO_E1.AssignNewJOB(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+ 新增派工紀錄
+ </summary>
+ <param name="ds" >新增資料</param>
+ <returns>Integer</returns>
+ <remarks>by Will.Lin on 2017-04-15</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSAAssignRecordBO_E1.SDConfirmJOB(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+ SD確認
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:Project.Server.JOB.JobSAAssignRecordBO_E1.AssignJobToPG(System.Data.DataSet,System.String,System.String,System.Data.IDbConnection@)">
+ <summary>
+ 派送工作到PG
+ </summary>
+ <param name="ds"></param>
+ <param name="jobID"></param>
+ <param name="CCUser"></param>
+ <param name="conn"></param>
+ <returns></returns>
+</member>
+<member name="M:Project.Server.JOB.JobSAAssignRecordBO_E1.AssignJobToSAorSD(System.Data.DataSet,System.String,System.String,System.Data.IDbConnection@)">
+ <summary>
+ 派送工作到SA或SD
+ </summary>
+ <param name="ds"></param>
+ <param name="jobID"></param>
+ <param name="CCUser"></param>
+ <param name="conn"></param>
+ <returns></returns>
+</member>
+<member name="M:Project.Server.JOB.JobSAAssignRecordBO_E1.UpdateIssueRecordForNewJob(System.String,System.String,System.String,System.String,System.Data.IDbConnection@)">
+ <summary>
+ 更新問題單
+ </summary>
+ <param name="Job_Code"></param>
+ <param name="Modified_User"></param>
+ <param name="Issue_Id"></param>
+ <param name="AssignLevel">SA派工或者SD派工</param>
+ <param name="conn"></param>
+ <returns></returns>
+</member>
+<member name="M:Project.Server.JOB.JobSAAssignRecordBO_E1.UpdateBugAmount(System.String,System.Data.IDbConnection@)">
+ <summary>
+ 更新版次的BUG數量
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Will.Lin on 2017-10-01</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSAAssignRecordBO_E1.GetMailStringForSAorSD(System.String,System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+ 取得SA派工信件的Mail字串
+ </summary>
+ <param name="JobCode"></param>
+ <param name="ds"></param>
+ <param name="conn"></param>
+ <returns></returns>
+</member>
+<member name="M:Project.Server.JOB.JobSAAssignRecordBO_E1.ReplyJobSubmit(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+ 回覆PG工作提交
+ </summary>
+ <param name="ds"></param>
+ <param name="conn"></param>
+ <returns></returns>
+</member>
+<member name="M:Project.Server.JOB.JobSAAssignRecordBO_E1.ConfirmJobSubmit(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+ 確認需求結果
+ </summary>
+ <param name="ds"></param>
+ <param name="conn"></param>
+ <returns></returns>
+</member>
+<member name="M:Project.Server.JOB.JobSAAssignRecordBO_E1.CancelJob(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+ 作廢
+ </summary>
+ <param name="ds"></param>
+ <param name="conn"></param>
+ <returns></returns>
+</member>
+<member name="M:Project.Server.JOB.JobSAAssignRecordBO_E1.RejectJobSubmit(System.Data.DataSet,System.String,System.Data.IDbConnection@)">
+ <summary>
+ 需求提交退件
+ </summary>
+ <param name="ds"></param>
+ <param name="conn"></param>
+ <returns></returns>
+</member>
+<member name="M:Project.Server.JOB.JobSAAssignRecordBO_E1.InsertIntoSAAssignRecord(System.String,System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+ 新增派工紀錄
+ </summary>
+ <param name="ds" >新增資料</param>
+ <returns>Integer</returns>
+ <remarks>by Will.Lin on 2017-04-15</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSAAssignRecordBO_E1.QueryRejectTime(System.String,System.Data.IDbConnection@)">
+ <summary>
+ 查詢
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Will.Lin on 2017-04-15</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSAAssignRecordBO_E1.QueryMaxSeqByTable(System.String,System.String,System.String[],System.Collections.Generic.Dictionary{System.String,System.String},System.Data.IDbConnection@)">
+ <summary>
+ 查詢MaxSeq
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Will.Lin on 2017-04-15</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSAAssignRecordBO_E1.QueryJobList(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+ 查詢已派工清單
+ </summary>
+ <returns>Dataset</returns>
+ <remarks>by Will.Lin on 2017-04-16</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSAAssignRecordBO_E1.QueryJobAssignRecord(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+ 查詢派工紀錄(歷史查詢)
+ </summary>
+ <returns>Dataset</returns>
+ <remarks>by Will.Lin on 2017-12-06</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSAAssignRecordBO_E1.QueryUnfinishIssueRecordList(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+ 查詢未解決需求紀錄
+ </summary>
+ <param name="ds" >新增資料</param>
+ <returns>Dataset</returns>
+ <remarks>by Will.Lin on 2017-07-28</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSAAssignRecordBO_E1.GetIssueNameByCodeId(System.String,System.Data.IDbConnection@)">
+ <summary>
+ 取得需求名稱
+ </summary>
+ <param name="CodeId" >CodeId</param>
+ <returns>Dataset</returns>
+ <remarks>by Will.Lin on 2017-06-16</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSAAssignRecordBO_E1.IssueExtension(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+ 需求展期
+ </summary>
+ <param name="ds" >修改資料</param>
+ <returns>Integer</returns>
+ <remarks>by Will.Lin on 2017-10-17</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSAAssignRecordBO_E1.SAJobTransfer(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+ JOB轉派
+ </summary>
+ <param name="input"></param>
+ <param name="conn"></param>
+ <returns></returns>
+</member>
+<member name="M:Project.Server.JOB.JobSAAssignRecordBO_E1.QueryJobForModifiy(System.String,System.Data.IDbConnection@)">
+ <summary>
+ 查詢
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Will.Lin on 2018-09-04</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSAAssignRecordBO_E1.JobModifiy(System.Data.DataSet)">
+ <summary>
+ 更新派工單
+ </summary>
+ <param name="ds" >修改資料</param>
+ <returns>Integer</returns>
+ <remarks>by Will.Lin on 2018-09-17</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobServiceRecordBO_E1.ModifyIssueRecord(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+ 更新問題紀錄單
+ </summary>
+ <param name="ds" >修改資料</param>
+ <returns>Integer</returns>
+ <remarks>by Will.Lin on 2017-11-28</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobServiceRecordBO_E1.CancelServiceRecord(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+ 作廢需求單
+ </summary>
+ <param name="ds" >修改資料</param>
+ <returns>DataSet</returns>
+ <remarks>by Will.Lin on 2017-09-08</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobServiceRecordBO_E1.QueryServiceRecordForExportReport(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+ 匯出Service紀錄
+ </summary>
+ <returns>Dataset</returns>
+ <remarks>by Sean.Lin on 2017-11-15</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobServiceRecordBO_E1.QueryServiceRecordList(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+ 查詢需求紀錄列表
+ </summary>
+ <returns>Dataset</returns>
+ <remarks>by Will.Lin on 2017-07-28</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobServiceRecordBO_E1.QueryMaxSeqNumber(System.Data.IDbConnection@)">
+ <summary>
+ 查詢流水號最大碼
+ </summary>
+ <returns>Dataset</returns>
+ <remarks>by Will.Lin on 2017-07-28</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobServiceRecordBO_E1.QueryMailContent(System.String,System.Data.IDbConnection@)">
+ <summary>
+ 取得郵件需要資料
+ </summary>
+ <param name="Issue_Id" >流水號</param>
+ <returns>Dataset</returns>
+ <remarks>by Will.Lin on 2017-07-28</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobServiceReplyRecordBO_E1.CreateNewServiceRejectRecord(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+ 新增退件紀錄
+ </summary>
+ <param name="ds" >新增資料</param>
+ <returns>Integer</returns>
+ <remarks>by Will.Lin on 2017-09-09</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobServiceReplyRecordBO_E1.UpdateServiceRecord(System.Data.DataRow,System.Data.IDbConnection@)">
+ <summary>
+ 更新需求狀態
+ </summary>
+ <param name="dr" >資料列</param>
+ <returns>Integer</returns>
+ <remarks>by Will.Lin on 2017-09-09</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobServiceReplyRecordBO_E1.QueryServiceRejectRecord(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+ 查詢退件紀錄
+ </summary>
+ <param name="ds" >需求單號</param>
+ <returns>Dataset</returns>
+ <remarks>by Will.Lin on 2017-09-09</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobServiceReplyRecordBO_E1.GetRejectRecordSeqNoByIssueId(System.String,System.Data.IDbConnection@)">
+ <summary>
+ 取得最大流水號
+ </summary>
+ <param name="IssueId" >需求單號</param>
+ <returns>Dataset</returns>
+ <remarks>by Will.Lin on 2017-09-09</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobPhraseBO_E1.InsertInto(System.Data.DataSet)">
+ <summary>
+ 新增片語
+ </summary>
+ <param name="ds" >新增資料</param>
+ <returns>Integer</returns>
+ <remarks>by Will.Lin on 2018-08-06</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobPhraseBO_E1.UpdatePhrase(System.Data.DataSet)">
+ <summary>
+ 修改
+ </summary>
+ <param name="ds" >修改</param>
+ <returns>Integer</returns>
+ <remarks>by Will.Lin on 2018-08-06</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobPhraseBO_E1.deletePhrase(System.Data.DataSet)">
+ <summary>
+ 刪除
+ </summary>
+ <param name="ds" >刪除資料</param>
+ <returns>Integer</returns>
+ <remarks>by Will.Lin on 2018-08-06</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobPhraseBO_E1.QueryPhrasebyCond(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+ 查詢片語
+ </summary>
+ <returns>Dataset</returns>
+ <remarks>by Will.Lin on 2018-08-06</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobPhraseBO_E1.QueryMaxSeqNo(System.Data.IDbConnection@)">
+ <summary>
+ 查詢片語序號
+ </summary>
+ <returns>Dataset</returns>
+ <remarks>by Will.Lin on 2018-08-06</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobPgJobRecordBO.insert(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+新增
+ </summary>
+ <param name="ds">新增資料</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobPgJobRecordBO.insertByAssignCreateTime(System.Data.DataSet,System.DateTime,System.Data.IDbConnection@)">
+ <summary>
+新增(傳入單一Create_Time)
+ </summary>
+ <param name="ds">新增資料</param>
+ <param name="assignTime">傳入單一Create_Time</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobPgJobRecordBO.insertBySetCreateTime(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+新增(設定單一Create_Time)
+ </summary>
+ <param name="ds">新增資料</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobPgJobRecordBO.update(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobPgJobRecordBO.updateBySetCreateTime(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容,設定單一Create_Time
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobPgJobRecordBO.updateByAssignCreateTime(System.Data.DataSet,System.DateTime,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容,傳入單一更新時間
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <param name="assignTime">單一更新時間</param>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobPgJobRecordBO.delete(System.String@,System.Int32@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ刪除資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobPgJobRecordBO.queryByPK(System.String@,System.Int32@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ查詢資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobPgJobRecordBO.queryByLikePK(System.String@,System.Int32@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ Like 的方式查詢資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobPgJobRecordBO.queryAll(System.Data.IDbConnection@)">
+ <summary>
+查詢全部
+ </summary>
+ <returns>查詢資料全部資料內容</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobPgJobRecordBO.dynamicQuery(System.String@,System.Data.IDbConnection@)">
+ <summary>
+以 SQL String 動態查詢
+ </summary>
+ <param name="sqlString">查詢的 SQL 字串</param>
+ <returns>查詢資料</returns>
+ <remarks>不建議直接使用此方法</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobPgJobRecordBO.dynamicQueryWithColumnValue(System.String[]@,System.Object[]@,System.Data.IDbConnection@)">
+ <summary>
+動態查詢
+ </summary>
+ <param name="columnName">查詢的欄位名稱</param>
+ <param name="columnValue">查詢的欄位值</param>
+ <returns>查詢資料</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobPgJobRecordBO.getConnection">
+ <summary>
+取得表格 JOB_PG_JOB_Record 在所屬資料庫的連線
+ </summary>
+ <returns>資料庫連線</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobPgJobStatusRecordBO.insert(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+新增
+ </summary>
+ <param name="ds">新增資料</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobPgJobStatusRecordBO.insertByAssignCreateTime(System.Data.DataSet,System.DateTime,System.Data.IDbConnection@)">
+ <summary>
+新增(傳入單一Create_Time)
+ </summary>
+ <param name="ds">新增資料</param>
+ <param name="assignTime">傳入單一Create_Time</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobPgJobStatusRecordBO.insertBySetCreateTime(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+新增(設定單一Create_Time)
+ </summary>
+ <param name="ds">新增資料</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobPgJobStatusRecordBO.update(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobPgJobStatusRecordBO.updateBySetCreateTime(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容,設定單一Create_Time
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobPgJobStatusRecordBO.updateByAssignCreateTime(System.Data.DataSet,System.DateTime,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容,傳入單一更新時間
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <param name="assignTime">單一更新時間</param>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobPgJobStatusRecordBO.delete(System.String@,System.Int32@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ刪除資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobPgJobStatusRecordBO.queryByPK(System.String@,System.Int32@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ查詢資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobPgJobStatusRecordBO.queryByLikePK(System.String@,System.Int32@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ Like 的方式查詢資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobPgJobStatusRecordBO.queryAll(System.Data.IDbConnection@)">
+ <summary>
+查詢全部
+ </summary>
+ <returns>查詢資料全部資料內容</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobPgJobStatusRecordBO.dynamicQuery(System.String@,System.Data.IDbConnection@)">
+ <summary>
+以 SQL String 動態查詢
+ </summary>
+ <param name="sqlString">查詢的 SQL 字串</param>
+ <returns>查詢資料</returns>
+ <remarks>不建議直接使用此方法</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobPgJobStatusRecordBO.dynamicQueryWithColumnValue(System.String[]@,System.Object[]@,System.Data.IDbConnection@)">
+ <summary>
+動態查詢
+ </summary>
+ <param name="columnName">查詢的欄位名稱</param>
+ <param name="columnValue">查詢的欄位值</param>
+ <returns>查詢資料</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobPgJobStatusRecordBO.getConnection">
+ <summary>
+取得表格 JOB_PG_JOB_Status_Record 在所屬資料庫的連線
+ </summary>
+ <returns>資料庫連線</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaAttachedFilesBO.insert(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+新增
+ </summary>
+ <param name="ds">新增資料</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaAttachedFilesBO.insertByAssignCreateTime(System.Data.DataSet,System.DateTime,System.Data.IDbConnection@)">
+ <summary>
+新增(傳入單一Create_Time)
+ </summary>
+ <param name="ds">新增資料</param>
+ <param name="assignTime">傳入單一Create_Time</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaAttachedFilesBO.insertBySetCreateTime(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+新增(設定單一Create_Time)
+ </summary>
+ <param name="ds">新增資料</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaAttachedFilesBO.update(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaAttachedFilesBO.updateBySetCreateTime(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容,設定單一Create_Time
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaAttachedFilesBO.updateByAssignCreateTime(System.Data.DataSet,System.DateTime,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容,傳入單一更新時間
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <param name="assignTime">單一更新時間</param>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaAttachedFilesBO.delete(System.String@,System.String@,System.Int32@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ刪除資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaAttachedFilesBO.queryByPK(System.String@,System.String@,System.Int32@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ查詢資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaAttachedFilesBO.queryByLikePK(System.String@,System.String@,System.Int32@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ Like 的方式查詢資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaAttachedFilesBO.queryAll(System.Data.IDbConnection@)">
+ <summary>
+查詢全部
+ </summary>
+ <returns>查詢資料全部資料內容</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaAttachedFilesBO.dynamicQuery(System.String@,System.Data.IDbConnection@)">
+ <summary>
+以 SQL String 動態查詢
+ </summary>
+ <param name="sqlString">查詢的 SQL 字串</param>
+ <returns>查詢資料</returns>
+ <remarks>不建議直接使用此方法</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaAttachedFilesBO.dynamicQueryWithColumnValue(System.String[]@,System.Object[]@,System.Data.IDbConnection@)">
+ <summary>
+動態查詢
+ </summary>
+ <param name="columnName">查詢的欄位名稱</param>
+ <param name="columnValue">查詢的欄位值</param>
+ <returns>查詢資料</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaAttachedFilesBO.getConnection">
+ <summary>
+取得表格 Job_QA_Attached_Files 在所屬資料庫的連線
+ </summary>
+ <returns>資料庫連線</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaBugRecordBO.insert(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+新增
+ </summary>
+ <param name="ds">新增資料</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaBugRecordBO.insertByAssignCreateTime(System.Data.DataSet,System.DateTime,System.Data.IDbConnection@)">
+ <summary>
+新增(傳入單一Create_Time)
+ </summary>
+ <param name="ds">新增資料</param>
+ <param name="assignTime">傳入單一Create_Time</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaBugRecordBO.insertBySetCreateTime(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+新增(設定單一Create_Time)
+ </summary>
+ <param name="ds">新增資料</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaBugRecordBO.update(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaBugRecordBO.updateBySetCreateTime(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容,設定單一Create_Time
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaBugRecordBO.updateByAssignCreateTime(System.Data.DataSet,System.DateTime,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容,傳入單一更新時間
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <param name="assignTime">單一更新時間</param>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaBugRecordBO.delete(System.String@,System.String@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ刪除資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaBugRecordBO.queryByPK(System.String@,System.String@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ查詢資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaBugRecordBO.queryByLikePK(System.String@,System.String@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ Like 的方式查詢資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaBugRecordBO.queryAll(System.Data.IDbConnection@)">
+ <summary>
+查詢全部
+ </summary>
+ <returns>查詢資料全部資料內容</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaBugRecordBO.dynamicQuery(System.String@,System.Data.IDbConnection@)">
+ <summary>
+以 SQL String 動態查詢
+ </summary>
+ <param name="sqlString">查詢的 SQL 字串</param>
+ <returns>查詢資料</returns>
+ <remarks>不建議直接使用此方法</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaBugRecordBO.dynamicQueryWithColumnValue(System.String[]@,System.Object[]@,System.Data.IDbConnection@)">
+ <summary>
+動態查詢
+ </summary>
+ <param name="columnName">查詢的欄位名稱</param>
+ <param name="columnValue">查詢的欄位值</param>
+ <returns>查詢資料</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaBugRecordBO.getConnection">
+ <summary>
+取得表格 Job_QA_Bug_Record 在所屬資料庫的連線
+ </summary>
+ <returns>資料庫連線</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaBugRecordModifiyLogBO.insert(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+新增
+ </summary>
+ <param name="ds">新增資料</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaBugRecordModifiyLogBO.insertByAssignCreateTime(System.Data.DataSet,System.DateTime,System.Data.IDbConnection@)">
+ <summary>
+新增(傳入單一Create_Time)
+ </summary>
+ <param name="ds">新增資料</param>
+ <param name="assignTime">傳入單一Create_Time</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaBugRecordModifiyLogBO.insertBySetCreateTime(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+新增(設定單一Create_Time)
+ </summary>
+ <param name="ds">新增資料</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaBugRecordModifiyLogBO.update(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaBugRecordModifiyLogBO.updateBySetCreateTime(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容,設定單一Create_Time
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaBugRecordModifiyLogBO.updateByAssignCreateTime(System.Data.DataSet,System.DateTime,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容,傳入單一更新時間
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <param name="assignTime">單一更新時間</param>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaBugRecordModifiyLogBO.delete(System.String@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ刪除資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaBugRecordModifiyLogBO.queryByPK(System.String@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ查詢資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaBugRecordModifiyLogBO.queryByLikePK(System.String@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ Like 的方式查詢資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaBugRecordModifiyLogBO.queryAll(System.Data.IDbConnection@)">
+ <summary>
+查詢全部
+ </summary>
+ <returns>查詢資料全部資料內容</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaBugRecordModifiyLogBO.dynamicQuery(System.String@,System.Data.IDbConnection@)">
+ <summary>
+以 SQL String 動態查詢
+ </summary>
+ <param name="sqlString">查詢的 SQL 字串</param>
+ <returns>查詢資料</returns>
+ <remarks>不建議直接使用此方法</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaBugRecordModifiyLogBO.dynamicQueryWithColumnValue(System.String[]@,System.Object[]@,System.Data.IDbConnection@)">
+ <summary>
+動態查詢
+ </summary>
+ <param name="columnName">查詢的欄位名稱</param>
+ <param name="columnValue">查詢的欄位值</param>
+ <returns>查詢資料</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaBugRecordModifiyLogBO.getConnection">
+ <summary>
+取得表格 Job_QA_Bug_Record_Modifiy_Log 在所屬資料庫的連線
+ </summary>
+ <returns>資料庫連線</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaTestRecordBO.insert(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+新增
+ </summary>
+ <param name="ds">新增資料</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaTestRecordBO.insertByAssignCreateTime(System.Data.DataSet,System.DateTime,System.Data.IDbConnection@)">
+ <summary>
+新增(傳入單一Create_Time)
+ </summary>
+ <param name="ds">新增資料</param>
+ <param name="assignTime">傳入單一Create_Time</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaTestRecordBO.insertBySetCreateTime(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+新增(設定單一Create_Time)
+ </summary>
+ <param name="ds">新增資料</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaTestRecordBO.update(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaTestRecordBO.updateBySetCreateTime(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容,設定單一Create_Time
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaTestRecordBO.updateByAssignCreateTime(System.Data.DataSet,System.DateTime,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容,傳入單一更新時間
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <param name="assignTime">單一更新時間</param>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaTestRecordBO.delete(System.String@,System.String@,System.String@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ刪除資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaTestRecordBO.queryByPK(System.String@,System.String@,System.String@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ查詢資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaTestRecordBO.queryByLikePK(System.String@,System.String@,System.String@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ Like 的方式查詢資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaTestRecordBO.queryAll(System.Data.IDbConnection@)">
+ <summary>
+查詢全部
+ </summary>
+ <returns>查詢資料全部資料內容</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaTestRecordBO.dynamicQuery(System.String@,System.Data.IDbConnection@)">
+ <summary>
+以 SQL String 動態查詢
+ </summary>
+ <param name="sqlString">查詢的 SQL 字串</param>
+ <returns>查詢資料</returns>
+ <remarks>不建議直接使用此方法</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaTestRecordBO.dynamicQueryWithColumnValue(System.String[]@,System.Object[]@,System.Data.IDbConnection@)">
+ <summary>
+動態查詢
+ </summary>
+ <param name="columnName">查詢的欄位名稱</param>
+ <param name="columnValue">查詢的欄位值</param>
+ <returns>查詢資料</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobQaTestRecordBO.getConnection">
+ <summary>
+取得表格 Job_QA_Test_Record 在所屬資料庫的連線
+ </summary>
+ <returns>資料庫連線</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaAssignRecordBO.insert(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+新增
+ </summary>
+ <param name="ds">新增資料</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaAssignRecordBO.insertByAssignCreateTime(System.Data.DataSet,System.DateTime,System.Data.IDbConnection@)">
+ <summary>
+新增(傳入單一Create_Time)
+ </summary>
+ <param name="ds">新增資料</param>
+ <param name="assignTime">傳入單一Create_Time</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaAssignRecordBO.insertBySetCreateTime(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+新增(設定單一Create_Time)
+ </summary>
+ <param name="ds">新增資料</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaAssignRecordBO.update(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaAssignRecordBO.updateBySetCreateTime(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容,設定單一Create_Time
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaAssignRecordBO.updateByAssignCreateTime(System.Data.DataSet,System.DateTime,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容,傳入單一更新時間
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <param name="assignTime">單一更新時間</param>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaAssignRecordBO.delete(System.String@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ刪除資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaAssignRecordBO.queryByPK(System.String@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ查詢資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaAssignRecordBO.queryByLikePK(System.String@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ Like 的方式查詢資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaAssignRecordBO.queryAll(System.Data.IDbConnection@)">
+ <summary>
+查詢全部
+ </summary>
+ <returns>查詢資料全部資料內容</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaAssignRecordBO.dynamicQuery(System.String@,System.Data.IDbConnection@)">
+ <summary>
+以 SQL String 動態查詢
+ </summary>
+ <param name="sqlString">查詢的 SQL 字串</param>
+ <returns>查詢資料</returns>
+ <remarks>不建議直接使用此方法</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaAssignRecordBO.dynamicQueryWithColumnValue(System.String[]@,System.Object[]@,System.Data.IDbConnection@)">
+ <summary>
+動態查詢
+ </summary>
+ <param name="columnName">查詢的欄位名稱</param>
+ <param name="columnValue">查詢的欄位值</param>
+ <returns>查詢資料</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaAssignRecordBO.getConnection">
+ <summary>
+取得表格 JOB_SA_Assign_Record 在所屬資料庫的連線
+ </summary>
+ <returns>資料庫連線</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaDbmodifiedRecordBO.insert(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+新增
+ </summary>
+ <param name="ds">新增資料</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaDbmodifiedRecordBO.insertByAssignCreateTime(System.Data.DataSet,System.DateTime,System.Data.IDbConnection@)">
+ <summary>
+新增(傳入單一Create_Time)
+ </summary>
+ <param name="ds">新增資料</param>
+ <param name="assignTime">傳入單一Create_Time</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaDbmodifiedRecordBO.insertBySetCreateTime(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+新增(設定單一Create_Time)
+ </summary>
+ <param name="ds">新增資料</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaDbmodifiedRecordBO.update(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaDbmodifiedRecordBO.updateBySetCreateTime(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容,設定單一Create_Time
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaDbmodifiedRecordBO.updateByAssignCreateTime(System.Data.DataSet,System.DateTime,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容,傳入單一更新時間
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <param name="assignTime">單一更新時間</param>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaDbmodifiedRecordBO.delete(System.String@,System.Int32@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ刪除資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaDbmodifiedRecordBO.queryByPK(System.String@,System.Int32@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ查詢資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaDbmodifiedRecordBO.queryByLikePK(System.String@,System.Int32@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ Like 的方式查詢資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaDbmodifiedRecordBO.queryAll(System.Data.IDbConnection@)">
+ <summary>
+查詢全部
+ </summary>
+ <returns>查詢資料全部資料內容</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaDbmodifiedRecordBO.dynamicQuery(System.String@,System.Data.IDbConnection@)">
+ <summary>
+以 SQL String 動態查詢
+ </summary>
+ <param name="sqlString">查詢的 SQL 字串</param>
+ <returns>查詢資料</returns>
+ <remarks>不建議直接使用此方法</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaDbmodifiedRecordBO.dynamicQueryWithColumnValue(System.String[]@,System.Object[]@,System.Data.IDbConnection@)">
+ <summary>
+動態查詢
+ </summary>
+ <param name="columnName">查詢的欄位名稱</param>
+ <param name="columnValue">查詢的欄位值</param>
+ <returns>查詢資料</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaDbmodifiedRecordBO.getConnection">
+ <summary>
+取得表格 JOB_SA_DBModified_Record 在所屬資料庫的連線
+ </summary>
+ <returns>資料庫連線</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaRejectRecordBO.insert(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+新增
+ </summary>
+ <param name="ds">新增資料</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaRejectRecordBO.insertByAssignCreateTime(System.Data.DataSet,System.DateTime,System.Data.IDbConnection@)">
+ <summary>
+新增(傳入單一Create_Time)
+ </summary>
+ <param name="ds">新增資料</param>
+ <param name="assignTime">傳入單一Create_Time</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaRejectRecordBO.insertBySetCreateTime(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+新增(設定單一Create_Time)
+ </summary>
+ <param name="ds">新增資料</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaRejectRecordBO.update(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaRejectRecordBO.updateBySetCreateTime(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容,設定單一Create_Time
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaRejectRecordBO.updateByAssignCreateTime(System.Data.DataSet,System.DateTime,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容,傳入單一更新時間
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <param name="assignTime">單一更新時間</param>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaRejectRecordBO.delete(System.String@,System.Int32@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ刪除資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaRejectRecordBO.queryByPK(System.String@,System.Int32@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ查詢資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaRejectRecordBO.queryByLikePK(System.String@,System.Int32@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ Like 的方式查詢資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaRejectRecordBO.queryAll(System.Data.IDbConnection@)">
+ <summary>
+查詢全部
+ </summary>
+ <returns>查詢資料全部資料內容</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaRejectRecordBO.dynamicQuery(System.String@,System.Data.IDbConnection@)">
+ <summary>
+以 SQL String 動態查詢
+ </summary>
+ <param name="sqlString">查詢的 SQL 字串</param>
+ <returns>查詢資料</returns>
+ <remarks>不建議直接使用此方法</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaRejectRecordBO.dynamicQueryWithColumnValue(System.String[]@,System.Object[]@,System.Data.IDbConnection@)">
+ <summary>
+動態查詢
+ </summary>
+ <param name="columnName">查詢的欄位名稱</param>
+ <param name="columnValue">查詢的欄位值</param>
+ <returns>查詢資料</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaRejectRecordBO.getConnection">
+ <summary>
+取得表格 JOB_SA_Reject_Record 在所屬資料庫的連線
+ </summary>
+ <returns>資料庫連線</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaSpecfilesBO.insert(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+新增
+ </summary>
+ <param name="ds">新增資料</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaSpecfilesBO.insertByAssignCreateTime(System.Data.DataSet,System.DateTime,System.Data.IDbConnection@)">
+ <summary>
+新增(傳入單一Create_Time)
+ </summary>
+ <param name="ds">新增資料</param>
+ <param name="assignTime">傳入單一Create_Time</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaSpecfilesBO.insertBySetCreateTime(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+新增(設定單一Create_Time)
+ </summary>
+ <param name="ds">新增資料</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaSpecfilesBO.update(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaSpecfilesBO.updateBySetCreateTime(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容,設定單一Create_Time
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaSpecfilesBO.updateByAssignCreateTime(System.Data.DataSet,System.DateTime,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容,傳入單一更新時間
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <param name="assignTime">單一更新時間</param>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaSpecfilesBO.delete(System.String@,System.String@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ刪除資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaSpecfilesBO.queryByPK(System.String@,System.String@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ查詢資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaSpecfilesBO.queryByLikePK(System.String@,System.String@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ Like 的方式查詢資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaSpecfilesBO.queryAll(System.Data.IDbConnection@)">
+ <summary>
+查詢全部
+ </summary>
+ <returns>查詢資料全部資料內容</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaSpecfilesBO.dynamicQuery(System.String@,System.Data.IDbConnection@)">
+ <summary>
+以 SQL String 動態查詢
+ </summary>
+ <param name="sqlString">查詢的 SQL 字串</param>
+ <returns>查詢資料</returns>
+ <remarks>不建議直接使用此方法</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaSpecfilesBO.dynamicQueryWithColumnValue(System.String[]@,System.Object[]@,System.Data.IDbConnection@)">
+ <summary>
+動態查詢
+ </summary>
+ <param name="columnName">查詢的欄位名稱</param>
+ <param name="columnValue">查詢的欄位值</param>
+ <returns>查詢資料</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobSaSpecfilesBO.getConnection">
+ <summary>
+取得表格 JOB_SA_SpecFiles 在所屬資料庫的連線
+ </summary>
+ <returns>資料庫連線</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobServiceRecordBO.insert(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+新增
+ </summary>
+ <param name="ds">新增資料</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobServiceRecordBO.insertByAssignCreateTime(System.Data.DataSet,System.DateTime,System.Data.IDbConnection@)">
+ <summary>
+新增(傳入單一Create_Time)
+ </summary>
+ <param name="ds">新增資料</param>
+ <param name="assignTime">傳入單一Create_Time</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobServiceRecordBO.insertBySetCreateTime(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+新增(設定單一Create_Time)
+ </summary>
+ <param name="ds">新增資料</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobServiceRecordBO.update(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobServiceRecordBO.updateBySetCreateTime(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容,設定單一Create_Time
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobServiceRecordBO.updateByAssignCreateTime(System.Data.DataSet,System.DateTime,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容,傳入單一更新時間
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <param name="assignTime">單一更新時間</param>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobServiceRecordBO.delete(System.Int32@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ刪除資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobServiceRecordBO.queryByPK(System.Int32@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ查詢資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobServiceRecordBO.queryByLikePK(System.Int32@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ Like 的方式查詢資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobServiceRecordBO.queryAll(System.Data.IDbConnection@)">
+ <summary>
+查詢全部
+ </summary>
+ <returns>查詢資料全部資料內容</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobServiceRecordBO.dynamicQuery(System.String@,System.Data.IDbConnection@)">
+ <summary>
+以 SQL String 動態查詢
+ </summary>
+ <param name="sqlString">查詢的 SQL 字串</param>
+ <returns>查詢資料</returns>
+ <remarks>不建議直接使用此方法</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobServiceRecordBO.dynamicQueryWithColumnValue(System.String[]@,System.Object[]@,System.Data.IDbConnection@)">
+ <summary>
+動態查詢
+ </summary>
+ <param name="columnName">查詢的欄位名稱</param>
+ <param name="columnValue">查詢的欄位值</param>
+ <returns>查詢資料</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobServiceRecordBO.getConnection">
+ <summary>
+取得表格 JOB_Service_Record 在所屬資料庫的連線
+ </summary>
+ <returns>資料庫連線</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobServiceReplyRecordBO.insert(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+新增
+ </summary>
+ <param name="ds">新增資料</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobServiceReplyRecordBO.insertByAssignCreateTime(System.Data.DataSet,System.DateTime,System.Data.IDbConnection@)">
+ <summary>
+新增(傳入單一Create_Time)
+ </summary>
+ <param name="ds">新增資料</param>
+ <param name="assignTime">傳入單一Create_Time</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobServiceReplyRecordBO.insertBySetCreateTime(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+新增(設定單一Create_Time)
+ </summary>
+ <param name="ds">新增資料</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobServiceReplyRecordBO.update(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobServiceReplyRecordBO.updateBySetCreateTime(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容,設定單一Create_Time
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobServiceReplyRecordBO.updateByAssignCreateTime(System.Data.DataSet,System.DateTime,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容,傳入單一更新時間
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <param name="assignTime">單一更新時間</param>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobServiceReplyRecordBO.delete(System.Int32@,System.Int32@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ刪除資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobServiceReplyRecordBO.queryByPK(System.Int32@,System.Int32@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ查詢資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobServiceReplyRecordBO.queryByLikePK(System.Int32@,System.Int32@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ Like 的方式查詢資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobServiceReplyRecordBO.queryAll(System.Data.IDbConnection@)">
+ <summary>
+查詢全部
+ </summary>
+ <returns>查詢資料全部資料內容</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobServiceReplyRecordBO.dynamicQuery(System.String@,System.Data.IDbConnection@)">
+ <summary>
+以 SQL String 動態查詢
+ </summary>
+ <param name="sqlString">查詢的 SQL 字串</param>
+ <returns>查詢資料</returns>
+ <remarks>不建議直接使用此方法</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobServiceReplyRecordBO.dynamicQueryWithColumnValue(System.String[]@,System.Object[]@,System.Data.IDbConnection@)">
+ <summary>
+動態查詢
+ </summary>
+ <param name="columnName">查詢的欄位名稱</param>
+ <param name="columnValue">查詢的欄位值</param>
+ <returns>查詢資料</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobServiceReplyRecordBO.getConnection">
+ <summary>
+取得表格 JOB_Service_Reply_Record 在所屬資料庫的連線
+ </summary>
+ <returns>資料庫連線</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjCustomBO.insert(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+新增
+ </summary>
+ <param name="ds">新增資料</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjCustomBO.insertByAssignCreateTime(System.Data.DataSet,System.DateTime,System.Data.IDbConnection@)">
+ <summary>
+新增(傳入單一Create_Time)
+ </summary>
+ <param name="ds">新增資料</param>
+ <param name="assignTime">傳入單一Create_Time</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjCustomBO.insertBySetCreateTime(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+新增(設定單一Create_Time)
+ </summary>
+ <param name="ds">新增資料</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjCustomBO.queryAll(System.Data.IDbConnection@)">
+ <summary>
+查詢全部
+ </summary>
+ <returns>查詢資料全部資料內容</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjCustomBO.dynamicQuery(System.String@,System.Data.IDbConnection@)">
+ <summary>
+以 SQL String 動態查詢
+ </summary>
+ <param name="sqlString">查詢的 SQL 字串</param>
+ <returns>查詢資料</returns>
+ <remarks>不建議直接使用此方法</remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjCustomBO.dynamicQueryWithColumnValue(System.String[]@,System.Object[]@,System.Data.IDbConnection@)">
+ <summary>
+動態查詢
+ </summary>
+ <param name="columnName">查詢的欄位名稱</param>
+ <param name="columnValue">查詢的欄位值</param>
+ <returns>查詢資料</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjCustomBO.getConnection">
+ <summary>
+取得表格 PRJ_Custom 在所屬資料庫的連線
+ </summary>
+ <returns>資料庫連線</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjMailGroupBO.insert(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+新增
+ </summary>
+ <param name="ds">新增資料</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjMailGroupBO.insertByAssignCreateTime(System.Data.DataSet,System.DateTime,System.Data.IDbConnection@)">
+ <summary>
+新增(傳入單一Create_Time)
+ </summary>
+ <param name="ds">新增資料</param>
+ <param name="assignTime">傳入單一Create_Time</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjMailGroupBO.insertBySetCreateTime(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+新增(設定單一Create_Time)
+ </summary>
+ <param name="ds">新增資料</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjMailGroupBO.update(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjMailGroupBO.updateBySetCreateTime(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容,設定單一Create_Time
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjMailGroupBO.updateByAssignCreateTime(System.Data.DataSet,System.DateTime,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容,傳入單一更新時間
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <param name="assignTime">單一更新時間</param>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjMailGroupBO.delete(System.String@,System.String@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ刪除資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjMailGroupBO.queryByPK(System.String@,System.String@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ查詢資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjMailGroupBO.queryByLikePK(System.String@,System.String@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ Like 的方式查詢資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjMailGroupBO.queryAll(System.Data.IDbConnection@)">
+ <summary>
+查詢全部
+ </summary>
+ <returns>查詢資料全部資料內容</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjMailGroupBO.dynamicQuery(System.String@,System.Data.IDbConnection@)">
+ <summary>
+以 SQL String 動態查詢
+ </summary>
+ <param name="sqlString">查詢的 SQL 字串</param>
+ <returns>查詢資料</returns>
+ <remarks>不建議直接使用此方法</remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjMailGroupBO.dynamicQueryWithColumnValue(System.String[]@,System.Object[]@,System.Data.IDbConnection@)">
+ <summary>
+動態查詢
+ </summary>
+ <param name="columnName">查詢的欄位名稱</param>
+ <param name="columnValue">查詢的欄位值</param>
+ <returns>查詢資料</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjMailGroupBO.getConnection">
+ <summary>
+取得表格 PRJ_Mail_Group 在所屬資料庫的連線
+ </summary>
+ <returns>資料庫連線</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjMailGroupDetailBO.insert(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+新增
+ </summary>
+ <param name="ds">新增資料</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjMailGroupDetailBO.insertByAssignCreateTime(System.Data.DataSet,System.DateTime,System.Data.IDbConnection@)">
+ <summary>
+新增(傳入單一Create_Time)
+ </summary>
+ <param name="ds">新增資料</param>
+ <param name="assignTime">傳入單一Create_Time</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjMailGroupDetailBO.insertBySetCreateTime(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+新增(設定單一Create_Time)
+ </summary>
+ <param name="ds">新增資料</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjMailGroupDetailBO.update(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjMailGroupDetailBO.updateBySetCreateTime(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容,設定單一Create_Time
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjMailGroupDetailBO.updateByAssignCreateTime(System.Data.DataSet,System.DateTime,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容,傳入單一更新時間
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <param name="assignTime">單一更新時間</param>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjMailGroupDetailBO.delete(System.String@,System.String@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ刪除資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjMailGroupDetailBO.queryByPK(System.String@,System.String@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ查詢資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjMailGroupDetailBO.queryByLikePK(System.String@,System.String@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ Like 的方式查詢資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjMailGroupDetailBO.queryAll(System.Data.IDbConnection@)">
+ <summary>
+查詢全部
+ </summary>
+ <returns>查詢資料全部資料內容</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjMailGroupDetailBO.dynamicQuery(System.String@,System.Data.IDbConnection@)">
+ <summary>
+以 SQL String 動態查詢
+ </summary>
+ <param name="sqlString">查詢的 SQL 字串</param>
+ <returns>查詢資料</returns>
+ <remarks>不建議直接使用此方法</remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjMailGroupDetailBO.dynamicQueryWithColumnValue(System.String[]@,System.Object[]@,System.Data.IDbConnection@)">
+ <summary>
+動態查詢
+ </summary>
+ <param name="columnName">查詢的欄位名稱</param>
+ <param name="columnValue">查詢的欄位值</param>
+ <returns>查詢資料</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjMailGroupDetailBO.getConnection">
+ <summary>
+取得表格 PRJ_Mail_Group_Detail 在所屬資料庫的連線
+ </summary>
+ <returns>資料庫連線</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjProjectBO.insert(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+新增
+ </summary>
+ <param name="ds">新增資料</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjProjectBO.insertByAssignCreateTime(System.Data.DataSet,System.DateTime,System.Data.IDbConnection@)">
+ <summary>
+新增(傳入單一Create_Time)
+ </summary>
+ <param name="ds">新增資料</param>
+ <param name="assignTime">傳入單一Create_Time</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjProjectBO.insertBySetCreateTime(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+新增(設定單一Create_Time)
+ </summary>
+ <param name="ds">新增資料</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjProjectBO.update(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjProjectBO.updateBySetCreateTime(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容,設定單一Create_Time
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjProjectBO.updateByAssignCreateTime(System.Data.DataSet,System.DateTime,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容,傳入單一更新時間
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <param name="assignTime">單一更新時間</param>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjProjectBO.delete(System.String@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ刪除資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjProjectBO.queryByPK(System.String@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ查詢資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjProjectBO.queryByLikePK(System.String@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ Like 的方式查詢資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjProjectBO.queryAll(System.Data.IDbConnection@)">
+ <summary>
+查詢全部
+ </summary>
+ <returns>查詢資料全部資料內容</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjProjectBO.dynamicQuery(System.String@,System.Data.IDbConnection@)">
+ <summary>
+以 SQL String 動態查詢
+ </summary>
+ <param name="sqlString">查詢的 SQL 字串</param>
+ <returns>查詢資料</returns>
+ <remarks>不建議直接使用此方法</remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjProjectBO.dynamicQueryWithColumnValue(System.String[]@,System.Object[]@,System.Data.IDbConnection@)">
+ <summary>
+動態查詢
+ </summary>
+ <param name="columnName">查詢的欄位名稱</param>
+ <param name="columnValue">查詢的欄位值</param>
+ <returns>查詢資料</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjProjectBO.getConnection">
+ <summary>
+取得表格 PRJ_Project 在所屬資料庫的連線
+ </summary>
+ <returns>資料庫連線</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjProjectSystemBO.insert(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+新增
+ </summary>
+ <param name="ds">新增資料</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjProjectSystemBO.insertByAssignCreateTime(System.Data.DataSet,System.DateTime,System.Data.IDbConnection@)">
+ <summary>
+新增(傳入單一Create_Time)
+ </summary>
+ <param name="ds">新增資料</param>
+ <param name="assignTime">傳入單一Create_Time</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjProjectSystemBO.insertBySetCreateTime(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+新增(設定單一Create_Time)
+ </summary>
+ <param name="ds">新增資料</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjProjectSystemBO.update(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjProjectSystemBO.updateBySetCreateTime(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容,設定單一Create_Time
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjProjectSystemBO.updateByAssignCreateTime(System.Data.DataSet,System.DateTime,System.Data.IDbConnection@)">
+ <summary>
+更新資料庫內容,傳入單一更新時間
+ </summary>
+ <param name="ds">更新的資料內容</param>
+ <param name="assignTime">單一更新時間</param>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjProjectSystemBO.delete(System.String@,System.String@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ刪除資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjProjectSystemBO.queryByPK(System.String@,System.String@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ查詢資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjProjectSystemBO.queryByLikePK(System.String@,System.String@,System.Data.IDbConnection@)">
+ <summary>
+以ＰＫ Like 的方式查詢資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjProjectSystemBO.queryAll(System.Data.IDbConnection@)">
+ <summary>
+查詢全部
+ </summary>
+ <returns>查詢資料全部資料內容</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjProjectSystemBO.dynamicQuery(System.String@,System.Data.IDbConnection@)">
+ <summary>
+以 SQL String 動態查詢
+ </summary>
+ <param name="sqlString">查詢的 SQL 字串</param>
+ <returns>查詢資料</returns>
+ <remarks>不建議直接使用此方法</remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjProjectSystemBO.dynamicQueryWithColumnValue(System.String[]@,System.Object[]@,System.Data.IDbConnection@)">
+ <summary>
+動態查詢
+ </summary>
+ <param name="columnName">查詢的欄位名稱</param>
+ <param name="columnValue">查詢的欄位值</param>
+ <returns>查詢資料</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjProjectSystemBO.getConnection">
+ <summary>
+取得表格 PRJ_Project_System 在所屬資料庫的連線
+ </summary>
+ <returns>資料庫連線</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjProjectSystemFunctionBO.insert(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+新增
+ </summary>
+ <param name="ds">新增資料</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjProjectSystemFunctionBO.insertByAssignCreateTime(System.Data.DataSet,System.DateTime,System.Data.IDbConnection@)">
+ <summary>
+新增(傳入單一Create_Time)
+ </summary>
+ <param name="ds">新增資料</param>
+ <param name="assignTime">傳入單一Create_Time</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjProjectSystemFunctionBO.insertBySetCreateTime(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+新增(設定單一Create_Time)
+ </summary>
+ <param name="ds">新增資料</param>
+ <returns>新增筆數</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjProjectSystemFunctionBO.queryAll(System.Data.IDbConnection@)">
+ <summary>
+查詢全部
+ </summary>
+ <returns>查詢資料全部資料內容</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjProjectSystemFunctionBO.dynamicQuery(System.String@,System.Data.IDbConnection@)">
+ <summary>
+以 SQL String 動態查詢
+ </summary>
+ <param name="sqlString">查詢的 SQL 字串</param>
+ <returns>查詢資料</returns>
+ <remarks>不建議直接使用此方法</remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjProjectSystemFunctionBO.dynamicQueryWithColumnValue(System.String[]@,System.Object[]@,System.Data.IDbConnection@)">
+ <summary>
+動態查詢
+ </summary>
+ <param name="columnName">查詢的欄位名稱</param>
+ <param name="columnValue">查詢的欄位值</param>
+ <returns>查詢資料</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.PrjProjectSystemFunctionBO.getConnection">
+ <summary>
+取得表格 PRJ_Project_System_Function 在所屬資料庫的連線
+ </summary>
+ <returns>資料庫連線</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Project.Server.JOB.JobDoActionBS.QueryEmployeeListByLevel(System.String,System.Data.IDbConnection@)">
+ <summary>
+ 查詢PG員工基本檔
+ </summary>
+ <returns>Dataset</returns>
+ <remarks>by Will.Lin on 2017-06-16</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobDoActionBS.GetSpecRecord(System.String,System.Data.IDbConnection@)">
+ <summary>
+ 查詢附件紀錄
+ </summary>
+ <returns>Dataset</returns>
+ <remarks>by Will.Lin on 2017-12-06</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobDoActionBS.QueryFunctionDataByProjectIDandSystemCode(System.String,System.String,System.Data.IDbConnection@)">
+ <summary>
+ 查詢歸屬功能
+ </summary>
+ <returns>Dataset</returns>
+ <remarks>by Will.Lin on 2017-09-30</remarks>
+</member>
+<member name="M:Project.Server.JOB.JobDoActionBS.QuerySystemDataByProjectID(System.String,System.Data.IDbConnection@)">
+ <summary>
+ 查詢所屬系統
+ </summary>
+ <returns>Dataset</returns>
+ <remarks>by Will.Lin on 2017-09-30</remarks>
+</member>
+<member name="M:Project.Server.JOB.JOBDelegate.QueryJobProjectMaintainData(System.String,System.String,System.String,System.String,System.String,System.Data.IDbConnection@)">
+ <summary>
+ 專案維護作業(查詢專案清單)
+ </summary>
+ <returns>Dataset</returns>
+ <remarks>by Will.Lin on 2017-04-14</remarks>
+</member>
+<member name="M:Project.Server.JOB.JOBDelegate.PRJDoAction(System.Data.DataSet)">
+ <summary>
+ 專案維護作業(DoAction)
+ </summary>
+ <returns>Dataset</returns>
+ <remarks>by Will.Lin on 2017-04-14</remarks>
+</member>
+</members>
+</doc>

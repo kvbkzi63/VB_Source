@@ -1,0 +1,1309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ArmService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_IArmService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:40611/ArmService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:40611/ArmService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:40611/ArmService.svc?xsd=xsd2" />
+      <xsd:import schemaLocation="http://localhost:40611/ArmService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+      <xsd:import schemaLocation="http://localhost:40611/ArmService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IArmService_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_LoginForSys_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoginForSys" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_LoginForSys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginForSysResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_LoginForAgent_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoginForAgent" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_LoginForAgent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginForAgentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_queryForRoleRightsMaintain_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryForRoleRightsMaintain" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_queryForRoleRightsMaintain_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryForRoleRightsMaintainResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_ConfirmRoleRights_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConfirmRoleRights" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_ConfirmRoleRights_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConfirmRoleRightsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_ArmForUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:ArmForUser" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_ArmForUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ArmForUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_AddUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUser" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_AddUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_ModifyUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyUser" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_ModifyUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_DeleteUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUser" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_DeleteUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_QueryUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryUser" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_QueryUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_ChangePassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangePassword" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_ChangePassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_ResetPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResetPassword" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_ResetPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResetPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_LoginModuleLoginBySectionCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoginModuleLoginBySectionCode" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_LoginModuleLoginBySectionCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginModuleLoginBySectionCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_AddRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddRole" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_AddRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_ModifyRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyRole" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_ModifyRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_DeleteRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRole" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_DeleteRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_QueryRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryRole" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_QueryRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_RoleBelongQuery_InputMessage">
+    <wsdl:part name="parameters" element="tns:RoleBelongQuery" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_RoleBelongQuery_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RoleBelongQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_RoleBelongUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:RoleBelongUpdate" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_RoleBelongUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RoleBelongUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_AppGetAppSystem_InputMessage">
+    <wsdl:part name="parameters" element="tns:AppGetAppSystem" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_AppGetAppSystem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AppGetAppSystemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_AppQueryByPK_InputMessage">
+    <wsdl:part name="parameters" element="tns:AppQueryByPK" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_AppQueryByPK_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AppQueryByPKResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_AppInsert_InputMessage">
+    <wsdl:part name="parameters" element="tns:AppInsert" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_AppInsert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AppInsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_AppDelete_InputMessage">
+    <wsdl:part name="parameters" element="tns:AppDelete" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_AppDelete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AppDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_AppUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:AppUpdate" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_AppUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AppUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_AppGetAppSystemCombobox_InputMessage">
+    <wsdl:part name="parameters" element="tns:AppGetAppSystemCombobox" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_AppGetAppSystemCombobox_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AppGetAppSystemComboboxResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_SubGetSubSystem_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubGetSubSystem" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_SubGetSubSystem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubGetSubSystemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_SubQueryByPK_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubQueryByPK" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_SubQueryByPK_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubQueryByPKResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_SubInsert_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubInsert" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_SubInsert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubInsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_SubDelete_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubDelete" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_SubDelete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_SubUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubUpdate" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_SubUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_SubGetSubSystemCombobox_InputMessage">
+    <wsdl:part name="parameters" element="tns:SubGetSubSystemCombobox" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_SubGetSubSystemCombobox_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SubGetSubSystemComboboxResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_TskGetAllSystem_InputMessage">
+    <wsdl:part name="parameters" element="tns:TskGetAllSystem" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_TskGetAllSystem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TskGetAllSystemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_TskQueryByPK_InputMessage">
+    <wsdl:part name="parameters" element="tns:TskQueryByPK" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_TskQueryByPK_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TskQueryByPKResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_TskInsert_InputMessage">
+    <wsdl:part name="parameters" element="tns:TskInsert" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_TskInsert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TskInsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_TskDelete_InputMessage">
+    <wsdl:part name="parameters" element="tns:TskDelete" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_TskDelete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TskDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_TskUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:TskUpdate" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_TskUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TskUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_TskGetTskSystemCombobox_InputMessage">
+    <wsdl:part name="parameters" element="tns:TskGetTskSystemCombobox" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_TskGetTskSystemCombobox_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TskGetTskSystemComboboxResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_FunGetAllSystem_InputMessage">
+    <wsdl:part name="parameters" element="tns:FunGetAllSystem" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_FunGetAllSystem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FunGetAllSystemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_FunQueryByPK_InputMessage">
+    <wsdl:part name="parameters" element="tns:FunQueryByPK" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_FunQueryByPK_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FunQueryByPKResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_FunQueryByLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:FunQueryByLogin" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_FunQueryByLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FunQueryByLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_FunInsert_InputMessage">
+    <wsdl:part name="parameters" element="tns:FunInsert" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_FunInsert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FunInsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_FunDelete_InputMessage">
+    <wsdl:part name="parameters" element="tns:FunDelete" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_FunDelete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FunDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_FunUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:FunUpdate" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_FunUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FunUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_insertLogonDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertLogonDate" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_insertLogonDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertLogonDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_updateLogoutDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateLogoutDate" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_updateLogoutDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateLogoutDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_queryIP_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryIP" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_queryIP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryIPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_insertLogonDateBySystem_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertLogonDateBySystem" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_insertLogonDateBySystem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertLogonDateBySystemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_updateLogoutDateBySystem_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateLogoutDateBySystem" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_updateLogoutDateBySystem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateLogoutDateBySystemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_queryIPBySystem_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryIPBySystem" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_queryIPBySystem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryIPBySystemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_queryEmployeeRoleData_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryEmployeeRoleData" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_queryEmployeeRoleData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryEmployeeRoleDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_getPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:getPassword" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_getPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_saveLogonFailure_InputMessage">
+    <wsdl:part name="parameters" element="tns:saveLogonFailure" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_saveLogonFailure_OutputMessage">
+    <wsdl:part name="parameters" element="tns:saveLogonFailureResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_insertProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertProfile" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_insertProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_deleteProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteProfile" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_deleteProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_queryProfileByPk_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryProfileByPk" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_queryProfileByPk_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryProfileByPkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_queryProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryProfile" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_queryProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_updateProfileDefault_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateProfileDefault" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_updateProfileDefault_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateProfileDefaultResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_RoleQueryByEmployee_InputMessage">
+    <wsdl:part name="parameters" element="tns:RoleQueryByEmployee" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_RoleQueryByEmployee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RoleQueryByEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_EmployeeQueryByRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:EmployeeQueryByRole" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_EmployeeQueryByRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EmployeeQueryByRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_EmployeeQueryByFunction_InputMessage">
+    <wsdl:part name="parameters" element="tns:EmployeeQueryByFunction" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_EmployeeQueryByFunction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EmployeeQueryByFunctionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_insertFunRecord_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertFunRecord" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_insertFunRecord_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertFunRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_insertArmAgentAuth_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertArmAgentAuth" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_insertArmAgentAuth_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertArmAgentAuthResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_deleteArmAgentAuth_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteArmAgentAuth" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_deleteArmAgentAuth_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteArmAgentAuthResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_queryByAgentEmployeeCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryByAgentEmployeeCode" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_queryByAgentEmployeeCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryByAgentEmployeeCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_queryArmRecord_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryArmRecord" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_queryArmRecord_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryArmRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_queryRoleRightsByMemberOf_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryRoleRightsByMemberOf" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_queryRoleRightsByMemberOf_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryRoleRightsByMemberOfResponse" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_ArmLogonFailureQueryLoginFailure_InputMessage">
+    <wsdl:part name="parameters" element="tns:ArmLogonFailureQueryLoginFailure" />
+  </wsdl:message>
+  <wsdl:message name="IArmService_ArmLogonFailureQueryLoginFailure_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ArmLogonFailureQueryLoginFailureResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IArmService">
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/Login" message="tns:IArmService_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/LoginResponse" message="tns:IArmService_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginForSys">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/LoginForSys" message="tns:IArmService_LoginForSys_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/LoginForSysResponse" message="tns:IArmService_LoginForSys_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginForAgent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/LoginForAgent" message="tns:IArmService_LoginForAgent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/LoginForAgentResponse" message="tns:IArmService_LoginForAgent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryForRoleRightsMaintain">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/queryForRoleRightsMaintain" message="tns:IArmService_queryForRoleRightsMaintain_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/queryForRoleRightsMaintainResponse" message="tns:IArmService_queryForRoleRightsMaintain_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmRoleRights">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/ConfirmRoleRights" message="tns:IArmService_ConfirmRoleRights_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/ConfirmRoleRightsResponse" message="tns:IArmService_ConfirmRoleRights_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ArmForUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/ArmForUser" message="tns:IArmService_ArmForUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/ArmForUserResponse" message="tns:IArmService_ArmForUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/AddUser" message="tns:IArmService_AddUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/AddUserResponse" message="tns:IArmService_AddUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/ModifyUser" message="tns:IArmService_ModifyUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/ModifyUserResponse" message="tns:IArmService_ModifyUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/DeleteUser" message="tns:IArmService_DeleteUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/DeleteUserResponse" message="tns:IArmService_DeleteUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/QueryUser" message="tns:IArmService_QueryUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/QueryUserResponse" message="tns:IArmService_QueryUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/ChangePassword" message="tns:IArmService_ChangePassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/ChangePasswordResponse" message="tns:IArmService_ChangePassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/ResetPassword" message="tns:IArmService_ResetPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/ResetPasswordResponse" message="tns:IArmService_ResetPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginModuleLoginBySectionCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/LoginModuleLoginBySectionCode" message="tns:IArmService_LoginModuleLoginBySectionCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/LoginModuleLoginBySectionCodeResponse" message="tns:IArmService_LoginModuleLoginBySectionCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/AddRole" message="tns:IArmService_AddRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/AddRoleResponse" message="tns:IArmService_AddRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/ModifyRole" message="tns:IArmService_ModifyRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/ModifyRoleResponse" message="tns:IArmService_ModifyRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/DeleteRole" message="tns:IArmService_DeleteRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/DeleteRoleResponse" message="tns:IArmService_DeleteRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/QueryRole" message="tns:IArmService_QueryRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/QueryRoleResponse" message="tns:IArmService_QueryRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RoleBelongQuery">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/RoleBelongQuery" message="tns:IArmService_RoleBelongQuery_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/RoleBelongQueryResponse" message="tns:IArmService_RoleBelongQuery_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RoleBelongUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/RoleBelongUpdate" message="tns:IArmService_RoleBelongUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/RoleBelongUpdateResponse" message="tns:IArmService_RoleBelongUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AppGetAppSystem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/AppGetAppSystem" message="tns:IArmService_AppGetAppSystem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/AppGetAppSystemResponse" message="tns:IArmService_AppGetAppSystem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AppQueryByPK">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/AppQueryByPK" message="tns:IArmService_AppQueryByPK_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/AppQueryByPKResponse" message="tns:IArmService_AppQueryByPK_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AppInsert">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/AppInsert" message="tns:IArmService_AppInsert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/AppInsertResponse" message="tns:IArmService_AppInsert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AppDelete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/AppDelete" message="tns:IArmService_AppDelete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/AppDeleteResponse" message="tns:IArmService_AppDelete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AppUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/AppUpdate" message="tns:IArmService_AppUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/AppUpdateResponse" message="tns:IArmService_AppUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AppGetAppSystemCombobox">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/AppGetAppSystemCombobox" message="tns:IArmService_AppGetAppSystemCombobox_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/AppGetAppSystemComboboxResponse" message="tns:IArmService_AppGetAppSystemCombobox_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubGetSubSystem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/SubGetSubSystem" message="tns:IArmService_SubGetSubSystem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/SubGetSubSystemResponse" message="tns:IArmService_SubGetSubSystem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubQueryByPK">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/SubQueryByPK" message="tns:IArmService_SubQueryByPK_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/SubQueryByPKResponse" message="tns:IArmService_SubQueryByPK_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubInsert">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/SubInsert" message="tns:IArmService_SubInsert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/SubInsertResponse" message="tns:IArmService_SubInsert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubDelete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/SubDelete" message="tns:IArmService_SubDelete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/SubDeleteResponse" message="tns:IArmService_SubDelete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/SubUpdate" message="tns:IArmService_SubUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/SubUpdateResponse" message="tns:IArmService_SubUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SubGetSubSystemCombobox">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/SubGetSubSystemCombobox" message="tns:IArmService_SubGetSubSystemCombobox_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/SubGetSubSystemComboboxResponse" message="tns:IArmService_SubGetSubSystemCombobox_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TskGetAllSystem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/TskGetAllSystem" message="tns:IArmService_TskGetAllSystem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/TskGetAllSystemResponse" message="tns:IArmService_TskGetAllSystem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TskQueryByPK">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/TskQueryByPK" message="tns:IArmService_TskQueryByPK_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/TskQueryByPKResponse" message="tns:IArmService_TskQueryByPK_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TskInsert">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/TskInsert" message="tns:IArmService_TskInsert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/TskInsertResponse" message="tns:IArmService_TskInsert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TskDelete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/TskDelete" message="tns:IArmService_TskDelete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/TskDeleteResponse" message="tns:IArmService_TskDelete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TskUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/TskUpdate" message="tns:IArmService_TskUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/TskUpdateResponse" message="tns:IArmService_TskUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TskGetTskSystemCombobox">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/TskGetTskSystemCombobox" message="tns:IArmService_TskGetTskSystemCombobox_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/TskGetTskSystemComboboxResponse" message="tns:IArmService_TskGetTskSystemCombobox_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FunGetAllSystem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/FunGetAllSystem" message="tns:IArmService_FunGetAllSystem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/FunGetAllSystemResponse" message="tns:IArmService_FunGetAllSystem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FunQueryByPK">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/FunQueryByPK" message="tns:IArmService_FunQueryByPK_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/FunQueryByPKResponse" message="tns:IArmService_FunQueryByPK_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FunQueryByLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/FunQueryByLogin" message="tns:IArmService_FunQueryByLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/FunQueryByLoginResponse" message="tns:IArmService_FunQueryByLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FunInsert">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/FunInsert" message="tns:IArmService_FunInsert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/FunInsertResponse" message="tns:IArmService_FunInsert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FunDelete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/FunDelete" message="tns:IArmService_FunDelete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/FunDeleteResponse" message="tns:IArmService_FunDelete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FunUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/FunUpdate" message="tns:IArmService_FunUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/FunUpdateResponse" message="tns:IArmService_FunUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertLogonDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/insertLogonDate" message="tns:IArmService_insertLogonDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/insertLogonDateResponse" message="tns:IArmService_insertLogonDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateLogoutDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/updateLogoutDate" message="tns:IArmService_updateLogoutDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/updateLogoutDateResponse" message="tns:IArmService_updateLogoutDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryIP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/queryIP" message="tns:IArmService_queryIP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/queryIPResponse" message="tns:IArmService_queryIP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertLogonDateBySystem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/insertLogonDateBySystem" message="tns:IArmService_insertLogonDateBySystem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/insertLogonDateBySystemResponse" message="tns:IArmService_insertLogonDateBySystem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateLogoutDateBySystem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/updateLogoutDateBySystem" message="tns:IArmService_updateLogoutDateBySystem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/updateLogoutDateBySystemResponse" message="tns:IArmService_updateLogoutDateBySystem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryIPBySystem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/queryIPBySystem" message="tns:IArmService_queryIPBySystem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/queryIPBySystemResponse" message="tns:IArmService_queryIPBySystem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryEmployeeRoleData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/queryEmployeeRoleData" message="tns:IArmService_queryEmployeeRoleData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/queryEmployeeRoleDataResponse" message="tns:IArmService_queryEmployeeRoleData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/getPassword" message="tns:IArmService_getPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/getPasswordResponse" message="tns:IArmService_getPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="saveLogonFailure">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/saveLogonFailure" message="tns:IArmService_saveLogonFailure_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/saveLogonFailureResponse" message="tns:IArmService_saveLogonFailure_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/insertProfile" message="tns:IArmService_insertProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/insertProfileResponse" message="tns:IArmService_insertProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/deleteProfile" message="tns:IArmService_deleteProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/deleteProfileResponse" message="tns:IArmService_deleteProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryProfileByPk">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/queryProfileByPk" message="tns:IArmService_queryProfileByPk_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/queryProfileByPkResponse" message="tns:IArmService_queryProfileByPk_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryProfile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/queryProfile" message="tns:IArmService_queryProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/queryProfileResponse" message="tns:IArmService_queryProfile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateProfileDefault">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/updateProfileDefault" message="tns:IArmService_updateProfileDefault_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/updateProfileDefaultResponse" message="tns:IArmService_updateProfileDefault_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RoleQueryByEmployee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/RoleQueryByEmployee" message="tns:IArmService_RoleQueryByEmployee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/RoleQueryByEmployeeResponse" message="tns:IArmService_RoleQueryByEmployee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EmployeeQueryByRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/EmployeeQueryByRole" message="tns:IArmService_EmployeeQueryByRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/EmployeeQueryByRoleResponse" message="tns:IArmService_EmployeeQueryByRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EmployeeQueryByFunction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/EmployeeQueryByFunction" message="tns:IArmService_EmployeeQueryByFunction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/EmployeeQueryByFunctionResponse" message="tns:IArmService_EmployeeQueryByFunction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertFunRecord">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/insertFunRecord" message="tns:IArmService_insertFunRecord_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/insertFunRecordResponse" message="tns:IArmService_insertFunRecord_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertArmAgentAuth">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/insertArmAgentAuth" message="tns:IArmService_insertArmAgentAuth_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/insertArmAgentAuthResponse" message="tns:IArmService_insertArmAgentAuth_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteArmAgentAuth">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/deleteArmAgentAuth" message="tns:IArmService_deleteArmAgentAuth_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/deleteArmAgentAuthResponse" message="tns:IArmService_deleteArmAgentAuth_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryByAgentEmployeeCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/queryByAgentEmployeeCode" message="tns:IArmService_queryByAgentEmployeeCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/queryByAgentEmployeeCodeResponse" message="tns:IArmService_queryByAgentEmployeeCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryArmRecord">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/queryArmRecord" message="tns:IArmService_queryArmRecord_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/queryArmRecordResponse" message="tns:IArmService_queryArmRecord_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryRoleRightsByMemberOf">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/queryRoleRightsByMemberOf" message="tns:IArmService_queryRoleRightsByMemberOf_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/queryRoleRightsByMemberOfResponse" message="tns:IArmService_queryRoleRightsByMemberOf_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ArmLogonFailureQueryLoginFailure">
+      <wsdl:input wsaw:Action="http://tempuri.org/IArmService/ArmLogonFailureQueryLoginFailure" message="tns:IArmService_ArmLogonFailureQueryLoginFailure_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IArmService/ArmLogonFailureQueryLoginFailureResponse" message="tns:IArmService_ArmLogonFailureQueryLoginFailure_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSHttpBinding_IArmService" type="tns:IArmService">
+    <wsp:PolicyReference URI="#WSHttpBinding_IArmService_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Login">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/Login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginForSys">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/LoginForSys" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginForAgent">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/LoginForAgent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryForRoleRightsMaintain">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/queryForRoleRightsMaintain" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmRoleRights">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/ConfirmRoleRights" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ArmForUser">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/ArmForUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddUser">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/AddUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyUser">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/ModifyUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/DeleteUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryUser">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/QueryUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePassword">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/ChangePassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResetPassword">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/ResetPassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginModuleLoginBySectionCode">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/LoginModuleLoginBySectionCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddRole">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/AddRole" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyRole">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/ModifyRole" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRole">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/DeleteRole" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryRole">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/QueryRole" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RoleBelongQuery">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/RoleBelongQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RoleBelongUpdate">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/RoleBelongUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AppGetAppSystem">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/AppGetAppSystem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AppQueryByPK">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/AppQueryByPK" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AppInsert">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/AppInsert" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AppDelete">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/AppDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AppUpdate">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/AppUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AppGetAppSystemCombobox">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/AppGetAppSystemCombobox" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubGetSubSystem">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/SubGetSubSystem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubQueryByPK">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/SubQueryByPK" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubInsert">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/SubInsert" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubDelete">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/SubDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubUpdate">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/SubUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SubGetSubSystemCombobox">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/SubGetSubSystemCombobox" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TskGetAllSystem">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/TskGetAllSystem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TskQueryByPK">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/TskQueryByPK" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TskInsert">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/TskInsert" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TskDelete">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/TskDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TskUpdate">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/TskUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TskGetTskSystemCombobox">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/TskGetTskSystemCombobox" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FunGetAllSystem">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/FunGetAllSystem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FunQueryByPK">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/FunQueryByPK" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FunQueryByLogin">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/FunQueryByLogin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FunInsert">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/FunInsert" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FunDelete">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/FunDelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FunUpdate">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/FunUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertLogonDate">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/insertLogonDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateLogoutDate">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/updateLogoutDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryIP">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/queryIP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertLogonDateBySystem">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/insertLogonDateBySystem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateLogoutDateBySystem">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/updateLogoutDateBySystem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryIPBySystem">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/queryIPBySystem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryEmployeeRoleData">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/queryEmployeeRoleData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPassword">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/getPassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveLogonFailure">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/saveLogonFailure" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertProfile">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/insertProfile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteProfile">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/deleteProfile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryProfileByPk">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/queryProfileByPk" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryProfile">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/queryProfile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateProfileDefault">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/updateProfileDefault" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RoleQueryByEmployee">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/RoleQueryByEmployee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmployeeQueryByRole">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/EmployeeQueryByRole" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EmployeeQueryByFunction">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/EmployeeQueryByFunction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertFunRecord">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/insertFunRecord" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertArmAgentAuth">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/insertArmAgentAuth" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteArmAgentAuth">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/deleteArmAgentAuth" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryByAgentEmployeeCode">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/queryByAgentEmployeeCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryArmRecord">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/queryArmRecord" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryRoleRightsByMemberOf">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/queryRoleRightsByMemberOf" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ArmLogonFailureQueryLoginFailure">
+      <soap12:operation soapAction="http://tempuri.org/IArmService/ArmLogonFailureQueryLoginFailure" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ArmService">
+    <wsdl:port name="WSHttpBinding_IArmService" binding="tns:WSHttpBinding_IArmService">
+      <soap12:address location="http://localhost:40611/ArmService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://localhost:40611/ArmService.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Dns>localhost</Dns>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

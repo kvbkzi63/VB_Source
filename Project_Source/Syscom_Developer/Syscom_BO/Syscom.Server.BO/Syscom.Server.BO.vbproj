@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0714D4D2-09E9-41F9-8B6D-AF2338962ED0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Syscom.Server.BO</RootNamespace>
+    <AssemblyName>Syscom.Server.BO</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\..\SyscomCompile\Syscom\Server\</OutputPath>
+    <DocumentationFile>Syscom.Server.BO.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\SyscomCompile\Syscom\Server\</OutputPath>
+    <DocumentationFile>Syscom.Server.BO.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Syscom.Comm.BASE, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SyscomCompile\Syscom\Common\Syscom.Comm.BASE.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Comm.EXP, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SyscomCompile\Syscom\Common\Syscom.Comm.EXP.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Comm.LOG, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SyscomCompile\Syscom\Common\Syscom.Comm.LOG.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Comm.Utility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SyscomCompile\Syscom\Common\Syscom.Comm.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Server.SQL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SyscomCompile\Syscom\Server\Syscom.Server.SQL.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="System\ARM\ArmAgentAuthorizationBO.vb" />
+    <Compile Include="System\ARM\ArmAppSystemBO.vb" />
+    <Compile Include="System\ARM\ArmForPcsBO.vb" />
+    <Compile Include="System\ARM\ArmFunSystemBO.vb" />
+    <Compile Include="System\ARM\ArmLogonFailureBO.vb" />
+    <Compile Include="System\ARM\ArmLogonInfoBO.vb" />
+    <Compile Include="System\ARM\ArmPasswordBO.vb" />
+    <Compile Include="System\ARM\ArmProfileBO.vb" />
+    <Compile Include="System\ARM\ARMRecordBO.vb" />
+    <Compile Include="System\ARM\ArmRolenameBO.vb" />
+    <Compile Include="System\ARM\ArmRolerightsBO.vb" />
+    <Compile Include="System\ARM\ARMRolesBO.vb" />
+    <Compile Include="System\ARM\ArmSubSystemBO.vb" />
+    <Compile Include="System\ARM\ArmTskSystemBO.vb" />
+    <Compile Include="System\ICC\IccAllergicMedicinesBO.vb" />
+    <Compile Include="System\ICC\IccBacterinUploadBO.vb" />
+    <Compile Include="System\ICC\IccCloudDrugPatientBO.vb" />
+    <Compile Include="System\ICC\IccCloudDrugsBO.vb" />
+    <Compile Include="System\ICC\IccCloudUploadLogBO.vb" />
+    <Compile Include="System\ICC\IccCriticalIllnessBO.vb" />
+    <Compile Include="System\ICC\IccCumulativeDataBO.vb" />
+    <Compile Include="System\ICC\IccCumulativeFeeBO.vb" />
+    <Compile Include="System\ICC\IccEmergentTelBO.vb" />
+    <Compile Include="System\ICC\IccFeedbackCauseBO.vb" />
+    <Compile Include="System\ICC\IccFeedbackDuporderBO.vb" />
+    <Compile Include="System\ICC\IccFeedbackMb1BO.vb" />
+    <Compile Include="System\ICC\IccFeedbackMb2BO.vb" />
+    <Compile Include="System\ICC\IccFieldLengthVerifyBO.vb" />
+    <Compile Include="System\ICC\IccHealthUploadBO.vb" />
+    <Compile Include="System\ICC\IccInoculateDataBO.vb" />
+    <Compile Include="System\ICC\IccInoculationUploadBO.vb" />
+    <Compile Include="System\ICC\IccInteractVerify1BO.vb" />
+    <Compile Include="System\ICC\IccInteractVerify2BO.vb" />
+    <Compile Include="System\ICC\IccInteractVerify3BO.vb" />
+    <Compile Include="System\ICC\IccInteractVerify4BO.vb" />
+    <Compile Include="System\ICC\IccLastSeqNumBO.vb" />
+    <Compile Include="System\ICC\IccMustFieldVerifyBO.vb" />
+    <Compile Include="System\ICC\IccOnlineCheckBO.vb" />
+    <Compile Include="System\ICC\IccOrderUploadBO.vb" />
+    <Compile Include="System\ICC\IccOrganDonateBO.vb" />
+    <Compile Include="System\ICC\IccPredeliveryDataBO.vb" />
+    <Compile Include="System\ICC\IccPrescriptHveBO.vb" />
+    <Compile Include="System\ICC\IccPrescriptLongTermBO.vb" />
+    <Compile Include="System\ICC\IccPrescriptMainBO.vb" />
+    <Compile Include="System\ICC\IccPreventDataBO.vb" />
+    <Compile Include="System\ICC\IccRegisterBasicBO.vb" />
+    <Compile Include="System\ICC\IccSelfVerifyBO.vb" />
+    <Compile Include="System\ICC\IccTreatmentNeedHpcBO.vb" />
+    <Compile Include="System\ICC\IccTreatmentNoNeedHpcBO.vb" />
+    <Compile Include="System\NFC\NfcGroupBO.vb" />
+    <Compile Include="System\NFC\NfcGroupMaintainBO.vb" />
+    <Compile Include="System\NFC\NfcNotifierByfunctionBO.vb" />
+    <Compile Include="System\NFC\NfcNotifyMsgBO.vb" />
+    <Compile Include="System\OPH\OphAlertRecordBO.vb" />
+    <Compile Include="System\OPH\OphInteractionBO.vb" />
+    <Compile Include="System\OPH\OphPhraseBO.vb" />
+    <Compile Include="System\PUB\PubAccDeptBO.vb" />
+    <Compile Include="System\PUB\PubAccountBO.vb" />
+    <Compile Include="System\PUB\PubAddOptionOrderBO.vb" />
+    <Compile Include="System\PUB\PubAddOrderBO.vb" />
+    <Compile Include="System\PUB\PubAddOrderDetailBO.vb" />
+    <Compile Include="System\PUB\PubAddPartBO.vb" />
+    <Compile Include="System\PUB\PubAppLogBO.vb" />
+    <Compile Include="System\PUB\PubAreaCodeBO.vb" />
+    <Compile Include="System\PUB\PubAreaCodeGovBO.vb" />
+    <Compile Include="System\PUB\PubAreaCodeNBO.vb" />
+    <Compile Include="System\PUB\PubBatchControlBO.vb" />
+    <Compile Include="System\PUB\PubBatchJobBO.vb" />
+    <Compile Include="System\PUB\PubBatchOpBO.vb" />
+    <Compile Include="System\PUB\PubBatchStatusBO.vb" />
+    <Compile Include="System\PUB\PubBodySiteBO.vb" />
+    <Compile Include="System\PUB\PubConfigBO.vb" />
+    <Compile Include="System\PUB\PubContractBO.vb" />
+    <Compile Include="System\PUB\PubContractPartSetBO.vb" />
+    <Compile Include="System\PUB\PubContractQuotaBO.vb" />
+    <Compile Include="System\PUB\PubContractSetBO.vb" />
+    <Compile Include="System\PUB\PubCureControlBO.vb" />
+    <Compile Include="System\PUB\PubDentalAddBO.vb" />
+    <Compile Include="System\PUB\PubDentalAddControlBO.vb" />
+    <Compile Include="System\PUB\PubDepartmentBO.vb" />
+    <Compile Include="System\PUB\PubDeptAddBO.vb" />
+    <Compile Include="System\PUB\PubDeptLeaderBO.vb" />
+    <Compile Include="System\PUB\PubDeptSectBO.vb" />
+    <Compile Include="System\PUB\PubDiseaseBO.vb" />
+    <Compile Include="System\PUB\PubDiseaseIcd10BO.vb" />
+    <Compile Include="System\PUB\PubDiseaseIcd10MappingBO.vb" />
+    <Compile Include="System\PUB\PubDiseaseIcd10pcsInsuMappingBO.vb" />
+    <Compile Include="System\PUB\PubDisIdentityBO.vb" />
+    <Compile Include="System\PUB\PubDisIdentitySetBO.vb" />
+    <Compile Include="System\PUB\PubDoctorBO.vb" />
+    <Compile Include="System\PUB\PubDrAddControlBO.vb" />
+    <Compile Include="System\PUB\PubEmgAddBO.vb" />
+    <Compile Include="System\PUB\PubEmployeeBO.vb" />
+    <Compile Include="System\PUB\PubExamineBO.vb" />
+    <Compile Include="System\PUB\PubExamItemBO.vb" />
+    <Compile Include="System\PUB\PubExcludeDrugSetBO.vb" />
+    <Compile Include="System\PUB\PubExportBO.vb" />
+    <Compile Include="System\PUB\PubExportDetailBO.vb" />
+    <Compile Include="System\PUB\PubFamilyHistoryBO.vb" />
+    <Compile Include="System\PUB\PubFileMapBO.vb" />
+    <Compile Include="System\PUB\PubFileVersionBO.vb" />
+    <Compile Include="System\PUB\PubFirstVisitRecordBO.vb" />
+    <Compile Include="System\PUB\PubFormBO.vb" />
+    <Compile Include="System\PUB\PubFormDeptSetBO.vb" />
+    <Compile Include="System\PUB\PubFormOrderSetBO.vb" />
+    <Compile Include="System\PUB\PubHolidayBO.vb" />
+    <Compile Include="System\PUB\PubHospitalBO.vb" />
+    <Compile Include="System\PUB\PubIcd10DeptBO.vb" />
+    <Compile Include="System\PUB\PubIndicationBO.vb" />
+    <Compile Include="System\PUB\PubIndicationGroupBO.vb" />
+    <Compile Include="System\PUB\PubIndicationItemBO.vb" />
+    <Compile Include="System\PUB\PubIndicationItemDetailBO.vb" />
+    <Compile Include="System\PUB\PubInsuCodeBO.vb" />
+    <Compile Include="System\PUB\PubInsuDeptBO.vb" />
+    <Compile Include="System\PUB\PUBInsuDeptSetupBO.vb" />
+    <Compile Include="System\PUB\PubIpConfigBO.vb" />
+    <Compile Include="System\PUB\PubIssItemBO.vb" />
+    <Compile Include="System\PUB\PubItemBO.vb" />
+    <Compile Include="System\PUB\PubItemFieldBO.vb" />
+    <Compile Include="System\PUB\PubItemOperandBO.vb" />
+    <Compile Include="System\PUB\PubItemOperatorBO.vb" />
+    <Compile Include="System\PUB\PubItemProgramBO.vb" />
+    <Compile Include="System\PUB\PubItemValueDetailBO.vb" />
+    <Compile Include="System\PUB\PubItemValueMasterBO.vb" />
+    <Compile Include="System\PUB\PubItemValueUnitBO.vb" />
+    <Compile Include="System\PUB\PubKidAddBO.vb" />
+    <Compile Include="System\PUB\PubMajorcareAddBO.vb" />
+    <Compile Include="System\PUB\PubMajorcareBO.vb" />
+    <Compile Include="System\PUB\PubMaterialSelfpayApplyBO.vb" />
+    <Compile Include="System\PUB\PubMedicalTypeBO.vb" />
+    <Compile Include="System\PUB\PubMedicalTypeSortBO.vb" />
+    <Compile Include="System\PUB\PubNhiCodeBO.vb" />
+    <Compile Include="System\PUB\PubNhiCodeImportBO.vb" />
+    <Compile Include="System\PUB\PubNhiIndexSetBO.vb" />
+    <Compile Include="System\PUB\PubOrderAlternativeBO.vb" />
+    <Compile Include="System\PUB\PubOrderBO.vb" />
+    <Compile Include="System\PUB\PubOrderExaminationBO.vb" />
+    <Compile Include="System\PUB\PubOrderExamNocheckinDeptBO.vb" />
+    <Compile Include="System\PUB\PubOrderExamNoprintDeptBO.vb" />
+    <Compile Include="System\PUB\PubOrderMajorcareBO.vb" />
+    <Compile Include="System\PUB\PubOrderMappingSpecimenBO.vb" />
+    <Compile Include="System\PUB\PubOrderOrTreatBO.vb" />
+    <Compile Include="System\PUB\PubOrderPriceBO.vb" />
+    <Compile Include="System\PUB\PubOrderPriceSpecialBO.vb" />
+    <Compile Include="System\PUB\PubOrderStandingBO.vb" />
+    <Compile Include="System\PUB\PubPartBO.vb" />
+    <Compile Include="System\PUB\PubPartDiscountBO.vb" />
+    <Compile Include="System\PUB\PubPatFlagSortBO.vb" />
+    <Compile Include="System\PUB\PubPatientAbroadHistoryBO.vb" />
+    <Compile Include="System\PUB\PubPatientAllergyBO.vb" />
+    <Compile Include="System\PUB\PubPatientBO.vb" />
+    <Compile Include="System\PUB\PubPatientBodyrecordBO.vb" />
+    <Compile Include="System\PUB\PubPatientContactBO.vb" />
+    <Compile Include="System\PUB\PubPatientDisabilityBO.vb" />
+    <Compile Include="System\PUB\PubPatientDnrBO.vb" />
+    <Compile Include="System\PUB\PubPatientFamilyBO.vb" />
+    <Compile Include="System\PUB\PubPatientFlagBO.vb" />
+    <Compile Include="System\PUB\PubPatientFollowUpBO.vb" />
+    <Compile Include="System\PUB\PubPatientHealthCardBO.vb" />
+    <Compile Include="System\PUB\PubPatientIntegratedCareBO.vb" />
+    <Compile Include="System\PUB\PubPatientIntegratedCareHistoryBO.vb" />
+    <Compile Include="System\PUB\PubPatientIssBO.vb" />
+    <Compile Include="System\PUB\PubPatientOperationHistoryBO.vb" />
+    <Compile Include="System\PUB\PubPatientPastDiseaseHistoryBO.vb" />
+    <Compile Include="System\PUB\PubPatientPersonalHabitsBO.vb" />
+    <Compile Include="System\PUB\PubPatientQuotaBO.vb" />
+    <Compile Include="System\PUB\PubPatientScheduleBO.vb" />
+    <Compile Include="System\PUB\PubPatientSevereDiseaseBO.vb" />
+    <Compile Include="System\PUB\PubPatientToccBO.vb" />
+    <Compile Include="System\PUB\PubPatientTransferRiskBO.vb" />
+    <Compile Include="System\PUB\PubPatientTransfusionBO.vb" />
+    <Compile Include="System\PUB\PubPhaServicesBO.vb" />
+    <Compile Include="System\PUB\PubPhraseBO.vb" />
+    <Compile Include="System\PUB\PubPostalAreaBO.vb" />
+    <Compile Include="System\PUB\PubPostalCodeBO.vb" />
+    <Compile Include="System\PUB\PubPostalGovAreaBO.vb" />
+    <Compile Include="System\PUB\PubPreventiveCareBO.vb" />
+    <Compile Include="System\PUB\PubPreventiveCareExeBO.vb" />
+    <Compile Include="System\PUB\PubPrintConfigBO.vb" />
+    <Compile Include="System\PUB\PubPrintJobBO.vb" />
+    <Compile Include="System\PUB\PubPrintRecordBO.vb" />
+    <Compile Include="System\PUB\PubPrintSeqReportBO.vb" />
+    <Compile Include="System\PUB\PubRegisterFeeBO.vb" />
+    <Compile Include="System\PUB\PubReportAlarmBO.vb" />
+    <Compile Include="System\PUB\PubReportDescBO.vb" />
+    <Compile Include="System\PUB\PubRuleBO.vb" />
+    <Compile Include="System\PUB\PubRuleClassBO.vb" />
+    <Compile Include="System\PUB\PubRuleDetailBO.vb" />
+    <Compile Include="System\PUB\PubRuleMaintainBO.vb" />
+    <Compile Include="System\PUB\PubRuleReasonBO.vb" />
+    <Compile Include="System\PUB\PubRuleTransactionLogBO.vb" />
+    <Compile Include="System\PUB\PubSequenceBO.vb" />
+    <Compile Include="System\PUB\PubSheetBO.vb" />
+    <Compile Include="System\PUB\PubSheetDetailBO.vb" />
+    <Compile Include="System\PUB\PubSheetDisplayBO.vb" />
+    <Compile Include="System\PUB\PubSheetDisplayOrderBO.vb" />
+    <Compile Include="System\PUB\PubSheetGroupBO.vb" />
+    <Compile Include="System\PUB\PubSheetLocationBO.vb" />
+    <Compile Include="System\PUB\PubStationBO.vb" />
+    <Compile Include="System\PUB\PubSubIdentityBO.vb" />
+    <Compile Include="System\PUB\PubSubIdentitySetBO.vb" />
+    <Compile Include="System\PUB\PubSyscodeBO.vb" />
+    <Compile Include="System\PUB\PubSyscodeTypeBO.vb" />
+    <Compile Include="System\PUB\PubSystemVersionBO.vb" />
+    <Compile Include="System\PUB\PubTerminalConfigBO.vb" />
+    <Compile Include="System\PUB\PubUnitBO.vb" />
+    <Compile Include="System\PUB\PubZoneRoomBO.vb" />
+    <Compile Include="System\UCL\UCLHintDataBO.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

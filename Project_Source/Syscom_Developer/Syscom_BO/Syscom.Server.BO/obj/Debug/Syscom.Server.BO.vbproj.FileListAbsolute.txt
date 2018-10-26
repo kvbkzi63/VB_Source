@@ -1,0 +1,29 @@
+C:\Kmuh_Source\Mcku_His\SyscomCompile\Syscom\Server\Syscom.Server.BO.dll
+C:\Kmuh_Source\Mcku_His\SyscomCompile\Syscom\Server\Syscom.Server.BO.pdb
+C:\Kmuh_Source\Mcku_His\SyscomCompile\Syscom\Server\Syscom.Server.BO.xml
+C:\Kmuh_Source\Mcku_His\Syscom_Developer\Syscom_BO\Syscom.Server.BO\obj\Debug\Syscom.Server.BO.Resources.resources
+C:\Kmuh_Source\Mcku_His\Syscom_Developer\Syscom_BO\Syscom.Server.BO\obj\Debug\Syscom.Server.BO.vbproj.GenerateResource.Cache
+C:\Kmuh_Source\Mcku_His\Syscom_Developer\Syscom_BO\Syscom.Server.BO\obj\Debug\Syscom.Server.BO.dll
+C:\Kmuh_Source\Mcku_His\Syscom_Developer\Syscom_BO\Syscom.Server.BO\obj\Debug\Syscom.Server.BO.xml
+C:\Kmuh_Source\Mcku_His\Syscom_Developer\Syscom_BO\Syscom.Server.BO\obj\Debug\Syscom.Server.BO.pdb
+C:\Kmuh_Source\Mcku_His\Syscom_Developer\Syscom_BO\Syscom.Server.BO\obj\Debug\Syscom.Server.BO.vbprojResolveAssemblyReference.cache
+C:\Users\Will\Documents\Visual Studio 2017\Projects\Syscom_Developer\Syscom_BO\Syscom.Server.BO\obj\Debug\Syscom.Server.BO.vbprojResolveAssemblyReference.cache
+C:\Users\Will\Documents\Visual Studio 2017\Projects\Syscom_Developer\Syscom_BO\Syscom.Server.BO\obj\Debug\Syscom.Server.BO.Resources.resources
+C:\Users\Will\Documents\Visual Studio 2017\Projects\Syscom_Developer\Syscom_BO\Syscom.Server.BO\obj\Debug\Syscom.Server.BO.vbproj.GenerateResource.Cache
+C:\Users\Will\Documents\Visual Studio 2017\Projects\Syscom_Developer\Syscom_BO\Syscom.Server.BO\obj\Debug\Syscom.Server.BO.dll
+C:\Users\Will\Documents\Visual Studio 2017\Projects\Syscom_Developer\Syscom_BO\Syscom.Server.BO\obj\Debug\Syscom.Server.BO.xml
+C:\Users\Will\Documents\Visual Studio 2017\Projects\Syscom_Developer\Syscom_BO\Syscom.Server.BO\obj\Debug\Syscom.Server.BO.pdb
+C:\Users\Will\Documents\Visual Studio 2017\Projects\SyscomCompile\Syscom\Server\Syscom.Server.BO.dll
+C:\Users\Will\Documents\Visual Studio 2017\Projects\SyscomCompile\Syscom\Server\Syscom.Server.BO.pdb
+C:\Users\Will\Documents\Visual Studio 2017\Projects\SyscomCompile\Syscom\Server\Syscom.Server.BO.xml
+C:\TPE_Source\HIS_Source\Project_Source\Syscom_Developer\Syscom_BO\Syscom.Server.BO\obj\Debug\Syscom.Server.BO.vbprojResolveAssemblyReference.cache
+C:\TPE_Source\HIS_Source\Project_Source\Syscom_Developer\Syscom_BO\Syscom.Server.BO\obj\Debug\Syscom.Server.BO.Resources.resources
+C:\TPE_Source\HIS_Source\Project_Source\Syscom_Developer\Syscom_BO\Syscom.Server.BO\obj\Debug\Syscom.Server.BO.vbproj.GenerateResource.Cache
+C:\TPE_Source\HIS_Source\Project_Source\Syscom_Developer\Syscom_BO\Syscom.Server.BO\obj\Debug\Syscom.Server.BO.dll
+C:\TPE_Source\HIS_Source\Project_Source\Syscom_Developer\Syscom_BO\Syscom.Server.BO\obj\Debug\Syscom.Server.BO.xml
+C:\TPE_Source\HIS_Source\Project_Source\Syscom_Developer\Syscom_BO\Syscom.Server.BO\obj\Debug\Syscom.Server.BO.pdb
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Server\Syscom.Server.BO.dll
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Server\Syscom.Server.BO.pdb
+C:\TPE_Source\HIS_Source\Project_Source\SyscomCompile\Syscom\Server\Syscom.Server.BO.xml
+C:\TPE_Source\HIS_Source\Project_Source\Syscom_Developer\Syscom_BO\Syscom.Server.BO\obj\Debug\Syscom.Server.BO.vbproj.CoreCompileInputs.cache
+C:\TPE_Source\HIS_Source\Project_Source\Syscom_Developer\Syscom_BO\Syscom.Server.BO\obj\Debug\Syscom.Server.BO.vbproj.CopyComplete

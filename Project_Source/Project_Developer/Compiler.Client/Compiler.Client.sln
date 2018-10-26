@@ -1,0 +1,74 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "JOBAPP", "..\JOBAPP\JOBAPP.vbproj", "{6F422ABF-A0EB-4736-B9E1-C6BBB6549634}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B3FB79AC-FE27-44A8-98EC-480EC58FD258} = {B3FB79AC-FE27-44A8-98EC-480EC58FD258}
+		{9CAE6EFE-97D2-4542-8C8B-D609B9B73CC8} = {9CAE6EFE-97D2-4542-8C8B-D609B9B73CC8}
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Project.Client.JOB", "..\Project.Client.JOB\Project.Client.JOB.vbproj", "{9CAE6EFE-97D2-4542-8C8B-D609B9B73CC8}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "JOBClientServiceFactory", "..\JOBClientServiceFactory\JOBClientServiceFactory.vbproj", "{B3FB79AC-FE27-44A8-98EC-480EC58FD258}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Syscom.Client.UCL", "..\..\Syscom_Developer\Syscom_UCL\Syscom.Client.UCL\Syscom.Client.UCL.vbproj", "{7644D0BE-2809-441B-A4D5-C8FD80DB0EBC}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Syscom.Client.CMM", "..\..\Syscom_Developer\Syscom_CMM\Syscom.Client.CMM\Syscom.Client.CMM.vbproj", "{DFB9840A-3CD2-4546-A01A-8D01522FDC76}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6F422ABF-A0EB-4736-B9E1-C6BBB6549634}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F422ABF-A0EB-4736-B9E1-C6BBB6549634}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F422ABF-A0EB-4736-B9E1-C6BBB6549634}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F422ABF-A0EB-4736-B9E1-C6BBB6549634}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CAE6EFE-97D2-4542-8C8B-D609B9B73CC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CAE6EFE-97D2-4542-8C8B-D609B9B73CC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CAE6EFE-97D2-4542-8C8B-D609B9B73CC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CAE6EFE-97D2-4542-8C8B-D609B9B73CC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3FB79AC-FE27-44A8-98EC-480EC58FD258}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3FB79AC-FE27-44A8-98EC-480EC58FD258}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3FB79AC-FE27-44A8-98EC-480EC58FD258}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3FB79AC-FE27-44A8-98EC-480EC58FD258}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7644D0BE-2809-441B-A4D5-C8FD80DB0EBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7644D0BE-2809-441B-A4D5-C8FD80DB0EBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7644D0BE-2809-441B-A4D5-C8FD80DB0EBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7644D0BE-2809-441B-A4D5-C8FD80DB0EBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFB9840A-3CD2-4546-A01A-8D01522FDC76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFB9840A-3CD2-4546-A01A-8D01522FDC76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFB9840A-3CD2-4546-A01A-8D01522FDC76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFB9840A-3CD2-4546-A01A-8D01522FDC76}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F5817F04-374C-4BB4-A80D-E02DCCFFD24A}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://hisap2.syscom.com.tw:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ..\\JOBAPP\\JOBAPP.vbproj
+		SccProjectName1 = ../../JOBAPP
+		SccLocalPath1 = ..\\JOBAPP
+		SccProjectUniqueName2 = ..\\Project.Client.JOB\\Project.Client.JOB.vbproj
+		SccProjectName2 = ../../Project.Client.JOB
+		SccLocalPath2 = ..\\Project.Client.JOB
+		SccProjectUniqueName3 = ..\\JOBClientServiceFactory\\JOBClientServiceFactory.vbproj
+		SccProjectName3 = ../../JOBClientServiceFactory
+		SccLocalPath3 = ..\\JOBClientServiceFactory
+		SccProjectUniqueName4 = ..\\..\\Syscom_Developer\\Syscom_UCL\\Syscom.Client.UCL\\Syscom.Client.UCL.vbproj
+		SccProjectName4 = ../../../Syscom_Developer/Syscom_UCL/Syscom.Client.UCL
+		SccLocalPath4 = ..\\..\\Syscom_Developer\\Syscom_UCL\\Syscom.Client.UCL
+		SccProjectUniqueName5 = ..\\..\\Syscom_Developer\\Syscom_CMM\\Syscom.Client.CMM\\Syscom.Client.CMM.vbproj
+		SccProjectName5 = ../../../Syscom_Developer/Syscom_CMM/Syscom.Client.CMM
+		SccLocalPath5 = ..\\..\\Syscom_Developer\\Syscom_CMM\\Syscom.Client.CMM
+	EndGlobalSection
+EndGlobal

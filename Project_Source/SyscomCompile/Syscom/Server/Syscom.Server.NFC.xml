@@ -1,0 +1,704 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Syscom.Server.NFC
+</name>
+</assembly>
+<members>
+<member name="T:Syscom.Server.NFC.My.Resources.Resources">
+<summary>
+  用於查詢當地語系化字串等的強類型資源類別。
+</summary>
+</member>
+<member name="P:Syscom.Server.NFC.My.Resources.Resources.ResourceManager">
+<summary>
+  傳回這個類別使用的快取的 ResourceManager 執行個體。
+</summary>
+</member>
+<member name="P:Syscom.Server.NFC.My.Resources.Resources.Culture">
+<summary>
+  覆寫目前執行緒的 CurrentUICulture 屬性，對象是所有
+  使用這個強類型資源類別的資源查閱。
+</summary>
+</member>
+<member name="M:Syscom.Server.NFC.NFCDelegate.#ctor">
+ <summary>
+ 阻止外部直接進行新建立的宣告
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Server.NFC.NFCDelegate.getInstance">
+ <summary>
+ 屬性取得類別實體
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:Syscom.Server.NFC.NFCDelegate.Nested">
+ <summary>
+ 巢狀類別存放建立的類別實體
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NFCDelegate.queryGroupMember(System.String)">
+ <summary>
+ 查詢NFC群組成員
+ </summary>
+ <param name="groupID">NFC群組ID</param>
+ <returns>DataSet</returns>
+ <remarks>查詢NFC群組成員</remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NFCDelegate.queryGroupMember1(System.String)">
+ <summary>
+ 查詢NFC群組成員
+ </summary>
+ <param name="groupID">NFC群組ID</param>
+ <returns>DataSet</returns>
+ <remarks>查詢NFC群組成員</remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NFCDelegate.insertGroupMember(System.Data.DataSet)">
+ <summary>
+ 新增群組成員
+ </summary>
+ <param name="ds">群組成員dataset</param>
+ <returns>Integer</returns>
+ <remarks>新增群組成員</remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NFCDelegate.deleteGroupMember(System.String,System.String)">
+ <summary>
+ 刪除群組成員
+ </summary>
+ <param name="groupID">NFC群組ID</param>
+ <param name="employeeCode">員工代碼</param>
+ <returns>Integer</returns>
+ <remarks>刪除群組成員</remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NFCDelegate.deleteGroupMembers(System.Data.DataSet)">
+ <summary>
+ 刪除訊息群組成員
+ </summary>
+ <param name="ds">訊息群組成員dataset</param>
+ <returns>Integer</returns>
+ <remarks>刪除訊息群組成員</remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NFCDelegate.deleteSenderByGroupTxId(System.String@)">
+ <summary>
+ 刪除寄件人藉由訊息群組ID
+ </summary>
+ <param name="Group_Tx_Id">群組訊息ID</param>
+ <returns>Integer</returns>
+ <remarks>刪除寄件人藉由群組訊息ID</remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NFCDelegate.updateSender(System.Data.DataSet@)">
+ <summary>
+ 修改寄件人
+ </summary>
+ <param name="ds"></param>
+ <returns>Integer</returns>
+ <remarks>修改寄件人</remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NFCDelegate.insertGroup(System.String,System.String)">
+ <summary>
+ 新增群組名稱
+ </summary>
+ <param name="groupName">群組名稱</param>
+ <param name="createUser">創作者</param>
+ <returns>Integer</returns>
+ <remarks>新增群組名稱</remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NFCDelegate.deleteGroup(System.String)">
+ <summary>
+ 刪除群組名稱
+ </summary>
+ <param name="groupID">群組ID</param>
+ <returns>Integer</returns>
+ <remarks>刪除群組名稱</remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NFCDelegate.queryGroupByUser(System.String)">
+ <summary>
+ 查詢群組名稱By User
+ </summary>
+ <param name="employee_Code">員工代碼</param>
+ <returns>DataSet</returns>
+ <remarks>查詢群組名稱By User</remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NFCDelegate.UpdateIP(System.String,System.String,System.String,System.Data.IDbConnection@)">
+ <summary>
+ 更新讀取IP 
+ </summary>
+ <param name="mid">訊息ID</param>
+ <param name="call_IP">USER端IP</param>
+ <param name="modified_User">修改人</param>
+ <param name="conn">資料連線</param>
+ <returns>Integer</returns>
+ <remarks>更新讀取IP </remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NFCDelegate.UpdateSpecFlag(System.String,System.String,System.Data.IDbConnection@)">
+ <summary>
+ 更新 回饋="O"
+ </summary>
+ <param name="mid">訊息ID</param>
+ <param name="modified_User">修改人</param>
+ <param name="conn">資料連線</param>
+ <returns>Integer</returns>
+ <remarks>更新 回饋="O"</remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NFCDelegate.UpdateReplayMsg(System.String,System.String,System.String,System.Data.IDbConnection@)">
+ <summary>
+ 回復訊息
+ </summary>
+ <param name="mid"></param>
+ <param name="replayMsg"></param>
+ <param name="modifyUser"></param>
+ <param name="conn"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NFCDelegate.InsertNFCNotifyMsg(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+ 新增訊息
+ </summary>
+ <param name="data">訊息DataSet</param>
+ <returns>String</returns>
+ <remarks>新增訊息</remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NFCDelegate.QueryNFCNotifyMsgByUserId(System.String)">
+ <summary>
+ 查詢訊息By UserID
+ </summary>
+ <param name="UserId">使用者ID</param>
+ <returns>DataSet</returns>
+ <remarks>查詢訊息By UserID</remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NFCDelegate.QueryNFCNotifyMsgByCond(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+ <summary>
+ 查詢訊息 By 條件
+ </summary>
+ <param name="StartSendDate">開始寄送日期</param>
+ <param name="EndSendDate">結束寄送日期</param>
+ <param name="Fun_Function_No">功能編碼</param>
+ <param name="Type">型態</param>
+ <param name="Level">層級</param>
+ <param name="Status">狀態</param>
+ <param name="Recipient">接受人</param>
+ <param name="sendUser">傳送人</param>
+ <returns>DataSet</returns>
+ <remarks>查詢訊息 By 條件</remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NFCDelegate.initialNfcQueryExportUI">
+ <summary>
+ 初始化NFC查詢輸出UI
+ </summary>
+ <returns>DataSet</returns>
+ <remarks>初始化NFC查詢輸出UI</remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NFCDelegate.markRead(System.Data.DataSet,System.Data.SqlClient.SqlConnection@)">
+ <summary>
+ 駐記為已讀
+ </summary>
+ <param name="ds">駐記DataSet</param>
+ <param name="conn">資料連線</param>
+ <remarks>駐記為已讀</remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NFCDelegate.getDepNo(System.String,System.Data.IDbConnection)">
+ <summary>
+ 取得員工部門代碼
+ </summary>
+ <param name="empNO">員工號</param>
+ <param name="conn">資料庫連線 hisDB</param>
+ <returns>String</returns>
+ <remarks>取得員工部門代碼</remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NFCDelegate.readUIMessage(System.String,System.Data.IDbConnection)">
+ <summary>
+ 讀取個人訊息，可不傳 depNo，由程式去撈資料
+ </summary>
+ <param name="empNO">員工號</param>
+ <param name="conn">資料庫連線 hisDB</param>
+ <returns>DataSet</returns>
+ <remarks>讀取個人訊息，可不傳 depNo，由程式去撈資料</remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NFCDelegate.readUIMessage(System.String,System.String,System.Data.IDbConnection)">
+ <summary>
+ 讀取個人訊息，需傳 depNo
+ </summary>
+ <param name="empNO">員工號</param>
+ <param name="depNo">部門代碼</param>
+ <param name="conn">資料庫連線 hisDB</param>
+ <returns>DataSet</returns>
+ <remarks>讀取個人訊息，需傳 depNo</remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NFCDelegate.readUIMessage24Hr(System.String,System.Data.IDbConnection)">
+ <summary>
+ 讀取24小時前的個人訊息，不需傳 depNo，由程式去撈資料
+ </summary>
+ <param name="empNO">員工號</param>
+ <param name="conn">資料庫連線 hisDB</param>
+ <returns>DataSet</returns>
+ <remarks>讀取24小時前的個人訊息，不需傳 depNo，由程式去撈資料</remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NFCDelegate.readUIMessage24Hr(System.String,System.String,System.Data.IDbConnection)">
+ <summary>
+ 讀取24小時前的個人訊息，需傳 depNo
+ </summary>
+ <param name="empNO">員工號</param>
+ <param name="depNo">部門代碼</param>
+ <param name="conn">資料庫連線 hisDB</param>
+ <returns>DataSet</returns>
+ <remarks>讀取24小時前的個人訊息，需傳 depNo</remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NFCDelegate.NotifyAllUI(System.String,System.String,System.DateTime,System.DateTime,System.String,System.String,System.String,System.String,System.String,System.Data.IDbConnection)">
+ <summary>
+ 通知到所有使用者 UI 畫面
+ </summary>    
+ <param name="msg">通知訊息</param>
+ <param name="startTime">訊息開始時間</param>
+ <param name="endTime">訊息結束時間</param>
+ <param name="external">預留其他的功能所需的值</param>
+ <remarks>通知到所有使用者 UI 畫面</remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NFCDelegate.NotifyDepUI(System.String,System.String,System.String,System.DateTime,System.DateTime,System.String,System.String,System.String,System.String,System.String,System.Data.IDbConnection)">
+ <summary>
+ 通知到部門使用者 UI 畫面
+ </summary>
+ <param name="empDept">部門</param>
+ <param name="msg">通知訊息</param>
+ <param name="startTime">訊息開始時間</param>
+ <param name="endTime">訊息結束時間</param>
+ <param name="external">預留其他的功能所需的值</param>
+ <remarks>通知到部門使用者 UI 畫面</remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NFCDelegate.NotifyUI(System.String[],System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Data.IDbConnection)">
+ <summary>
+ 通知到多個使用者 UI 畫面
+ </summary>
+ <param name="drEmpNo">多人通知</param>
+ <param name="msg">通知訊息</param>
+ <param name="external">預留其他的功能所需的值</param>
+ <remarks>通知到多個使用者 UI 畫面</remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NFCDelegate.NotifyUI(System.String,System.String,System.String,System.String,System.Data.IDbConnection)">
+ <summary>
+ 通知到使用者 UI 畫面
+ </summary>
+ <param name="drEmpNo">員工號</param>
+ <param name="msg">通知訊息</param>
+ <param name="external">預留其他的功能所需的值</param>
+ <remarks>通知到使用者 UI 畫面</remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NFCDelegate.NotifyMail(System.String[],System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Data.IDbConnection)">
+ <summary>
+ 通知到使用者 Mail
+ </summary>
+ <param name="EmpMail">多個員工 Mail</param>
+ <param name="subject">主旨</param>
+ <param name="msg">內容</param>
+ <param name="replymsg">需要回覆或連絡時的內容 ex: 請回 call 2065  陳先生 </param>
+ <remarks>Mail 格式可以兩種：1. john.smith@example.com 2. "John Smith"＜john.smith@example.com＞  ,第二種比較好</remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NFCDelegate.NotifyMailWithEsrFormat(System.String[],System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Data.IDbConnection)">
+ <summary>
+ 異常通報系統回饋到使用者 Mail
+ </summary>
+ <param name="EmpMail">多個員工 Mail</param>
+ <param name="subject">主旨</param>
+ <param name="msg">內容</param>
+ <param name="replymsg"></param>
+ <remarks>
+ Mail 格式可以兩種：1. john.smith@example.com 2. "John Smith"＜john.smith@example.com＞  ,第二種比較好
+ Created in  2014/11/6, 下午 05:32 by Chris
+ </remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NFCDelegate.NotifyUIWithStartAndEndTime(System.String[],System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Data.IDbConnection)">
+ <summary>
+ 通知到多個使用者 UI 畫面
+ </summary>
+ <param name="drEmpNo">原工編號</param>
+ <param name="subject">主旨</param>
+ <param name="msg">訊息</param>
+ <param name="Start_Time">開始時間</param>
+ <param name="End_Time">結束時間</param>
+ <param name="conn">The connection.</param>
+ <remarks>
+ Created in  2014/11/6, 下午 05:58 by Chris
+ </remarks>
+ <exception cref="T:Syscom.Comm.EXP.CommonException">CMMCMMD001</exception>
+</member>
+<member name="M:Syscom.Server.NFC.NFCDelegate.NotifySMSMultiWithSubject(System.String[],System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Data.IDbConnection)">
+ <summary>
+ 通知到使用者 B.B.Call 
+ </summary>
+ <param name="drEmpNo">員工號(多人)</param>
+ <param name="subject">主旨</param>
+ <param name="msg">通知訊息</param>
+ <param name="conn">The connection.</param>
+ <returns></returns>
+ <remarks>
+ Created in  2014/11/6, 下午 04:23 by Chris
+ </remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NFCDelegate.NotifyMail(System.String,System.String,System.String,System.String,System.Data.IDbConnection)">
+ <summary>
+ 通知到使用者 Mail
+ </summary>
+ <param name="subject">主旨</param>
+ <param name="msg">內容</param>
+ <param name="replymsg">需要回覆或連絡時的內容 ex: 請回 call 2065  陳先生 </param>
+ <remarks>Mail 格式可以兩種：1. john.smith@example.com 2. "John Smith"＜john.smith@example.com＞  ,第二種比較好</remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NFCDelegate.NotifySMS(System.String[],System.String,System.String,System.String,System.String,System.String,System.Data.IDbConnection)">
+ <summary>
+ 通知到使用者 B.B.Call 
+ </summary>
+ <param name="drEmpNo">員工號</param>
+ <param name="msg">通知訊息</param>    
+ <remarks>通知訊息最多 160 個字</remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NFCDelegate.NotifySMS(System.String,System.String,System.Data.IDbConnection)">
+ <summary>
+ 通知到使用者 B.B.Call 
+ </summary>
+ <param name="drEmpNo">多個員工號</param>
+ <param name="msg">通知訊息</param>    
+ <remarks>通知訊息最多 160 個字</remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NFCDelegate.NotifyByFunctionNo(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+ <summary>
+ Notify共用介面-依【功能】設定的對象與方式進行通知 
+ </summary>
+ <param name="inSystemNo">系統代碼</param>
+ <param name="inSubSystemNo">子系統代碼</param>
+ <param name="inTaskNo">作業代碼</param>
+ <param name="inFunctionNo">功能代碼</param>
+ <param name="inMsgTitle">通知訊息主旨</param>
+ <param name="inMsgLevel">通知訊息等級</param>   
+ <param name="inMsgContent">通知訊息內容</param>  
+ <remarks>通知訊息等級: Error  Warn   Info</remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NFCDelegate.queryNFCNotifierByFunc(System.String[]@,System.Object[]@)">
+ <summary>
+ 通知對象維護-查詢
+ </summary>
+ <param name="columnName">欄位名稱</param>
+ <param name="columnValue">欄位值</param>    
+ <remarks>通知對象維護-查詢</remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NFCDelegate.saveNFCNotifierByFunc(System.Data.DataSet)">
+ <summary>
+ 通知對象維護-存檔
+ </summary>
+ <param name="inSaveData">存檔資料</param>
+ <remarks>通知對象維護-存檔</remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NFCDelegate.deleteNFCNotifierByFunc(System.Data.DataSet)">
+ <summary>
+ 通知對象維護-刪除
+ </summary>
+ <param name="inDeleteData">刪除資料</param>
+ <remarks> 通知對象維護-刪除</remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NFCDelegate.getNotifyMessageByDeploy(System.String[]@,System.Object[]@)">
+ <summary>
+  取得發版通知-查詢
+ </summary>
+ <param name="columnName">欄位名稱</param>
+ <param name="columnValue">欄位值</param>    
+ <remarks>取得發版通知-查詢</remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NFCDelegate.QueryDeployByToDay(System.String,System.String)">
+ <summary>
+  取得發版通知-查詢-By StartTime,EndTime,Extunction
+ </summary>
+ <param name="_type">型態</param>
+ <param name="user">使用者</param>
+ <remarks> 取得發版通知-查詢-By StartTime,EndTime,Extunction</remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NFCDelegate.reMarkRead(System.Data.DataSet)">
+ <summary>
+  取得發版通知-查詢-By StartTime,EndTime,Extunction
+ </summary>
+ <param name="ds">型態</param>
+ <remarks>取得發版通知-查詢-By StartTime,EndTime,Extunction</remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NFCDelegate.NotifyUIRigthNow(System.String[],System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Data.IDbConnection)">
+ <summary>
+ 立即通知到多個使用者 UI 畫面
+ </summary>
+ <param name="drEmpNo">多人通知</param>
+ <param name="msg">通知訊息</param>
+ <param name="external">預留其他的功能所需的值</param>
+ <remarks>立即通知到多個使用者 UI 畫面</remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NFCDelegate.updateNfcNotifyMsgEndTime(System.Data.DataSet)">
+ <summary>
+ 更新訊息結束時間
+ </summary>
+ <returns>Integer</returns>
+ <remarks>by Jun on 2017-03-10</remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NFCDelegate.queryNfcNotifyMsgBySubject(System.String)">
+ <summary>
+ 以主旨取得通知訊息
+ </summary>
+ <returns>System.Data.DataSet</returns>
+ <remarks>by Jun on 2017-03-10</remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NFCDelegate.QueryNFCNotifyMsg(System.String,System.String,System.String,System.String,System.String)">
+ <summary>
+ 查詢危險值通報處理情形回覆
+ </summary>
+ <param name="UserId" >查詢接收人員</param>
+ <param name="StartDate" >查詢發送日期(起)</param>
+ <param name="EndDate" >查詢發送日期(迄)</param>
+ <param name="Status" >查詢類別</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NFCDelegate.UpdateNFCNotifyMsg(System.String,System.String,System.String,System.String)">
+ <summary>
+ 更新危險值通報處理情形回覆
+ </summary>
+ <param name="MID" >編號</param>
+ <param name="ReplyMsg" >處理情形</param>
+ <param name="Modified_User" >處理人員</param>
+ <param name="Modified_Time" >處理時間</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NfcNotifyMsgBO_E1.#ctor">
+ <summary>
+ 阻止外部直接進行新建立的宣告
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Server.NFC.NfcNotifyMsgBO_E1.getInstance">
+ <summary>
+ 屬性取得類別實體
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:Syscom.Server.NFC.NfcNotifyMsgBO_E1.Nested">
+ <summary>
+ 巢狀類別存放建立的類別實體
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NfcNotifyMsgBO_E1.UpdateReplayMsg(System.String,System.String,System.String,System.Data.IDbConnection@)">
+ <summary>
+ 更新回覆訊息
+ </summary>
+ <param name="MID"></param>
+ <param name="replayMsg"></param>
+ <param name="modifyUser"></param>
+ <param name="conn"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NfcNotifyMsgBO_E1.UpdateReplayMsg_1(System.String,System.String,System.String,System.String,System.Data.IDbConnection@)">
+ <summary>
+ 更新回覆訊息-私
+ </summary>
+ <param name="MID"></param>
+ <param name="replayMsg"></param>
+ <param name="modifyUser"></param>
+ <param name="conn"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NfcNotifyMsgBO_E1.UpdateIP(System.String,System.String,System.String,System.Data.IDbConnection@)">
+ <summary>
+ 更新讀取IP
+ </summary>
+ <param name="mid"></param>
+ <param name="call_IP"></param>
+ <param name="modified_User"></param>
+ <param name="conn"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NfcNotifyMsgBO_E1.queryNfcNotifyMsgBySubject(System.String,System.Data.IDbConnection@)">
+ <summary>
+ 以主旨取得通知訊息
+ </summary>
+ <param name="subject" ></param>
+ <returns>Dataset</returns>
+ <remarks>by Jun on 2017-03-10</remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NfcNotifyMsgBO_E1.updateNfcNotifyMsgEndTime(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+ 更新訊息結束時間
+ </summary>
+ <param name="ds" >修改資料</param>
+ <returns>Integer</returns>
+ <remarks>by Jun on 2017-03-10</remarks>
+</member>
+<member name="M:Syscom.Server.NFC.UpdateNFCReplyMsgBO_E1.QueryNFCNotifyMsg(System.String,System.String,System.String,System.String,System.String)">
+ <summary>
+ 查詢 查詢危險值通報處理情形回覆
+ </summary>
+ <param name="MID" >編號</param>
+ <param name="UserId" >查詢接收人員</param>
+ <param name="StartDate" >查詢發送日期(起)</param>
+ <param name="EndDate" >查詢發送日期(迄)</param>
+ <param name="Status" >查詢類別</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.NFC.UpdateNFCReplyMsgBO_E1.UpdateNFCNotifyMsg(System.String,System.String,System.String,System.String)">
+ <summary>
+ 查詢 查詢危險值通報處理情形回覆
+ </summary>
+ <param name="MID" >編號</param>
+ <param name="ReplyMsg" >處理情形</param>
+ <param name="Modified_User" >處理人員</param>
+ <param name="Modified_Time" >處理時間</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.NFC.UpdateNFCReplyMsgBO_E1.getConnection">
+ <summary>
+ 取得 住院DB 在所屬資料庫的連線
+ </summary>
+ ''' <returns>資料庫連線</returns>
+ <remarks>by Sean.Lin on 2012-8-6</remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NfcNotifyMsgBS.#ctor">
+ <summary>
+ 阻止外部直接進行新建立的宣告
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Server.NFC.NfcNotifyMsgBS.getInstance">
+ <summary>
+ 屬性取得類別實體
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:Syscom.Server.NFC.NfcNotifyMsgBS.Nested">
+ <summary>
+ 巢狀類別存放建立的類別實體
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NfcNotifyMsgBS.getNFCSerialNo">
+ <summary>
+ 取得訊息群組ID NFC_Notify_Msg
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NfcNotifyMsgBS.InsertNFCNotifyMsg(System.Data.DataSet,System.Data.IDbConnection@)">
+ <summary>
+ 根據傳入的 NFC_Notify_Msg資料包 新增到 NFC_Notify_Msg
+ </summary>
+ <param name="data" >NFC_Notify_Msg資料包</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NfcNotifyMsgBS.QueryNFCNotifyMsgByUserId(System.String)">
+ <summary>
+ 查詢 NFC_Notify_Msg
+ </summary>
+ <param name="UserId" >查詢 NFC_Notify_Msg</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NfcNotifyMsgBS.QueryMailByUserId(System.String)">
+ <summary>
+ 查詢 NFC_Notify_Msg
+ </summary>
+ <param name="UserId" >根據Mail 取得UserID</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NfcNotifyMsgBS.QueryUserNameByMail(System.String)">
+ <summary>
+ 查詢 NFC_Notify_Msg
+ </summary>
+ <param name="mail" >根據UserID取得Mail</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NfcNotifyMsgBS.QueryNFCNotifyMsgByCond(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+ <summary>
+ 查詢 NFC_Notify_Msg
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NfcNotifyMsgBS.initialNfcQueryExportUI">
+ <summary>
+ initial initialNfcQueryExportUI
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NfcNotifyMsgBS.QueryGroupUser(System.String,System.Data.IDbConnection)">
+ <summary>
+ 查詢 NFC_Notify_Msg
+ </summary>
+ <param name="GroupID" >根據GroupID取得UserID</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NfcNotifyMsgBS.QueryDepartmentUser(System.String,System.Data.IDbConnection)">
+ <summary>
+ 查詢 NFC_Notify_Msg
+ </summary>
+ <param name="DeptCode" >根據DeptCode取得UserID</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NfcNotifyMsgBS.QueryALLUser(System.Data.IDbConnection)">
+ <summary>
+ 查詢 NFC_Notify_Msg 根據DeptCode取得UserID
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NfcNotifyMsgBS.queryGroupMember(System.String,System.Data.IDbConnection)">
+ <summary>
+ 查詢 NFC_Notify_Msg
+ </summary>
+ <param name="GroupID" >根據GroupID取得UserID</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NfcNotifyMsgBS.queryGroupMember1(System.String,System.Data.IDbConnection)">
+ <summary>
+ 查詢 NFC_Notify_Msg
+ </summary>
+ <param name="GroupID" >根據GroupID取得UserID</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NfcNotifyMsgBS.deleteGroupMemberByGroupID(System.String@,System.Data.IDbConnection@)">
+ <summary>
+以群組ID刪除資料
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NfcNotifyMsgBS.deleteSenderByGroupTxId(System.String@,System.Data.IDbConnection@)">
+ <summary>
+ 刪除發布訊息
+ </summary>
+ <param name="Group_Tx_Id"></param>
+ <param name="conn"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.NFC.NfcNotifyMsgBS.getConnection">
+ <summary>
+ 取得 住院DB 在所屬資料庫的連線
+ </summary>
+ ''' <returns>資料庫連線</returns>
+ <remarks>by Sean.Lin on 2012-8-6</remarks>
+</member>
+</members>
+</doc>

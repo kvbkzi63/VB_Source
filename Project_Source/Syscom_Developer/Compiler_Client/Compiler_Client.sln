@@ -1,0 +1,104 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Syscom.Client.FTM", "..\Syscom_FTM\Syscom.Client.FTM\Syscom.Client.FTM.vbproj", "{8A5F730C-6B77-47EE-A7CA-A228E5540983}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FCBA04C3-B37F-4DD8-9871-E034F6CEAFB7} = {FCBA04C3-B37F-4DD8-9871-E034F6CEAFB7}
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Syscom.Client.NFC", "..\Syscom_NFC\Syscom.Client.NFC\Syscom.Client.NFC.vbproj", "{0F6BA197-3092-42F6-A39F-3626A3E9449F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7644D0BE-2809-441B-A4D5-C8FD80DB0EBC} = {7644D0BE-2809-441B-A4D5-C8FD80DB0EBC}
+		{FCBA04C3-B37F-4DD8-9871-E034F6CEAFB7} = {FCBA04C3-B37F-4DD8-9871-E034F6CEAFB7}
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Syscom.Client.UCL", "..\Syscom_UCL\Syscom.Client.UCL\Syscom.Client.UCL.vbproj", "{7644D0BE-2809-441B-A4D5-C8FD80DB0EBC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FCBA04C3-B37F-4DD8-9871-E034F6CEAFB7} = {FCBA04C3-B37F-4DD8-9871-E034F6CEAFB7}
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SyscomClientServiceFactory", "..\SyscomClientServiceFactory\SyscomClientServiceFactory.vbproj", "{FCBA04C3-B37F-4DD8-9871-E034F6CEAFB7}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Syscom.Client.RPT", "..\Syscom_RPT\Syscom.Client.RPT\Syscom.Client.RPT.vbproj", "{B794BC09-5676-4CD7-9A15-75C754AF62EA}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Syscom.Client.CMM", "..\Syscom_CMM\Syscom.Client.CMM\Syscom.Client.CMM.vbproj", "{DFB9840A-3CD2-4546-A01A-8D01522FDC76}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Syscom.Client.ARM", "..\Syscom_ARM\Syscom.Client.ARM\Syscom.Client.ARM.vbproj", "{4FB20A19-4B5B-424B-A0EF-8FD1E57077AD}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SyscomAPP", "..\SyscomAPP\SyscomAPP.vbproj", "{87FBA62B-D544-436E-85AA-D577BB45EC56}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8A5F730C-6B77-47EE-A7CA-A228E5540983}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A5F730C-6B77-47EE-A7CA-A228E5540983}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A5F730C-6B77-47EE-A7CA-A228E5540983}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A5F730C-6B77-47EE-A7CA-A228E5540983}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F6BA197-3092-42F6-A39F-3626A3E9449F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F6BA197-3092-42F6-A39F-3626A3E9449F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F6BA197-3092-42F6-A39F-3626A3E9449F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F6BA197-3092-42F6-A39F-3626A3E9449F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7644D0BE-2809-441B-A4D5-C8FD80DB0EBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7644D0BE-2809-441B-A4D5-C8FD80DB0EBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7644D0BE-2809-441B-A4D5-C8FD80DB0EBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7644D0BE-2809-441B-A4D5-C8FD80DB0EBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCBA04C3-B37F-4DD8-9871-E034F6CEAFB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCBA04C3-B37F-4DD8-9871-E034F6CEAFB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCBA04C3-B37F-4DD8-9871-E034F6CEAFB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCBA04C3-B37F-4DD8-9871-E034F6CEAFB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B794BC09-5676-4CD7-9A15-75C754AF62EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B794BC09-5676-4CD7-9A15-75C754AF62EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B794BC09-5676-4CD7-9A15-75C754AF62EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B794BC09-5676-4CD7-9A15-75C754AF62EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFB9840A-3CD2-4546-A01A-8D01522FDC76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFB9840A-3CD2-4546-A01A-8D01522FDC76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFB9840A-3CD2-4546-A01A-8D01522FDC76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFB9840A-3CD2-4546-A01A-8D01522FDC76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FB20A19-4B5B-424B-A0EF-8FD1E57077AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FB20A19-4B5B-424B-A0EF-8FD1E57077AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FB20A19-4B5B-424B-A0EF-8FD1E57077AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FB20A19-4B5B-424B-A0EF-8FD1E57077AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87FBA62B-D544-436E-85AA-D577BB45EC56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87FBA62B-D544-436E-85AA-D577BB45EC56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87FBA62B-D544-436E-85AA-D577BB45EC56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87FBA62B-D544-436E-85AA-D577BB45EC56}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 9
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://220.128.174.140:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ..\\SyscomClientServiceFactory\\SyscomClientServiceFactory.vbproj
+		SccProjectName1 = ../SyscomClientServiceFactory
+		SccLocalPath1 = ..\\SyscomClientServiceFactory
+		SccProjectUniqueName2 = ..\\Syscom_FTM\\Syscom.Client.FTM\\Syscom.Client.FTM.vbproj
+		SccProjectName2 = ../Syscom_FTM/Syscom.Client.FTM
+		SccLocalPath2 = ..\\Syscom_FTM\\Syscom.Client.FTM
+		SccProjectUniqueName3 = ..\\Syscom_CMM\\Syscom.Client.CMM\\Syscom.Client.CMM.vbproj
+		SccProjectName3 = ../Syscom_CMM/Syscom.Client.CMM
+		SccLocalPath3 = ..\\Syscom_CMM\\Syscom.Client.CMM
+		SccProjectUniqueName4 = ..\\Syscom_UCL\\Syscom.Client.UCL\\Syscom.Client.UCL.vbproj
+		SccProjectName4 = ../Syscom_UCL/Syscom.Client.UCL
+		SccLocalPath4 = ..\\Syscom_UCL\\Syscom.Client.UCL
+		SccProjectUniqueName5 = ..\\Syscom_NFC\\Syscom.Client.NFC\\Syscom.Client.NFC.vbproj
+		SccProjectName5 = ../Syscom_NFC/Syscom.Client.NFC
+		SccLocalPath5 = ..\\Syscom_NFC\\Syscom.Client.NFC
+		SccProjectUniqueName6 = ..\\Syscom_RPT\\Syscom.Client.RPT\\Syscom.Client.RPT.vbproj
+		SccProjectName6 = ../Syscom_RPT/Syscom.Client.RPT
+		SccLocalPath6 = ..\\Syscom_RPT\\Syscom.Client.RPT
+		SccProjectUniqueName7 = ..\\Syscom_ARM\\Syscom.Client.ARM\\Syscom.Client.ARM.vbproj
+		SccProjectName7 = ../Syscom_ARM/Syscom.Client.ARM
+		SccLocalPath7 = ..\\Syscom_ARM\\Syscom.Client.ARM
+		SccProjectUniqueName8 = ..\\SyscomAPP\\SyscomAPP.vbproj
+		SccProjectName8 = ../SyscomAPP
+		SccLocalPath8 = ..\\SyscomAPP
+	EndGlobalSection
+EndGlobal

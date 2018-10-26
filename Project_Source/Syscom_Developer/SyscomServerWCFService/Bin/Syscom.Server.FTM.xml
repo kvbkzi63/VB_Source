@@ -1,0 +1,315 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Syscom.Server.FTM
+</name>
+</assembly>
+<members>
+<member name="T:Syscom.Server.FTM.My.Resources.Resources">
+<summary>
+  用於查詢當地語系化字串等的強類型資源類別。
+</summary>
+</member>
+<member name="P:Syscom.Server.FTM.My.Resources.Resources.ResourceManager">
+<summary>
+  傳回這個類別使用的快取的 ResourceManager 執行個體。
+</summary>
+</member>
+<member name="P:Syscom.Server.FTM.My.Resources.Resources.Culture">
+<summary>
+  覆寫目前執行緒的 CurrentUICulture 屬性，對象是所有
+  使用這個強類型資源類別的資源查閱。
+</summary>
+</member>
+<member name="M:Syscom.Server.FTM.FileTransfer.#ctor">
+ <summary>
+ 阻止外部直接進行新建立的宣告
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.FTM.FileTransfer.uploadDrugPackFile(System.String@,System.Data.DataSet@,System.Data.DataSet@)">
+ <summary>
+ 上傳包藥機檔案
+ </summary>
+ <param name="data">上傳包藥機檔案</param>
+ <param name="fileVersionData">檔案版本資訊</param>
+ <returns>FID</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.FTM.FileTransfer.uploadNewFile(System.Data.DataSet@,System.Data.DataSet@,System.String@,System.Boolean@,System.Boolean,System.Data.IDbConnection@)">
+ <summary>
+ 上傳檔案
+ </summary>
+ <param name="data">上傳檔案資料</param>
+ <param name="fileVersionData">檔案版本資訊</param>
+ <returns>FID</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.FTM.FileTransfer.uploadNewFile(System.String,System.String,System.String,System.Data.DataSet@,System.Data.DataSet@,System.String@,System.Boolean@,System.Boolean)">
+ <summary>
+ 上傳檔案(可透過AppSetting.config的Tag設定來指定下載路徑)
+ </summary>
+ <param name="data">上傳檔案資料</param>
+ <param name="fileVersionData">檔案版本資訊</param>
+ <returns>FID</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.FTM.FileTransfer.downloadFile(System.String@,System.Boolean@)">
+ <summary>
+ 下載檔案
+ </summary>
+ <param name="FID">FID</param>
+ <param name="old_file_name">是否使用上傳時的原擋名</param>
+ <returns>(0) 檔案資料byte() , (1) client端的預設檔名</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.FTM.FileTransfer.downloadFile(System.String@,System.String,System.String,System.String,System.String,System.Boolean@)">
+ <summary>
+ 下載檔案(可透過AppSetting.config的Tag設定來指定下載路徑)
+ </summary>
+ <param name="FID">FID</param>
+ <param name="inUNCPathTag">UNCPath Tag</param>
+ <param name="inAccessIDTag">AccessID Tag</param>
+ <param name="inAccessPWTag">AccessPW Tag</param>
+ <param name="inExtensionName">副檔名，例:txt或xml</param>
+ <param name="old_file_name">是否使用上傳時的原擋名</param>
+ <returns>(0) 檔案資料byte() , (1) client端的預設檔名</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.FTM.FileTransfer.getImageThumb(System.String@)">
+ <summary>
+ 取得縮圖
+ </summary>
+ <param name="FID">FID</param>
+ <returns>縮圖的byte array</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.FTM.FileTransfer.getNewFileName(System.String@)">
+ <summary>
+ 取得檔案新的名稱
+ </summary>
+ <param name="fileName"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.FTM.FileTransfer.getNewFID(System.String@,System.String@)">
+ <summary>
+ 取得FID
+ </summary>
+ <param name="newFileName">新檔名</param>    
+ <param name="newDirName">新路徑</param>    
+ <returns>FID</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.FTM.FileTransfer.getDirectoryName(System.String@,System.String@,System.DateTime@)">
+ <summary>
+ 取得檔案歸屬 File Server 上的目錄名稱
+ </summary>   
+ <param name="fileType">(length=1) 代表檔案類型。T 一般樣板、G 一般資料、R 報表資料、O EMR門診資料、E EMR急診資料)、I EMR住院資料</param>
+ <param name="subCode">(length=8) 各系統自行定義的次分類代碼。</param>
+ <param name="dateTime">檔案時間</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.FTM.FileTransfer.getFilePathFromFID(System.String@)">
+ <summary>
+ 利用FID取得目錄及檔名
+ </summary>
+ <param name="FID"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.FTM.FileTransfer.uploadFTMFile(System.IO.FileInfo@,System.Data.DataRow@,System.Data.DataRow@)">
+ <summary>
+ 上傳檔案
+ </summary>
+ <param name="fi">檔案上傳到 AP Server 的實體位置</param>
+ <param name="data">上傳檔案資料</param>  
+ <returns>FID</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.FTM.FileTransfer.downloadFTMFile(System.String@,System.Boolean@)">
+ <summary>
+ 下載檔案
+ </summary>
+ <param name="FID"></param>
+ <param name="old_file_name"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:Syscom.Server.FTM.FTPTool">
+ <summary>
+ 連接 ftp Server
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.FTM.FTPTool.#ctor">
+ <summary>
+ 阻止外部直接進行新建立的宣告
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.FTM.NetworkDriveAccess.checkShareFolder">
+ <summary>
+ 檢核過目錄是否存在,以及創建目錄的權限
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.FTM.NetworkDriveAccess.moveFileToFileServer(System.String[]@,System.IO.FileInfo[]@)">
+ <summary>
+ 寫檔至 File Server
+ </summary>
+ <param name="fspath">路徑 such as \20090909\EMR\</param>
+ <param name="file">檔案</param>
+ <returns>File Ｓerver 路徑跟檔名</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.FTM.NetworkDriveAccess.moveFileToFileServer(System.String@,System.IO.FileInfo@)">
+ <summary>
+ 寫檔至 File Server
+ </summary>
+ <param name="fspath">路徑 such as \20090909\EMR\</param>
+ <param name="file">檔案</param>
+ <returns>File Ｓerver 路徑跟檔名</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.FTM.NetworkDriveAccess.getFileFromFileServer(System.String@)">
+ <summary>
+ 從 File Server 讀檔
+ </summary>
+ <param name="fileName">Full Path File Name in File Server </param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.FTM.NetworkDriveAccess.getFileFromFileServerWithFile(System.String@,System.String@)">
+ <summary>
+ 從 File Server 讀檔
+ </summary>
+ <param name="fid">FID for temp local file name</param>
+ <param name="fileName">Full Path File Name in File Server </param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.FTM.NetworkDriveAccessByPath.checkShareFolder">
+ <summary>
+ 檢核過目錄是否存在,以及創建目錄的權限
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.FTM.NetworkDriveAccessByPath.getFileFromFileServer(System.String,System.String,System.String,System.String@)">
+ <summary>
+ 從 File Server 讀檔
+ </summary>
+ <param name="fileName">Full Path File Name in File Server </param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.FTM.NetworkDriveAccessByPath.moveFileToFileServer(System.String,System.String,System.String,System.String[]@,System.IO.FileInfo[]@)">
+ <summary>
+ 寫檔至 File Server
+ </summary>
+ <param name="fspath">路徑 such as \20090909\EMR\</param>
+ <param name="file">檔案</param>
+ <returns>File Ｓerver 路徑跟檔名</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.FTM.FTMDelegate.#ctor">
+ <summary>
+ 阻止外部直接進行新建立的宣告
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Server.FTM.FTMDelegate.getInstance">
+ <summary>
+ 屬性取得類別實體
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:Syscom.Server.FTM.FTMDelegate.Nested">
+ <summary>
+ 巢狀類別存放建立的類別實體
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.FTM.FTMDelegate.uploadDrugPackFile(System.String@,System.Data.DataSet@,System.Data.DataSet@)">
+ <summary>
+ 上傳包藥機檔案
+ </summary>
+ <param name="data">上傳包藥機檔案</param>
+ <param name="fileVersionData">檔案版本資訊</param>
+ <returns>FID</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.FTM.FTMDelegate.uploadNewFile(System.Data.DataSet@,System.Data.DataSet@,System.Data.IDbConnection@)">
+ <summary>
+ 上傳檔案
+ </summary>
+ <param name="data">上傳檔案資料</param>
+ <param name="fileVersionData">檔案版本資訊</param>
+ <returns>FID</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.FTM.FTMDelegate.uploadFtpFile(System.Data.DataSet@,System.Data.DataSet@,System.Data.IDbConnection@)">
+ <summary>
+ 透過FTP上傳檔案
+ </summary>
+ <param name="data"></param>
+ <param name="fileVersionData"></param>
+ <param name="conn"></param>
+ <returns></returns>
+</member>
+<member name="M:Syscom.Server.FTM.FTMDelegate.uploadNewFile(System.String,System.String,System.String,System.Data.DataSet@,System.Data.DataSet@)">
+ <summary>
+ 上傳檔案(可透過AppSetting.config的Tag設定來指定下載路徑)
+ </summary>
+ <param name="data">上傳檔案資料</param>
+ <param name="fileVersionData">檔案版本資訊</param>
+ <returns>FID</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.FTM.FTMDelegate.downloadFile(System.String@,System.Boolean@)">
+ <summary>
+ 下載檔案
+ </summary>
+ <param name="FID">FID</param>
+ <param name="old_file_name">是否使用上傳時的原擋名</param>
+ <returns>(0) 檔案資料byte() , (1) client端的預設檔名</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.FTM.FTMDelegate.downloadFile(System.String@,System.String,System.String,System.String,System.String,System.Boolean@)">
+ <summary>
+ 下載檔案(可透過AppSetting.config的Tag設定來指定下載路徑)
+ </summary>
+ <param name="FID">FID</param>
+ <param name="inUNCPathTag">UNCPath Tag</param>
+ <param name="inAccessIDTag">AccessID Tag</param>
+ <param name="inAccessPWTag">AccessPW Tag</param>
+ <param name="inExtensionName">副檔名，例:txt或xml</param>
+ <param name="old_file_name">是否使用上傳時的原擋名</param>
+ <returns>(0) 檔案資料byte() , (1) client端的預設檔名</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.FTM.FTMDelegate.downloadFiles(System.String[]@,System.Boolean@)">
+ <summary>
+ 一次下載多個檔案
+ </summary>
+ <param name="FIDs">FIDs</param>
+ <param name="old_file_name">是否使用上傳時的原擋名</param>
+ <returns>Hashtable 以 FID 當 key </returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Server.FTM.FTMDelegate.getImageThumb(System.String@)">
+ <summary>
+ 取得縮圖
+ </summary>
+ <param name="FID">FID</param>
+ <returns>縮圖的byte array</returns>
+ <remarks></remarks>
+</member>
+</members>
+</doc>

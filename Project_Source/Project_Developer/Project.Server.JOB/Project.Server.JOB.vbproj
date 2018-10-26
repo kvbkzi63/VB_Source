@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5CF1E999-79AD-408D-B923-37679CC48199}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Project.Server.JOB</RootNamespace>
+    <AssemblyName>Project.Server.JOB</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\SyscomCompile\Project\Server\</OutputPath>
+    <DocumentationFile>Project.Server.JOB.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\SyscomCompile\Project\Server\</OutputPath>
+    <DocumentationFile>Project.Server.JOB.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Project.Comm.JOB">
+      <HintPath>..\..\SyscomCompile\Project\Comm\Project.Comm.JOB.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Comm.BASE, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SyscomCompile\Syscom\Common\Syscom.Comm.BASE.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Comm.EXP, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SyscomCompile\Syscom\Common\Syscom.Comm.EXP.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Comm.LOG, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SyscomCompile\Syscom\Common\Syscom.Comm.LOG.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Comm.Utility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SyscomCompile\Syscom\Common\Syscom.Comm.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Server.BO, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SyscomCompile\Syscom\Server\Syscom.Server.BO.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Server.CMM, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SyscomCompile\Syscom\Server\Syscom.Server.CMM.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Server.FTM, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SyscomCompile\Syscom\Server\Syscom.Server.FTM.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Server.SNC, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SyscomCompile\Syscom\Server\Syscom.Server.SNC.dll</HintPath>
+    </Reference>
+    <Reference Include="Syscom.Server.SQL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SyscomCompile\Syscom\Server\Syscom.Server.SQL.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BO\Job\JobDBModifiyBO_E1.vb" />
+    <Compile Include="BO\Job\JobEmployeeMaintainBO_E1.vb" />
+    <Compile Include="BO\Job\JobMailGroupBO_E1.vb" />
+    <Compile Include="BO\Job\JobPGJobBO_E1.vb" />
+    <Compile Include="BO\Job\JobProjectMaintainBO_E1.vb" />
+    <Compile Include="BO\Job\JobQaAttachedFilesBO_E1.vb" />
+    <Compile Include="BO\Job\JobQaBugRecordBO_E1.vb" />
+    <Compile Include="BO\Job\JobQaTestRecordBO_E1.vb" />
+    <Compile Include="BO\Job\JobSAAssignRecordBO_E1.vb" />
+    <Compile Include="BO\Job\JobServiceRecordBO_E1.vb" />
+    <Compile Include="BO\Job\JobServiceReplyRecordBO_E1.vb" />
+    <Compile Include="BO\PUB\PubPhraseBO_E1.vb" />
+    <Compile Include="BO_Base\Job\JobPgJobRecordBO.vb" />
+    <Compile Include="BO_Base\Job\JobPgJobStatusRecordBO.vb" />
+    <Compile Include="BO_Base\Job\JobQaAttachedFilesBO.vb" />
+    <Compile Include="BO_Base\Job\JobQaBugRecordBO.vb" />
+    <Compile Include="BO_Base\Job\JobQaBugRecordModifiyLogBO.vb" />
+    <Compile Include="BO_Base\Job\JobQaTestRecordBO.vb" />
+    <Compile Include="BO_Base\Job\JobSaAssignRecordBO.vb" />
+    <Compile Include="BO_Base\Job\JobSaDbmodifiedRecordBO.vb" />
+    <Compile Include="BO_Base\Job\JobSaRejectRecordBO.vb" />
+    <Compile Include="BO_Base\Job\JobSaSpecfilesBO.vb" />
+    <Compile Include="BO_Base\Job\JobServiceRecordBO.vb" />
+    <Compile Include="BO_Base\Job\JobServiceReplyRecordBO.vb" />
+    <Compile Include="BO_Base\Prj\PrjCustomBO.vb" />
+    <Compile Include="BO_Base\Prj\PrjMailGroupBO.vb" />
+    <Compile Include="BO_Base\Prj\PrjMailGroupDetailBO.vb" />
+    <Compile Include="BO_Base\Prj\PrjProjectBO.vb" />
+    <Compile Include="BO_Base\Prj\PrjProjectSystemBO.vb" />
+    <Compile Include="BO_Base\Prj\PrjProjectSystemFunctionBO.vb" />
+    <Compile Include="BS\JobDoActionBS.vb" />
+    <Compile Include="BS\JobManageBS.vb" />
+    <Compile Include="JOBDelegate.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

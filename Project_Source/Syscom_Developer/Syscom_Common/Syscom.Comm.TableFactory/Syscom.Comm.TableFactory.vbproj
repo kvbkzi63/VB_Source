@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C8451FFD-EC4A-4CA2-A27E-98B1A51C9409}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Syscom.Comm.TableFactory</RootNamespace>
+    <AssemblyName>Syscom.Comm.TableFactory</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\..\SyscomCompile\Syscom\Common\</OutputPath>
+    <DocumentationFile>Syscom.Comm.TableFactory.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\SyscomCompile\Syscom\Common\</OutputPath>
+    <DocumentationFile>Syscom.Comm.TableFactory.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="System\ARM\ArmAgentAuthorizationDataTableFactory.vb" />
+    <Compile Include="System\ARM\ArmAppSystemDataTableFactory.vb" />
+    <Compile Include="System\ARM\ArmForPcsDataTableFactory.vb" />
+    <Compile Include="System\ARM\ArmFunSystemDataTableFactory.vb" />
+    <Compile Include="System\ARM\ArmLogonFailureDataTableFactory.vb" />
+    <Compile Include="System\ARM\ArmLogonInfoDataTableFactory.vb" />
+    <Compile Include="System\ARM\ArmPasswordDataTableFactory.vb" />
+    <Compile Include="System\ARM\ArmProfileDataTableFactory.vb" />
+    <Compile Include="System\ARM\ArmRecordDataTableFactory.vb" />
+    <Compile Include="System\ARM\ArmRolenameDataTableFactory.vb" />
+    <Compile Include="System\ARM\ArmRolerightsDataTableFactory.vb" />
+    <Compile Include="System\ARM\ArmRolesDataTableFactory.vb" />
+    <Compile Include="System\ARM\ArmSubSystemDataTableFactory.vb" />
+    <Compile Include="System\ARM\ArmTskSystemDataTableFactory.vb" />
+    <Compile Include="System\ICC\IccAllergicMedicinesDataTableFactory.vb" />
+    <Compile Include="System\ICC\IccBacterinUploadDataTableFactory.vb" />
+    <Compile Include="System\ICC\IccCloudDrugPatientDataTableFactory.vb" />
+    <Compile Include="System\ICC\IccCloudDrugsDataTableFactory.vb" />
+    <Compile Include="System\ICC\IccCloudUploadLogDataTableFactory.vb" />
+    <Compile Include="System\ICC\IccCriticalIllnessDataTableFactory.vb" />
+    <Compile Include="System\ICC\IccCumulativeDataDataTableFactory.vb" />
+    <Compile Include="System\ICC\IccCumulativeFeeDataTableFactory.vb" />
+    <Compile Include="System\ICC\IccEmergentTelDataTableFactory.vb" />
+    <Compile Include="System\ICC\IccFeedbackCauseDataTableFactory.vb" />
+    <Compile Include="System\ICC\IccFeedbackDuporderDataTableFactory.vb" />
+    <Compile Include="System\ICC\IccFeedbackMb1DataTableFactory.vb" />
+    <Compile Include="System\ICC\IccFeedbackMb2DataTableFactory.vb" />
+    <Compile Include="System\ICC\IccFieldLengthVerifyDataTableFactory.vb" />
+    <Compile Include="System\ICC\IccHealthUploadDataTableFactory.vb" />
+    <Compile Include="System\ICC\IccInoculateDataDataTableFactory.vb" />
+    <Compile Include="System\ICC\IccInoculationUploadDataTableFactory.vb" />
+    <Compile Include="System\ICC\IccInteractVerify1DataTableFactory.vb" />
+    <Compile Include="System\ICC\IccInteractVerify2DataTableFactory.vb" />
+    <Compile Include="System\ICC\IccInteractVerify3DataTableFactory.vb" />
+    <Compile Include="System\ICC\IccInteractVerify4DataTableFactory.vb" />
+    <Compile Include="System\ICC\IccLastSeqNumDataTableFactory.vb" />
+    <Compile Include="System\ICC\IccMustFieldVerifyDataTableFactory.vb" />
+    <Compile Include="System\ICC\IccOnlineCheckDataTableFactory.vb" />
+    <Compile Include="System\ICC\IccOrderUploadDataTableFactory.vb" />
+    <Compile Include="System\ICC\IccOrganDonateDataTableFactory.vb" />
+    <Compile Include="System\ICC\IccPredeliveryDataDataTableFactory.vb" />
+    <Compile Include="System\ICC\IccPrescriptHveDataTableFactory.vb" />
+    <Compile Include="System\ICC\IccPrescriptLongTermDataTableFactory.vb" />
+    <Compile Include="System\ICC\IccPrescriptMainDataTableFactory.vb" />
+    <Compile Include="System\ICC\IccPreventDataDataTableFactory.vb" />
+    <Compile Include="System\ICC\IccRegisterBasicDataTableFactory.vb" />
+    <Compile Include="System\ICC\IccSelfVerifyDataTableFactory.vb" />
+    <Compile Include="System\ICC\IccTreatmentNeedHpcDataTableFactory.vb" />
+    <Compile Include="System\ICC\IccTreatmentNoNeedHpcDataTableFactory.vb" />
+    <Compile Include="System\NFC\NfcGroupDataTableFactory.vb" />
+    <Compile Include="System\NFC\NfcGroupMaintainDataTableFactory.vb" />
+    <Compile Include="System\NFC\NfcNotifierByfunctionDataTableFactory.vb" />
+    <Compile Include="System\NFC\NfcNotifyMsgDataTableFactory.vb" />
+    <Compile Include="System\OPH\OphAlertRecordDataTableFactory.vb" />
+    <Compile Include="System\OPH\OphInteractionDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubAccDeptDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubAccountDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubAddOptionOrderDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubAddOrderDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubAddOrderDetailDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubAddPartDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubAppLogDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubAreaCodeDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubAreaCodeGovDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubAreaCodeNDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubBatchControlDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubBatchJobDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubBatchOpDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubBatchStatusDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubBodySiteDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubConfigDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubContractDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubContractPartSetDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubContractQuotaDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubContractSetDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubCureControlDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubDentalAddControlDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubDentalAddDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubDepartmentDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubDeptAddDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubDeptLeaderDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubDeptSectDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubDiseaseDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubDiseaseIcd10DataTableFactory.vb" />
+    <Compile Include="System\PUB\PubDiseaseIcd10MappingDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubDisIdentityDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubDisIdentitySetDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubDoctorDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubDrAddControlDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubEmgAddDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubEmployeeDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubExamineDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubExamItemDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubExcludeDrugSetDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubExportDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubExportDetailDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubFamilyHistoryDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubFileMapDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubFileVersionDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubFirstVisitRecordDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubFormDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubFormDeptSetDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubFormOrderSetDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubHolidayDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubHospitalDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubIcd10DeptDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubIndicationDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubIndicationGroupDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubIndicationItemDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubIndicationItemDetailDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubInsuCodeDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubInsuDeptDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubIpConfigDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubIssItemDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubItemDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubItemFieldDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubItemOperandDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubItemOperatorDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubItemProgramDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubItemValueDetailDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubItemValueMasterDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubItemValueUnitDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubKidAddDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubMajorcareAddDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubMajorcareDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubMaterialSelfpayApplyDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubMedicalTypeDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubMedicalTypeSortDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubNhiCodeDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubNhiCodeImportDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubNhiIndexSetDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubOphPharmacyBaseDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubOrderAlternativeDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubOrderDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubOrderExaminationDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubOrderExamNocheckinDeptDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubOrderMajorcareDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubOrderMappingSpecimenDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubOrderOrTreatDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubOrderPriceDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubOrderPriceSpecialDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubOrderStandingDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubPartDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubPartDiscountDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubPatFlagSortDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubPatientAbroadHistoryDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubPatientAllergyDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubPatientBodyrecordDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubPatientContactDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubPatientDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubPatientDisabilityDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubPatientDnrDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubPatientFamilyDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubPatientFlagDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubPatientFollowUpDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubPatientHealthCardDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubPatientIntegratedCareDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubPatientIntegratedCareHistoryDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubPatientIssDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubPatientOperationHistoryDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubPatientPastDiseaseHistoryDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubPatientPersonalHabitsDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubPatientQuotaDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubPatientScheduleDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubPatientSevereDiseaseDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubPatientToccDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubPatientTransferRiskDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubPatientTransfusionDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubPhaServicesDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubPhraseDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubPostalAreaDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubPostalCodeDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubPostalGovAreaDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubPreventiveCareDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubPreventiveCareExeDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubPrintConfigDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubPrintJobDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubPrintRecordDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubPrintSeqReportDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubRegisterFeeDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubReportAlarmDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubReportDescDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubRuleClassDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubRuleDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubRuleDetailDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubRuleMaintainDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubRuleReasonDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubRuleTransactionLogDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubSequenceDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubSheetDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubSheetDetailDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubSheetDisplayDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubSheetDisplayOrderDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubSheetGroupDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubSheetLocationDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubStationDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubSubIdentityDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubSubIdentitySetDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubSyscodeDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubSyscodeTypeDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubSystemVersionDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubTerminalConfigDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubUnitDataTableFactory.vb" />
+    <Compile Include="System\PUB\PubZoneRoomDataTableFactory.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

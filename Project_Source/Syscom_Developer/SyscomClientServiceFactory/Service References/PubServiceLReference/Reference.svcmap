@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1ec2be15-b76d-4c7f-9a41-1d46ba0dd0f4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:40611/PubServiceL.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PubServiceL5.xsd" MetadataType="Schema" ID="193c71e7-65da-426e-8747-51265bb757d1" SourceId="1" SourceUrl="http://localhost:40611/PubServiceL.svc?xsd=xsd3" />
+    <MetadataFile FileName="PubServiceL10.xsd" MetadataType="Schema" ID="ee707cf7-f847-4b75-b1e1-23339b081488" SourceId="1" SourceUrl="http://localhost:40611/PubServiceL.svc?xsd=xsd2" />
+    <MetadataFile FileName="PubServiceL11.xsd" MetadataType="Schema" ID="130a81c7-9895-492b-b55b-5cf3886433ba" SourceId="1" SourceUrl="http://localhost:40611/PubServiceL.svc?xsd=xsd1" />
+    <MetadataFile FileName="PubServiceL1.disco" MetadataType="Disco" ID="0c519816-30b8-44a0-8a31-8302e6c51ffa" SourceId="1" SourceUrl="http://localhost:40611/PubServiceL.svc?disco" />
+    <MetadataFile FileName="PubServiceL12.xsd" MetadataType="Schema" ID="20024327-d7f6-404a-baff-b01cf39e0e7d" SourceId="1" SourceUrl="http://localhost:40611/PubServiceL.svc?xsd=xsd0" />
+    <MetadataFile FileName="PubServiceL1.wsdl" MetadataType="Wsdl" ID="fc2984ad-674a-4d44-8aee-3dca6aa9e0c0" SourceId="1" SourceUrl="http://localhost:40611/PubServiceL.svc?wsdl" />
+    <MetadataFile FileName="PubServiceL13.xsd" MetadataType="Schema" ID="3cbc5a97-4052-4ae2-8436-37d1d9a50e54" SourceId="1" SourceUrl="http://localhost:40611/PubServiceL.svc?xsd=xsd4" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

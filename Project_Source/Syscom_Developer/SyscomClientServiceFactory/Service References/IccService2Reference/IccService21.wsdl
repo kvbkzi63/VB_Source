@@ -1,0 +1,967 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="IccService2" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_IIccService2_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:40611/IccService2.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:40611/IccService2.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:40611/IccService2.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:40611/IccService2.svc?xsd=xsd3" />
+      <xsd:import schemaLocation="http://localhost:40611/IccService2.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IIccService2_InitialIccUploadDataQueryUI_InputMessage">
+    <wsdl:part name="parameters" element="tns:InitialIccUploadDataQueryUI" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_InitialIccUploadDataQueryUI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InitialIccUploadDataQueryUIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_QueryIccUploadData_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryIccUploadData" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_QueryIccUploadData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryIccUploadDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_QueryIccUploadDataDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryIccUploadDataDetail" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_QueryIccUploadDataDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryIccUploadDataDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_SaveIccUploadData_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveIccUploadData" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_SaveIccUploadData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveIccUploadDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_queryGetOrganDonate_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryGetOrganDonate" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_queryGetOrganDonate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryGetOrganDonateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_updateGetOrganDonate_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateGetOrganDonate" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_updateGetOrganDonate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateGetOrganDonateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_insertGetOrganDonate_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertGetOrganDonate" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_insertGetOrganDonate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertGetOrganDonateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_deleteWriteTreatmentCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteWriteTreatmentCode" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_deleteWriteTreatmentCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteWriteTreatmentCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_deleteWriteTreatmentFee_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteWriteTreatmentFee" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_deleteWriteTreatmentFee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteWriteTreatmentFeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_deleteWriteHealthInsurance_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteWriteHealthInsurance" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_deleteWriteHealthInsurance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteWriteHealthInsuranceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_deleteWriteEmergentTel_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteWriteEmergentTel" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_deleteWriteEmergentTel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteWriteEmergentTelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_deleteWritePredeliveryCheckup_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteWritePredeliveryCheckup" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_deleteWritePredeliveryCheckup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteWritePredeliveryCheckupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_deleteWriteMultiPrescript_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteWriteMultiPrescript" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_deleteWriteMultiPrescript_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteWriteMultiPrescriptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_deleteWriteAllergicMedicines_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteWriteAllergicMedicines" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_deleteWriteAllergicMedicines_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteWriteAllergicMedicinesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_deleteWriteInoculateData_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteWriteInoculateData" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_deleteWriteInoculateData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteWriteInoculateDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_deleteWriteOrganDonate_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteWriteOrganDonate" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_deleteWriteOrganDonate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteWriteOrganDonateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_queryGetEmergentTel_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryGetEmergentTel" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_queryGetEmergentTel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryGetEmergentTelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_updateGetEmergentTel_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateGetEmergentTel" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_updateGetEmergentTel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateGetEmergentTelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_insertGetEmergentTel_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertGetEmergentTel" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_insertGetEmergentTel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertGetEmergentTelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_queryGetCumulativeData_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryGetCumulativeData" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_queryGetCumulativeData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryGetCumulativeDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_updateGetCumulativeData_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateGetCumulativeData" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_updateGetCumulativeData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateGetCumulativeDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_insertGetCumulativeData_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertGetCumulativeData" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_insertGetCumulativeData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertGetCumulativeDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_queryGetCumulativeFee_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryGetCumulativeFee" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_queryGetCumulativeFee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryGetCumulativeFeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_updateGetCumulativeFee_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateGetCumulativeFee" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_updateGetCumulativeFee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateGetCumulativeFeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_insertGetCumulativeFee_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertGetCumulativeFee" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_insertGetCumulativeFee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertGetCumulativeFeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_queryGetBasicData_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryGetBasicData" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_queryGetBasicData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryGetBasicDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_updateGetBasicData_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateGetBasicData" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_updateGetBasicData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateGetBasicDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_updateGetBasicData2_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateGetBasicData2" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_updateGetBasicData2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateGetBasicData2Response" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_insertGetBasicData_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertGetBasicData" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_insertGetBasicData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertGetBasicDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_deleteGetBasicData_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteGetBasicData" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_deleteGetBasicData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteGetBasicDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_insertGetBasicData2_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertGetBasicData2" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_insertGetBasicData2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertGetBasicData2Response" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_queryReadPrescription_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryReadPrescription" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_queryReadPrescription_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryReadPrescriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_updateReadPrescription_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateReadPrescription" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_updateReadPrescription_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateReadPrescriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_deleteReadPrescription_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteReadPrescription" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_deleteReadPrescription_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteReadPrescriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_insertReadPrescription_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertReadPrescription" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_insertReadPrescription_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertReadPrescriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_deleteWritePrescription_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteWritePrescription" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_deleteWritePrescription_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteWritePrescriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_queryGetRegisterBasic2_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryGetRegisterBasic2" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_queryGetRegisterBasic2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryGetRegisterBasic2Response" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_updateGetRegisterBasic2_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateGetRegisterBasic2" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_updateGetRegisterBasic2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateGetRegisterBasic2Response" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_insertGetRegisterBasic2_InputMessage">
+    <wsdl:part name="parameters" element="tns:insertGetRegisterBasic2" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_insertGetRegisterBasic2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insertGetRegisterBasic2Response" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_deleteWriteTreatmentData_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteWriteTreatmentData" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_deleteWriteTreatmentData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteWriteTreatmentDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_UpdateICCOrderUploadForPrescriptionSignA79_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateICCOrderUploadForPrescriptionSignA79" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_UpdateICCOrderUploadForPrescriptionSignA79_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateICCOrderUploadForPrescriptionSignA79Response" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_UpdateICCBacterinUploadForPrescriptionSignA79_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateICCBacterinUploadForPrescriptionSignA79" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_UpdateICCBacterinUploadForPrescriptionSignA79_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateICCBacterinUploadForPrescriptionSignA79Response" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_getConfigDataForICCUpload_InputMessage">
+    <wsdl:part name="parameters" element="tns:getConfigDataForICCUpload" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_getConfigDataForICCUpload_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getConfigDataForICCUploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_ImportFeedbackData_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportFeedbackData" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_ImportFeedbackData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportFeedbackDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_QueryMaxCountOfDay_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryMaxCountOfDay" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_QueryMaxCountOfDay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryMaxCountOfDayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_QueryFeedBackData_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryFeedBackData" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_QueryFeedBackData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryFeedBackDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_Query24HourUploadedRate_InputMessage">
+    <wsdl:part name="parameters" element="tns:Query24HourUploadedRate" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_Query24HourUploadedRate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Query24HourUploadedRateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_Query24UnuploadData_InputMessage">
+    <wsdl:part name="parameters" element="tns:Query24UnuploadData" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_Query24UnuploadData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Query24UnuploadDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_QueryIccConnectionHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryIccConnectionHistory" />
+  </wsdl:message>
+  <wsdl:message name="IIccService2_QueryIccConnectionHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryIccConnectionHistoryResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IIccService2">
+    <wsdl:operation name="InitialIccUploadDataQueryUI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccService2/InitialIccUploadDataQueryUI" message="tns:IIccService2_InitialIccUploadDataQueryUI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccService2/InitialIccUploadDataQueryUIResponse" message="tns:IIccService2_InitialIccUploadDataQueryUI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryIccUploadData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccService2/QueryIccUploadData" message="tns:IIccService2_QueryIccUploadData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccService2/QueryIccUploadDataResponse" message="tns:IIccService2_QueryIccUploadData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryIccUploadDataDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccService2/QueryIccUploadDataDetail" message="tns:IIccService2_QueryIccUploadDataDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccService2/QueryIccUploadDataDetailResponse" message="tns:IIccService2_QueryIccUploadDataDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveIccUploadData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccService2/SaveIccUploadData" message="tns:IIccService2_SaveIccUploadData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccService2/SaveIccUploadDataResponse" message="tns:IIccService2_SaveIccUploadData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryGetOrganDonate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccService2/queryGetOrganDonate" message="tns:IIccService2_queryGetOrganDonate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccService2/queryGetOrganDonateResponse" message="tns:IIccService2_queryGetOrganDonate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateGetOrganDonate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccService2/updateGetOrganDonate" message="tns:IIccService2_updateGetOrganDonate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccService2/updateGetOrganDonateResponse" message="tns:IIccService2_updateGetOrganDonate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertGetOrganDonate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccService2/insertGetOrganDonate" message="tns:IIccService2_insertGetOrganDonate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccService2/insertGetOrganDonateResponse" message="tns:IIccService2_insertGetOrganDonate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteWriteTreatmentCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccService2/deleteWriteTreatmentCode" message="tns:IIccService2_deleteWriteTreatmentCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccService2/deleteWriteTreatmentCodeResponse" message="tns:IIccService2_deleteWriteTreatmentCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteWriteTreatmentFee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccService2/deleteWriteTreatmentFee" message="tns:IIccService2_deleteWriteTreatmentFee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccService2/deleteWriteTreatmentFeeResponse" message="tns:IIccService2_deleteWriteTreatmentFee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteWriteHealthInsurance">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccService2/deleteWriteHealthInsurance" message="tns:IIccService2_deleteWriteHealthInsurance_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccService2/deleteWriteHealthInsuranceResponse" message="tns:IIccService2_deleteWriteHealthInsurance_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteWriteEmergentTel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccService2/deleteWriteEmergentTel" message="tns:IIccService2_deleteWriteEmergentTel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccService2/deleteWriteEmergentTelResponse" message="tns:IIccService2_deleteWriteEmergentTel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteWritePredeliveryCheckup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccService2/deleteWritePredeliveryCheckup" message="tns:IIccService2_deleteWritePredeliveryCheckup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccService2/deleteWritePredeliveryCheckupResponse" message="tns:IIccService2_deleteWritePredeliveryCheckup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteWriteMultiPrescript">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccService2/deleteWriteMultiPrescript" message="tns:IIccService2_deleteWriteMultiPrescript_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccService2/deleteWriteMultiPrescriptResponse" message="tns:IIccService2_deleteWriteMultiPrescript_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteWriteAllergicMedicines">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccService2/deleteWriteAllergicMedicines" message="tns:IIccService2_deleteWriteAllergicMedicines_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccService2/deleteWriteAllergicMedicinesResponse" message="tns:IIccService2_deleteWriteAllergicMedicines_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteWriteInoculateData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccService2/deleteWriteInoculateData" message="tns:IIccService2_deleteWriteInoculateData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccService2/deleteWriteInoculateDataResponse" message="tns:IIccService2_deleteWriteInoculateData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteWriteOrganDonate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccService2/deleteWriteOrganDonate" message="tns:IIccService2_deleteWriteOrganDonate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccService2/deleteWriteOrganDonateResponse" message="tns:IIccService2_deleteWriteOrganDonate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryGetEmergentTel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccService2/queryGetEmergentTel" message="tns:IIccService2_queryGetEmergentTel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccService2/queryGetEmergentTelResponse" message="tns:IIccService2_queryGetEmergentTel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateGetEmergentTel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccService2/updateGetEmergentTel" message="tns:IIccService2_updateGetEmergentTel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccService2/updateGetEmergentTelResponse" message="tns:IIccService2_updateGetEmergentTel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertGetEmergentTel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccService2/insertGetEmergentTel" message="tns:IIccService2_insertGetEmergentTel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccService2/insertGetEmergentTelResponse" message="tns:IIccService2_insertGetEmergentTel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryGetCumulativeData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccService2/queryGetCumulativeData" message="tns:IIccService2_queryGetCumulativeData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccService2/queryGetCumulativeDataResponse" message="tns:IIccService2_queryGetCumulativeData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateGetCumulativeData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccService2/updateGetCumulativeData" message="tns:IIccService2_updateGetCumulativeData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccService2/updateGetCumulativeDataResponse" message="tns:IIccService2_updateGetCumulativeData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertGetCumulativeData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccService2/insertGetCumulativeData" message="tns:IIccService2_insertGetCumulativeData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccService2/insertGetCumulativeDataResponse" message="tns:IIccService2_insertGetCumulativeData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryGetCumulativeFee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccService2/queryGetCumulativeFee" message="tns:IIccService2_queryGetCumulativeFee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccService2/queryGetCumulativeFeeResponse" message="tns:IIccService2_queryGetCumulativeFee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateGetCumulativeFee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccService2/updateGetCumulativeFee" message="tns:IIccService2_updateGetCumulativeFee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccService2/updateGetCumulativeFeeResponse" message="tns:IIccService2_updateGetCumulativeFee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertGetCumulativeFee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccService2/insertGetCumulativeFee" message="tns:IIccService2_insertGetCumulativeFee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccService2/insertGetCumulativeFeeResponse" message="tns:IIccService2_insertGetCumulativeFee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryGetBasicData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccService2/queryGetBasicData" message="tns:IIccService2_queryGetBasicData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccService2/queryGetBasicDataResponse" message="tns:IIccService2_queryGetBasicData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateGetBasicData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccService2/updateGetBasicData" message="tns:IIccService2_updateGetBasicData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccService2/updateGetBasicDataResponse" message="tns:IIccService2_updateGetBasicData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateGetBasicData2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccService2/updateGetBasicData2" message="tns:IIccService2_updateGetBasicData2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccService2/updateGetBasicData2Response" message="tns:IIccService2_updateGetBasicData2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertGetBasicData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccService2/insertGetBasicData" message="tns:IIccService2_insertGetBasicData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccService2/insertGetBasicDataResponse" message="tns:IIccService2_insertGetBasicData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteGetBasicData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccService2/deleteGetBasicData" message="tns:IIccService2_deleteGetBasicData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccService2/deleteGetBasicDataResponse" message="tns:IIccService2_deleteGetBasicData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertGetBasicData2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccService2/insertGetBasicData2" message="tns:IIccService2_insertGetBasicData2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccService2/insertGetBasicData2Response" message="tns:IIccService2_insertGetBasicData2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryReadPrescription">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccService2/queryReadPrescription" message="tns:IIccService2_queryReadPrescription_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccService2/queryReadPrescriptionResponse" message="tns:IIccService2_queryReadPrescription_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateReadPrescription">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccService2/updateReadPrescription" message="tns:IIccService2_updateReadPrescription_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccService2/updateReadPrescriptionResponse" message="tns:IIccService2_updateReadPrescription_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteReadPrescription">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccService2/deleteReadPrescription" message="tns:IIccService2_deleteReadPrescription_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccService2/deleteReadPrescriptionResponse" message="tns:IIccService2_deleteReadPrescription_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertReadPrescription">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccService2/insertReadPrescription" message="tns:IIccService2_insertReadPrescription_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccService2/insertReadPrescriptionResponse" message="tns:IIccService2_insertReadPrescription_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteWritePrescription">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccService2/deleteWritePrescription" message="tns:IIccService2_deleteWritePrescription_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccService2/deleteWritePrescriptionResponse" message="tns:IIccService2_deleteWritePrescription_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryGetRegisterBasic2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccService2/queryGetRegisterBasic2" message="tns:IIccService2_queryGetRegisterBasic2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccService2/queryGetRegisterBasic2Response" message="tns:IIccService2_queryGetRegisterBasic2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateGetRegisterBasic2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccService2/updateGetRegisterBasic2" message="tns:IIccService2_updateGetRegisterBasic2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccService2/updateGetRegisterBasic2Response" message="tns:IIccService2_updateGetRegisterBasic2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insertGetRegisterBasic2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccService2/insertGetRegisterBasic2" message="tns:IIccService2_insertGetRegisterBasic2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccService2/insertGetRegisterBasic2Response" message="tns:IIccService2_insertGetRegisterBasic2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteWriteTreatmentData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccService2/deleteWriteTreatmentData" message="tns:IIccService2_deleteWriteTreatmentData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccService2/deleteWriteTreatmentDataResponse" message="tns:IIccService2_deleteWriteTreatmentData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateICCOrderUploadForPrescriptionSignA79">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccService2/UpdateICCOrderUploadForPrescriptionSignA79" message="tns:IIccService2_UpdateICCOrderUploadForPrescriptionSignA79_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccService2/UpdateICCOrderUploadForPrescriptionSignA79Response" message="tns:IIccService2_UpdateICCOrderUploadForPrescriptionSignA79_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateICCBacterinUploadForPrescriptionSignA79">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccService2/UpdateICCBacterinUploadForPrescriptionSignA79" message="tns:IIccService2_UpdateICCBacterinUploadForPrescriptionSignA79_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccService2/UpdateICCBacterinUploadForPrescriptionSignA79Response" message="tns:IIccService2_UpdateICCBacterinUploadForPrescriptionSignA79_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getConfigDataForICCUpload">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccService2/getConfigDataForICCUpload" message="tns:IIccService2_getConfigDataForICCUpload_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccService2/getConfigDataForICCUploadResponse" message="tns:IIccService2_getConfigDataForICCUpload_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportFeedbackData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccService2/ImportFeedbackData" message="tns:IIccService2_ImportFeedbackData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccService2/ImportFeedbackDataResponse" message="tns:IIccService2_ImportFeedbackData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryMaxCountOfDay">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccService2/QueryMaxCountOfDay" message="tns:IIccService2_QueryMaxCountOfDay_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccService2/QueryMaxCountOfDayResponse" message="tns:IIccService2_QueryMaxCountOfDay_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryFeedBackData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccService2/QueryFeedBackData" message="tns:IIccService2_QueryFeedBackData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccService2/QueryFeedBackDataResponse" message="tns:IIccService2_QueryFeedBackData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Query24HourUploadedRate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccService2/Query24HourUploadedRate" message="tns:IIccService2_Query24HourUploadedRate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccService2/Query24HourUploadedRateResponse" message="tns:IIccService2_Query24HourUploadedRate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Query24UnuploadData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccService2/Query24UnuploadData" message="tns:IIccService2_Query24UnuploadData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccService2/Query24UnuploadDataResponse" message="tns:IIccService2_Query24UnuploadData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryIccConnectionHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IIccService2/QueryIccConnectionHistory" message="tns:IIccService2_QueryIccConnectionHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IIccService2/QueryIccConnectionHistoryResponse" message="tns:IIccService2_QueryIccConnectionHistory_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSHttpBinding_IIccService2" type="tns:IIccService2">
+    <wsp:PolicyReference URI="#WSHttpBinding_IIccService2_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InitialIccUploadDataQueryUI">
+      <soap12:operation soapAction="http://tempuri.org/IIccService2/InitialIccUploadDataQueryUI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryIccUploadData">
+      <soap12:operation soapAction="http://tempuri.org/IIccService2/QueryIccUploadData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryIccUploadDataDetail">
+      <soap12:operation soapAction="http://tempuri.org/IIccService2/QueryIccUploadDataDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveIccUploadData">
+      <soap12:operation soapAction="http://tempuri.org/IIccService2/SaveIccUploadData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryGetOrganDonate">
+      <soap12:operation soapAction="http://tempuri.org/IIccService2/queryGetOrganDonate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateGetOrganDonate">
+      <soap12:operation soapAction="http://tempuri.org/IIccService2/updateGetOrganDonate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertGetOrganDonate">
+      <soap12:operation soapAction="http://tempuri.org/IIccService2/insertGetOrganDonate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteWriteTreatmentCode">
+      <soap12:operation soapAction="http://tempuri.org/IIccService2/deleteWriteTreatmentCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteWriteTreatmentFee">
+      <soap12:operation soapAction="http://tempuri.org/IIccService2/deleteWriteTreatmentFee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteWriteHealthInsurance">
+      <soap12:operation soapAction="http://tempuri.org/IIccService2/deleteWriteHealthInsurance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteWriteEmergentTel">
+      <soap12:operation soapAction="http://tempuri.org/IIccService2/deleteWriteEmergentTel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteWritePredeliveryCheckup">
+      <soap12:operation soapAction="http://tempuri.org/IIccService2/deleteWritePredeliveryCheckup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteWriteMultiPrescript">
+      <soap12:operation soapAction="http://tempuri.org/IIccService2/deleteWriteMultiPrescript" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteWriteAllergicMedicines">
+      <soap12:operation soapAction="http://tempuri.org/IIccService2/deleteWriteAllergicMedicines" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteWriteInoculateData">
+      <soap12:operation soapAction="http://tempuri.org/IIccService2/deleteWriteInoculateData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteWriteOrganDonate">
+      <soap12:operation soapAction="http://tempuri.org/IIccService2/deleteWriteOrganDonate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryGetEmergentTel">
+      <soap12:operation soapAction="http://tempuri.org/IIccService2/queryGetEmergentTel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateGetEmergentTel">
+      <soap12:operation soapAction="http://tempuri.org/IIccService2/updateGetEmergentTel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertGetEmergentTel">
+      <soap12:operation soapAction="http://tempuri.org/IIccService2/insertGetEmergentTel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryGetCumulativeData">
+      <soap12:operation soapAction="http://tempuri.org/IIccService2/queryGetCumulativeData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateGetCumulativeData">
+      <soap12:operation soapAction="http://tempuri.org/IIccService2/updateGetCumulativeData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertGetCumulativeData">
+      <soap12:operation soapAction="http://tempuri.org/IIccService2/insertGetCumulativeData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryGetCumulativeFee">
+      <soap12:operation soapAction="http://tempuri.org/IIccService2/queryGetCumulativeFee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateGetCumulativeFee">
+      <soap12:operation soapAction="http://tempuri.org/IIccService2/updateGetCumulativeFee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertGetCumulativeFee">
+      <soap12:operation soapAction="http://tempuri.org/IIccService2/insertGetCumulativeFee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryGetBasicData">
+      <soap12:operation soapAction="http://tempuri.org/IIccService2/queryGetBasicData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateGetBasicData">
+      <soap12:operation soapAction="http://tempuri.org/IIccService2/updateGetBasicData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateGetBasicData2">
+      <soap12:operation soapAction="http://tempuri.org/IIccService2/updateGetBasicData2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertGetBasicData">
+      <soap12:operation soapAction="http://tempuri.org/IIccService2/insertGetBasicData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteGetBasicData">
+      <soap12:operation soapAction="http://tempuri.org/IIccService2/deleteGetBasicData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertGetBasicData2">
+      <soap12:operation soapAction="http://tempuri.org/IIccService2/insertGetBasicData2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryReadPrescription">
+      <soap12:operation soapAction="http://tempuri.org/IIccService2/queryReadPrescription" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateReadPrescription">
+      <soap12:operation soapAction="http://tempuri.org/IIccService2/updateReadPrescription" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteReadPrescription">
+      <soap12:operation soapAction="http://tempuri.org/IIccService2/deleteReadPrescription" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertReadPrescription">
+      <soap12:operation soapAction="http://tempuri.org/IIccService2/insertReadPrescription" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteWritePrescription">
+      <soap12:operation soapAction="http://tempuri.org/IIccService2/deleteWritePrescription" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryGetRegisterBasic2">
+      <soap12:operation soapAction="http://tempuri.org/IIccService2/queryGetRegisterBasic2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateGetRegisterBasic2">
+      <soap12:operation soapAction="http://tempuri.org/IIccService2/updateGetRegisterBasic2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertGetRegisterBasic2">
+      <soap12:operation soapAction="http://tempuri.org/IIccService2/insertGetRegisterBasic2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteWriteTreatmentData">
+      <soap12:operation soapAction="http://tempuri.org/IIccService2/deleteWriteTreatmentData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateICCOrderUploadForPrescriptionSignA79">
+      <soap12:operation soapAction="http://tempuri.org/IIccService2/UpdateICCOrderUploadForPrescriptionSignA79" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateICCBacterinUploadForPrescriptionSignA79">
+      <soap12:operation soapAction="http://tempuri.org/IIccService2/UpdateICCBacterinUploadForPrescriptionSignA79" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getConfigDataForICCUpload">
+      <soap12:operation soapAction="http://tempuri.org/IIccService2/getConfigDataForICCUpload" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportFeedbackData">
+      <soap12:operation soapAction="http://tempuri.org/IIccService2/ImportFeedbackData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryMaxCountOfDay">
+      <soap12:operation soapAction="http://tempuri.org/IIccService2/QueryMaxCountOfDay" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryFeedBackData">
+      <soap12:operation soapAction="http://tempuri.org/IIccService2/QueryFeedBackData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Query24HourUploadedRate">
+      <soap12:operation soapAction="http://tempuri.org/IIccService2/Query24HourUploadedRate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Query24UnuploadData">
+      <soap12:operation soapAction="http://tempuri.org/IIccService2/Query24UnuploadData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryIccConnectionHistory">
+      <soap12:operation soapAction="http://tempuri.org/IIccService2/QueryIccConnectionHistory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IccService2">
+    <wsdl:port name="WSHttpBinding_IIccService2" binding="tns:WSHttpBinding_IIccService2">
+      <soap12:address location="http://localhost:40611/IccService2.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://localhost:40611/IccService2.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Dns>localhost</Dns>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

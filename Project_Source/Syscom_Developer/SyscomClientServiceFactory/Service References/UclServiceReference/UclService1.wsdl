@@ -1,0 +1,853 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="UclService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_IUclService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:40611/UclService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:40611/UclService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:40611/UclService.svc?xsd=xsd2" />
+      <xsd:import schemaLocation="http://localhost:40611/UclService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:40611/UclService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IUclService_queryOpenWindow_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryOpenWindow" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryOpenWindow_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryOpenWindowResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryUclPostalAreaAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryUclPostalAreaAll" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryUclPostalAreaAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryUclPostalAreaAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryUclPostalAreaAllNew_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryUclPostalAreaAllNew" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryUclPostalAreaAllNew_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryUclPostalAreaAllNewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryUclPUBAreaCodeGovVilCodeName_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryUclPUBAreaCodeGovVilCodeName" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryUclPUBAreaCodeGovVilCodeName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryUclPUBAreaCodeGovVilCodeNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryUclIdentityInitial_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryUclIdentityInitial" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryUclIdentityInitial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryUclIdentityInitialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryUclIdentityInitial2_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryUclIdentityInitial2" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryUclIdentityInitial2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryUclIdentityInitial2Response" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryUclChartNoByKey_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryUclChartNoByKey" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryUclChartNoByKey_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryUclChartNoByKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryOMOOrderDiagnosis_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryOMOOrderDiagnosis" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryOMOOrderDiagnosis_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryOMOOrderDiagnosisResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryOPHPharmacyBase_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryOPHPharmacyBase" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryOPHPharmacyBase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryOPHPharmacyBaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_DoUclAction_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoUclAction" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_DoUclAction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoUclActionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryPUBOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryPUBOrder" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryPUBOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryPUBOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_querySMTPData_InputMessage">
+    <wsdl:part name="parameters" element="tns:querySMTPData" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_querySMTPData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:querySMTPDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_UclHintDataBOinsert_InputMessage">
+    <wsdl:part name="parameters" element="tns:UclHintDataBOinsert" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_UclHintDataBOinsert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UclHintDataBOinsertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_UclHintDataBOqueryByPK_InputMessage">
+    <wsdl:part name="parameters" element="tns:UclHintDataBOqueryByPK" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_UclHintDataBOqueryByPK_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UclHintDataBOqueryByPKResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_UclHintDataBOdelete_InputMessage">
+    <wsdl:part name="parameters" element="tns:UclHintDataBOdelete" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_UclHintDataBOdelete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UclHintDataBOdeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_UclHintDataBOupdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:UclHintDataBOupdate" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_UclHintDataBOupdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UclHintDataBOupdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_UclHintDataBOqueryData_InputMessage">
+    <wsdl:part name="parameters" element="tns:UclHintDataBOqueryData" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_UclHintDataBOqueryData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UclHintDataBOqueryDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_UclHintDataBOqueryDataAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:UclHintDataBOqueryDataAll" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_UclHintDataBOqueryDataAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UclHintDataBOqueryDataAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryOMOPhraseForUCL_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryOMOPhraseForUCL" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryOMOPhraseForUCL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryOMOPhraseForUCLResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryOMOOrderFavorInit_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryOMOOrderFavorInit" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryOMOOrderFavorInit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryOMOOrderFavorInitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryOMOOrderFavorByCond3_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryOMOOrderFavorByCond3" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryOMOOrderFavorByCond3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryOMOOrderFavorByCond3Response" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_querySTAPackageDataByCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:querySTAPackageDataByCategory" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_querySTAPackageDataByCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:querySTAPackageDataByCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryOMOOrderFavorSheetDept2_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryOMOOrderFavorSheetDept2" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryOMOOrderFavorSheetDept2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryOMOOrderFavorSheetDept2Response" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryOMOOrderFavorSheetDetailByLabGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryOMOOrderFavorSheetDetailByLabGroup" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryOMOOrderFavorSheetDetailByLabGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryOMOOrderFavorSheetDetailByLabGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryOMOOrderFavorSheetDetailByExamGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryOMOOrderFavorSheetDetailByExamGroup" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryOMOOrderFavorSheetDetailByExamGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryOMOOrderFavorSheetDetailByExamGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryOMOOrderFavorSheetDetailByExamGroupForKMUH_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryOMOOrderFavorSheetDetailByExamGroupForKMUH" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryOMOOrderFavorSheetDetailByExamGroupForKMUH_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryOMOOrderFavorSheetDetailByExamGroupForKMUHResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryOMOFavorCategory2_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryOMOFavorCategory2" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryOMOFavorCategory2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryOMOFavorCategory2Response" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_querySTAPackageDataCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:querySTAPackageDataCategory" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_querySTAPackageDataCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:querySTAPackageDataCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryOMOOrderFavorSheetDetailByLab2_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryOMOOrderFavorSheetDetailByLab2" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryOMOOrderFavorSheetDetailByLab2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryOMOOrderFavorSheetDetailByLab2Response" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryOMOOrderFavorSheetDetailByExam2_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryOMOOrderFavorSheetDetailByExam2" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryOMOOrderFavorSheetDetailByExam2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryOMOOrderFavorSheetDetailByExam2Response" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryOMOOrderFavorDetailOrder3_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryOMOOrderFavorDetailOrder3" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryOMOOrderFavorDetailOrder3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryOMOOrderFavorDetailOrder3Response" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryOPHPharmacyByCond3_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryOPHPharmacyByCond3" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryOPHPharmacyByCond3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryOPHPharmacyByCond3Response" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryPUBOrderByLanguage3_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryPUBOrderByLanguage3" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryPUBOrderByLanguage3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryPUBOrderByLanguage3Response" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryPUBDiseaseByFavor2_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryPUBDiseaseByFavor2" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryPUBDiseaseByFavor2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryPUBDiseaseByFavor2Response" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryPUBExamItemByOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryPUBExamItemByOrder" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryPUBExamItemByOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryPUBExamItemByOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryPUBOrderOwnAndNhiPrice_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryPUBOrderOwnAndNhiPrice" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryPUBOrderOwnAndNhiPrice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryPUBOrderOwnAndNhiPriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryOMODiagFavorInit_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryOMODiagFavorInit" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryOMODiagFavorInit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryOMODiagFavorInitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryPUBInsuSubDept_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryPUBInsuSubDept" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryPUBInsuSubDept_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryPUBInsuSubDeptResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryDiagCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryDiagCategory" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryDiagCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryDiagCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryICD10Category_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryICD10Category" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryICD10Category_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryICD10CategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryICDDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:queryICDDetail" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_queryICDDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:queryICDDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_QueryPrintCondition_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryPrintCondition" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_QueryPrintCondition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryPrintConditionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_GetLoginUserPrintCond_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLoginUserPrintCond" />
+  </wsdl:message>
+  <wsdl:message name="IUclService_GetLoginUserPrintCond_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLoginUserPrintCondResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IUclService">
+    <wsdl:operation name="queryOpenWindow">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUclService/queryOpenWindow" message="tns:IUclService_queryOpenWindow_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUclService/queryOpenWindowResponse" message="tns:IUclService_queryOpenWindow_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryUclPostalAreaAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUclService/queryUclPostalAreaAll" message="tns:IUclService_queryUclPostalAreaAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUclService/queryUclPostalAreaAllResponse" message="tns:IUclService_queryUclPostalAreaAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryUclPostalAreaAllNew">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUclService/queryUclPostalAreaAllNew" message="tns:IUclService_queryUclPostalAreaAllNew_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUclService/queryUclPostalAreaAllNewResponse" message="tns:IUclService_queryUclPostalAreaAllNew_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryUclPUBAreaCodeGovVilCodeName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUclService/queryUclPUBAreaCodeGovVilCodeName" message="tns:IUclService_queryUclPUBAreaCodeGovVilCodeName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUclService/queryUclPUBAreaCodeGovVilCodeNameResponse" message="tns:IUclService_queryUclPUBAreaCodeGovVilCodeName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryUclIdentityInitial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUclService/queryUclIdentityInitial" message="tns:IUclService_queryUclIdentityInitial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUclService/queryUclIdentityInitialResponse" message="tns:IUclService_queryUclIdentityInitial_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryUclIdentityInitial2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUclService/queryUclIdentityInitial2" message="tns:IUclService_queryUclIdentityInitial2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUclService/queryUclIdentityInitial2Response" message="tns:IUclService_queryUclIdentityInitial2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryUclChartNoByKey">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUclService/queryUclChartNoByKey" message="tns:IUclService_queryUclChartNoByKey_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUclService/queryUclChartNoByKeyResponse" message="tns:IUclService_queryUclChartNoByKey_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryOMOOrderDiagnosis">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUclService/queryOMOOrderDiagnosis" message="tns:IUclService_queryOMOOrderDiagnosis_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUclService/queryOMOOrderDiagnosisResponse" message="tns:IUclService_queryOMOOrderDiagnosis_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryOPHPharmacyBase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUclService/queryOPHPharmacyBase" message="tns:IUclService_queryOPHPharmacyBase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUclService/queryOPHPharmacyBaseResponse" message="tns:IUclService_queryOPHPharmacyBase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoUclAction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUclService/DoUclAction" message="tns:IUclService_DoUclAction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUclService/DoUclActionResponse" message="tns:IUclService_DoUclAction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryPUBOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUclService/queryPUBOrder" message="tns:IUclService_queryPUBOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUclService/queryPUBOrderResponse" message="tns:IUclService_queryPUBOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="querySMTPData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUclService/querySMTPData" message="tns:IUclService_querySMTPData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUclService/querySMTPDataResponse" message="tns:IUclService_querySMTPData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UclHintDataBOinsert">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUclService/UclHintDataBOinsert" message="tns:IUclService_UclHintDataBOinsert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUclService/UclHintDataBOinsertResponse" message="tns:IUclService_UclHintDataBOinsert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UclHintDataBOqueryByPK">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUclService/UclHintDataBOqueryByPK" message="tns:IUclService_UclHintDataBOqueryByPK_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUclService/UclHintDataBOqueryByPKResponse" message="tns:IUclService_UclHintDataBOqueryByPK_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UclHintDataBOdelete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUclService/UclHintDataBOdelete" message="tns:IUclService_UclHintDataBOdelete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUclService/UclHintDataBOdeleteResponse" message="tns:IUclService_UclHintDataBOdelete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UclHintDataBOupdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUclService/UclHintDataBOupdate" message="tns:IUclService_UclHintDataBOupdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUclService/UclHintDataBOupdateResponse" message="tns:IUclService_UclHintDataBOupdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UclHintDataBOqueryData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUclService/UclHintDataBOqueryData" message="tns:IUclService_UclHintDataBOqueryData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUclService/UclHintDataBOqueryDataResponse" message="tns:IUclService_UclHintDataBOqueryData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UclHintDataBOqueryDataAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUclService/UclHintDataBOqueryDataAll" message="tns:IUclService_UclHintDataBOqueryDataAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUclService/UclHintDataBOqueryDataAllResponse" message="tns:IUclService_UclHintDataBOqueryDataAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryOMOPhraseForUCL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUclService/queryOMOPhraseForUCL" message="tns:IUclService_queryOMOPhraseForUCL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUclService/queryOMOPhraseForUCLResponse" message="tns:IUclService_queryOMOPhraseForUCL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryOMOOrderFavorInit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUclService/queryOMOOrderFavorInit" message="tns:IUclService_queryOMOOrderFavorInit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUclService/queryOMOOrderFavorInitResponse" message="tns:IUclService_queryOMOOrderFavorInit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryOMOOrderFavorByCond3">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUclService/queryOMOOrderFavorByCond3" message="tns:IUclService_queryOMOOrderFavorByCond3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUclService/queryOMOOrderFavorByCond3Response" message="tns:IUclService_queryOMOOrderFavorByCond3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="querySTAPackageDataByCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUclService/querySTAPackageDataByCategory" message="tns:IUclService_querySTAPackageDataByCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUclService/querySTAPackageDataByCategoryResponse" message="tns:IUclService_querySTAPackageDataByCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryOMOOrderFavorSheetDept2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUclService/queryOMOOrderFavorSheetDept2" message="tns:IUclService_queryOMOOrderFavorSheetDept2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUclService/queryOMOOrderFavorSheetDept2Response" message="tns:IUclService_queryOMOOrderFavorSheetDept2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryOMOOrderFavorSheetDetailByLabGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUclService/queryOMOOrderFavorSheetDetailByLabGroup" message="tns:IUclService_queryOMOOrderFavorSheetDetailByLabGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUclService/queryOMOOrderFavorSheetDetailByLabGroupResponse" message="tns:IUclService_queryOMOOrderFavorSheetDetailByLabGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryOMOOrderFavorSheetDetailByExamGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUclService/queryOMOOrderFavorSheetDetailByExamGroup" message="tns:IUclService_queryOMOOrderFavorSheetDetailByExamGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUclService/queryOMOOrderFavorSheetDetailByExamGroupResponse" message="tns:IUclService_queryOMOOrderFavorSheetDetailByExamGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryOMOOrderFavorSheetDetailByExamGroupForKMUH">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUclService/queryOMOOrderFavorSheetDetailByExamGroupForKMUH" message="tns:IUclService_queryOMOOrderFavorSheetDetailByExamGroupForKMUH_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUclService/queryOMOOrderFavorSheetDetailByExamGroupForKMUHResponse" message="tns:IUclService_queryOMOOrderFavorSheetDetailByExamGroupForKMUH_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryOMOFavorCategory2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUclService/queryOMOFavorCategory2" message="tns:IUclService_queryOMOFavorCategory2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUclService/queryOMOFavorCategory2Response" message="tns:IUclService_queryOMOFavorCategory2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="querySTAPackageDataCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUclService/querySTAPackageDataCategory" message="tns:IUclService_querySTAPackageDataCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUclService/querySTAPackageDataCategoryResponse" message="tns:IUclService_querySTAPackageDataCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryOMOOrderFavorSheetDetailByLab2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUclService/queryOMOOrderFavorSheetDetailByLab2" message="tns:IUclService_queryOMOOrderFavorSheetDetailByLab2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUclService/queryOMOOrderFavorSheetDetailByLab2Response" message="tns:IUclService_queryOMOOrderFavorSheetDetailByLab2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryOMOOrderFavorSheetDetailByExam2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUclService/queryOMOOrderFavorSheetDetailByExam2" message="tns:IUclService_queryOMOOrderFavorSheetDetailByExam2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUclService/queryOMOOrderFavorSheetDetailByExam2Response" message="tns:IUclService_queryOMOOrderFavorSheetDetailByExam2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryOMOOrderFavorDetailOrder3">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUclService/queryOMOOrderFavorDetailOrder3" message="tns:IUclService_queryOMOOrderFavorDetailOrder3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUclService/queryOMOOrderFavorDetailOrder3Response" message="tns:IUclService_queryOMOOrderFavorDetailOrder3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryOPHPharmacyByCond3">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUclService/queryOPHPharmacyByCond3" message="tns:IUclService_queryOPHPharmacyByCond3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUclService/queryOPHPharmacyByCond3Response" message="tns:IUclService_queryOPHPharmacyByCond3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryPUBOrderByLanguage3">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUclService/queryPUBOrderByLanguage3" message="tns:IUclService_queryPUBOrderByLanguage3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUclService/queryPUBOrderByLanguage3Response" message="tns:IUclService_queryPUBOrderByLanguage3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryPUBDiseaseByFavor2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUclService/queryPUBDiseaseByFavor2" message="tns:IUclService_queryPUBDiseaseByFavor2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUclService/queryPUBDiseaseByFavor2Response" message="tns:IUclService_queryPUBDiseaseByFavor2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryPUBExamItemByOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUclService/queryPUBExamItemByOrder" message="tns:IUclService_queryPUBExamItemByOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUclService/queryPUBExamItemByOrderResponse" message="tns:IUclService_queryPUBExamItemByOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryPUBOrderOwnAndNhiPrice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUclService/queryPUBOrderOwnAndNhiPrice" message="tns:IUclService_queryPUBOrderOwnAndNhiPrice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUclService/queryPUBOrderOwnAndNhiPriceResponse" message="tns:IUclService_queryPUBOrderOwnAndNhiPrice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryOMODiagFavorInit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUclService/queryOMODiagFavorInit" message="tns:IUclService_queryOMODiagFavorInit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUclService/queryOMODiagFavorInitResponse" message="tns:IUclService_queryOMODiagFavorInit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryPUBInsuSubDept">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUclService/queryPUBInsuSubDept" message="tns:IUclService_queryPUBInsuSubDept_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUclService/queryPUBInsuSubDeptResponse" message="tns:IUclService_queryPUBInsuSubDept_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryDiagCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUclService/queryDiagCategory" message="tns:IUclService_queryDiagCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUclService/queryDiagCategoryResponse" message="tns:IUclService_queryDiagCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryICD10Category">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUclService/queryICD10Category" message="tns:IUclService_queryICD10Category_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUclService/queryICD10CategoryResponse" message="tns:IUclService_queryICD10Category_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="queryICDDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUclService/queryICDDetail" message="tns:IUclService_queryICDDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUclService/queryICDDetailResponse" message="tns:IUclService_queryICDDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryPrintCondition">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUclService/QueryPrintCondition" message="tns:IUclService_QueryPrintCondition_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUclService/QueryPrintConditionResponse" message="tns:IUclService_QueryPrintCondition_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLoginUserPrintCond">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUclService/GetLoginUserPrintCond" message="tns:IUclService_GetLoginUserPrintCond_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUclService/GetLoginUserPrintCondResponse" message="tns:IUclService_GetLoginUserPrintCond_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSHttpBinding_IUclService" type="tns:IUclService">
+    <wsp:PolicyReference URI="#WSHttpBinding_IUclService_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="queryOpenWindow">
+      <soap12:operation soapAction="http://tempuri.org/IUclService/queryOpenWindow" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryUclPostalAreaAll">
+      <soap12:operation soapAction="http://tempuri.org/IUclService/queryUclPostalAreaAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryUclPostalAreaAllNew">
+      <soap12:operation soapAction="http://tempuri.org/IUclService/queryUclPostalAreaAllNew" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryUclPUBAreaCodeGovVilCodeName">
+      <soap12:operation soapAction="http://tempuri.org/IUclService/queryUclPUBAreaCodeGovVilCodeName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryUclIdentityInitial">
+      <soap12:operation soapAction="http://tempuri.org/IUclService/queryUclIdentityInitial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryUclIdentityInitial2">
+      <soap12:operation soapAction="http://tempuri.org/IUclService/queryUclIdentityInitial2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryUclChartNoByKey">
+      <soap12:operation soapAction="http://tempuri.org/IUclService/queryUclChartNoByKey" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryOMOOrderDiagnosis">
+      <soap12:operation soapAction="http://tempuri.org/IUclService/queryOMOOrderDiagnosis" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryOPHPharmacyBase">
+      <soap12:operation soapAction="http://tempuri.org/IUclService/queryOPHPharmacyBase" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoUclAction">
+      <soap12:operation soapAction="http://tempuri.org/IUclService/DoUclAction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryPUBOrder">
+      <soap12:operation soapAction="http://tempuri.org/IUclService/queryPUBOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="querySMTPData">
+      <soap12:operation soapAction="http://tempuri.org/IUclService/querySMTPData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UclHintDataBOinsert">
+      <soap12:operation soapAction="http://tempuri.org/IUclService/UclHintDataBOinsert" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UclHintDataBOqueryByPK">
+      <soap12:operation soapAction="http://tempuri.org/IUclService/UclHintDataBOqueryByPK" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UclHintDataBOdelete">
+      <soap12:operation soapAction="http://tempuri.org/IUclService/UclHintDataBOdelete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UclHintDataBOupdate">
+      <soap12:operation soapAction="http://tempuri.org/IUclService/UclHintDataBOupdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UclHintDataBOqueryData">
+      <soap12:operation soapAction="http://tempuri.org/IUclService/UclHintDataBOqueryData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UclHintDataBOqueryDataAll">
+      <soap12:operation soapAction="http://tempuri.org/IUclService/UclHintDataBOqueryDataAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryOMOPhraseForUCL">
+      <soap12:operation soapAction="http://tempuri.org/IUclService/queryOMOPhraseForUCL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryOMOOrderFavorInit">
+      <soap12:operation soapAction="http://tempuri.org/IUclService/queryOMOOrderFavorInit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryOMOOrderFavorByCond3">
+      <soap12:operation soapAction="http://tempuri.org/IUclService/queryOMOOrderFavorByCond3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="querySTAPackageDataByCategory">
+      <soap12:operation soapAction="http://tempuri.org/IUclService/querySTAPackageDataByCategory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryOMOOrderFavorSheetDept2">
+      <soap12:operation soapAction="http://tempuri.org/IUclService/queryOMOOrderFavorSheetDept2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryOMOOrderFavorSheetDetailByLabGroup">
+      <soap12:operation soapAction="http://tempuri.org/IUclService/queryOMOOrderFavorSheetDetailByLabGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryOMOOrderFavorSheetDetailByExamGroup">
+      <soap12:operation soapAction="http://tempuri.org/IUclService/queryOMOOrderFavorSheetDetailByExamGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryOMOOrderFavorSheetDetailByExamGroupForKMUH">
+      <soap12:operation soapAction="http://tempuri.org/IUclService/queryOMOOrderFavorSheetDetailByExamGroupForKMUH" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryOMOFavorCategory2">
+      <soap12:operation soapAction="http://tempuri.org/IUclService/queryOMOFavorCategory2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="querySTAPackageDataCategory">
+      <soap12:operation soapAction="http://tempuri.org/IUclService/querySTAPackageDataCategory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryOMOOrderFavorSheetDetailByLab2">
+      <soap12:operation soapAction="http://tempuri.org/IUclService/queryOMOOrderFavorSheetDetailByLab2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryOMOOrderFavorSheetDetailByExam2">
+      <soap12:operation soapAction="http://tempuri.org/IUclService/queryOMOOrderFavorSheetDetailByExam2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryOMOOrderFavorDetailOrder3">
+      <soap12:operation soapAction="http://tempuri.org/IUclService/queryOMOOrderFavorDetailOrder3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryOPHPharmacyByCond3">
+      <soap12:operation soapAction="http://tempuri.org/IUclService/queryOPHPharmacyByCond3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryPUBOrderByLanguage3">
+      <soap12:operation soapAction="http://tempuri.org/IUclService/queryPUBOrderByLanguage3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryPUBDiseaseByFavor2">
+      <soap12:operation soapAction="http://tempuri.org/IUclService/queryPUBDiseaseByFavor2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryPUBExamItemByOrder">
+      <soap12:operation soapAction="http://tempuri.org/IUclService/queryPUBExamItemByOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryPUBOrderOwnAndNhiPrice">
+      <soap12:operation soapAction="http://tempuri.org/IUclService/queryPUBOrderOwnAndNhiPrice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryOMODiagFavorInit">
+      <soap12:operation soapAction="http://tempuri.org/IUclService/queryOMODiagFavorInit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryPUBInsuSubDept">
+      <soap12:operation soapAction="http://tempuri.org/IUclService/queryPUBInsuSubDept" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryDiagCategory">
+      <soap12:operation soapAction="http://tempuri.org/IUclService/queryDiagCategory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryICD10Category">
+      <soap12:operation soapAction="http://tempuri.org/IUclService/queryICD10Category" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryICDDetail">
+      <soap12:operation soapAction="http://tempuri.org/IUclService/queryICDDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPrintCondition">
+      <soap12:operation soapAction="http://tempuri.org/IUclService/QueryPrintCondition" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLoginUserPrintCond">
+      <soap12:operation soapAction="http://tempuri.org/IUclService/GetLoginUserPrintCond" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UclService">
+    <wsdl:port name="WSHttpBinding_IUclService" binding="tns:WSHttpBinding_IUclService">
+      <soap12:address location="http://localhost:40611/UclService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://localhost:40611/UclService.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Dns>localhost</Dns>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

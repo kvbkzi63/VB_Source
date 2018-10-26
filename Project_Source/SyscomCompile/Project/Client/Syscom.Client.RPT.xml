@@ -1,0 +1,576 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Syscom.Client.RPT
+</name>
+</assembly>
+<members>
+<member name="T:Syscom.Client.RPT.My.Resources.Resources">
+<summary>
+  用於查詢當地語系化字串等的強類型資源類別。
+</summary>
+</member>
+<member name="P:Syscom.Client.RPT.My.Resources.Resources.ResourceManager">
+<summary>
+  傳回這個類別使用的快取的 ResourceManager 執行個體。
+</summary>
+</member>
+<member name="P:Syscom.Client.RPT.My.Resources.Resources.Culture">
+<summary>
+  覆寫目前執行緒的 CurrentUICulture 屬性，對象是所有
+  使用這個強類型資源類別的資源查閱。
+</summary>
+</member>
+<member name="M:Syscom.Client.RPT.ClientMultiThreadPrint.threadPrint(Syscom.Client.RPT.IRPTPrintClient@,System.Data.DataSet@,System.String@)">
+ <summary>
+ 多緒列印
+ </summary>
+ <param name="client">繼承於IRPTPrintClient的子類別</param>
+ <param name="ds">資料</param>
+ <param name="reportName">給user看的報表名稱，例如檢驗單或是某某某的檢驗單，如果有錯誤將顯示出給user查看</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.RPT.ClientMultiThreadPrint.threadPrint(Syscom.Client.RPT.IRPTPrintClient@,System.Object[]@,System.String@)">
+ <summary>
+ 多緒列印
+ </summary>
+ <param name="client">繼承於IRPTPrintClient的子類別</param>
+ <param name="queryCondition">資料查詢條件</param>
+ <param name="reportName">給user看的報表名稱，例如檢驗單或是某某某的檢驗單，如果有錯誤將顯示出給user查看</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.RPT.ClientMultiThreadPrint.threadPrint(Syscom.Client.RPT.IRPTPrintClient[]@,System.Object[]@,System.String[]@)">
+ <summary>
+ 多緒且多份排序報表列印
+ </summary>
+ <param name="client">繼承於IRPTPrintClient的子類別</param>
+ <param name="obj">資料或查詢條件</param>
+ <param name="reportNames">給user看的報表名稱，例如檢驗單或是某某某的檢驗單，如果有錯誤將顯示出給user查看</param>
+ <remarks></remarks>
+</member>
+<member name="T:Syscom.Client.RPT.ClientMultiThreadPrint.PrintingThreadClass">
+ <summary>
+ 多緒列印工作類別
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:Syscom.Client.RPT.ClientMultiThreadPrint.SortedPrintingThreadClass">
+ <summary>
+ 多緒列印工作類別，有排序
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.RPT.IRPTPrintClient.preview(System.Object[]@)">
+ <summary>
+ 預覽報表 - 必須自行檢查是否有無資料
+ </summary>
+ <param name="queryCondition">查詢報表條件</param>
+ <returns>Report Job ID</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.RPT.IRPTPrintClient.preview(System.Object[]@,System.String,System.Boolean)">
+ <summary>
+ 預覽報表 - checkTableName
+ </summary>
+ <param name="queryCondition">查詢報表條件</param>
+ <param name="checkTableName">要檢查的TableName</param>
+ <param name="showWarnFlag">是否提示查無資料，True：提示，False：不提示</param>
+ <returns>Report Job ID</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.RPT.IRPTPrintClient.preview(System.Object[]@,System.String[],System.Boolean)">
+ <summary>
+ 預覽報表 - checkTableNameArray
+ </summary>
+ <param name="queryCondition">查詢報表條件</param>
+ <param name="checkTableNameArray">要檢查的tableName 陣列</param>
+ <param name="showWarnFlag">是否提示查無資料，True：提示，False：不提示</param>
+ <returns>Report Job ID</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.RPT.IRPTPrintClient.preview(System.Data.DataSet@)">
+ <summary>
+ 預覽報表 - 必須自行檢查是否有無資料
+ </summary>
+ <param name="data">報表資料</param>
+ <returns>Report Job ID</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.RPT.IRPTPrintClient.preview(System.Data.DataSet@,System.String,System.Boolean)">
+ <summary>
+ 預覽報表 -  checkTableName
+ </summary>
+ <param name="data">報表資料</param>
+ <param name="checkTableName">要檢查的TableName</param>
+ <param name="showWarnFlag">是否提示查無資料，True：提示，False：不提示</param>
+ <returns>Report Job ID</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.RPT.IRPTPrintClient.preview(System.Data.DataSet@,System.String[],System.Boolean)">
+ <summary>
+ 預覽報表 - checkTableNameArray
+ </summary>
+ <param name="data">報表資料</param>
+ <param name="checkTableNameArray">要檢查的TableName 陣列</param>
+ <param name="showWarnFlag">是否提示查無資料，True：提示，False：不提示</param>
+ <returns>Report Job ID</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.RPT.IRPTPrintClient.print(System.Object[]@)">
+ <summary>
+ 列印報表 - 必須自行檢查是否有無資料
+ </summary>
+ <param name="queryCondition">查詢報表條件</param>
+ <returns>Report Job ID</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.RPT.IRPTPrintClient.print(System.Object[]@,System.String,System.Boolean)">
+ <summary>
+ 列印報表 - checkTableName
+ </summary>
+ <param name="queryCondition">查詢報表條件</param>
+ <param name="checkTableName">要檢查的TableName</param>
+ <param name="showWarnFlag">是否提示查無資料，True：提示，False：不提示</param>
+ <returns>Report Job ID</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.RPT.IRPTPrintClient.print(System.Object[]@,System.String[],System.Boolean)">
+ <summary>
+ 列印報表 - checkTableNameArray
+ </summary>
+ <param name="queryCondition">查詢報表條件</param>
+ <param name="checkTableNameArray">要檢查的tableName 陣列</param>
+ <param name="showWarnFlag">是否提示查無資料，True：提示，False：不提示</param>
+ <returns>Report Job ID</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.RPT.IRPTPrintClient.print(System.Data.DataSet@)">
+ <summary>
+ 列印報表 - 必須自行檢查是否有無資料
+ </summary>
+ <param name="data">報表資料</param>
+ <returns>Report Job ID</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.RPT.IRPTPrintClient.print(System.Data.DataSet@,System.String,System.Boolean)">
+ <summary>
+ 列印報表 - checkTableName
+ </summary>
+ <param name="data">報表資料</param>
+ <returns>Report Job ID</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.RPT.IRPTPrintClient.print(System.Data.DataSet@,System.String[],System.Boolean)">
+ <summary>
+ 列印報表 - checkTableNameArray 
+ </summary>
+ <param name="data">報表資料</param>
+ <param name="checkTableNameArray">要檢查的tableName 陣列</param>
+ <param name="showWarnFlag">是否提示查無資料，True：提示，False：不提示</param>
+ <returns>Report Job ID</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.RPT.IRPTPrintClient.PrintOut(System.Object@,System.String@)">
+ <summary>
+ 輸出列印到印表機
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.RPT.IRPTPrintClient.PrintOutImg(System.Object@,System.String@)">
+ <summary>
+ 針對txt含有圖檔輸出列印到印表機
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.RPT.IRPTPrintClient.getReportInfo(Syscom.Comm.RPT.IReport@,Syscom.Client.RPT.ReportInfoClient@)">
+ <summary>
+ 產生報表的相關Info - 無須異動
+ </summary>
+ <param name="report">報表的邏輯檔</param>
+ <param name="rptInfo">查詢得到的ReportInfoClient</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.RPT.IRPTPrintClient.PrintRtfFile(System.Object@,System.String@)">
+ <summary>
+ 列印 RichTextFile 檔案
+ </summary>
+ <param name="rpt">列印物件</param>
+ <param name="printType">列印方式</param>
+ <remarks>    
+ </remarks>
+ -p:直接列印
+ "" 是預覽列印
+</member>
+<member name="M:Syscom.Client.RPT.IRPTPrintClient.PrintTxtFile(System.Object@,System.String@)">
+ <summary>
+ 列印TXT檔案
+ </summary>
+ <param name="rpt">列印物件</param>
+ <param name="printType">列印方式：-p:直接列印，default：是預覽列印</param>
+ <remarks>
+ -p:直接列印
+ default是預覽列印
+ </remarks>
+</member>
+<member name="M:Syscom.Client.RPT.IRPTPrintClient.PrintTxtFileImg(System.Object@,System.String@)">
+ <summary>
+ 列印TXT檔案包含圖檔列印
+ </summary>
+ <param name="rpt">列印物件</param>
+ <param name="printType">列印方式：-p:直接列印；無預覽列印</param>
+ <remarks>
+ -p:直接列印
+ 無預覽列印
+ </remarks>
+</member>
+<member name="M:Syscom.Client.RPT.IRPTPrintClient.PrintHtmlFile(System.Object@,System.String@,System.String@)">
+ <summary>
+ 列印html檔案
+ </summary>
+ <param name="rpt">列印物件</param>
+ <param name="inRptType">列印方式：-p:直接列印，default：是預覽列印</param>
+ <param name="inHtmlFile">Html檔名</param>
+ <remarks>
+ -p:直接列印
+ default是預覽列印
+ </remarks>
+</member>
+<member name="M:Syscom.Client.RPT.IRPTPrintClient.PrintHtmlImgFile(System.Object@)">
+ <summary>
+ 列印html檔案(For圖檔)
+ </summary>
+</member>
+<member name="M:Syscom.Client.RPT.IRPTPrintClient.previewReport(System.Object@)">
+ <summary>
+ 預覽報表 - 主要邏輯
+ </summary>
+ <param name="rpt">報表</param>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.RPT.IRPTPrintClient.previewFile(System.String)">
+ <summary>
+ 預覽報表 - by 路徑
+ </summary>
+ <param name="filePath">檔案路徑</param>
+ <remarks>by Sean.Lin on 2015-10-06</remarks>
+</member>
+<member name="M:Syscom.Client.RPT.IRPTPrintClient.printFile(System.String,System.String@)">
+ <summary>
+ 列印報表 - by 路徑
+ </summary>
+ <param name="filePath">檔案路徑</param>
+ <param name="printType">列印方式：-p:直接列印，default：是預覽列印</param>
+ <remarks>by Sean.Lin on 2015-10-06</remarks>
+</member>
+<member name="M:Syscom.Client.RPT.IRPTPrintClient.CheckRptHasData(System.Data.DataSet,System.Boolean)">
+ <summary>
+ 檢查Rpt有無資料 - ds.Tables(0)，True：有值可列印；False：無值可列印
+ </summary>
+ <param name="ds">表單資料的DS</param>
+ <param name="showWarnFlag">是否提示查無資料，True：提示，False：不提示</param>
+ <remarks>by Sean.Lin on 2015-09-08</remarks>
+</member>
+<member name="M:Syscom.Client.RPT.IRPTPrintClient.CheckRptHasData(System.Data.DataSet,System.String,System.Boolean)">
+ <summary>
+ 檢查Rpt有無資料 - ds + TableName，True：有值可列印；False：無值可列印
+ </summary>
+ <param name="ds">表單資料的DS</param>
+ <param name="tableName">列印的Table Name</param>
+ <param name="showWarnFlag">是否提示查無資料，True：提示，False：不提示</param>
+ <remarks>by Sean.Lin on 2015-09-08</remarks>
+</member>
+<member name="M:Syscom.Client.RPT.IRPTPrintClient.CheckRptHasData(System.Data.DataSet,System.String[],System.Boolean)">
+ <summary>
+ 檢查Rpt有無資料 - ds + TableName Array，True：有值可列印；False：無值可列印
+ </summary>
+ <param name="ds">表單資料的DS</param>
+ <param name="tableNameArray">Table Name 的 Array</param>
+ <param name="showWarnFlag">是否提示查無資料，True：提示，False：不提示</param>
+ <remarks>by Sean.Lin on 2015-09-08</remarks>
+</member>
+<member name="M:Syscom.Client.RPT.IRPTPrintClient.CheckRptHasData(System.Data.DataTable,System.Boolean)">
+ <summary>
+ 檢查Rpt有無資料，True：有值可列印；False：無值可列印
+ </summary>
+ <param name="dt">表單資料的DT</param>
+ <param name="showWarnFlag">是否提示查無資料，True：提示，False：不提示</param>
+ <remarks>by Sean.Lin on 2015-09-08</remarks>
+</member>
+<member name="M:Syscom.Client.RPT.IRPTPrintClient.genDataSet(System.Data.DataSet,System.String,System.Array)">
+ <summary>
+ 產生DataSet
+ </summary>
+ <param name="saveData"></param>
+ <param name="tableName"></param>
+ <param name="columnNameDB"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.RPT.IRPTPrintClient_FTP.SetPrinterNameToTxtFile(System.IO.FileInfo@,System.String@)">
+ <summary>
+ 將印表機名稱加入txt File中
+ </summary>
+ <param name="rpt">txt 檔</param>
+ <param name="printerName">印表機名稱</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Syscom.Client.RPT.IRPTPrintClient_FTP.WriteTxtFile(System.String@,System.String@)">
+ <summary>
+ 寫入Txt File
+ </summary>
+ <param name="reportData">寫入檔案的資料</param>
+ <returns>FileInfo</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Client.RPT.ReportInfoClient.reportId">
+ <summary>
+ 報表代碼
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Client.RPT.ReportInfoClient.PrinterType">
+ <summary>
+ 印表機型態'1'=local列印  '2'=遠端列印
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Client.RPT.ReportInfoClient.PrinterCond">
+ <summary>
+ 印表條件 Defaule='*'
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Client.RPT.ReportInfoClient.reportTitle">
+ <summary>
+ 報表抬頭
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Client.RPT.ReportInfoClient.reportSize">
+ <summary>
+ 報表紙張大小
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Client.RPT.ReportInfoClient.defaultFontSize">
+ <summary>
+ 報表預設字體大小
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Client.RPT.ReportInfoClient.reportType">
+ <summary>
+ 報表類型(預設為11)
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Client.RPT.ReportInfoClient.reportTurning">
+ <summary>
+ 報表旋轉的方向(1:垂直; 2:水平)
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Client.RPT.ReportInfoClient.printerFolder">
+ <summary>
+ 印表機紙夾(A5-->固定為第二紙夾)
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Client.RPT.ReportInfoClient.printerName">
+ <summary>
+ 印表機名稱
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Client.RPT.ReportInfoClient.hospital_CH">
+ <summary>
+ 醫院中文名稱
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Client.RPT.ReportInfoClient.hospital_EN">
+ <summary>
+ 醫院英文名稱
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Client.RPT.ReportInfoClient.Language_Type_Id">
+ <summary>
+ 中英文類別
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Client.RPT.ReportInfoClient.Hospital_Code">
+ <summary>
+ 醫院代碼
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Client.RPT.ReportInfoClient.Effect_Date">
+ <summary>
+ 生效日期
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Client.RPT.ReportInfoClient.End_Date">
+ <summary>
+ 結束日期
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Client.RPT.ReportInfoClient.Hospital_Name">
+ <summary>
+ 醫院名稱
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Client.RPT.ReportInfoClient.Hospital_Short_Name">
+ <summary>
+ 醫院簡稱
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Client.RPT.ReportInfoClient.Telephone">
+ <summary>
+ 電話
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Client.RPT.ReportInfoClient.Fax">
+ <summary>
+ 傳真
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Client.RPT.ReportInfoClient.Voice_Tel">
+ <summary>
+ 電腦語音專線
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Client.RPT.ReportInfoClient.Postal_Code">
+ <summary>
+ 郵遞區號
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Client.RPT.ReportInfoClient.Address">
+ <summary>
+ 聯絡地址
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Client.RPT.ReportInfoClient.Principal_Name">
+ <summary>
+ 負責人姓名
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Client.RPT.ReportInfoClient.Principal_Email">
+ <summary>
+ 負責人Email
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Client.RPT.ReportInfoClient.Hospital_Level_Id">
+ <summary>
+ 醫療院所層級
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Client.RPT.ReportInfoClient.URL">
+ <summary>
+ 網址
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Client.RPT.ReportInfoClient.Unified_Business_No">
+ <summary>
+ 醫院統編
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Client.RPT.ReportInfoClient.Alarm_Count">
+ <summary>
+ 警示筆數
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Client.RPT.ReportInfoClient.System_Code">
+ <summary>
+ 系統別(Ex:CNC、OMO....)
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Syscom.Client.RPT.ReportInfoClient.Report_Desc">
+ <summary>
+ 描述說明
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+</members>
+</doc>
